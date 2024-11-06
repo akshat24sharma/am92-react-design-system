@@ -16,13 +16,23 @@ export const DsDividerOverrides = {
       {
         props: { 'ds-size': 'M' } as Partial<DsDividerProps>,
         style: {
-          borderWidth: '0.5px'
+          '&::before': {
+            borderWidth: '0.5px'
+          },
+          '&::after': {
+            borderWidth: '0.5px'
+          }
         } as CSSInterpolation
       },
       {
         props: { 'ds-size': 'L' } as Partial<DsDividerProps>,
         style: {
-          borderWidth: '6px'
+          '&::before': {
+            borderWidth: '6px'
+          },
+          '&::after': {
+            borderWidth: '6px'
+          }
         } as CSSInterpolation
       }
     ]
