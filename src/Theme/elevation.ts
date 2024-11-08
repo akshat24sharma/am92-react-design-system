@@ -1,4 +1,4 @@
-import { DsElevation } from '../Types'
+import { DsElevation, DsShadows } from '../Types'
 
 const dsElevation: DsElevation = {
   '-1': 'none',
@@ -14,5 +14,35 @@ const dsElevation: DsElevation = {
   16: '0px 16px 24px rgba(0, 0, 0, 0.08)',
   24: '0px 24px 40px rgba(0, 0, 0, 0.08)'
 }
+
+export const dsShadows: DsShadows = [
+  '0px 0px 10px rgba(0, 0, 0, 0.1)',
+  '0px 0px 2px rgba(0, 0, 0, 0.1)',
+  '0px 2px 4px rgba(0, 0, 0, 0.08)',
+  '0px 3px 4px rgba(0, 0, 0, 0.08)',
+  '0px 4px 6px rgba(0, 0, 0, 0.08)',
+  'none',
+  '0px 6px 10px rgba(0, 0, 0, 0.08)',
+  'none',
+  '0px 8px 12px rgba(0, 0, 0, 0.08)',
+  '0px 9px 14px rgba(0, 0, 0, 0.08)',
+  'none',
+  'none',
+  '0px 12px 20px rgba(0, 0, 0, 0.08)',
+  'none',
+  'none',
+  'none',
+  '0px 16px 24px rgba(0, 0, 0, 0.08)',
+  'none',
+  'none',
+  'none',
+  'none',
+  'none',
+  'none',
+  'none',
+  '0px 24px 40px rgba(0, 0, 0, 0.08)'
+]
+
+dsShadows[-1] = 'none'
 
 export default dsElevation

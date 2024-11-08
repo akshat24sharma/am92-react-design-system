@@ -14,9 +14,9 @@ import breakpoints from './breakpoints'
 import componentOverrides from './componentOverrides'
 import dsRules from './rules'
 import dsSpacing, { dsSpacingCssVars, SPACE_COEFFICIENT } from './spacing'
-import dsElevation from './elevation'
+import dsElevation, { dsShadows } from './elevation'
 import { PALETTE, FONT_FAMILY_NAME } from '../Constants'
-import { DsPalette } from '../Types'
+import { DsPalette, DsShadows } from '../Types'
 import { DSTYPOGRAPHY_TOKENS } from '../Constants'
 import dsRadius from './radius'
 
@@ -47,7 +47,8 @@ export function getTheme(
     shape: { borderRadius: 2 },
     breakpoints,
     typography,
-    spacing: (input: number) => input * SPACE_COEFFICIENT
+    spacing: (input: number) => input * SPACE_COEFFICIENT,
+    shadows: dsShadows
   }
 
   let theme = extendTheme(cssVarsThemeOptions, ...(themeArgs || []))
@@ -80,5 +81,9 @@ declare module '@mui/material/styles' {
   interface PaletteOptions {
     surface?: PaletteColorOptions
     tertiary?: PaletteColorOptions
+  }
+
+  interface CssVarsThemeOptions {
+    shadows: DsShadows
   }
 }

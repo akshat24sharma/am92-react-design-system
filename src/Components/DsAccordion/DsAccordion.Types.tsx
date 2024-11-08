@@ -12,9 +12,7 @@ export interface DsAccordionProps extends Omit<AccordionProps, 'children'> {
 }
 
 export const DsAccordionDefaultProps: DsAccordionProps = {
+  elevation: -1,
   header: '',
-  summary: '',
-  expandIcon: (
-    <DsRemixIcon className="ri-arrow-drop-down-line" fontSize="bitterCold" />
-  )
+  summary: ''
 }
