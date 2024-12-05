@@ -6,16 +6,25 @@ export const DsCheckboxOverrides = {
     styleOverrides: {
       root: {
         color: 'var(--ds-colour-iconDefault)',
-        '&:hover:not(.Mui-checked)': {
-          backgroundColor: 'var(--ds-colour-stateUnselectedHover)'
+        '&.Mui-disabled': {
+          color: 'var(--ds-colour-iconDisabled)'
         },
-        '&:focus:not(.Mui-checked)': {
-          backgroundColor: 'var(--ds-colour-stateUnselectedHover)'
-        },
-        '&.MuiCheckbox-colorPrimary.Mui-checked': {
+        '&:not(.Mui-checked)': {
+          '&:hover': {
+            backgroundColor: 'var(--ds-colour-stateUnselectedHover)'
+          },
+          '&:focus': {
+            backgroundColor: 'var(--ds-colour-stateUnselectedHover)'
+          }
+        }
+      },
+      colorPrimary: {
+        '&.Mui-checked&:not(.Mui-checked)': {
           color: 'var(--ds-colour-iconActionPrimary)'
-        },
-        '&.MuiCheckbox-colorSecondary.Mui-checked': {
+        }
+      },
+      colorSecondary: {
+        '&.Mui-checked&:not(.Mui-checked)': {
           color: 'var(--ds-colour-iconActionSecondary)',
           '&:hover': {
             backgroundColor: 'var(--ds-colour-stateSelectedPrimaryHover)'
@@ -23,24 +32,21 @@ export const DsCheckboxOverrides = {
           '&:focus': {
             backgroundColor: 'var(--ds-colour-stateSelectedPrimaryHover)'
           }
-        },
-        '&.MuiCheckbox-colorError.Mui-checked': {
+        }
+      },
+      colorError: {
+        '&.Mui-checked&:not(.Mui-checked)': {
           color: 'var(--ds-colour-iconNegative)'
-        },
-        '&.MuiCheckbox-colorSuccess.Mui-checked': {
+        }
+      },
+      colorSuccess: {
+        '&.Mui-checked&:not(.Mui-checked)': {
           color: 'var(--ds-colour-iconPositive)'
-        },
-        '&.MuiCheckbox-colorWarning.Mui-checked': {
+        }
+      },
+      colorWarning: {
+        '&.Mui-checked&:not(.Mui-checked)': {
           color: 'var(--ds-colour-iconWarning)'
-        },
-        '&.Mui-disabled': {
-          color: 'var(--ds-colour-iconDisabled)'
-        },
-        colorPrimary: {
-          color: 'var(--ds-colour-iconActionPrimary)'
-        },
-        colorSecondary: {
-          color: 'var(--ds-colour-iconActionSecondary)'
         }
       }
     }
