@@ -1,6 +1,5 @@
 import STATE_STYLES from '../../Theme/STATE_STYLES'
 import { DsFabDefaultProps, DsFabProps } from './DsFab.Types'
-// import STATE_STYLES from '../../Theme/STATE_STYLES'
 import { CSSInterpolation } from '@mui/system'
 
 export const DsFabOverrides = {
