@@ -171,7 +171,7 @@ export class DsDialog extends React.Component<DsDialogProps> {
             {(secondaryButtonText || secondaryButtonProps?.children) && (
               <DsButton
                 color="secondary"
-                size="medium"
+                size="large"
                 fullWidth
                 {...secondaryButtonProps}
               >
@@ -179,7 +179,7 @@ export class DsDialog extends React.Component<DsDialogProps> {
               </DsButton>
             )}
             {(primaryButtonText || primaryButtonProps?.children) && (
-              <DsButton size="medium" fullWidth {...primaryButtonProps}>
+              <DsButton size="large" fullWidth {...primaryButtonProps}>
                 {primaryButtonText || primaryButtonProps?.children}
               </DsButton>
             )}

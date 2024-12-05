@@ -1,5 +1,6 @@
-import { DsFabDefaultProps, DsFabProps } from './DsFab.Types'
 import STATE_STYLES from '../../Theme/STATE_STYLES'
+import { DsFabDefaultProps, DsFabProps } from './DsFab.Types'
+// import STATE_STYLES from '../../Theme/STATE_STYLES'
 import { CSSInterpolation } from '@mui/system'
 
 export const DsFabOverrides = {
@@ -9,50 +10,54 @@ export const DsFabOverrides = {
       root: {
         boxShadow: 'var(--ds-elevation-8)',
         textTransform: 'none',
+        minHeight: 'auto',
         height: 'auto',
         width: 'auto',
-        borderRadius: 'var(--ds-radius-pleasant)',
-        '&.MuiFab-default': {
-          backgroundColor: 'var(--ds-colour-surfacePrimary)'
-        },
-        '&.MuiFab-extended .MuiTypography-root': {
+        borderRadius: '50%',
+        '.MuiTypography-root': {
           fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
           fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
           lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
-          letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
-          marginLeft: 'var(--ds-spacing-glacial)'
+          letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)'
         }
-      } as CSSInterpolation
-    },
-    variants: [
-      {
-        props: { size: 'medium' } as Partial<DsFabProps>,
-        style: {
-          padding: 'var(--ds-spacing-bitterCold)',
-          '&.MuiFab-extended': {
-            paddingRight: 'var(--ds-spacing-mild)'
-          }
-        } as CSSInterpolation
-      },
-      {
-        props: { size: 'small' } as Partial<DsFabProps>,
-        style: {
-          padding: 'var(--ds-spacing-frostbite)',
-          fontSize: 'var(--ds-typo-fontSizeCool)',
-          '&.MuiFab-extended': {
-            paddingRight: 'var(--ds-spacing-bitterCold)'
-          },
-          '> .MuiIcon-root': {
-            fontSize: 'inherit'
-          }
-        } as CSSInterpolation
-      },
-      {
-        props: { color: 'secondary' } as Partial<DsFabProps>,
-        style: {
-          ...STATE_STYLES.ACTION_SECONDARY_STATE_SECONDARY
-        } as CSSInterpolation
+      } as CSSInterpolation,
+      sizeLarge: {
+        padding: 'var(--ds-spacing-cool)',
+        '> .MuiSvgIcon-root': {
+          fontSize: 'var(--ds-typo-fontSizePleasant)'
+        }
+      } as CSSInterpolation,
+      sizeMedium: {
+        padding: 'var(--ds-spacing-bitterCold)',
+        '> .MuiSvgIcon-root': {
+          fontSize: 'var(--ds-typo-fontSizeMild)'
+        }
+      } as CSSInterpolation,
+      sizeSmall: {
+        padding: 'var(--ds-spacing-frostbite)',
+        '> .MuiSvgIcon-root': {
+          fontSize: 'var(--ds-typo-fontSizeCool)'
+        }
+      } as CSSInterpolation,
+      secondary: {
+        ...STATE_STYLES.ACTION_SECONDARY_STATE_SECONDARY
+      } as CSSInterpolation,
+      default: {
+        backgroundColor: 'var(--ds-colour-surfacePrimary)',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: 'var(--ds-colour-strokeDefault)',
+        '&:hover': {
+          backgroundColor: 'var(--ds-colour-stateUnselectedHover)'
+        }
+      } as CSSInterpolation,
+      extended: {
+        borderRadius: 'var(--ds-radius-pleasant)',
+        '.MuiTypography-root': {
+          marginLeft: 'var(--ds-spacing-glacial)',
+          marginRight: 'var(--ds-spacing-glacial)'
+        }
       }
-    ]
+    }
   }
 }
