@@ -48,6 +48,15 @@ export const DsCheckboxOverrides = {
         '&.Mui-checked&:not(.Mui-checked)': {
           color: 'var(--ds-colour-iconWarning)'
         }
+      },
+      sizeSmall: {
+        fontSize: 'var(--ds-typo-fontSizeCold)'
+      },
+      sizeMedium: {
+        fontSize: 'var(--ds-typo-fontSizeMild)'
+      },
+      sizeLarge: {
+        fontSize: 'var(--ds-typo-fontSizeWarm)'
       }
     }
   }
