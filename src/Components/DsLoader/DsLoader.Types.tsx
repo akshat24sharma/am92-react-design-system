@@ -1,16 +1,15 @@
-import { CSSProperties } from 'react'
-import { LottieComponentProps } from 'lottie-react'
+import type { CSSProperties } from 'react'
 
-import SingleDotLoader from './assets/singleDotLoader.json'
-import ThreeDotLoader from './assets/threeDotLoader.json'
-import { DsColorTokens } from '../../Types'
-import { DsBackdropProps } from '../DsBackdrop'
+import type { DsColorTokens } from '../../Types'
+import type { DsBackdropProps } from '../DsBackdrop'
+import type { DsBoxProps } from '../DsBox'
+import { ThreeDotLoader } from './ThreeDotLoader'
+import { SingleDotLoader } from './SingleDotLoader'
 
 type TVariant = 'threeDot' | 'singleDot'
 type TPosition = 'absolute' | 'fixed'
 
-export interface DsLoaderProps
-  extends Omit<LottieComponentProps, 'animationData'> {
+export interface DsLoaderProps extends DsBoxProps {
   'ds-variant'?: TVariant
   position?: TPosition
   backdrop?: boolean
@@ -22,15 +21,10 @@ export const DS_LOADER_DEFAULT_PROPS: DsLoaderProps = {
   'ds-variant': 'threeDot',
   position: 'fixed',
   backdrop: true,
-  loop: true,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-    progressiveLoad: true
-  },
-  style: { height: '100px', width: '100px' }
+  sx: { maxheight: '100px', maxWidth: '100px' }
 }
 
-export const DATA_MAP: Record<TVariant, object> = {
+export const LOADER_MAP: Record<TVariant, React.ElementType> = {
   singleDot: SingleDotLoader,
   threeDot: ThreeDotLoader
 }

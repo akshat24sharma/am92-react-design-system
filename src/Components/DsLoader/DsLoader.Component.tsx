@@ -1,56 +1,51 @@
-import React, { PureComponent } from 'react'
-import Lottie from 'lottie-react'
+import React, { FC } from 'react'
 
 import {
-  DATA_MAP,
   DS_LOADER_DEFAULT_PROPS,
-  DsLoaderProps
+  DsLoaderProps,
+  LOADER_MAP
 } from './DsLoader.Types'
+import { SystemStyleObject } from '@mui/system'
 import { DsBackdrop } from '../DsBackdrop'
+import { DsBox } from '../DsBox'
+import { Theme } from '@mui/material'
 
-export class DsLoader extends PureComponent<DsLoaderProps> {
-  static defaultProps = DS_LOADER_DEFAULT_PROPS
+export const DsLoader: FC<DsLoaderProps> = inProps => {
+  const props = { ...DS_LOADER_DEFAULT_PROPS, ...inProps }
+  const {
+    'ds-variant': loaderVariant = 'threeDot',
+    color,
+    position,
+    backdrop,
+    BackdropProps,
+    ...boxProps
+  } = props
 
-  render() {
-    const mergedProps = { ...DS_LOADER_DEFAULT_PROPS, ...this.props }
-    const {
-      'ds-variant': loaderVariant,
-      color,
-      position,
-      backdrop,
-      BackdropProps,
-      ...lottieProps
-    } = mergedProps
+  const LoaderElement = LOADER_MAP[loaderVariant]
+  const { sx: wrapperStyleProps, ...restBoxProps } = boxProps
 
-    return (
-      <DsBackdrop
-        {...BackdropProps}
-        open={true}
-        invisible={!backdrop}
+  return (
+    <DsBackdrop {...BackdropProps} open={true} invisible={!backdrop}>
+      <DsBox
         sx={[
           {
-            '.dot-class': {
-              fill: `var(--ds-colour-${color}, var(--ds-colour-dotLoader))`
-            },
             position,
-            color: ''
+            color: `var(--ds-colour-${color}, var(--ds-colour-dotLoader))`
           },
           backdrop
             ? {
-                '.dot-class': {
-                  fill: `var(--ds-colour-${color}, var(--palette-common-white))`
-                }
+                color: `var(--ds-colour-${color}, var(--palette-common-white))`
               }
             : {},
           {
-            '.dot-class': {
-              fill: color
-            }
-          }
+            color: color
+          },
+          (wrapperStyleProps as SystemStyleObject<Theme>) || {}
         ]}
+        {...restBoxProps}
       >
-        <Lottie {...lottieProps} animationData={DATA_MAP[loaderVariant!]} />
-      </DsBackdrop>
-    )
-  }
+        <LoaderElement />
+      </DsBox>
+    </DsBackdrop>
+  )
 }
