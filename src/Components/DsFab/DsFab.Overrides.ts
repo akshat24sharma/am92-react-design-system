@@ -12,7 +12,7 @@ export const DsFabOverrides = {
         minHeight: 'auto',
         height: 'auto',
         width: 'auto',
-        borderRadius: '50%',
+        borderRadius: 'var(--ds-radius-pleasant)',
         '.MuiTypography-root': {
           fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
           fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
@@ -51,7 +51,6 @@ export const DsFabOverrides = {
         }
       } as CSSInterpolation,
       extended: {
-        borderRadius: 'var(--ds-radius-pleasant)',
         '.MuiTypography-root': {
           marginLeft: 'var(--ds-spacing-glacial)',
           marginRight: 'var(--ds-spacing-glacial)'
