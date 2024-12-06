@@ -3,6 +3,9 @@ export const DsBackdropOverrides = {
     styleOverrides: {
       root: {
         backgroundColor: 'var(--ds-colour-overlay)'
+      },
+      invisible: {
+        backgroundColor: 'transparent'
       }
     }
   }
