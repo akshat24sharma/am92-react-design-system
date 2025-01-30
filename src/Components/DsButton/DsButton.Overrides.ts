@@ -54,8 +54,8 @@ export const DsButtonOverrides = {
           borderColor: 'var(--ds-colour-strokeDefault)',
           color: 'var(--ds-colour-typoActionPrimary)',
           '&:disabled': {
-            backgroundColor: 'var(--ds-colour-stateDisabledSurface)',
-            color: 'var(--ds-colour-typoDisabled)'
+            backgroundColor: 'var(--ds-colour-stateUnselectedDefault)',
+            color: 'var(--ds-colour-typoOnSurface)'
           },
           ...STATE_STYLES.SURFACE_SECONDARY_STATE_PRIMARY
         } as CSSInterpolation
