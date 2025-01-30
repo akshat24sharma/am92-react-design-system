@@ -19,13 +19,13 @@ export class DsRadio extends PureComponent<DsRadioProps> {
             icon={
               <DsRemixIcon
                 className="ri-checkbox-blank-circle-line"
-                sx={{ fontSize: 'var(--ds-typo-fontSizeCool)' }}
+                sx={{ fontSize: 'var(--ds-typo-fontSizeBitterCold)' }}
               />
             }
             checkedIcon={
               <DsRemixIcon
                 className="ri-radio-button-line"
-                sx={{ fontSize: 'var(--ds-typo-fontSizeCool)' }}
+                sx={{ fontSize: 'var(--ds-typo-fontSizeBitterCold)' }}
               />
             }
             color="secondary"
