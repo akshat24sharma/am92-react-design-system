@@ -21,6 +21,9 @@ export const DsDividerOverrides = {
           },
           '&::after': {
             borderWidth: '0.5px'
+          },
+          '&:not(.MuiDivider-withChildren)': {
+            borderWidth: '0.5px'
           }
         } as CSSInterpolation
       },
@@ -31,6 +34,9 @@ export const DsDividerOverrides = {
             borderWidth: '6px'
           },
           '&::after': {
+            borderWidth: '6px'
+          },
+          '&:not(.MuiDivider-withChildren)': {
             borderWidth: '6px'
           }
         } as CSSInterpolation
