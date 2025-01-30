@@ -142,7 +142,7 @@ export default function getLightModeColorScheme(colorPalette: DsPalette) {
     stateUnselectedPressed: hexToRgbA(secondaryGrey50, 0.16),
     stateDisabledSurface: secondaryGrey20,
 
-    overlay: hexToRgbA(primaryBlack, 0.8),
+    overlay: hexToRgbA(primaryBlack, 0.5),
     overlayLoader: hexToRgbA(primaryWhite, 0.3),
     dotLoader: secondary100
   }

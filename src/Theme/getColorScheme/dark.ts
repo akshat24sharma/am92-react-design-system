@@ -141,7 +141,7 @@ export default function getDarkModeColorScheme(colorPalette: DsPalette) {
     stateUnselectedPressed: hexToRgbA(secondaryGrey50, 0.25),
     stateDisabledSurface: secondaryGrey100,
 
-    overlay: hexToRgbA(primaryBlack, 0.8),
+    overlay: hexToRgbA(primaryBlack, 0.5),
     overlayLoader: hexToRgbA(primaryBlack, 0.3),
     dotLoader: primaryWhite
   }
