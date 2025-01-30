@@ -32,7 +32,7 @@ export interface DsSelectProps extends Omit<SelectProps, 'ref'> {
 
 export const DsSelectDefaultProps: DsSelectProps = {
   options: [],
-  variant: 'filled',
+  variant: 'outlined',
   defaultValue: '',
   MenuProps: {
     anchorOrigin: {
