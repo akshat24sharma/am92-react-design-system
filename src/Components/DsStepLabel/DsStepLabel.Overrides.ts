@@ -10,10 +10,10 @@ export const DsStepLabelOverrides = {
         paddingBottom: 'var(--ds-spacing-zero)'
       } as CSSInterpolation,
       label: {
-        fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
-        fontSize: 'var(--ds-typo-bodyRegularMedium-fontSize)',
-        lineHeight: 'var(--ds-typo-bodyRegularMedium-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyRegularMedium-letterSpacing)',
+        fontWeight: 'var(--ds-typo-bodyRegularSmall-fontWeight)',
+        fontSize: 'var(--ds-typo-bodyRegularSmall-fontSize)',
+        lineHeight: 'var(--ds-typo-bodyRegularSmall-lineHeight)',
+        letterSpacing: 'var(--ds-typo-bodyRegularSmall-letterSpacing)',
         textTransform: 'none',
         color: 'var(--ds-colour-typoPrimary)',
         marginLeft: 'var(--ds-spacing-mild)',
@@ -31,7 +31,6 @@ export const DsStepLabelOverrides = {
         '&.Mui-disabled': {
           marginTop: 'var(--ds-spacing-quickFreeze)',
           marginBottom: 'var(--ds-spacing-quickFreeze)',
-
           fontWeight: 'var(--ds-typo-supportRegularMetadata-fontWeight)',
           fontSize: 'var(--ds-typo-supportRegularMetadata-fontSize)',
           lineHeight: 'var(--ds-typo-supportRegularMetadata-lineHeight)',
