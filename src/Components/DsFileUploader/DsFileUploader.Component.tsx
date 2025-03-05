@@ -1,4 +1,4 @@
-import React, { DragEvent } from 'react'
+import React, { DragEvent, FC, useRef, useState } from 'react'
 
 import { DsBox } from '../DsBox'
 import { DsButton } from '../DsButton'
@@ -15,15 +15,14 @@ import {
   DsFileUploaderState
 } from './DsFileUploader.Types'
 
-export class DsFileUploader extends React.Component<
-  DsFileUploaderProps,
-  DsFileUploaderState
-> {
-  static defaultProps = DsFileUploaderDefaultProps
-  inputRef = React.createRef<HTMLInputElement>()
-  state = DsFileUploaderDefaultState
+export const DsFileUploader: FC<
+  DsFileUploaderProps
+> = (inProps) => {
+  const props = {  ...DsFileUploaderDefaultProps, ...inProps}
+  const inputRef = useRef<HTMLInputElement>()
+  const [files, setFiles] = useState<DsFileUploaderState['files']>([])
 
-  humaniseSize = (bytes: number, decimals: number = 2) => {
+  const humaniseSize = (bytes: number, decimals: number = 2) => {
     if (!+bytes) return '0 Bytes'
 
     const k = 1024
@@ -35,7 +34,7 @@ export class DsFileUploader extends React.Component<
     return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
   }
 
-  getFileIconClass = (mimeType: string) => {
+  const getFileIconClass = (mimeType: string) => {
     if (mimeType.includes('image/')) {
       return 'ri-image-2-line'
     }
@@ -47,29 +46,28 @@ export class DsFileUploader extends React.Component<
     return 'ri-file-list-2-line'
   }
 
-  handleOnClick = (event: React.MouseEvent<HTMLElement>) => {
-    this.inputRef?.current?.click()
+  const handleOnClick = (event: React.MouseEvent<HTMLElement>) => {
+    inputRef?.current?.click()
   }
 
-  handleRemoveFile = (index: number) => () => {
-    const { onChange, name } = this.props
-    const { files } = this.state
+  const handleRemoveFile = (index: number) => () => {
+    const { onChange, name } = props
     files.splice(index, 1)
-    this.setState({ files })
+    setFiles(files)
 
     if (onChange && typeof onChange === 'function') {
       onChange(name, [...files])
     }
   }
 
-  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { onChange, name } = this.props
-    const { files: stateFiles } = this.state
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { onChange, name } = props
+    const stateFiles = files
     const { target } = event
-    const { files } = target
-    if (files) {
+    const { files: selectedFiles } = target
+    if (selectedFiles) {
       const newFiles = [...stateFiles, ...files]
-      this.setState({ files: newFiles })
+      setFiles(newFiles)
 
       if (onChange && typeof onChange === 'function') {
         onChange(name, newFiles)
@@ -77,11 +75,11 @@ export class DsFileUploader extends React.Component<
     }
   }
 
-  handleDrop = (event: DragEvent) => {
+  const handleDrop = (event: DragEvent) => {
     // Prevent default behavior (Prevent file from being opened)
     event.preventDefault()
 
-    const { InputProps = {}, onChange, name } = this.props
+    const { InputProps = {}, onChange, name } = props
     const { accept, multiple } = InputProps
 
     if (!event.dataTransfer) {
@@ -120,25 +118,24 @@ export class DsFileUploader extends React.Component<
       }
     })
 
-    const { files: stateFiles } = this.state
+    const stateFiles = files
     const newFiles = multiple
       ? [...stateFiles, ...files]
       : (files[0] && [files[0]]) || (stateFiles[0] && [stateFiles[0]]) || []
 
-    this.setState({ files: newFiles })
+   setFiles(newFiles)
 
     if (onChange && typeof onChange === 'function') {
       onChange(name, newFiles)
     }
   }
 
-  handleDragOverHandler = (event: DragEvent) => {
+  const handleDragOverHandler = (event: DragEvent) => {
     // Prevent default behavior (Prevent file from being opened)
     event.preventDefault()
   }
 
-  renderFiles = () => {
-    const { files } = this.state
+  const renderFiles = () => {
 
     if (!files.length) {
       return false
@@ -176,7 +173,7 @@ export class DsFileUploader extends React.Component<
               backgroundColor: 'var(--ds-colour-neutral2)',
               color: 'var(--ds-colour-actionTertiary)'
             }}
-            className={this.getFileIconClass(file.type)}
+            className={getFileIconClass(file.type)}
           />
           <DsBox
             sx={{
@@ -201,10 +198,10 @@ export class DsFileUploader extends React.Component<
                 color: 'var(--ds-colour-typoTertiary)'
               }}
             >
-              {this.humaniseSize(file.size)}
+              {humaniseSize(file.size)}
             </DsTypography>
           </DsBox>
-          <DsIconButton onClick={this.handleRemoveFile(index)}>
+          <DsIconButton onClick={handleRemoveFile(index)}>
             <DsRemixIcon className="ri-close-line" />
           </DsIconButton>
         </DsStack>
@@ -225,7 +222,6 @@ export class DsFileUploader extends React.Component<
     )
   }
 
-  render() {
     const {
       IconProps,
       titleButtonText,
@@ -233,7 +229,7 @@ export class DsFileUploader extends React.Component<
       descriptionTypograpghyText,
       DescriptionTypograpghyProps,
       InputProps
-    } = this.props
+    } = props
     return (
       <>
         <DsStack
@@ -286,13 +282,13 @@ export class DsFileUploader extends React.Component<
               cursor: 'pointer',
               margin: 'var(--ds-spacing-zero) !important'
             }}
-            onChange={this.handleChange}
-            onDrop={this.handleDrop}
-            onDragOver={this.handleDragOverHandler}
+            onChange={handleChange}
+            onDrop={handleDrop}
+            onDragOver={handleDragOverHandler}
             disableUnderline
             inputProps={{
               title: titleButtonText as string,
-              ref: this.inputRef,
+              ref: inputRef,
               value: '',
               ...InputProps,
               style: {
@@ -304,8 +300,7 @@ export class DsFileUploader extends React.Component<
             }}
           />
         </DsStack>
-        {this.renderFiles()}
+        {renderFiles()}
       </>
     )
-  }
 }
