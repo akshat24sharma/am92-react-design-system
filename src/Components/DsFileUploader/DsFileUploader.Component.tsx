@@ -52,11 +52,12 @@ export const DsFileUploader: FC<
 
   const handleRemoveFile = (index: number) => () => {
     const { onChange, name } = props
-    files.splice(index, 1)
-    setFiles(files)
+    const tempFiles = [...files]
+    tempFiles.splice(index, 1)
+     setFiles(tempFiles)
 
     if (onChange && typeof onChange === 'function') {
-      onChange(name, [...files])
+      onChange(name, [...tempFiles]);
     }
   }
 
@@ -66,7 +67,7 @@ export const DsFileUploader: FC<
     const { target } = event
     const { files: selectedFiles } = target
     if (selectedFiles) {
-      const newFiles = [...stateFiles, ...files]
+      const newFiles = [...stateFiles, ...selectedFiles]
       setFiles(newFiles)
 
       if (onChange && typeof onChange === 'function') {
