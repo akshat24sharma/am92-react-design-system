@@ -1,15 +1,13 @@
-import React, { PureComponent } from 'react'
-
+import { FC } from 'react'
 import Radio from '@mui/material/Radio'
 import { DsRadioDefaultProps, DsRadioProps } from './DsRadio.Types'
 import { DsFormControlLabel } from '../DsFormControlLabel'
 import { DsRemixIcon } from '../DsRemixIcon'
 
-export class DsRadio extends PureComponent<DsRadioProps> {
-  static defaultProps = DsRadioDefaultProps
+export const DsRadio: FC<DsRadioProps> = (inProps) => {
+  const props = { ...inProps, ...DsRadioDefaultProps }
 
-  render() {
-    const { disabled, RadioProps, ...restProps } = this.props
+    const { disabled, RadioProps, ...restProps } = props
     return (
       <DsFormControlLabel
         {...restProps}
@@ -35,5 +33,4 @@ export class DsRadio extends PureComponent<DsRadioProps> {
         }
       />
     )
-  }
 }
