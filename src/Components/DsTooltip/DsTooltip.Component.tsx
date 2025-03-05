@@ -1,12 +1,14 @@
-import React, { PureComponent } from 'react'
+import React, { FC } from 'react'
 import Tooltip from '@mui/material/Tooltip'
 import { DsTooltipProps } from './DsTooltip.Types'
 import { DsTypography } from '../DsTypography'
 import { DsLink } from '../DsLink'
+import { useThemeProps } from '@mui/system'
 
-export class DsTooltip extends PureComponent<DsTooltipProps> {
-  renderTitle = () => {
-    const { heading, description, buttonGroup } = this.props
+export const DsTooltip: FC<DsTooltipProps> = (props) =>  {
+  
+  const renderTitle = () => {
+    const { heading, description, buttonGroup } = props
 
     const tooltipButtonGroup = buttonGroup
       ? React.cloneElement(buttonGroup, {
@@ -38,7 +40,7 @@ export class DsTooltip extends PureComponent<DsTooltipProps> {
     )
   }
 
-  render() {
+
     const {
       heading,
       description,
@@ -46,10 +48,10 @@ export class DsTooltip extends PureComponent<DsTooltipProps> {
 
       children,
       ...tooltipProps
-    } = this.props
+    } = props
 
     return (
-      <Tooltip title={this.renderTitle()} {...tooltipProps}>
+      <Tooltip title={renderTitle()} {...tooltipProps}>
         <DsLink
           component="span"
           underline="always"
@@ -61,5 +63,4 @@ export class DsTooltip extends PureComponent<DsTooltipProps> {
         </DsLink>
       </Tooltip>
     )
-  }
 }
