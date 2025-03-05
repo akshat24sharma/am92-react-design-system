@@ -1,12 +1,10 @@
-import React, { PureComponent } from 'react'
+import React, { FC, PureComponent } from 'react'
 import InputLabel from '@mui/material/InputLabel'
 import { DsInputLabelProps } from './DsInputLabel.Types'
 import { DsTypography } from '../DsTypography'
 
-export class DsInputLabel extends PureComponent<DsInputLabelProps> {
-  render() {
-    const { label, labelSupportText, success, error, ...inputLabelProps } =
-      this.props
+export const DsInputLabel: FC<DsInputLabelProps> = (props) => {
+    const { label, labelSupportText, success, error, ...inputLabelProps } = props
 
     if (!label && !labelSupportText) {
       return null
@@ -31,5 +29,4 @@ export class DsInputLabel extends PureComponent<DsInputLabelProps> {
         </DsTypography>
       </InputLabel>
     )
-  }
 }
