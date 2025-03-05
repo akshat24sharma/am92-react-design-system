@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { FC, PureComponent, useState } from 'react'
 import {
   DsProgressTrackerDefaultProps,
   DsProgressTrackerProps,
@@ -11,44 +11,33 @@ import { DsBox } from '../DsBox'
 import { DsTypography } from '../DsTypography'
 import { DsStack } from '../DsStack'
 
-export class DsProgressTracker extends PureComponent<
-  DsProgressTrackerProps,
-  DsProgressTrackerState
-> {
-  static defaultProps = DsProgressTrackerDefaultProps
+export const DsProgressTracker: FC<
+  DsProgressTrackerProps
+> = (inProps) => {
+const props = {...DsProgressTrackerDefaultProps, ...inProps}
+const [open, setOpen] = useState<DsProgressTrackerState['open']>(props['ds-variant'] === 'steps' ? true : false)
 
-  constructor(props: DsProgressTrackerProps) {
-    super(props)
-
-    const state: DsProgressTrackerState = {
-      open: props['ds-variant'] === 'steps' ? true : false
-    }
-
-    this.state = state
-  }
-
-  getMergedProps = () => {
+ const getMergedProps = () => {
     return {
       ...DsProgressTrackerDefaultProps,
-      ...this.props,
+      ...props,
       StepperProps: {
         ...DsProgressTrackerDefaultProps?.StepperProps,
-        ...this.props?.StepperProps
+        ...props?.StepperProps
       }
     }
   }
 
-  handleToggleCollapse = () => this.setState({ open: !this.state.open })
+  const handleToggleCollapse = () => setOpen(!open)
 
-  renderStepper = () => {
-    const mergedProps = this.getMergedProps()
+  const renderStepper = () => {
+    const mergedProps = getMergedProps()
     // Don Not Render steps if variant is `header`
     if (mergedProps['ds-variant'] === 'header') {
       return null
     }
 
     const { StepperProps, activeStep, steps } = mergedProps
-    const { open } = this.state
 
     return (
       <DsCollapse in={open}>
@@ -61,8 +50,8 @@ export class DsProgressTracker extends PureComponent<
     )
   }
 
-  renderHeader = () => {
-    const mergedProps = this.getMergedProps()
+  const renderHeader = () => {
+    const mergedProps = getMergedProps()
 
     // Don Not Render Header if variant is `steps`
     if (mergedProps['ds-variant'] === 'steps') {
@@ -87,7 +76,7 @@ export class DsProgressTracker extends PureComponent<
         }}
         spacing="var(--ds-spacing-bitterCold)"
         direction="row"
-        onClick={this.handleToggleCollapse}
+        onClick={handleToggleCollapse}
       >
         <DsProgressIndicator activeStep={activeStep + 1} steps={steps.length} />
         <DsStack
@@ -120,14 +109,12 @@ export class DsProgressTracker extends PureComponent<
     )
   }
 
-  render() {
-    const mergedProps = this.props
+    const mergedProps = props
     const { sx } = mergedProps
     return (
       <DsBox sx={{ width: '100%', ...sx }}>
-        {this.renderHeader()}
-        {this.renderStepper()}
+        {renderHeader()}
+        {renderStepper()}
       </DsBox>
     )
-  }
 }

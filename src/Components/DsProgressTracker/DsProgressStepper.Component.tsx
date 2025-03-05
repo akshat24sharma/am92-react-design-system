@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import { FC } from 'react'
 import {
   DsProgressStepperDefaultProps,
   DsProgressStepperProps,
@@ -10,10 +10,10 @@ import { DsStepLabel, DsStepLabelProps } from '../DsStepLabel'
 import { DsRemixIcon } from '../DsRemixIcon'
 import { StepIconProps } from '@mui/material'
 
-export class DsProgressStepper extends PureComponent<DsProgressStepperProps> {
-  static defaultProps = DsProgressStepperDefaultProps
+export const DsProgressStepper: FC<DsProgressStepperProps> = (inProps) => {
+  const props = { ...DsProgressStepperDefaultProps, ...inProps }
 
-  renderStepIcon = (stepProps: StepIconProps) => {
+  const renderStepIcon = (stepProps: StepIconProps) => {
     const { active, error, completed, icon } = stepProps
 
     if (error) {
@@ -46,7 +46,7 @@ export class DsProgressStepper extends PureComponent<DsProgressStepperProps> {
     return <>{icon}</>
   }
 
-  renderStep = (step: DsProgressStepperStepProps, index: number) => {
+  const renderStep = (step: DsProgressStepperStepProps, index: number) => {
     const { stepName, error, icon, optional, completed, disabled } = step
 
     const stepProps: DsStepProps = { completed, disabled }
@@ -63,7 +63,7 @@ export class DsProgressStepper extends PureComponent<DsProgressStepperProps> {
       <DsStep key={index} {...stepProps}>
         <DsStepLabel
           {...stepLabelProps}
-          StepIconComponent={this.renderStepIcon}
+          StepIconComponent={renderStepIcon}
         >
           {stepName}
         </DsStepLabel>
@@ -71,16 +71,14 @@ export class DsProgressStepper extends PureComponent<DsProgressStepperProps> {
     )
   }
 
-  render() {
-    const { steps, ...stepperProps } = this.props
+    const { steps, ...stepperProps } = props
 
     return (
       <DsStepper
         {...stepperProps}
         alternativeLabel={stepperProps.orientation === 'horizontal'}
       >
-        {steps.map(this.renderStep)}
+        {steps.map(renderStep)}
       </DsStepper>
     )
-  }
 }
