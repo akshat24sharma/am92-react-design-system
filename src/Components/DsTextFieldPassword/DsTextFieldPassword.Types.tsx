@@ -30,7 +30,3 @@ export const DsTextFieldPasswordDefaultProps: DsTextFieldPasswordProps = {
 export interface DsTextFieldPasswordState {
   isVisible: boolean
 }
-
-export const DsTextFieldPasswordDefaultState: DsTextFieldPasswordState = {
-  isVisible: false
-}
