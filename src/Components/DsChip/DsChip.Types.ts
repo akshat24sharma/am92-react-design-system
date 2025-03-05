@@ -6,8 +6,10 @@ export interface DsChipProps extends Omit<ChipProps, 'color'> {
     ChipProps['color'],
     'default' | 'info' | 'success' | 'warning' | 'error'
   >
+  'ds-variant'?: 'chip'
 }
 
 export const DsChipDefaultProps: DsChipProps = {
-  type: 'status'
+  type: 'status',
+  'ds-variant':'chip'
 }
