@@ -8,7 +8,3 @@ export interface DsTextAreaProps extends DsTextFieldProps {
 export interface DsTextAreaState {
   count: number
 }
-
-export const DsTextAreaDefaultState: DsTextAreaState = {
-  count: 0
-}
