@@ -1,6 +1,5 @@
-import React, { PureComponent } from 'react'
+import { FC } from 'react'
 import {
-  DsHelperTextDefaultProps,
   DsHelperTextProps
 } from './DsHelperText.Types'
 import { DsFormHelperText } from '../DsFormHelperText'
@@ -8,12 +7,9 @@ import { DsBox } from '../DsBox'
 import { DsTypography } from '../DsTypography'
 import { DsRemixIcon } from '../DsRemixIcon'
 
-export class DsHelperText extends PureComponent<DsHelperTextProps> {
-  static defaultProps = DsHelperTextDefaultProps
+export const DsHelperText:FC<DsHelperTextProps> = (props) => {
 
-  render() {
-    const { helperText, color, success, error, ...formHelperTextProps } =
-      this.props
+    const { helperText, color, success, error, ...formHelperTextProps } = props
 
     const customColor = success ? 'success' : color
 
@@ -61,5 +57,4 @@ export class DsHelperText extends PureComponent<DsHelperTextProps> {
         </DsFormHelperText>
       )
     )
-  }
 }
