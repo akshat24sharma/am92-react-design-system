@@ -3,16 +3,16 @@ import * as React from 'react'
 import { DsCarouselPaginationProps } from '../DsCarousel.Types'
 import { DsBox } from '../../DsBox'
 
-export default class DsCarouselPagination extends React.PureComponent<DsCarouselPaginationProps> {
-  paginationRef = React.createRef<HTMLDivElement>()
+const DsCarouselPagination: React.FC<DsCarouselPaginationProps> = (props) => {
+  const paginationRef = React.useRef<HTMLDivElement>()
 
-  componentDidMount() {
-    this.handleFirstTransition()
-  }
+  React.useEffect(() => {
+    handleFirstTransition()
+   }, [])
 
-  handleFirstTransition = () => {
+  const handleFirstTransition = () => {
     const firstActiveBullet =
-      this.paginationRef.current?.getElementsByClassName(
+      paginationRef.current?.getElementsByClassName(
         'swiper-pagination-bullet-active'
       )[0]
 
@@ -24,7 +24,6 @@ export default class DsCarouselPagination extends React.PureComponent<DsCarousel
     }
   }
 
-  render() {
     const {
       uid,
       isEnabled,
@@ -32,7 +31,7 @@ export default class DsCarouselPagination extends React.PureComponent<DsCarousel
       PaginationSettings,
       AutoplaySettings,
       PaginationProps
-    } = this.props
+    } = props
     if (!isEnabled) {
       return false
     }
@@ -49,7 +48,7 @@ export default class DsCarouselPagination extends React.PureComponent<DsCarousel
 
     return (
       <DsBox
-        ref={this.paginationRef}
+        ref={paginationRef}
         className={className}
         {...PaginationProps}
         sx={{
@@ -160,5 +159,6 @@ export default class DsCarouselPagination extends React.PureComponent<DsCarousel
         }}
       />
     )
-  }
 }
+
+export default DsCarouselPagination

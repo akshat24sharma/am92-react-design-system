@@ -4,9 +4,9 @@ import { DsCarouselNavigationProps } from '../DsCarousel.Types'
 import { DsIconButton } from '../../DsIconButton'
 import { DsRemixIcon } from '../../DsRemixIcon'
 
-export default class DsCarouselNavigation extends React.PureComponent<DsCarouselNavigationProps> {
-  render() {
-    const { uid, isEnabled, NavigationProps = {} } = this.props
+const DsCarouselNavigation: React.FC<DsCarouselNavigationProps> = (props) => {
+
+    const { uid, isEnabled, NavigationProps = {} } = props
     if (!isEnabled) {
       return false
     }
@@ -66,5 +66,6 @@ export default class DsCarouselNavigation extends React.PureComponent<DsCarousel
         </DsIconButton>
       </>
     )
-  }
 }
+
+export default DsCarouselNavigation
