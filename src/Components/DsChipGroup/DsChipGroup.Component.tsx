@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react'
+import React, { FC, PureComponent } from 'react'
 import { DsStack } from '../DsStack'
 import { DsChipGroupDefaultProps, DsChipGroupProps } from './DsChipGroup.Types'
 
-export class DsChipGroup extends PureComponent<DsChipGroupProps> {
-  static defaultProps = DsChipGroupDefaultProps
-  render() {
-    const { children, ...restStackProps } = this.props
+export const DsChipGroup: FC<DsChipGroupProps> = (inProps) => {
+  const props = { ...DsChipGroupDefaultProps, ...inProps }
+
+    const { children, ...restStackProps } = props
     return (
       <DsStack
         direction={'row'}
@@ -15,5 +15,4 @@ export class DsChipGroup extends PureComponent<DsChipGroupProps> {
         {children}
       </DsStack>
     )
-  }
 }
