@@ -1,9 +1,8 @@
-import { DsSlideDefaultProps } from '../DsSlide/DsSlide.Types'
-import { DsSliderProps } from './DsSlider.Types'
+import { DsSliderDefaultProps, DsSliderProps } from './DsSlider.Types'
 
 export const DsSliderOverrides = {
   MuiSlider: {
-    defaultProps: DsSlideDefaultProps,
+    defaultProps: DsSliderDefaultProps,
     variants: [
       {
         props: { 'ds-mode': 'true' } as Partial<DsSliderProps>,
