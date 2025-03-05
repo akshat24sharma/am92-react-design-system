@@ -1,26 +1,31 @@
-import React, { PureComponent } from 'react'
+import React, { FC } from 'react'
 import Switch from '@mui/material/Switch'
-import { DsToggleProps } from './DsToggle.Types'
+import { DsToggleDefaultProps, DsToggleProps } from './DsToggle.Types'
+import { useThemeProps } from '@mui/system'
 
-export class DsToggle extends PureComponent<DsToggleProps> {
-  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { onChange } = this.props
+export const DsToggle: FC<DsToggleProps> = (inProps) => {
+
+  const props = useThemeProps({
+    props: inProps,
+    name: 'DsToggle'
+  })
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { onChange } = props
     const { name, checked } = event.target
     if (typeof onChange === 'function') {
       onChange(name, checked)
     }
   }
 
-  render() {
-    const { value, onChange, ...restProps } = this.props
+    const { value, onChange, ...restProps } = props
 
     return (
       <Switch
         {...restProps}
         color="secondary"
         checked={value}
-        onChange={this.handleChange}
+        onChange={handleChange}
       />
     )
-  }
 }

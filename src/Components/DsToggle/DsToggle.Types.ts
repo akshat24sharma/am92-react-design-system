@@ -8,6 +8,6 @@ export interface DsToggleProps extends Omit<SwitchProps, 'onChange'> {
 
 export const DsToggleDefaultProps: DsToggleProps = {
   name: '',
-  value: false,
+  value: true,
   onChange: () => undefined
 }
