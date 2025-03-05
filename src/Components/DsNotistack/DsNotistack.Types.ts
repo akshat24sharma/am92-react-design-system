@@ -17,3 +17,7 @@ export interface EnqueNotistackProps
   extends OptionsObject,
     NotiStackMessage,
     Pick<DsToastProps, Exclude<keyof DsToastProps, keyof OptionsObject>> {}
+
+export const DsNotistackProviderDefaultProps: SnackbarProviderProps = {
+  hideIconVariant: true
+}
