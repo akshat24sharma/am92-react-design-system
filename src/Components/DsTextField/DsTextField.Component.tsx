@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react'
-import { DsTextFieldProps } from './DsTextField.Types'
+import { FC } from 'react'
+import { DsTextFieldDefaultProps, DsTextFieldProps } from './DsTextField.Types'
 import { DsFormControl } from '../DsFormControl'
 import { DsInputLabel } from '../DsInputLabel'
 import { DsInputBase } from '../DsInputBase'
 import { DsHelperText } from '../DsHelperText'
 
-export class DsTextField extends PureComponent<DsTextFieldProps> {
-  render() {
+export const DsTextField: FC<DsTextFieldProps> = (inProps) => {
+  const props = { ...DsTextFieldDefaultProps, ...inProps }
     const {
       id,
       name,
@@ -26,7 +26,7 @@ export class DsTextField extends PureComponent<DsTextFieldProps> {
       InputLabelProps,
       HelperTextProps,
       ...inputBaseProps
-    } = this.props
+    } = props
 
     const customColor = success ? 'success' : color
 
@@ -70,5 +70,4 @@ export class DsTextField extends PureComponent<DsTextFieldProps> {
         />
       </DsFormControl>
     )
-  }
 }
