@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { FC } from 'react'
 
 import { DsRemixIcon } from '../DsRemixIcon'
 import { DsTypography } from '../DsTypography'
@@ -14,27 +14,26 @@ import { DsButton } from '../DsButton'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsPaper } from '../DsPaper'
 
-export class DsBottomSheet extends PureComponent<DsBottomSheetProps> {
-  static defaultProps = DsBottomSheetDefaultProps
+export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
+  const props = { ...DsBottomSheetDefaultProps, ...inProps }
 
-  handleDrawerClose = (
+  const handleDrawerClose = (
     event: React.SyntheticEvent,
     reason: 'backdropClick' | 'escapeKeyDown'
   ) => {
-    const { onClose } = this.props
+    const { onClose } = props
     if (typeof onClose === 'function') {
       onClose(event, reason)
     }
   }
 
-  handleCloseClick = (event: React.SyntheticEvent) => {
-    const { onClose } = this.props
+  const handleCloseClick = (event: React.SyntheticEvent) => {
+    const { onClose } = props
     if (typeof onClose === 'function') {
       onClose(event, 'backdropClick')
     }
   }
 
-  render() {
     const {
       kicker,
       title,
@@ -55,7 +54,7 @@ export class DsBottomSheet extends PureComponent<DsBottomSheetProps> {
 
       onClose,
       ...DrawerProps
-    } = this.props
+    } = props
 
     const actionsAvailable = !!(primaryButtonText || secondaryButtonText)
     const isFlushed =
@@ -86,11 +85,11 @@ export class DsBottomSheet extends PureComponent<DsBottomSheetProps> {
             ...PaperProps?.sx
           }
         }}
-        onClose={this.handleDrawerClose}
+        onClose={handleDrawerClose}
       >
         {showClose && (
           <DsIconButton
-            onClick={this.handleCloseClick}
+            onClick={handleCloseClick}
             {...CloseIconButtonProps}
             sx={{
               flexGrow: 0,
@@ -191,5 +190,4 @@ export class DsBottomSheet extends PureComponent<DsBottomSheetProps> {
         </DsPaper>
       </DsDrawer>
     )
-  }
 }
