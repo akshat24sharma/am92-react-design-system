@@ -18,7 +18,7 @@ interface DsBottomSheetPropsCustom
 }
 
 export interface DsPopupProps extends Pick<DsDialogProps, 'onClose'> {
-  open?: DsDialogProps['open']
+  open: DsDialogProps['open']
   title?: string
   description?: string
   showClose?: boolean
