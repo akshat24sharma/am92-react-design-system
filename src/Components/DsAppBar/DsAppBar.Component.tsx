@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import { FC } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 
@@ -6,13 +6,11 @@ import { DsBox } from '../DsBox'
 import { DsTypography } from '../DsTypography'
 import { DsStack } from '../DsStack'
 
-import { DsAppBarDefaultProps, DsAppBarProps } from './DsAppBar.Types'
+import {  DsAppBarProps } from './DsAppBar.Types'
 
-export class DsAppBar extends PureComponent<DsAppBarProps> {
-  static defaultProps = DsAppBarDefaultProps
+export const DsAppBar: FC<DsAppBarProps> = (props) => {
 
-  render() {
-    const { navigation, appBarTitle, actions, ...appBarProps } = this.props
+    const { navigation, appBarTitle, actions, ...appBarProps } = props
 
     const contentJSX =
       typeof appBarTitle === 'string' ? (
@@ -64,5 +62,4 @@ export class DsAppBar extends PureComponent<DsAppBarProps> {
         </Toolbar>
       </AppBar>
     )
-  }
 }

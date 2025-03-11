@@ -1,19 +1,19 @@
-import React, { PureComponent } from 'react'
+import React, { FC } from 'react'
 import { DsStack } from '../DsStack'
 import { DsTagGroupDefaultProps, DsTagGroupProps } from './DsTagGroup.Types'
 import { DsRemixIcon } from '../DsRemixIcon'
 
-export class DsTagGroup extends PureComponent<DsTagGroupProps> {
-  static defaultProps = DsTagGroupDefaultProps
+export const DsTagGroup: FC<DsTagGroupProps> = (inProps) => {
+  const props = { ...DsTagGroupDefaultProps, ...inProps}
 
-  handleUnselect = (handleValue: any) => {
-    const { name, value = [], onChange } = this.props
-    const changedValue = value.filter((e: any) => e !== handleValue)
+  const handleUnselect = (handleValue: any) => {
+    const { name, value = [], onChange } = props
+    const changedValue = value?.filter((e: any) => e !== handleValue)
     onChange(name, changedValue)
   }
 
-  handleSelect = (handleValue: any) => {
-    const { multi, name, value = [], onChange } = this.props
+  const handleSelect = (handleValue: any) => {
+    const { multi, name, value = [], onChange } = props
 
     let changedValue
     if (multi) {
@@ -25,9 +25,7 @@ export class DsTagGroup extends PureComponent<DsTagGroupProps> {
     onChange(name, changedValue)
   }
 
-  render() {
-    const { multi, children, value, name, onChange, ...restStackProps } =
-      this.props
+    const { multi, children, value, name, onChange, ...restStackProps } = props
 
     const childrenArray = children instanceof Array ? children : [children]
 
@@ -41,12 +39,12 @@ export class DsTagGroup extends PureComponent<DsTagGroupProps> {
           const { value: chipValue } = child.props
 
           const selected =
-            (multi && value.includes(chipValue)) || value === chipValue
+            (multi && value?.includes(chipValue)) || value === chipValue
 
           const onDelete =
-            (multi && selected && this.handleUnselect) || undefined
+            (multi && selected && handleUnselect) || undefined
 
-          const onClick = (selected && onDelete) || this.handleSelect
+          const onClick = (selected && onDelete) || handleSelect
 
           const childClone = React.cloneElement(child, {
             value: chipValue,
@@ -60,5 +58,4 @@ export class DsTagGroup extends PureComponent<DsTagGroupProps> {
         })}
       </DsStack>
     )
-  }
 }

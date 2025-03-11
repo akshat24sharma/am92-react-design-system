@@ -1,30 +1,24 @@
-import React, { CSSProperties, Component } from 'react'
+import React, { CSSProperties, FC, useState } from 'react'
 
 import { DsBox } from '../DsBox'
 import { DsStack } from '../DsStack'
 import { DsInputLabel } from '../DsInputLabel'
 import { DsTextField } from '../DsTextField'
 import { DsHelperText } from '../DsHelperText'
-import { DsOtpDefaultProps, DsOtpProps, DsOtpState } from './DsOtp.Types'
+import { DsOtpDefaultProps, DsOtpProps } from './DsOtp.Types'
 
 const KEY_CODES = {
   BACK_SPACE: 'Backspace'
 }
 
-export class DsOtp extends Component<DsOtpProps, DsOtpState> {
-  static defaultProps = DsOtpDefaultProps
-  optInputRefs = new Map()
+export const DsOtp: FC<DsOtpProps> = (inProps) => {
+  const props = { ...DsOtpDefaultProps, ...inProps}
+  const optInputRefs = new Map()
+  const { initialOtp = '', length } = props
+  const [otp, setOtp] = useState(initialOtp ? [...initialOtp].slice(0, length) : [])
 
-  constructor(props: DsOtpProps) {
-    super(props)
-    const { initialOtp = '', length } = this.props
-    this.state = {
-      otp: initialOtp ? [...initialOtp].slice(0, length) : []
-    }
-  }
-
-  handleFocus = (event: React.FocusEvent<HTMLInputElement, Element>) => {
-    const { onFocus } = this.props
+  const handleFocus = (event: React.FocusEvent<HTMLInputElement, Element>) => {
+    const { onFocus } = props
     const { target } = event
     target.select()
     if (typeof onFocus === 'function') {
@@ -32,8 +26,8 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
     }
   }
 
-  handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    const { onKeyDown } = this.props
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const { onKeyDown } = props
     const { key, currentTarget } = event
     const { name, value } = currentTarget
     const indexString = name.split('.').pop() || ''
@@ -41,7 +35,7 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
 
     // Call _handleNavigation on back button pressed
     if (key === KEY_CODES.BACK_SPACE && !value) {
-      this._handleNavigation(index, true)
+      _handleNavigation(index, true)
     }
 
     if (typeof onKeyDown === 'function') {
@@ -49,9 +43,8 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
     }
   }
 
-  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { onChange, onComplete, length } = this.props
-    const { otp } = this.state
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { onChange, onComplete, length } = props
     const { target } = event
     const { name, value = '' } = target
     const indexString = name.split('.').pop() || ''
@@ -63,9 +56,9 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
 
     const shouldNavigate = filteredValue
     const _this = this
-    this.setState({ otp: [...otp] }, () => {
+    setOtp([...otp])
       if (shouldNavigate) {
-        _this._handleNavigation(index, false)
+        _handleNavigation(index, false)
       }
 
       if (typeof onChange === 'function') {
@@ -76,30 +69,29 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
       if (otpString.length === length && typeof onComplete === 'function') {
         onComplete(otpString)
       }
-    })
   }
 
-  _handleNavigation = (index: number, isBackPressed?: boolean): void => {
+  const _handleNavigation = (index: number, isBackPressed?: boolean): void => {
     const nextFocussedIndex = isBackPressed ? --index : ++index
-    const nextFocussedInput = this.optInputRefs.get(nextFocussedIndex)
+    const nextFocussedInput = optInputRefs.get(nextFocussedIndex)
     if (nextFocussedInput) {
       nextFocussedInput.focus()
     }
   }
 
-  handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
+  const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
     event.preventDefault()
-    const { onPaste, onComplete, length } = this.props
+    const { onPaste, onComplete, length } = props
     const { clipboardData, currentTarget } = event
 
     const pastedData = clipboardData.getData('text')
     const filteredValue = pastedData.replace(/\D/g, '') || ''
     const otp = filteredValue.split('').slice(0, length)
 
-    this.setState({ otp })
+    setOtp(otp)
     currentTarget.blur()
     const focusIndex = otp.length - 1
-    this._handleNavigation(focusIndex)
+    _handleNavigation(focusIndex)
 
     if (typeof onPaste === 'function') {
       onPaste(event)
@@ -111,12 +103,11 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
     }
   }
 
-  resetOtpValues = () => {
-    this.setState({ otp: [] })
+  const resetOtpValues = () => {
+    setOtp([])
   }
 
-  renderOtpBoxes = () => {
-    const { otp } = this.state
+  const renderOtpBoxes = () => {
     const {
       label,
       labelSupportText,
@@ -128,7 +119,7 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
       BoxProps,
       InputLabelProps,
       ...restProps
-    } = this.props
+    } = props
     const lengthArray = Array(length).fill('')
 
     const otpInputProps = {
@@ -149,19 +140,18 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
         name={`${name}.${index}`}
         ds-variant="otp"
         inputProps={otpInputProps}
-        onPaste={this.handlePaste}
-        onFocus={this.handleFocus}
-        onChange={this.handleChange}
-        onKeyDown={this.handleKeyDown}
+        onPaste={handlePaste}
+        onFocus={handleFocus}
+        onChange={handleChange}
+        onKeyDown={handleKeyDown}
         value={otp[index] || ''}
         inputRef={ref => {
-          this.optInputRefs.set(index, ref)
+          optInputRefs.set(index, ref)
         }}
       />
     ))
   }
 
-  render() {
     const {
       id,
       name,
@@ -176,7 +166,7 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
       InputLabelProps,
       HelperTextProps,
       BoxProps
-    } = this.props
+    } = props
 
     return (
       <DsBox {...BoxProps}>
@@ -190,7 +180,7 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
           {...InputLabelProps}
         />
         <DsStack direction="row" spacing="var(--ds-spacing-glacial)" style={{}}>
-          {this.renderOtpBoxes()}
+          {renderOtpBoxes()}
         </DsStack>
         <DsHelperText
           helperText={helperText}
@@ -201,5 +191,4 @@ export class DsOtp extends Component<DsOtpProps, DsOtpState> {
         />
       </DsBox>
     )
-  }
 }

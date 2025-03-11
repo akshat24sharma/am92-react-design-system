@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, FC, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import { DsInputAdornment } from '../DsInputAdornment'
@@ -7,37 +7,23 @@ import { DsButton } from '../DsButton'
 
 import {
   DsTextFieldPasswordDefaultProps,
-  DsTextFieldPasswordDefaultState,
   DsTextFieldPasswordProps,
   DsTextFieldPasswordState
 } from './DsTextFieldPassword.Types'
 
-export class DsTextFieldPassword extends Component<
-  DsTextFieldPasswordProps,
-  DsTextFieldPasswordState
-> {
-  static defaultProps = DsTextFieldPasswordDefaultProps
-  state: DsTextFieldPasswordState
+export const DsTextFieldPassword: FC<
+  DsTextFieldPasswordProps
+> = (props) => {
+  const [isVisible, setIsVisible] = useState<DsTextFieldPasswordState['isVisible']>(false)
 
-  constructor(props: DsTextFieldPasswordProps) {
-    super(props)
-
-    this.state = {
-      ...DsTextFieldPasswordDefaultState,
-      isVisible: props.isVisible
-    }
+  const getMergedProps = (): DsTextFieldPasswordProps => {
+    return { ...DsTextFieldPasswordDefaultProps, ...props }
   }
 
-  getMergedProps = (): DsTextFieldPasswordProps => {
-    return { ...DsTextFieldPasswordDefaultProps, ...this.props }
-  }
+  const handleTogglePassword = (): void =>
+    setIsVisible(!isVisible)
 
-  handleTogglePassword = (): void =>
-    this.setState({ isVisible: !this.state.isVisible })
-
-  render() {
-    const { isVisible } = this.state
-    const mergedProps = this.getMergedProps()
+    const mergedProps = getMergedProps()
     const {
       type,
       isVisible: isVisibleProp,
@@ -60,12 +46,12 @@ export class DsTextFieldPassword extends Component<
         endAdornment={
           <DsInputAdornment
             position="end"
-            onClick={(!disabled && this.handleTogglePassword) || undefined}
+            onClick={(!disabled && handleTogglePassword) || undefined}
           >
             {endAdornment}
           </DsInputAdornment>
         }
       />
     )
-  }
+  
 }

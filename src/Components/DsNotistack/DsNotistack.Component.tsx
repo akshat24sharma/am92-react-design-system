@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { FC } from 'react'
 import {
   SnackbarProvider,
   SnackbarProviderProps,
@@ -14,34 +14,30 @@ import {
   DsNotistackAlertWarning,
   DsNotistackAlertInfo
 } from './AlertMessage.Component'
-import { DsNotistackKey, EnqueNotistackProps } from './DsNotistack.Types'
+import { DsNotistackKey, DsNotistackProviderDefaultProps, EnqueNotistackProps } from './DsNotistack.Types'
 
 const useNotistack = useSnackbar
 
 export { closeNotistack, useNotistack, enqueueNotistack, generateKeyNotistack }
 
-export class DsNotistackProvider extends Component<SnackbarProviderProps> {
-  static defaultProps = {
-    hideIconVariant: true
-  }
+export const DsNotistackProvider: FC<SnackbarProviderProps> = (inProps) => {
+  const props = { ...DsNotistackProviderDefaultProps, ...inProps }
 
-  render() {
     return (
       <SnackbarProvider
         preventDuplicate
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-        {...this.props}
+        {...props}
         Components={{
           default: DsNotistackAlertDefault,
           success: DsNotistackAlertSuccess,
           error: DsNotistackAlertError,
           warning: DsNotistackAlertWarning,
           info: DsNotistackAlertInfo,
-          ...this.props.Components
+          ...props.Components
         }}
       />
     )
-  }
 }
 
 function generateKeyNotistack(message?: string): string {

@@ -1,19 +1,18 @@
-import React, { PureComponent } from 'react'
+import React, { FC } from 'react'
 import { DsStack } from '../DsStack'
 import {
   DsButtonGroupProps,
   DsButtonGroupDefaultProps
 } from './DsButtonGroup.Types'
 
-export class DsButtonGroup extends PureComponent<DsButtonGroupProps> {
-  static defaultProps = DsButtonGroupDefaultProps
+export const DsButtonGroup: FC<DsButtonGroupProps> = (inProps) => {
+  const props= {...DsButtonGroupDefaultProps, ...inProps}
 
-  getMergedProps = (): DsButtonGroupProps => {
-    return { ...DsButtonGroupDefaultProps, ...this.props }
+  const getMergedProps = (): DsButtonGroupProps => {
+    return { ...DsButtonGroupDefaultProps, ...props }
   }
 
-  render() {
-    const mergedProps = this.getMergedProps()
+    const mergedProps = getMergedProps()
     const { fullWidth, noPadding, size, sx, children, ...restProps } =
       mergedProps
     const childrenArray = children instanceof Array ? children : [children]
@@ -37,5 +36,4 @@ export class DsButtonGroup extends PureComponent<DsButtonGroupProps> {
         )}
       </DsStack>
     )
-  }
 }

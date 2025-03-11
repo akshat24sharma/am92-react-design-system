@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { FC } from 'react'
 import {
   DsProgressIndicatorDefaultProps,
   DsProgressIndicatorProps
@@ -8,11 +8,11 @@ import { DsCircularProgress } from '../DsCircularProgress'
 import { DsTypography } from '../DsTypography'
 import { DsRemixIcon } from '../DsRemixIcon'
 
-export class DsProgressIndicator extends Component<DsProgressIndicatorProps> {
-  static defaultProps = DsProgressIndicatorDefaultProps
+export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
+  const props = { ...DsProgressIndicatorDefaultProps, ...inProps }
 
-  getFillText = () => {
-    const { activeStep, steps, isSuccess, isError } = this.props
+  const getFillText = () => {
+    const { activeStep, steps, isSuccess, isError } = props
 
     if (isSuccess) {
       return (
@@ -32,16 +32,15 @@ export class DsProgressIndicator extends Component<DsProgressIndicatorProps> {
       )
     }
 
-    if (this.props['ds-variant'] === 'fraction') {
+    if (props['ds-variant'] === 'fraction') {
       return `${activeStep}/${steps}`
     }
 
     return `${Math.round((activeStep / steps) * 100)}%`
   }
 
-  render() {
-    const { activeStep, steps, isSuccess, isError } = this.props
-    const squareSize = this.props['ds-variant'] === 'fraction' ? '48px' : '32px'
+    const { activeStep, steps, isSuccess, isError } = props
+    const squareSize = props['ds-variant'] === 'fraction' ? '48px' : '32px'
     const fillPercentage = Math.round((activeStep / steps) * 100)
     const fillColor = isSuccess ? 'success' : isError ? 'error' : 'secondary'
 
@@ -78,9 +77,8 @@ export class DsProgressIndicator extends Component<DsProgressIndicatorProps> {
             transform: 'translate(-50%,-50%)'
           }}
         >
-          {this.getFillText()}
+          {getFillText()}
         </DsTypography>
       </DsBox>
     )
-  }
 }

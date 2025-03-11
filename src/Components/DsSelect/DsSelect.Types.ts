@@ -8,6 +8,16 @@ interface OptionProp {
   value: any
 }
 
+export interface SelectedValueArrayProps {
+  selectedValue: any[]
+  valueMap: Map<any, string>
+}
+
+export interface SelectedValueProps {
+  selectedValue: any
+  valueMap: Map<any, string>
+}
+
 export interface DsSelectProps extends Omit<SelectProps, 'ref'> {
   ref?: React.Ref<any>
   FormControlProps?: Omit<

@@ -1,31 +1,23 @@
-import { PureComponent } from 'react'
+import { FC, useState } from 'react'
 import { DsBox } from '../DsBox'
 import { DsStack } from '../DsStack'
 import {
+  DsContentSliderDefaultProps,
   DsContentSliderProps,
   DsContentSliderState
 } from './DsContentSlider.Types'
 
-export class DsContentSlider extends PureComponent<
-  DsContentSliderProps,
-  DsContentSliderState
-> {
-  constructor(props: DsContentSliderProps) {
-    super(props)
+export const DsContentSlider : FC<
+  DsContentSliderProps
+> = (inProps) => {
+  const props = { ...DsContentSliderDefaultProps, ...inProps }
+  const [active, setActive] = useState<DsContentSliderState['active']>(0)  
 
-    const state: DsContentSliderState = {
-      active: props.activeStep
-    }
-
-    this.state = state
-  }
-
-  renderStep(index: number) {
-    const { active } = this.state
+  function renderStep(index: number) {
     const isActiveStep = index === active
 
     if (isActiveStep) {
-      const isTimed = this.props['ds-variant'] === 'timed'
+      const isTimed = props['ds-variant'] === 'timed'
 
       if (isTimed) {
         return (
@@ -86,24 +78,22 @@ export class DsContentSlider extends PureComponent<
     )
   }
 
-  renderSteps() {
-    const { steps } = this.props
+  function renderSteps() {
+    const { steps } =  props
     const indicators: JSX.Element[] = []
 
     for (let index = 0; index < steps; index++) {
-      const indicator: JSX.Element = this.renderStep(index)
+      const indicator: JSX.Element = renderStep(index)
       indicators.push(indicator)
     }
 
     return indicators
   }
 
-  render() {
-    const { steps } = this.props
+    const { steps } = props
     return (
       <DsStack direction="row" spacing="var(--ds-spacing-quickFreeze)">
-        {this.renderSteps()}
+        {renderSteps()}
       </DsStack>
     )
-  }
 }

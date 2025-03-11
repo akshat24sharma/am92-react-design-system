@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { FC, useState } from 'react'
 import { DsBox } from '../DsBox'
 import { DsFade } from '../DsFade'
 import { DsRemixIcon } from '../DsRemixIcon'
@@ -6,26 +6,24 @@ import { DsSkeleton } from '../DsSkeleton'
 import {
   DsImageProps,
   DsImageState,
-  DsImageDefaultState,
   DEFULT_ERROR_ICON_PROPS,
   INNER_COMPONENT_STYLE
 } from './DsImage.Types'
 
-export class DsImage extends React.Component<DsImageProps, DsImageState> {
-  state = DsImageDefaultState
+export const DsImage: FC<DsImageProps> = (props) => {
+  const [stage, setStage] = useState<DsImageState['stage']>('LOADING')
 
-  handleSetLoadedStage = () => this.setState({ stage: 'LOADED' })
-  handleSetErrorStage = () => this.setState({ stage: 'ERROR' })
+  const handleSetLoadedStage = () => setStage('LOADED')
+  const handleSetErrorStage = () => setStage('ERROR')
 
-  hasSource = () => {
-    const { srcSet = [] } = this.props
+  const checkHasSource = () => {
+    const { srcSet = [] } = props
     return srcSet && srcSet.length > 0
   }
 
-  renderLoadingComponent = () => {
-    const { stage } = this.state
-    const { aspectRatio, LoaderProps } = this.props
-    const hasSource = this.hasSource()
+  const renderLoadingComponent = () => {
+    const { aspectRatio, LoaderProps } = props
+    const hasSource = checkHasSource()
     const isLoading = hasSource && stage === 'LOADING'
 
     if (!isLoading) {
@@ -46,10 +44,9 @@ export class DsImage extends React.Component<DsImageProps, DsImageState> {
     )
   }
 
-  renderErrorComponent = () => {
-    const { stage } = this.state
-    const { aspectRatio, ErrorIconProps } = this.props
-    const hasSource = this.hasSource()
+  const renderErrorComponent = () => {
+    const { aspectRatio, ErrorIconProps } = props
+    const hasSource = checkHasSource()
     const isError = !hasSource || stage === 'ERROR'
 
     if (!isError) {
@@ -70,10 +67,9 @@ export class DsImage extends React.Component<DsImageProps, DsImageState> {
     )
   }
 
-  renderPictureComponent = () => {
-    const { srcSet, aspectRatio, ErrorIconProps, WrapperProps, ...ImageProps } =
-      this.props
-    const hasSource = this.hasSource()
+  const renderPictureComponent = () => {
+    const { srcSet, aspectRatio, ErrorIconProps, WrapperProps, ...ImageProps } = props
+    const hasSource = checkHasSource()
 
     if (!hasSource) {
       return <></>
@@ -81,8 +77,8 @@ export class DsImage extends React.Component<DsImageProps, DsImageState> {
 
     return (
       <picture
-        onLoad={this.handleSetLoadedStage}
-        onError={this.handleSetErrorStage}
+        onLoad={handleSetLoadedStage}
+        onError={handleSetErrorStage}
       >
         {srcSet?.map((src, index) => {
           const { src: imageSrc, style, ...restProps } = src
@@ -111,9 +107,7 @@ export class DsImage extends React.Component<DsImageProps, DsImageState> {
     )
   }
 
-  render() {
-    const { stage } = this.state
-    const { srcSet, aspectRatio, WrapperProps } = this.props
+    const { srcSet, aspectRatio, WrapperProps } = props
     const hasSource = srcSet && srcSet.length > 0
     const isError = !hasSource || stage === 'ERROR'
 
@@ -141,12 +135,11 @@ export class DsImage extends React.Component<DsImageProps, DsImageState> {
           ...WrapperProps?.sx
         }}
       >
-        {this.renderLoadingComponent()}
-        {this.renderErrorComponent()}
+        {renderLoadingComponent()}
+        {renderErrorComponent()}
         <DsFade in={!isLoading && !isError}>
-          {this.renderPictureComponent()}
+          {renderPictureComponent()}
         </DsFade>
       </DsBox>
     )
-  }
 }

@@ -1,52 +1,44 @@
-import React, { PureComponent } from 'react'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import { DsFormControl } from '../DsFormControl'
 import { DsTextField } from '../DsTextField'
 import { DsTypography } from '../DsTypography'
 import {
   DsTextAreaProps,
-  DsTextAreaState,
-  DsTextAreaDefaultState
+  DsTextAreaState
 } from './DsTextArea.Types'
 
-export class DsTextArea extends PureComponent<
-  DsTextAreaProps,
-  DsTextAreaState
-> {
-  state = DsTextAreaDefaultState
-  areRef = React.createRef()
+export const DsTextArea: FC<
+  DsTextAreaProps
+> = (props) => {
+  const [count, setCount] = useState<DsTextAreaState['count']>(0)
+  const areRef = useRef()
 
-  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { onChange } = this.props
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { onChange } = props
     const { target } = event
     const { value = '' } = target
-    let count = value.length
-    this.setState({ count })
+    let count = value?.length
+    setCount(count)
 
     if (onChange && typeof onChange === 'function') {
       onChange(event)
     }
   }
 
-  componentDidMount(): void {
-    const { value = '' } = this.props
-    const count = (value as string).length
-    this.setState({ count })
-  }
-
-  componentDidUpdate(
-    prevProps: Readonly<DsTextAreaProps>,
-    prevState: Readonly<DsTextAreaState>,
-    snapshot?: any
-  ): void {
-    const { count: currentStateCount } = this.state
-    const { value } = this.props
+  useEffect(() => {
+    const { value = '' } = props
     const count = (value as string)?.length
-    if (count && currentStateCount !== count) {
-      this.setState({ count })
-    }
-  }
+    setCount(count)
+  }, [])
 
-  render() {
+  useEffect(() => {
+    const { value } = props
+    const stringCount = (value as string)?.length
+    if (stringCount && count !== count) {
+      setCount(stringCount)
+    }
+  }, [count, props.value])
+
     const {
       maxLength,
       hideCharacterCount,
@@ -55,8 +47,7 @@ export class DsTextArea extends PureComponent<
       ref,
       fullWidth,
       ...rest
-    } = this.props
-    const { count } = this.state
+    } = props
 
     // Provide counter if MaxLength Provided
     const hasMaxLength = !!maxLength
@@ -82,10 +73,10 @@ export class DsTextArea extends PureComponent<
           minRows={3}
           {...rest}
           fullWidth={fullWidth}
-          onChange={this.handleChange}
+          onChange={handleChange}
           multiline
           inputProps={{
-            ref: ref || this.areRef,
+            ref: ref || areRef,
             ...inputProps,
             sx: {
               minWidth: '288px',
@@ -109,5 +100,4 @@ export class DsTextArea extends PureComponent<
         )}
       </DsFormControl>
     )
-  }
 }

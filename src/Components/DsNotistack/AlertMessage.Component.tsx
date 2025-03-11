@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { FC } from 'react'
 import { OptionsObject, closeSnackbar } from 'notistack'
 
 import { DsToast, DsToastProps } from '../DsToast'
@@ -15,13 +15,12 @@ export interface AlertMessageProps
   iconVariant: DsNotistackProviderProps['iconVariant']
 }
 
-class AlertMessage extends Component<AlertMessageProps> {
-  handleClose = () => {
-    const { id } = this.props
+const AlertMessage: FC<AlertMessageProps> = (props) => {
+  const handleClose = () => {
+    const { id } = props
     closeSnackbar(id)
   }
 
-  render() {
     const {
       ref,
       toastVariant,
@@ -35,19 +34,18 @@ class AlertMessage extends Component<AlertMessageProps> {
       iconVariant,
 
       ...restProps
-    } = this.props
+    } = props
 
     return (
       <DsToast
         {...restProps}
         variant={toastVariant}
         color={variant}
-        onClose={this.handleClose}
+        onClose={handleClose}
       >
         {message}
       </DsToast>
     )
-  }
 }
 
 export const DsNotistackAlertDefault = React.forwardRef<

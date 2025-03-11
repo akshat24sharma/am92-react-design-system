@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
-import { DsIcon } from '../DsIcon'
+import { FC } from 'react'
+import { DsIcon, DsIconDefaultProps } from '../DsIcon'
 import { DsRemixIconProps } from './DsRemixIcon.Types'
 
-export class DsRemixIcon extends PureComponent<DsRemixIconProps> {
-  render() {
-    return <DsIcon baseClassName="" {...this.props} />
-  }
+export const DsRemixIcon: FC<DsRemixIconProps> = (inProps) => {
+  const props = { ...DsIconDefaultProps, ...inProps }
+
+    return <DsIcon baseClassName="" {...props} />
 }

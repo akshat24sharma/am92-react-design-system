@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { DsDialogDefaultProps, DsDialogProps } from './DsDialog.Types'
+import {  DsDialogProps } from './DsDialog.Types'
 import { DsDialogTitle } from '../DsDialogTitle'
 import { Dialog } from '@mui/material'
 import { DsIconButton } from '../DsIconButton'
@@ -8,28 +8,26 @@ import { DsTypography } from '../DsTypography'
 import { DsDialogContent } from '../DsDialogContent'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsButton } from '../DsButton'
-import { Theme } from '@emotion/react'
 
-export class DsDialog extends React.Component<DsDialogProps> {
-  static defaultProps = DsDialogDefaultProps
-  handleDialogClose = (
+export const DsDialog: React.FC<DsDialogProps> = (props) => {
+
+  const handleDialogClose = (
     event: React.SyntheticEvent,
     reason: 'backdropClick' | 'escapeKeyDown'
   ) => {
-    const { onClose } = this.props
+    const { onClose } = props
     if (typeof onClose === 'function') {
       onClose(event, reason)
     }
   }
 
-  handleCloseClick = (event: React.SyntheticEvent) => {
-    const { onClose } = this.props
+  const handleCloseClick = (event: React.SyntheticEvent) => {
+    const { onClose } = props
     if (typeof onClose === 'function') {
       onClose(event, 'backdropClick')
     }
   }
 
-  public render() {
     const {
       title,
       description,
@@ -47,8 +45,8 @@ export class DsDialog extends React.Component<DsDialogProps> {
       ActionsProps,
       children,
       ...DialogProps
-    } = this.props
-
+    } = props
+console.log('props', props)
     const actionsAvailable = !!(primaryButtonText || secondaryButtonText)
     const accessibilityProps: Partial<DsDialogProps> = {}
     const isFlushed =
@@ -120,7 +118,7 @@ export class DsDialog extends React.Component<DsDialogProps> {
         )}
         {showClose && (
           <DsIconButton
-            onClick={this.handleCloseClick}
+            onClick={handleCloseClick}
             {...CloseIconButtonProps}
             sx={{
               position: 'absolute',
@@ -187,5 +185,4 @@ export class DsDialog extends React.Component<DsDialogProps> {
         )}
       </Dialog>
     )
-  }
 }

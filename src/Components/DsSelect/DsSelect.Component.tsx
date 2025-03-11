@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
+import { FC, useRef } from 'react'
 
 import Select from '@mui/material/Select'
-import { DsSelectDefaultProps, DsSelectProps } from './DsSelect.Types'
+import { DsSelectProps, SelectedValueArrayProps, SelectedValueProps } from './DsSelect.Types'
 import { DsFormControl } from '../DsFormControl'
 import { DsInputLabel } from '../DsInputLabel'
 import { DsInputBase } from '../DsInputBase'
@@ -10,11 +10,8 @@ import { DsTypography } from '../DsTypography'
 import { DsRemixIcon, DsRemixIconProps } from '../DsRemixIcon'
 import { DsHelperText } from '../DsHelperText'
 
-export class DsSelect extends PureComponent<DsSelectProps> {
-  static defaultProps = DsSelectDefaultProps
-  selectRef = React.createRef<Element>()
-
-  render() {
+export const DsSelect: FC<DsSelectProps> = (props) => {
+  const selectRef = useRef<Element>()
     const {
       id,
       name,
@@ -35,7 +32,7 @@ export class DsSelect extends PureComponent<DsSelectProps> {
       FormHelperTextProps,
       required,
       ...selectProps
-    } = this.props
+    } = props
 
     const customColor = success ? 'success' : color
 
@@ -43,6 +40,30 @@ export class DsSelect extends PureComponent<DsSelectProps> {
       acc.set(item.value, item.label)
       return acc
     }, new Map())
+
+
+const IconComponent = (props: Omit<DsRemixIconProps, 'ref'>) => {
+  return (
+    <DsRemixIcon
+      {...props}
+      className={`${props.className} ri-arrow-down-s-line`}
+    />
+  )
+}
+
+const SelectedValueArray = (props: SelectedValueArrayProps) => {
+  const { selectedValue, valueMap } = props
+  const returnValue = selectedValue
+    .map(selectedVal => valueMap.get(selectedVal))
+    .join(', ')
+  return <>{returnValue}</>
+}
+
+const SelectedValue = (props: SelectedValueProps) => {
+  const { selectedValue, valueMap } = props
+  const returnValue = valueMap.get(selectedValue)
+  return <>{returnValue}</>
+}
 
     return (
       <DsFormControl
@@ -64,7 +85,7 @@ export class DsSelect extends PureComponent<DsSelectProps> {
           {...InputLabelProps}
         />
         <Select
-          ref={this.selectRef}
+          ref={selectRef}
           id={id}
           name={name}
           IconComponent={IconComponent}
@@ -91,7 +112,7 @@ export class DsSelect extends PureComponent<DsSelectProps> {
           disabled={disabled}
           {...selectProps}
           MenuProps={{
-            anchorEl: () => this.selectRef.current!,
+            anchorEl: () => selectRef.current!,
             ...selectProps?.MenuProps,
             sx: {
               marginTop: 'var(--ds-spacing-glacial)',
@@ -127,38 +148,7 @@ export class DsSelect extends PureComponent<DsSelectProps> {
         />
       </DsFormControl>
     )
-  }
 }
 
-const IconComponent = (props: Omit<DsRemixIconProps, 'ref'>) => {
-  return (
-    <DsRemixIcon
-      {...props}
-      className={`${props.className} ri-arrow-down-s-line`}
-    />
-  )
-}
 
-const SelectedValueArray = (props: SelectedValueArrayProps) => {
-  const { selectedValue, valueMap } = props
-  const returnValue = selectedValue
-    .map(selectedVal => valueMap.get(selectedVal))
-    .join(', ')
-  return <>{returnValue}</>
-}
 
-const SelectedValue = (props: SelectedValueProps) => {
-  const { selectedValue, valueMap } = props
-  const returnValue = valueMap.get(selectedValue)
-  return <>{returnValue}</>
-}
-
-interface SelectedValueArrayProps {
-  selectedValue: any[]
-  valueMap: Map<any, string>
-}
-
-interface SelectedValueProps {
-  selectedValue: any
-  valueMap: Map<any, string>
-}

@@ -1,16 +1,14 @@
-import React, { PureComponent } from 'react'
+import { FC } from 'react'
 
 import { DsBox } from '../DsBox'
 import { DsStack } from '../DsStack'
 import { DsImage } from '../DsImage'
 import { DsHeaderProps, DsHeaderDefaultProps } from './DsHeader.Types'
 
-export class DsHeader extends PureComponent<DsHeaderProps> {
-  static defaultProps = DsHeaderDefaultProps
+export const DsHeader: FC<DsHeaderProps> = (inProps) => {
+  const props = { ...DsHeaderDefaultProps, ...inProps }
 
-  render() {
-    const { logoUrl, logo, children, BoxProps, StackProps, ...HeaderProps } =
-      this.props
+    const { logoUrl, logo, children, BoxProps, StackProps, ...HeaderProps } = props
 
     return (
       <DsBox
@@ -57,5 +55,4 @@ export class DsHeader extends PureComponent<DsHeaderProps> {
         {logo && logo}
       </DsBox>
     )
-  }
 }

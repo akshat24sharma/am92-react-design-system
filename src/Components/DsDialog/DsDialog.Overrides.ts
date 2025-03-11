@@ -1,5 +1,8 @@
+import { DsDialogDefaultProps } from "./DsDialog.Types";
+
 export const DsDialogOverrides = {
   MuiDialog: {
+    defaultProps: DsDialogDefaultProps,
     styleOverrides: {
       paper: {
         backgroundColor: 'var(--ds-colour-surfaceBackground)',

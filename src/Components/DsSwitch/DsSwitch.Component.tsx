@@ -1,25 +1,24 @@
-import React, { PureComponent } from 'react'
+import React, { FC } from 'react'
 import { DsSwitchDefaultProps, DsSwitchProps } from './DsSwitch.Types'
 import { DsToggleButtonGroup } from '../DsToggleButtonGroup'
 import { DsToggleButton } from '../DsToggleButton'
 import { DsTypography } from '../DsTypography'
 
-export class DsSwitch extends PureComponent<DsSwitchProps> {
-  static defaultProps = DsSwitchDefaultProps
+export const DsSwitch: FC<DsSwitchProps> = (inProps) => {
+  const props = {...DsSwitchDefaultProps, ...inProps}
 
-  handleChange = (event: React.SyntheticEvent, value: NonNullable<any>) => {
-    const { name, onChange } = this.props
+  const handleChange = (event: React.SyntheticEvent, value: NonNullable<any>) => {
+    const { name, onChange } = props
     onChange(name, value)
   }
 
-  render() {
     const {
       positiveLabel,
       positiveValue,
       negativeLabel,
       negativeValue,
       ...restProps
-    } = this.props
+    } = props
 
     return (
       <DsToggleButtonGroup
@@ -27,7 +26,7 @@ export class DsSwitch extends PureComponent<DsSwitchProps> {
         ds-variant="switch"
         exclusive
         size="small"
-        onChange={this.handleChange}
+        onChange={handleChange}
       >
         <DsToggleButton value={positiveValue}>
           <DsTypography variant="supportBoldTextButton">
@@ -41,5 +40,4 @@ export class DsSwitch extends PureComponent<DsSwitchProps> {
         </DsToggleButton>
       </DsToggleButtonGroup>
     )
-  }
 }

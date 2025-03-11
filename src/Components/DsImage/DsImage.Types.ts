@@ -26,10 +26,6 @@ export interface DsImageState {
   stage: 'LOADING' | 'LOADED' | 'ERROR'
 }
 
-export const DsImageDefaultState: DsImageState = {
-  stage: 'LOADING'
-}
-
 export const DEFULT_ERROR_ICON_PROPS: IErrorIconProps = {
   fontSize: 'mild',
   className: 'ri-image-2-line'

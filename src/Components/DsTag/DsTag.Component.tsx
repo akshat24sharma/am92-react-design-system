@@ -1,27 +1,26 @@
-import React, { PureComponent } from 'react'
+import { FC } from 'react'
 import Chip from '@mui/material/Chip'
 import { DsTagProps, DsTagDefaultProps } from './DsTag.Types'
 import { DsRemixIcon } from '../DsRemixIcon'
 
-export class DsTag extends PureComponent<DsTagProps> {
-  static defaultProps = DsTagDefaultProps
+export const DsTag: FC<DsTagProps> = (inProps) => {
+  const props = {...DsTagDefaultProps, ...inProps}
 
-  handleClick = (): void => {
-    const { value, onClick } = this.props
+  const handleClick = (): void => {
+    const { value, onClick } = props
     if (typeof onClick === 'function') {
       onClick(value)
     }
   }
 
-  handleDelete = (): void => {
-    const { value, onDelete } = this.props
+  const handleDelete = (): void => {
+    const { value, onDelete } = props
     if (typeof onDelete === 'function') {
       onDelete(value)
     }
   }
 
-  render() {
-    const { selected, onClick, onDelete, ...chipProps } = this.props
+    const { selected, onClick, onDelete, ...chipProps } = props
     const color = (selected && 'secondary') || 'default'
 
     return (
@@ -31,9 +30,8 @@ export class DsTag extends PureComponent<DsTagProps> {
         {...chipProps}
         clickable
         color={color}
-        onDelete={(onDelete && this.handleDelete) || undefined}
-        onClick={this.handleClick}
+        onDelete={(onDelete && handleDelete) || undefined}
+        onClick={handleClick}
       />
     )
-  }
 }
