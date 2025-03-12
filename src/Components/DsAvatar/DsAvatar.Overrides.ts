@@ -1,4 +1,3 @@
-import { AvatarProps } from '@mui/material'
 import { DsAvatarDefaultProps, DsAvatarProps } from './DsAvatar.Types'
 
 export const DsAvatarOverrides = {
