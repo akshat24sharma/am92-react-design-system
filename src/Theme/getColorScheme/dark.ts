@@ -122,7 +122,7 @@ export default function getDarkModeColorScheme(colorPalette: DsPalette) {
     supportPositive: successGreenDark,
     supportWarning: warningOrangeDark,
     supportVariable: snackBlue,
-    supportTypical: snackBlueNeutralDark,
+    supportTypical: typical,
 
     supportNegativeNeutral: errorRedNeutralDark,
     supportPositiveNeutral: successGreenNeutralDark,
