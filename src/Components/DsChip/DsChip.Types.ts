@@ -1,15 +1,18 @@
 import { ChipProps } from '@mui/material'
 
-export interface DsChipProps extends Omit<ChipProps, 'color'> {
+export interface DsChipProps extends Omit<ChipProps, 'onDelete'> {
   type?: 'status' | 'nudge'
-  color?: Extract<
-    ChipProps['color'],
-    'default' | 'info' | 'success' | 'warning' | 'error'
-  >
-  'ds-variant'?: 'chip'
 }
 
 export const DsChipDefaultProps: DsChipProps = {
-  type: 'status',
-  'ds-variant':'chip'
+  type: 'status'
+}
+
+declare module '@mui/material/Chip' {
+  interface ChipPropsVariantOverrides {
+    filled: false
+    outlined: false
+    chip: true
+    tag: true
+  }
 }
