@@ -1,4 +1,4 @@
-import { DsTypographyTokens } from '../Types'
+import { DS_TYPOGRAPHY_HTML_FONT_SIZE, DsTypographyTokens } from '../Types'
 
 export const DSTYPOGRAPHY_TOKENS: DsTypographyTokens[] = [
   'displayBoldLarge',
@@ -30,3 +30,7 @@ export const DSTYPOGRAPHY_TOKENS: DsTypographyTokens[] = [
   'supportBoldTextButton',
   'supportRegularMetadata'
 ]
+
+export const DS_TYPOGRAPHY_DEFAULT_HTML_FONT_SIZE: DS_TYPOGRAPHY_HTML_FONT_SIZE = 16
+export const DS_TYPOGRAPHY_MIN_HTML_FONT_SIZE: DS_TYPOGRAPHY_HTML_FONT_SIZE = 16
+export const DS_TYPOGRAPHY_MAX_HTML_FONT_SIZE: DS_TYPOGRAPHY_HTML_FONT_SIZE = 18

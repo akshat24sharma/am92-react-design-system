@@ -1,0 +1,1 @@
+export type DS_TYPOGRAPHY_HTML_FONT_SIZE = 16 | 17 | 18
