@@ -9,9 +9,9 @@ figma.connect(
     props: {
       header: figma.textContent('heading_text'),
       summary: figma.textContent('body-text'),
-      children: figma.children('*')
+      // children: figma.children(['header', 'body'])
     },
     //@ts-ignore
-    example: (props) => <DsAccordion header={props.header} summary={props.summary}>{props.children}</DsAccordion>,
+    example: (props) => <DsAccordion header={props.header} summary={props.summary}/>,
   },
 )
