@@ -12,10 +12,11 @@ import figma from "@figma/code-connect"
 
 figma.connect(
   DsBox,
-  "https://www.figma.com/design/C9TREbo9kCnImBjcO1zRkG/Subzero-V.2.0-playground?node-id=12666-98079",
+  "https://www.figma.com/design/C9TREbo9kCnImBjcO1zRkG/Subzero-V.2.0-playground?node-id=12666-98079&m=dev",
   {
     props: {
-      children: figma.children('*')
+      children: figma.children('*'),
+      width: figma.string('properties')
     },
     example: (props) => <DsBox>{props.children}</DsBox>,
   },
