@@ -10,7 +10,7 @@ export interface DsCarouselNavigationButtonProps extends DsIconButtonProps {
 }
 
 export interface DsCarouselNavigationProps {
-  uid: string
+  isExternalPagination: boolean
   isEnabled: boolean
   NavigationProps?: {
     PrevButtonProps?: DsCarouselNavigationButtonProps
@@ -19,7 +19,6 @@ export interface DsCarouselNavigationProps {
 }
 
 export interface DsCarouselPaginationProps {
-  uid: string
   isEnabled: boolean
   isAutoplayEnabled: boolean
   AutoplaySettings: DsCarouselProps['autoplay']
@@ -35,17 +34,23 @@ export type DsCaroselPaginationSettings = SwiperProps['pagination'] & {
 
 export interface DsCarouselProps
   extends Omit<SwiperProps, 'direction' | 'pagination'>,
-    Omit<DsCarouselNavigationProps, 'uid' | 'isEnabled'>,
+    Omit<DsCarouselNavigationProps, 'isExternalPagination' | 'uid' | 'isEnabled'>,
     Omit<
       DsCarouselPaginationProps,
       'uid' | 'isEnabled' | 'isAutoplayEnabled' | 'AutoplaySettings'
     > {
   PaginationWrapperProps?: DsBoxProps
-  SwiperConatinerWrapperProps?: DsBoxProps
+  SwiperConatinerWrapperProps?: SwiperConatinerWrapperProps
   SwiperConatinerStyles?: React.CSSProperties
   // Vertical mode not supported
   direction?: 'horizontal'
   pagination?: DsCaroselPaginationSettings
+}
+
+export interface SwiperConatinerWrapperProps extends DsBoxProps {
+  transitionSpeed: number
+  isAutoplayEnabled: boolean
+  isExternalPagination: boolean
 }
 
 export const CAROUSEL_DEFAULT_SETTINGS: DsCarouselProps = {
@@ -59,15 +64,14 @@ export const DsCarouselDefaultProps: DsCarouselProps = CAROUSEL_DEFAULT_SETTINGS
 
 export const SWIPER_NAVIGATION_SETTINGS = {
   enabled: true,
-  nextEl: '.swiper-button-next',
-  prevEl: '.swiper-button-prev',
+  nextEl: '.swiper-button-next-custom',
+  prevEl: '.swiper-button-prev-custom',
   disabledClass: 'Mui-disabled',
   navigationDisabledClass: 'Mui-disabled'
 }
 
 export const SWIPER_PAGINATION_SETTINGS = {
   enabled: true,
-  el: '.swiper-pagination',
   mode: 'internal' as DsCarouselPaginationMode
 }
 

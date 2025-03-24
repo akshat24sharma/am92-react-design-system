@@ -1,234 +1,179 @@
-import React, { FC, useEffect } from 'react'
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
-import { register, SwiperContainer } from 'swiper/element'
-import { SwiperProps } from 'swiper/swiper-react'
+import React from "react";
+// Import Swiper React components
+import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
+
+// import required modules
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
 
 import {
-  CAROUSEL_DEFAULT_SETTINGS,
   DsCaroselPaginationSettings,
   DsCarouselProps,
   SWIPER_AUTOPLAY_SETTINGS,
   SWIPER_NAVIGATION_SETTINGS,
-  SWIPER_PAGINATION_SETTINGS
-} from '../DsCarousel.Types'
-import DsCarouselNavigation from './DsCarouselNavigation'
-import DsCarouselPagination from './DsCarouselPagination'
-import { DsBox } from '../../DsBox'
+  SWIPER_PAGINATION_SETTINGS,
+} from "../DsCarousel.Types";
+import DsCarouselNavigation from "./DsCarouselNavigation";
+import { DsCarouselWrapper } from "./DsCarouselWrapper";
 
-if (register && typeof register === 'function') {
-  register()
-}
-
-const generateUid = () => {
-  const random = Math.trunc((Math.random() + 1) * 1000000)
-  return `${random.toString(36)}`
-}
-
-export const DsCarousel: FC<DsCarouselProps> = (props) => {
-  let SwiperContainer: SwiperContainer | null = null
-  const uid: string = generateUid()
-
-
-  useEffect(() => {
-    initialize()
-  }, [])
-
-  const _isNavigationEnabled = () => {
-    const { navigation } = props
-    return !(
-      navigation === false ||
-      (navigation &&
-        typeof navigation !== 'boolean' &&
-        navigation.enabled === false)
-    )
-  }
-
+export const DsCarousel = (props: DsCarouselProps) => {
+    
   const _isPaginationEnabled = () => {
-    const { pagination } = props
+    const { pagination } = props;
 
     return !(
       pagination === false ||
       (pagination &&
-        typeof pagination !== 'boolean' &&
+        typeof pagination !== "boolean" &&
         pagination.enabled === false)
-    )
-  }
+    );
+  };
 
-  const _isAutoplayEnabled = () => {
-    const { autoplay } = props
-    return !(autoplay === false)
-  }
-
-  const _getNavigationSettings = (): DsCarouselProps['navigation'] | undefined => {
-    const { navigation } = props
-    const isEnabled = _isNavigationEnabled()
-    const defaultSettings = {
-      ...SWIPER_NAVIGATION_SETTINGS,
-      nextEl: `${SWIPER_NAVIGATION_SETTINGS.nextEl}-${uid}`,
-      prevEl: `${SWIPER_NAVIGATION_SETTINGS.prevEl}-${uid}`
-    }
-
-    if (typeof navigation !== 'boolean') {
-      return isEnabled ? { ...defaultSettings, ...navigation } : undefined
-    }
-
-    return (isEnabled && { ...defaultSettings }) || undefined
-  }
-
-  const _getPaginationSettings = (): DsCaroselPaginationSettings | undefined => {
-    const { pagination } = props
-    const isEnabled = _isPaginationEnabled()
+  const _getPaginationSettings = ():
+    | DsCaroselPaginationSettings
+    | undefined => {
+    const { pagination } = props;
+    const isEnabled = _isPaginationEnabled();
 
     const defaultSettings = {
       ...SWIPER_PAGINATION_SETTINGS,
-      el: `${SWIPER_PAGINATION_SETTINGS.el}-${uid}`
+    };
+
+    if (typeof pagination !== "boolean") {
+      return isEnabled ? { ...defaultSettings, ...pagination } : undefined;
     }
 
-    if (typeof pagination !== 'boolean') {
-      return isEnabled ? { ...defaultSettings, ...pagination } : undefined
-    }
+    return (isEnabled && { ...defaultSettings }) || undefined;
+  };
 
-    return (isEnabled && { ...defaultSettings }) || undefined
-  }
+  const _isAutoplayEnabled = () => {
+    const { autoplay } = props;
+    return autoplay ? !((autoplay as boolean) === false) : false;
+  };
 
-  const _getAutoPlaySettings = (): DsCarouselProps['autoplay'] | undefined => {
-    const { autoplay } = props
-    const isEnabled = _isAutoplayEnabled()
+  const _isNavigationEnabled = () => {
+    const { navigation } = props;
+    return !(
+      navigation === false ||
+      (navigation &&
+        typeof navigation !== "boolean" &&
+        navigation.enabled === false)
+    );
+  };
 
-    if (typeof autoplay !== 'boolean') {
+  const _getAutoPlaySettings = (): DsCarouselProps["autoplay"] | undefined => {
+    const { autoplay } = props;
+    const isEnabled = _isAutoplayEnabled();
+
+    if (typeof autoplay !== "boolean") {
       return isEnabled
         ? { ...SWIPER_AUTOPLAY_SETTINGS, ...autoplay }
-        : undefined
+        : undefined;
     }
 
-    return (isEnabled && { ...SWIPER_AUTOPLAY_SETTINGS }) || undefined
-  }
+    return (isEnabled && { ...SWIPER_AUTOPLAY_SETTINGS }) || undefined;
+  };
 
   const _sanitizeModuleProps = (
-    modules: SwiperProps['modules']
-  ): SwiperProps['modules'] => {
+    modules: SwiperProps["modules"]
+  ): SwiperProps["modules"] => {
     let sanitizedModule =
       modules?.filter(
-        module => !['Pagination', 'Navigation'].includes(module.name)
-      ) || []
+        (module) => !["Pagination", "Navigation"].includes(module.name)
+      ) || [];
 
-    const isNavigationEnabled = _isNavigationEnabled()
+    const isNavigationEnabled = _isNavigationEnabled();
     if (isNavigationEnabled) {
-      sanitizedModule = [...sanitizedModule, Navigation]
+      sanitizedModule = [...sanitizedModule, Navigation];
     }
 
-    const isPaginationEnabled = _isPaginationEnabled()
+    const isPaginationEnabled = _isPaginationEnabled();
     if (isPaginationEnabled) {
-      sanitizedModule = [...sanitizedModule, Pagination]
+      sanitizedModule = [...sanitizedModule, Pagination];
     }
 
-    const isAutoplayEnabled = _isAutoplayEnabled()
+    const isAutoplayEnabled = _isAutoplayEnabled();
     if (isAutoplayEnabled) {
-      sanitizedModule = [...sanitizedModule, Autoplay]
+      sanitizedModule = [...sanitizedModule, Autoplay];
     }
 
-    return sanitizedModule
-  }
+    return sanitizedModule;
+  };
 
-  const initialize = () => {
-    const {
-      children,
-      PaginationProps,
-      NavigationProps,
-      PaginationWrapperProps,
-      SwiperConatinerStyles,
-      SwiperConatinerWrapperProps,
-      modules,
-      ...swiperProps
-    } = props
+  const _getNavigationSettings = ():
+    | DsCarouselProps["navigation"]
+    | undefined => {
+    const { navigation } = props;
+    const isEnabled = _isNavigationEnabled();
+    const defaultSettings = {
+      ...SWIPER_NAVIGATION_SETTINGS,
+      nextEl: `${SWIPER_NAVIGATION_SETTINGS.nextEl}`,
+      prevEl: `${SWIPER_NAVIGATION_SETTINGS.prevEl}`,
+    };
 
-    const sanitizedModule = _sanitizeModuleProps(modules)
-
-    // swiper parameters
-    const swiperParams: SwiperProps = {
-      ...CAROUSEL_DEFAULT_SETTINGS,
-      ...swiperProps,
-      // Vertical mode not supported
-      direction: 'horizontal',
-      modules: sanitizedModule,
-      navigation: _getNavigationSettings() || false,
-      pagination: _getPaginationSettings() || false,
-      autoplay: _getAutoPlaySettings() || false
+    if (typeof navigation !== "boolean") {
+      return isEnabled ? { ...defaultSettings, ...navigation } : undefined;
     }
 
-    // swiperParams = handleNavigationModule(swiperParams)
+    return (isEnabled && { ...defaultSettings }) || undefined;
+  };
 
-    // now we need to assign all parameters to Swiper element
-    Object.assign(SwiperContainer || {}, swiperParams)
+  const paginationSettings = _getPaginationSettings();
 
-    // and now initialize it
-    SwiperContainer?.initialize()
+  const {
+    PaginationWrapperProps,
+    SwiperConatinerWrapperProps,
+    SwiperConatinerStyles,
+    children,
+    NavigationProps,
+    PaginationProps,
+    pagination,
+    navigation,
+    autoplay,
+    modules,
+    ...swiperProps
+  } = props;
 
-    // set the default theme
-    document.documentElement.style.setProperty(
-      '--swiper-theme-color',
-      'var(--ds-colour-actionSecondary)'
-    )
+  let transitionSpeed = 0;
+  const isAutoplayEnabled = _isAutoplayEnabled();
+
+  if (isAutoplayEnabled) {
+    const autoplaySettings = _getAutoPlaySettings();
+    transitionSpeed =
+      (typeof autoplaySettings !== "boolean" && autoplaySettings?.delay) ||
+      3000;
   }
 
-  const setRef = (swiperRef: unknown) => {
-    SwiperContainer = swiperRef as SwiperContainer
-  }
-
-    const {
-      PaginationWrapperProps,
-      SwiperConatinerWrapperProps,
-      SwiperConatinerStyles,
-      children,
-      NavigationProps,
-      PaginationProps
-    } = props
-
-    const paginationSettings = _getPaginationSettings()
-
-    return (
-      <DsBox
-        {...PaginationWrapperProps}
-        sx={{
-          position: 'relative',
-          pb: paginationSettings?.mode === 'external' ? '44px' : undefined,
-          ...PaginationWrapperProps?.sx
+  return (
+    <DsCarouselWrapper
+      isAutoplayEnabled={isAutoplayEnabled}
+      transitionSpeed={transitionSpeed}
+      isExternalPagination={paginationSettings?.mode === "external"}
+      {...SwiperConatinerWrapperProps}
+    >
+      <Swiper
+        pagination={_getPaginationSettings()}
+        navigation={_getNavigationSettings()}
+        modules={_sanitizeModuleProps(modules)}
+        autoplay={_getAutoPlaySettings()}
+        style={{
+          paddingBottom:
+            paginationSettings?.mode === "external" ? "44px" : undefined,
+          ...SwiperConatinerStyles,
         }}
+        {...swiperProps}
+        // Vertical mode not supported
+        direction="horizontal"
       >
-        <DsBox
-          {...SwiperConatinerWrapperProps}
-          sx={{
-            position: 'relative',
-            ...SwiperConatinerWrapperProps?.sx
-          }}
-        >
-          <swiper-container
-            ref={setRef}
-            init={false}
-            style={{
-              ...SwiperConatinerStyles
-            }}
-          >
-            {React.Children.map(children, (child, index) => {
-              return (
-                <swiper-slide key={`${name}-${index}`}>{child}</swiper-slide>
-              )
-            })}
-          </swiper-container>
-          <DsCarouselNavigation
-            uid={uid}
-            isEnabled={_isNavigationEnabled()}
-            NavigationProps={NavigationProps}
-          />
-        </DsBox>
-        <DsCarouselPagination
-          uid={uid}
-          isEnabled={_isPaginationEnabled()}
-          isAutoplayEnabled={_isAutoplayEnabled()}
-          AutoplaySettings={_getAutoPlaySettings()}
-          PaginationSettings={paginationSettings}
-          PaginationProps={PaginationProps}
+        {React.Children.map(children, (child, index) => (
+          <SwiperSlide key={`${name}-${index}`}>{child}</SwiperSlide>
+        ))}
+        <DsCarouselNavigation
+          isExternalPagination={paginationSettings?.mode === "external"}
+          isEnabled={_isNavigationEnabled()}
+          NavigationProps={NavigationProps}
         />
-      </DsBox>
-    )
-}
+      </Swiper>
+    </DsCarouselWrapper>
+  );
+};

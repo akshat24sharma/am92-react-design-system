@@ -6,7 +6,7 @@ import { DsRemixIcon } from '../../DsRemixIcon'
 
 const DsCarouselNavigation: React.FC<DsCarouselNavigationProps> = (props) => {
 
-    const { uid, isEnabled, NavigationProps = {} } = props
+    const { isEnabled, NavigationProps = {}, isExternalPagination } = props
     if (!isEnabled) {
       return false
     }
@@ -19,11 +19,11 @@ const DsCarouselNavigation: React.FC<DsCarouselNavigationProps> = (props) => {
     return (
       <>
         <DsIconButton
-          className={`swiper-button-prev-${uid}`}
+          className={`swiper-button-prev-custom`}
           {...PrevIconButtonProps}
           sx={{
             position: 'absolute',
-            top: '50%',
+            top: isExternalPagination ? '35%' : '50%',
             transform: 'translateY(-50%)',
             left: 'var(--ds-spacing-mild)',
             p: 'var(--ds-spacing-quickFreeze)',
@@ -42,11 +42,11 @@ const DsCarouselNavigation: React.FC<DsCarouselNavigationProps> = (props) => {
           <DsRemixIcon className="ri-arrow-left-s-line" {...PrevIconProps} />
         </DsIconButton>
         <DsIconButton
-          className={`swiper-button-next-${uid}`}
+          className={`swiper-button-next-custom`}
           {...NextIconButtonProps}
           sx={{
             position: 'absolute',
-            top: '50%',
+            top: isExternalPagination ? '35%' : '50%',
             transform: 'translateY(-50%)',
             right: 'var(--ds-spacing-mild)',
             p: 'var(--ds-spacing-quickFreeze)',
