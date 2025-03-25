@@ -5,7 +5,7 @@ import { DsFormControlLabel } from '../DsFormControlLabel'
 import { DsRemixIcon } from '../DsRemixIcon'
 
 export const DsRadio: FC<DsRadioProps> = (inProps) => {
-  const props = { ...inProps, ...DsRadioDefaultProps }
+  const props = { ...DsRadioDefaultProps, ...inProps }
 
     const { disabled, RadioProps, ...restProps } = props
     return (
