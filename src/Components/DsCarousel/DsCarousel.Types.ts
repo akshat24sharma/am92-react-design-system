@@ -6,48 +6,62 @@ import { DsIconButtonProps } from '../DsIconButton'
 import { DsRemixIconProps } from '../DsRemixIcon'
 
 export interface DsCarouselNavigationButtonProps extends DsIconButtonProps {
+
+  /** This Propperty can be used to pass icon props to the navigation buttons. */
   IconProps?: Omit<DsRemixIconProps, 'ref'>
 }
 
 export interface DsCarouselNavigationProps {
-  isExternalPagination: boolean
   isEnabled: boolean
+  /** This Property can be used to pass Navigation props
+   * @enum  PrevButtonProps, NextButtonProps, NavigationWrapperProps
+  */
   NavigationProps?: {
-    PrevButtonProps?: DsCarouselNavigationButtonProps
-    NextButtonProps?: DsCarouselNavigationButtonProps
-  }
-}
 
-export interface DsCarouselPaginationProps {
-  isEnabled: boolean
-  isAutoplayEnabled: boolean
-  AutoplaySettings: DsCarouselProps['autoplay']
-  PaginationSettings?: DsCarouselProps['pagination']
-  PaginationProps?: DsBoxProps
+    /** This property can be used to provide props to Icon navigation buttons
+     * @default DsIconButtonProps
+     */
+    PrevButtonProps?: DsCarouselNavigationButtonProps
+
+    /** This property can be used to provide props to Icon navigation buttons
+    * @default DsIconButtonProps
+    */
+    NextButtonProps?: DsCarouselNavigationButtonProps
+    
+    /** This property can be used to provide navigation wrapper props as DsBoxProps */
+    NavigationWrapperProps?: DsBoxProps
+  }
 }
 
 type DsCarouselPaginationMode = 'internal' | 'external'
 
 export type DsCaroselPaginationSettings = SwiperProps['pagination'] & {
+
+  /** This property can be used to prove the position mode for pagination */
   mode?: DsCarouselPaginationMode
 }
 
 export interface DsCarouselProps
   extends Omit<SwiperProps, 'direction' | 'pagination'>,
-    Omit<DsCarouselNavigationProps, 'isExternalPagination' | 'uid' | 'isEnabled'>,
-    Omit<
-      DsCarouselPaginationProps,
-      'uid' | 'isEnabled' | 'isAutoplayEnabled' | 'AutoplaySettings'
-    > {
-  PaginationWrapperProps?: DsBoxProps
-  SwiperConatinerWrapperProps?: SwiperConatinerWrapperProps
-  SwiperConatinerStyles?: React.CSSProperties
+    Omit<DsCarouselNavigationProps, 'navigationPaddingBottom' | 'isEnabled'> {
+
+    /** This property can be used to pass Swiper Wrapper props which is BoxProps  */
+    SwiperContainerWrapperProps?: Omit<SwiperContainerWrapperProps, 'transitionSpeed' | 'isAutoplayEnabled' | 'isExternalPagination'>
+
+  /** This property can be used to add container styled to Swiper element  */
+  SwiperContainerStyles?: React.CSSProperties
+
   // Vertical mode not supported
+  /** This property can be used to provide swiper direction  */
   direction?: 'horizontal'
+
+  /** This property can be used to provide pagination props 
+   * @enum mode
+  */
   pagination?: DsCaroselPaginationSettings
 }
 
-export interface SwiperConatinerWrapperProps extends DsBoxProps {
+export interface SwiperContainerWrapperProps extends DsBoxProps {
   transitionSpeed: number
   isAutoplayEnabled: boolean
   isExternalPagination: boolean

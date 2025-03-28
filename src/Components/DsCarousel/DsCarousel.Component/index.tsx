@@ -1,8 +1,5 @@
-import React from "react";
-// Import Swiper React components
+import React, { useMemo } from "react";
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
-
-// import required modules
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 
@@ -14,10 +11,9 @@ import {
   SWIPER_PAGINATION_SETTINGS,
 } from "../DsCarousel.Types";
 import DsCarouselNavigation from "./DsCarouselNavigation";
-import { DsCarouselWrapper } from "./DsCarouselWrapper";
+import { DsCarouselStyledWrapper } from "./DsCarouselStyledWrapper";
 
 export const DsCarousel = (props: DsCarouselProps) => {
-    
   const _isPaginationEnabled = () => {
     const { pagination } = props;
 
@@ -106,9 +102,7 @@ export const DsCarousel = (props: DsCarouselProps) => {
     const { navigation } = props;
     const isEnabled = _isNavigationEnabled();
     const defaultSettings = {
-      ...SWIPER_NAVIGATION_SETTINGS,
-      nextEl: `${SWIPER_NAVIGATION_SETTINGS.nextEl}`,
-      prevEl: `${SWIPER_NAVIGATION_SETTINGS.prevEl}`,
+      ...SWIPER_NAVIGATION_SETTINGS
     };
 
     if (typeof navigation !== "boolean") {
@@ -118,15 +112,11 @@ export const DsCarousel = (props: DsCarouselProps) => {
     return (isEnabled && { ...defaultSettings }) || undefined;
   };
 
-  const paginationSettings = _getPaginationSettings();
-
   const {
-    PaginationWrapperProps,
-    SwiperConatinerWrapperProps,
-    SwiperConatinerStyles,
+    SwiperContainerWrapperProps,
+    SwiperContainerStyles,
     children,
     NavigationProps,
-    PaginationProps,
     pagination,
     navigation,
     autoplay,
@@ -134,32 +124,38 @@ export const DsCarousel = (props: DsCarouselProps) => {
     ...swiperProps
   } = props;
 
+  const paginationSettings = useMemo(() => _getPaginationSettings(), [pagination])
+  const navigationSettings = useMemo(() => _getNavigationSettings(), [navigation])
+  const autoPlaySettings = useMemo(() => _getAutoPlaySettings(), [autoplay])
+  const moduleSettings = useMemo(() => _sanitizeModuleProps(modules), [modules])
+
   let transitionSpeed = 0;
   const isAutoplayEnabled = _isAutoplayEnabled();
 
   if (isAutoplayEnabled) {
-    const autoplaySettings = _getAutoPlaySettings();
     transitionSpeed =
-      (typeof autoplaySettings !== "boolean" && autoplaySettings?.delay) ||
+      (typeof autoPlaySettings !== "boolean" && autoPlaySettings?.delay) ||
       3000;
   }
 
+  const isExternalPagination = paginationSettings?.mode === "external"
+
   return (
-    <DsCarouselWrapper
+    <DsCarouselStyledWrapper
       isAutoplayEnabled={isAutoplayEnabled}
       transitionSpeed={transitionSpeed}
-      isExternalPagination={paginationSettings?.mode === "external"}
-      {...SwiperConatinerWrapperProps}
+      isExternalPagination={isExternalPagination}
+      {...SwiperContainerWrapperProps}
     >
       <Swiper
-        pagination={_getPaginationSettings()}
-        navigation={_getNavigationSettings()}
-        modules={_sanitizeModuleProps(modules)}
-        autoplay={_getAutoPlaySettings()}
+        pagination={paginationSettings}
+        navigation={navigationSettings}
+        modules={moduleSettings}
+        autoplay={autoPlaySettings}
         style={{
           paddingBottom:
-            paginationSettings?.mode === "external" ? "44px" : undefined,
-          ...SwiperConatinerStyles,
+            isExternalPagination ? "44px" : undefined,
+          ...SwiperContainerStyles,
         }}
         {...swiperProps}
         // Vertical mode not supported
@@ -169,11 +165,10 @@ export const DsCarousel = (props: DsCarouselProps) => {
           <SwiperSlide key={`${name}-${index}`}>{child}</SwiperSlide>
         ))}
         <DsCarouselNavigation
-          isExternalPagination={paginationSettings?.mode === "external"}
           isEnabled={_isNavigationEnabled()}
           NavigationProps={NavigationProps}
         />
       </Swiper>
-    </DsCarouselWrapper>
+    </DsCarouselStyledWrapper>
   );
 };
