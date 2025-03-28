@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
-import 'swiper/css'
+import 'swiper/swiper-bundle.css'
 
 import {
   DsCaroselPaginationSettings,
