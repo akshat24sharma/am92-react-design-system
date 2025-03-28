@@ -43,7 +43,7 @@ export type DsCaroselPaginationSettings = SwiperProps['pagination'] & {
 
 export interface DsCarouselProps
   extends Omit<SwiperProps, 'direction' | 'pagination'>,
-    Omit<DsCarouselNavigationProps, 'navigationPaddingBottom' | 'isEnabled'> {
+    Omit<DsCarouselNavigationProps, | 'isEnabled'> {
 
     /** This property can be used to pass Swiper Wrapper props which is BoxProps  */
     SwiperContainerWrapperProps?: Omit<SwiperContainerWrapperProps, 'transitionSpeed' | 'isAutoplayEnabled' | 'isExternalPagination'>
