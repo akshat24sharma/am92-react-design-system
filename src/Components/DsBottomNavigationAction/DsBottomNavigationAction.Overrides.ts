@@ -8,7 +8,6 @@ export const DsBottomNavigationActionOverrides = {
       root: {
         marginLeft: 'var(--ds-spacing-quickFreeze)',
         marginRight: 'var(--ds-spacing-quickFreeze)',
-        borderTopWidth: '2px',
         borderTopStyle: 'solid',
         borderTopColor: 'transparent',
         padding: 'var(--ds-spacing-zero)',
@@ -18,8 +17,16 @@ export const DsBottomNavigationActionOverrides = {
           paddingTop: 'var(--ds-spacing-glacial)'
         },
         '&.Mui-selected': {
-          borderTopColor: 'var(--ds-colour-actionSecondary)',
-          color: 'var(--ds-colour-actionSecondary)'
+          color: 'var(--ds-colour-actionSecondary)',
+          // adding this for the inverse curve at top
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            width: '100%',
+            height: '2px',
+            backgroundColor: 'var(--ds-colour-actionSecondary)',
+            borderRadius: '0 0 2px 2px',
+          }
         }
       } as CSSInterpolation,
       label: {
@@ -30,7 +37,10 @@ export const DsBottomNavigationActionOverrides = {
         color: 'var(--ds-colour-typoDisabled)',
         paddingBottom: 'var(--ds-spacing-quickFreeze)',
         '&.Mui-selected': {
-          fontSize: 'var(--ds-typo-bodyRegularSmall-fontSize)',
+          fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
+          fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
+          lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
+          letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
           color: 'var(--ds-colour-actionSecondary)'
         }
       } as CSSInterpolation
