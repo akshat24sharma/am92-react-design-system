@@ -37,7 +37,7 @@ export const DsToastOverrides = {
         }
       },
       filledDefault: {
-        borderColor: 'var(--ds-colour-strokeDefault)',
+        borderColor: 'var(--ds-colour-strokeActive)',
         backgroundColor: 'var(--ds-colour-surfaceTertiary)',
         color: 'var(--ds-colour-typoOnSurfaceDynamic)'
       },
