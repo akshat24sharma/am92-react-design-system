@@ -37,10 +37,10 @@ export const DsBottomNavigationActionOverrides = {
         color: 'var(--ds-colour-typoDisabled)',
         paddingBottom: 'var(--ds-spacing-quickFreeze)',
         '&.Mui-selected': {
-          fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
-          fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
-          lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
-          letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
+          fontWeight: 'var(--ds-typo-bodyBoldSmall-fontWeight)',
+          fontSize: 'var(--ds-typo-bodyBoldSmall-fontSize)',
+          lineHeight: 'var(--ds-typo-bodyBoldSmall-lineHeight)',
+          letterSpacing: 'var(--ds-typo-bodyBoldSmall-letterSpacing)',
           color: 'var(--ds-colour-actionSecondary)'
         }
       } as CSSInterpolation
