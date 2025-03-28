@@ -8,7 +8,6 @@ export const DsBottomNavigationActionOverrides = {
       root: {
         marginLeft: 'var(--ds-spacing-quickFreeze)',
         marginRight: 'var(--ds-spacing-quickFreeze)',
-        borderTopWidth: '2px',
         borderTopStyle: 'solid',
         borderTopColor: 'transparent',
         padding: 'var(--ds-spacing-zero)',
@@ -23,8 +22,6 @@ export const DsBottomNavigationActionOverrides = {
           '&::before': {
             content: '""',
             position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
             width: '100%',
             height: '2px',
             backgroundColor: 'var(--ds-colour-actionSecondary)',
