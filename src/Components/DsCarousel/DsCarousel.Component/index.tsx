@@ -163,10 +163,10 @@ export const DsCarousel = (props: DsCarouselProps) => {
         }}
         {...swiperProps}
         // Vertical mode not supported
-        direction='horizontal'
+        direction="horizontal"
       >
         {React.Children.map(children, (child, index) => (
-          <SwiperSlide key={`${name}-${index}`}>{child}</SwiperSlide>
+          <SwiperSlide>{child}</SwiperSlide>
         ))}
         <DsCarouselNavigation
           isEnabled={_isNavigationEnabled()}
