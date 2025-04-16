@@ -403,7 +403,8 @@ export default function getTypography(fontFamilyName: string = '') {
     supportRegularInfo: dsTypo.supportRegularInfo,
     supportRegularFootnote: dsTypo.supportRegularFootnote,
     supportBoldTextButton: dsTypo.supportBoldTextButton,
-    supportRegularMetadata: dsTypo.supportRegularMetadata
+    supportRegularMetadata: dsTypo.supportRegularMetadata,
+    supportBlackProductName: dsTypo.supportBlackProductName
   }
 
   return { dsTypo, typography }
