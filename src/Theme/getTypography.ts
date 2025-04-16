@@ -26,6 +26,7 @@ export default function getTypography(fontFamilyName: string = '') {
     fontWeightRegular: '400',
     fontWeightSemibold: '600',
     fontWeightBold: '700',
+    fontWeightBlackItalic: '900',
 
     lineHeightIceAge: '10px',
     lineHeightGlacial: '8px',
@@ -340,6 +341,17 @@ export default function getTypography(fontFamilyName: string = '') {
         dsTypoPrimitive.lineHeightZero
       ),
       letterSpacing: dsTypoPrimitive.characterSpacingAlps,
+      textTransform: 'uppercase'
+    },
+    supportBlackProductName: {
+      fontFamily,
+      fontWeight: dsTypoPrimitive.fontWeightBlackItalic,
+      fontSize: dsTypoPrimitive.fontSizeFrostbite,
+      lineHeight: lineHeightCalculator(
+        dsTypoPrimitive.fontSizeFrostbite,
+        dsTypoPrimitive.lineHeightZero
+      ),
+      letterSpacing: dsTypoPrimitive.characterSpacingHimalayas,
       textTransform: 'uppercase'
     }
   }
