@@ -9,8 +9,8 @@ export interface IDatePickerTextFieldProps
     'margin' | 'onInvalid' | 'onKeyDown' | 'onBlur' | 'onKeyUp' | 'ref'
   > {
   setOpen?: (open: boolean) => void
-  InputProps?: DateFieldProps<Date>['InputProps']
-  ref?: DateFieldProps<Date>['ref']
+  InputProps?: DateFieldProps['InputProps']
+  ref?: DateFieldProps['ref']
   focused?: boolean
   ownerState?: any
 }

@@ -1,20 +1,20 @@
 import React from 'react'
 
-import { PickersActionBarProps } from '@mui/x-date-pickers'
-import { useLocaleText } from '@mui/x-date-pickers/internals'
+import { PickersActionBarProps, usePickerTranslations, usePickerActionsContext } from '@mui/x-date-pickers'
 import { DsButtonGroup, DsButton } from '../../../Components'
 
 export function DefaultActionBar(
   props: PickersActionBarProps & { ownerState?: any }
 ) {
-  const { onAccept, onClear, ownerState, actions } = props
+  const { ownerState, actions } = props
+  const { clearValue, acceptValueChanges } = usePickerActionsContext()
   const { value } = ownerState || {}
 
   if (actions == null || actions?.length === 0) {
     return null
   }
 
-  const translations = useLocaleText()
+  const translations = usePickerTranslations()
 
   const isClearVisible = actions.includes('clear')
   const isConfirmVisible = actions.includes('accept')
@@ -40,7 +40,7 @@ export function DefaultActionBar(
           variant="text"
           size="medium"
           color="secondary"
-          onClick={onClear}
+          onClick={clearValue}
           disabled={!value}
         >
           {translations.clearButtonLabel}
@@ -55,7 +55,7 @@ export function DefaultActionBar(
           variant="text"
           size="medium"
           color="secondary"
-          onClick={onAccept}
+          onClick={acceptValueChanges}
           disabled={!value}
         >
           {translations.okButtonLabel}

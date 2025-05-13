@@ -29,7 +29,7 @@ import DatePickerTextField, {
   IDatePickerTextFieldProps
 } from './DatePickerTextField'
 
-export const DsDatePicker: React.FC<DsDatePickerProps<Date>> = inProps => {
+export const DsDatePicker: React.FC<DsDatePickerProps> = inProps => {
   const props = useThemeProps({
     props: inProps,
     name: 'MuiDatePicker'
@@ -169,10 +169,10 @@ export const DsDatePicker: React.FC<DsDatePickerProps<Date>> = inProps => {
               </DsInputAdornment>
             )
           } as IDatePickerTextFieldProps,
-          actionBar: ownerState => ({
-            actions: ownerState.view === 'day' ? ['clear', 'accept'] : [],
+          actionBar: {
+            actions: props.view === 'day' ? ['clear', 'accept'] : [],
             ...props.slotProps?.actionBar
-          }),
+          },
           popper: {
             anchorEl: ref.current,
             // style to unset fixed width

@@ -2,7 +2,7 @@ import type {} from '@mui/material/themeCssVarsAugmentation'
 import {
   CssVarsTheme,
   CssVarsThemeOptions,
-  experimental_extendTheme as extendTheme,
+  extendTheme,
   PaletteColorOptions,
   responsiveFontSizes,
   SupportedColorScheme,

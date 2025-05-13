@@ -11,12 +11,12 @@ import {
 } from '../../../Components'
 
 export const DateCalenderHeader = React.forwardRef(
-  function PickersCalendarHeader<TDate extends Date>(
-    inProps: PickersCalendarHeaderProps<TDate>,
+  function PickersCalendarHeader(
+    inProps: PickersCalendarHeaderProps,
     ref: React.Ref<HTMLDivElement>
   ) {
     // const translations = usePickersTranslations<TDate>()
-    const utils = useUtils<TDate>()
+    const utils = useUtils()
 
     const props = useThemeProps({
       props: inProps,
@@ -26,10 +26,10 @@ export const DateCalenderHeader = React.forwardRef(
     const { currentMonth, view } = props
 
     const handleMonthChange =
-      (direction: 'left' | 'right', numberOfMonths: 1 | -1 | 12 | -12) =>
+      (numberOfMonths: 1 | -1 | 12 | -12) =>
       () => {
         const { currentMonth, onMonthChange } = props
-        onMonthChange(utils.addMonths(currentMonth, numberOfMonths), direction)
+        onMonthChange(utils.addMonths(currentMonth, numberOfMonths))
       }
 
     const handleViewShow = (view: DateView) => () => {
@@ -55,7 +55,7 @@ export const DateCalenderHeader = React.forwardRef(
         >
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('left', -1)}
+            onClick={handleMonthChange(-1)}
           >
             <DsRemixIcon className="ri-arrow-drop-left-line" />
           </DsIconButton>
@@ -79,7 +79,7 @@ export const DateCalenderHeader = React.forwardRef(
           </DsButtonBase>
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('right', 1)}
+            onClick={handleMonthChange(1)}
           >
             <DsRemixIcon className="ri-arrow-drop-right-line" />
           </DsIconButton>
@@ -92,7 +92,7 @@ export const DateCalenderHeader = React.forwardRef(
         >
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('left', -12)}
+            onClick={handleMonthChange(-12)}
           >
             <DsRemixIcon className="ri-arrow-drop-left-line" />
           </DsIconButton>
@@ -116,7 +116,7 @@ export const DateCalenderHeader = React.forwardRef(
           </DsButtonBase>
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('right', 12)}
+            onClick={handleMonthChange(12)}
           >
             <DsRemixIcon className="ri-arrow-drop-right-line" />
           </DsIconButton>
