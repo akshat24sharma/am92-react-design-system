@@ -12,10 +12,10 @@ export const DsAccordionSummaryOverrides = {
         margin: 'var(--ds-spacing-zero)',
         width: 'calc(100% - 40px)',
         marginRight: 'var(--ds-spacing-bitterCold)',
-        fontWeight: 'var(--ds-typo-bodyRegularSmall-fontWeight)',
-        fontSize: 'var(--ds-typo-bodyRegularSmall-fontSize)',
-        lineHeight: 'var(--ds-typo-bodyRegularSmall-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyRegularSmall-letterSpacing)',
+        fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
+        fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
+        lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
+        letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
         '&.Mui-expanded': {
           margin: 'var(--ds-spacing-zero)',
           marginRight: 'var(--ds-spacing-bitterCold)'
