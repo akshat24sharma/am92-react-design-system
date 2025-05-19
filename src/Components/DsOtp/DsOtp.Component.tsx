@@ -1,17 +1,17 @@
-import React, { CSSProperties, FC, useState } from 'react'
+import React, { CSSProperties, FC, forwardRef, useImperativeHandle, useState } from 'react'
 
 import { DsBox } from '../DsBox'
 import { DsStack } from '../DsStack'
 import { DsInputLabel } from '../DsInputLabel'
 import { DsTextField } from '../DsTextField'
 import { DsHelperText } from '../DsHelperText'
-import { DsOtpDefaultProps, DsOtpProps } from './DsOtp.Types'
+import { DsOtpDefaultProps, DsOtpProps, DsOtpRef } from './DsOtp.Types'
 
 const KEY_CODES = {
   BACK_SPACE: 'Backspace'
 }
 
-export const DsOtp: FC<DsOtpProps> = (inProps) => {
+export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
   const props = { ...DsOtpDefaultProps, ...inProps}
   const optInputRefs = new Map()
   const { initialOtp = '', length } = props
@@ -103,9 +103,11 @@ export const DsOtp: FC<DsOtpProps> = (inProps) => {
     }
   }
 
-  const resetOtpValues = () => {
-    setOtp([])
-  }
+  useImperativeHandle(ref, () => ({
+    resetOtpValues: () => {
+      setOtp([])
+    }
+  }))
 
   const renderOtpBoxes = () => {
     const {
@@ -191,4 +193,4 @@ export const DsOtp: FC<DsOtpProps> = (inProps) => {
         />
       </DsBox>
     )
-}
+})

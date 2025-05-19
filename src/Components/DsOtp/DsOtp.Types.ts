@@ -14,6 +14,10 @@ export const DsOtpDefaultProps: DsOtpProps = {
   length: 6,
   onComplete: () => undefined
 }
+
+export type DsOtpRef = {
+  resetOtpValues: () => void
+}
 export interface DsOtpState {
   otp: string[]
 }
