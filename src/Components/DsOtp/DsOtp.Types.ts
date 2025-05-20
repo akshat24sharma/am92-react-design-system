@@ -17,6 +17,7 @@ export const DsOtpDefaultProps: DsOtpProps = {
 
 export type DsOtpRef = {
   resetOtpValues: () => void
+  focusIndex: () => void
 }
 export interface DsOtpState {
   otp: string[]

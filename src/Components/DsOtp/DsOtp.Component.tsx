@@ -106,6 +106,12 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
   useImperativeHandle(ref, () => ({
     resetOtpValues: () => {
       setOtp([])
+    },
+
+    // Adding to add auto focus if required
+    focusIndex: (index: number = 0) => {
+      const input = optInputRefs.get(index)
+      input?.focus()
     }
   }))
 
