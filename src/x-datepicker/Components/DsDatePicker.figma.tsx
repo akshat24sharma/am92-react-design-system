@@ -1,15 +1,15 @@
 import React from "react"
 import figma from "@figma/code-connect"
-import { DsTextArea } from "./DsTextArea.Component"
+import { DsDatePicker } from "./DsDatePicker/DsDatePicker.Component"
 
 
 figma.connect(
-  DsTextArea,
-  "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=14412-658&m=dev",
+  DsDatePicker,
+  "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=1882-12255&m=dev",
   {
     props: {
       error: figma.enum('🛠️ State', {
-        Error: true
+        Error: true,
       }),
       success: figma.enum('🛠️ State', {
         Success: true
@@ -20,16 +20,13 @@ figma.connect(
       readOnly: figma.enum('🛠️ State', {
         Display: true
       }),
-      maxLength: figma.enum("🔢 Character counter", {
-        true: 320
-      }),
       helperText: figma.enum('🛠️ State', {
         Error: figma.textContent('status_text'),
         Success: figma.textContent('status_text')
       }),
       label: figma.textContent('label_text')
     },
-    example: (props) => <DsTextArea {...props} />,
+    example: (props) => <DsDatePicker name='' {...props} />,
   },
 )
 

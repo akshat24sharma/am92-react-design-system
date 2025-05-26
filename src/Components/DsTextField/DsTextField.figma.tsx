@@ -2,6 +2,7 @@ import React from "react"
 import figma from "@figma/code-connect"
 import { DsTextField } from "./DsTextField.Component"
 import { DsRemixIcon } from "../DsRemixIcon"
+import { DsTextFieldProps } from "./DsTextField.Types"
 
 
 figma.connect(
@@ -10,7 +11,7 @@ figma.connect(
   {
     props: {
       error: figma.enum('🛠️ State', {
-        Error: true
+        Error: true,
       }),
       success: figma.enum('🛠️ State', {
         Success: true
@@ -21,8 +22,9 @@ figma.connect(
       readOnly: figma.enum('🛠️ State', {
         Display: true
       }),
-      helperText: figma.enum('📝 Helper text', {
-        true: figma.textContent('status_text')
+      helperText: figma.enum('🛠️ State', {
+        Error: figma.textContent('status_text'),
+        Success: figma.textContent('status_text')
       }),
       label: figma.textContent('label_text'),
       endAdornment: figma.enum('➡️ Trailing icon', {
