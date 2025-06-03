@@ -10,9 +10,6 @@ export const DsAccordionOverrides = {
         overflow: 'hidden',
         paddingTop: 'var(--ds-spacing-glacial)',
         paddingBottom: 'var(--ds-spacing-glacial)',
-        '&.Mui-expanded': {
-            margin: 'var(--ds-spacing-zero)'
-        },
         '&.MuiAccordion-root:not(:last-of-type)': {
             borderBottom: '1px solid var(--ds-colour-stateDisabledSurface)',
         }
