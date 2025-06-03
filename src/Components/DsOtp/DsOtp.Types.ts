@@ -7,6 +7,7 @@ export interface DsOtpProps extends DsTextFieldProps {
   length?: number
   initialOtp?: string
   BoxProps?: DsBoxProps
+  autoFocus?: boolean
 }
 
 export const DsOtpDefaultProps: DsOtpProps = {
@@ -17,7 +18,7 @@ export const DsOtpDefaultProps: DsOtpProps = {
 
 export type DsOtpRef = {
   resetOtpValues: () => void
-  focusIndex: () => void
+  domNode: HTMLDivElement | null
 }
 export interface DsOtpState {
   otp: string[]
