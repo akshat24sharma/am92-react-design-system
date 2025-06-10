@@ -1,4 +1,4 @@
-
+src/Components/DsProgressTracker/Components/DsProgressTrackerHeader.Component.tsx
 import { DsLinearProgress } from '../../DsLinearProgress'
 import { DsProgressIndicator } from '../../DsProgressIndicator'
 import { DsRemixIcon } from '../../DsRemixIcon'
