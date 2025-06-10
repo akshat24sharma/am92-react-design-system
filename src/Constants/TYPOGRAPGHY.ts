@@ -28,7 +28,8 @@ export const DSTYPOGRAPHY_TOKENS: DsTypographyTokens[] = [
   'supportRegularInfo',
   'supportRegularFootnote',
   'supportBoldTextButton',
-  'supportRegularMetadata'
+  'supportRegularMetadata',
+  'supportBlackProductName'
 ]
 
 export const DS_TYPOGRAPHY_DEFAULT_HTML_FONT_SIZE: DS_TYPOGRAPHY_HTML_FONT_SIZE = 16

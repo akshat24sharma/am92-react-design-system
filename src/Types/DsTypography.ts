@@ -59,6 +59,7 @@ export type DsTypographyTokens =
   | 'supportRegularFootnote'
   | 'supportBoldTextButton'
   | 'supportRegularMetadata'
+  | 'supportBlackProductName'
 
 interface DsFontSizeGenerics<T> extends Partial<Record<DsFontSizeTokens, T>> {}
 interface DsFontSizeClassGenerics<T>
