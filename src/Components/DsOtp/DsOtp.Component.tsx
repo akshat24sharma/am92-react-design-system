@@ -1,4 +1,12 @@
-import React, { CSSProperties, FC, useState } from 'react'
+import React, {
+  CSSProperties,
+  FC,
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState
+} from 'react'
 
 import { DsBox } from '../DsBox'
 import { DsStack } from '../DsStack'
@@ -152,43 +160,43 @@ export const DsOtp: FC<DsOtpProps> = (inProps) => {
     ))
   }
 
-    const {
-      id,
-      name,
-      label,
-      labelSupportText,
-      helperText,
-      success,
-      color,
-      error,
-      inputProps,
-      disabled,
-      InputLabelProps,
-      HelperTextProps,
-      BoxProps
-    } = props
+  const {
+    id,
+    name,
+    label,
+    labelSupportText,
+    helperText,
+    success,
+    color,
+    error,
+    inputProps,
+    disabled,
+    InputLabelProps,
+    HelperTextProps,
+    BoxProps
+  } = props
 
-    return (
-      <DsBox {...BoxProps}>
-        <DsInputLabel
-          label={label}
-          labelSupportText={labelSupportText}
-          // error={error}
-          success={success}
-          htmlFor={id || name}
-          disabled={disabled}
-          {...InputLabelProps}
-        />
-        <DsStack direction="row" spacing="var(--ds-spacing-glacial)" style={{}}>
-          {renderOtpBoxes()}
-        </DsStack>
-        <DsHelperText
-          helperText={helperText}
-          color={color}
-          success={success}
-          error={error}
-          {...HelperTextProps}
-        />
-      </DsBox>
-    )
-}
+  return (
+    <DsBox ref={domRef} {...BoxProps}>
+      <DsInputLabel
+        label={label}
+        labelSupportText={labelSupportText}
+        // error={error}
+        success={success}
+        htmlFor={id || name}
+        disabled={disabled}
+        {...InputLabelProps}
+      />
+      <DsStack direction='row' spacing='var(--ds-spacing-glacial)' style={{}}>
+        {renderOtpBoxes()}
+      </DsStack>
+      <DsHelperText
+        helperText={helperText}
+        color={color}
+        success={success}
+        error={error}
+        {...HelperTextProps}
+      />
+    </DsBox>
+  )
+})
