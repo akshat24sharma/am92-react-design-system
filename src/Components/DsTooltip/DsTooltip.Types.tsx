@@ -53,7 +53,8 @@ export const DsTooltipDefaultProps: DsTooltipProps<typeof DsLink> = {
     wrapper: {
       color: 'inherit',
       variant: 'inherit',
-      sx: { textDecoration: 'inherit' }
+      underline: 'always',
+      sx: { textDecorationColor: 'inherit' }
     }
   }
 }

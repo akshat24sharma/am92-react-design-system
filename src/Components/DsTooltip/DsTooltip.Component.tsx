@@ -41,7 +41,7 @@ export const CustomTooltip = <
 
   return (
     <Tooltip title={renderTitle()} {...tooltipProps}>
-      <WrapperComponent {...wrapperProps}>{children}</WrapperComponent>
+      <WrapperComponent {...wrapperProps}>{children || null}</WrapperComponent>
     </Tooltip>
   )
 }
