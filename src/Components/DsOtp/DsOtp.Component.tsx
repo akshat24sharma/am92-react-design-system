@@ -1,6 +1,5 @@
 import React, {
   CSSProperties,
-  FC,
   forwardRef,
   useEffect,
   useImperativeHandle,
