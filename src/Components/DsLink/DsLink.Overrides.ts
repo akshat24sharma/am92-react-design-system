@@ -8,6 +8,10 @@ export const DsLinkOverrides = {
         cursor: 'pointer',
         textDecorationColor: 'var(--ds-colour-actionSecondary)',
         textUnderlinePosition: 'under',
+        fontWeight: 'var(--ds-typo-bodyRegularSmall-fontWeight)',
+        fontSize: 'var(--ds-typo-bodyRegularSmall-fontSize)',
+        lineHeight: 'var(--ds-typo-bodyRegularSmall-lineHeight)',
+        letterSpacing: 'var(--ds-typo-bodyRegularSmall-letterSpacing)',
         '&:visited': {
           color: 'var(--ds-colour-stateSelectedVisitedTextLink)',
           textDecorationColor: 'var(--ds-colour-stateSelectedVisitedTextLink)'
@@ -26,7 +30,8 @@ export const DsLinkOverrides = {
           textDecorationColor: 'var(--ds-colour-typoDisabled)'
         },
         '&:focus': {
-          textDecoration: 'underline'
+          textDecoration: 'underline',
+          textDecorationThickness: '2px',
         }
       }
     }
