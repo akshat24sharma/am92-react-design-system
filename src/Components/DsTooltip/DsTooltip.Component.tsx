@@ -1,66 +1,49 @@
-import React, { FC } from 'react'
+import React from 'react'
 import Tooltip from '@mui/material/Tooltip'
-import { DsTooltipProps } from './DsTooltip.Types'
+import { DsTooltipDefaultProps, DsTooltipProps } from './DsTooltip.Types'
 import { DsTypography } from '../DsTypography'
-import { DsLink } from '../DsLink'
-import { useThemeProps } from '@mui/system'
 
-export const DsTooltip: FC<DsTooltipProps> = (props) =>  {
-  
+export const CustomTooltip = <
+  TWrapper extends React.ElementType = React.ElementType
+>(
+  InProps: DsTooltipProps<TWrapper>
+) => {
+  const props = { ...DsTooltipDefaultProps, ...InProps }
+
   const renderTitle = () => {
-    const { heading, description, buttonGroup } = props
-
-    const tooltipButtonGroup = buttonGroup
-      ? React.cloneElement(buttonGroup, {
-          size: 'small',
-          fullWidth: true,
-          noPadding: true,
-          sx: { bgcolor: 'transparent', mt: 'var(--ds-spacing-bitterCold)' }
-        })
-      : false
+    const { heading, description } = props
 
     return (
       <>
         {heading && (
           <DsTypography
-            component="div"
-            variant="bodyBoldMedium"
+            component='div'
+            variant='bodyBoldMedium'
             sx={{ mb: 'var(--ds-spacing-glacial)' }}
           >
             {heading}
           </DsTypography>
         )}
         {description && (
-          <DsTypography component="div" variant="bodyRegularMedium">
+          <DsTypography component='div' variant='bodyRegularMedium'>
             {description}
           </DsTypography>
         )}
-        {tooltipButtonGroup}
       </>
     )
   }
 
+  const { heading, description, slots, slotProps, children, ...tooltipProps } =
+    props
 
-    const {
-      heading,
-      description,
-      buttonGroup,
+  const WrapperComponent = slots?.wrapper || React.Fragment
+  const wrapperProps = slotProps?.wrapper || {}
 
-      children,
-      ...tooltipProps
-    } = props
-
-    return (
-      <Tooltip title={renderTitle()} {...tooltipProps}>
-        <DsLink
-          component="span"
-          underline="always"
-          color="inherit"
-          variant="inherit"
-          sx={{ textDecorationColor: 'inherit' }}
-        >
-          {children}
-        </DsLink>
-      </Tooltip>
-    )
+  return (
+    <Tooltip title={renderTitle()} {...tooltipProps}>
+      <WrapperComponent {...wrapperProps}>{children}</WrapperComponent>
+    </Tooltip>
+  )
 }
+
+export const DsTooltip = CustomTooltip
