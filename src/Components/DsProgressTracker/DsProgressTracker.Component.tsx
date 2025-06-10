@@ -6,7 +6,7 @@ import {
 } from './DsProgressTracker.Types'
 import { DsCollapse } from '../DsCollapse'
 import { DsBox } from '../DsBox'
-import { DsProgressTrackerHeader } from './Components/DsPrpgressTrackerHeader.Component'
+import { DsProgressTrackerHeader } from './Components/DsProgressTrackerHeader.Component'
 import { DsProgressStepper } from './Components/DsProgressStepper.Component'
 
 export const DsProgressTracker: FC<DsProgressTrackerProps> = inProps => {
