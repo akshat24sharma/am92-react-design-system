@@ -14,6 +14,8 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
     dense,
     onClick,
     StepperProps,
+    stepLabelVisible,
+    lastStepLabelText,
     ...wrapperProps
   } = props
 
@@ -33,7 +35,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
         variant='subheadingSemiboldDefault'
       >
         {isNextStepLastStep
-          ? 'Yay! you are almost done'
+          ? lastStepLabelText
           : `${nextStepLabelPrefix} ${nextStep.stepName}`}
       </DsTypography>
     )
@@ -61,7 +63,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
               {`STEP ${activeStep + 1} OF ${steps.length}`}
             </DsTypography>
             <DsStack direction='row' spacing='var(--ds-spacing-frostbite)'>
-              {haveNextStep && renderStepsLabel()}
+              {haveNextStep && stepLabelVisible && renderStepsLabel()}
               {props['ds-variant'] !== 'header' && (
                 <DsRemixIcon
                   fontSize='bitterCold'
@@ -111,7 +113,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
             >
               {currentStep.stepName}
             </DsTypography>
-            {haveNextStep && renderStepsLabel()}
+            {haveNextStep && stepLabelVisible && renderStepsLabel()}
           </DsStack>
         </DsStack>
       )}

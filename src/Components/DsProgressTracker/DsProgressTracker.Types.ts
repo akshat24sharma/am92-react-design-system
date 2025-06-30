@@ -32,6 +32,14 @@ export interface DsProgressTrackerProps extends DsStackProps {
    * This prop can be used to provide a custom prefix string to the step label.
    */
   nextStepLabelPrefix?: React.ReactNode
+  /**
+   * This prop can be used to hide/show the lable on progress tarcker header.
+   */
+  stepLabelVisible?: boolean
+  /**
+   * This prop can be used to show custom lable text for last step.
+   */
+  lastStepLabelText?: string
 }
 
 export const DsProgressTrackerDefaultProps: DsProgressTrackerProps = {
@@ -40,8 +48,9 @@ export const DsProgressTrackerDefaultProps: DsProgressTrackerProps = {
   dense: false,
   steps: [],
   StepperProps: { orientation: 'vertical' },
-  sx: {},
-  nextStepLabelPrefix: 'Next Step : '
+  nextStepLabelPrefix: 'Next Step : ',
+  stepLabelVisible: true,
+  lastStepLabelText: 'Yay! you are almost done'
 }
 
 export interface DsProgressTrackerState {

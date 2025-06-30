@@ -5,7 +5,9 @@ import { DsStepperProps } from '../DsStepper'
 export interface DsProgressStepperStepProps {
   stepName?: string
   error?: DsStepLabelProps['error']
-  icon?: DsStepLabelProps['icon']
+  icon?: Exclude<DsStepLabelProps['icon'], string>
+  | 'warning'
+  | 'error'
   optional?: DsStepLabelProps['optional']
   completed?: DsStepProps['completed']
   disabled?: DsStepProps['disabled']
