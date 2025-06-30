@@ -33,11 +33,11 @@ export interface DsProgressTrackerProps extends DsStackProps {
    */
   nextStepLabelPrefix?: React.ReactNode
   /**
-   * This prop can be used to hide/show the lable on progress tarcker header.
+   * This prop can be used to hide/show the label on progress tacker header.
    */
   stepLabelVisible?: boolean
   /**
-   * This prop can be used to show custom lable text for last step.
+   * This prop can be used to show custom label text for last step.
    */
   lastStepLabelText?: string
 }

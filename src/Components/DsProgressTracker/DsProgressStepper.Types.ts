@@ -5,6 +5,11 @@ import { DsStepperProps } from '../DsStepper'
 export interface DsProgressStepperStepProps {
   stepName?: string
   error?: DsStepLabelProps['error']
+    /**
+   * Icon to display for the step. Can be a standard icon or special values:
+   * - 'warning': Shows a warning icon with warning color
+   * - 'error': Shows an error icon
+   */
   icon?: Exclude<DsStepLabelProps['icon'], string>
   | 'warning'
   | 'error'

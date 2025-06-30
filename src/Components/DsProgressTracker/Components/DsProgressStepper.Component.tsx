@@ -17,9 +17,9 @@ export const DsProgressStepper: FC<DsProgressStepperProps> = inProps => {
     const { active, error, completed, icon } = stepProps
 
     const isWarning = typeof icon === 'string' && icon === 'warning'
-    const isError = typeof icon === 'string' && icon === 'error'
+    const isError = error || ( typeof icon === 'string' && icon === 'error')
 
-    if (error || isError) {
+    if (isError) {
       return (
         <DsRemixIcon
           className='ri-close-circle-fill'
