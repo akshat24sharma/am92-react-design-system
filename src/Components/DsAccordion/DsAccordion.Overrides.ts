@@ -8,10 +8,12 @@ export const DsAccordionOverrides = {
         backgroundColor: 'var(--ds-colour-surfacePrimary)',
         backgroundImage: 'none',
         overflow: 'hidden',
-        '&:not(:first-of-type):not(.Mui-expanded)': {
-          marginTop: '-1px'
+        paddingTop: 'var(--ds-spacing-glacial)',
+        paddingBottom: 'var(--ds-spacing-glacial)',
+        '&.MuiAccordion-root:not(:last-of-type)': {
+            borderBottom: '1px solid var(--ds-colour-stateDisabledSurface)',
         }
-      }
+    }
     }
   }
 }

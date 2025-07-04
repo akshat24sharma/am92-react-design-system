@@ -13,6 +13,7 @@ import { DsDialogContent } from '../DsDialogContent'
 import { DsButton } from '../DsButton'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsPaper } from '../DsPaper'
+import { mergeSlotProps } from '../../utils'
 
 export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
   const props = { ...DsBottomSheetDefaultProps, ...inProps }
@@ -42,7 +43,6 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
       primaryButtonProps,
       secondaryButtonText,
       secondaryButtonProps,
-      PaperProps,
       ContainerProps,
       KickerProps,
       TitleProps,
@@ -51,8 +51,9 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
       ContentProps,
       ActionsProps,
       children,
-
       onClose,
+      PaperProps,
+      slotProps,
       ...DrawerProps
     } = props
 
@@ -72,20 +73,26 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
       accessibilityProps['aria-describedby'] = kicker
     }
 
+    const paperProps = {
+      ...PaperProps,
+      ...slotProps?.paper
+    };
+
     return (
       <DsDrawer
         {...accessibilityProps}
         {...DrawerProps}
         anchor="bottom"
-        PaperProps={{
-          ...PaperProps,
-          sx: {
-            background: 'transparent',
-            maxHeight: 'var(--ds-rules-bottomSheetWorkingAreaHeight)',
-            ...PaperProps?.sx
-          }
-        }}
         onClose={handleDrawerClose}
+        slotProps={{
+          ...slotProps,
+          paper: mergeSlotProps(paperProps, {
+            sx: {
+              background: 'transparent',
+              maxHeight: 'var(--ds-rules-bottomSheetWorkingAreaHeight)',
+            },
+          }),
+        }}
       >
         {showClose && (
           <DsIconButton
@@ -123,9 +130,9 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
           {kicker && (
             <DsTypography
               variant="subheadingSemiboldDefault"
-              color="text.tertiary"
               {...KickerProps}
               sx={{
+                color: 'text.tertiary',
                 px: 'var(--ds-spacing-bitterCold)',
                 mb: 'var(--ds-spacing-quickFreeze)',
                 textTransform: 'uppercase',

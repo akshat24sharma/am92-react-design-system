@@ -15,18 +15,18 @@ export interface IDatePickerTextFieldProps
   ownerState?: any
 }
 
-const DatePickerTextField: FunctionComponent<IDatePickerTextFieldProps> = (
-  props: IDatePickerTextFieldProps
-) => {
-  const mergedProps = useThemeProps({
-    props: props,
-    name: 'MuiPickersInput'
-  })
+const DatePickerTextField = React.forwardRef<HTMLDivElement, IDatePickerTextFieldProps>(
+  (props, ref) => {
+    const mergedProps = useThemeProps({
+      props: props,
+      name: 'MuiPickersInput'
+    })
 
-  const { setOpen, ref, InputProps, focused, ownerState, ...other } =
-    mergedProps
-  const { readOnly } = InputProps || {}
-  return <DsTextField readOnly={readOnly} {...other} />
-}
+    const { setOpen, InputProps, focused, ownerState, ...other } = mergedProps
+    const { readOnly } = InputProps || {}
+
+    return <DsTextField readOnly={readOnly} {...other} />
+  }
+)
 
 export default DatePickerTextField

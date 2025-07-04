@@ -8,6 +8,7 @@ import { DsTypography } from '../DsTypography'
 import { DsDialogContent } from '../DsDialogContent'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsButton } from '../DsButton'
+import { mergeSlotProps } from '../../utils'
 
 export const DsDialog: React.FC<DsDialogProps> = (props) => {
 
@@ -36,7 +37,6 @@ export const DsDialog: React.FC<DsDialogProps> = (props) => {
       primaryButtonProps,
       secondaryButtonText,
       secondaryButtonProps,
-      PaperProps,
       TitleProps,
       DescriptionProps,
       CloseIconButtonProps,
@@ -44,9 +44,11 @@ export const DsDialog: React.FC<DsDialogProps> = (props) => {
       ContentProps,
       ActionsProps,
       children,
+      slotProps,
+      PaperProps,
       ...DialogProps
     } = props
-console.log('props', props)
+
     const actionsAvailable = !!(primaryButtonText || secondaryButtonText)
     const accessibilityProps: Partial<DsDialogProps> = {}
     const isFlushed =
@@ -63,26 +65,32 @@ console.log('props', props)
       accessibilityProps['aria-describedby'] = description
     }
 
+    const paperProps = {
+      ...PaperProps,
+      ...slotProps?.paper
+    }
+
     return (
       <Dialog
         keepMounted
         {...accessibilityProps}
         {...DialogProps}
-        PaperProps={{
-          ...PaperProps,
-          sx: {
-            pb: isFlushed
-              ? undefined
-              : {
+        slotProps={{
+          ...slotProps,
+          paper: mergeSlotProps(paperProps, {
+            sx: {
+              pb: isFlushed
+                ? undefined
+                : {
                   xs: 'var(--ds-spacing-bitterCold)',
                   md: 'var(--ds-spacing-warm)'
                 },
-            pt: {
-              xs: 'var(--ds-spacing-mild)',
-              md: 'var(--ds-spacing-warm)'
+              pt: {
+                xs: 'var(--ds-spacing-mild)',
+                md: 'var(--ds-spacing-warm)'
+              },
             },
-            ...PaperProps?.sx
-          }
+          }),
         }}
       >
         {title && (
@@ -103,9 +111,9 @@ console.log('props', props)
         {description && (
           <DsTypography
             variant="subheadingSemiboldDefault"
-            color="text.secondary"
             {...DescriptionProps}
             sx={{
+              color: 'text.secondary',
               px: {
                 xs: 'var(--ds-spacing-bitterCold)',
                 md: 'var(--ds-spacing-warm)'

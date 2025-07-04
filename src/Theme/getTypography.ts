@@ -26,6 +26,7 @@ export default function getTypography(fontFamilyName: string = '') {
     fontWeightRegular: '400',
     fontWeightSemibold: '600',
     fontWeightBold: '700',
+    fontWeightBlackItalic: '900',
 
     lineHeightIceAge: '10px',
     lineHeightGlacial: '8px',
@@ -341,6 +342,17 @@ export default function getTypography(fontFamilyName: string = '') {
       ),
       letterSpacing: dsTypoPrimitive.characterSpacingAlps,
       textTransform: 'uppercase'
+    },
+    supportBlackProductName: {
+      fontFamily,
+      fontWeight: dsTypoPrimitive.fontWeightBlackItalic,
+      fontSize: dsTypoPrimitive.fontSizeFrostbite,
+      lineHeight: lineHeightCalculator(
+        dsTypoPrimitive.fontSizeFrostbite,
+        dsTypoPrimitive.lineHeightZero
+      ),
+      letterSpacing: dsTypoPrimitive.characterSpacingHimalayas,
+      textTransform: 'uppercase'
     }
   }
 
@@ -391,7 +403,8 @@ export default function getTypography(fontFamilyName: string = '') {
     supportRegularInfo: dsTypo.supportRegularInfo,
     supportRegularFootnote: dsTypo.supportRegularFootnote,
     supportBoldTextButton: dsTypo.supportBoldTextButton,
-    supportRegularMetadata: dsTypo.supportRegularMetadata
+    supportRegularMetadata: dsTypo.supportRegularMetadata,
+    supportBlackProductName: dsTypo.supportBlackProductName
   }
 
   return { dsTypo, typography }

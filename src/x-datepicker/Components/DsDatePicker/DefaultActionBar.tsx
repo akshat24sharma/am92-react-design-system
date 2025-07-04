@@ -1,14 +1,10 @@
-import React from 'react'
-
-import { PickersActionBarProps, usePickerTranslations, usePickerActionsContext } from '@mui/x-date-pickers'
+import { usePickerTranslations, usePickerContext } from '@mui/x-date-pickers'
 import { DsButtonGroup, DsButton } from '../../../Components'
 
-export function DefaultActionBar(
-  props: PickersActionBarProps & { ownerState?: any }
-) {
-  const { ownerState, actions } = props
-  const { clearValue, acceptValueChanges } = usePickerActionsContext()
-  const { value } = ownerState || {}
+export const DefaultActionBar = () => {
+  const { clearValue, acceptValueChanges, value, view } = usePickerContext()
+
+  const actions = view === 'day' ? ['clear', 'accept'] : [];
 
   if (actions == null || actions?.length === 0) {
     return null

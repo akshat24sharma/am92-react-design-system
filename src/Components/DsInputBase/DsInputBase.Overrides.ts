@@ -1,72 +1,9 @@
-import { CSSInterpolation, padding } from '@mui/system'
+import { CSSObject, padding } from '@mui/system'
 import { DsInputBaseDefaultProps, DsInputBaseProps } from './DsInputBase.Types'
 
 export const DsInputBaseOverrides = {
   MuiInputBase: {
     defaultProps: DsInputBaseDefaultProps,
-    variants: [
-      {
-        props: { 'ds-variant': 'otp' } as Partial<DsInputBaseProps>,
-        style: {
-          textAlign: 'center',
-          '> input': {
-            padding: 'var(--ds-spacing-zero)',
-            fontWeight: 'var(--ds-typo-headingBoldMedium-fontWeight)',
-            fontSize: 'var(--ds-typo-headingBoldMedium-fontSize)',
-            lineHeight: 'var(--ds-typo-headingBoldMedium-lineHeight)',
-            letterSpacing: 'var(--ds-typo-headingBoldMedium-letterSpacing)'
-          }
-        } as CSSInterpolation
-      },
-      {
-        props: {
-          'ds-variant': 'otp',
-          size: 'medium'
-        } as Partial<DsInputBaseProps>,
-        style: {
-          height: '56px',
-          width: '56px',
-          padding:
-            'calc(var(--ds-spacing-quickFreeze) + var(--ds-spacing-deepFreeze)) var(--ds-spacing-bitterCold)'
-        } as CSSInterpolation
-      },
-      {
-        props: {
-          'ds-variant': 'otp',
-          size: 'small'
-        } as Partial<DsInputBaseProps>,
-        style: {
-          height: '40px',
-          width: '40px',
-          padding:
-            'calc(var(--ds-spacing-quickFreeze) + var(--ds-spacing-deepFreeze)) var(--ds-spacing-glacial)'
-        } as CSSInterpolation
-      },
-      {
-        props: { 'ds-variant': 'search' } as Partial<DsInputBaseProps>,
-        style: {
-          borderRadius: 'var(--ds-radius-pleasant)',
-          paddingLeft: 'var(--ds-spacing-frostbite)',
-          paddingRight: 'var(--ds-spacing-bitterCold)',
-          paddingTop: 'var(--ds-spacing-glacial)',
-          paddingBottom: 'var(--ds-spacing-glacial)',
-          // height: 'var(--ds-rules-searchbarHeight)',
-          minWidth: 'var(--ds-rules-searchbarMinWidth)',
-          fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
-          fontSize: 'var(--ds-typo-bodyRegularMedium-fontSize)',
-          lineHeight: 'var(--ds-typo-bodyRegularMedium-lineHeight)',
-          letterSpacing: 'var(--ds-typo-bodyRegularMedium-letterSpacing)',
-          '> input': {
-            padding: 'var(--ds-spacing-zero)',
-            ml: 'var(--ds-spacing-frostbite)'
-          },
-          '> input::placeholder': {
-            color: 'var(--ds-colour-typoSecondary)',
-            opacity: 1
-          }
-        } as CSSInterpolation
-      }
-    ],
     styleOverrides: {
       root: {
         padding: 'var(--ds-spacing-glacial)',
@@ -119,11 +56,73 @@ export const DsInputBaseOverrides = {
           padding: 'var(--ds-spacing-deepFreeze)',
           height: 'auto'
         },
-        // The warning for SSR let it be
-        '> :nth-child(even)': {
+        '> :first-of-type + *': {
           marginLeft: 'var(--ds-spacing-quickFreeze)'
-        }
-      } as CSSInterpolation,
+        },
+        variants: [
+          {
+            props: { 'ds-variant': 'otp' } as Partial<DsInputBaseProps>,
+            style: {
+              textAlign: 'center',
+              '> input': {
+                padding: 'var(--ds-spacing-zero)',
+                fontWeight: 'var(--ds-typo-headingBoldMedium-fontWeight)',
+                fontSize: 'var(--ds-typo-headingBoldMedium-fontSize)',
+                lineHeight: 'var(--ds-typo-headingBoldMedium-lineHeight)',
+                letterSpacing: 'var(--ds-typo-headingBoldMedium-letterSpacing)'
+              }
+            } as CSSObject
+          },
+          {
+            props: {
+              'ds-variant': 'otp',
+              size: 'medium'
+            } as Partial<DsInputBaseProps>,
+            style: {
+              height: '56px',
+              width: '56px',
+              padding:
+                'calc(var(--ds-spacing-quickFreeze) + var(--ds-spacing-deepFreeze)) var(--ds-spacing-bitterCold)'
+            } as CSSObject
+          },
+          {
+            props: {
+              'ds-variant': 'otp',
+              size: 'small'
+            } as Partial<DsInputBaseProps>,
+            style: {
+              height: '40px',
+              width: '40px',
+              padding:
+                'calc(var(--ds-spacing-quickFreeze) + var(--ds-spacing-deepFreeze)) var(--ds-spacing-glacial)'
+            } as CSSObject
+          },
+          {
+            props: { 'ds-variant': 'search' } as Partial<DsInputBaseProps>,
+            style: {
+              borderRadius: 'var(--ds-radius-pleasant)',
+              paddingLeft: 'var(--ds-spacing-frostbite)',
+              paddingRight: 'var(--ds-spacing-bitterCold)',
+              paddingTop: 'var(--ds-spacing-glacial)',
+              paddingBottom: 'var(--ds-spacing-glacial)',
+              // height: 'var(--ds-rules-searchbarHeight)',
+              minWidth: 'var(--ds-rules-searchbarMinWidth)',
+              fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
+              fontSize: 'var(--ds-typo-bodyRegularMedium-fontSize)',
+              lineHeight: 'var(--ds-typo-bodyRegularMedium-lineHeight)',
+              letterSpacing: 'var(--ds-typo-bodyRegularMedium-letterSpacing)',
+              '> input': {
+                padding: 'var(--ds-spacing-zero)',
+                ml: 'var(--ds-spacing-frostbite)'
+              },
+              '> input::placeholder': {
+                color: 'var(--ds-colour-typoSecondary)',
+                opacity: 1
+              }
+            } as CSSObject
+          }
+        ],
+      } as CSSObject,
       input: {
         padding: 'var(--ds-spacing-quickFreeze) var(--ds-spacing-zero)',
         fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
@@ -138,7 +137,7 @@ export const DsInputBaseOverrides = {
           color: 'var(--ds-colour-typoTertiary)',
           opacity: 1
         }
-      } as CSSInterpolation
+      } as CSSObject
     }
   }
 }

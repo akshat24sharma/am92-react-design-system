@@ -42,6 +42,7 @@ export function getTheme(
 
   const cssVarsThemeOptions: CssVarsThemeOptions = {
     cssVarPrefix: '',
+    colorSchemeSelector: 'data',
     components: componentOverrides,
     colorSchemes,
     shape: { borderRadius: 2 },

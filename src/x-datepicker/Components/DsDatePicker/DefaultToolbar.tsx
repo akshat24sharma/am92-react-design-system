@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { DatePickerToolbarProps, usePickerTranslations } from '@mui/x-date-pickers'
+import { DatePickerToolbarProps, usePickerContext, usePickerTranslations } from '@mui/x-date-pickers'
 import { useUtils } from '@mui/x-date-pickers/internals'
-import { useThemeProps } from '@mui/system'
 import {
   DsStack,
   DsTypography,
@@ -11,12 +10,10 @@ import {
 } from '../../../Components'
 
 export const DefaultToolbar = React.forwardRef(function DatePickerToolbar(
-  inProps: DatePickerToolbarProps & { ownerState?: any },
+  inProps: DatePickerToolbarProps,
   ref: React.Ref<HTMLDivElement>
 ) {
-  const props = useThemeProps({ props: inProps, name: 'MuiDatePickerToolbar' })
-  const { ownerState } = props
-  const { value, onCancel } = ownerState
+  const { value, cancelValueChanges } = usePickerContext()
 
   const translations = usePickerTranslations()
   const utils = useUtils()
@@ -42,7 +39,7 @@ export const DefaultToolbar = React.forwardRef(function DatePickerToolbar(
         variant="headingBoldExtraSmall"
       >
         {`${translations.datePickerToolbarTitle}${dateText}`}
-        <DsIconButton onClick={onCancel}>
+        <DsIconButton onClick={cancelValueChanges}>
           <DsRemixIcon className="ri-close-line" />
         </DsIconButton>
       </DsTypography>

@@ -1,5 +1,5 @@
 import { isIS } from '@mui/x-date-pickers/locales'
-import is from 'date-fns/locale/is'
+import { is } from 'date-fns/locale'
 
 export const DsDatePickerLocaleIsIS = {
   components: {

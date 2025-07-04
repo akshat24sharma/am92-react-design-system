@@ -1,5 +1,5 @@
 import { jaJP } from '@mui/x-date-pickers/locales'
-import ja from 'date-fns/locale/ja'
+import { ja } from 'date-fns/locale'
 
 export const DsDatePickerLocaleJaJP = {
   components: {

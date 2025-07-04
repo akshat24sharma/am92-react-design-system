@@ -152,8 +152,8 @@ export const DsFileUploader: FC<
           key={`${file.name}-${index}`}
           direction="row"
           spacing="var(--ds-spacing-bitterCold)"
-          alignItems="center"
           sx={{
+            alignItems: 'center',
             p: 'var(--ds-spacing-bitterCold)',
             borderRadius: 'var(--ds-radius-glacial)',
             borderWidth: '1px',

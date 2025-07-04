@@ -43,15 +43,19 @@ export const DateCalenderHeader = React.forwardRef(
     return (
       <DsStack
         direction="row"
-        justifyContent="space-between"
         // spacing='var(--ds-spacing-frostbite)'
-        sx={{ p: 'var(--ds-spacing-frostbite)' }}
+        sx={{
+          justifyContent: 'space-between',
+          p: 'var(--ds-spacing-frostbite)'
+        }}
       >
         <DsStack
           direction="row"
-          justifyContent="space-between"
-          alignItems="center"
           spacing="var(--ds-spacing-frostbite)"
+          sx={{
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
         >
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
@@ -65,9 +69,9 @@ export const DateCalenderHeader = React.forwardRef(
           >
             <DsTypography
               variant="bodyBoldSmall"
-              color={
-                isMonthNavigationDisabled ? 'text.disabled' : 'text.primary'
-              }
+              sx={{
+                color: isMonthNavigationDisabled ? 'text.disabled' : 'text.primary'
+              }}
             >
               {utils.formatByString(currentMonth, utils.formats.monthShort)}
             </DsTypography>
@@ -86,9 +90,11 @@ export const DateCalenderHeader = React.forwardRef(
         </DsStack>
         <DsStack
           direction="row"
-          justifyContent="space-between"
-          alignItems="center"
           spacing="var(--ds-spacing-frostbite)"
+          sx={{
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
         >
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
@@ -102,9 +108,9 @@ export const DateCalenderHeader = React.forwardRef(
           >
             <DsTypography
               variant="bodyBoldSmall"
-              color={
-                isYearNavigationDisabled ? 'text.disabled' : 'text.primary'
-              }
+              sx={{
+                color: isYearNavigationDisabled ? 'text.disabled' : 'text.primary'
+              }}
             >
               {utils.formatByString(currentMonth, utils.formats.year)}
             </DsTypography>

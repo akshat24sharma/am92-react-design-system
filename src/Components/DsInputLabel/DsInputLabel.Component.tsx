@@ -22,8 +22,11 @@ export const DsInputLabel: FC<DsInputLabelProps> = (props) => {
         <DsTypography
           component="span"
           variant="bodyRegularSmall"
-          color="text.secondary"
-          sx={{ float: 'right', width: '100%' }}
+          sx={{
+            color: 'text.secondary',
+            float: 'right',
+            width: '100%'
+          }}
         >
           {labelSupportText}
         </DsTypography>

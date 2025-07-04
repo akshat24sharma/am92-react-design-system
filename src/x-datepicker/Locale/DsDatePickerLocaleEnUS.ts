@@ -1,5 +1,5 @@
 import { enUS as EnUS } from '@mui/x-date-pickers/locales'
-import enUS from 'date-fns/locale/en-US'
+import { enUS } from 'date-fns/locale'
 
 export const DsDatePickerLocaleEnUS = {
   components: {
