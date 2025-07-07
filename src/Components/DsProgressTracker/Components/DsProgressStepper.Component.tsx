@@ -16,11 +16,23 @@ export const DsProgressStepper: FC<DsProgressStepperProps> = inProps => {
   const renderStepIcon = (stepProps: StepIconProps) => {
     const { active, error, completed, icon } = stepProps
 
-    if (error) {
+    const isWarning = typeof icon === 'string' && icon === 'warning'
+    const isError = error || ( typeof icon === 'string' && icon === 'error')
+
+    if (isError) {
       return (
         <DsRemixIcon
           className='ri-close-circle-fill'
           sx={{ color: 'var(--ds-colour-iconNegative)' }}
+        />
+      )
+    }
+
+    if (isWarning) {
+      return (
+        <DsRemixIcon
+          className='ri-error-warning-fill'
+          sx={{ color: 'var(--ds-colour-supportWarning)' }}
         />
       )
     }
