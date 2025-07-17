@@ -47,6 +47,9 @@ export const DsFileUploaderImagePreview = ({
 
     return () => {
       isMounted = false
+      if (src && src.startsWith('blob:')) {
+        URL.revokeObjectURL(src)
+      }
     }
   }, [file])
 
