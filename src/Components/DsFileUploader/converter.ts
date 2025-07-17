@@ -9,7 +9,10 @@ export const fileToFileUploader = async (
   let content: TFile<TContentType>['content'] = file
   if (contentType === 'BASE64') {
     content = await fileToBase64(file)
-    content = content.replace('data:image/png;base64,', '')
+
+    if (typeof content === 'string' && content.startsWith('data:')) {
+      content = content.substring(content.indexOf(',') + 1)
+    }
   }
 
   const fileUploader: TFile<TContentType> = {

@@ -23,13 +23,17 @@ export const DsFileUploaderImagePreview = ({
 
     const loadImage = async () => {
       try {
-        if (typeof file.content === 'string') {
+        let content = file.content
+        if (typeof content === 'string') {
           const img = new Image()
-          img.src = file.content
+          if (!content.startsWith('data:')) {
+            content = `data:${file.type};base64,${content}`
+          }
+          img.src = content
           img.onload = () => isMounted && setSrc(img.src)
           img.onerror = () => isMounted && setSrc(null)
-        } else if (file.content instanceof File) {
-          const url = URL.createObjectURL(file.content)
+        } else if (content instanceof File) {
+          const url = URL.createObjectURL(content)
           const img = new Image()
           img.src = url
           img.onload = () => isMounted && setSrc(url)
