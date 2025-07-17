@@ -1,307 +1,259 @@
-import React, { DragEvent, FC, useRef, useState } from 'react'
+import type React from 'react'
+import type { DragEventHandler } from 'react'
+import { useEffect, useState } from 'react'
 
-import { DsBox } from '../DsBox'
-import { DsButton } from '../DsButton'
-import { DsIconButton } from '../DsIconButton'
-import { DsInput } from '../DsInput'
-import { DsRemixIcon } from '../DsRemixIcon'
-import { DsStack } from '../DsStack'
-import { DsTypography } from '../DsTypography'
-
-import {
-  DsFileUploaderDefaultProps,
-  DsFileUploaderDefaultState,
-  DsFileUploaderProps,
-  DsFileUploaderState
+import type {
+  IDsFileUploaderProps,
+  TContentType,
+  TErrorFile,
+  TErrorValue,
+  TFile,
+  TMultiple,
+  TValue
 } from './DsFileUploader.Types'
+import { DsFileUploaderDefaultProps } from './DsFileUploader.Types'
+import FileUploaderFiles from './FileUploaderFiles'
+import { getDefaultValue, getValidProcessedFile, mergeProps } from './helpers'
+import { DsFileUploaderDropZone } from './Slots/DsFileUploaderDropZone'
+import { DsStack } from '../DsStack'
+import { DsInputLabel } from '../DsInputLabel'
 
-export const DsFileUploader: FC<
-  DsFileUploaderProps
-> = (inProps) => {
-  const props = {  ...DsFileUploaderDefaultProps, ...inProps}
-  const inputRef = useRef<HTMLInputElement>()
-  const [files, setFiles] = useState<DsFileUploaderState['files']>([])
+export const DsFileUploader = <
+  Multiple extends TMultiple,
+  ContentType extends TContentType
+>(
+  inProps: IDsFileUploaderProps<Multiple, ContentType>
+) => {
+  // Merge user props with default props, handling nested slots and slotProps gracefully
+  const props = mergeProps<IDsFileUploaderProps<Multiple, ContentType>>(
+    inProps,
+    DsFileUploaderDefaultProps as IDsFileUploaderProps<Multiple, ContentType>
+  )
+  const defaultValue = getDefaultValue<Multiple, ContentType>(props)
 
-  const humaniseSize = (bytes: number, decimals: number = 2) => {
-    if (!+bytes) return '0 Bytes'
+  const [files, setFiles] = useState<TValue<Multiple, ContentType> | null>(
+    defaultValue
+  )
 
-    const k = 1024
-    const dm = decimals < 0 ? 0 : decimals
-    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+  const {
+    InputLabelProps,
+    name,
+    value,
+    uploadedValue,
+    accept = '*',
+    minSize,
+    maxSize,
+    onChange,
+    onError,
+    onDelete,
+    onPreview,
+    onDownload,
+    multiple,
+    slotProps = {},
+    variant,
+    contentType,
+    canDeleteFile,
+    slots = {}
+  } = props
 
-    const i = Math.floor(Math.log(bytes) / Math.log(k))
+  // Effective file type accept string — pulled from DropZone slotProps or `accept`
+  const allowedFiles =
+    (slotProps?.DropZone && slotProps?.DropZone.InputProps?.accept) || accept
 
-    return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-  }
-
-  const getFileIconClass = (mimeType: string) => {
-    if (mimeType.includes('image/')) {
-      return 'ri-image-2-line'
+  useEffect(() => {
+    if (value !== undefined) {
+      setFiles(value)
     }
+  }, [value])
 
-    if (mimeType.includes('video/')) {
-      return 'ri-video-line'
+  // Handles selected or dropped files after validation
+  const handleFiles = (processedFiles: {
+    valid: TValue<Multiple, ContentType> | null
+    invalid: TErrorValue<Multiple, ContentType>
+  }) => {
+    const { valid, invalid } = processedFiles
+
+    // If not controlled, update internal state
+    if (value === undefined) {
+      setFiles(valid)
     }
-
-    return 'ri-file-list-2-line'
-  }
-
-  const handleOnClick = (event: React.MouseEvent<HTMLElement>) => {
-    inputRef?.current?.click()
-  }
-
-  const handleRemoveFile = (index: number) => () => {
-    const { onChange, name } = props
-    const tempFiles = [...files]
-    tempFiles.splice(index, 1)
-     setFiles(tempFiles)
 
     if (onChange && typeof onChange === 'function') {
-      onChange(name, [...tempFiles]);
+      onChange(name, valid as TValue<Multiple, ContentType>)
+    }
+
+    if (invalid !== null) {
+      if (invalid && onError && typeof onError === 'function') {
+        onError(name, invalid)
+      }
     }
   }
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { onChange, name } = props
-    const stateFiles = files
+  // Triggered when a user selects files via the input element
+  const handleFileSelect = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const { target } = event
     const { files: selectedFiles } = target
+
+    if (!multiple && uploadedValue) {
+      if (onDelete && typeof onDelete === 'function') {
+        onDelete(name, uploadedValue as TFile<ContentType>)
+      }
+    }
+
     if (selectedFiles) {
-      const newFiles = [...stateFiles, ...selectedFiles]
-      setFiles(newFiles)
-
-      if (onChange && typeof onChange === 'function') {
-        onChange(name, newFiles)
-      }
-    }
-  }
-
-  const handleDrop = (event: DragEvent) => {
-    // Prevent default behavior (Prevent file from being opened)
-    event.preventDefault()
-
-    const { InputProps = {}, onChange, name } = props
-    const { accept, multiple } = InputProps
-
-    if (!event.dataTransfer) {
-      return
-    }
-
-    let files: File[] = []
-    const items = event.dataTransfer.items
-      ? [...event.dataTransfer.items]
-      : [...event.dataTransfer.files]
-
-    items.forEach(item => {
-      let file
-
-      if (!multiple && files.length) {
-        return
-      }
-
-      if (item instanceof DataTransferItem) {
-        if (item.kind === 'file') {
-          file = item.getAsFile()
-        }
-      } else {
-        file = item
-      }
-
-      if (!file) {
-        return
-      }
-
-      const { type } = file
-      const astrerikType = `${type.split('/')[0]}/*`
-
-      if (accept.includes(type) || accept.includes(astrerikType)) {
-        files.push(file)
-      }
-    })
-
-    const stateFiles = files
-    const newFiles = multiple
-      ? [...stateFiles, ...files]
-      : (files[0] && [files[0]]) || (stateFiles[0] && [stateFiles[0]]) || []
-
-   setFiles(newFiles)
-
-    if (onChange && typeof onChange === 'function') {
-      onChange(name, newFiles)
-    }
-  }
-
-  const handleDragOverHandler = (event: DragEvent) => {
-    // Prevent default behavior (Prevent file from being opened)
-    event.preventDefault()
-  }
-
-  const renderFiles = () => {
-
-    if (!files.length) {
-      return false
-    }
-
-    const Files: React.ReactElement[] = []
-
-    for (let index = 0; index < files.length; index++) {
-      const file: File = files[index]
-
-      Files.push(
-        <DsStack
-          key={`${file.name}-${index}`}
-          direction="row"
-          spacing="var(--ds-spacing-bitterCold)"
-          alignItems="center"
-          sx={{
-            p: 'var(--ds-spacing-bitterCold)',
-            borderRadius: 'var(--ds-radius-glacial)',
-            borderWidth: '1px',
-            borderStyle: 'solid',
-            borderColor: 'var(--ds-colour-strokeDefault)',
-            backgroundColor: 'var(--ds-colour-surfacePrimary)',
-            cursor: 'pointer',
-            '&:hover': {
-              borderColor: 'var(--ds-colour-strokeSecondarySelected)',
-              backgroundColor: 'var(--ds-colour-stateSelectedSecondaryHover)'
-            }
-          }}
-        >
-          <DsRemixIcon
-            sx={{
-              p: 'var(--ds-spacing-quickFreeze)',
-              borderRadius: 'var(--ds-radius-quickFreeze)',
-              backgroundColor: 'var(--ds-colour-neutral2)',
-              color: 'var(--ds-colour-actionTertiary)'
-            }}
-            className={getFileIconClass(file.type)}
-          />
-          <DsBox
-            sx={{
-              display: 'flex',
-              flexGrow: 1,
-              minWidth: 0,
-              flexDirection: 'column'
-            }}
-          >
-            <DsTypography
-              component="div"
-              variant="subheadingSemiboldDefault"
-              noWrap
-            >
-              {file.name}
-            </DsTypography>
-            <DsTypography
-              component="div"
-              variant="bodyRegularSmall"
-              noWrap
-              sx={{
-                color: 'var(--ds-colour-typoTertiary)'
-              }}
-            >
-              {humaniseSize(file.size)}
-            </DsTypography>
-          </DsBox>
-          <DsIconButton onClick={handleRemoveFile(index)}>
-            <DsRemixIcon className="ri-close-line" />
-          </DsIconButton>
-        </DsStack>
+      const processedFiles = await getValidProcessedFile<Multiple, ContentType>(
+        selectedFiles,
+        files ?? null,
+        accept,
+        minSize,
+        maxSize,
+        contentType
       )
-    }
 
-    return (
-      <DsStack
-        sx={{
-          mt: 'var(--ds-spacing-warm)',
-          width: '100%'
-        }}
-        spacing="var(--ds-spacing-glacial)"
-        direction="column"
-      >
-        {Files}
-      </DsStack>
-    )
+      handleFiles(processedFiles)
+    }
   }
 
-    const {
-      IconProps,
-      titleButtonText,
-      TitleButtonProps,
-      descriptionTypograpghyText,
-      DescriptionTypograpghyProps,
-      InputProps
-    } = props
-    return (
-      <>
-        <DsStack
-          sx={{
-            width: '100%',
-            position: 'relative',
-            p: 'var(--ds-spacing-bitterCold)',
-            borderRadius: 'var(--ds-radius-glacial)',
-            borderWidth: '1px',
-            borderStyle: 'dashed',
-            borderColor: 'var(--ds-colour-strokeDefault)',
-            backgroundColor: 'var(--ds-colour-surfacePrimary)',
-            cursor: 'pointer',
-            '&:hover': {
-              borderColor: 'var(--ds-colour-strokeSecondarySelected)',
-              backgroundColor: 'var(--ds-colour-stateSelectedSecondaryHover)'
-            }
-          }}
-          direction="column"
-          spacing="var(--ds-spacing-glacial)"
+  // Triggered when a user drops files into the drop zone
+  const handleDropFile: DragEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = async event => {
+    event.preventDefault()
+    const { dataTransfer } = event
+
+    if (dataTransfer) {
+      const { files: selectedFiles } = dataTransfer
+
+      if (!multiple && uploadedValue) {
+        if (onDelete && typeof onDelete === 'function') {
+          onDelete(name, uploadedValue as TFile<ContentType>)
+        }
+      }
+
+      if (files) {
+        const processedFiles = await getValidProcessedFile<
+          Multiple,
+          ContentType
+        >(selectedFiles, files ?? null, accept, minSize, maxSize)
+        handleFiles(processedFiles)
+      }
+    }
+  }
+
+  // Prevent default behavior to allow dropping
+  const handleDragOverHandler: DragEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = event => {
+    event.preventDefault()
+  }
+
+  // Triggered when a user removes a file
+  const handleRemoveFile = async (name: string, file: TFile<TContentType>) => {
+    // Async handler for delete operations
+    if (canDeleteFile && typeof canDeleteFile === 'function') {
+      const canDelete = await canDeleteFile(name, file)
+      if (!canDelete) return
+    }
+
+    if (onDelete && typeof onDelete === 'function') {
+      onDelete(name, file)
+    }
+
+    // Update internal state after deletion
+    if (Array.isArray(files)) {
+      const newFiles = files.filter(f => f !== file) as TValue<
+        Multiple,
+        ContentType
+      >
+      const valid = newFiles
+      const invalid: TErrorFile<ContentType>[] = []
+
+      handleFiles({
+        valid: valid,
+        invalid: invalid as TErrorValue<Multiple, ContentType>
+      })
+    } else {
+      handleFiles({
+        valid: null,
+        invalid: null as TErrorValue<Multiple, ContentType>
+      })
+    }
+  }
+
+  // Preview handler
+  const handlePreviewFileAction = (name: string, file: TFile<TContentType>) => {
+    if (onPreview && typeof onPreview === 'function') {
+      onPreview(name, file)
+    }
+  }
+
+  // Download handler
+  const handleDownloadFileAction = (
+    name: string,
+    file: TFile<TContentType>
+  ) => {
+    if (onDownload && typeof onDownload === 'function') {
+      onDownload(name, file)
+    }
+  }
+
+  // Visibility conditions for selected and uploaded sections
+  const isSelectedSegmentVisible = multiple
+    ? Array.isArray(files) && files.length > 0
+    : files
+  const isUploadedSegmentVisible = multiple
+    ? Array.isArray(uploadedValue) && uploadedValue.length > 0
+    : uploadedValue
+
+  const { SelectedItemSegment, UploadedItemSegment } = slots
+
+  return (
+    <DsStack
+      direction='column'
+      sx={{
+        gap: 'var(--ds-spacing-bitterCold)',
+        width: '100%',
+        p: 'var(--ds-spacing-bitterCold)'
+      }}
+    >
+      <DsInputLabel
+        sx={{ mb: 'var(--ds-spacing-zero)', ...InputLabelProps?.sx }}
+        {...InputLabelProps}
+      />
+      <DsFileUploaderDropZone
+        variant={variant}
+        {...slotProps?.DropZone}
+        InputProps={{
+          accept: allowedFiles || accept,
+          multiple: multiple,
+          onChange: handleFileSelect,
+          onDrop: handleDropFile,
+          onDragOver: handleDragOverHandler,
+          ...slotProps?.DropZone?.InputProps
+        }}
+      />
+      {isSelectedSegmentVisible && SelectedItemSegment && (
+        <SelectedItemSegment
+          onPreview={handlePreviewFileAction}
+          onDownload={handleDownloadFileAction}
+          onDelete={handleRemoveFile}
+          {...slotProps?.SelectedItemSegment}
         >
-          <DsRemixIcon
-            className="ri-upload-cloud-2-line"
-            color="secondary"
-            {...IconProps}
-          />
-          <DsButton variant="text" color="secondary" {...TitleButtonProps}>
-            {titleButtonText}
-          </DsButton>
-          <DsTypography
-            variant="bodyRegularSmall"
-            align="center"
-            {...DescriptionTypograpghyProps}
-            sx={{
-              color: 'var(--ds-colour-typoTertiary)',
-              ...DescriptionTypograpghyProps?.sx
-            }}
-          >
-            {descriptionTypograpghyText}
-          </DsTypography>
-          <DsInput
-            type="file"
-            sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              height: '100%',
-              width: '100%',
-              opacity: 0,
-              cursor: 'pointer',
-              margin: 'var(--ds-spacing-zero) !important'
-            }}
-            onChange={handleChange}
-            onDrop={handleDrop}
-            onDragOver={handleDragOverHandler}
-            disableUnderline
-            inputProps={{
-              title: titleButtonText as string,
-              ref: inputRef,
-              value: '',
-              ...InputProps,
-              style: {
-                height: '100%',
-                width: '100%',
-                cursor: 'pointer',
-                ...InputProps?.style
-              }
-            }}
-          />
-        </DsStack>
-        {renderFiles()}
-      </>
-    )
+          <FileUploaderFiles slots={slots} files={files || undefined} />
+        </SelectedItemSegment>
+      )}
+      {isUploadedSegmentVisible && UploadedItemSegment && (
+        <UploadedItemSegment
+          onPreview={handlePreviewFileAction}
+          onDownload={handleDownloadFileAction}
+          onDelete={handleRemoveFile}
+          {...slotProps?.UploadedItemSegment}
+        >
+          <FileUploaderFiles slots={slots} files={uploadedValue || undefined} />
+        </UploadedItemSegment>
+      )}
+    </DsStack>
+  )
 }
