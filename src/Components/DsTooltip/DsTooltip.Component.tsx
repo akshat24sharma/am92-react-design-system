@@ -33,14 +33,14 @@ export const CustomTooltip = <
     )
   }
 
-  const { heading, description, slots, slotProps, children, ...tooltipProps } =
+  const { slots, slotProps, children, ...tooltipProps } =
     props
 
   const WrapperComponent = slots?.wrapper || React.Fragment
   const wrapperProps = slotProps?.wrapper || {}
 
   return (
-    <Tooltip title={renderTitle()} {...tooltipProps}>
+    <Tooltip slots={slots} slotProps={slotProps} title={renderTitle()} {...tooltipProps}>
       <WrapperComponent {...wrapperProps}>{children || null}</WrapperComponent>
     </Tooltip>
   )
