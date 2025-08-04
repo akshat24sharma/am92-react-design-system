@@ -278,6 +278,10 @@ export interface IDsFileUploaderItemSegmentProps extends DsStackProps {
    slots prop is used to provide custom slots components to the file uploader
    */
   slots?: IDsFileUploaderProps['slots']
+  /**
+   slotPros used to provide custom props to the individual slots of the file uploader
+   */
+  slotProps?: IDsFileUploaderProps['slotProps']
 }
 
 export interface IDsFileUploaderActionButtonProps extends DsIconButtonProps {

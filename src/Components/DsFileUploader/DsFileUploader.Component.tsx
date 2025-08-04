@@ -241,7 +241,11 @@ export const DsFileUploader = <
           onDelete={handleRemoveFile}
           {...slotProps?.SelectedItemSegment}
         >
-          <FileUploaderFiles slots={slots} files={files || undefined} />
+          <FileUploaderFiles
+            slots={slots}
+            slotProps={slotProps}
+            files={files || undefined}
+          />
         </SelectedItemSegment>
       )}
       {isUploadedSegmentVisible && UploadedItemSegment && (
@@ -251,7 +255,11 @@ export const DsFileUploader = <
           onDelete={handleRemoveFile}
           {...slotProps?.UploadedItemSegment}
         >
-          <FileUploaderFiles slots={slots} files={uploadedValue || undefined} />
+          <FileUploaderFiles
+            slots={slots}
+            slotProps={slotProps}
+            files={uploadedValue || undefined}
+          />
         </UploadedItemSegment>
       )}
     </DsStack>

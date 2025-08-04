@@ -26,10 +26,16 @@ const FileUploaderFiles = (inProps: IDsFileUploaderItemSegmentProps) => {
     showDeleteIcon,
     showDownloadIcon,
     showPreviewIcon,
-    slots = {}
+    slots = {},
+    slotProps = {}
   } = props
 
   const { DownloadButton, PreviewButton, DeleteButton } = slots
+  const {
+    DownloadButton: DownloadButtonProps,
+    PreviewButton: PreviewButtonProps,
+    DeleteButton: DeleteButtonProps
+  } = slotProps
 
   if (!files) {
     return null
@@ -41,8 +47,8 @@ const FileUploaderFiles = (inProps: IDsFileUploaderItemSegmentProps) => {
         key={`${file?.name}-${index}`}
         direction='row'
         spacing='var(--ds-spacing-bitterCold)'
-        alignItems='center'
         sx={{
+          alignItems: 'center',
           p: 'var(--ds-spacing-bitterCold)',
           borderRadius: 'var(--ds-radius-glacial)',
           borderWidth: '1px',
@@ -83,12 +89,14 @@ const FileUploaderFiles = (inProps: IDsFileUploaderItemSegmentProps) => {
           <DownloadButton
             IconProps={{ className: 'ri-download-line' }}
             onClick={() => onDownload && onDownload(file.name, file)}
+            {...DownloadButtonProps}
           />
         )}
         {showPreviewIcon && PreviewButton && (
           <PreviewButton
             IconProps={{ className: 'ri-eye-line' }}
             onClick={() => onPreview && onPreview(file.name, file)}
+            {...PreviewButtonProps}
           />
         )}
 
@@ -96,6 +104,7 @@ const FileUploaderFiles = (inProps: IDsFileUploaderItemSegmentProps) => {
           <DeleteButton
             IconProps={{ className: 'ri-delete-bin-line' }}
             onClick={() => onDelete && onDelete(file.name, file)}
+            {...DeleteButtonProps}
           />
         )}
       </DsStack>
