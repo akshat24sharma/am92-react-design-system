@@ -95,7 +95,7 @@ export interface IDsFileUploaderProps<
    * @param {TVariant} variant The variant of file uploader component.
    * @default 'FULL'
    */
-  variant: TVariant
+  variant?: TVariant
   /**
    * The `input` value. Value should be array of `TFile<TContentType>` type objects. If you have multiple false then value would be null
    * @default []
@@ -350,6 +350,7 @@ export const DsFileUploaderDefaultProps: IDsFileUploaderProps<
   value: undefined,
   accept: '*',
   variant: 'FULL',
+  multiple: true,
   slots: {
     DropZone: DsFileUploaderDropZone,
     UploadedItemSegment: DsFileUploaderUploadedFilesSegment,
