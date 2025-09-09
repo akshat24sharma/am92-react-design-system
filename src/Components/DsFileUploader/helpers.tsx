@@ -5,7 +5,7 @@ import type {
   TErrorValue,
   TFile,
   TMultiple,
-  TValue
+  TFileValue
 } from './DsFileUploader.Types'
 import { DsFileUploaderImagePreview } from './DsFileUploaderPreview/DsFileUploaderImagePreview.Component'
 import { getFileValidator } from './validator'
@@ -52,9 +52,9 @@ export const getFileTypeIcon = <ContentType extends TContentType>(
   if (IMAGE_REGEX.test(mimeType)) {
     return <DsFileUploaderImagePreview file={file} />
   } else if (VIDEO_REGEX.test(mimeType)) {
-    return <DsRemixIcon className='ri-video-line' />
+    return <DsRemixIcon className="ri-video-line" />
   } else {
-    return <DsRemixIcon className='ri-file-list-2-line' />
+    return <DsRemixIcon className="ri-file-list-2-line" />
   }
 }
 
@@ -75,7 +75,7 @@ export const getDefaultValue = <
   ContentType extends TContentType
 >(
   props: IDsFileUploaderProps<Multiple, ContentType>
-): TValue<Multiple, ContentType> | null => {
+): TFileValue<Multiple, ContentType> | null => {
   const { value, multiple } = props
   if (value) {
     return value
@@ -96,13 +96,13 @@ export const getValidProcessedFile = async <
   ContentType extends TContentType
 >(
   filesToProcess: FileList,
-  files: TValue<Multiple, ContentType> | null,
+  files: TFileValue<Multiple, ContentType> | null,
   accept: string,
   minSize?: number,
   maxSize?: number,
   contentType?: TContentType
 ): Promise<{
-  valid: TValue<Multiple, ContentType>
+  valid: TFileValue<Multiple, ContentType>
   invalid: TErrorValue<Multiple, ContentType>
 }> => {
   const validator = getFileValidator(accept, minSize, maxSize)

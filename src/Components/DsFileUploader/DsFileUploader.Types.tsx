@@ -53,12 +53,12 @@ export type TFile<TContentType> = {
   subText?: string
 }
 
-export type TValue<Multiple, TContentType> = Multiple extends false
+export type TFileValue<Multiple, TContentType> = Multiple extends false
   ? TFile<TContentType> | null | undefined
   : TFile<TContentType>[] | undefined
 
 export type TProcessFile<TMultiple, TContentType> = {
-  valid: TValue<TMultiple, TContentType>
+  valid: TFileValue<TMultiple, TContentType>
   invalid: TErrorValue<TMultiple, TContentType>
 }
 
@@ -100,12 +100,12 @@ export interface IDsFileUploaderProps<
    * The `input` value. Value should be array of `TFile<TContentType>` type objects. If you have multiple false then value would be null
    * @default []
    */
-  value?: TValue<Multiple, ContentType> | null
+  value?: TFileValue<Multiple, ContentType> | null
   /**
    * The `input` uploadedValue. uploadedValue should be array of `TFile<TContentType>` type objects of your previously uploaded files. If you have multiple false then uploadedValue would be null
    * @default []
    */
-  uploadedValue?: TValue<Multiple, ContentType>
+  uploadedValue?: TFileValue<Multiple, ContentType>
   /**
    * validate the minimum file size (in bytes).
    *
@@ -160,9 +160,9 @@ export interface IDsFileUploaderProps<
    * Callback fired when a file is selected or dropped.
    *
    * @param {string} name The name provided to the component.
-   * @param {TValue<Multiple, ContentType>} [files] This would be the valid `T_FILE_UPLOADER` type objects selected with its content value depending on `contentType` props or as provided in value.
+   * @param {TFileValue<Multiple, ContentType>} [files] This would be the valid `T_FILE_UPLOADER` type objects selected with its content value depending on `contentType` props or as provided in value.
    */
-  onChange: (name: string, files: TValue<Multiple, ContentType>) => void
+  onChange: (name: string, files: TFileValue<Multiple, ContentType>) => void
   /**
    * Callback fired when an existing file is removed.
    *

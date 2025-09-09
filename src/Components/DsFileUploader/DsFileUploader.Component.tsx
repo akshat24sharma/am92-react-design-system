@@ -9,7 +9,7 @@ import type {
   TErrorValue,
   TFile,
   TMultiple,
-  TValue
+  TFileValue
 } from './DsFileUploader.Types'
 import { DsFileUploaderDefaultProps } from './DsFileUploader.Types'
 import FileUploaderFiles from './FileUploaderFiles'
@@ -31,7 +31,7 @@ export const DsFileUploader = <
   )
   const defaultValue = getDefaultValue<Multiple, ContentType>(props)
 
-  const [files, setFiles] = useState<TValue<Multiple, ContentType> | null>(
+  const [files, setFiles] = useState<TFileValue<Multiple, ContentType> | null>(
     defaultValue
   )
 
@@ -68,7 +68,7 @@ export const DsFileUploader = <
 
   // Handles selected or dropped files after validation
   const handleFiles = (processedFiles: {
-    valid: TValue<Multiple, ContentType> | null
+    valid: TFileValue<Multiple, ContentType> | null
     invalid: TErrorValue<Multiple, ContentType>
   }) => {
     const { valid, invalid } = processedFiles
@@ -79,7 +79,7 @@ export const DsFileUploader = <
     }
 
     if (onChange && typeof onChange === 'function') {
-      onChange(name, valid as TValue<Multiple, ContentType>)
+      onChange(name, valid as TFileValue<Multiple, ContentType>)
     }
 
     if (invalid !== null) {
@@ -163,7 +163,7 @@ export const DsFileUploader = <
 
     // Update internal state after deletion
     if (Array.isArray(files)) {
-      const newFiles = files.filter(f => f !== file) as TValue<
+      const newFiles = files.filter(f => f !== file) as TFileValue<
         Multiple,
         ContentType
       >
@@ -211,7 +211,7 @@ export const DsFileUploader = <
 
   return (
     <DsStack
-      direction='column'
+      direction="column"
       sx={{
         gap: 'var(--ds-spacing-bitterCold)',
         width: '100%',
