@@ -11,12 +11,14 @@ import { DsTypographyProps } from '../DsTypography'
 export interface DsBottomSheetProps extends Omit<DsDrawerProps, 'title'> {
   kicker?: string
   title?: string
+  description?: string
   showClose?: boolean
   primaryButtonText?: DsButtonProps['children']
   secondaryButtonText?: DsButtonProps['children']
 
   ContainerProps?: DsPaperProps
   KickerProps?: DsTypographyProps
+  DescriptionProps?: DsTypographyProps
   TitleProps?: DsDialogTitleProps
   CloseIconButtonProps?: DsIconButtonProps
   CloseIconProps?: Omit<DsRemixIconProps, 'ref'>

@@ -14,7 +14,7 @@ const dsRules: DsRules = {
   drawerMiniWidth: '56px',
 
   dialogMdMaxWidth: '600px',
-  bottomSheetWorkingAreaHeight: '68vh',
+  bottomSheetWorkingAreaHeight: 'calc(100vh - var(--ds-spacing-bitterCold))',
 
   avatarSSize: '24px',
   avatarMSize: '32px',
