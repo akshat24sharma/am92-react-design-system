@@ -2,7 +2,7 @@ export const DsDialogActionsOverrides = {
   MuiDialogActions: {
     styleOverrides: {
       root: {
-        marginTop: 'var(--ds-spacing-mild)',
+        boxShadow: 'var(--ds-elevation-1)',
         padding: 'var(--ds-spacing-zero)',
         '> *': {
           flex: 1
