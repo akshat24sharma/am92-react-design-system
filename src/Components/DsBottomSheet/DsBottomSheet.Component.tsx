@@ -83,7 +83,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
         ...PaperProps,
         sx: {
           background: 'transparent',
-          maxHeight: 'calc(100vh - var(--ds-spacing-bitterCold))',
+          maxHeight: 'var(--ds-rules-bottomSheetWorkingAreaHeight)',
           // top: 'var(--ds-spacing-bitterCold)',
           ...PaperProps?.sx
         }
