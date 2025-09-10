@@ -3,7 +3,7 @@ import { DsTextFieldDefaultProps, DsTextFieldProps } from '../DsTextField'
 
 export interface DsTextFieldPasswordProps
   extends Omit<DsTextFieldProps, 'endAdornment'> {
-  isVisible: boolean
+  isVisible?: boolean
   toggleNode?: {
     toShow: React.ReactElement
     toHide: React.ReactElement
