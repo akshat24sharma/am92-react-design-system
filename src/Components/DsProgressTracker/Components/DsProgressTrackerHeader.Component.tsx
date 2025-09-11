@@ -124,7 +124,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
             >
               {currentStep.stepName}
             </DsTypography>
-            {haveNextStep && renderStepsLabel()}
+            {haveNextStep && stepLabelVisible && renderStepsLabel()}
           </DsStack>
         </DsStack>
       )}

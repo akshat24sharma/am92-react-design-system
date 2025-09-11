@@ -35,166 +35,184 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
     }
   }
 
-    const {
-      kicker,
-      title,
-      showClose,
-      primaryButtonText,
-      primaryButtonProps,
-      secondaryButtonText,
-      secondaryButtonProps,
-      ContainerProps,
-      KickerProps,
-      TitleProps,
-      CloseIconButtonProps,
-      CloseIconProps,
-      ContentProps,
-      ActionsProps,
-      children,
-      onClose,
-      PaperProps,
-      slotProps,
-      ...DrawerProps
-    } = props
+  const {
+    kicker,
+    title,
+    description,
+    showClose,
+    primaryButtonText,
+    primaryButtonProps,
+    secondaryButtonText,
+    secondaryButtonProps,
+    PaperProps,
+    ContainerProps,
+    KickerProps,
+    DescriptionProps,
+    TitleProps,
+    CloseIconButtonProps,
+    CloseIconProps,
+    ContentProps,
+    ActionsProps,
+    children,
+    onClose,
+    slotProps,
+    ...DrawerProps
+  } = props
 
-    const actionsAvailable = !!(primaryButtonText || secondaryButtonText)
-    const isFlushed =
-      primaryButtonText &&
-      !secondaryButtonText &&
-      primaryButtonProps &&
-      primaryButtonProps?.variant === 'flushed'
-    const accessibilityProps: Partial<DsDrawerProps> = {}
+  const actionsAvailable = !!(primaryButtonText || secondaryButtonText)
+  const isFlushed =
+    primaryButtonText &&
+    !secondaryButtonText &&
+    primaryButtonProps &&
+    primaryButtonProps?.variant === 'flushed'
+  const accessibilityProps: Partial<DsDrawerProps> = {}
 
-    if (title) {
-      accessibilityProps['aria-labelledby'] = title as string
-    }
+  if (title) {
+    accessibilityProps['aria-labelledby'] = title as string
+  }
 
-    if (kicker) {
-      accessibilityProps['aria-describedby'] = kicker
-    }
+  if (kicker) {
+    accessibilityProps['aria-describedby'] = kicker
+  }
 
-    const paperProps = {
-      ...PaperProps,
-      ...slotProps?.paper
-    };
+  const paperProps = {
+    ...PaperProps,
+    ...slotProps?.paper
+  };
 
-    return (
-      <DsDrawer
-        {...accessibilityProps}
-        {...DrawerProps}
-        anchor="bottom"
-        onClose={handleDrawerClose}
-        slotProps={{
-          ...slotProps,
-          paper: mergeSlotProps(paperProps, {
-            sx: {
-              background: 'transparent',
-              maxHeight: 'var(--ds-rules-bottomSheetWorkingAreaHeight)',
-            },
-          }),
-        }}
-      >
-        {showClose && (
-          <DsIconButton
-            onClick={handleCloseClick}
-            {...CloseIconButtonProps}
-            sx={{
-              flexGrow: 0,
-              alignSelf: 'center',
-              backgroundColor: 'var(--ds-colour-iconDefault)',
-              color: 'var(--ds-colour-iconDisabled)',
-              borderRadius: '50%',
-              p: 'var(--ds-spacing-glacial)',
-              mb: 'var(--ds-spacing-bitterCold)',
-              ...CloseIconButtonProps?.sx
-            }}
-          >
-            <DsRemixIcon className="ri-close-line" {...CloseIconProps} />
-          </DsIconButton>
-        )}
-
-        <DsPaper
-          {...ContainerProps}
+  return (
+    <DsDrawer
+      {...accessibilityProps}
+      {...DrawerProps}
+      anchor='bottom'
+      slotProps={{
+        ...slotProps,
+        paper: mergeSlotProps(paperProps, {
+          sx: {
+            background: 'transparent',
+            maxHeight: 'var(--ds-rules-bottomSheetWorkingAreaHeight)',
+          },
+        }),
+      }}
+      onClose={handleDrawerClose}
+    >
+      {showClose && (
+        <DsIconButton
+          onClick={handleCloseClick}
+          {...CloseIconButtonProps}
           sx={{
-            minHeight: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            flexGrow: 1,
-            pt: 'var(--ds-spacing-mild)',
-            borderTopLeftRadius: 'var(--ds-radius-bitterCold)',
-            borderTopRightRadius: 'var(--ds-radius-bitterCold)',
-            pb: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
-            ...ContainerProps?.sx
+            flexGrow: 0,
+            alignSelf: 'center',
+            backgroundColor: 'var(--ds-colour-iconDefault)',
+            color: 'var(--ds-colour-iconDisabled)',
+            borderRadius: '50%',
+            p: 'var(--ds-spacing-glacial)',
+            mb: 'var(--ds-spacing-bitterCold)',
+            ...CloseIconButtonProps?.sx
           }}
         >
-          {kicker && (
-            <DsTypography
-              variant="subheadingSemiboldDefault"
-              {...KickerProps}
-              sx={{
-                color: 'text.tertiary',
-                px: 'var(--ds-spacing-bitterCold)',
-                mb: 'var(--ds-spacing-quickFreeze)',
-                textTransform: 'uppercase',
-                ...KickerProps?.sx
-              }}
-            >
-              {kicker}
-            </DsTypography>
-          )}
+          <DsRemixIcon className='ri-close-line' {...CloseIconProps} />
+        </DsIconButton>
+      )}
 
-          {title && (
-            <DsDialogTitle
-              {...TitleProps}
-              sx={{
-                mb: 'var(--ds-spacing-zero)',
-                px: 'var(--ds-spacing-bitterCold)',
-                ...TitleProps?.sx
-              }}
-            >
-              {title}
-            </DsDialogTitle>
-          )}
+      <DsPaper
+        {...ContainerProps}
+        sx={{
+          minHeight: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          flexGrow: 1,
+          pt: 'var(--ds-spacing-bitterCold)',
+          borderTopLeftRadius: 'var(--ds-radius-bitterCold)',
+          borderTopRightRadius: 'var(--ds-radius-bitterCold)',
+          ...ContainerProps?.sx
+        }}
+      >
+        {kicker && (
+          <DsTypography
+            variant='subheadingSemiboldDefault'
+            {...KickerProps}
+            sx={{
+              color: 'text.tertiary',
+              px: 'var(--ds-spacing-bitterCold)',
+              mb: 'var(--ds-spacing-quickFreeze)',
+              textTransform: 'uppercase',
+              ...KickerProps?.sx
+            }}
+          >
+            {kicker}
+          </DsTypography>
+        )}
 
-          {children && (
-            <DsDialogContent
-              {...ContentProps}
-              sx={{
-                px: 'var(--ds-spacing-bitterCold)',
-                marginTop: 'var(--ds-spacing-mild)',
-                ...ContentProps?.sx
-              }}
-            >
-              {children}
-            </DsDialogContent>
-          )}
+        {title && (
+          <DsDialogTitle
+            {...TitleProps}
+            sx={{
+              mb: 'var(--ds-spacing-zero)',
+              px: 'var(--ds-spacing-bitterCold)',
+              ...TitleProps?.sx
+            }}
+          >
+            {title}
+          </DsDialogTitle>
+        )}
 
-          {actionsAvailable && (
-            <DsDialogActions
-              {...ActionsProps}
-              sx={{
-                px: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
-                ...ActionsProps?.sx
-              }}
-            >
-              {(secondaryButtonText || secondaryButtonProps?.children) && (
-                <DsButton
-                  color="secondary"
-                  size="large"
-                  fullWidth
-                  {...secondaryButtonProps}
-                >
-                  {secondaryButtonText || secondaryButtonProps?.children}
-                </DsButton>
-              )}
-              {(primaryButtonText || primaryButtonProps?.children) && (
-                <DsButton size="large" fullWidth {...primaryButtonProps}>
-                  {primaryButtonText || primaryButtonProps?.children}
-                </DsButton>
-              )}
-            </DsDialogActions>
-          )}
-        </DsPaper>
-      </DsDrawer>
-    )
+        {description && (
+          <DsTypography
+            variant='bodyRegularMedium'
+            color='text.secondary'
+            {...DescriptionProps}
+            sx={{
+              px: 'var(--ds-spacing-bitterCold)',
+              mt: 'var(--ds-spacing-quickFreeze)',
+              ...DescriptionProps?.sx
+            }}
+          >
+            {description}
+          </DsTypography>
+        )}
+
+        {children && (
+          <DsDialogContent
+            {...ContentProps}
+            sx={{
+              px: 'var(--ds-spacing-bitterCold)',
+              marginTop: 'var(--ds-spacing-mild)',
+              ...ContentProps?.sx
+            }}
+          >
+            {children}
+          </DsDialogContent>
+        )}
+
+        {actionsAvailable && (
+          <DsDialogActions
+            {...ActionsProps}
+            sx={{
+              px: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
+              mt: 'var(--ds-spacing-bitterCold)',
+              py: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
+              ...ActionsProps?.sx
+            }}
+          >
+            {(secondaryButtonText || secondaryButtonProps?.children) && (
+              <DsButton
+                color='secondary'
+                size='large'
+                fullWidth
+                {...secondaryButtonProps}
+              >
+                {secondaryButtonText || secondaryButtonProps?.children}
+              </DsButton>
+            )}
+            {(primaryButtonText || primaryButtonProps?.children) && (
+              <DsButton size='large' fullWidth {...primaryButtonProps}>
+                {primaryButtonText || primaryButtonProps?.children}
+              </DsButton>
+            )}
+          </DsDialogActions>
+        )}
+      </DsPaper>
+    </DsDrawer>
+  )
 }
