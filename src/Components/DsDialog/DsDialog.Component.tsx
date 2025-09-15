@@ -64,6 +64,12 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
       PaperProps={{
         ...PaperProps,
         sx: {
+          pb: isFlushed
+            ? undefined
+            : {
+                xs: 'var(--ds-spacing-bitterCold)',
+                md: 'var(--ds-spacing-warm)'
+              },
           pt: {
             xs: 'var(--ds-spacing-mild)',
             md: 'var(--ds-spacing-warm)'
@@ -169,7 +175,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
                   xs: 'var(--ds-spacing-bitterCold)',
                   md: 'var(--ds-spacing-warm)'
                 },
-            py: isFlushed
+            pt: isFlushed
               ? undefined
               : {
                   xs: 'var(--ds-spacing-bitterCold)',
