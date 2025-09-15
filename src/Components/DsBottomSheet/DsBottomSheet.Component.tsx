@@ -116,7 +116,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
           display: 'flex',
           flexDirection: 'column',
           flexGrow: 1,
-          pt: 'var(--ds-spacing-bitterCold)',
+          pt: 'var(--ds-spacing-mild)',
           borderTopLeftRadius: 'var(--ds-radius-bitterCold)',
           borderTopRightRadius: 'var(--ds-radius-bitterCold)',
           ...ContainerProps?.sx
