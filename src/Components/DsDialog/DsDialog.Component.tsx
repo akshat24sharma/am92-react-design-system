@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {  DsDialogDefaultProps, DsDialogProps } from './DsDialog.Types'
+import { DsDialogDefaultProps, DsDialogProps } from './DsDialog.Types'
 import { DsDialogTitle } from '../DsDialogTitle'
 import { Dialog } from '@mui/material'
 import { DsIconButton } from '../DsIconButton'
@@ -64,6 +64,12 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
       PaperProps={{
         ...PaperProps,
         sx: {
+          pb: isFlushed
+            ? undefined
+            : {
+                xs: 'var(--ds-spacing-bitterCold)',
+                md: 'var(--ds-spacing-warm)'
+              },
           pt: {
             xs: 'var(--ds-spacing-mild)',
             md: 'var(--ds-spacing-warm)'
@@ -74,8 +80,8 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
     >
       {kicker && (
         <DsTypography
-          variant='subheadingSemiboldDefault'
-          color='var(--ds-colour-typoTertiary)'
+          variant="subheadingSemiboldDefault"
+          color="var(--ds-colour-typoTertiary)"
           {...KickerProps}
           sx={{
             px: {
@@ -108,8 +114,8 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
       )}
       {description && (
         <DsTypography
-          variant='bodyRegularMedium'
-          color='var(--ds-colour-typoSecondary)'
+          variant="bodyRegularMedium"
+          color="var(--ds-colour-typoSecondary)"
           {...DescriptionProps}
           sx={{
             px: {
@@ -141,7 +147,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
             ...CloseIconButtonProps?.sx
           }}
         >
-          <DsRemixIcon className='ri-close-line' {...CloseIconProps} />
+          <DsRemixIcon className="ri-close-line" {...CloseIconProps} />
         </DsIconButton>
       )}
       {children && (
@@ -169,7 +175,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
                   xs: 'var(--ds-spacing-bitterCold)',
                   md: 'var(--ds-spacing-warm)'
                 },
-            py: isFlushed
+            pt: isFlushed
               ? undefined
               : {
                   xs: 'var(--ds-spacing-bitterCold)',
@@ -181,8 +187,8 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
         >
           {(secondaryButtonText || secondaryButtonProps?.children) && (
             <DsButton
-              color='secondary'
-              size='medium'
+              color="secondary"
+              size="medium"
               fullWidth
               {...secondaryButtonProps}
             >
@@ -190,7 +196,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
             </DsButton>
           )}
           {(primaryButtonText || primaryButtonProps?.children) && (
-            <DsButton size='medium' fullWidth {...primaryButtonProps}>
+            <DsButton size="medium" fullWidth {...primaryButtonProps}>
               {primaryButtonText || primaryButtonProps?.children}
             </DsButton>
           )}

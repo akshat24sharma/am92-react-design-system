@@ -14,7 +14,7 @@ import { DsButton } from '../DsButton'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsPaper } from '../DsPaper'
 
-export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
+export const DsBottomSheet: FC<DsBottomSheetProps> = inProps => {
   const props = { ...DsBottomSheetDefaultProps, ...inProps }
 
   const handleDrawerClose = (
@@ -78,7 +78,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
     <DsDrawer
       {...accessibilityProps}
       {...DrawerProps}
-      anchor='bottom'
+      anchor="bottom"
       PaperProps={{
         ...PaperProps,
         sx: {
@@ -105,7 +105,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
             ...CloseIconButtonProps?.sx
           }}
         >
-          <DsRemixIcon className='ri-close-line' {...CloseIconProps} />
+          <DsRemixIcon className="ri-close-line" {...CloseIconProps} />
         </DsIconButton>
       )}
 
@@ -116,7 +116,8 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
           display: 'flex',
           flexDirection: 'column',
           flexGrow: 1,
-          pt: 'var(--ds-spacing-bitterCold)',
+          pt: 'var(--ds-spacing-mild)',
+          pb: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
           borderTopLeftRadius: 'var(--ds-radius-bitterCold)',
           borderTopRightRadius: 'var(--ds-radius-bitterCold)',
           ...ContainerProps?.sx
@@ -124,8 +125,8 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
       >
         {kicker && (
           <DsTypography
-            variant='subheadingSemiboldDefault'
-            color='text.tertiary'
+            variant="subheadingSemiboldDefault"
+            color="text.tertiary"
             {...KickerProps}
             sx={{
               px: 'var(--ds-spacing-bitterCold)',
@@ -153,8 +154,8 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
 
         {description && (
           <DsTypography
-            variant='bodyRegularMedium'
-            color='text.secondary'
+            variant="bodyRegularMedium"
+            color="text.secondary"
             {...DescriptionProps}
             sx={{
               px: 'var(--ds-spacing-bitterCold)',
@@ -185,14 +186,14 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
             sx={{
               px: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
               mt: 'var(--ds-spacing-bitterCold)',
-              py: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
+              pt: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
               ...ActionsProps?.sx
             }}
           >
             {(secondaryButtonText || secondaryButtonProps?.children) && (
               <DsButton
-                color='secondary'
-                size='large'
+                color="secondary"
+                size="large"
                 fullWidth
                 {...secondaryButtonProps}
               >
@@ -200,7 +201,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
               </DsButton>
             )}
             {(primaryButtonText || primaryButtonProps?.children) && (
-              <DsButton size='large' fullWidth {...primaryButtonProps}>
+              <DsButton size="large" fullWidth {...primaryButtonProps}>
                 {primaryButtonText || primaryButtonProps?.children}
               </DsButton>
             )}
