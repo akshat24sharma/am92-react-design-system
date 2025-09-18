@@ -1,5 +1,5 @@
 import type {
-  IDsFileUploaderProps,
+  DsFileUploaderProps,
   TContentType,
   TErrorFile,
   TErrorValue,
@@ -74,7 +74,7 @@ export const getDefaultValue = <
   Multiple extends TMultiple,
   ContentType extends TContentType
 >(
-  props: IDsFileUploaderProps<Multiple, ContentType>
+  props: DsFileUploaderProps<Multiple, ContentType>
 ): TFileValue<Multiple, ContentType> | null => {
   const { value, multiple } = props
   if (value) {
@@ -82,7 +82,7 @@ export const getDefaultValue = <
   }
 
   if (multiple) {
-    return [] as TFile<ContentType>[] as IDsFileUploaderProps<
+    return [] as TFile<ContentType>[] as DsFileUploaderProps<
       Multiple,
       ContentType
     >['value']

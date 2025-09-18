@@ -79,7 +79,7 @@ export type TErrorValue<Multiple, CONTENT_TYPE> = Multiple extends false
   ? TErrorFile<CONTENT_TYPE> | null
   : TErrorFile<CONTENT_TYPE>[]
 
-export interface IDsFileUploaderProps<
+export interface DsFileUploaderProps<
   Multiple extends TMultiple = true,
   ContentType extends TContentType = 'FILE'
 > {
@@ -208,7 +208,7 @@ export interface IDsFileUploaderDropZoneProps extends DsStackProps {
    * @param {TFileUploaderVariant} variant The variant of file uploader component.
    * @default 'FULL'
    */
-  variant?: IDsFileUploaderProps['variant']
+  variant?: DsFileUploaderProps['variant']
   /**
    * The `iconProps` component to be used for the file uploader.
    */
@@ -259,29 +259,29 @@ export interface IDsFileUploaderItemSegmentProps extends DsStackProps {
    * @param {string} name The name provided to the component.
    * @param {TFile<TContentType>} [file] This would be the valid `TFile<TContentType>` type objects selected with its content value depending on `contentType` props or as provided in value.
    */
-  onPreview?: IDsFileUploaderProps['onPreview']
+  onPreview?: DsFileUploaderProps['onPreview']
   /**
    * Callback fired when an existing file is removed.
    *
    * @param {string} name The name provided to the component.
    * @param {TFile<TContentType>} [file] This would be the valid `TFile<TContentType>` type objects selected with its content value depending on `contentType` props or as provided in value.
    */
-  onDelete?: IDsFileUploaderProps['onDelete']
+  onDelete?: DsFileUploaderProps['onDelete']
   /**
    * Callback fired when an download button is clicked for an existing file.
    *
    * @param {string} name The name provided to the component.
    * @param {TFile<TContentType>} [file] This would be the valid `TFile<TContentType>` type objects selected with its content value depending on `contentType` props or as provided in value.
    */
-  onDownload?: IDsFileUploaderProps['onDownload']
+  onDownload?: DsFileUploaderProps['onDownload']
   /**
    slots prop is used to provide custom slots components to the file uploader
    */
-  slots?: IDsFileUploaderProps['slots']
+  slots?: DsFileUploaderProps['slots']
   /**
    slotPros used to provide custom props to the individual slots of the file uploader
    */
-  slotProps?: IDsFileUploaderProps['slotProps']
+  slotProps?: DsFileUploaderProps['slotProps']
 }
 
 export interface IDsFileUploaderActionButtonProps extends DsIconButtonProps {
@@ -345,7 +345,7 @@ export type TDsFileUploaderSlotProps = {
   DownloadButton?: IDsFileUploaderActionButtonProps
 }
 
-export const DsFileUploaderDefaultProps: IDsFileUploaderProps<
+export const DsFileUploaderDefaultProps: DsFileUploaderProps<
   TMultiple,
   'FILE'
 > = {
