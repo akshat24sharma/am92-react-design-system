@@ -180,10 +180,10 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
             px: isFlushed
               ? undefined
               : {
-                xs: 'var(--ds-spacing-bitterCold)',
-                md: 'var(--ds-spacing-warm)'
-              },
-            py: isFlushed
+                  xs: 'var(--ds-spacing-bitterCold)',
+                  md: 'var(--ds-spacing-warm)'
+                },
+            pt: isFlushed
               ? undefined
               : {
                 xs: 'var(--ds-spacing-bitterCold)',

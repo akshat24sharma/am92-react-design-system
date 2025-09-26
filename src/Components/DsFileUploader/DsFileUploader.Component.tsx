@@ -3,7 +3,7 @@ import type { DragEventHandler } from 'react'
 import { useEffect, useState } from 'react'
 
 import type {
-  IDsFileUploaderProps,
+  DsFileUploaderProps,
   TContentType,
   TErrorFile,
   TErrorValue,
@@ -22,12 +22,12 @@ export const DsFileUploader = <
   Multiple extends TMultiple,
   ContentType extends TContentType
 >(
-  inProps: IDsFileUploaderProps<Multiple, ContentType>
+  inProps: DsFileUploaderProps<Multiple, ContentType>
 ) => {
   // Merge user props with default props, handling nested slots and slotProps gracefully
-  const props = mergeProps<IDsFileUploaderProps<Multiple, ContentType>>(
+  const props = mergeProps<DsFileUploaderProps<Multiple, ContentType>>(
     inProps,
-    DsFileUploaderDefaultProps as IDsFileUploaderProps<Multiple, ContentType>
+    DsFileUploaderDefaultProps as DsFileUploaderProps<Multiple, ContentType>
   )
   const defaultValue = getDefaultValue<Multiple, ContentType>(props)
 

@@ -122,7 +122,8 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
           display: 'flex',
           flexDirection: 'column',
           flexGrow: 1,
-          pt: 'var(--ds-spacing-bitterCold)',
+          pt: 'var(--ds-spacing-mild)',
+          pb: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
           borderTopLeftRadius: 'var(--ds-radius-bitterCold)',
           borderTopRightRadius: 'var(--ds-radius-bitterCold)',
           ...ContainerProps?.sx
@@ -191,7 +192,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
             sx={{
               px: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
               mt: 'var(--ds-spacing-bitterCold)',
-              py: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
+              pt: isFlushed ? undefined : 'var(--ds-spacing-bitterCold)',
               ...ActionsProps?.sx
             }}
           >
