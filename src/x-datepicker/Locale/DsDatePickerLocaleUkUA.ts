@@ -1,5 +1,5 @@
 import { ukUA } from '@mui/x-date-pickers/locales'
-import uk from 'date-fns/locale/uk'
+import { uk } from 'date-fns/locale'
 
 export const DsDatePickerLocaleUkUA = {
   components: {

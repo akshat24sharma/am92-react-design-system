@@ -1,5 +1,5 @@
 import { ptBR as PtBR } from '@mui/x-date-pickers/locales'
-import ptBR from 'date-fns/locale/pt-BR'
+import { ptBR } from 'date-fns/locale'
 
 export const DsDatePickerLocalePtBR = {
   components: {

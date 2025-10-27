@@ -11,12 +11,12 @@ import {
 } from '../../../Components'
 
 export const DateCalenderHeader = React.forwardRef(
-  function PickersCalendarHeader<TDate extends Date>(
-    inProps: PickersCalendarHeaderProps<TDate>,
+  function PickersCalendarHeader(
+    inProps: PickersCalendarHeaderProps,
     ref: React.Ref<HTMLDivElement>
   ) {
     // const translations = usePickersTranslations<TDate>()
-    const utils = useUtils<TDate>()
+    const utils = useUtils()
 
     const props = useThemeProps({
       props: inProps,
@@ -26,10 +26,10 @@ export const DateCalenderHeader = React.forwardRef(
     const { currentMonth, view } = props
 
     const handleMonthChange =
-      (direction: 'left' | 'right', numberOfMonths: 1 | -1 | 12 | -12) =>
+      (numberOfMonths: 1 | -1 | 12 | -12) =>
       () => {
         const { currentMonth, onMonthChange } = props
-        onMonthChange(utils.addMonths(currentMonth, numberOfMonths), direction)
+        onMonthChange(utils.addMonths(currentMonth, numberOfMonths))
       }
 
     const handleViewShow = (view: DateView) => () => {
@@ -43,19 +43,23 @@ export const DateCalenderHeader = React.forwardRef(
     return (
       <DsStack
         direction="row"
-        justifyContent="space-between"
         // spacing='var(--ds-spacing-frostbite)'
-        sx={{ p: 'var(--ds-spacing-frostbite)' }}
+        sx={{
+          justifyContent: 'space-between',
+          p: 'var(--ds-spacing-frostbite)'
+        }}
       >
         <DsStack
           direction="row"
-          justifyContent="space-between"
-          alignItems="center"
           spacing="var(--ds-spacing-frostbite)"
+          sx={{
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
         >
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('left', -1)}
+            onClick={handleMonthChange(-1)}
           >
             <DsRemixIcon className="ri-arrow-drop-left-line" />
           </DsIconButton>
@@ -65,9 +69,9 @@ export const DateCalenderHeader = React.forwardRef(
           >
             <DsTypography
               variant="bodyBoldSmall"
-              color={
-                isMonthNavigationDisabled ? 'text.disabled' : 'text.primary'
-              }
+              sx={{
+                color: isMonthNavigationDisabled ? 'text.disabled' : 'text.primary'
+              }}
             >
               {utils.formatByString(currentMonth, utils.formats.monthShort)}
             </DsTypography>
@@ -79,20 +83,22 @@ export const DateCalenderHeader = React.forwardRef(
           </DsButtonBase>
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('right', 1)}
+            onClick={handleMonthChange(1)}
           >
             <DsRemixIcon className="ri-arrow-drop-right-line" />
           </DsIconButton>
         </DsStack>
         <DsStack
           direction="row"
-          justifyContent="space-between"
-          alignItems="center"
           spacing="var(--ds-spacing-frostbite)"
+          sx={{
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
         >
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('left', -12)}
+            onClick={handleMonthChange(-12)}
           >
             <DsRemixIcon className="ri-arrow-drop-left-line" />
           </DsIconButton>
@@ -102,9 +108,9 @@ export const DateCalenderHeader = React.forwardRef(
           >
             <DsTypography
               variant="bodyBoldSmall"
-              color={
-                isYearNavigationDisabled ? 'text.disabled' : 'text.primary'
-              }
+              sx={{
+                color: isYearNavigationDisabled ? 'text.disabled' : 'text.primary'
+              }}
             >
               {utils.formatByString(currentMonth, utils.formats.year)}
             </DsTypography>
@@ -116,7 +122,7 @@ export const DateCalenderHeader = React.forwardRef(
           </DsButtonBase>
           <DsIconButton
             disabled={isYearNavigationDisabled || isMonthNavigationDisabled}
-            onClick={handleMonthChange('right', 12)}
+            onClick={handleMonthChange(12)}
           >
             <DsRemixIcon className="ri-arrow-drop-right-line" />
           </DsIconButton>

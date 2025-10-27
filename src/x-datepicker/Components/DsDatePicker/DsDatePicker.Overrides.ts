@@ -9,7 +9,7 @@ export const DsDatePickerOverrides = {
     defaultProps:
       DsDatePickerLocaleEnUS.components.MuiLocalizationProvider.defaultProps
   },
-  MuiPickersPopper: {
+  MuiPickerPopper: {
     styleOverrides: {
       root: {
         ' &[data-popper-placement^="right"]': {
@@ -108,9 +108,16 @@ export const DsDatePickerOverrides = {
       }
     }
   },
-  MuiPickersMonth: {
+  MuiMonthCalendar: {
     styleOverrides: {
-      monthButton: {
+      root: {
+        rowGap: 'var(--ds-spacing-mild)',
+        paddingTop: 'var(--ds-spacing-tropical)',
+        paddingBottom: 'var(--ds-spacing-tropical)',
+        paddingLeft: 'var(--ds-spacing-bitterCold)',
+        paddingRight: 'var(--ds-spacing-bitterCold)'
+      },
+      button: {
         fontWeight: 'var(--ds-typo-bodyRegularLarge-fontWeight)',
         fontSize: 'var(--ds-typo-bodyRegularLarge-fontSize)',
         lineHeight: 'var(--ds-typo-bodyRegularLarge-lineHeight)',
@@ -175,26 +182,8 @@ export const DsDatePickerOverrides = {
         marginTop: 'var(--ds-spacing-warm)',
         marginBottom: 'var(--ds-spacing-warm)',
         backgroundColor: 'var(--ds-colour-surfaceBackground)'
-      }
-    }
-  },
-  MuiMonthCalendar: {
-    styleOverrides: {
-      root: {
-        rowGap: 'var(--ds-spacing-mild)',
-        paddingTop: 'var(--ds-spacing-tropical)',
-        paddingBottom: 'var(--ds-spacing-tropical)',
-        paddingLeft: 'var(--ds-spacing-bitterCold)',
-        paddingRight: 'var(--ds-spacing-bitterCold)'
-      }
-    }
-  },
-  MuiPickersYear: {
-    styleOverrides: {
-      root: {
-        flexBasis: '100%'
       },
-      yearButton: {
+      button: {
         width: '100%',
         paddingTop: 'var(--ds-spacing-quickFreeze)',
         paddingBottom: 'var(--ds-spacing-quickFreeze)',
