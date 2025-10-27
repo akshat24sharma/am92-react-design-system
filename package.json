@@ -47,7 +47,8 @@
     "test": "echo 'Error: no test specified'",
     "preversion": "npm-run-all build test",
     "version": "echo 'Versioning'",
-    "postversion": "git push && git push --tags && npm run publish:pkg",
+    "postversion": "if [ \"$BETA\" = \"true\" ]; then echo 'Skipping stable publish for beta'; else git push && git push --tags && npm run publish:pkg; fi",
+    "release:beta": "BETA=true npm version prerelease --preid=beta && npm publish --tag beta && git push && git push --tags",
     "publish:pkg": "npm publish"
   },
   "repository": "git@github.com:heliumtank92/am92-react-design-system.git",
