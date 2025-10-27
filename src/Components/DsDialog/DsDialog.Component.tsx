@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {  DsDialogDefaultProps, DsDialogProps } from './DsDialog.Types'
+import { DsDialogDefaultProps, DsDialogProps } from './DsDialog.Types'
 import { DsDialogTitle } from '../DsDialogTitle'
 import { Dialog } from '@mui/material'
 import { DsIconButton } from '../DsIconButton'
@@ -8,6 +8,7 @@ import { DsTypography } from '../DsTypography'
 import { DsDialogContent } from '../DsDialogContent'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsButton } from '../DsButton'
+import { mergeSlotProps } from '../../utils'
 
 export const DsDialog: React.FC<DsDialogProps> = inProps => {
   const props = { ...DsDialogDefaultProps, ...inProps }
@@ -37,6 +38,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
     ContentProps,
     ActionsProps,
     children,
+    slotProps,
     ...DialogProps
   } = props
 
@@ -56,26 +58,32 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
     accessibilityProps['aria-describedby'] = description
   }
 
+  const paperProps = {
+    ...PaperProps,
+    ...slotProps?.paper
+  }
+
   return (
     <Dialog
       keepMounted
       {...accessibilityProps}
       {...DialogProps}
-      PaperProps={{
-        ...PaperProps,
-        sx: {
-          pb: isFlushed
-            ? undefined
-            : {
+      slotProps={{
+        ...slotProps,
+        paper: mergeSlotProps(paperProps, {
+          sx: {
+            pb: isFlushed
+              ? undefined
+              : {
                 xs: 'var(--ds-spacing-bitterCold)',
                 md: 'var(--ds-spacing-warm)'
               },
-          pt: {
-            xs: 'var(--ds-spacing-mild)',
-            md: 'var(--ds-spacing-warm)'
+            pt: {
+              xs: 'var(--ds-spacing-mild)',
+              md: 'var(--ds-spacing-warm)'
+            },
           },
-          ...PaperProps?.sx
-        }
+        }),
       }}
     >
       {kicker && (
@@ -178,9 +186,9 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
             pt: isFlushed
               ? undefined
               : {
-                  xs: 'var(--ds-spacing-bitterCold)',
-                  md: 'var(--ds-spacing-warm)'
-                },
+                xs: 'var(--ds-spacing-bitterCold)',
+                md: 'var(--ds-spacing-warm)'
+              },
             mt: 'var(--ds-spacing-glacial)',
             ...ActionsProps?.sx
           }}

@@ -94,7 +94,12 @@ const SelectedValue = (props: SelectedValueProps) => {
           renderValue={value => {
             if (!value || (value instanceof Array && !value.length)) {
               return (
-                <DsTypography variant="bodyRegularMedium" color="text.disabled">
+                <DsTypography
+                  variant="bodyRegularMedium"
+                  sx={{
+                    color: "text.disabled"
+                  }}
+                >
                   {placeholder}
                 </DsTypography>
               )

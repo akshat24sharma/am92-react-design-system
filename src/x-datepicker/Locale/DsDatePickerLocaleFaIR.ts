@@ -1,5 +1,5 @@
 import { faIR as FaIR } from '@mui/x-date-pickers/locales'
-import faIR from 'date-fns/locale/fa-IR'
+import { faIR } from 'date-fns/locale'
 
 export const DsDatePickerLocaleFaIR = {
   components: {
