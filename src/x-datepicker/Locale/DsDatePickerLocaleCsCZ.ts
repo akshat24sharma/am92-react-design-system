@@ -1,5 +1,5 @@
 import { csCZ } from '@mui/x-date-pickers/locales'
-import cs from 'date-fns/locale/cs'
+import { cs } from 'date-fns/locale'
 
 export const DsDatePickerLocaleCsCZ = {
   components: {

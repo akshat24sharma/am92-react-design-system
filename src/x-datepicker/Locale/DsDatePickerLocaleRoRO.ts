@@ -1,5 +1,5 @@
 import { roRO } from '@mui/x-date-pickers/locales'
-import ro from 'date-fns/locale/ro'
+import { ro } from 'date-fns/locale'
 
 export const DsDatePickerLocaleRoRO = {
   components: {

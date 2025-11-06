@@ -16,7 +16,7 @@ import { DateValidationError } from '@mui/x-date-pickers'
 export const getDateFromValue = (
   value: TValue,
   valueType: TValueType,
-  format: DsDatePickerProps<Date>['format'] = DsDatePickerDefaultProps.format
+  format: DsDatePickerProps['format'] = DsDatePickerDefaultProps.format
 ): Date | undefined | null => {
   if (value === undefined) {
     return
@@ -67,7 +67,7 @@ export const getDateFromValue = (
 export const getValueTypeFromValue = (
   value: Date | null,
   valueType: TValueType,
-  format: DsDatePickerProps<Date>['format'] = DsDatePickerDefaultProps.format
+  format: DsDatePickerProps['format'] = DsDatePickerDefaultProps.format
 ): TValue => {
   if (value === undefined) {
     return
@@ -101,7 +101,7 @@ export const getValueTypeFromValue = (
 }
 
 export const getErrorFromErrorMap = (
-  errorMap: DsDatePickerProps<Date>['errorMap'],
+  errorMap: DsDatePickerProps['errorMap'],
   error: DateValidationError,
   value: TValue | null
 ) => {

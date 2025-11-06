@@ -1,5 +1,5 @@
 import { caES } from '@mui/x-date-pickers/locales'
-import ca from 'date-fns/locale/ca'
+import { ca } from 'date-fns/locale'
 
 export const DsDatePickerLocaleCaES = {
   components: {

@@ -1,5 +1,5 @@
 import { svSE } from '@mui/x-date-pickers/locales'
-import sv from 'date-fns/locale/sv'
+import { sv } from 'date-fns/locale'
 
 export const DsDatePickerLocaleSvSE = {
   components: {

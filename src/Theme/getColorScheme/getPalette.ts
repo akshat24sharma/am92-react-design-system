@@ -1,10 +1,11 @@
-import { PaletteColorOptions, PaletteOptions } from '@mui/material'
+import { PaletteColorOptions } from '@mui/material'
 import { DsColor, DsPalette } from '../../Types'
+import { DsColorSystemOptions } from '../../Types/DsColorScheme'
 
 export function getPalette(
   colorPalette: DsPalette,
   dsColor: DsColor
-): PaletteOptions {
+): DsColorSystemOptions['palette'] {
   const {
     primary,
     primaryBlack,
@@ -68,11 +69,13 @@ export function getPalette(
     neutral6Dark
   } = colorPalette
 
-  const palette: PaletteOptions = {
+  const palette: DsColorSystemOptions['palette'] = {
     common: {
       black: primaryBlack,
       white: primaryWhite,
-      blackLight: primaryBlackLight
+      blackLight: primaryBlackLight,
+      background: dsColor.surfaceBackground,
+      onBackground: dsColor.typoPrimary,
     },
     primary: {
       main: dsColor.actionPrimary,
