@@ -750,6 +750,45 @@ describe("ComponentName Component", () => {
 });
 ```
 
+## Component Documentation
+
+Component-specific testing documentation is maintained in the `Components/` folder alongside this guidelines document. When implementing tests for new components, ensure you:
+
+### 1. Create Component Documentation
+Create a detailed documentation file in `src/Tests/documentation/Components/[ComponentName].md` that includes:
+- Test file location reference
+- Complete test case breakdown by category
+- Props coverage with TypeScript types
+- Testing patterns used
+- Coverage metrics and statistics
+- Real-world usage examples
+
+### 2. Update Documentation Index
+Add your component to the `TEST-COVERAGE.md` file with test metrics:
+```markdown
+- [ComponentName](./Components/ComponentName.md) - X tests across Y categories
+```
+
+### 3. Follow Established Patterns
+Reference existing component documentation for consistency:
+- **DsAccordion.md** - Complex interactive component with state management
+- **DsTextField.md** - Form input component with validation and sub-components
+- **DsButton.md** - Basic interactive component with variants
+
+### 4. Testing Documentation Template
+Each component documentation should follow this structure:
+- **Test File Location** - Path to the test file
+- **Test Cases** - Breakdown by the 10 testing categories
+- **Props Coverage** - Complete prop documentation with types
+- **Testing Patterns Established** - Reusable patterns for similar components
+- **Coverage Report** - Metrics and statistics
+
+### 5. Maintenance
+- Update documentation when tests are modified
+- Include new testing patterns discovered
+- Track coverage improvements over time
+- Document any component-specific testing challenges
+
 ## Conclusion
 
 Following these guidelines will ensure consistent, comprehensive, and maintainable test suites across all components in the AM92 React Design System. Remember to:
