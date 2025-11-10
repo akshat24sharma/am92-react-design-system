@@ -12,7 +12,7 @@ export default defineConfig({
       }
     },
     pool: 'forks',
-    setupFiles: ['./src/Mocks/setupTests.ts'],
+    setupFiles: ['./src/Tests/Mocks/setupTests.ts'],
     // server: {
     //   deps: {
     //     inline: ['@am92/react-design-system']

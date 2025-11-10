@@ -58,7 +58,8 @@
     "postversion": "if [ \"$BETA\" = \"true\" ]; then echo 'Skipping stable publish for beta'; else git push && git push --tags && npm run publish:pkg; fi",
     "release:beta": "BETA=true npm version prerelease --preid=beta && npm publish --tag beta && git push && git push --tags",
     "release:beta:dry": "BETA=true npm version prerelease --preid=beta --no-git-tag-version && npm publish --tag beta --dry-run",
-    "publish:pkg": "npm publish"
+    "publish:pkg": "npm publish",
+    "test:vitest": "vitest"
   },
   "repository": "git@github.com:heliumtank92/am92-react-design-system.git",
   "homepage": "https://github.com/heliumtank92/am92-react-design-system#readme",
