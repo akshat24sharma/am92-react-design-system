@@ -3,6 +3,7 @@
 ## Components
 - [DsAccordion](./Components/DsAccordion.md) - 53 tests across 10 categories
 - [DsButton](./Components/DsButton.md) - Basic component testing coverage
+- [DsCheckbox](./Components/DsCheckbox.md) - 75 tests across 12 categories (Enhanced Theme Testing)
 - [DsTextField](./Components/DsTextField.md) - 80 tests across 15 categories
 
 ## Running Tests
@@ -13,25 +14,34 @@ npm run test:vitest      # Run specific component tests with Vitest
 ```
 
 ## Test Statistics
-- **Total Components Documented:** 3
-- **Total Tests:** 133+ across all documented components
+- **Total Components Documented:** 4
+- **Total Tests:** 208+ across all documented components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
+- **Theme Testing Coverage:** Complete (light, dark, highContrast)
+- **Modern MUI Patterns:** slotProps system, deprecated pattern support
 
 ## Test Guidelines
 1. Each component should have its own test file
 2. Test files should follow the pattern: `ComponentName.test.tsx`
 3. Tests should cover:
    - **Core Rendering** - Basic component display and prop handling
-   - **Props Validation** - All component props and their variants
-   - **Component States** - Different states (disabled, error, success, etc.)
+   - **Props Validation** - All component props and their variants (including slotProps)
+   - **Component States** - Different states (disabled, error, success, checked, etc.)
    - **MUI Styling** - Material-UI specific classes and themes
    - **Component Functionality** - Core behaviors and interactions
    - **Event Handling** - User interactions (click, keyboard, focus, etc.)
+   - **Form Integration** - Form behavior, validation, and data collection
    - **Accessibility** - ARIA attributes, keyboard navigation, screen readers
    - **Edge Cases** - Unusual scenarios and boundary conditions
    - **Real-world Scenarios** - Common usage patterns and integrations
-   - **Performance** - Component mounting and rendering optimization
+   - **🎨 Theme Testing** - **MANDATORY** - All theme modes (light, dark, highContrast)
+   - **📸 Snapshot Testing** - **MANDATORY** - Visual regression protection
+4. **🚨 CRITICAL RULES:**
+   - **NEVER use hardcoded colors** in theme tests
+   - **ALWAYS test all three themes** (light, dark, highContrast)
+   - **ALWAYS use design system components** in tests (never raw HTML)
+   - **ALWAYS use explicit imports** for theme testing utilities
 
 ## Testing Patterns
 - Use `@vitest-environment jsdom` for component testing
@@ -41,6 +51,9 @@ npm run test:vitest      # Run specific component tests with Vitest
 - Include comprehensive prop testing with TypeScript types
 - Document Material-UI specific testing patterns
 - Test both controlled and uncontrolled component behaviors
+- **🎨 Use explicit theme testing imports:** `import { renderWithTheme, testAllThemes } from "../../Tests/Mocks/themeTestUtils"`
+- **📸 Always include comprehensive snapshot testing** as final test category
+- **🚨 Never use hardcoded colors** - use `getColorScheme(PALETTE)` for theme validation
 
 ## Testing Tools & Framework
 
@@ -57,10 +70,13 @@ npm run test:vitest      # Run specific component tests with Vitest
 - `document.querySelector()` - Direct DOM queries for MUI classes
 
 ### Material-UI Testing Patterns
-- Use class-based queries for MUI components: `.MuiButton-root`, `.MuiTextField-root`
-- Test theme integration and color variants
+- Use class-based queries for MUI components: `.MuiButton-root`, `.MuiTextField-root`, `.MuiCheckbox-root`
+- Test theme integration and color variants across light, dark, and highContrast modes
 - Validate accessibility features provided by MUI
 - Handle collapsed/expanded states in complex components
+- **Modern slotProps system testing** instead of deprecated inputProps patterns
+- **CSS Variables theme testing** with `data-mui-color-scheme` attributes
+- **Direct theme configuration usage** via `getColorScheme(PALETTE)` function
 
 ## Best Practices
 
@@ -85,10 +101,14 @@ npm run test:vitest      # Run specific component tests with Vitest
 
 ## Contributing
 When adding new component tests:
-1. Follow the established 10-category testing framework
-2. Create corresponding documentation in `Components/` folder
+1. Follow the established 12-category testing framework (enhanced from original 10)
+2. Create corresponding documentation in `Components/` folder following DsCheckbox.md pattern
 3. Update this index with component test statistics
 4. Ensure all tests pass before committing changes
+5. **🎨 MANDATORY: Include comprehensive theme testing** across light, dark, and highContrast modes
+6. **📸 MANDATORY: Include snapshot testing** for visual regression protection
+7. **🚨 CRITICAL: Never use hardcoded colors** - always use actual theme configuration
+8. **✅ REQUIRED: Use design system components** exclusively in test scenarios
 
 ---
-*Last updated: November 10, 2025*
+*Last updated: November 25, 2025*

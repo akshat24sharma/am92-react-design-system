@@ -10,20 +10,20 @@ import { afterEach, beforeAll, vi } from 'vitest'
 // MSW Server for mock api requests
 // import { server } from './server'
 
-// Mock window.matchMedia
+// Mock window.matchMedia for MUI components that use media queries
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: vi.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
+    matches: false, // Default to false for all media queries
+    media: query || '',
     onchange: null,
-    addListener: vi.fn(),
-    removeListener: vi.fn(),
+    addListener: vi.fn(), // deprecated
+    removeListener: vi.fn(), // deprecated
     addEventListener: vi.fn(),
     removeEventListener: vi.fn(),
-    dispatchEvent: vi.fn()
+    dispatchEvent: vi.fn(),
   }))
-})
+});
 
 // Mock ResizeObserver
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
@@ -39,5 +39,6 @@ beforeAll(() => {
 afterEach(() => {
   // server.resetHandlers()
   cleanup()
-  vi.restoreAllMocks()
+  // Don't restore all mocks to keep essential mocks like matchMedia and ResizeObserver
+  // vi.restoreAllMocks()
 })

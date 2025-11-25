@@ -10,9 +10,12 @@ This document provides comprehensive guidelines for writing unit tests for compo
 4. [Testing Patterns](#testing-patterns)
 5. [Material-UI Testing](#material-ui-testing)
 6. [Accessibility Testing](#accessibility-testing)
-7. [Best Practices](#best-practices)
-8. [Common Pitfalls](#common-pitfalls)
-9. [Template](#template)
+7. [Theme Testing](#theme-testing)
+8. [Snapshot Testing](#snapshot-testing)
+9. [Design System Component Usage](#design-system-component-usage)
+10. [Best Practices](#best-practices)
+11. [Common Pitfalls](#common-pitfalls)
+12. [Template](#template)
 
 ## Testing Framework Setup
 
@@ -476,6 +479,194 @@ it("should apply custom color variants", () => {
 });
 ```
 
+## MUI Slots and SlotProps System
+
+### Overview
+Material-UI v5+ introduced a modern slots system to replace deprecated props like `inputProps`, `InputProps`, and other sub-component specific props. This system provides better type safety, consistency, and customization capabilities.
+
+### ❌ Deprecated Patterns (Avoid These)
+```tsx
+// Old inputProps approach - DEPRECATED
+<DsTextField 
+  inputProps={{ 
+    'aria-describedby': 'help-text',
+    'data-testid': 'input-element'
+  }}
+/>
+
+// Old InputProps approach - DEPRECATED  
+<DsTextField
+  InputProps={{
+    endAdornment: <Icon />
+  }}
+/>
+```
+
+### ✅ Modern Slots Pattern (Use These)
+```tsx
+// Modern slotProps approach - RECOMMENDED
+<DsTextField 
+  slotProps={{
+    input: {
+      'aria-describedby': 'help-text'
+    },
+    inputLabel: {
+      'data-testid': 'label-element'
+    }
+  }}
+/>
+
+// Custom component slots
+<DsTextField
+  slots={{
+    input: CustomInputComponent,
+    inputLabel: CustomLabelComponent
+  }}
+/>
+```
+
+### Testing slotProps
+```tsx
+describe("SlotProps Testing", () => {
+  it("should handle slotProps for input element", () => {
+    render(
+      <DsTextField 
+        slotProps={{
+          input: {
+            'aria-describedby': 'help-text'
+          } as any // Use 'as any' for custom attributes
+        }} 
+      />
+    );
+    
+    const input = screen.getByRole("textbox");
+    expect(input).toHaveAttribute("aria-describedby", "help-text");
+  });
+
+  it("should handle slotProps for multiple slots", () => {
+    render(
+      <DsTextField 
+        label="Test Label"
+        slotProps={{
+          input: {
+            'data-testid': 'custom-input'
+          } as any,
+          inputLabel: {
+            'data-testid': 'custom-label'
+          } as any
+        }} 
+      />
+    );
+    
+    const input = screen.getByTestId("custom-input");
+    const label = screen.getByTestId("custom-label");
+    
+    expect(input).toBeInTheDocument();
+    expect(label).toBeInTheDocument();
+  });
+});
+```
+
+### Testing Custom Slot Components
+```tsx
+describe("Custom Slots Testing", () => {
+  it("should support custom input component via slots", () => {
+    const CustomInput = ({ ownerState, ...props }: any) => (
+      <input {...props} data-custom="custom-input" />
+    );
+    
+    render(
+      <DsTextField 
+        slots={{
+          input: CustomInput
+        }}
+      />
+    );
+    
+    const input = screen.getByRole("textbox");
+    expect(input).toHaveAttribute("data-custom", "custom-input");
+  });
+
+  it("should handle ownerState prop in custom components", () => {
+    const CustomInput = ({ ownerState, ...props }: any) => (
+      <input 
+        {...props} 
+        data-error={ownerState?.error ? 'true' : 'false'}
+      />
+    );
+    
+    render(
+      <DsTextField 
+        error
+        slots={{
+          input: CustomInput
+        }}
+      />
+    );
+    
+    const input = screen.getByRole("textbox");
+    expect(input).toHaveAttribute("data-error", "true");
+  });
+});
+```
+
+### Common Slot Names by Component
+```tsx
+// DsTextField slots
+slotProps: {
+  input: {},           // The input element
+  inputLabel: {},      // The label element
+  formHelperText: {},  // Helper/error text
+  select: {},          // For select variant
+  htmlInput: {},       // The underlying HTML input
+}
+
+// DsCheckbox slots
+slotProps: {
+  input: {},           // The checkbox input
+}
+
+// DsButton slots  
+slotProps: {
+  root: {},            // The button root element
+}
+```
+
+### TypeScript Considerations
+```tsx
+// For custom attributes, use 'as any' to bypass type checking
+slotProps={{
+  input: {
+    'data-custom': 'value',
+    'aria-describedby': 'help-id'
+  } as any
+}}
+
+// For standard HTML attributes, types are properly supported
+slotProps={{
+  input: {
+    placeholder: "Enter text",
+    maxLength: 100
+  }
+}}
+```
+
+### Migration Guide
+When updating existing tests from deprecated patterns:
+
+1. **Replace `inputProps`** → **`slotProps.input`**
+2. **Replace `InputProps`** → **`slotProps.root` or specific slot**
+3. **Replace `SelectProps`** → **`slotProps.select`**
+4. **Replace `FormHelperTextProps`** → **`slotProps.formHelperText`**
+
+### Best Practices for Slots Testing
+1. **Use descriptive test names** that mention slots/slotProps
+2. **Test custom components** receive the ownerState prop correctly
+3. **Verify attribute propagation** to the correct DOM elements
+4. **Use 'as any'** for custom data attributes to bypass TypeScript
+5. **Test slot customization** doesn't break accessibility
+6. **Group slots tests** in a dedicated describe block
+
 ## Accessibility Testing
 
 ### Essential ARIA Tests
@@ -517,6 +708,1251 @@ it("should support tab navigation", async () => {
 });
 ```
 
+## Theme Testing
+
+### Overview
+Theme testing in the AM92 React Design System focuses on ensuring components render correctly and behave consistently across all supported theme modes: **light**, **dark**, and **highContrast**. This is not about testing the theme system itself, but about testing component behavior within different theme contexts to ensure visual consistency and proper styling application.
+
+### Why Theme Testing Matters
+- ✅ **Visual consistency** - Components should look appropriate in all theme modes
+- ✅ **Color contrast compliance** - Ensure accessibility across themes, especially high contrast
+- ✅ **Style inheritance** - Verify components inherit theme colors correctly
+- ✅ **Brand consistency** - Maintain design system integrity across theme modes
+- ✅ **Regression prevention** - Catch theme-specific styling issues early
+- ✅ **User experience** - Ensure seamless theme switching experience
+
+### Critical Theme Testing Rules
+
+#### 🚨 NEVER Use Hardcoded Colors
+**CRITICAL**: Never use hardcoded RGBA, hex, or named colors in theme tests. Always use the actual theme configuration.
+
+```tsx
+// ❌ CRITICAL MISTAKE - Hardcoded colors will break across themes
+it("should have correct colors", () => {
+  const { container } = renderWithTheme(<DsCheckbox checked />, 'light');
+  const element = screen.getByRole("checkbox");
+  
+  // NEVER DO THIS - hardcoded colors don't account for theme transformations
+  expect(element).toHaveStyle('color: #97144D'); // Primary color hardcoded
+  expect(element).toHaveStyle('background-color: rgba(151, 20, 77, 0.12)'); // RGBA hardcoded
+});
+
+// ✅ CORRECT - Use actual theme configuration
+import { getColorScheme } from '../../Theme';
+import { PALETTE } from '../../Constants';
+
+it("should use correct theme colors", () => {
+  const themeColorScheme = getColorScheme(PALETTE);
+  const schemeData = themeColorScheme.light;
+  
+  const { container } = renderWithTheme(<DsCheckbox checked />, 'light');
+  
+  // Use actual theme colors from the color scheme
+  const expectedPrimaryColor = (schemeData?.palette?.primary as any)?.main;
+  expect(expectedPrimaryColor).toBeTruthy();
+  expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/); // Validate it's a valid color
+  
+  // Test CSS class application instead of style values
+  const element = screen.getByRole("checkbox");
+  expect(element).toHaveClass('MuiCheckbox-colorPrimary');
+});
+```
+
+#### 🚨 ALWAYS Use getColorScheme Function
+**CRITICAL**: Always use the actual `getColorScheme` function from your theme system instead of manual if/else color mapping.
+
+```tsx
+// ❌ WRONG - Manual color mapping duplicates theme logic
+const getManualColors = (colorScheme: string, color: string) => {
+  if (colorScheme === 'light') {
+    if (color === 'primary') return '#97144D';
+    if (color === 'secondary') return '#ED1164';
+    // ... manual mapping
+  } else if (colorScheme === 'dark') {
+    if (color === 'primary') return '#97144D';
+    if (color === 'secondary') return '#ED1164';
+    // ... manual mapping
+  }
+  // This approach is error-prone and doesn't reflect actual theme behavior
+};
+
+// ✅ CORRECT - Use actual theme function
+import { getColorScheme } from '../../Theme';
+import { PALETTE } from '../../Constants';
+
+it("should use correct colors across all themes", () => {
+  const themeColorScheme = getColorScheme(PALETTE);
+  const colors = ['primary', 'secondary', 'error', 'warning', 'info', 'success'] as const;
+  const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+  
+  colorSchemes.forEach(colorScheme => {
+    colors.forEach(color => {
+      const schemeData = themeColorScheme[colorScheme];
+      const { container } = renderWithTheme(
+        <DsCheckbox color={color} checked />, 
+        colorScheme
+      );
+      
+      // Use direct theme access
+      const expectedColor = (schemeData?.palette?.[color] as any)?.main;
+      expect(expectedColor).toBeTruthy();
+      
+      // Test CSS class instead of color value
+      const element = screen.getByRole("checkbox");
+      expect(element).toHaveClass(`MuiCheckbox-color${color.charAt(0).toUpperCase() + color.slice(1)}`);
+    });
+  });
+});
+```
+
+#### 🚨 MANDATORY Provider Setup
+**CRITICAL**: Always use `ThemeProvider` instead of deprecated `CssVarsProvider` for theme testing.
+
+```tsx
+// ❌ WRONG - Using deprecated CssVarsProvider
+import { CssVarsProvider } from '@mui/material/styles';
+
+function badRenderWithTheme(component: React.ReactElement, colorScheme: string) {
+  return render(
+    <CssVarsProvider theme={theme}> {/* CssVarsProvider is deprecated */}
+      <div data-mui-color-scheme={colorScheme}>
+        {component}
+      </div>
+    </CssVarsProvider>
+  );
+}
+
+// ✅ CORRECT - Using modern ThemeProvider
+import { ThemeProvider } from '@mui/material/styles';
+
+function renderWithTheme(component: React.ReactElement, colorScheme: string = 'light') {
+  return render(
+    <ThemeProvider theme={theme}>
+      <div data-mui-color-scheme={colorScheme}>
+        {component}
+      </div>
+    </ThemeProvider>
+  );
+}
+```
+
+#### 🚨 Complete Theme Coverage
+**CRITICAL**: ALWAYS test all three theme modes - light, dark, AND highContrast.
+
+```tsx
+// ❌ INCOMPLETE - Missing highContrast theme
+describe("Theme Testing", () => {
+  it("should work in light and dark themes", () => {
+    ['light', 'dark'].forEach(theme => { // Missing highContrast!
+      const { container } = renderWithTheme(<ComponentName />, theme);
+      expect(container.firstChild).toMatchSnapshot(`component-${theme}`);
+    });
+  });
+});
+
+// ✅ COMPLETE - All three theme modes tested
+describe("Theme Testing", () => {
+  const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+  
+  it("should work across all theme modes", () => {
+    colorSchemes.forEach(theme => {
+      const { container } = renderWithTheme(<ComponentName />, theme);
+      expect(container.firstChild).toMatchSnapshot(`component-${theme}`);
+    });
+  });
+});
+```
+
+### Theme Testing Implementation
+
+#### 1. Theme Testing Utilities Setup
+Import the theme testing utilities at the top of your test files:
+
+```tsx
+import { renderWithTheme, testAllThemes } from "../../Tests/Mocks/themeTestUtils";
+
+describe("Theme Testing", () => {
+  it("should render correctly in light theme", () => {
+    const { container } = renderWithTheme(<ComponentName />, 'light');
+    
+    const element = screen.getByRole("button");
+    expect(element).toBeInTheDocument();
+    expect(container.firstChild).toMatchSnapshot('component-light-theme');
+  });
+
+  it("should render correctly in dark theme", () => {
+    const { container } = renderWithTheme(<ComponentName />, 'dark');
+    
+    const element = screen.getByRole("button");
+    expect(element).toBeInTheDocument();
+    expect(container.firstChild).toMatchSnapshot('component-dark-theme');
+  });
+
+  it("should render correctly in high contrast theme", () => {
+    const { container } = renderWithTheme(<ComponentName />, 'highContrast');
+    
+    const element = screen.getByRole("button");
+    expect(element).toBeInTheDocument();
+    expect(container.firstChild).toMatchSnapshot('component-high-contrast-theme');
+  });
+});
+```
+
+**Note**: The theme utilities use `ThemeProvider` with your actual design system theme and wrap components in `DsBox` with `data-mui-color-scheme` attributes for proper theme context.
+
+#### 2. Proper Theme Color Testing Pattern
+
+The ONLY correct way to test theme colors:
+
+```tsx
+describe("Theme Testing", () => {
+  // Import theme utilities
+  import { getColorScheme } from '../../Theme';
+  import { PALETTE } from '../../Constants';
+
+  it("should use correct design system colors across all themes", () => {
+    const themeColorScheme = getColorScheme(PALETTE);
+    const colors = ['primary', 'secondary', 'error', 'warning', 'info', 'success'] as const;
+    const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+    
+    colorSchemes.forEach(colorScheme => {
+      colors.forEach(color => {
+        const schemeData = themeColorScheme[colorScheme];
+        
+        const { container, unmount } = renderWithTheme(
+          <ComponentName color={color} checked />, 
+          colorScheme
+        );
+        
+        // Get expected color from the theme's palette - NEVER hardcode!
+        const expectedColor = (schemeData?.palette?.[color] as any)?.main;
+        
+        expect(expectedColor).toBeTruthy(); // Ensure we have a valid color
+        expect(expectedColor).toMatch(/^#[0-9A-Fa-f]{6}$/); // Validate hex format
+        
+        // Test CSS class application instead of style values
+        const element = screen.getByRole("checkbox");
+        expect(element).toHaveClass(`MuiCheckbox-color${color.charAt(0).toUpperCase() + color.slice(1)}`);
+        
+        // Verify theme mode is correctly applied
+        const wrapperElement = container.firstChild as HTMLElement;
+        expect(wrapperElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+        
+        unmount();
+      });
+    });
+  });
+
+  it("should verify theme differences", () => {
+    const themeColorScheme = getColorScheme(PALETTE);
+    
+    // Verify light vs dark theme differences using actual theme configuration
+    const lightSchemeData = themeColorScheme.light;
+    const darkSchemeData = themeColorScheme.dark;
+    const highContrastData = themeColorScheme.highContrast;
+    
+    // Verify we have different schemes
+    expect(lightSchemeData).toBeTruthy();
+    expect(darkSchemeData).toBeTruthy();
+    expect(highContrastData).toBeTruthy();
+    
+    // Text colors should be different between light and dark
+    const lightTextColor = (lightSchemeData?.palette?.text as any)?.primary;
+    const darkTextColor = (darkSchemeData?.palette?.text as any)?.primary;
+    
+    expect(lightTextColor).toBeTruthy();
+    expect(darkTextColor).toBeTruthy();
+    expect(lightTextColor).not.toBe(darkTextColor);
+    
+    // Primary color should be consistent across themes (in most design systems)
+    const lightPrimaryColor = (lightSchemeData?.palette?.primary as any)?.main;
+    const darkPrimaryColor = (darkSchemeData?.palette?.primary as any)?.main;
+    
+    expect(lightPrimaryColor).toBeTruthy();
+    expect(darkPrimaryColor).toBeTruthy();
+    // Note: Whether these are the same depends on your design system
+  });
+});
+```
+
+#### 3. Theme Testing Consolidation Pattern
+
+Efficient testing across themes to avoid test bloat:
+
+```tsx
+describe("Theme Testing", () => {
+  const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+
+  it("should render correctly across all color schemes", () => {
+    // Import once at the top of the test
+    const themeColorScheme = getColorScheme(PALETTE);
+    
+    colorSchemes.forEach(colorScheme => {
+      const schemeData = themeColorScheme[colorScheme];
+      
+      const { container } = renderWithTheme(<ComponentName />, colorScheme);
+      
+      // Verify color scheme is applied
+      const wrapperElement = container.firstChild as HTMLElement;
+      expect(wrapperElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+      
+      // Verify theme colors are valid (don't hardcode specific values!)
+      const expectedPrimaryColor = (schemeData?.palette?.primary as any)?.main;
+      expect(expectedPrimaryColor).toBeTruthy();
+      expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+      
+      const expectedTextColor = (schemeData?.palette?.text as any)?.primary;
+      expect(expectedTextColor).toBeTruthy();
+      
+      // Verify CSS classes
+      const element = screen.getByRole("checkbox");
+      expect(element).toHaveClass('MuiCheckbox-colorPrimary');
+      
+      // Include in snapshot testing
+      expect(container.firstChild).toMatchSnapshot(`component-${colorScheme}`);
+    });
+  });
+
+  it("should maintain functionality across all themes", async () => {
+    const handleChange = vi.fn();
+    
+    // Test that functionality works the same across all themes
+    for (const colorScheme of colorSchemes) {
+      document.body.innerHTML = '';
+      handleChange.mockClear();
+      
+      const { unmount } = renderWithTheme(
+        <ComponentName onChange={handleChange} />, 
+        colorScheme
+      );
+      
+      const element = screen.getByRole("checkbox");
+      fireEvent.click(element);
+      expect(handleChange).toHaveBeenCalledWith(expect.any(Object), true);
+      
+      unmount();
+    }
+  });
+});
+```
+
+#### 4. Using testAllThemes Utility (Global Helper)
+
+```tsx
+it("should use testAllThemes utility for efficient theme testing", () => {
+  testAllThemes(
+    (colorScheme) => <ComponentName data-theme={colorScheme} />,
+    (container, colorScheme) => {
+      const element = container.querySelector('[data-theme]') as HTMLElement;
+      expect(element).toBeInTheDocument();
+      expect(element).toHaveAttribute('data-theme', colorScheme);
+    }
+  );
+});
+```
+
+### Common Theme Testing Mistakes
+
+#### 1. Hardcoded Color Values
+```tsx
+// ❌ CRITICAL ERROR - Will break with theme updates
+expect(element).toHaveStyle('color: #97144D');
+expect(element).toHaveStyle('background-color: rgba(151, 20, 77, 0.12)');
+
+// ✅ CORRECT - Test CSS classes and theme structure
+const themeColors = getColorScheme(PALETTE);
+const expectedColor = themeColors.light.palette.primary.main;
+expect(element).toHaveClass('MuiCheckbox-colorPrimary');
+```
+
+#### 2. Manual Color Mapping
+```tsx
+// ❌ WRONG - Duplicates theme logic
+const colors = {
+  light: { primary: '#97144D', secondary: '#ED1164' },
+  dark: { primary: '#97144D', secondary: '#ED1164' }
+};
+
+// ✅ CORRECT - Use actual theme
+const themeColorScheme = getColorScheme(PALETTE);
+const actualColors = themeColorScheme[colorScheme].palette;
+```
+
+#### 3. Incomplete Theme Coverage
+```tsx
+// ❌ WRONG - Missing highContrast theme
+const themes = ['light', 'dark']; // Missing highContrast!
+
+// ✅ CORRECT - All three themes
+const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+```
+
+#### 4. Wrong Provider Usage
+```tsx
+// ❌ WRONG - Deprecated provider
+<CssVarsProvider theme={theme}>
+
+// ✅ CORRECT - Modern provider
+<ThemeProvider theme={theme}>
+```
+
+### Theme Testing Requirements Checklist
+
+Before submitting a component for review, ensure:
+
+- ✅ **No hardcoded colors** - All color testing uses theme configuration
+- ✅ **Uses getColorScheme function** - No manual color mapping
+- ✅ **All three themes tested** - light, dark, and highContrast
+- ✅ **ThemeProvider used** - Not deprecated CssVarsProvider  
+- ✅ **CSS class testing** - Instead of style value testing
+- ✅ **Theme snapshots included** - Visual regression protection
+- ✅ **Functionality preserved** - Same behavior across all themes
+- ✅ **Theme context validation** - data-mui-color-scheme attribute checked
+- ✅ **Color variant testing** - All color props tested across themes
+- ✅ **Efficient test consolidation** - Avoid redundant theme tests
+
+### Theme Testing Performance
+
+To keep tests fast and maintainable:
+
+```tsx
+// ✅ EFFICIENT - Test multiple aspects together
+it("should handle all color variants across all themes efficiently", () => {
+  const themeColorScheme = getColorScheme(PALETTE);
+  const colors = ['primary', 'secondary', 'error'] as const;
+  const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+  
+  // Consolidated testing reduces test count from 27 to 1
+  colorSchemes.forEach(colorScheme => {
+    colors.forEach(color => {
+      const schemeData = themeColorScheme[colorScheme];
+      const { container, unmount } = renderWithTheme(
+        <ComponentName color={color} />, 
+        colorScheme
+      );
+      
+      // Test multiple aspects in one render
+      const element = screen.getByRole("checkbox");
+      expect(element).toHaveClass(`MuiCheckbox-color${color.charAt(0).toUpperCase() + color.slice(1)}`);
+      expect((schemeData?.palette?.[color] as any)?.main).toBeTruthy();
+      expect(container.firstChild).toHaveAttribute('data-mui-color-scheme', colorScheme);
+      
+      unmount();
+    });
+  });
+});
+
+// ❌ INEFFICIENT - Separate test for each combination
+it("should work with primary color in light theme", () => { /* ... */ });
+it("should work with primary color in dark theme", () => { /* ... */ });
+it("should work with primary color in high contrast theme", () => { /* ... */ });
+// ... 27 separate tests
+```
+
+Remember: Theme testing is about ensuring your components work correctly within the theme system, not testing the theme system itself. Focus on component behavior, CSS class application, and visual consistency across all supported theme modes.
+
+#### 3. Comprehensive Theme Testing (Using Global Utilities)
+
+Test components with all theme combinations and props:
+
+```tsx
+describe("Theme Testing", () => {
+  const themes = ['light', 'dark', 'highContrast'] as const;
+  const colors = ['primary', 'secondary', 'error', 'warning', 'info', 'success'] as const;
+
+  it("should render correctly across all themes", () => {
+    themes.forEach(themeMode => {
+      const { container } = renderWithTheme(<ComponentName />, themeMode);
+      
+      const element = screen.getByRole("button");
+      expect(element).toBeInTheDocument();
+      expect(container.firstChild).toMatchSnapshot(`component-${themeMode}-theme`);
+    });
+  });
+
+  it("should handle color variants across all themes", () => {
+    themes.forEach(themeMode => {
+      colors.forEach(color => {
+        const { container } = renderWithTheme(
+          <ComponentName color={color} />, 
+          themeMode
+        );
+        
+        const element = screen.getByRole("button");
+        expect(element).toHaveClass(`MuiButton-color${color.charAt(0).toUpperCase() + color.slice(1)}`);
+        expect(container.firstChild).toMatchSnapshot(`component-${color}-${themeMode}`);
+      });
+    });
+  });
+
+  it("should maintain functionality across all themes", async () => {
+    const handleClick = vi.fn();
+    
+    for (const themeMode of themes) {
+      const { container } = renderWithTheme(
+        <ComponentName onClick={handleClick} />, 
+        themeMode
+      );
+      
+      const element = screen.getByRole("button");
+      
+      // Functionality should work the same in all themes
+      await user.click(element);
+      expect(handleClick).toHaveBeenCalled();
+      
+      handleClick.mockClear();
+    }
+  });
+
+  // Using the global testAllThemes utility for repetitive testing
+  it("should render consistently across themes using global utility", () => {
+    testAllThemes(
+      (themeMode) => <ComponentName data-theme={themeMode} />,
+      (container, themeMode) => {
+        const element = container.querySelector('[data-theme]');
+        expect(element).toBeInTheDocument();
+        expect(element).toHaveAttribute('data-theme', themeMode);
+      }
+    );
+  });
+});
+```
+
+#### 4. Form Components Theme Testing
+
+For form components, test across themes with validation states:
+
+```tsx
+describe("Form Component Theme Testing", () => {
+  const themes = ['light', 'dark', 'highContrast'] as const;
+  const states = [
+    { error: false, disabled: false, required: false },
+    { error: true, disabled: false, required: false },
+    { error: false, disabled: true, required: false },
+    { error: false, disabled: false, required: true },
+  ];
+
+  it("should render form states correctly across all themes", () => {
+    themes.forEach(themeMode => {
+      states.forEach((state, index) => {
+        const { container } = renderWithTheme(
+          <ComponentName 
+            label="Test Field"
+            helperText={state.error ? "Error message" : "Helper text"}
+            {...state}
+          />, 
+          themeMode
+        );
+        
+        const element = screen.getByRole("textbox");
+        
+        // State-specific assertions
+        if (state.error) {
+          expect(element).toHaveAttribute("aria-invalid", "true");
+        }
+        if (state.disabled) {
+          expect(element).toBeDisabled();
+        }
+        if (state.required) {
+          expect(element).toBeRequired();
+        }
+        
+        expect(container.firstChild).toMatchSnapshot(
+          `form-component-state-${index}-${themeMode}`
+        );
+      });
+    });
+  });
+});
+```
+
+#### 5. Real-world Theme Testing Scenarios
+
+Test realistic usage patterns within different themes:
+
+```tsx
+describe("Real-world Theme Scenarios", () => {
+  it("should render complex form correctly across all themes", () => {
+    const themes = ['light', 'dark', 'highContrast'] as const;
+    
+    themes.forEach(themeMode => {
+      const { container } = renderWithTheme(
+        <DsPaper sx={{ p: 3 }}>
+          <DsTypography variant="h6" gutterBottom>
+            User Registration
+          </DsTypography>
+          <DsFormControl fullWidth sx={{ mb: 2 }}>
+            <DsFormLabel required>Email</DsFormLabel>
+            <ComponentName 
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <DsFormHelperText>We'll never share your email</DsFormHelperText>
+          </DsFormControl>
+          <DsBox sx={{ display: 'flex', gap: 2 }}>
+            <DsButton variant="contained" color="primary">
+              Register
+            </DsButton>
+            <DsButton variant="outlined" color="secondary">
+              Cancel
+            </DsButton>
+          </DsBox>
+        </DsPaper>, 
+        themeMode
+      );
+      
+      // Verify all elements render correctly
+      expect(screen.getByText("User Registration")).toBeInTheDocument();
+      expect(screen.getByRole("textbox")).toBeInTheDocument();
+      expect(screen.getByText("We'll never share your email")).toBeInTheDocument();
+      
+      expect(container.firstChild).toMatchSnapshot(`complex-form-${themeMode}`);
+    });
+  });
+
+  it("should render navigation components correctly across themes", () => {
+    const themes = ['light', 'dark', 'highContrast'] as const;
+    
+    themes.forEach(themeMode => {
+      const { container } = renderWithTheme(
+        <DsBox sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <DsTypography variant="h5">Navigation Menu</DsTypography>
+          <DsStack direction="row" spacing={2}>
+            <ComponentName color="primary">Home</ComponentName>
+            <ComponentName color="inherit">About</ComponentName>
+            <ComponentName color="secondary">Contact</ComponentName>
+          </DsStack>
+        </DsBox>, 
+        themeMode
+      );
+      
+      expect(screen.getByText("Navigation Menu")).toBeInTheDocument();
+      expect(screen.getByText("Home")).toBeInTheDocument();
+      
+      expect(container.firstChild).toMatchSnapshot(`navigation-${themeMode}`);
+    });
+  });
+});
+```
+
+### Theme Testing Best Practices
+
+#### 1. Test Organization
+Always include theme testing as a dedicated section:
+
+```tsx
+describe("ComponentName", () => {
+  // ... other test categories ...
+  
+  // ============================
+  // THEME TESTING
+  // ============================
+  describe("Theme Testing", () => {
+    // Theme-specific tests here
+  });
+
+  // ============================
+  // SNAPSHOT TESTS
+  // ============================
+  describe("Snapshot Tests", () => {
+    // Include theme snapshots here too
+  });
+});
+```
+
+#### 2. Snapshot Strategy for Themes
+Include theme variations in your snapshot tests:
+
+```tsx
+// In your snapshot section
+describe("Snapshot Tests", () => {
+  it("should match snapshots across all themes", () => {
+    const themes = ['light', 'dark', 'highContrast'] as const;
+    
+    themes.forEach(theme => {
+      const { container } = renderWithTheme(<ComponentName />, theme);
+      expect(container.firstChild).toMatchSnapshot(`default-${theme}`);
+    });
+  });
+
+  it("should match snapshots with variants across themes", () => {
+    const themes = ['light', 'dark', 'highContrast'] as const;
+    const variants = ['contained', 'outlined', 'text'] as const;
+    
+    themes.forEach(theme => {
+      variants.forEach(variant => {
+        const { container } = renderWithTheme(
+          <ComponentName variant={variant} />, 
+          theme
+        );
+        expect(container.firstChild).toMatchSnapshot(`${variant}-${theme}`);
+      });
+    });
+  });
+});
+```
+
+#### 3. Theme Testing Import Pattern
+
+```tsx
+// Essential imports for theme testing
+import { describe, expect, it, vi, beforeEach } from "vitest";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
+import { CssVarsProvider } from '@mui/material/styles';
+import { ComponentName } from "./ComponentName.Component";
+import { getTheme } from "../../../Theme";
+import { 
+  DsBox, 
+  DsTypography, 
+  DsButton, 
+  DsPaper,
+  DsFormControl,
+  DsFormLabel,
+  DsFormHelperText,
+  DsStack
+} from "../index";
+```
+
+#### 4. Theme Test Coverage Requirements
+
+**MANDATORY**: Every component must test theme compatibility:
+- ✅ **Light theme rendering** - Default theme appearance
+- ✅ **Dark theme rendering** - Dark mode appearance and functionality
+- ✅ **High contrast rendering** - Accessibility-focused high contrast appearance
+- ✅ **Theme-specific snapshots** - Visual regression protection across themes
+- ✅ **Color variant themes** - All color props working across themes
+- ✅ **Functionality preservation** - All interactions work the same across themes
+- ❌ **Never skip theme testing** - All components must support all themes
+
+### When to Skip Theme Testing
+
+Theme testing can be skipped only for:
+- ❌ **Utility components** that don't render visual elements
+- ❌ **Hook-only exports** with no visual output
+- ❌ **Type-only exports** with no runtime behavior
+
+**All visual components MUST include theme testing.**
+
+### Theme Testing Maintenance
+
+```bash
+# Run theme-specific tests
+npm test -- --testNamePattern="Theme Testing"
+
+# Update theme snapshots when theme changes are intentional
+npm test -- --update-snapshots --testNamePattern="Theme Testing"
+
+# Run all snapshot tests including theme variants
+npm test -- --testNamePattern="Snapshot Tests"
+```
+
+### Integration with Design System Components
+
+Always use design system components in theme tests to ensure realistic usage:
+
+```tsx
+// ✅ Correct - Using design system components in theme tests
+const { container } = renderWithTheme(
+  <DsPaper elevation={2} sx={{ p: 2 }}>
+    <DsTypography variant="subtitle1">Component Label</DsTypography>
+    <ComponentName color="primary" />
+    <DsFormHelperText>Component helper text</DsFormHelperText>
+  </DsPaper>,
+  'dark'
+);
+
+// ❌ Incorrect - Using raw HTML in theme tests  
+const { container } = renderWithTheme(
+  <div style={{ padding: 16 }}>
+    <span>Component Label</span>
+    <ComponentName color="primary" />
+    <p>Component helper text</p>
+  </div>,
+  'dark'
+);
+```
+
+## Snapshot Testing
+
+### Overview
+Snapshot testing captures the rendered output of components and compares it against previously stored snapshots. This helps detect unintentional changes in component structure, styling, and behavior. In the AM92 React Design System, snapshot tests are crucial for maintaining design consistency and catching regressions.
+
+### When to Use Snapshot Testing
+- ✅ **Final component output verification** - Ensure consistent rendering across all states
+- ✅ **Design system compliance** - Maintain visual and structural consistency
+- ✅ **Complex component structures** - Components with multiple nested elements or dynamic content
+- ✅ **Style and class validation** - Verify CSS classes and styling are applied correctly
+- ✅ **Props combination testing** - Test various prop combinations for complete coverage
+- ✅ **Real-world scenario documentation** - Capture common usage patterns in snapshots
+- ❌ **Frequently changing implementations** - Avoid for rapidly evolving component internals
+- ❌ **Dynamic data testing** - Don't use for components with timestamps or random IDs
+
+### Implementation Guidelines
+
+#### 1. Snapshot Test Organization
+Always include a dedicated "Snapshot Tests" section as the final category in your test suite:
+
+```tsx
+describe("ComponentName", () => {
+  // ... other test categories ...
+  
+  // ============================
+  // SNAPSHOT TESTS
+  // ============================
+  describe("Snapshot Tests", () => {
+    // Snapshot tests go here
+  });
+});
+```
+
+#### 2. Basic Snapshot Test Pattern
+```tsx
+it("should match snapshot with default props", () => {
+  const { container } = render(<ComponentName />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it("should match snapshot when checked", () => {
+  const { container } = render(<ComponentName checked />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it("should match snapshot when disabled", () => {
+  const { container } = render(<ComponentName disabled />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+```
+
+#### 3. State Combination Snapshots
+Test all important state combinations systematically:
+
+```tsx
+it("should match snapshot with all state combinations", () => {
+  const stateCombinations = [
+    { checked: true, disabled: false },
+    { checked: false, disabled: false },
+    { checked: true, disabled: true },
+    { checked: false, disabled: true },
+    { indeterminate: true, disabled: false },
+    { indeterminate: true, disabled: true },
+  ];
+
+  stateCombinations.forEach((states, index) => {
+    const { container } = render(<ComponentName {...states} />);
+    expect(container.firstChild).toMatchSnapshot(`component-states-combination-${index}`);
+  });
+});
+```
+
+#### 4. Variant Snapshots
+Capture snapshots for all component variants:
+
+```tsx
+it("should match snapshot with different colors", () => {
+  const colors = ['primary', 'secondary', 'error', 'info', 'success', 'warning'] as const;
+  
+  colors.forEach(color => {
+    const { container } = render(<ComponentName color={color} />);
+    expect(container.firstChild).toMatchSnapshot(`component-color-${color}`);
+  });
+});
+
+it("should match snapshot with different sizes", () => {
+  const sizes = ['small', 'medium', 'large'] as const;
+  
+  sizes.forEach(size => {
+    const { container } = render(<ComponentName size={size} />);
+    expect(container.firstChild).toMatchSnapshot(`component-size-${size}`);
+  });
+});
+```
+
+#### 5. Complex Component Snapshots
+For components with custom icons, slots, or complex props:
+
+```tsx
+it("should match snapshot with custom icons", () => {
+  const customIcon = <DsRemixIcon className="ri-circle-line" />;
+  const customCheckedIcon = <DsRemixIcon className="ri-checkbox-circle-fill" />;
+  
+  const { container } = render(
+    <ComponentName 
+      icon={customIcon}
+      checkedIcon={customCheckedIcon}
+    />
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it("should match snapshot with slotProps", () => {
+  const { container } = render(
+    <ComponentName 
+      slotProps={{
+        input: {
+          'aria-describedby': 'component-help',
+          'data-custom': 'custom-value'
+        } as any
+      }}
+    />
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+```
+
+#### 6. Real-world Scenario Snapshots
+Capture snapshots of realistic usage patterns using design system components:
+
+```tsx
+it("should match snapshot in real-world scenario - form integration", () => {
+  const { container } = render(
+    <DsPaper sx={{ p: 3 }}>
+      <DsFormControl component="fieldset">
+        <DsFormLabel component="legend">User Preferences</DsFormLabel>
+        <DsFormGroup>
+          <DsFormControlLabel
+            control={
+              <ComponentName 
+                name="notifications"
+                value="email"
+                color="primary"
+              />
+            }
+            label="Email notifications"
+          />
+          <DsFormHelperText>Receive updates via email</DsFormHelperText>
+        </DsFormGroup>
+      </DsFormControl>
+    </DsPaper>
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+```
+
+### Snapshot Best Practices
+
+#### 1. Descriptive Snapshot Names
+Use descriptive names for named snapshots to make them easily identifiable:
+- `component-color-${color}` for variant testing
+- `component-states-combination-${index}` for state combinations  
+- `real-world-scenario-${scenario}` for usage patterns
+
+#### 2. Repository-based Snapshot Storage
+Snapshots are stored in your repository and should be:
+- ✅ **Committed to version control** - Include `__snapshots__` directories in git
+- ✅ **Reviewed in PRs** - Check snapshot changes during code review
+- ✅ **Updated intentionally** - Only update snapshots when changes are intended
+- ❌ **Never ignored** - Don't add snapshots to `.gitignore`
+
+#### 3. Snapshot Maintenance
+```bash
+# Update snapshots when changes are intentional
+npm test -- --update-snapshots
+
+# Review snapshot changes
+git diff src/Components/**/__snapshots__/
+
+# Run snapshot tests only
+npm test -- --testNamePattern="Snapshot Tests"
+```
+
+#### 4. Consistent Component Structure
+Ensure consistent snapshot structure by using design system components:
+```tsx
+// ✅ Good - Uses design system components
+const { container } = render(
+  <DsBox sx={{ p: 2 }}>
+    <DsTypography gutterBottom>Label</DsTypography>
+    <ComponentName />
+    <DsFormHelperText>Helper text</DsFormHelperText>
+  </DsBox>
+);
+
+// ❌ Avoid - Raw HTML elements
+const { container } = render(
+  <div style={{ padding: 16 }}>
+    <p>Label</p>
+    <ComponentName />
+    <span>Helper text</span>
+  </div>
+);
+```
+
+## Design System Component Usage
+
+### Overview
+When writing tests for components in the AM92 React Design System, it's crucial to maintain consistency with the design system by using design system components instead of raw HTML elements. This ensures that tests reflect real-world usage patterns and maintain design system compliance.
+
+### Core Principles
+
+#### 1. Use Design System Components Only
+**Always** use design system components in your tests instead of raw HTML elements:
+
+```tsx
+// ✅ Correct - Using design system components
+import { 
+  DsBox, 
+  DsTypography, 
+  DsButton, 
+  DsFormControl, 
+  DsFormControlLabel, 
+  DsFormGroup, 
+  DsFormHelperText, 
+  DsFormLabel,
+  DsPaper,
+  DsStack,
+  DsLink,
+  DsRemixIcon
+} from "../index";
+
+// ✅ Correct test structure
+it("should work in form context", () => {
+  const { container } = render(
+    <DsBox component="form">
+      <DsFormControl component="fieldset">
+        <DsFormLabel component="legend">Form Legend</DsFormLabel>
+        <DsFormGroup>
+          <DsFormControlLabel
+            control={<ComponentName />}
+            label={<DsTypography>Component Label</DsTypography>}
+          />
+          <DsFormHelperText>Helper text</DsFormHelperText>
+        </DsFormGroup>
+      </DsFormControl>
+    </DsBox>
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+// ❌ Incorrect - Using raw HTML elements
+it("should work in form context", () => {
+  const { container } = render(
+    <div>
+      <form>
+        <fieldset>
+          <legend>Form Legend</legend>
+          <label>
+            <ComponentName />
+            Component Label
+          </label>
+          <span>Helper text</span>
+        </fieldset>
+      </form>
+    </div>
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+```
+
+#### 2. Component Mapping Guide
+
+Use this mapping when converting from raw HTML to design system components:
+
+| Raw HTML Element | Design System Component | Usage Example |
+|------------------|------------------------|---------------|
+| `<div>` | `<DsBox>` | `<DsBox sx={{ p: 2 }}></DsBox>` |
+| `<span>`, `<p>`, `<h1>` | `<DsTypography>` | `<DsTypography variant="h6"></DsTypography>` |
+| `<button>` | `<DsButton>` | `<DsButton variant="contained"></DsButton>` |
+| `<form>` | `<DsBox component="form">` | `<DsBox component="form"></DsBox>` |
+| `<fieldset>` | `<DsFormControl component="fieldset">` | `<DsFormControl component="fieldset"></DsFormControl>` |
+| `<legend>` | `<DsFormLabel component="legend">` | `<DsFormLabel component="legend"></DsFormLabel>` |
+| `<label>` | `<DsFormControlLabel>` | `<DsFormControlLabel control={<Component />} label="Text" />` |
+| `<a>` | `<DsLink>` | `<DsLink href="/path"></DsLink>` |
+| Icon elements | `<DsRemixIcon>` | `<DsRemixIcon className="ri-icon-name" />` |
+
+#### 3. Layout and Container Components
+
+For test layouts and structure, use these design system components:
+
+```tsx
+// ✅ Correct layout structure
+const { container } = render(
+  <DsPaper elevation={1} sx={{ p: 3 }}>
+    <DsTypography gutterBottom variant="h6">
+      Component Demo
+    </DsTypography>
+    <DsStack spacing={2}>
+      <ComponentName variant="primary" />
+      <ComponentName variant="secondary" />
+    </DsStack>
+    <DsBox sx={{ mt: 2, display: 'flex', gap: 1 }}>
+      <DsButton size="small">Action 1</DsButton>
+      <DsButton size="small" variant="outlined">Action 2</DsButton>
+    </DsBox>
+  </DsPaper>
+);
+
+// ❌ Incorrect layout structure  
+const { container } = render(
+  <div style={{ padding: 24, background: 'white', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+    <h3 style={{ marginBottom: 16 }}>Component Demo</h3>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <ComponentName variant="primary" />
+      <ComponentName variant="secondary" />
+    </div>
+    <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
+      <button>Action 1</button>
+      <button>Action 2</button>
+    </div>
+  </div>
+);
+```
+
+#### 4. Form Testing Patterns
+
+When testing form integration, use design system form components:
+
+```tsx
+// ✅ Correct form testing pattern
+describe("Form Integration", () => {
+  it("should integrate with design system form components", () => {
+    const handleSubmit = vi.fn((e) => e.preventDefault());
+    
+    render(
+      <DsBox component="form" onSubmit={handleSubmit}>
+        <DsFormControl fullWidth>
+          <DsFormLabel required>Component Label</DsFormLabel>
+          <ComponentName 
+            name="test-field"
+            required
+          />
+          <DsFormHelperText>This field is required</DsFormHelperText>
+        </DsFormControl>
+        <DsBox sx={{ mt: 2 }}>
+          <DsButton type="submit" variant="contained">
+            Submit
+          </DsButton>
+        </DsBox>
+      </DsBox>
+    );
+    
+    // Test implementation
+  });
+});
+```
+
+#### 5. Real-world Scenario Patterns
+
+Create realistic test scenarios using design system components:
+
+```tsx
+// ✅ Correct real-world scenario
+it("should handle preference panel scenario", () => {
+  const { container } = render(
+    <DsPaper sx={{ maxWidth: 400, p: 3 }}>
+      <DsTypography variant="h6" gutterBottom>
+        Notification Preferences
+      </DsTypography>
+      
+      <DsFormControl component="fieldset">
+        <DsFormLabel component="legend">
+          <DsTypography variant="subtitle2">
+            Email Notifications
+          </DsTypography>
+        </DsFormLabel>
+        
+        <DsFormGroup>
+          <DsFormControlLabel
+            control={
+              <ComponentName 
+                name="email-marketing"
+                color="primary"
+                size="small"
+              />
+            }
+            label={
+              <DsTypography variant="body2">
+                Marketing emails
+              </DsTypography>
+            }
+          />
+          <DsFormControlLabel
+            control={
+              <ComponentName 
+                name="email-updates"
+                color="primary"
+                size="small"
+                defaultChecked
+              />
+            }
+            label={
+              <DsTypography variant="body2">
+                Product updates
+              </DsTypography>
+            }
+          />
+        </DsFormGroup>
+        
+        <DsFormHelperText>
+          <DsTypography variant="caption" color="text.secondary">
+            You can change these settings at any time in your{' '}
+            <DsLink href="/profile">profile settings</DsLink>
+          </DsTypography>
+        </DsFormHelperText>
+      </DsFormControl>
+    </DsPaper>
+  );
+  
+  expect(container.firstChild).toMatchSnapshot();
+});
+```
+
+### Enforcement Guidelines
+
+#### 1. Code Review Checklist
+- ❌ Reject PRs that use `<div>`, `<span>`, `<button>` etc. in tests
+- ✅ Require usage of `DsBox`, `DsTypography`, `DsButton` etc.
+- ❌ Reject inline styles in favor of `sx` prop or design system styling
+- ✅ Ensure consistent component spacing using design system patterns
+
+#### 2. Migration Strategy
+When updating existing tests:
+
+```tsx
+// Before migration
+const { container } = render(
+  <div>
+    <button>Click me</button>
+    <span>Helper text</span>
+  </div>
+);
+
+// After migration
+const { container } = render(
+  <DsBox>
+    <DsButton>Click me</DsButton>
+    <DsTypography variant="caption">Helper text</DsTypography>
+  </DsBox>
+);
+```
+
+#### 3. Design System Import Pattern
+Always import design system components from the centralized index:
+
+```tsx
+// ✅ Correct import pattern
+import { 
+  DsBox, 
+  DsTypography, 
+  DsButton,
+  // ... other components
+} from "../index";
+
+// ❌ Incorrect - direct imports
+import { DsBox } from "../DsBox/DsBox.Component";
+import { DsTypography } from "../DsTypography/DsTypography.Component";
+```
+
+### Benefits of This Approach
+
+1. **Design System Compliance**: Tests reflect real usage patterns
+2. **Consistency**: All tests use the same component library
+3. **Maintenance**: Changes to design system components are reflected in all tests
+4. **Documentation**: Tests serve as usage examples for the design system
+5. **Quality**: Ensures components work well together in realistic scenarios
+
 ## Best Practices
 
 ### 1. Test Descriptions
@@ -549,6 +1985,67 @@ Ensure you cover:
 - ✅ Form integration
 - ✅ State management
 - ✅ Props validation
+- ✅ Slots and slotProps customization
+- ✅ **Theme compatibility testing across light, dark, and high contrast modes**
+- ✅ **Snapshot testing for all states and variants**
+- ✅ **Design system component usage in all test scenarios**
+
+### 6. Modern MUI Patterns
+Always use the modern MUI slots system:
+- ✅ Use `slotProps` instead of deprecated `inputProps`, `InputProps`, etc.
+- ✅ Use `slots` for custom component replacement
+- ✅ Test custom slot components receive `ownerState` properly
+- ✅ Verify attribute propagation through slots
+- ❌ Avoid deprecated prop patterns in new tests
+
+### 7. Design System Component Usage
+**MANDATORY**: Always use design system components in tests, never raw HTML:
+- ✅ Use `DsBox` instead of `<div>`
+- ✅ Use `DsTypography` instead of `<span>`, `<p>`, `<h1>`, etc.
+- ✅ Use `DsButton` instead of `<button>`
+- ✅ Use design system form components (`DsFormControl`, `DsFormLabel`, etc.)
+- ✅ Import all components from `"../index"` for consistency
+- ❌ **NEVER use raw HTML elements** (`<div>`, `<span>`, `<button>`, etc.)
+- ❌ **NEVER use inline styles** - use `sx` prop or design system patterns
+
+### 8. Comprehensive Snapshot Testing
+**REQUIRED**: Every component test suite must include comprehensive snapshot testing:
+- ✅ Include "Snapshot Tests" as the final describe block
+- ✅ Test default state snapshot
+- ✅ Test all state combinations (disabled, checked, error states, etc.)
+- ✅ Test all variants (colors, sizes, types)
+- ✅ Test with custom props and slotProps
+- ✅ Test real-world usage scenarios with design system components
+- ✅ **Test snapshots across all theme modes (light, dark, highContrast)**
+- ✅ Use descriptive snapshot names for multiple snapshots
+- ✅ Commit snapshots to repository and review changes in PRs
+- ❌ Never skip snapshot tests - they catch visual regressions
+
+### 9. Mandatory Theme Testing
+**REQUIRED**: Every visual component must be tested across all theme modes:
+- ✅ Test component rendering in light theme (default)
+- ✅ Test component rendering in dark theme
+- ✅ Test component rendering in high contrast theme
+- ✅ Test functionality preservation across all themes
+- ✅ Test color variants work correctly in all themes
+- ✅ Include theme-specific snapshots for visual regression protection
+- ✅ Use `renderWithTheme` utility for consistent theme testing
+- ❌ Never skip theme testing for visual components
+
+### 10. Test Organization Priority
+Organize test sections in this exact order:
+1. **Core Rendering** - Basic functionality
+2. **Props Validation** - Prop handling
+3. **Component States** - Different states
+4. **MUI Styling** - Material-UI classes (if applicable)
+5. **Component Functionality** - Behavior testing
+6. **Event Handling** - User interactions
+7. **Form Integration** - Form behavior (if applicable)
+8. **Accessibility** - ARIA and keyboard navigation
+9. **Edge Cases** - Boundary conditions
+10. **Real-world Scenarios** - Realistic usage patterns
+11. **Theme Testing** - Theme compatibility testing (MANDATORY)
+12. **Snapshot Tests** - Visual regression testing (MANDATORY FINAL SECTION)
 
 ## Common Pitfalls
 
@@ -591,6 +2088,238 @@ const texts = screen.getAllByText(/helper text/i);
 expect(texts[0]).toBeInTheDocument();
 ```
 
+### 5. Deprecated MUI Props
+```tsx
+// ❌ Avoid - deprecated MUI patterns
+<DsTextField 
+  inputProps={{ 'aria-describedby': 'help' }}
+  InputProps={{ endAdornment: <Icon /> }}
+/>
+
+// ✅ Prefer - modern slots system
+<DsTextField 
+  slotProps={{
+    input: { 'aria-describedby': 'help' } as any
+  }}
+  slots={{
+    input: CustomInputComponent
+  }}
+/>
+```
+
+### 6. Raw HTML Element Usage
+```tsx
+// ❌ Avoid - Using raw HTML elements in tests
+const { container } = render(
+  <div>
+    <form>
+      <fieldset>
+        <legend>Form Legend</legend>
+        <label>
+          <ComponentName />
+          <span>Label text</span>
+        </label>
+        <p>Helper text</p>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+);
+
+// ✅ Prefer - Using design system components
+const { container } = render(
+  <DsBox component="form">
+    <DsFormControl component="fieldset">
+      <DsFormLabel component="legend">Form Legend</DsFormLabel>
+      <DsFormControlLabel
+        control={<ComponentName />}
+        label={<DsTypography>Label text</DsTypography>}
+      />
+      <DsFormHelperText>Helper text</DsFormHelperText>
+    </DsFormControl>
+    <DsButton type="submit">Submit</DsButton>
+  </DsBox>
+);
+```
+
+### 7. Inadequate Snapshot Testing
+```tsx
+// ❌ Avoid - Missing snapshot tests entirely
+describe("ComponentName", () => {
+  // Only functional tests, no snapshots
+});
+
+// ❌ Avoid - Minimal snapshot coverage
+describe("Snapshot Tests", () => {
+  it("should match snapshot", () => {
+    const { container } = render(<ComponentName />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+// ✅ Prefer - Comprehensive snapshot coverage
+describe("Snapshot Tests", () => {
+  it("should match snapshot with default props", () => {
+    const { container } = render(<ComponentName />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it("should match snapshot with different states", () => {
+    const states = [
+      { checked: true, disabled: false },
+      { checked: false, disabled: true },
+      { indeterminate: true }
+    ];
+
+    states.forEach((state, index) => {
+      const { container } = render(<ComponentName {...state} />);
+      expect(container.firstChild).toMatchSnapshot(`component-state-${index}`);
+    });
+  });
+
+  it("should match snapshot with variants", () => {
+    const variants = ['primary', 'secondary', 'error'];
+    variants.forEach(variant => {
+      const { container } = render(<ComponentName color={variant} />);
+      expect(container.firstChild).toMatchSnapshot(`component-${variant}`);
+    });
+  });
+
+  it("should match snapshot in real-world scenario", () => {
+    const { container } = render(
+      <DsPaper sx={{ p: 2 }}>
+        <DsFormControl>
+          <DsFormLabel>Component Label</DsFormLabel>
+          <ComponentName required />
+          <DsFormHelperText>Helper text</DsFormHelperText>
+        </DsFormControl>
+      </DsPaper>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+```
+
+### 8. Inconsistent Design System Usage
+```tsx
+// ❌ Avoid - Mixed usage of raw HTML and design system components
+const { container } = render(
+  <DsBox>
+    <DsTypography>Title</DsTypography>
+    <div> {/* Raw HTML mixed with design system */}
+      <ComponentName />
+      <span>Mixed content</span> {/* Raw HTML */}
+    </div>
+    <DsButton>Action</DsButton>
+  </DsBox>
+);
+
+// ✅ Prefer - Consistent design system usage
+const { container } = render(
+  <DsBox>
+    <DsTypography variant="h6">Title</DsTypography>
+    <DsBox sx={{ my: 2 }}>
+      <ComponentName />
+      <DsTypography variant="body2">Consistent content</DsTypography>
+    </DsBox>
+    <DsButton variant="contained">Action</DsButton>
+  </DsBox>
+);
+```
+
+### 9. Missing Theme Testing
+```tsx
+// ❌ Avoid - Testing only default theme
+describe("ComponentName", () => {
+  it("should render correctly", () => {
+    render(<ComponentName />);
+    // Only tests light theme by default
+  });
+});
+
+// ❌ Avoid - Manual theme switching without proper setup
+describe("ComponentName", () => {
+  it("should work in dark mode", () => {
+    document.body.setAttribute('data-theme', 'dark');
+    render(<ComponentName />);
+    // Improper theme testing
+  });
+});
+
+// ✅ Prefer - Comprehensive theme testing
+describe("Theme Testing", () => {
+  const themes = ['light', 'dark', 'highContrast'] as const;
+
+  it("should render correctly across all themes", () => {
+    themes.forEach(themeMode => {
+      const { container } = renderWithTheme(<ComponentName />, themeMode);
+      
+      const element = screen.getByRole("button");
+      expect(element).toBeInTheDocument();
+      expect(container.firstChild).toMatchSnapshot(`component-${themeMode}`);
+    });
+  });
+
+  it("should maintain functionality across themes", async () => {
+    const handleClick = vi.fn();
+    
+    for (const theme of themes) {
+      const { container } = renderWithTheme(
+        <ComponentName onClick={handleClick} />, 
+        theme
+      );
+      
+      const element = screen.getByRole("button");
+      await user.click(element);
+      expect(handleClick).toHaveBeenCalled();
+      handleClick.mockClear();
+    }
+  });
+});
+```
+
+### 10. Inadequate Theme Coverage
+```tsx
+// ❌ Avoid - Testing only light and dark themes
+describe("Theme Testing", () => {
+  it("should work in light mode", () => {
+    const { container } = renderWithTheme(<ComponentName />, 'light');
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it("should work in dark mode", () => {
+    const { container } = renderWithTheme(<ComponentName />, 'dark');
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  // Missing high contrast theme testing!
+});
+
+// ✅ Prefer - Complete theme coverage
+describe("Theme Testing", () => {
+  const themes = ['light', 'dark', 'highContrast'] as const;
+  const colors = ['primary', 'secondary', 'error'] as const;
+
+  it("should render correctly in all theme modes", () => {
+    themes.forEach(theme => {
+      const { container } = renderWithTheme(<ComponentName />, theme);
+      expect(container.firstChild).toMatchSnapshot(`default-${theme}`);
+    });
+  });
+
+  it("should handle color variants across all themes", () => {
+    themes.forEach(theme => {
+      colors.forEach(color => {
+        const { container } = renderWithTheme(
+          <ComponentName color={color} />, 
+          theme
+        );
+        expect(container.firstChild).toMatchSnapshot(`${color}-${theme}`);
+      });
+    });
+  });
+});
+```
+
 ## Template
 
 Use this template for new component test files:
@@ -611,6 +2340,8 @@ Use this template for new component test files:
  * 7. Accessibility - ARIA attributes and keyboard navigation
  * 8. Edge Cases - Unusual scenarios and boundary conditions
  * 9. Real-world Scenarios - Common usage patterns
+ * 10. Theme Testing - Component behavior across light, dark, and high contrast themes
+ * 11. Snapshot Testing - Visual regression testing across all states and themes
  * 
  * @package @am92/react-design-system
  * @component [ComponentName]
@@ -620,6 +2351,20 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
 import { ComponentName } from "./ComponentName.Component";
+import { renderWithTheme, testAllThemes } from "../../Tests/Mocks/themeTestUtils";
+import getColorScheme from "../../Theme/getColorScheme";
+import { PALETTE } from "../../Constants";
+import { 
+  DsBox, 
+  DsTypography, 
+  DsButton,
+  DsPaper,
+  DsFormControl,
+  DsFormLabel,
+  DsFormHelperText
+} from "../index";
+
+// Note: Import theme testing utilities explicitly for better TypeScript support
 
 describe("ComponentName Component", () => {
   let user: ReturnType<typeof userEvent.setup>;
@@ -648,6 +2393,38 @@ describe("ComponentName Component", () => {
     it("should accept and display custom props", () => {
       render(<ComponentName customProp="value" />);
       // Add assertions based on component behavior
+    });
+
+    it("should handle slotProps for input customization", () => {
+      render(
+        <ComponentName 
+          slotProps={{
+            input: {
+              'aria-describedby': 'help-text'
+            } as any
+          }} 
+        />
+      );
+      
+      const element = screen.getByRole("textbox"); // Adjust role as needed
+      expect(element).toHaveAttribute("aria-describedby", "help-text");
+    });
+
+    it("should support custom slot components", () => {
+      const CustomComponent = ({ ownerState, ...props }: any) => (
+        <input {...props} data-custom="custom-element" />
+      );
+      
+      render(
+        <ComponentName 
+          slots={{
+            input: CustomComponent
+          }}
+        />
+      );
+      
+      const element = screen.getByRole("textbox");
+      expect(element).toHaveAttribute("data-custom", "custom-element");
     });
 
     // Add more props validation tests...
@@ -747,6 +2524,79 @@ describe("ComponentName Component", () => {
 
     // Add more real-world scenario tests...
   });
+
+  // ============================
+  // THEME TESTING
+  // ============================
+  describe("Theme Testing", () => {
+    const themes = ['light', 'dark', 'highContrast'] as const;
+
+    it("should render correctly across all themes", () => {
+      themes.forEach(themeMode => {
+        const { container } = renderWithTheme(<ComponentName />, themeMode);
+        
+        const element = screen.getByRole("button"); // Adjust role as needed
+        expect(element).toBeInTheDocument();
+        expect(container.firstChild).toMatchSnapshot(`component-${themeMode}-theme`);
+      });
+    });
+
+    it("should maintain functionality across all themes", async () => {
+      const handleClick = vi.fn();
+      
+      for (const theme of themes) {
+        const { container } = renderWithTheme(
+          <ComponentName onClick={handleClick} />, 
+          theme
+        );
+        
+        const element = screen.getByRole("button");
+        await user.click(element);
+        expect(handleClick).toHaveBeenCalled();
+        handleClick.mockClear();
+      }
+    });
+
+    it("should handle color variants across themes", () => {
+      const colors = ['primary', 'secondary', 'error'] as const;
+      
+      themes.forEach(theme => {
+        colors.forEach(color => {
+          const { container } = renderWithTheme(
+            <ComponentName color={color} />, 
+            theme
+          );
+          
+          const element = screen.getByRole("button");
+          expect(element).toHaveClass(`MuiButton-color${color.charAt(0).toUpperCase() + color.slice(1)}`);
+          expect(container.firstChild).toMatchSnapshot(`${color}-${theme}`);
+        });
+      });
+    });
+
+    // Add more theme-specific tests...
+  });
+
+  // ============================
+  // SNAPSHOT TESTS
+  // ============================
+  describe("Snapshot Tests", () => {
+    it("should match snapshot with default props", () => {
+      const { container } = render(<ComponentName />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it("should match snapshots across all themes", () => {
+      const themes = ['light', 'dark', 'highContrast'] as const;
+      
+      themes.forEach(theme => {
+        const { container } = renderWithTheme(<ComponentName />, theme);
+        expect(container.firstChild).toMatchSnapshot(`default-${theme}`);
+      });
+    });
+
+    // Add more comprehensive snapshot tests...
+  });
 });
 ```
 
@@ -799,5 +2649,22 @@ Following these guidelines will ensure consistent, comprehensive, and maintainab
 4. **Ensure accessibility compliance**
 5. **Maintain test independence and clarity**
 6. **Use descriptive test names and organized structure**
+7. **🚨 MANDATORY: Always use design system components, never raw HTML elements**
+8. **🚨 MANDATORY: Test all components across light, dark, and high contrast themes**
+9. **🚨 MANDATORY: Include comprehensive snapshot testing in every component test suite**
+10. **🚨 MANDATORY: Follow the 12-section test organization structure with Theme Testing and Snapshot Tests as final sections**
 
-These guidelines should be reviewed and updated as new testing patterns emerge or framework capabilities change.
+### Critical Requirements Enforcement
+
+These requirements are **NON-NEGOTIABLE** and will be enforced in code reviews:
+
+- ❌ **Code reviews will REJECT any test using raw HTML elements** (`<div>`, `<span>`, `<button>`, etc.)
+- ❌ **Code reviews will REJECT tests missing snapshot testing section**
+- ❌ **Code reviews will REJECT tests missing theme testing section**
+- ❌ **Code reviews will REJECT inconsistent design system component usage**
+- ✅ **All tests MUST use design system components** (`DsBox`, `DsTypography`, `DsButton`, etc.)
+- ✅ **All tests MUST include theme testing across light, dark, and high contrast modes**
+- ✅ **All tests MUST include comprehensive snapshot coverage**
+- ✅ **All tests MUST follow the established 12-section structure**
+
+These guidelines should be reviewed and updated as new testing patterns emerge or framework capabilities change. The mandatory requirements ensure design system consistency, theme compatibility, and visual regression protection across all components.
