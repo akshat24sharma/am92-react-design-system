@@ -20,9 +20,22 @@
 
 import React from "react";
 import { describe, expect, it, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor, renderWithoutTheme, testAllThemes } from "../../Tests/Mocks/testUtils";
 import userEvent from '@testing-library/user-event';
 import { DsAccordion } from "./DsAccordion.Component";
+import getColorScheme from "../../Theme/getColorScheme";
+import { PALETTE } from "../../Constants";
+import { 
+  DsBox, 
+  DsTypography, 
+  DsButton,
+  DsPaper,
+  DsStack,
+  DsRemixIcon,
+  DsCheckbox,
+  DsFormControlLabel,
+  DsTextField
+} from "../index";
 
 describe("DsAccordion Component", () => {
   let user: ReturnType<typeof userEvent.setup>;
@@ -657,23 +670,32 @@ describe("DsAccordion Component", () => {
           <DsAccordion 
             header="Account Settings"
             summary={
-              <div>
-                <input type="text" placeholder="Username" />
-                <input type="email" placeholder="Email" />
-              </div>
+              <DsStack spacing={2}>
+                <DsTextField
+                  label="Username"
+                  size="small"
+                />
+                <DsTextField
+                  label="Email"
+                  type="email"
+                  size="small"
+                />
+              </DsStack>
             }
           />
           <DsAccordion 
             header="Privacy Settings"
             summary={
-              <div>
-                <label>
-                  <input type="checkbox" /> Enable notifications
-                </label>
-                <label>
-                  <input type="checkbox" /> Make profile public
-                </label>
-              </div>
+              <DsStack spacing={1}>
+                <DsFormControlLabel
+                  control={<DsCheckbox />}
+                  label="Enable notifications"
+                />
+                <DsFormControlLabel
+                  control={<DsCheckbox />}
+                  label="Make profile public"
+                />
+              </DsStack>
             }
           />
         </div>
@@ -686,7 +708,8 @@ describe("DsAccordion Component", () => {
       expect(privacyButton).toBeInTheDocument();
       
       await user.click(accountButton);
-      expect(screen.getByPlaceholderText("Username")).toBeVisible();
+      const usernameInput = screen.getAllByRole('textbox')[0];
+      expect(usernameInput).toBeVisible();
     });
 
     it("should work with form integration", async () => {
@@ -697,10 +720,16 @@ describe("DsAccordion Component", () => {
           <DsAccordion 
             header="Personal Information"
             summary={
-              <div>
-                <input name="firstName" placeholder="First Name" />
-                <input name="lastName" placeholder="Last Name" />
-              </div>
+              <DsStack spacing={2}>
+                <DsTextField
+                  name="firstName"
+                  label="First Name"
+                />
+                <DsTextField
+                  name="lastName"
+                  label="Last Name"
+                />
+              </DsStack>
             }
             defaultExpanded={true}
           />
@@ -708,7 +737,7 @@ describe("DsAccordion Component", () => {
         </form>
       );
       
-      const firstNameInput = screen.getByPlaceholderText("First Name");
+      const firstNameInput = screen.getAllByRole('textbox')[0];
       const submitButton = screen.getByRole("button", { name: /submit/i });
       
       await user.type(firstNameInput, "John");
@@ -784,6 +813,429 @@ describe("DsAccordion Component", () => {
       await waitFor(() => {
         expect(screen.getByText("Loaded async content")).toBeInTheDocument();
       }, { timeout: 200 });
+    });
+  });
+
+  // ============================
+  // THEME TESTING
+  // ============================
+  describe("Theme Testing", () => {
+    const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+
+    it("should render correctly across all color schemes with proper theme colors", () => {
+      // Get the complete color scheme from theme
+      const themeColorScheme = getColorScheme(PALETTE);
+      
+      colorSchemes.forEach(colorScheme => {
+        const { container, unmount } = render(
+          <DsAccordion 
+            header="Theme Test Header"
+            summary="Theme Test Summary"
+          />, 
+          { colorScheme }
+        );
+        
+        // Verify basic rendering
+        const accordion = container.querySelector('.MuiAccordion-root');
+        expect(accordion).toBeInTheDocument();
+        
+        // Verify color scheme is applied
+        const wrapperElement = container.firstChild as HTMLElement;
+        expect(wrapperElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+        
+        // Verify theme colors match the actual theme configuration
+        const schemeData = themeColorScheme[colorScheme];
+        
+        // Text color should match theme
+        const expectedTextColor = (schemeData?.palette?.text as any)?.primary;
+        expect(expectedTextColor).toBeTruthy();
+        
+        // Snapshot testing for each theme
+        expect(container.firstChild).toMatchSnapshot(`accordion-${colorScheme}-theme`);
+        
+        unmount();
+      });
+    });
+
+    it("should use correct design system colors for accordion states", () => {
+      const themeColorScheme = getColorScheme(PALETTE);
+
+      colorSchemes.forEach(colorScheme => {
+        const schemeData = themeColorScheme[colorScheme];
+        
+        // Test expanded state
+        const { container: expandedContainer, unmount: unmountExpanded } = render(
+          <DsAccordion 
+            header="Test Header"
+            summary="Test Summary"
+            expanded={true}
+          />, 
+          { colorScheme }
+        );
+        
+        const expandedAccordion = expandedContainer.querySelector('.MuiAccordion-root');
+        expect(expandedAccordion).toHaveClass('Mui-expanded');
+        
+        // Test collapsed state
+        const { container: collapsedContainer, unmount: unmountCollapsed } = render(
+          <DsAccordion 
+            header="Test Header"
+            summary="Test Summary"
+            expanded={false}
+          />, 
+          { colorScheme }
+        );
+        
+        const collapsedAccordion = collapsedContainer.querySelector('.MuiAccordion-root');
+        expect(collapsedAccordion).not.toHaveClass('Mui-expanded');
+        
+        unmountExpanded();
+        unmountCollapsed();
+      });
+    });
+
+    it("should verify theme differences and maintain functionality", () => {
+      const themeColorScheme = getColorScheme(PALETTE);
+      
+      // Verify light vs dark theme differences
+      const lightSchemeData = themeColorScheme.light;
+      const darkSchemeData = themeColorScheme.dark;
+      
+      const lightTextColor = (lightSchemeData?.palette?.text as any)?.primary;
+      const darkTextColor = (darkSchemeData?.palette?.text as any)?.primary;
+      
+      // Text colors should be different between themes
+      expect(lightTextColor).toBeTruthy();
+      expect(darkTextColor).toBeTruthy();
+      expect(lightTextColor).not.toBe(darkTextColor);
+      
+      // Test functionality works across themes
+      const handleChange = vi.fn();
+      colorSchemes.forEach(colorScheme => {
+        document.body.innerHTML = '';
+        handleChange.mockClear();
+        
+        const { unmount } = render(
+          <DsAccordion 
+            header="Test Header"
+            summary="Test Summary"
+            onChange={handleChange}
+          />, 
+          { colorScheme }
+        );
+        
+        const summaryButton = screen.getByRole("button");
+        fireEvent.click(summaryButton);
+        expect(handleChange).toHaveBeenCalledWith(expect.any(Object), true);
+        
+        unmount();
+      });
+    });
+
+    it("should use testAllThemes utility for efficient theme testing", () => {
+      testAllThemes(
+        (colorScheme) => (
+          <DsAccordion 
+            header="Test Header"
+            summary="Test Summary"
+            data-testid={`accordion-${colorScheme}`}
+          />
+        ),
+        (container, colorScheme) => {
+          const accordion = container.querySelector(`[data-testid="accordion-${colorScheme}"]`);
+          expect(accordion).toBeInTheDocument();
+          
+          const accordionRoot = container.querySelector('.MuiAccordion-root');
+          expect(accordionRoot).toBeInTheDocument();
+        }
+      );
+    });
+
+    it("should handle custom expand icons across themes", () => {
+      const customIcon = <DsRemixIcon className="ri-plus-line" />;
+      
+      colorSchemes.forEach(colorScheme => {
+        const { container, unmount } = render(
+          <DsAccordion 
+            header="Test Header"
+            summary="Test Summary"
+            expandIcon={customIcon}
+          />, 
+          { colorScheme }
+        );
+        
+        const icon = container.querySelector('.ri-plus-line');
+        expect(icon).toBeInTheDocument();
+        
+        unmount();
+      });
+    });
+  });
+
+  // ============================
+  // SNAPSHOT TESTS
+  // ============================
+  describe("Snapshot Tests", () => {
+    it("should match snapshots for basic states", () => {
+      const basicStates = [
+        { 
+          name: 'collapsed', 
+          props: { 
+            header: "Test Header", 
+            summary: "Test Summary", 
+            expanded: false 
+          } 
+        },
+        { 
+          name: 'expanded', 
+          props: { 
+            header: "Test Header", 
+            summary: "Test Summary", 
+            expanded: true 
+          } 
+        },
+        { 
+          name: 'disabled', 
+          props: { 
+            header: "Test Header", 
+            summary: "Test Summary", 
+            disabled: true 
+          } 
+        },
+        { 
+          name: 'disabled-expanded', 
+          props: { 
+            header: "Test Header", 
+            summary: "Test Summary", 
+            disabled: true, 
+            expanded: true 
+          } 
+        },
+        { 
+          name: 'no-summary', 
+          props: { 
+            header: "Test Header", 
+            summary: "" 
+          } 
+        }
+      ];
+
+      basicStates.forEach(({ name, props }) => {
+        const { container } = render(<DsAccordion {...props} />);
+        expect(container.firstChild).toMatchSnapshot(`accordion-${name}`);
+      });
+    });
+
+    it("should match snapshots for elevation variants", () => {
+      const elevations = [0, 1, 2, 4, 8] as const;
+      
+      elevations.forEach(elevation => {
+        const { container } = render(
+          <DsAccordion 
+            header="Test Header"
+            summary="Test Summary"
+            elevation={elevation}
+          />
+        );
+        expect(container.firstChild).toMatchSnapshot(`accordion-elevation-${elevation}`);
+      });
+    });
+
+    it("should match snapshots for customization options", () => {
+      // Custom icons
+      const customExpandIcon = <DsRemixIcon className="ri-add-line" />;
+      const { container: customIcon } = render(
+        <DsAccordion 
+          header="Test Header"
+          summary="Test Summary"
+          expandIcon={customExpandIcon}
+        />
+      );
+      expect(customIcon.firstChild).toMatchSnapshot('accordion-custom-icon');
+
+      // Custom props
+      const { container: customProps } = render(
+        <DsAccordion 
+          header="Test Header"
+          summary="Test Summary"
+          HeaderProps={{ 
+            sx: { backgroundColor: 'primary.main' },
+            className: 'custom-header-class'
+          }}
+          SummaryProps={{ 
+            sx: { backgroundColor: 'secondary.main' },
+            className: 'custom-summary-class'
+          }}
+        />
+      );
+      expect(customProps.firstChild).toMatchSnapshot('accordion-custom-props');
+
+      // Complex content
+      const complexHeader = (
+        <DsBox sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <DsRemixIcon className="ri-folder-line" />
+          <DsTypography>Complex Header</DsTypography>
+        </DsBox>
+      );
+      
+      const complexSummary = (
+        <DsStack spacing={2}>
+          <DsTypography>Complex summary content</DsTypography>
+          <DsButton variant="contained">Action Button</DsButton>
+        </DsStack>
+      );
+
+      const { container: complexContent } = render(
+        <DsAccordion 
+          header={complexHeader}
+          summary={complexSummary}
+          defaultExpanded={true}
+        />
+      );
+      expect(complexContent.firstChild).toMatchSnapshot('accordion-complex-content');
+    });
+
+    it("should match snapshots for real-world scenarios", () => {
+      // FAQ scenario
+      const faqItems = [
+        { question: "What is this product?", answer: "This is a comprehensive design system." },
+        { question: "How do I get started?", answer: "Follow our getting started guide." },
+        { question: "Is it free to use?", answer: "Yes, it's open source and free." }
+      ];
+
+      const { container: faqScenario } = render(
+        <DsPaper sx={{ p: 2 }}>
+          <DsTypography gutterBottom>
+            Frequently Asked Questions
+          </DsTypography>
+          {faqItems.map((faq, index) => (
+            <DsAccordion 
+              key={index}
+              header={faq.question}
+              summary={faq.answer}
+              sx={{ mb: 1 }}
+            />
+          ))}
+        </DsPaper>
+      );
+      expect(faqScenario.firstChild).toMatchSnapshot('accordion-faq-scenario');
+
+      // Settings panel scenario
+      const { container: settingsScenario } = render(
+        <DsPaper sx={{ p: 3, maxWidth: 600 }}>
+          <DsTypography gutterBottom>
+            Account Settings
+          </DsTypography>
+          
+          <DsAccordion 
+            header="Profile Information"
+            summary={
+              <DsStack spacing={2}>
+                <DsTypography>Manage your profile details</DsTypography>
+                <DsBox sx={{ display: 'flex', gap: 2 }}>
+                  <DsButton variant="outlined" size="small">Edit Profile</DsButton>
+                  <DsButton variant="outlined" size="small">Change Avatar</DsButton>
+                </DsBox>
+              </DsStack>
+            }
+          />
+          
+          <DsAccordion 
+            header="Privacy Settings"
+            summary={
+              <DsStack spacing={2}>
+                <DsTypography>Control your privacy preferences</DsTypography>
+                <DsStack spacing={1}>
+                  <DsFormControlLabel
+                    control={<DsCheckbox />}
+                    label="Make profile public"
+                  />
+                  <DsFormControlLabel
+                    control={<DsCheckbox />}
+                    label="Allow search indexing"
+                  />
+                </DsStack>
+              </DsStack>
+            }
+          />
+          
+          <DsAccordion 
+            header="Notification Settings"
+            summary={
+              <DsStack spacing={2}>
+                <DsTypography>Manage your notifications</DsTypography>
+                <DsStack spacing={1}>
+                  <DsFormControlLabel
+                    control={<DsCheckbox defaultChecked />}
+                    label="Email notifications"
+                  />
+                </DsStack>
+              </DsStack>
+            }
+          />
+        </DsPaper>
+      );
+      expect(settingsScenario.firstChild).toMatchSnapshot('accordion-settings-scenario');
+
+      // Documentation section scenario
+      const { container: docsScenario } = render(
+        <DsBox sx={{ maxWidth: 800 }}>
+          <DsTypography gutterBottom>
+            API Documentation
+          </DsTypography>
+          
+          <DsAccordion 
+            header={
+              <DsBox sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <DsRemixIcon className="ri-code-line" />
+                <DsTypography>Authentication</DsTypography>
+              </DsBox>
+            }
+            summary={
+              <DsStack spacing={2}>
+                <DsTypography>
+                  Learn how to authenticate with our API using tokens.
+                </DsTypography>
+                <DsPaper variant="outlined" sx={{ p: 2, backgroundColor: 'grey.50' }}>
+                  <DsTypography component="pre">
+                    {`curl -H "Authorization: Bearer YOUR_TOKEN" \\
+     -X GET https://api.example.com/data`}
+                  </DsTypography>
+                </DsPaper>
+              </DsStack>
+            }
+          />
+          
+          <DsAccordion 
+            header={
+              <DsBox sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <DsRemixIcon className="ri-database-line" />
+                <DsTypography>Data Endpoints</DsTypography>
+              </DsBox>
+            }
+            summary={
+              <DsStack spacing={2}>
+                <DsTypography>
+                  Available endpoints for data retrieval and manipulation.
+                </DsTypography>
+                <DsBox>
+                  <DsTypography>GET /api/users</DsTypography>
+                  <DsTypography color="text.secondary">
+                    Retrieve all users
+                  </DsTypography>
+                </DsBox>
+                <DsBox>
+                  <DsTypography>POST /api/users</DsTypography>
+                  <DsTypography color="text.secondary">
+                    Create a new user
+                  </DsTypography>
+                </DsBox>
+              </DsStack>
+            }
+          />
+        </DsBox>
+      );
+      expect(docsScenario.firstChild).toMatchSnapshot('accordion-docs-scenario');
     });
   });
 });

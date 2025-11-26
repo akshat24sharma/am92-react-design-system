@@ -1,0 +1,1702 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for basic states > accordion-collapsed 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for basic states > accordion-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded Mui-disabled css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-disabled css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for basic states > accordion-disabled-expanded 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded Mui-expanded Mui-disabled css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="true"
+        class="MuiButtonBase-root Mui-disabled MuiAccordionSummary-root Mui-expanded Mui-disabled css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for basic states > accordion-expanded 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded Mui-expanded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for basic states > accordion-no-summary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for customization options > accordion-complex-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded Mui-expanded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded css-bg9e0b-MuiAccordionSummary-content"
+        >
+          <div
+            class="MuiBox-root css-171onha"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-folder-line css-h7bicg-MuiIcon-root"
+            />
+            <span
+              class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+            >
+              Complex Header
+            </span>
+          </div>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiStack-root css-jfdv4h-MuiStack-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                >
+                  Complex summary content
+                </span>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span>
+                    Action Button
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for customization options > accordion-custom-icon 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-add-line css-h7bicg-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for customization options > accordion-custom-props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root custom-header-class css-105zrvv-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root custom-summary-class css-dt2j9n-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for elevation variants > accordion-elevation-0 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for elevation variants > accordion-elevation-1 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows-1); --Paper-overlay: var(--overlays-1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for elevation variants > accordion-elevation-2 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows-2); --Paper-overlay: var(--overlays-2);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for elevation variants > accordion-elevation-4 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation4 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows-4); --Paper-overlay: var(--overlays-4);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for elevation variants > accordion-elevation-8 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows-8); --Paper-overlay: var(--overlays-8);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for real-world scenarios > accordion-docs-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1bxarir"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiTypography-gutterBottom css-12scg6d-MuiTypography-root"
+    >
+      API Documentation
+    </span>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            <div
+              class="MuiBox-root css-171onha"
+            >
+              <span
+                aria-hidden="true"
+                class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-code-line css-h7bicg-MuiIcon-root"
+              />
+              <span
+                class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+              >
+                Authentication
+              </span>
+            </div>
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiStack-root css-jfdv4h-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                  >
+                    Learn how to authenticate with our API using tokens.
+                  </span>
+                  <div
+                    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded css-fkb1wu-MuiPaper-root"
+                  >
+                    <pre
+                      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                    >
+                      curl -H "Authorization: Bearer YOUR_TOKEN" \\
+     -X GET https://api.example.com/data
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            <div
+              class="MuiBox-root css-171onha"
+            >
+              <span
+                aria-hidden="true"
+                class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-database-line css-h7bicg-MuiIcon-root"
+              />
+              <span
+                class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+              >
+                Data Endpoints
+              </span>
+            </div>
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiStack-root css-jfdv4h-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                  >
+                    Available endpoints for data retrieval and manipulation.
+                  </span>
+                  <div
+                    class="MuiBox-root css-0"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                    >
+                      GET /api/users
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-bodyRegularMedium css-381fl8-MuiTypography-root"
+                    >
+                      Retrieve all users
+                    </span>
+                  </div>
+                  <div
+                    class="MuiBox-root css-0"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                    >
+                      POST /api/users
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-bodyRegularMedium css-381fl8-MuiTypography-root"
+                    >
+                      Create a new user
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for real-world scenarios > accordion-faq-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-140xs0f-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiTypography-gutterBottom css-12scg6d-MuiTypography-root"
+    >
+      Frequently Asked Questions
+    </span>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1791uor-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            What is this product?
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                This is a comprehensive design system.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1791uor-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            How do I get started?
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                Follow our getting started guide.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1791uor-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            Is it free to use?
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                Yes, it's open source and free.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Snapshot Tests > should match snapshots for real-world scenarios > accordion-settings-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-906ezi-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiTypography-gutterBottom css-12scg6d-MuiTypography-root"
+    >
+      Account Settings
+    </span>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            Profile Information
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiStack-root css-jfdv4h-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                  >
+                    Manage your profile details
+                  </span>
+                  <div
+                    class="MuiBox-root css-1i27l4i"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-doxyf4-MuiButtonBase-root-MuiButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span>
+                        Edit Profile
+                      </span>
+                    </button>
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-doxyf4-MuiButtonBase-root-MuiButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span>
+                        Change Avatar
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            Privacy Settings
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiStack-root css-jfdv4h-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                  >
+                    Control your privacy preferences
+                  </span>
+                  <div
+                    class="MuiStack-root css-j3ygch-MuiStack-root"
+                  >
+                    <label
+                      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                      >
+                        <input
+                          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                          data-indeterminate="false"
+                          type="checkbox"
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+                        />
+                      </span>
+                      <span
+                        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+                      >
+                        Make profile public
+                      </span>
+                    </label>
+                    <label
+                      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                      >
+                        <input
+                          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                          data-indeterminate="false"
+                          type="checkbox"
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+                        />
+                      </span>
+                      <span
+                        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+                      >
+                        Allow search indexing
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+      header=""
+      style="--Paper-shadow: var(--shadows--1);"
+      summary=""
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+          >
+            Notification Settings
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+            />
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiStack-root css-jfdv4h-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+                  >
+                    Manage your notifications
+                  </span>
+                  <div
+                    class="MuiStack-root css-j3ygch-MuiStack-root"
+                  >
+                    <label
+                      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-checked MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                      >
+                        <input
+                          checked=""
+                          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                          data-indeterminate="false"
+                          type="checkbox"
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-fill css-12fu13m-MuiIcon-root"
+                        />
+                      </span>
+                      <span
+                        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+                      >
+                        Email notifications
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Theme Testing > should render correctly across all color schemes with proper theme colors > accordion-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Theme Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Theme Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Theme Testing > should render correctly across all color schemes with proper theme colors > accordion-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Theme Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Theme Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAccordion Component > Theme Testing > should render correctly across all color schemes with proper theme colors > accordion-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation-1 MuiAccordion-root MuiAccordion-rounded css-1y6o40d-MuiPaper-root-MuiAccordion-root"
+    header=""
+    style="--Paper-shadow: var(--shadows--1);"
+    summary=""
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root css-rrafjo-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content css-bg9e0b-MuiAccordionSummary-content"
+        >
+          Theme Test Header
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1g9gjqu-MuiAccordionSummary-expandIconWrapper"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-arrow-down-s-line css-lcbkw8-MuiIcon-root"
+          />
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1kw6ysi-MuiAccordionDetails-root"
+            >
+              Theme Test Summary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
