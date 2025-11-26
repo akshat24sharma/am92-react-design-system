@@ -83,8 +83,8 @@ describe("DsCheckbox Component", () => {
     it("should render default icons from DsRemixIcon", () => {
       const { container } = render(<DsCheckbox />);
       
-      // Check for MUI checkbox icon (since DsRemixIcon is used as default)
-      const iconElement = container.querySelector('[data-testid="CheckBoxOutlineBlankIcon"]');
+      // Check for DsRemixIcon with checkbox blank class
+      const iconElement = container.querySelector('.ri-checkbox-blank-line');
       expect(iconElement).toBeInTheDocument();
     });
 
@@ -241,7 +241,7 @@ describe("DsCheckbox Component", () => {
       const { container } = render(<DsCheckbox />);
       
       const checkboxContainer = container.querySelector('.MuiCheckbox-root');
-      expect(checkboxContainer).toHaveClass("MuiCheckbox-sizeMedium"); // Default from DsCheckboxDefaultProps
+      expect(checkboxContainer).toHaveClass("MuiCheckbox-sizeSmall"); // Default from DsCheckboxDefaultProps
     });
 
     it("should render with custom size", () => {
@@ -341,16 +341,16 @@ describe("DsCheckbox Component", () => {
     it("should show checked icon when checked", () => {
       const { container } = render(<DsCheckbox checked />);
       
-      // Should show checked icon (MUI's CheckBox icon)
-      const checkedIcon = container.querySelector('[data-testid="CheckBoxIcon"]');
+      // Should show checked icon (DsRemixIcon with checkbox-fill class)
+      const checkedIcon = container.querySelector('.ri-checkbox-fill');
       expect(checkedIcon).toBeInTheDocument();
     });
 
     it("should show indeterminate icon when indeterminate", () => {
       const { container } = render(<DsCheckbox indeterminate />);
       
-      // Should show indeterminate icon (MUI's IndeterminateCheckBox icon)
-      const indeterminateIcon = container.querySelector('[data-testid="IndeterminateCheckBoxIcon"]');
+      // Should show indeterminate icon (DsRemixIcon with checkbox-indeterminate-fill class)
+      const indeterminateIcon = container.querySelector('.ri-checkbox-indeterminate-fill');
       expect(indeterminateIcon).toBeInTheDocument();
     });
 
@@ -498,7 +498,7 @@ describe("DsCheckbox Component", () => {
         <DsCheckbox checked={checked} onChange={handleChange} />
       );
       
-      const checkbox = screen.getByRole("checkbox");
+      let checkbox = screen.getByRole("checkbox");
       expect(checkbox).not.toBeChecked();
       
       await user.click(checkbox);
@@ -506,6 +506,8 @@ describe("DsCheckbox Component", () => {
       // Simulate controlled component update
       rerender(<DsCheckbox checked={true} onChange={handleChange} />);
       
+      // Query for the checkbox again after rerender
+      checkbox = screen.getByRole("checkbox");
       expect(checkbox).toBeChecked();
       expect(handleChange).toHaveBeenCalledWith(expect.any(Object), true);
     });

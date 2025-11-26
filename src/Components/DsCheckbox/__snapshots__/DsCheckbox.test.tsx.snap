@@ -1,665 +1,610 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for basic states > checkbox-checked 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    checked=""
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-checked MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+    <input
+      checked=""
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-fill css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for basic states > checkbox-default 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for basic states > checkbox-disabled 1`] = `
-<span
-  aria-disabled="true"
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
-  tabindex="-1"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    disabled=""
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    aria-disabled="true"
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    tabindex="-1"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      disabled=""
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for basic states > checkbox-disabled-checked 1`] = `
-<span
-  aria-disabled="true"
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
-  tabindex="-1"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    checked=""
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    disabled=""
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    aria-disabled="true"
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-checked Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    tabindex="-1"
   >
-    <path
-      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+    <input
+      checked=""
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      disabled=""
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-fill css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for basic states > checkbox-indeterminate 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="true"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="IndeterminateCheckBoxIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="true"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-indeterminate-fill css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for basic states > checkbox-unchecked 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-color-error 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorError MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorError MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorError MuiCheckbox-sizeMedium css-v25hf7-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorError MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorError MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorError MuiCheckbox-sizeSmall css-11q9dqx-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-color-info 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorInfo MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorInfo MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorInfo MuiCheckbox-sizeMedium css-k9po0b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorInfo MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorInfo MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorInfo MuiCheckbox-sizeSmall css-1gy9f1o-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-color-primary 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-tfp55i-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-color-secondary 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeMedium css-1qcubn7-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-color-success 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSuccess MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSuccess MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorSuccess MuiCheckbox-sizeMedium css-gov6-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSuccess MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSuccess MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSuccess MuiCheckbox-sizeSmall css-paglm8-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-color-warning 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorWarning MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorWarning MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorWarning MuiCheckbox-sizeMedium css-18ad81o-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorWarning MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorWarning MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorWarning MuiCheckbox-sizeSmall css-13vw3jy-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-size-large 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeLarge PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeLarge MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeLarge css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-uks7c6-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeLarge PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeLarge MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeLarge css-anl6d1-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-size-medium 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeMedium css-3xwx41-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for color and size variants > checkbox-size-small 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for customization options > checkbox-custom-icons 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
   <span
-    aria-hidden="true"
-    class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-circle-line css-1n5qiej-MuiIcon-root"
-  />
-</span>
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+  >
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
+    />
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeSmall ri-circle-line css-20vhad-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for customization options > checkbox-custom-props 1`] = `
-<span
-  aria-label="Custom Checkbox"
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium custom-class css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    id="custom-checkbox"
-    name="test-checkbox"
-    type="checkbox"
-    value="custom-value"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    aria-label="Custom Checkbox"
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall custom-class css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      id="custom-checkbox"
+      name="test-checkbox"
+      type="checkbox"
+      value="custom-value"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for customization options > checkbox-custom-sx 1`] = `
-<span
-  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1p4hd7m-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <input
-    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-    data-indeterminate="false"
-    type="checkbox"
-  />
-  <svg
-    aria-hidden="true"
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
-    focusable="false"
-    viewBox="0 0 24 24"
+  <span
+    class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-8676s7-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <input
+      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+      data-indeterminate="false"
+      type="checkbox"
     />
-  </svg>
-</span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+    />
+  </span>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for real-world scenarios > checkbox-bulk-selection 1`] = `
 <div
-  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1fdopfm-MuiPaper-root"
-  style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
   <div
-    class="MuiBox-root css-1coeexk"
-  >
-    <span
-      aria-label="Select all items"
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
-    >
-      <input
-        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-        data-indeterminate="true"
-        type="checkbox"
-      />
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-        data-testid="IndeterminateCheckBoxIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"
-        />
-      </svg>
-    </span>
-    <p
-      class="MuiTypography-root MuiTypography-body1 css-lhsbas-MuiTypography-root"
-    >
-      Select All
-    </p>
-  </div>
-  <div
-    class="MuiStack-root css-jfdv4h-MuiStack-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-140xs0f-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
   >
     <div
-      class="MuiBox-root css-70qvj9"
+      class="MuiBox-root css-kmnzss"
     >
       <span
-        aria-label="Select Item 1"
-        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+        aria-label="Select all items"
+        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-indeterminate MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-tfp55i-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
       >
         <input
-          checked=""
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          data-indeterminate="false"
+          data-indeterminate="true"
           type="checkbox"
         />
-        <svg
+        <span
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
-          data-testid="CheckBoxIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-          />
-        </svg>
+          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-indeterminate-fill css-12fu13m-MuiIcon-root"
+        />
       </span>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hjv2mt-MuiTypography-root"
       >
-        Item 1
-      </p>
+        Select All
+      </span>
     </div>
     <div
-      class="MuiBox-root css-70qvj9"
+      class="MuiStack-root css-j3ygch-MuiStack-root"
     >
-      <span
-        aria-label="Select Item 2"
-        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      <div
+        class="MuiBox-root css-70qvj9"
       >
-        <input
-          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          data-indeterminate="false"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
-          data-testid="CheckBoxOutlineBlankIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
+        <span
+          aria-label="Select Item 1"
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-tfp55i-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
         >
-          <path
-            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+          <input
+            checked=""
+            class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+            data-indeterminate="false"
+            type="checkbox"
           />
-        </svg>
-      </span>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
-      >
-        Item 2
-      </p>
-    </div>
-    <div
-      class="MuiBox-root css-70qvj9"
-    >
-      <span
-        aria-label="Select Item 3"
-        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
-      >
-        <input
-          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          data-indeterminate="false"
-          type="checkbox"
-        />
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
-          data-testid="CheckBoxOutlineBlankIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-fill css-12fu13m-MuiIcon-root"
+          />
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
         >
-          <path
-            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-          />
-        </svg>
-      </span>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+          Item 1
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-70qvj9"
       >
-        Item 3
-      </p>
+        <span
+          aria-label="Select Item 2"
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-tfp55i-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+        >
+          <input
+            class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+            data-indeterminate="false"
+            type="checkbox"
+          />
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+          />
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Item 2
+        </span>
+      </div>
+      <div
+        class="MuiBox-root css-70qvj9"
+      >
+        <span
+          aria-label="Select Item 3"
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeSmall css-tfp55i-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+        >
+          <input
+            class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+            data-indeterminate="false"
+            type="checkbox"
+          />
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+          />
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Item 3
+        </span>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for real-world scenarios > checkbox-form-context 1`] = `
-<form
+<div
   class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <fieldset
-    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  <form
+    class="MuiBox-root css-0"
   >
-    <legend
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-nwsdb5-MuiFormLabel-root"
+    <fieldset
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
     >
-      Form Checkbox
-    </legend>
-    <span
-      aria-describedby="form-help"
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
-    >
-      <input
-        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-        data-indeterminate="false"
-        name="form-checkbox"
-        required=""
-        type="checkbox"
-        value="form-value"
-      />
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-        data-testid="CheckBoxOutlineBlankIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
+      <legend
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
       >
-        <path
-          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+        Form Checkbox
+      </legend>
+      <span
+        aria-describedby="form-help"
+        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          data-indeterminate="false"
+          name="form-checkbox"
+          required=""
+          type="checkbox"
+          value="form-value"
         />
-      </svg>
-    </span>
-    <p
-      class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-er619e-MuiFormHelperText-root"
-      id="form-help"
-    >
-      This checkbox is required
-    </p>
-  </fieldset>
-</form>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+        />
+      </span>
+      <p
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+        id="form-help"
+      >
+        This checkbox is required
+      </p>
+    </fieldset>
+  </form>
+</div>
 `;
 
 exports[`DsCheckbox Component > Snapshot Tests > should match snapshots for real-world scenarios > checkbox-terms-scenario 1`] = `
 <div
-  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1qg4fmi-MuiPaper-root"
-  style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
 >
-  <p
-    class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-vjrxpc-MuiTypography-root"
-  >
-    Terms and Conditions
-  </p>
-  <label
-    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-required css-19opgx6-MuiFormControlLabel-root"
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-tdxhcn-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-1); --Paper-overlay: var(--overlays-1);"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiTypography-gutterBottom css-12scg6d-MuiTypography-root"
     >
-      <input
-        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-        data-indeterminate="false"
-        name="terms"
-        required=""
-        type="checkbox"
-        value="accepted"
-      />
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-        data-testid="CheckBoxOutlineBlankIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-        />
-      </svg>
+      Terms and Conditions
     </span>
-    <div>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
-      >
-        I accept the 
-        <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1orsvah-MuiTypography-root-MuiLink-root"
-          href="/terms"
-        >
-          terms and conditions
-        </a>
-      </p>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-required css-1dw706d-MuiFormControlLabel-root"
+    >
       <span
-        aria-hidden="true"
-        class="MuiFormControlLabel-asterisk css-1ppbxsa-MuiFormControlLabel-asterisk"
+        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-pxtq08-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
       >
-         
-        *
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          data-indeterminate="false"
+          name="terms"
+          required=""
+          type="checkbox"
+          value="accepted"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+        />
       </span>
-    </div>
-  </label>
-  <p
-    class="MuiTypography-root MuiTypography-body1 css-1lr0ivj-MuiTypography-root"
-  >
-    By checking this box, you agree to our terms of service.
-  </p>
+      <div>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          I accept the 
+          <a
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+            href="/terms"
+          >
+            terms and conditions
+          </a>
+        </span>
+        <span
+          aria-hidden="true"
+          class="MuiFormControlLabel-asterisk css-1jn3qvn-MuiFormControlLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </div>
+    </label>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-129as7y-MuiTypography-root"
+    >
+      By checking this box, you agree to our terms of service.
+    </span>
+  </div>
 </div>
 `;
 
