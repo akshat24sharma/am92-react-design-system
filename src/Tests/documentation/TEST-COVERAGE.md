@@ -1,25 +1,62 @@
 # Test Documentation Index
 
 ## Components
-- [DsAccordion](./Components/DsAccordion.md) - 53 tests across 10 categories
-- [DsButton](./Components/DsButton.md) - Basic component testing coverage
+- [DsAccordion](./Components/DsAccordion.md) - 52 tests across 10 categories
+- [DsBottomSheet](./Components/DsBottomSheet.md) - 61 tests with modal behavior and theme testing
+- [DsButton](./Components/DsButton.md) - 12 tests with form submission and icon handling
 - [DsCheckbox](./Components/DsCheckbox.md) - 75 tests across 12 categories (Enhanced Theme Testing)
-- [DsTextField](./Components/DsTextField.md) - 80 tests across 15 categories
+- [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 
 ## Running Tests
 ```bash
 npm test                 # Run all tests
 npm run test:coverage    # Generate coverage report
-npm run test:vitest      # Run specific component tests with Vitest
+npm run test:ui          # Run tests with Vitest UI
+npm run test:watch       # Run tests in watch mode
+npm run test:single      # Run single test file
 ```
 
+## Testing with Design System Theme 🎯
+All tests now **automatically include your design system theme** by default:
+
+```tsx
+// ✅ New Way - Auto-includes light theme
+import { render, screen } from '../../Tests/Mocks/testUtils';
+render(<DsCheckbox />); // Uses secondary color (design system default)
+
+// ✅ Test different themes  
+render(<DsCheckbox />, { colorScheme: 'dark' });
+
+// ✅ Edge case - no theme
+import { renderWithoutTheme } from '../../Tests/Mocks/testUtils';
+renderWithoutTheme(<DsCheckbox />); // Uses primary color (MUI default)
+```
+
+See [TESTING_GUIDELINES.md](./TESTING_GUIDELINES.md) for complete documentation.
+
+## Coverage Reports
+The coverage infrastructure generates multiple report formats:
+- **HTML Report**: `coverage/index.html` - Interactive browser-based coverage explorer
+- **Text Report**: Terminal output with summary table
+- **LCOV Report**: `coverage/lcov.info` - For IDE integrations and CI/CD
+- **JSON Report**: `coverage/coverage-final.json` - Machine-readable coverage data
+
+### Viewing Coverage
+1. Run: `npm run test:coverage`
+2. Open: `coverage/index.html` in your browser
+3. Browse by file/folder to see line-by-line coverage
+4. Red lines = uncovered, green lines = covered
+
 ## Test Statistics
-- **Total Components Documented:** 4
-- **Total Tests:** 208+ across all documented components
+- **Total Components Documented:** 5
+- **Total Tests:** 278 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
 - **Modern MUI Patterns:** slotProps system, deprecated pattern support
+- **Overall Coverage:** 57.84% statements, 73.19% branches, 17.85% functions
+- **Component Coverage Target:** 90% (currently not met)
+- **Global Coverage Target:** 80% (currently not met)
 
 ## Test Guidelines
 1. Each component should have its own test file

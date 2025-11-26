@@ -41,9 +41,65 @@ Always include the vitest environment declaration at the top of test files:
 ### Essential Imports
 ```tsx
 import { describe, expect, it, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor, renderWithoutTheme, testAllThemes } from "../../Tests/Mocks/testUtils";
 import userEvent from '@testing-library/user-event';
 import { ComponentName } from "./ComponentName.Component";
+```
+
+## Global Theme Setup ✅
+
+All tests now **automatically include your design system theme** by default. No need to manually wrap components with theme providers.
+
+### Basic Usage
+```tsx
+import { render, screen } from '../../Tests/Mocks/testUtils';
+
+// ✅ Automatically includes light theme
+render(<DsButton>Click me</DsButton>);
+
+// ✅ Test with different color schemes
+render(<DsButton>Click me</DsButton>, { colorScheme: 'dark' });
+render(<DsButton>Click me</DsButton>, { colorScheme: 'highContrast' });
+```
+
+### Advanced Testing Options
+```tsx
+import { 
+  render,           // Default with light theme
+  renderWithTheme,  // Explicit theme testing
+  renderWithoutTheme, // Edge case: no theme
+  testAllThemes     // Test across all color schemes
+} from '../../Tests/Mocks/testUtils';
+
+// ✅ Test edge case without theme
+const { container } = renderWithoutTheme(<DsButton />);
+
+// ✅ Test all themes at once
+testAllThemes(
+  (colorScheme) => <DsButton color="primary">{colorScheme}</DsButton>,
+  (container, colorScheme) => {
+    const button = container.querySelector('button');
+    expect(button).toHaveClass('MuiButton-colorPrimary');
+  }
+);
+```
+
+### Migration from Old Tests
+#### Before ❌
+```tsx
+import { render } from '@testing-library/react';
+import { renderWithTheme } from './themeTestUtils';
+
+// Had to manually apply theme
+const { container } = renderWithTheme(<DsCheckbox />);
+```
+
+#### After ✅
+```tsx
+import { render } from '../../Tests/Mocks/testUtils';
+
+// Theme automatically applied
+const { container } = render(<DsCheckbox />);
 ```
 
 ### Setup Pattern
@@ -1955,7 +2011,31 @@ import { DsTypography } from "../DsTypography/DsTypography.Component";
 
 ## Best Practices
 
-### 1. Test Descriptions
+### 1. Design System Theme Testing ✅
+- **Always use themed render**: `render(<DsComponent />)` automatically includes theme
+- **Test design system defaults**: Verify your custom default props work
+- **Multi-theme testing**: Use `testAllThemes` for comprehensive coverage
+```tsx
+// ✅ Good - Tests design system behavior
+it("should render with design system defaults", () => {
+  render(<DsCheckbox />); // Uses secondary color (design system default)
+  expect(checkbox.closest('.MuiCheckbox-root')).toHaveClass('MuiCheckbox-colorSecondary');
+});
+
+// ✅ Good - Tests across all themes
+testAllThemes(
+  (colorScheme) => <DsButton color="primary" data-testid={colorScheme} />,
+  (container, colorScheme) => {
+    const button = container.querySelector(`[data-testid="${colorScheme}"]`);
+    expect(button).toBeInTheDocument();
+  }
+);
+
+// ⚠️ Edge case only - Test raw MUI behavior
+const { container } = renderWithoutTheme(<DsButton />); // No theme applied
+```
+
+### 2. Test Descriptions
 - Use descriptive test names that explain the expected behavior
 - Follow the pattern: "should [expected behavior] when [condition]"
 - Group related tests in describe blocks
@@ -2348,10 +2428,9 @@ Use this template for new component test files:
  */
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor, renderWithoutTheme, testAllThemes } from "../../Tests/Mocks/testUtils";
 import userEvent from '@testing-library/user-event';
 import { ComponentName } from "./ComponentName.Component";
-import { renderWithTheme, testAllThemes } from "../../Tests/Mocks/themeTestUtils";
 import getColorScheme from "../../Theme/getColorScheme";
 import { PALETTE } from "../../Constants";
 import { 
@@ -2363,8 +2442,6 @@ import {
   DsFormLabel,
   DsFormHelperText
 } from "../index";
-
-// Note: Import theme testing utilities explicitly for better TypeScript support
 
 describe("ComponentName Component", () => {
   let user: ReturnType<typeof userEvent.setup>;
@@ -2390,10 +2467,67 @@ describe("ComponentName Component", () => {
   // PROPS VALIDATION TESTS
   // ============================
   describe("Props Validation", () => {
+  // ============================
+  // CORE RENDERING TESTS
+  // ============================
+  describe("Core Rendering", () => {
+    it("should render with design system theme by default", () => {
+      render(<ComponentName />); // Automatically includes theme
+      
+      const element = screen.getByRole("button"); // Adjust role as needed
+      expect(element).toBeInTheDocument();
+      // Test design system defaults here
+    });
+
     it("should accept and display custom props", () => {
       render(<ComponentName customProp="value" />);
       // Add assertions based on component behavior
     });
+
+    it("should handle edge case without theme", () => {
+      // Only use this for testing raw MUI behavior
+      const { container } = renderWithoutTheme(<ComponentName />);
+      // Test MUI defaults here
+    });
+  });
+
+  // ============================
+  // THEME TESTING
+  // ============================
+  describe("Theme Testing", () => {
+    it("should work across all color schemes", () => {
+      testAllThemes(
+        (colorScheme) => <ComponentName data-testid={`component-${colorScheme}`} />,
+        (container, colorScheme) => {
+          const component = container.querySelector(`[data-testid="component-${colorScheme}"]`);
+          expect(component).toBeInTheDocument();
+          
+          // Add theme-specific assertions here
+          const wrapperElement = container.firstChild as HTMLElement;
+          expect(wrapperElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+        }
+      );
+    });
+
+    it("should use design system colors", () => {
+      const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+      
+      colorSchemes.forEach(colorScheme => {
+        const { container, unmount } = render(<ComponentName color="primary" />, { colorScheme });
+        
+        // Verify theme-specific styling
+        const element = container.querySelector('.MuiComponent-root'); // Adjust selector
+        expect(element).toBeInTheDocument();
+        
+        unmount();
+      });
+    });
+  });
+
+  // ============================
+  // PROPS VALIDATION TESTS
+  // ============================
+  describe("Props Validation", () => {
 
     it("should handle slotProps for input customization", () => {
       render(

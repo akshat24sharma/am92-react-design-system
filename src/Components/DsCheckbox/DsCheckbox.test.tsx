@@ -20,10 +20,9 @@
  */
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, renderWithTheme, testAllThemes } from "../../Tests/Mocks/testUtils";
 import userEvent from '@testing-library/user-event';
 import { DsCheckbox } from "./DsCheckbox.Component";
-import { renderWithTheme, testAllThemes } from "../../Tests/Mocks/themeTestUtils";
 import getColorScheme from "../../Theme/getColorScheme";
 import { PALETTE } from "../../Constants";
 import { 
@@ -222,11 +221,13 @@ describe("DsCheckbox Component", () => {
       expect(checkbox).toBeDisabled();
     });
 
-    it("should render with default color (secondary)", () => {
+    it("should render with design system default color (secondary) with theme", () => {
+      // Using global render (which now includes theme by default)
       const { container } = render(<DsCheckbox />);
       
       const checkboxContainer = container.querySelector('.MuiCheckbox-root');
-      expect(checkboxContainer).toHaveClass("MuiCheckbox-colorPrimary"); // Default from DsCheckboxDefaultProps
+      // With theme applied, design system default should be secondary
+      expect(checkboxContainer).toHaveClass("MuiCheckbox-colorSecondary");
     });
 
     it("should render with custom color", () => {
