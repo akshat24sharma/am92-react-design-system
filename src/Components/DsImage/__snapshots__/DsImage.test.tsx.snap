@@ -1,0 +1,289 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsImage > Snapshot Tests > should match snapshot in error state > dsimage-error-state 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeMild ri-image-2-line css-1jdfoyj-MuiIcon-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsImage > Snapshot Tests > should match snapshot in loading state > dsimage-loading-state 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+      style="width: 100%; height: 100%;"
+    />
+    <picture
+      style="opacity: 0; visibility: hidden;"
+    >
+      <img
+        alt="Loading Test"
+        src="loading-test.jpg"
+        style="display: block; max-width: 100%;"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`DsImage > Snapshot Tests > should match snapshot with aspect ratio 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-axg43j"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeMild ri-image-2-line css-ue6043-MuiIcon-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsImage > Snapshot Tests > should match snapshot with custom props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="custom-wrapper MuiBox-root css-1nzvqh5"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-pulse css-hwfb2d-MuiSkeleton-root"
+      style="width: 100%; height: 100%;"
+    />
+    <picture
+      style="opacity: 0; visibility: hidden;"
+    >
+      <img
+        alt="Custom"
+        loaderprops="[object Object]"
+        src="custom.jpg"
+        style="position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%; display: block; max-width: 100%;"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`DsImage > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeMild ri-image-2-line css-1jdfoyj-MuiIcon-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsImage > Snapshot Tests > should match snapshot with responsive srcSet > dsimage-responsive 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+      style="width: 100%; height: 100%;"
+    />
+    <picture
+      style="opacity: 0; visibility: hidden;"
+    >
+      <source
+        alt="Mobile Image"
+        media="(max-width: 768px)"
+        srcset="mobile.jpg"
+      />
+      <img
+        alt="Desktop Image"
+        src="desktop.jpg"
+        style="display: block; max-width: 100%;"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`DsImage > Snapshot Tests > should match snapshot with srcSet 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+      style="width: 100%; height: 100%;"
+    />
+    <picture
+      style="opacity: 0; visibility: hidden;"
+    >
+      <img
+        alt="Snapshot Test"
+        src="snapshot-test.jpg"
+        style="display: block; max-width: 100%;"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`DsImage > Snapshot Tests > should match snapshot without theme > dsimage-no-theme 1`] = `
+<div
+  class="MuiBox-root css-1f8sh1y"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeMild ri-image-2-line css-1nf87oj-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`DsImage > Theme Testing > should apply theme-specific error icon styling > dsimage-error-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeMild ri-image-2-line css-1jdfoyj-MuiIcon-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsImage > Theme Testing > should apply theme-specific error icon styling > dsimage-error-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeMild ri-image-2-line css-1jdfoyj-MuiIcon-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsImage > Theme Testing > should apply theme-specific error icon styling > dsimage-error-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeMild ri-image-2-line css-1jdfoyj-MuiIcon-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsImage > Theme Testing > should apply theme-specific skeleton styling > dsimage-skeleton-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+      style="width: 100%; height: 100%;"
+    />
+    <picture
+      style="opacity: 0; visibility: hidden;"
+    >
+      <img
+        alt="Test"
+        src="test.jpg"
+        style="display: block; max-width: 100%;"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`DsImage > Theme Testing > should apply theme-specific skeleton styling > dsimage-skeleton-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+      style="width: 100%; height: 100%;"
+    />
+    <picture
+      style="opacity: 0; visibility: hidden;"
+    >
+      <img
+        alt="Test"
+        src="test.jpg"
+        style="display: block; max-width: 100%;"
+      />
+    </picture>
+  </div>
+</div>
+`;
+
+exports[`DsImage > Theme Testing > should apply theme-specific skeleton styling > dsimage-skeleton-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1f8sh1y"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+      style="width: 100%; height: 100%;"
+    />
+    <picture
+      style="opacity: 0; visibility: hidden;"
+    >
+      <img
+        alt="Test"
+        src="test.jpg"
+        style="display: block; max-width: 100%;"
+      />
+    </picture>
+  </div>
+</div>
+`;
