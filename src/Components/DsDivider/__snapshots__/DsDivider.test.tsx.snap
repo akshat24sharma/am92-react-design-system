@@ -1,0 +1,186 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot across all theme modes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    aria-orientation="horizontal"
+    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-sm7thq-MuiDivider-root"
+    ds-size="M"
+    role="separator"
+  >
+    <span
+      class="MuiDivider-wrapper css-ntzvud-MuiDivider-wrapper"
+    >
+      Theme Snapshot Test
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot across all theme modes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    aria-orientation="horizontal"
+    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-sm7thq-MuiDivider-root"
+    ds-size="M"
+    role="separator"
+  >
+    <span
+      class="MuiDivider-wrapper css-ntzvud-MuiDivider-wrapper"
+    >
+      Theme Snapshot Test
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot across all theme modes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    aria-orientation="horizontal"
+    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-sm7thq-MuiDivider-root"
+    ds-size="M"
+    role="separator"
+  >
+    <span
+      class="MuiDivider-wrapper css-ntzvud-MuiDivider-wrapper"
+    >
+      Theme Snapshot Test
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with complex content structure 1`] = `
+<div
+  class="MuiBox-root css-19midj6"
+>
+  <div
+    aria-orientation="horizontal"
+    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1oljykh-MuiDivider-root"
+    ds-size="L"
+    role="separator"
+  >
+    <span
+      class="MuiDivider-wrapper css-1134oje-MuiDivider-wrapper"
+    >
+      Complex Content Structure
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<hr
+  class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+/>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with different sizes > size-L 1`] = `
+<hr
+  class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+  ds-size="L"
+/>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with different sizes > size-M 1`] = `
+<hr
+  class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+  ds-size="M"
+/>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with text alignment variants > textAlign-center 1`] = `
+<div
+  aria-orientation="horizontal"
+  class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1oljykh-MuiDivider-root"
+  role="separator"
+>
+  <span
+    class="MuiDivider-wrapper css-1134oje-MuiDivider-wrapper"
+  >
+    Aligned Content
+  </span>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with text alignment variants > textAlign-left 1`] = `
+<div
+  aria-orientation="horizontal"
+  class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren MuiDivider-textAlignLeft css-92hj5s-MuiDivider-root"
+  role="separator"
+>
+  <span
+    class="MuiDivider-wrapper css-1134oje-MuiDivider-wrapper"
+  >
+    Aligned Content
+  </span>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with text alignment variants > textAlign-right 1`] = `
+<div
+  aria-orientation="horizontal"
+  class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren MuiDivider-textAlignRight css-16afoiy-MuiDivider-root"
+  role="separator"
+>
+  <span
+    class="MuiDivider-wrapper css-1134oje-MuiDivider-wrapper"
+  >
+    Aligned Content
+  </span>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with text content 1`] = `
+<div
+  aria-orientation="horizontal"
+  class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1oljykh-MuiDivider-root"
+  role="separator"
+>
+  <span
+    class="MuiDivider-wrapper css-1134oje-MuiDivider-wrapper"
+  >
+    Snapshot Text Content
+  </span>
+</div>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with variants > variant-fullWidth 1`] = `
+<hr
+  class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+/>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with variants > variant-inset 1`] = `
+<hr
+  class="MuiDivider-root MuiDivider-inset css-gyhshc-MuiDivider-root"
+/>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with variants > variant-middle 1`] = `
+<hr
+  class="MuiDivider-root MuiDivider-middle css-mhk9d7-MuiDivider-root"
+/>
+`;
+
+exports[`DsDivider Component > Snapshot Tests > should match snapshot with vertical orientation 1`] = `
+<div
+  class="MuiBox-root css-18ld0s"
+>
+  <div
+    aria-orientation="vertical"
+    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-aif5q5-MuiDivider-root"
+    role="separator"
+  />
+</div>
+`;

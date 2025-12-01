@@ -21,6 +21,10 @@
 - [DsAvatar](./Components/DsAvatar.md) -  45 tests across 10 categories and theme testing
 - [DsInputAdornment](./Components/DsInputAdornment.md) -  56 tests across 11 categories and theme testing
 - [DsTabs](./Components/DsTabs.md) -  57 tests across 11 categories and theme testing
+- [DsChip](./Components/DsChip.md) - 22 tests across 10 categories with theme testing and comprehensive snapshot coverage
+- [DsDialog](./Components/DsDialog.md) - 68 tests across 11 categories with comprehensive theme and snapshot testing
+- [DsDivider](./Components/DsDivider.md) - 29 tests across 10 categories with theme compatibility and snapshot coverage
+- [DsTable](./Components/DsTable.md) - 25 tests across 10 categories with theme testing and comprehensive snapshot coverage
 
 
 ## Running Tests
