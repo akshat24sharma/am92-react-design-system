@@ -5,6 +5,7 @@
 - [DsBottomSheet](./Components/DsBottomSheet.md) - 61 tests with modal behavior and theme testing
 - [DsButton](./Components/DsButton.md) - 12 tests with form submission and icon handling
 - [DsCheckbox](./Components/DsCheckbox.md) - 75 tests across 12 categories (Enhanced Theme Testing)
+- [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration and snapshot testing
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 
 ## Running Tests
@@ -48,8 +49,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 5
-- **Total Tests:** 278 across all tested components
+- **Total Components Documented:** 6
+- **Total Tests:** 342 across all tested components (278 + 64 for DsRadio)
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
@@ -148,4 +149,4 @@ When adding new component tests:
 8. **✅ REQUIRED: Use design system components** exclusively in test scenarios
 
 ---
-*Last updated: November 25, 2025*
+*Last updated: December 1, 2025*
