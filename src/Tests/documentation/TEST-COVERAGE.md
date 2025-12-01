@@ -55,7 +55,7 @@ The coverage infrastructure generates multiple report formats:
 
 ## Test Statistics
 - **Total Components Documented:** 12
-- **Total Tests:** 577 across all tested components 
+- **Total Tests:** 577 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
