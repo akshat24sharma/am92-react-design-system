@@ -1,0 +1,391 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsLink Component > Real-world Scenarios > should render a navigation menu with links 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <nav>
+    <a
+      class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+      href="/home"
+    >
+      Home
+    </a>
+    <a
+      class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+      href="/about"
+    >
+      About
+    </a>
+    <a
+      class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+      href="/contact"
+    >
+      Contact
+    </a>
+  </nav>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot in different themes > DsLink-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    Themed Snapshot Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot in different themes > DsLink-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    Themed Snapshot Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot in different themes > DsLink-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    Themed Snapshot Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineAlways css-8fywuw-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    always
+     - 
+    primary
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 2`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineAlways css-nzcshz-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    always
+     - 
+    secondary
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 3`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineAlways css-bkjeui-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    always
+     - 
+    error
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 4`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineAlways css-17cr7ky-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    always
+     - 
+    warning
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 5`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineAlways css-129pnvz-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    always
+     - 
+    info
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 6`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineAlways css-n3xj1p-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    always
+     - 
+    success
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 7`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    hover
+     - 
+    primary
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 8`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    hover
+     - 
+    secondary
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 9`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-5rmr2n-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    hover
+     - 
+    error
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 10`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-19mk9yw-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    hover
+     - 
+    warning
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 11`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1mx5m5r-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    hover
+     - 
+    info
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 12`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1s6sifv-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    hover
+     - 
+    success
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 13`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineNone css-xefura-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    none
+     - 
+    primary
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 14`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineNone css-12ihgua-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    none
+     - 
+    secondary
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 15`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineNone css-1wuyjza-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    none
+     - 
+    error
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 16`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineNone css-14g8vvg-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    none
+     - 
+    warning
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 17`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineNone css-wou1te-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    none
+     - 
+    info
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with all variants of underline and color 18`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineNone css-a94be1-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    none
+     - 
+    success
+     Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+    href="#"
+  >
+    Default Link
+  </a>
+</div>
+`;

@@ -1,0 +1,171 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsList Component > Snapshot Tests > should match snapshot with custom styles 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <ul
+    class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    style="background-color: lightblue; padding: 16px;"
+  >
+    <li
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1rq1062-MuiTypography-root"
+        >
+          Item 1
+        </span>
+      </div>
+    </li>
+    <li
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1rq1062-MuiTypography-root"
+        >
+          Item 2
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`DsList Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <ul
+    class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+  >
+    <li
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1rq1062-MuiTypography-root"
+        >
+          Item 1
+        </span>
+      </div>
+    </li>
+    <li
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1rq1062-MuiTypography-root"
+        >
+          Item 2
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`DsList Component > Snapshot Tests > should match snapshot with dense variant 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <ul
+    class="MuiList-root MuiList-padding MuiList-dense css-b7dj7n-MuiList-root"
+  >
+    <li
+      class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-qyw6ft-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body2 MuiListItemText-primary css-wdo7p7-MuiTypography-root"
+        >
+          Item 1
+        </span>
+      </div>
+    </li>
+    <li
+      class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-qyw6ft-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body2 MuiListItemText-primary css-wdo7p7-MuiTypography-root"
+        >
+          Item 2
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`DsList Component > Snapshot Tests > should match snapshot with nested lists 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <ul
+    class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+  >
+    <li
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+    >
+      <div
+        class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1rq1062-MuiTypography-root"
+        >
+          Parent Item
+        </span>
+      </div>
+      <ul
+        class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+      >
+        <li
+          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+        >
+          <div
+            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1rq1062-MuiTypography-root"
+            >
+              Child Item 1
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+        >
+          <div
+            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1rq1062-MuiTypography-root"
+            >
+              Child Item 2
+            </span>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;

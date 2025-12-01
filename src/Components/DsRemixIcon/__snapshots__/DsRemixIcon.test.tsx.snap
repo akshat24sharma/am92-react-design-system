@@ -1,0 +1,411 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsRemixIcon Component > Theme Testing > should render correctly across all color schemes with proper theme colors > muiIcon-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMild ri-star-line css-18a1922-MuiIcon-root"
+    data-testid="icon-dark"
+  />
+</div>
+`;
+
+exports[`DsRemixIcon Component > Theme Testing > should render correctly across all color schemes with proper theme colors > muiIcon-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMild ri-star-line css-18a1922-MuiIcon-root"
+    data-testid="icon-highContrast"
+  />
+</div>
+`;
+
+exports[`DsRemixIcon Component > Theme Testing > should render correctly across all color schemes with proper theme colors > muiIcon-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMild ri-star-line css-18a1922-MuiIcon-root"
+    data-testid="icon-light"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot across all themes > icon-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-moon-line css-h7bicg-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot across all themes > icon-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-moon-line css-h7bicg-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot across all themes > icon-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-moon-line css-h7bicg-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot in a real-world scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-axw7ok"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+    />
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularLarge css-m0flxp-MuiTypography-root"
+    >
+      Home
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with additional props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-heart-line css-h7bicg-MuiIcon-root"
+    data-testid="remixIcon"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with custom styles 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-check-line css-h7bicg-MuiIcon-root"
+    style="color: red; font-size: 24px;"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-star-line css-h7bicg-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different colors > icon-color-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorError MuiIcon-fontSizeMild ri-alarm-line css-4e1m1s-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different colors > icon-color-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorInfo MuiIcon-fontSizeMild ri-alarm-line css-fiwrpp-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different colors > icon-color-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMild ri-alarm-line css-18a1922-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different colors > icon-color-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeMild ri-alarm-line css-8wzq8t-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different colors > icon-color-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorSuccess MuiIcon-fontSizeMild ri-alarm-line css-1c6y9ge-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different colors > icon-color-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-colorWarning MuiIcon-fontSizeMild ri-alarm-line css-3gtjlw-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-bitterCold 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-settings-line css-lcbkw8-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-blazzing 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeBlazzing ri-settings-line css-1t47acy-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-blizzard 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeBlizzard ri-settings-line css-183bvci-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-cold 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeCold ri-settings-line css-1lasb3o-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-cool 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeCool ri-settings-line css-7ln0aa-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-frigid 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeFrigid ri-settings-line css-19mjaej-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-frostbite 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeFrostbite ri-settings-line css-9ggpx0-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-hot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeHot ri-settings-line css-snkdk1-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-iceAge 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeIceAge ri-settings-line css-1xx2zn4-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-large 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeLarge ri-settings-line css-18x6y8j-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-medium 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-settings-line css-1pnry67-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-mild 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-settings-line css-h7bicg-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-scorched 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeScorched ri-settings-line css-nyxq4e-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-small 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeSmall ri-settings-line css-20vhad-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-torrid 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeTorrid ri-settings-line css-13fp23k-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-tropical 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeTropical ri-settings-line css-12q4wn4-MuiIcon-root"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests > should match the snapshot with different fontSize sizes > icon-size-warm 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    aria-hidden="true"
+    class="notranslate MuiIcon-root MuiIcon-fontSizeWarm ri-settings-line css-1r1nroe-MuiIcon-root"
+  />
+</div>
+`;
