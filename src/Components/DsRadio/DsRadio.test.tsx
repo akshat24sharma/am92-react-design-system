@@ -26,6 +26,8 @@ import { DsRadio } from "./DsRadio.Component";
 import { DsRadioGroup } from "../DsRadioGroup";
 import { DsFormControl, DsFormLabel, DsBox } from "../index";
 import React from "react";
+import getColorScheme from "../../Theme/getColorScheme";
+import { PALETTE } from "../../Constants";
 
 describe("DsRadio Component", () => {
   let user: ReturnType<typeof userEvent.setup>;
@@ -709,15 +711,75 @@ describe("DsRadio Component", () => {
       expect(screen.getByLabelText("Large")).toBeInTheDocument();
     });
 
-    it("should integrate with theme correctly", () => {
-      testAllThemes(
-        (colorScheme) => <DsRadio checked label={`Radio in ${colorScheme}`} />,
-        (container, colorScheme) => {
-          const radio = container.querySelector('.MuiRadio-root');
-          expect(radio).toHaveClass('MuiRadio-colorSecondary');
-          expect(radio).toBeInTheDocument();
+    it("should integrate with theme correctly across all color schemes", () => {
+      // Get the complete color scheme from theme
+      const themeColorScheme = getColorScheme(PALETTE);
+      const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+
+      // Comprehensive theme testing for all states
+      colorSchemes.forEach(colorScheme => {
+        // Test unchecked state
+        const { container: uncheckedContainer, unmount: unmountUnchecked } = renderWithTheme(
+          <DsRadio label={`Unchecked ${colorScheme}`} />, 
+          colorScheme
+        );
+        
+        // Test checked state  
+        const { container: checkedContainer, unmount: unmountChecked } = renderWithTheme(
+          <DsRadio checked label={`Checked ${colorScheme}`} />, 
+          colorScheme
+        );
+        
+        // Test disabled state
+        const { container: disabledContainer, unmount: unmountDisabled } = renderWithTheme(
+          <DsRadio disabled label={`Disabled ${colorScheme}`} />, 
+          colorScheme
+        );
+
+        // Validate theme data structure (once per color scheme)
+        const schemeData = themeColorScheme[colorScheme];
+        const expectedSecondaryColor = (schemeData?.palette?.secondary as any)?.main;
+        const expectedTextColor = (schemeData?.palette?.text as any)?.primary;
+        const expectedBackgroundColor = (schemeData?.palette?.background as any)?.paper;
+        
+        // Theme colors validation
+        expect(expectedSecondaryColor).toBeTruthy();
+        expect(expectedSecondaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+        expect(expectedTextColor).toBeTruthy();
+        expect(expectedBackgroundColor).toBeTruthy();
+
+        // Test unchecked state specifics
+        const uncheckedRadio = uncheckedContainer.querySelector('.MuiRadio-root');
+        expect(uncheckedRadio).toHaveClass('MuiRadio-colorSecondary');
+        expect(uncheckedContainer.querySelector('.ri-checkbox-blank-circle-line')).toBeInTheDocument();
+        expect(uncheckedContainer.firstChild as HTMLElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+
+        // Test checked state specifics
+        const checkedRadio = checkedContainer.querySelector('.MuiRadio-root');
+        expect(checkedRadio).toHaveClass('MuiRadio-colorSecondary', 'Mui-checked');
+        const checkedIcon = checkedContainer.querySelector('.ri-radio-button-line');
+        expect(checkedIcon).toBeInTheDocument();
+        expect(checkedIcon).toHaveStyle('font-size: var(--ds-typo-fontSizeBitterCold)');
+        expect(checkedContainer.firstChild as HTMLElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+
+        // Test disabled state specifics
+        const disabledRadio = disabledContainer.querySelector('.MuiRadio-root');
+        expect(disabledRadio).toHaveClass('MuiRadio-colorSecondary', 'Mui-disabled');
+        const disabledFormLabel = disabledContainer.querySelector('.MuiFormControlLabel-root');
+        expect(disabledFormLabel).toHaveClass('Mui-disabled');
+        expect(disabledContainer.firstChild as HTMLElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+
+        // Test computed styles (once per color scheme to avoid repetition)
+        if (checkedIcon) {
+          const iconStyles = window.getComputedStyle(checkedIcon as HTMLElement);
+          expect(iconStyles.fontSize).toBe('var(--ds-typo-fontSizeBitterCold)');
         }
-      );
+
+        // Cleanup
+        unmountUnchecked();
+        unmountChecked();
+        unmountDisabled();
+      });
     });
   });
 

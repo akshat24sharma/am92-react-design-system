@@ -713,7 +713,7 @@ exports[`DsRadio Component > Snapshot Tests > should match snapshot with nested 
             >
               <input
                 class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-                name=":r2k:"
+                name=":r2q:"
                 type="radio"
                 value="small"
               />
@@ -741,7 +741,7 @@ exports[`DsRadio Component > Snapshot Tests > should match snapshot with nested 
               <input
                 checked=""
                 class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-                name=":r2k:"
+                name=":r2q:"
                 type="radio"
                 value="medium"
               />
@@ -768,7 +768,7 @@ exports[`DsRadio Component > Snapshot Tests > should match snapshot with nested 
             >
               <input
                 class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-                name=":r2k:"
+                name=":r2q:"
                 type="radio"
                 value="large"
               />
