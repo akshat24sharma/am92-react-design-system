@@ -5,7 +5,7 @@
 - [DsBottomSheet](./Components/DsBottomSheet.md) - 61 tests with modal behavior and theme testing
 - [DsButton](./Components/DsButton.md) - 12 tests with form submission and icon handling
 - [DsCheckbox](./Components/DsCheckbox.md) - 75 tests across 12 categories (Enhanced Theme Testing)
-- [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration and snapshot testing
+- [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 - [DsSelect](./Components/DsSelect.md) -  67 tests across 12 categories (Enhanced Theme Testing)
 - [DsRemixIcon](./Components/DsRemixIcon.md) -  25 tests across 7 categories and theme testing

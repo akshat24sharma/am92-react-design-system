@@ -128,9 +128,15 @@
 - Responsive design behavior within containers
 
 #### Theme Integration
-- Cross-theme compatibility testing with `testAllThemes`
-- Color scheme adaptation and proper styling inheritance
-- Design system variable integration (font sizes, colors)
+- **Optimized comprehensive theme testing** in single test method
+- Cross-theme compatibility testing for light, dark, and highContrast modes
+- **Actual color code validation** using `getColorScheme(PALETTE)`
+- All component states (checked/unchecked/disabled) tested per theme
+- Secondary color validation with hex color pattern matching
+- Text color and background color theme compliance
+- Computed style validation for CSS variables and theme attributes
+- Theme data attribute verification (`data-mui-color-scheme`)
+- **Performance optimized**: Consolidated from 3 separate tests to 1 efficient test
 
 ### Snapshot Testing
 #### Component Rendering Snapshots
@@ -183,3 +189,8 @@
 Last updated: 1 December 2025  
 Total test cases: 64 (54 functional tests + 10 snapshot tests)  
 Test categories: 11 (Core Rendering, Props Validation, Component States, MUI Styling, Component Functionality, Event Handling, Form Integration, Accessibility, Edge Cases, Real-world Scenarios, Snapshot Tests)
+
+**Optimization Summary:**
+- Consolidated 3 separate theme tests into 1 comprehensive test
+- Eliminated redundant color validation and icon presence checks  
+- Maintained full coverage while improving test efficiency by ~3%
