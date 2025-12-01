@@ -925,7 +925,10 @@ describe("Theme Testing", () => {
 Import the theme testing utilities at the top of your test files:
 
 ```tsx
+// 🎯 ESSENTIAL: Color testing imports
 import { renderWithTheme, testAllThemes } from "../../Tests/Mocks/themeTestUtils";
+import getColorScheme from "../../Theme/getColorScheme";
+import { PALETTE } from "../../Constants";
 
 describe("Theme Testing", () => {
   it("should render correctly in light theme", () => {
@@ -1092,7 +1095,123 @@ describe("Theme Testing", () => {
 });
 ```
 
-#### 4. Using testAllThemes Utility (Global Helper)
+#### 4. Advanced Color Testing Pattern (DsRadio Optimization Model)
+
+**🎯 RECOMMENDED**: Use this comprehensive color testing pattern established for DsRadio component:
+
+```tsx
+describe("Theme Testing", () => {
+  it("should integrate with theme correctly across all color schemes", () => {
+    // Import theme utilities once
+    const themeColorScheme = getColorScheme(PALETTE);
+    const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+
+    // Comprehensive theme testing for all states in one test
+    colorSchemes.forEach(colorScheme => {
+      // Test multiple component states per theme
+      const { container: uncheckedContainer, unmount: unmountUnchecked } = renderWithTheme(
+        <ComponentName label={`Unchecked ${colorScheme}`} />, 
+        colorScheme
+      );
+      
+      const { container: checkedContainer, unmount: unmountChecked } = renderWithTheme(
+        <ComponentName checked label={`Checked ${colorScheme}`} />, 
+        colorScheme
+      );
+      
+      const { container: disabledContainer, unmount: unmountDisabled } = renderWithTheme(
+        <ComponentName disabled label={`Disabled ${colorScheme}`} />, 
+        colorScheme
+      );
+
+      // 🎯 ACTUAL COLOR VALIDATION (once per color scheme)
+      const schemeData = themeColorScheme[colorScheme];
+      
+      // Validate primary colors exist and are valid hex codes
+      const expectedPrimaryColor = (schemeData?.palette?.primary as any)?.main;
+      const expectedSecondaryColor = (schemeData?.palette?.secondary as any)?.main;
+      const expectedTextColor = (schemeData?.palette?.text as any)?.primary;
+      const expectedBackgroundColor = (schemeData?.palette?.background as any)?.paper;
+      
+      // Color format validation
+      expect(expectedPrimaryColor).toBeTruthy();
+      expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+      expect(expectedSecondaryColor).toBeTruthy();
+      expect(expectedSecondaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+      expect(expectedTextColor).toBeTruthy();
+      expect(expectedBackgroundColor).toBeTruthy();
+
+      // 🎯 COMPONENT STATE-SPECIFIC TESTING
+      // Test unchecked state
+      const uncheckedElement = uncheckedContainer.querySelector('.MuiCheckbox-root');
+      expect(uncheckedElement).toHaveClass('MuiCheckbox-colorPrimary'); // or colorSecondary
+      expect(uncheckedContainer.firstChild as HTMLElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+
+      // Test checked state with icon validation
+      const checkedElement = checkedContainer.querySelector('.MuiCheckbox-root');
+      expect(checkedElement).toHaveClass('MuiCheckbox-colorPrimary', 'Mui-checked');
+      const checkedIcon = checkedContainer.querySelector('.checked-icon-selector'); // Adjust selector
+      if (checkedIcon) {
+        expect(checkedIcon).toHaveStyle('font-size: var(--ds-typo-fontSizeBitterCold)');
+      }
+
+      // Test disabled state
+      const disabledElement = disabledContainer.querySelector('.MuiCheckbox-root');
+      expect(disabledElement).toHaveClass('MuiCheckbox-colorPrimary', 'Mui-disabled');
+
+      // 🎯 CSS VARIABLE TESTING
+      // Test that design system CSS variables are applied correctly
+      if (checkedIcon) {
+        const iconStyles = window.getComputedStyle(checkedIcon as HTMLElement);
+        expect(iconStyles.fontSize).toBe('var(--ds-typo-fontSizeBitterCold)');
+      }
+
+      // 🎯 THEME ATTRIBUTE VALIDATION
+      expect(checkedContainer.firstChild as HTMLElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+      expect(disabledContainer.firstChild as HTMLElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+
+      // Cleanup memory
+      unmountUnchecked();
+      unmountChecked();
+      unmountDisabled();
+    });
+  });
+});
+```
+
+##### Key Benefits of This Pattern:
+- **Eliminates duplication**: Tests all themes and states in one consolidated test
+- **Actual color validation**: Uses `getColorScheme(PALETTE)` for real theme colors
+- **Hex color verification**: Validates color format with regex patterns
+- **CSS variable testing**: Ensures design system variables are correctly applied
+- **Memory efficient**: Proper cleanup with unmount() calls
+- **Comprehensive coverage**: All component states tested per theme
+- **Performance optimized**: Reduces test count while maintaining full coverage
+
+##### Color Testing Best Practices:
+```tsx
+// ✅ DO: Test color existence and format
+const expectedColor = (schemeData?.palette?.primary as any)?.main;
+expect(expectedColor).toBeTruthy();
+expect(expectedColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+
+// ✅ DO: Test CSS classes for color application
+expect(element).toHaveClass('MuiCheckbox-colorPrimary');
+
+// ✅ DO: Validate design system CSS variables
+expect(iconElement).toHaveStyle('font-size: var(--ds-typo-fontSizeBitterCold)');
+
+// ✅ DO: Test theme attribute application
+expect(rootElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+
+// ❌ DON'T: Test hardcoded color values
+expect(element).toHaveStyle('color: #97144D'); // Will break with theme changes
+
+// ❌ DON'T: Use manual color mapping
+const manualColors = { light: '#97144D', dark: '#97144D' }; // Duplicates theme logic
+```
+
+#### 5. Using testAllThemes Utility (Global Helper)
 
 ```tsx
 it("should use testAllThemes utility for efficient theme testing", () => {
@@ -1134,7 +1253,19 @@ const themeColorScheme = getColorScheme(PALETTE);
 const actualColors = themeColorScheme[colorScheme].palette;
 ```
 
-#### 3. Incomplete Theme Coverage
+#### 3. Missing Color Format Validation
+```tsx
+// ❌ WRONG - No validation of color format
+const color = themeColorScheme.light.palette.primary.main;
+expect(color).toBeTruthy(); // Not enough!
+
+// ✅ CORRECT - Validate hex color format
+const expectedColor = (schemeData?.palette?.primary as any)?.main;
+expect(expectedColor).toBeTruthy();
+expect(expectedColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+```
+
+#### 4. Incomplete Theme Coverage
 ```tsx
 // ❌ WRONG - Missing highContrast theme
 const themes = ['light', 'dark']; // Missing highContrast!
@@ -1143,7 +1274,7 @@ const themes = ['light', 'dark']; // Missing highContrast!
 const colorSchemes = ['light', 'dark', 'highContrast'] as const;
 ```
 
-#### 4. Wrong Provider Usage
+#### 5. Wrong Provider Usage
 ```tsx
 // ❌ WRONG - Deprecated provider
 <CssVarsProvider theme={theme}>
@@ -1152,12 +1283,38 @@ const colorSchemes = ['light', 'dark', 'highContrast'] as const;
 <ThemeProvider theme={theme}>
 ```
 
+#### 6. Missing CSS Variable Testing
+```tsx
+// ❌ INCOMPLETE - Not testing design system variables
+expect(element).toHaveClass('MuiButton-root');
+
+// ✅ COMPLETE - Test design system CSS variables
+const iconElement = container.querySelector('.design-system-icon');
+expect(iconElement).toHaveStyle('font-size: var(--ds-typo-fontSizeBitterCold)');
+```
+
+#### 7. Memory Leaks in Theme Testing
+```tsx
+// ❌ WRONG - No cleanup in theme loops
+colorSchemes.forEach(colorScheme => {
+  const { container } = renderWithTheme(<Component />, colorScheme);
+  // Missing cleanup - causes memory leaks
+});
+
+// ✅ CORRECT - Proper cleanup
+colorSchemes.forEach(colorScheme => {
+  const { container, unmount } = renderWithTheme(<Component />, colorScheme);
+  // ... tests ...
+  unmount(); // Essential for memory management
+});
+```
+
 ### Theme Testing Requirements Checklist
 
 Before submitting a component for review, ensure:
 
 - ✅ **No hardcoded colors** - All color testing uses theme configuration
-- ✅ **Uses getColorScheme function** - No manual color mapping
+- ✅ **Uses getColorScheme function** - Import from `../../Theme/getColorScheme` and `../../Constants`
 - ✅ **All three themes tested** - light, dark, and highContrast
 - ✅ **ThemeProvider used** - Not deprecated CssVarsProvider  
 - ✅ **CSS class testing** - Instead of style value testing
@@ -1166,6 +1323,11 @@ Before submitting a component for review, ensure:
 - ✅ **Theme context validation** - data-mui-color-scheme attribute checked
 - ✅ **Color variant testing** - All color props tested across themes
 - ✅ **Efficient test consolidation** - Avoid redundant theme tests
+- ✅ **🎯 ACTUAL COLOR VALIDATION** - Hex color pattern validation with regex
+- ✅ **🎯 CSS VARIABLE TESTING** - Design system variables verified
+- ✅ **🎯 COMPONENT STATE COVERAGE** - All states (checked/unchecked/disabled) per theme
+- ✅ **🎯 MEMORY CLEANUP** - Proper unmount() calls in theme loops
+- ✅ **🎯 CONSOLIDATED TESTING** - Single comprehensive theme test vs multiple separate tests
 
 ### Theme Testing Performance
 
@@ -1206,6 +1368,77 @@ it("should work with primary color in high contrast theme", () => { /* ... */ })
 ```
 
 Remember: Theme testing is about ensuring your components work correctly within the theme system, not testing the theme system itself. Focus on component behavior, CSS class application, and visual consistency across all supported theme modes.
+
+### 🎯 Perfect Color Testing Summary (DsRadio Pattern)
+
+**Use this proven pattern for comprehensive color testing:**
+
+```tsx
+// ✅ PERFECT COLOR TESTING PATTERN
+it("should integrate with theme correctly across all color schemes", () => {
+  const themeColorScheme = getColorScheme(PALETTE);
+  const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+
+  colorSchemes.forEach(colorScheme => {
+    // 1. Render all component states per theme
+    const { container: uncheckedContainer, unmount: unmountUnchecked } = renderWithTheme(
+      <ComponentName label={`Test ${colorScheme}`} />, colorScheme
+    );
+    const { container: checkedContainer, unmount: unmountChecked } = renderWithTheme(
+      <ComponentName checked label={`Checked ${colorScheme}`} />, colorScheme
+    );
+    const { container: disabledContainer, unmount: unmountDisabled } = renderWithTheme(
+      <ComponentName disabled label={`Disabled ${colorScheme}`} />, colorScheme
+    );
+
+    // 2. Actual theme color validation (once per theme)
+    const schemeData = themeColorScheme[colorScheme];
+    const expectedPrimaryColor = (schemeData?.palette?.primary as any)?.main;
+    const expectedSecondaryColor = (schemeData?.palette?.secondary as any)?.main;
+    const expectedTextColor = (schemeData?.palette?.text as any)?.primary;
+    
+    // 3. Color format validation
+    expect(expectedPrimaryColor).toBeTruthy();
+    expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    expect(expectedSecondaryColor).toBeTruthy();
+    expect(expectedSecondaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    expect(expectedTextColor).toBeTruthy();
+
+    // 4. Component-specific validations per state
+    const uncheckedElement = uncheckedContainer.querySelector('.MuiCheckbox-root');
+    expect(uncheckedElement).toHaveClass('MuiCheckbox-colorPrimary');
+    expect(uncheckedContainer.firstChild as HTMLElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+
+    const checkedElement = checkedContainer.querySelector('.MuiCheckbox-root');
+    expect(checkedElement).toHaveClass('MuiCheckbox-colorPrimary', 'Mui-checked');
+    
+    const disabledElement = disabledContainer.querySelector('.MuiCheckbox-root');
+    expect(disabledElement).toHaveClass('MuiCheckbox-colorPrimary', 'Mui-disabled');
+
+    // 5. CSS Variables validation (design system specific)
+    const iconElement = checkedContainer.querySelector('.design-system-icon');
+    if (iconElement) {
+      expect(iconElement).toHaveStyle('font-size: var(--ds-typo-fontSizeBitterCold)');
+    }
+
+    // 6. Memory cleanup
+    unmountUnchecked();
+    unmountChecked();
+    unmountDisabled();
+  });
+});
+```
+
+**Key Color Testing Requirements:**
+- ✅ **Import**: `getColorScheme` from `../../Theme/getColorScheme` and `PALETTE` from `../../Constants`
+- ✅ **Validate**: Actual hex color codes with regex `/^#[0-9A-Fa-f]{6}$/`
+- ✅ **Test**: All three themes (light, dark, highContrast) 
+- ✅ **Cover**: All component states (checked, unchecked, disabled) per theme
+- ✅ **Check**: CSS classes instead of hardcoded color values
+- ✅ **Verify**: Design system CSS variables (e.g., `var(--ds-typo-fontSizeBitterCold)`)
+- ✅ **Confirm**: Theme attributes (`data-mui-color-scheme`)
+- ✅ **Cleanup**: Proper `unmount()` calls to prevent memory leaks
+- ✅ **Consolidate**: Single comprehensive test vs multiple separate tests
 
 #### 3. Comprehensive Theme Testing (Using Global Utilities)
 
