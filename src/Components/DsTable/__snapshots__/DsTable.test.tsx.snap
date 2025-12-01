@@ -1,0 +1,427 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot across all theme modes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <table
+    class="MuiTable-root css-4y3h6f-MuiTable-root"
+  >
+    <thead
+      class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+    >
+      <tr
+        class="MuiTableRow-root MuiTableRow-head css-hklrd9-MuiTableRow-root"
+      >
+        <th
+          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1i3zqkn-MuiTableCell-root"
+          scope="col"
+        >
+          Theme Header
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+    >
+      <tr
+        class="MuiTableRow-root css-hklrd9-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-dmt8ap-MuiTableCell-root"
+        >
+          Theme Body
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot across all theme modes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <table
+    class="MuiTable-root css-4y3h6f-MuiTable-root"
+  >
+    <thead
+      class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+    >
+      <tr
+        class="MuiTableRow-root MuiTableRow-head css-hklrd9-MuiTableRow-root"
+      >
+        <th
+          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1i3zqkn-MuiTableCell-root"
+          scope="col"
+        >
+          Theme Header
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+    >
+      <tr
+        class="MuiTableRow-root css-hklrd9-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-dmt8ap-MuiTableCell-root"
+        >
+          Theme Body
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot across all theme modes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <table
+    class="MuiTable-root css-4y3h6f-MuiTable-root"
+  >
+    <thead
+      class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+    >
+      <tr
+        class="MuiTableRow-root MuiTableRow-head css-hklrd9-MuiTableRow-root"
+      >
+        <th
+          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1i3zqkn-MuiTableCell-root"
+          scope="col"
+        >
+          Theme Header
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+    >
+      <tr
+        class="MuiTableRow-root css-hklrd9-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-dmt8ap-MuiTableCell-root"
+        >
+          Theme Body
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with custom styling 1`] = `
+<table
+  class="MuiTable-root css-1kvkh43-MuiTable-root"
+>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  >
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Styled Snapshot Cell
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<table
+  class="MuiTable-root css-1xwxv7r-MuiTable-root"
+>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  >
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Default Snapshot Cell
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with empty table body 1`] = `
+<table
+  class="MuiTable-root css-1xwxv7r-MuiTable-root"
+>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  />
+</table>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with header and body 1`] = `
+<table
+  class="MuiTable-root css-1xwxv7r-MuiTable-root"
+>
+  <thead
+    class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+  >
+    <tr
+      class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+    >
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+        scope="col"
+      >
+        Header Snapshot
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  >
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Body Snapshot
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with interactive content 1`] = `
+<table
+  class="MuiTable-root css-1xwxv7r-MuiTable-root"
+>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  >
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        <button>
+          Action Button
+        </button>
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        <input
+          placeholder="Input field"
+          type="text"
+        />
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        <a
+          href="#"
+        >
+          Link
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with multiple rows and columns 1`] = `
+<table
+  class="MuiTable-root css-1xwxv7r-MuiTable-root"
+>
+  <thead
+    class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+  >
+    <tr
+      class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+    >
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+        scope="col"
+      >
+        Col 1
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+        scope="col"
+      >
+        Col 2
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+        scope="col"
+      >
+        Col 3
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  >
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Row 1 Col 1
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Row 1 Col 2
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Row 1 Col 3
+      </td>
+    </tr>
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Row 2 Col 1
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Row 2 Col 2
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Row 2 Col 3
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with sticky header 1`] = `
+<table
+  class="MuiTable-root MuiTable-stickyHeader css-pvu7mv-MuiTable-root"
+>
+  <thead
+    class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+  >
+    <tr
+      class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+    >
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-1jxw05q-MuiTableCell-root"
+        scope="col"
+      >
+        Sticky Header Snapshot
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  >
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Sticky Body Snapshot
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with table container 1`] = `
+<div
+  class="MuiTableContainer-root css-70zvr5-MuiTableContainer-root"
+>
+  <table
+    class="MuiTable-root css-1xwxv7r-MuiTable-root"
+  >
+    <tbody
+      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+    >
+      <tr
+        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          Container Snapshot
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`DsTable Component > Snapshot Tests > should match snapshot with uneven rows 1`] = `
+<table
+  class="MuiTable-root css-1xwxv7r-MuiTable-root"
+>
+  <tbody
+    class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+  >
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Cell A
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Cell B
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Cell C
+      </td>
+    </tr>
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Single Cell
+      </td>
+    </tr>
+    <tr
+      class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+    >
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Cell X
+      </td>
+      <td
+        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+      >
+        Cell Y
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

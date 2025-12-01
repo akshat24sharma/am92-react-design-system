@@ -7,6 +7,11 @@
 - [DsCheckbox](./Components/DsCheckbox.md) - 75 tests across 12 categories (Enhanced Theme Testing)
 - [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
+- [DsChip](./Components/DsChip.md) - 22 tests across 10 categories with theme testing and comprehensive snapshot coverage
+- [DsDialog](./Components/DsDialog.md) - 68 tests across 11 categories with comprehensive theme and snapshot testing
+- [DsDivider](./Components/DsDivider.md) - 29 tests across 10 categories with theme compatibility and snapshot coverage
+- [DsTable](./Components/DsTable.md) - 25 tests across 10 categories with theme testing and comprehensive snapshot coverage
+
 
 ## Running Tests
 ```bash
