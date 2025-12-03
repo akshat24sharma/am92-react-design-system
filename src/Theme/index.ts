@@ -88,3 +88,10 @@ declare module '@mui/material/styles' {
     shadows: DsShadows
   }
 }
+
+// FIXME: If inverse is being used anywhere else, add it in theme palettee
+declare module '@mui/material/Badge' {
+  interface BadgePropsColorOverrides {
+    inverse: true
+  }
+}
