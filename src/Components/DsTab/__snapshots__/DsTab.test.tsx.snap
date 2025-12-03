@@ -1,0 +1,997 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot for basic tab 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit css-18odofc-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Basic Tab
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot for disabled tab 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root Mui-disabled MuiTab-root MuiTab-textColorInherit Mui-disabled css-18odofc-MuiButtonBase-root-MuiTab-root"
+    disabled=""
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Disabled Tab
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot for selected tab 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary Mui-selected css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Selected Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot for tab with custom styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit custom-tab-class css-18odofc-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    style="color: red;"
+    tabindex="-1"
+    type="button"
+  >
+    Custom Tab
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot for tab with end icon position 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorInherit css-x3d4ea-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    End Icon
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-settings-line css-h7bicg-MuiIcon-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot for tab with icon 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorInherit css-hhtznp-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-home-line css-h7bicg-MuiIcon-root"
+    />
+    Icon Tab
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot for wrapped tab 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-wrapped css-1qkfvz6-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Very long tab label that wraps
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot in different themes > dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit css-18odofc-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Theme Tab
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot in different themes > high-contrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit css-18odofc-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Theme Tab
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Testing > matches snapshot in different themes > light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit css-18odofc-MuiButtonBase-root-MuiTab-root"
+    role="tab"
+    tabindex="-1"
+    type="button"
+  >
+    Theme Tab
+  </button>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot across all theme modes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-home-line css-h7bicg-MuiIcon-root"
+          />
+          Theme Snapshot Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot across all theme modes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-home-line css-h7bicg-MuiIcon-root"
+          />
+          Theme Snapshot Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot across all theme modes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-home-line css-h7bicg-MuiIcon-root"
+          />
+          Theme Snapshot Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot across theme modes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-home-line css-h7bicg-MuiIcon-root"
+          />
+          Theme Test
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot across theme modes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-home-line css-h7bicg-MuiIcon-root"
+          />
+          Theme Test
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot across theme modes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-home-line css-h7bicg-MuiIcon-root"
+          />
+          Theme Test
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with complex content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-notification-line css-h7bicg-MuiIcon-root"
+          />
+          <div
+            class="MuiBox-root css-171onha"
+          >
+            Complex Tab
+            <div
+              class="MuiBox-root css-1xkalea"
+            >
+              NEW
+            </div>
+          </div>
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with container variant 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1nc17n8-MuiTabs-root"
+    ds-variant="container"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary Mui-selected css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Container Tab 1
+        </button>
+        <button
+          aria-selected="false"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Container Tab 2
+        </button>
+        <button
+          aria-selected="false"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Container Tab 3
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with container variant and icons 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1nc17n8-MuiTabs-root"
+    ds-variant="container"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="false"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-dashboard-line css-h7bicg-MuiIcon-root"
+          />
+          Dashboard
+        </button>
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-settings-line css-h7bicg-MuiIcon-root"
+          />
+          Settings
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with custom styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary Mui-selected custom-tab css-eg1avw-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Styled Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary Mui-selected css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Default Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with disabled state 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root Mui-disabled MuiTab-root MuiTab-textColorSecondary Mui-selected Mui-disabled css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          disabled=""
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Disabled Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with icon 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-9agax0-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-star-fill css-h7bicg-MuiIcon-root"
+          />
+          Icon Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with icon position end 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary Mui-selected css-1sl44zi-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Icon End Tab
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-arrow-right-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with key variations > container-variant 1`] = `
+<div
+  class="MuiTabs-root css-jhczcq-MuiTabs-root"
+  ds-variant="container"
+>
+  <div
+    class="MuiTabs-scroller MuiTabs-fixed css-s2t35c-MuiTabs-scroller"
+    style="overflow: hidden; margin-bottom: 0px;"
+  >
+    <div
+      class="MuiTabs-list MuiTabs-flexContainer css-hzcega-MuiTabs-list"
+      role="tablist"
+    >
+      <button
+        aria-selected="false"
+        class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-1usuzwp-MuiButtonBase-root-MuiTab-root"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        Container Tab 1
+      </button>
+      <button
+        aria-selected="true"
+        class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorPrimary Mui-selected css-1at17m1-MuiButtonBase-root-MuiTab-root"
+        role="tab"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-dashboard-line css-he52mn-MuiIcon-root"
+        />
+        Dashboard
+      </button>
+      <button
+        aria-selected="false"
+        class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary custom-tab css-1x40i6o-MuiButtonBase-root-MuiTab-root"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        Styled Tab
+      </button>
+    </div>
+    <span
+      class="MuiTabs-indicator css-1qltlow-MuiTabs-indicator"
+      style="left: 0px; width: 0px;"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with key variations > default-variant 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary Mui-selected css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Default Tab
+        </button>
+        <button
+          aria-selected="false"
+          class="MuiButtonBase-root MuiTab-root MuiTab-labelIcon MuiTab-textColorSecondary css-1sl44zi-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Icon Tab
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiTab-iconWrapper MuiTab-icon ri-star-fill css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          aria-selected="false"
+          class="MuiButtonBase-root Mui-disabled MuiTab-root MuiTab-textColorSecondary Mui-disabled css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          disabled=""
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Disabled Tab
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with link tab 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <a
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary Mui-selected css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          href="/test-link"
+          role="tab"
+          tabindex="0"
+        >
+          Link Tab
+        </a>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with multiple tabs 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="false"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Tab 1
+        </button>
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary Mui-selected css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Tab 2
+        </button>
+        <button
+          aria-selected="false"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary css-1pw0y9y-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Tab 3
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTab Component > Snapshot Tests > should match snapshot with wrapped text 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiTabs-root css-1oav9iu-MuiTabs-root"
+  >
+    <div
+      class="MuiTabs-scroller MuiTabs-fixed css-1626ypp-MuiTabs-scroller"
+      style="overflow: hidden; margin-bottom: 0px;"
+    >
+      <div
+        class="MuiTabs-list MuiTabs-flexContainer css-m9849h-MuiTabs-list"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorSecondary MuiTab-wrapped Mui-selected css-l2p6s-MuiButtonBase-root-MuiTab-root"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          This is a very long tab label that should wrap
+        </button>
+      </div>
+      <span
+        class="MuiTabs-indicator css-wyo1g9-MuiTabs-indicator"
+        style="left: 0px; width: 0px;"
+      />
+    </div>
+  </div>
+</div>
+`;

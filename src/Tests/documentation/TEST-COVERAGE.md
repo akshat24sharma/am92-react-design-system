@@ -25,6 +25,8 @@
 - [DsDialog](./Components/DsDialog.md) - 68 tests across 11 categories with comprehensive theme and snapshot testing
 - [DsDivider](./Components/DsDivider.md) - 29 tests across 10 categories with theme compatibility and snapshot coverage
 - [DsTable](./Components/DsTable.md) - 25 tests across 10 categories with theme testing and comprehensive snapshot coverage
+- [DsTab](./Components/DsTab.md) - 25 tests across 10 categories with container variant support, theme testing, and comprehensive interaction coverage
+- [DsDatePicker](./Components/DsDatePicker.md) - 61 tests across 12 categories with MUI X DatePicker integration, calendar interaction, and cancel functionality
 
 
 ## Running Tests
@@ -168,4 +170,4 @@ When adding new component tests:
 8. **✅ REQUIRED: Use design system components** exclusively in test scenarios
 
 ---
-*Last updated: December 1, 2025*
+*Last updated: December 2, 2025*
