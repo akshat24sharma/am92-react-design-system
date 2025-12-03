@@ -1,0 +1,1548 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot in real-world scenario - event booking 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-e2zdbd-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Book Your Event
+    </span>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-1kmy6r1-MuiFormLabel-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Event Date
+        </span>
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+          required=""
+        >
+          <input
+            aria-invalid="false"
+            autocomplete="off"
+            class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+            id="event-date"
+            inputmode="text"
+            name="event-date"
+            placeholder="DD/MM/YYYY"
+            required=""
+            type="text"
+            value=""
+          />
+          <div
+            class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1pd97o3-MuiFormHelperText-root"
+          helpertext=""
+        >
+          <div
+            class="MuiBox-root css-s14tpm"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+            >
+              Select your preferred date
+              ​
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-lzvh32"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-doxyf4-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <span>
+          Cancel
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <span>
+          Confirm
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot in real-world scenario - form integration 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <form
+    class="MuiBox-root css-2fqpme"
+  >
+    <fieldset
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <legend
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Personal Details
+        </span>
+      </legend>
+      <div
+        class="MuiFormGroup-root css-7lgaos-MuiFormGroup-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+        >
+          <div
+            class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="off"
+                class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+                id="birthdate-demo"
+                inputmode="text"
+                name="birthdate-demo"
+                placeholder="DD/MM/YYYY"
+                type="text"
+                value=""
+              />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+          >
+            Date of Birth
+          </span>
+        </label>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+          helpertext=""
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+          >
+            Required for age verification
+          </span>
+        </p>
+      </div>
+    </fieldset>
+  </form>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with different states > datepicker-state-0 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input Mui-disabled MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        disabled=""
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-disablePointerEvents MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-c5gvp8-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with different states > datepicker-state-1 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="true"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+      helpertext=""
+    >
+      <div
+        class="MuiBox-root css-s14tpm"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeCool ri-error-warning-fill css-cb75nt-MuiIcon-root"
+        />
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+        >
+          Error message
+          ​
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with different states > datepicker-state-2 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+      <span
+        aria-hidden="true"
+        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+      >
+         
+        *
+      </span>
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+      required=""
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        required=""
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with different states > datepicker-state-3 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        readonly=""
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with different states > datepicker-state-4 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value="15/03/2024"
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with slotProps 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+      data-custom="custom-value"
+    >
+      <input
+        aria-describedby="help-text"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with various props combinations > datepicker-combo-0 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input Mui-disabled MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        disabled=""
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-disablePointerEvents MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-c5gvp8-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with various props combinations > datepicker-combo-1 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+      <span
+        aria-hidden="true"
+        class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-13jgzxd-MuiFormLabel-asterisk"
+      >
+         
+        *
+      </span>
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+      required=""
+    >
+      <input
+        aria-invalid="true"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        required=""
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1pd97o3-MuiFormHelperText-root"
+      helpertext=""
+    >
+      <div
+        class="MuiBox-root css-s14tpm"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeCool ri-error-warning-fill css-cb75nt-MuiIcon-root"
+        />
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+        >
+          Required field error
+          ​
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with various props combinations > datepicker-combo-2 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        readonly=""
+        type="text"
+        value="15/03/2024"
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshot with various props combinations > datepicker-combo-3 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="MM/DD/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshots across all themes > default-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshots across all themes > default-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Snapshot Tests > should match snapshots across all themes > default-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should handle size variants across themes > datepicker-error-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="true"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should handle size variants across themes > datepicker-error-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="true"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should handle size variants across themes > datepicker-error-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="true"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should handle size variants across themes > datepicker-required-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+      <span
+        aria-hidden="true"
+        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+      >
+         
+        *
+      </span>
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+      required=""
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        required=""
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should handle size variants across themes > datepicker-required-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+      <span
+        aria-hidden="true"
+        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+      >
+         
+        *
+      </span>
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+      required=""
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        required=""
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should handle size variants across themes > datepicker-required-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+      <span
+        aria-hidden="true"
+        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+      >
+         
+        *
+      </span>
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+      required=""
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        required=""
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should render correctly across all themes > datepicker-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should render correctly across all themes > datepicker-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDatePicker Component > Theme Testing > should render correctly across all themes > datepicker-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="test-date-picker"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Date Picker
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        id="test-date-picker"
+        inputmode="text"
+        name="test-date-picker"
+        placeholder="DD/MM/YYYY"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-calendar-line css-lcbkw8-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
