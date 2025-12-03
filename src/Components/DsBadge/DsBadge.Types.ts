@@ -1,6 +1,11 @@
 import { BadgeProps } from '@mui/material'
 
-export interface DsBadgeProps extends BadgeProps {}
+type TDsBadgeExtendedColor = BadgeProps['color'] | 'inverse'
+
+export interface DsBadgeProps extends Omit<BadgeProps, 'color'> {
+  color?: TDsBadgeExtendedColor
+  disabled?: boolean
+}
 
 export const DsBadgeDefaultProps: DsBadgeProps = {
   color: 'secondary',
