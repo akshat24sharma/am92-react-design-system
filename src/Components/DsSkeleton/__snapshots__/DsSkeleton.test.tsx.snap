@@ -1,0 +1,234 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot in avatar list scenario > skeleton-avatar-list-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <div
+      class="MuiBox-root css-1gh5laf"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-pulse css-l6c50l-MuiSkeleton-root"
+        style="width: 40px; height: 40px;"
+      />
+      <div
+        class="MuiBox-root css-1rr4qq7"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+          style="height: 20px;"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+          style="width: 80%; height: 16px;"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-axw7ok"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-pulse css-l6c50l-MuiSkeleton-root"
+        style="width: 40px; height: 40px;"
+      />
+      <div
+        class="MuiBox-root css-1rr4qq7"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+          style="height: 20px;"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+          style="width: 70%; height: 16px;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot in real-world card scenario > skeleton-card-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-ngq0ol-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+      style="width: 100%; height: 200px;"
+    />
+    <div
+      class="MuiBox-root css-zoser8"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+      />
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+      />
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+        style="width: 60%;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with children > skeleton-with-children 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse MuiSkeleton-withChildren MuiSkeleton-fitContent MuiSkeleton-heightAuto css-1heq96c-MuiSkeleton-root"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Content loaded
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with custom dimensions > skeleton-custom-dimensions 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+    style="width: 200px; height: 100px;"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with different animations > skeleton-animation-false 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text css-hrgsfu-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with different animations > skeleton-animation-pulse 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with different animations > skeleton-animation-wave 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-d205yq-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with different variants > skeleton-variant-circular 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-pulse css-l6c50l-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with different variants > skeleton-variant-rectangular 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with different variants > skeleton-variant-rounded 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-pulse css-1w72fz8-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshot with different variants > skeleton-variant-text 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshots across all themes > skeleton-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshots across all themes > skeleton-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+  />
+</div>
+`;
+
+exports[`DsSkeleton Component > Snapshot Tests > should match snapshots across all themes > skeleton-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-v7xtma-MuiSkeleton-root"
+  />
+</div>
+`;
