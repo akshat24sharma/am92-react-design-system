@@ -4,7 +4,6 @@ export const DsBadgeOverrides = {
   MuiBadge: {
     defaultProps: DsBadgeDefaultProps,
     styleOverrides: {
-      // TODO: check it cases build issues
       root: {
         variants:[
           {
@@ -22,7 +21,7 @@ export const DsBadgeOverrides = {
               '& .MuiBadge-badge': {
                 backgroundColor: 'var(--ds-colour-iconDisabled)', 
                 color: 'var(--ds-colour-typoOnSurface)',
-                pointerEvent: 'none'
+                pointerEvents: 'none'
               }
             }
         }

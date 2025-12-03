@@ -89,7 +89,7 @@ declare module '@mui/material/styles' {
   }
 }
 
-// FIXME: If inverse is being used anywhere else, add it in theme palettee
+// If inverse is being used anywhere else, add it in theme palettee
 declare module '@mui/material/Badge' {
   interface BadgePropsColorOverrides {
     inverse: true
