@@ -306,117 +306,101 @@ describe("DsLink Component", () => {
     });
 
     it("should use colors from light.ts/dark.ts/highContrast.ts that match palette.ts values", () => {
-      // Get the light and dark color schemes directly from their files
+      // Get the complete color scheme from theme
+      const themeColorScheme = getColorScheme(PALETTE);
+
+      // Theme-specific expectations mapping
+      const themeExpectations = {
+        light: {
+          expectedTypoColor: PALETTE.primary,
+          colorProperty: "lightDsColor",
+        },
+        dark: {
+          expectedTypoColor: PALETTE.primaryWhite,
+          colorProperty: "darkDsColor",
+        },
+        highContrast: {
+          expectedTypoColor: PALETTE.highContrast1,
+          colorProperty: "highContrastDsColor",
+        },
+      };
+
+      colorSchemes.forEach((colorScheme) => {
+        const { container, unmount } = renderWithTheme(
+          <DsLink href="#" color="primary" data-testid={`link-${colorScheme}`}>
+            {colorScheme} Theme Link
+          </DsLink>,
+          colorScheme
+        );
+
+        // Verify basic rendering
+        const link = container.querySelector(
+          `[data-testid="link-${colorScheme}"]`
+        ) as HTMLElement;
+        expect(link).toBeInTheDocument();
+
+        // Verify color scheme is applied
+        const wrapperElement = container.firstChild as HTMLElement;
+        expect(wrapperElement).toHaveAttribute(
+          "data-mui-color-scheme",
+          colorScheme
+        );
+
+        // Test that DsLink renders with correct colors for this theme
+        const linkStyles = window.getComputedStyle(link);
+
+        // Verify DsLink color matches theme's primary action color
+        expect(linkStyles.textDecorationColor).toBeDefined();
+        expect(linkStyles.textDecorationColor).not.toBe("");
+
+        // The textDecorationColor should use the CSS variable for typoActionPrimary
+        expect(linkStyles.textDecorationColor).toBe(
+          "var(--ds-colour-typoActionPrimary)"
+        );
+
+        // Verify theme colors match the actual theme configuration
+        const schemeData = themeColorScheme[colorScheme];
+        const expectations = themeExpectations[colorScheme];
+
+        // Get the appropriate color scheme functions for validation
+        const colorSchemeFunction =
+          colorScheme === "light"
+            ? getLightModeColorScheme(PALETTE)
+            : colorScheme === "dark"
+            ? getDarkModeColorScheme(PALETTE)
+            : getHighContrastModeColorScheme(PALETTE);
+
+        // Verify that the theme's typoActionPrimary matches expected palette color
+        const actualTypoColor = (colorSchemeFunction as any)[
+          expectations.colorProperty
+        ].typoActionPrimary;
+        expect(actualTypoColor).toBe(expectations.expectedTypoColor);
+
+        // Primary color should match theme
+        const expectedPrimaryColor = (schemeData?.palette?.primary as any)
+          ?.main;
+        expect(expectedPrimaryColor).toBeTruthy();
+        expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+
+        // Snapshot testing
+        expect(container.firstChild).toMatchSnapshot(
+          `link-${colorScheme}-theme`
+        );
+
+        unmount();
+      });
+
+      // Verify themes use different typography action colors
       const lightScheme = getLightModeColorScheme(PALETTE);
       const darkScheme = getDarkModeColorScheme(PALETTE);
       const highContrastScheme = getHighContrastModeColorScheme(PALETTE);
 
-      // Test light theme colors
-      const { container: lightContainer, unmount: unmountLight } =
-        renderWithTheme(
-          <DsLink href="#" color="primary" data-testid="link-light">
-            Light Theme Link
-          </DsLink>,
-          "light"
-        );
-
-      const lightLink = lightContainer.querySelector(
-        '[data-testid="link-light"]'
-      ) as HTMLElement;
-      expect(lightLink).toBeInTheDocument();
-
-      // Test that DsLink actually renders with correct colors
-      const lightLinkStyles = window.getComputedStyle(lightLink);
-      // Verify DsLink color matches theme's primary action color
-      expect(lightLinkStyles.textDecorationColor).toBeDefined();
-      expect(lightLinkStyles.textDecorationColor).not.toBe("");
-
-      // The textDecorationColor should be the CSS variable for typoActionPrimary
-      expect(lightLinkStyles.textDecorationColor).toBe(
-        "var(--ds-colour-typoActionPrimary)"
-      );
-
-      // Verify that the light theme's actionPrimary matches the expected palette color
-      const expectedLightPrimaryColor = PALETTE.primary;
-      expect(lightScheme.lightDsColor.typoActionPrimary).toBe(
-        expectedLightPrimaryColor
-      );
-
-      unmountLight();
-
-      // Test dark theme colors
-      const { container: darkContainer, unmount: unmountDark } =
-        renderWithTheme(
-          <DsLink href="#" color="primary" data-testid="link-dark">
-            Dark Theme Link
-          </DsLink>,
-          "dark"
-        );
-
-      const darkLink = darkContainer.querySelector(
-        '[data-testid="link-dark"]'
-      ) as HTMLElement;
-      expect(darkLink).toBeInTheDocument();
-
-      // Test that DsLink actually renders with correct colors in dark theme
-      const darkLinkStyles = window.getComputedStyle(darkLink);
-
-      // Verify DsLink color matches theme's primary action color
-      expect(darkLinkStyles.textDecorationColor).toBeDefined();
-      expect(darkLinkStyles.textDecorationColor).not.toBe("");
-
-      expect(darkLinkStyles.textDecorationColor).toBe(
-        "var(--ds-colour-typoActionPrimary)"
-      );
-
-      // The dark theme uses white for typography action primary
-      const expectedDarkTypoPrimaryColor = PALETTE.primaryWhite;
-      expect(darkScheme.darkDsColor.typoActionPrimary).toBe(
-        expectedDarkTypoPrimaryColor
-      );
-
-      // Light and dark themes use different typography action colors
       expect(lightScheme.lightDsColor.typoActionPrimary).not.toBe(
         darkScheme.darkDsColor.typoActionPrimary
       );
-
-      unmountDark();
-
-      // Test high contrast theme colors
-      const { container: highContrastContainer, unmount: unmountHighContrast } =
-        renderWithTheme(
-          <DsLink href="#" color="primary" data-testid="link-highContrast">
-            High Contrast Theme Link
-          </DsLink>,
-          "highContrast"
-        );
-
-      const highContrastLink = highContrastContainer.querySelector(
-        '[data-testid="link-highContrast"]'
-      ) as HTMLElement;
-      expect(highContrastLink).toBeInTheDocument();
-
-      // Test that DsLink actually renders with correct high contrast colors
-      const highContrastLinkStyles = window.getComputedStyle(highContrastLink);
-
-      // Verify text decoration color (underline color) for high contrast - should use CSS variable
-      expect(highContrastLinkStyles.textDecorationColor).toBeDefined();
-      expect(highContrastLinkStyles.textDecorationColor).toBe(
-        "var(--ds-colour-typoActionPrimary)"
-      );
-
-      // High contrast uses different color than light/dark themes
-      const expectedHighContrastColor = PALETTE.highContrast1;
-      expect(highContrastScheme.highContrastDsColor.typoActionPrimary).toBe(
-        expectedHighContrastColor
-      );
-
-      // Verify high contrast color is different from light/dark theme colors
       expect(highContrastScheme.highContrastDsColor.typoActionPrimary).not.toBe(
         PALETTE.primary
       );
-
-      unmountHighContrast();
     });
   });
 

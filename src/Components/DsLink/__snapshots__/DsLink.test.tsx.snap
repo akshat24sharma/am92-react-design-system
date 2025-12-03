@@ -389,3 +389,99 @@ exports[`DsLink Component > Snapshot Tests > should match snapshot with default 
   </a>
 </div>
 `;
+
+exports[`DsLink Component > Theme Testing > should render correctly across all color schemes with proper theme colors > link-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+    data-testid="link-dark"
+    href="#"
+  >
+    dark
+     Theme Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Theme Testing > should render correctly across all color schemes with proper theme colors > link-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+    data-testid="link-highContrast"
+    href="#"
+  >
+    highContrast
+     Theme Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Theme Testing > should render correctly across all color schemes with proper theme colors > link-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+    data-testid="link-light"
+    href="#"
+  >
+    light
+     Theme Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Theme Testing > should use colors from light.ts/dark.ts/highContrast.ts that match palette.ts values > link-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+    data-testid="link-dark"
+    href="#"
+  >
+    dark
+     Theme Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Theme Testing > should use colors from light.ts/dark.ts/highContrast.ts that match palette.ts values > link-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+    data-testid="link-highContrast"
+    href="#"
+  >
+    highContrast
+     Theme Link
+  </a>
+</div>
+`;
+
+exports[`DsLink Component > Theme Testing > should use colors from light.ts/dark.ts/highContrast.ts that match palette.ts values > link-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+    data-testid="link-light"
+    href="#"
+  >
+    light
+     Theme Link
+  </a>
+</div>
+`;
