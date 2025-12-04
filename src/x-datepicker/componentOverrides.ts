@@ -1,7 +1,8 @@
-import { DsDatePickerOverrides } from './Components'
+import { DsDatePickerOverrides, DsDateRangePickerOverrides } from './Components'
 
 const XDatePickerComponentOverrides = {
-  ...DsDatePickerOverrides
+  ...DsDatePickerOverrides,
+  ...DsDateRangePickerOverrides
 }
 
 export default XDatePickerComponentOverrides
