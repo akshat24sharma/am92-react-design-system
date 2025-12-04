@@ -61,8 +61,6 @@ export interface DsAddItemProps extends Omit<DsButtonBaseProps, "onChange"> {
   maxValue?: number;
   /** The minimum allowed value */
   minValue?: number;
-  /** The minimum allowed value for decrementing */
-  minDecrementValue?: number;
   /** The step size for increment/decrement */
   step?: number;
   /** The label to show when count is 0 */

@@ -27,7 +27,6 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     label,
     maxValue,
     minValue,
-    minDecrementValue,
     step,
     slots,
     slotProps,
@@ -54,16 +53,20 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   const isAddDisabled =
     disabled || loading || (maxValue !== undefined && countValue >= maxValue);
 
-  const isSubtractDisabled =
-    disabled ||
-    loading ||
-    countValue === 0 ||
-    (minDecrementValue !== undefined && countValue <= minDecrementValue);
+  const isSubtractDisabled = disabled || loading || countValue === 0;
 
-  const handleAdd = () => {
+  const handleAdd = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
     if (!isAddDisabled) {
+      let newValue: number;
       // If count is 0 and we have a minValue, jump to minValue on first add
-      const newValue = isEmptyCount ? minValue ?? 1 : countValue + (step ?? 1);
+      if (countValue === 0 && minValue !== undefined && minValue > 0) {
+        newValue = minValue;
+      } else {
+        newValue = countValue + (step ?? 1);
+      }
+
       if (count === undefined) {
         setCountValue(newValue);
       }
@@ -71,12 +74,14 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     }
   };
 
-  const handleSubtract = () => {
+  const handleSubtract = (e: React.MouseEvent) => {
+    e.stopPropagation();
+
     if (!isSubtractDisabled) {
       let newValue = countValue - (step ?? 1);
 
-      // If new value would be less than minValue, reset to 0 (back to add state)
-      if (minValue !== undefined && newValue < minValue) {
+      // Reset to 0 if would go negative or below minValue
+      if (newValue < 0 || (minValue !== undefined && newValue < minValue)) {
         newValue = 0;
       }
 
@@ -109,11 +114,11 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
 
   return (
     <DsButtonBase
-      onClick={countValue === 0 ? handleAdd : undefined}
       aria-label={label}
       aria-disabled={disabled}
       color="default"
       {...restProps}
+      onClick={countValue === 0 ? handleAdd : undefined}
       sx={fabSx}
       disableRipple={!isEmptyCount || disabled}
     >
