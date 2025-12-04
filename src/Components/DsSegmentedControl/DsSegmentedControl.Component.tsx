@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { DsTabs } from "../DsTabs/DsTabs.Component";
-import { DsSegmentControlProps } from "./DsSegmentControl.Types";
+import { DsSegmentedControlProps } from "./DsSegmentedControl.Types";
 
-export const DsSegmentControl: FC<DsSegmentControlProps> = (props) => {
+export const DsSegmentedControl: FC<DsSegmentedControlProps> = (props) => {
   return (
     <DsTabs
       {...props}
@@ -39,10 +39,13 @@ export const DsSegmentControl: FC<DsSegmentControlProps> = (props) => {
               minHeight: "unset",
               height: "auto",
               color: "var(--ds-colour-typoPrimary)",
-
+              "&.Mui-selected": {
+                boxShadow: "var(--ds-elevation-2)",
+              },
               "&.Mui-disabled": {
                 backgroundColor: "var(--ds-colour-neutral1)",
                 color: "var(--ds-colour-typoDisabled)",
+                boxShadow: "none",
               },
             },
           },
