@@ -19,7 +19,6 @@ type FullPageStatus = {
   description?: string
   primaryButtonText?: string
   secondaryBtnText?: string
-  // showInDialogOnMobile?: boolean
   isDialogOnMobile?: boolean
 }
 
@@ -88,7 +87,6 @@ export interface DsOtpChannelConfig {
 
 export interface DsOtpVerificationSlots
   extends Pick<DsBottomSheetProps, 'slots'> {
-  // TODO: exclude it statusContent, otpSection
   statusContent?: ElementType<IDsOtpStatusProps>
   otpSection?: ElementType<IDsOtpSectionProps>
   otpHeader?: ElementType<IDsOtpHeaderProps> | null
@@ -96,13 +94,11 @@ export interface DsOtpVerificationSlots
 
 export interface DsOtpVerificationSlotProps
   extends Pick<DsBottomSheetProps, 'slotProps'> {
-  // TODO: exclude it statusContent, otpSection
   statusContent?: Partial<IDsOtpStatusProps>
   otpSection?: Partial<IDsOtpSectionProps>
   otpHeader?: Partial<IDsOtpHeaderProps>
 }
 
-// FIXME: GET IT CHECKED--- description: extend here with dialog , bottom sheet
 export interface DsOtpVerificationProps
   extends Omit<DsDialogProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes'>,
     Omit<DsBottomSheetProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes'> {
@@ -157,7 +153,6 @@ export interface DsOtpVerificationProps
    */
   maxResendAttempts: DsOtpChannelConfig['maxResendAttempts']
 
-  // TODO: can have variants - diff props as secondaryOtp is only grouped, interface add for same keys
   /**
    * Secondary OTP configuration.
    * Used when a secondary channel (e.g., email + phone) also requires OTP verification.
@@ -211,7 +206,6 @@ export interface DsOtpVerificationProps
    * slots={{ otpHeader: CustomHeader, otpSection: CustomOtpInput }}
    */
   slots?: Omit<DsOtpVerificationSlots, 'statusContent' | 'otpSection'>
-  // slots?: DsOtpVerificationSlots
 
   /**
    * Props for the slots, used to customize behavior or data.
@@ -220,10 +214,4 @@ export interface DsOtpVerificationProps
    */
   slotProps?: Omit<DsOtpVerificationSlotProps, 'statusContent' | 'otpSection'>
 
-  // FIXME: should this me dont like this ???? or JUST OMIT
-  // Dialog / BottomSheet slots
-  // dialogSlots?: DialogSlots['slots']
-  // dialogSlotProps?: DialogSlots['slotProps']
-  // bottomSheetSlots?: BottomSheetSlots['slots']
-  // bottomSheetSlotProps?: BottomSheetSlots['slotProps']
 }

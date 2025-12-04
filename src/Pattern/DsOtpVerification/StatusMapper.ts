@@ -31,9 +31,6 @@ export const DEFAULT_STATUS_MAP: Record<string, StatusDetailType> = {
   }
 }
 
-// Confim close screen data
-// primary btn will always close the pattern component
-// secondary will take back to otp screen
 export const CONFIRM_CLOSE_DETAIL: StatusDetailType = {
   type: 'fullPage',
   image: { srcSet: CONFIRM_CLOSE },
@@ -41,6 +38,5 @@ export const CONFIRM_CLOSE_DETAIL: StatusDetailType = {
   description: 'Going back will cancel all your ongoing transactions.',
   primaryButtonText: 'Yes, Cancel',
   secondaryBtnText: 'No, Go Back',
-  // TODO: rename this key
   isDialogOnMobile: true
 }

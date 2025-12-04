@@ -5,10 +5,6 @@ import type {
 } from '../../Components'
 import { DsBottomSheet, DsDialog } from '../../Components'
 
-// interface DsOtpVerificationWrapperProps
-//   extends DsDialogProps,
-//   DsBottomSheetProps {
-
 interface DsOtpVerificationWrapperProps
   extends Omit<DsDialogProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes'>,
     Omit<DsBottomSheetProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes'> {
@@ -23,9 +19,6 @@ interface DsOtpVerificationWrapperProps
   statusDialog: React.ReactNode
   commonActionBtnProps: Partial<DsDialogProps>
   header: React.ReactNode | null
-  // FIXME: should add this ??
-  // headerHeight?: string | number
-  // classes?: DsDialogProps['classes'] | DsBottomSheetProps['classes']
 }
 
 const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
@@ -57,7 +50,6 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
           ...TitleProps,
           sx: {
             ...TitleProps?.sx,
-            // mt: header ? headerHeight : 0
             mt: headerHeight
           }
         }}
@@ -66,7 +58,6 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
           sx: {
             ...PaperProps?.sx,
             maxHeight: '100vh',
-            // height: header ? '100vh' : `calc(100vh - ${headerHeight})`,
             height: '100vh',
             position: 'absolute',
             bottom: 0
@@ -105,14 +96,11 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
       description={showInputSection ? description : ''}
       DescriptionProps={{ sx: { mr: 'var(--ds-spacing-warm)' } }}
       onClose={onClose}
-      // TODO: HELP how should we handle this? 446 hardcode or smething else
       PaperProps={{
         ...PaperProps,
         sx: {
           ...PaperProps?.sx,
           height: dialogHeight
-          // height: '478px'
-          // height: '100%'
         }
       }}
       ContentProps={{

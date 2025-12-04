@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-// import Loader from '../Loader'
-// import { useBreakpoints } from '../useBreakpoints'
 import type {
   DsOtpVerificationProps,
   DsOtpVerificationSlotProps,
@@ -16,16 +14,7 @@ import DsOtpStatusContent from './Slots/DsOtpStatusContent'
 import DsStatusDialog from './Slots/DsStatusDialog'
 import { CONFIRM_CLOSE_DETAIL, DEFAULT_STATUS_MAP } from './StatusMapper'
 import { DsLoader } from '../../Components'
-import { useBreakpoints } from '../../Hooks/useBreakpoints'
-
-// ✅ Default status map
-// ✅ new file
-// ✅ can add success here - make it for success status - rename it
-// ✅ submit btn and resent styling
-// ✅ handle error message spacing
-// ✅ parent component wrapper - showBottomSheet = true ->
-// ✅ add action here as well in map (NEXT PHASE)- primary btn text and it's action \\ly secondaryOtp btn text and its action
-// ✅ Success media - lottie to be animated - animated svg , gif
+import { useBreakpoints } from '../../Hooks'
 
 export const INITIAL_STATUS: StatusDetailType = {
   message: '',
@@ -213,16 +202,9 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = ({
           maxResendAttempts={maxResendAttempts}
           otp={otp}
           setOtp={setOtp}
-          // --------------------
-          // secondaryChannelId={secondaryChannelId}
-          // secondaryChannelLabel={secondaryChannelLabel}
-          // secondaryCurrentResendAttempts={secondaryCurrentResendAttempts}
-          // secondaryMaxResendAttempts={secondaryMaxResendAttempts}
-          // --------------------
           secondaryOtp={secondaryOtp}
           secondaryOtpValue={secondaryOtpValue}
           setSecondaryOtpValue={setSecondaryOtpValue}
-          // -----
           otpLength={otpLength}
           useBottomSheet={useBottomSheet}
           status={status}

@@ -7,7 +7,6 @@ import type { StatusDetailType } from '../DsOtpVerification.Types'
 interface IDsStatusDialogProps {
   status: StatusDetailType
   StatusContentComponent: ElementType
-  // StatusContentComponentProps?: IDsOtpStatusProps
   dialogActionProps: Partial<DsDialogProps>
 }
 
