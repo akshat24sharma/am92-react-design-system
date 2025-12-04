@@ -1,6 +1,6 @@
 import type { StatusDetailType } from './DsOtpVerification.Types'
 
-import { CONFIRM_CLOSE, OTP_EXHAUST, SUCCESS } from '../Assets/HOME_IMAGE'
+import { CONFIRM_CLOSE, OTP_EXHAUST, SUCCESS } from '../Assets/OTP_VERIFICATION'
 
 // Default status map
 export const DEFAULT_STATUS_MAP: Record<string, StatusDetailType> = {

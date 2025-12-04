@@ -5,7 +5,7 @@ import type {
   IDsOtpStatusProps,
   StatusDetailType
 } from '../DsOtpVerification.Types'
-import { SOMETHING_WENT_WRONG } from '../../Assets/HOME_IMAGE'
+import { SOMETHING_WENT_WRONG } from '../../Assets/OTP_VERIFICATION'
 
 const DsOtpStatusContent: React.FC<IDsOtpStatusProps> = props => {
   const { title, description, image } = props.status as Extract<
