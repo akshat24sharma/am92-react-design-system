@@ -23,6 +23,7 @@ export const DsSegmentedControl: FC<DsSegmentedControlProps> = (props) => {
             backgroundColor: "var(--ds-colour-surfaceBackground)",
             transition: "all 300ms ease",
             zIndex: 1,
+            overflow: "hidden",
           },
 
           "& .MuiTabs-flexContainer": {
@@ -39,13 +40,14 @@ export const DsSegmentedControl: FC<DsSegmentedControlProps> = (props) => {
               minHeight: "unset",
               height: "auto",
               color: "var(--ds-colour-typoPrimary)",
-              "&.Mui-selected": {
+              "&.Mui-selected:not(.Mui-disabled)": {
                 boxShadow: "var(--ds-elevation-2)",
+                borderRadius:
+                  "calc(var(--ds-radius-quickFreeze) + var(--ds-radius-deepFreeze))",
               },
               "&.Mui-disabled": {
                 backgroundColor: "var(--ds-colour-neutral1)",
                 color: "var(--ds-colour-typoDisabled)",
-                boxShadow: "none",
               },
             },
           },
