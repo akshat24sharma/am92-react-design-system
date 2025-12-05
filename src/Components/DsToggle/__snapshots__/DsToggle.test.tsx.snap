@@ -1,0 +1,566 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsToggle > Snapshot Tests > should match snapshot across all themes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot across all themes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot across all themes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot in real-world form scenario > form-control-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
+    >
+      Enable notifications
+    </label>
+    <span
+      class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+      >
+        <input
+          class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+          name="notifications"
+          role="switch"
+          type="checkbox"
+        />
+        <span
+          class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+        />
+      </span>
+      <span
+        class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot when checked 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot when disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-disabled Mui-disabled PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-disabled Mui-checked Mui-disabled css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+      tabindex="-1"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        disabled=""
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot when unchecked 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different colors > color-default-0 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different colors > color-primary-1 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different colors > color-secondary-2 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different sizes > size-medium-1 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different sizes > size-small-0 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeSmall css-an6v62-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different states combinations > state-checked-disabled-2 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-disabled Mui-disabled PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-disabled Mui-checked Mui-disabled css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+      tabindex="-1"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        disabled=""
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different states combinations > state-checked-enabled-0 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different states combinations > state-unchecked-disabled-3 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-disabled Mui-disabled PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-disabled Mui-disabled css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+      tabindex="-1"
+    >
+      <input
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        disabled=""
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Snapshot Tests > should match snapshot with different states combinations > state-unchecked-enabled-1 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Theme Testing > should render correctly across all color schemes with proper theme colors > toggle-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Theme Testing > should render correctly across all color schemes with proper theme colors > toggle-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsToggle > Theme Testing > should render correctly across all color schemes with proper theme colors > toggle-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSwitch-root MuiSwitch-sizeMedium css-a0u7id-MuiSwitch-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary Mui-checked Mui-checked css-163p04p-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+        name="toggle"
+        role="switch"
+        type="checkbox"
+      />
+      <span
+        class="MuiSwitch-thumb css-fmzydu-MuiSwitch-thumb"
+      />
+    </span>
+    <span
+      class="MuiSwitch-track css-b7ck5z-MuiSwitch-track"
+    />
+  </span>
+</div>
+`;

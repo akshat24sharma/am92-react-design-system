@@ -13,7 +13,7 @@
 - [DsTable](./Components/DsTable.md) - 25 tests across 10 categories with theme testing and comprehensive snapshot coverage
 - [DsTab](./Components/DsTab.md) - 25 tests across 10 categories with container variant support, theme testing, and comprehensive interaction coverage
 - [DsDatePicker](./Components/DsDatePicker.md) - 61 tests across 12 categories with MUI X DatePicker integration, calendar interaction, and cancel functionality
-
+- [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage 
 
 ## Running Tests
 ```bash
@@ -57,7 +57,7 @@ The coverage infrastructure generates multiple report formats:
 
 ## Test Statistics
 - **Total Components Documented:** 12
-- **Total Tests:** 428 across all tested components (367 + 61 for DsDatePicker)
+- **Total Tests:** 624 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
