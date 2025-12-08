@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsMenu Component > Snapshot Testing > should render closed menu correctly 1`] = `null`;
+
+exports[`DsMenu Component > Snapshot Testing > should render open menu correctly 1`] = `null`;
+
+exports[`DsMenu Component > Snapshot Testing > should render with multiple menu items correctly 1`] = `null`;
