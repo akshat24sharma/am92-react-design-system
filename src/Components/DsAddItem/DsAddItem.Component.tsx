@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { DsAddItemDefaultProps, type DsAddItemProps } from "./DsAddItem.Types";
 import STATE_STYLES from "../../Theme/STATE_STYLES";
 import { DsButtonBase } from "../DsButtonBase";
-import { SxProps } from "@mui/system";
 
 export const DsAddItem = (inProps: DsAddItemProps) => {
   const mergedSlots = {
@@ -37,8 +36,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     ...restProps
   } = props;
 
-  const { LeftIconButton, RightIconButton, CounterText } =
-    slots ?? DsAddItemDefaultProps.slots!;
+  const { LeftIconButton, RightIconButton, CounterText } = slots;
 
   const [countValue, setCountValue] = useState<number>(count ?? 0);
 
@@ -53,7 +51,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   const isAddDisabled =
     disabled || loading || (maxValue !== undefined && countValue >= maxValue);
 
-  const isSubtractDisabled = disabled || loading || countValue === 0;
+  const isSubtractDisabled = disabled || loading || isEmptyCount;
 
   const handleAdd = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -92,33 +90,35 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     }
   };
 
-  const fabSx = {
-    px: "var(--ds-spacing-glacial)",
-    pt: isEmptyCount ? "var(--ds-spacing-quickFreeze)" : 0,
-    pb: isEmptyCount ? "var(--ds-spacing-quickFreeze)" : 0,
-    minWidth: "90px",
-    minHeight: "var(--ds-spacing-tepid)",
-    borderRadius: "var(--ds-radius-cool)",
-    boxShadow: "var(--ds-elevation-8, 0px 8px 12px rgba(0, 0, 0, 0.08))",
-    background: "var(--ds-colour-surfacePrimary)",
-    "&:hover": {
-      background: "var(--ds-colour-surfacePrimary) !important",
-    },
-    ...STATE_STYLES.SURFACE_SECONDARY_STATE_PRIMARY,
-    pointerEvents: !isEmptyCount && disabled ? "none" : "auto",
-    "&.Mui-disabled": {
-      background: "var(--ds-colour-stateDisabledSurface) !important",
-    },
-    ...restProps.sx,
-  } as SxProps;
-
+  const fabSx = useMemo(
+    () => ({
+      px: "var(--ds-spacing-glacial)",
+      pt: isEmptyCount ? "var(--ds-spacing-quickFreeze)" : 0,
+      pb: isEmptyCount ? "var(--ds-spacing-quickFreeze)" : 0,
+      minWidth: "90px",
+      minHeight: "var(--ds-spacing-tepid)",
+      borderRadius: "var(--ds-radius-cool)",
+      boxShadow: "var(--ds-elevation-8, 0px 8px 12px rgba(0, 0, 0, 0.08))",
+      background: "var(--ds-colour-surfacePrimary)",
+      "&:hover": {
+        background: "var(--ds-colour-surfacePrimary) !important",
+      },
+      ...STATE_STYLES.SURFACE_SECONDARY_STATE_PRIMARY,
+      pointerEvents: !isEmptyCount && disabled ? "none" : "auto",
+      "&.Mui-disabled": {
+        background: "var(--ds-colour-stateDisabledSurface) !important",
+      },
+      ...restProps.sx,
+    }),
+    [isEmptyCount, disabled, restProps.sx]
+  );
   return (
     <DsButtonBase
       aria-label={label}
       aria-disabled={disabled}
       color="default"
       {...restProps}
-      onClick={countValue === 0 ? handleAdd : undefined}
+      onClick={isEmptyCount ? handleAdd : undefined}
       sx={fabSx}
       disableRipple={!isEmptyCount || disabled}
     >
