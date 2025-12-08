@@ -88,6 +88,7 @@ export interface DsAddItemProps extends Omit<DsButtonBaseProps, "onChange"> {
 export const DsAddItemDefaultProps: Partial<DsAddItemProps> = {
   label: "Add",
   step: 1,
+  minValue: 0,
   onChange: () => {},
   slots: {
     LeftIconButton: DsAddItemIconButton,

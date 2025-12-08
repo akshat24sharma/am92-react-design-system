@@ -2,16 +2,17 @@ import { useEffect, useMemo, useState } from "react";
 import { DsAddItemDefaultProps, type DsAddItemProps } from "./DsAddItem.Types";
 import STATE_STYLES from "../../Theme/STATE_STYLES";
 import { DsButtonBase } from "../DsButtonBase";
+import { DsBox } from "../DsBox";
 
 export const DsAddItem = (inProps: DsAddItemProps) => {
   const mergedSlots = {
     ...DsAddItemDefaultProps.slots,
-    ...inProps.slots,
+    ...(inProps.slots || {}),
   };
 
   const mergedSlotProps = {
     ...DsAddItemDefaultProps.slotProps,
-    ...inProps.slotProps,
+    ...(inProps.slotProps || {}),
   };
 
   const props = {
@@ -36,39 +37,45 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     ...restProps
   } = props;
 
+  const isControlled = typeof count === "number";
+
   const { LeftIconButton, RightIconButton, CounterText } = slots;
 
-  const [countValue, setCountValue] = useState<number>(count ?? 0);
+  // Internal state for count value, initialized based on control mode
+  const [countValue, setCountValue] = useState<number>(
+    isControlled ? count : 0
+  );
+
+  // Component is in "empty" state when count is 0 (shows single Add button)
+  const isEmptyCount = countValue === 0;
 
   useEffect(() => {
-    if (count !== undefined) {
+    if (isControlled && count !== countValue) {
       setCountValue(count);
     }
   }, [count]);
 
-  const isEmptyCount = countValue === 0;
-
   const isAddDisabled =
     disabled || loading || (maxValue !== undefined && countValue >= maxValue);
 
-  const isSubtractDisabled = disabled || loading || isEmptyCount;
+  const isSubtractDisabled = disabled || loading;
 
   const handleAdd = (e: React.MouseEvent) => {
     e.stopPropagation();
 
     if (!isAddDisabled) {
-      let newValue: number;
-      // If count is 0 and we have a minValue, jump to minValue on first add
-      if (countValue === 0 && minValue !== undefined && minValue > 0) {
+      let newValue = countValue + (step ?? 1);
+
+      // Jump to minValue if increment would result in a value below minimum threshold
+      if (minValue !== undefined && newValue < minValue) {
         newValue = minValue;
-      } else {
-        newValue = countValue + (step ?? 1);
       }
 
-      if (count === undefined) {
+      if (!isControlled) {
         setCountValue(newValue);
       }
-      onChange?.(name, newValue, "increment");
+
+      if (typeof onChange === "function") onChange(name, newValue, "increment");
     }
   };
 
@@ -78,15 +85,15 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     if (!isSubtractDisabled) {
       let newValue = countValue - (step ?? 1);
 
-      // Reset to 0 if would go negative or below minValue
+      // Reset to 0 if would go negative or below minValue (back to "add" state)
       if (newValue < 0 || (minValue !== undefined && newValue < minValue)) {
         newValue = 0;
       }
 
-      if (count === undefined) {
+      if (!isControlled) {
         setCountValue(newValue);
       }
-      onChange?.(name, newValue, "decrement");
+      if (typeof onChange === "function") onChange(name, newValue, "decrement");
     }
   };
 
@@ -98,7 +105,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       minWidth: "90px",
       minHeight: "var(--ds-spacing-tepid)",
       borderRadius: "var(--ds-radius-cool)",
-      boxShadow: "var(--ds-elevation-8, 0px 8px 12px rgba(0, 0, 0, 0.08))",
+      boxShadow: "var(--ds-elevation-8)",
       background: "var(--ds-colour-surfacePrimary)",
       "&:hover": {
         background: "var(--ds-colour-surfacePrimary) !important",
@@ -112,7 +119,29 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     }),
     [isEmptyCount, disabled, restProps.sx]
   );
-  return (
+
+  const boxSx = useMemo(
+    () => ({
+      ...fabSx,
+      display: "flex",
+      px: "var(--ds-spacing-glacial)",
+      justifyContent: "center",
+      alignItems: "center",
+      ...restProps.sx,
+    }),
+    [isEmptyCount, disabled, restProps.sx]
+  );
+
+  const counterTextElement = CounterText && (
+    <CounterText
+      count={countValue}
+      label={label ?? ""}
+      disabled={disabled ?? false}
+      {...slotProps?.CounterText}
+    />
+  );
+
+  return isEmptyCount ? (
     <DsButtonBase
       aria-label={label}
       aria-disabled={disabled}
@@ -121,6 +150,18 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       onClick={isEmptyCount ? handleAdd : undefined}
       sx={fabSx}
       disableRipple={!isEmptyCount || disabled}
+    >
+      {counterTextElement}
+    </DsButtonBase>
+  ) : (
+    <DsBox
+      component={"div"}
+      aria-label={label}
+      aria-disabled={disabled}
+      color="default"
+      {...restProps}
+      onClick={isEmptyCount ? handleAdd : undefined}
+      sx={boxSx}
     >
       {!isEmptyCount && LeftIconButton && (
         <LeftIconButton
@@ -131,14 +172,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
         />
       )}
 
-      {CounterText && (
-        <CounterText
-          count={countValue}
-          label={label ?? ""}
-          disabled={disabled ?? false}
-          {...slotProps?.CounterText}
-        />
-      )}
+      {counterTextElement}
 
       {!isEmptyCount && RightIconButton && (
         <RightIconButton
@@ -148,6 +182,6 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
           {...slotProps?.RightIconButton}
         />
       )}
-    </DsButtonBase>
+    </DsBox>
   );
 };

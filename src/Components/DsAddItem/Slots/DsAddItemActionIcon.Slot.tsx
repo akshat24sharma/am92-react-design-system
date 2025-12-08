@@ -7,6 +7,7 @@ import { DsRemixIcon } from "../../DsRemixIcon";
 export const DsAddItemIconButton: React.FC<DsAddItemActionButtonProps> = ({
   onClick,
   disabled,
+  IconProps,
   ...iconButtonProps
 }) => {
   return (
@@ -14,9 +15,9 @@ export const DsAddItemIconButton: React.FC<DsAddItemActionButtonProps> = ({
       <DsRemixIcon
         sx={{
           fontSize: "20px",
-          ...iconButtonProps?.IconProps?.sx,
+          ...IconProps?.sx,
         }}
-        {...iconButtonProps?.IconProps}
+        {...IconProps}
       />
     </DsIconButton>
   );
