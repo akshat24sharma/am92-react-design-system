@@ -23,7 +23,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   };
 
   const {
-    count,
+    value,
     label,
     maxValue,
     minValue,
@@ -37,23 +37,23 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     ...restProps
   } = props;
 
-  const isControlled = typeof count === "number";
+  const isControlled = typeof value === "number";
 
   const { LeftIconButton, RightIconButton, CounterText } = slots;
 
   // Internal state for count value, initialized based on control mode
   const [countValue, setCountValue] = useState<number>(
-    isControlled ? count : 0
+    isControlled ? value : 0
   );
 
   // Component is in "empty" state when count is 0 (shows single Add button)
   const isEmptyCount = countValue === 0;
 
   useEffect(() => {
-    if (isControlled && count !== countValue) {
-      setCountValue(count);
+    if (isControlled && value !== countValue) {
+      setCountValue(value);
     }
-  }, [count]);
+  }, [value]);
 
   const isAddDisabled =
     disabled || loading || (maxValue !== undefined && countValue >= maxValue);
@@ -134,7 +134,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
 
   const counterTextElement = CounterText && (
     <CounterText
-      count={countValue}
+      value={countValue}
       label={label ?? ""}
       disabled={disabled ?? false}
       {...slotProps?.CounterText}

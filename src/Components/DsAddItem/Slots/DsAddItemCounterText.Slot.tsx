@@ -5,11 +5,11 @@ import { DsTypography } from "../../DsTypography";
 
 export const DsAddItemCounterText: React.FC<DsAddItemCounterTextProps> = ({
   label,
-  count,
+  value,
   disabled,
   ...textProps
 }) => {
-  const isEmptyCount = count === 0;
+  const isEmptyCount = value === 0;
 
   return (
     <DsTypography
@@ -29,7 +29,7 @@ export const DsAddItemCounterText: React.FC<DsAddItemCounterTextProps> = ({
       }}
       {...textProps}
     >
-      {isEmptyCount ? label : count}
+      {isEmptyCount ? label : value}
     </DsTypography>
   );
 };

@@ -21,7 +21,7 @@ export interface DsAddItemActionButtonProps extends DsIconButtonProps {
  */
 export interface DsAddItemCounterTextProps extends DsTypographyProps {
   label: string;
-  count: number;
+  value: number;
   disabled: boolean;
 }
 
@@ -54,9 +54,10 @@ export interface DsAddItemSlotProps {
  * Extends DsFabProps while omitting the onChange prop to define custom signature
  */
 // export interface DsAddItemProps extends Omit<DsFabProps, 'onChange'> {
-export interface DsAddItemProps extends Omit<DsButtonBaseProps, "onChange"> {
+export interface DsAddItemProps
+  extends Omit<DsButtonBaseProps, "onChange" | "value"> {
   /** The current count value */
-  count?: number;
+  value?: number;
   /** The maximum allowed value */
   maxValue?: number;
   /** The minimum allowed value */
@@ -68,7 +69,7 @@ export interface DsAddItemProps extends Omit<DsButtonBaseProps, "onChange"> {
   /** Handler called when count changes */
   onChange: (
     name: string,
-    count: number,
+    value: number,
     reason: "increment" | "decrement"
   ) => void;
   /** Custom components to use for slots */
