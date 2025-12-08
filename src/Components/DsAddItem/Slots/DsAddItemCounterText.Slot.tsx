@@ -22,9 +22,6 @@ export const DsAddItemCounterText: React.FC<DsAddItemCounterTextProps> = ({
           : "var(--ds-colour-typoPrimary)"
       }
       sx={{
-        my: isEmptyCount
-          ? "var(--ds-spacing-quickFreeze)"
-          : "var(--ds-spacing-glacial)",
         mx: isEmptyCount
           ? "var(--ds-spacing-cool)"
           : "var(--ds-spacing-glacial)",
