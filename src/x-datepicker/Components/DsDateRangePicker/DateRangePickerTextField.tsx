@@ -1,12 +1,14 @@
+import React from "react";
+import { DateField } from "@mui/x-date-pickers";
+import { useThemeProps } from "@mui/system";
 
-import React from 'react'
-import { DateField } from '@mui/x-date-pickers'
-import { useThemeProps } from '@mui/system'
+import type { IDateRangePickerTextFieldProps } from "./DsDateRangePicker.Types";
+import { DsBox, DsHelperText, DsStack, DsTextField } from "../../../Components";
 
-import type { IDateRangePickerTextFieldProps } from './DsDateRangePicker.Types'
-import { DsBox, DsHelperText, DsStack, DsTextField } from '../../../Components'
-
-const StartDateTextField = React.forwardRef<HTMLInputElement, IDateRangePickerTextFieldProps>((fieldProps, ref) => {
+const StartDateTextField = React.forwardRef<
+  HTMLInputElement,
+  IDateRangePickerTextFieldProps
+>((fieldProps, ref) => {
   const {
     startDateLabelSupportText,
     InputProps,
@@ -24,8 +26,8 @@ const StartDateTextField = React.forwardRef<HTMLInputElement, IDateRangePickerTe
     ownerState,
     setOpen,
     ...otherProps
-  } = fieldProps
-  const { readOnly } = InputProps || {}
+  } = fieldProps;
+  const { readOnly } = InputProps || {};
   return (
     <DsTextField
       {...otherProps}
@@ -34,10 +36,13 @@ const StartDateTextField = React.forwardRef<HTMLInputElement, IDateRangePickerTe
       readOnly={readOnly}
       label={startDateLabel}
     />
-  )
-})
+  );
+});
 
-const EndDateTextField = React.forwardRef<HTMLInputElement, IDateRangePickerTextFieldProps>((fieldProps, ref) => {
+const EndDateTextField = React.forwardRef<
+  HTMLInputElement,
+  IDateRangePickerTextFieldProps
+>((fieldProps, ref) => {
   const {
     endDateLabelSupportText,
     InputProps,
@@ -55,8 +60,8 @@ const EndDateTextField = React.forwardRef<HTMLInputElement, IDateRangePickerText
     ownerState,
     setOpen,
     ...otherProps
-  } = fieldProps
-  const { readOnly } = InputProps || {}
+  } = fieldProps;
+  const { readOnly } = InputProps || {};
 
   return (
     <DsTextField
@@ -66,25 +71,30 @@ const EndDateTextField = React.forwardRef<HTMLInputElement, IDateRangePickerText
       readOnly={readOnly}
       label={endDateLabel}
     />
-  )
-})
+  );
+});
 
-const DateRangePickerTextField = React.forwardRef<HTMLDivElement, IDateRangePickerTextFieldProps>((props, ref) => {
+const DateRangePickerTextField = React.forwardRef<
+  HTMLDivElement,
+  IDateRangePickerTextFieldProps
+>((props, ref) => {
   const {
     startDate,
+
     endDate,
     onDateChange,
     startDateLabel,
     endDateLabel,
-    orientation = 'row',
+    orientation = "row",
     customRef,
-    format
-  } = props
+    format,
+    onFieldClick,
+  } = props;
 
   const mergedProps = useThemeProps({
     props,
-    name: 'MuiPickersInput'
-  })
+    name: "MuiPickersInput",
+  });
 
   const {
     helperText,
@@ -93,13 +103,13 @@ const DateRangePickerTextField = React.forwardRef<HTMLDivElement, IDateRangePick
     error,
     success,
     ...baseTextFieldProps
-  } = mergedProps
+  } = mergedProps;
 
   return (
     <DsBox ref={ref}>
       <DsStack
-        direction={orientation === 'landscape' ? 'column' : 'row'}
-        gap='var(--ds-spacing-bitterCold)'
+        direction={orientation === "landscape" ? "column" : "row"}
+        gap="var(--ds-spacing-bitterCold)"
       >
         <DateField
           slots={{ textField: StartDateTextField }}
@@ -110,14 +120,15 @@ const DateRangePickerTextField = React.forwardRef<HTMLDivElement, IDateRangePick
               label: startDateLabel,
               inputRef: customRef,
               placeholder: format?.toLowerCase?.(),
+              onClick: () => onFieldClick?.("start"),
               onChange: (value: unknown) => {
                 if (value instanceof Date || value === null) {
-                  onDateChange?.(value, endDate ?? null)
+                  onDateChange?.(value, endDate ?? null);
                 }
               },
               ...DsTextFieldSlots,
-              ...DsTextFieldSlotProps
-            }
+              ...DsTextFieldSlotProps,
+            },
           }}
           {...baseTextFieldProps}
         />
@@ -130,14 +141,15 @@ const DateRangePickerTextField = React.forwardRef<HTMLDivElement, IDateRangePick
               value: endDate,
               label: endDateLabel,
               placeholder: format?.toLowerCase?.(),
+              onClick: () => onFieldClick?.("end"),
               onChange: (value: unknown) => {
                 if (value instanceof Date || value === null) {
-                  onDateChange?.(startDate ?? null, value)
+                  onDateChange?.(startDate ?? null, value);
                 }
               },
               ...DsTextFieldSlots,
-              ...DsTextFieldSlotProps
-            }
+              ...DsTextFieldSlotProps,
+            },
           }}
         />
       </DsStack>
@@ -146,9 +158,9 @@ const DateRangePickerTextField = React.forwardRef<HTMLDivElement, IDateRangePick
         <DsHelperText helperText={helperText} error={error} success={success} />
       )}
     </DsBox>
-  )
-})
+  );
+});
 
-DateRangePickerTextField.displayName = 'DateRangePickerTextField'
+DateRangePickerTextField.displayName = "DateRangePickerTextField";
 
-export default DateRangePickerTextField
+export default DateRangePickerTextField;
