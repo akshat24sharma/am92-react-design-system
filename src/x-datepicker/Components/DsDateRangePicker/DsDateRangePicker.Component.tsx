@@ -154,18 +154,18 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       }
 
       if (date < startDate) {
-        onChange?.(name, [date, endDate]);
+        onChange(name, [date, endDate]);
         setStartDate(date);
         // setEndDate(null);
         setActiveField("end");
       } else {
-        onChange?.(name, [startDate, date]);
+        onChange(name, [startDate, date]);
         setEndDate(date);
       }
     }
   };
   const handleClear = () => {
-    onChange?.(name, [null, null]);
+    onChange(name, [null, null]);
     setStartDate(null);
     setEndDate(null);
     setActiveField("start");
@@ -177,7 +177,7 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
   ) => {
     setStartDate(startDate);
     setEndDate(endDate);
-    onChange?.(name, [startDate, endDate]);
+    onChange(name, [startDate, endDate]);
   };
 
   const LocalizationProviderProps = useThemeProps({
