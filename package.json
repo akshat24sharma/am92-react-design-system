@@ -10,7 +10,8 @@
   "files": [
     "dist/**/*.js",
     "dist/**/*.d.ts",
-    "dist/**/*.json"
+    "dist/**/*.json",
+    "dist/Patterns/AssetFiles/**"
   ],
   "dependencies": {
     "@emotion/react": "~11.11.4",
@@ -42,9 +43,9 @@
   },
   "scripts": {
     "compile": "tsc",
+    "copy:assets": "cp -r src/Patterns/AssetFiles dist/Patterns/",
     "build:clean": "rm -rf ./dist",
-    "build": "npm-run-all build:clean compile",
-    "test": "echo 'Error: no test specified'",
+    "build": "npm-run-all build:clean compile copy:assets",
     "preversion": "npm-run-all build test",
     "version": "echo 'Versioning'",
     "postversion": "if [ \"$BETA\" = \"true\" ]; then echo 'Skipping stable publish for beta'; else git push && git push --tags && npm run publish:pkg; fi",
