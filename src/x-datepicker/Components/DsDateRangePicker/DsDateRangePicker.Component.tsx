@@ -139,9 +139,12 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     if (!date) return;
 
     if (field === "start") {
-      onChange?.(name, [date, null]);
+      const newEndDate = endDate && date > endDate ? null : endDate;
+      onChange(name, [date, newEndDate]);
       setStartDate(date);
-      setEndDate(null);
+      if (newEndDate === null && endDate !== null) {
+        setEndDate(null);
+      }
       setActiveField("end");
     }
 
@@ -151,9 +154,9 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       }
 
       if (date < startDate) {
-        onChange?.(name, [date, null]);
+        onChange?.(name, [date, endDate]);
         setStartDate(date);
-        setEndDate(null);
+        // setEndDate(null);
         setActiveField("end");
       } else {
         onChange?.(name, [startDate, date]);
