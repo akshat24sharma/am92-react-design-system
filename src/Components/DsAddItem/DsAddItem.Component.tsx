@@ -1,5 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { DsAddItemDefaultProps, type DsAddItemProps } from "./DsAddItem.Types";
+import {
+  DsAddItemDefaultProps,
+  type DsAddItemProps,
+  DEFAULT_STEP_VALUE,
+} from "./DsAddItem.Types";
 import STATE_STYLES from "../../Theme/STATE_STYLES";
 import { DsButtonBase } from "../DsButtonBase";
 import { DsBox } from "../DsBox";
@@ -60,15 +64,28 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
 
   const isSubtractDisabled = disabled || loading;
 
+  // Helper function to check if value is below minValue threshold
+  const isBelowMinValue = (value: number): boolean => {
+    return minValue !== undefined && value < minValue;
+  };
+
+  // Helper function to calculate new value based on operation
+  const calculateNewValue = (operation: "add" | "subtract"): number => {
+    const stepValue = step ?? DEFAULT_STEP_VALUE;
+    return operation === "add"
+      ? countValue + stepValue
+      : countValue - stepValue;
+  };
+
   const handleAdd = (e: React.MouseEvent) => {
     e.stopPropagation();
 
     if (!isAddDisabled) {
-      let newValue = countValue + (step ?? 1);
+      let newValue = calculateNewValue("add");
 
       // Jump to minValue if increment would result in a value below minimum threshold
-      if (minValue !== undefined && newValue < minValue) {
-        newValue = minValue;
+      if (isBelowMinValue(newValue)) {
+        newValue = minValue!;
       }
 
       if (!isControlled) {
@@ -83,10 +100,10 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     e.stopPropagation();
 
     if (!isSubtractDisabled) {
-      let newValue = countValue - (step ?? 1);
+      let newValue = calculateNewValue("subtract");
 
       // Reset to 0 if would go negative or below minValue (back to "add" state)
-      if (newValue < 0 || (minValue !== undefined && newValue < minValue)) {
+      if (newValue < 0 || isBelowMinValue(newValue)) {
         newValue = 0;
       }
 
@@ -124,12 +141,11 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     () => ({
       ...fabSx,
       display: "flex",
-      px: "var(--ds-spacing-glacial)",
       justifyContent: "center",
       alignItems: "center",
       ...restProps.sx,
     }),
-    [isEmptyCount, disabled, restProps.sx]
+    [fabSx, restProps.sx]
   );
 
   const counterTextElement = CounterText && (
