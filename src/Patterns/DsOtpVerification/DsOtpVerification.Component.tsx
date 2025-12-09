@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import type {
+  DsOtpChannelConfig,
   DsOtpVerificationProps,
   DsOtpVerificationSlotProps,
   DsOtpVerificationSlots,
@@ -21,36 +22,53 @@ export const INITIAL_STATUS: StatusDetailType = {
   type: 'message'
 }
 
-export const DsOtpVerification: React.FC<DsOtpVerificationProps> = ({
-  open,
-  showConfirmationOnClose,
-  hideHeader,
-  channelId,
-  channelLabel,
-  secondaryOtp,
-  otpLength = 6,
-  resendTimer = 30,
-  currentResendAttempts,
-  maxResendAttempts,
-  title,
-  description,
-  showBottomSheet,
-  footerText = 'Powered by RBI regulated Account Aggregator ',
-  footerIcon,
-  onResend,
-  onSubmit,
-  onClose,
-  ...restProps
-}) => {
+export const DsOtpVerification: React.FC<DsOtpVerificationProps> = props => {
+  const {
+    open,
+    showConfirmationOnClose,
+    hideHeader,
+    variant = 'single',
+    channelId,
+    channelLabel,
+    currentResendAttempts,
+    maxResendAttempts,
+    otpLength = 6,
+    resendTimer = 30,
+    title,
+    description,
+    showBottomSheet,
+    footerText = 'Powered by RBI regulated Account Aggregator ',
+    footerIcon,
+    onResend,
+    onSubmit,
+    onClose,
+    ...restProps
+  } = props
+
+  // Dual-channel props (only present if variant === 'dual')
+  const isDual = variant === 'dual'
+
+  const {
+    slots,
+    slotProps,
+    secondaryChannelId,
+    secondaryChannelLabel,
+    secondaryCurrentResendAttempts,
+    secondaryMaxResendAttempts,
+    ...wrapperProps
+  } = restProps as {
+    slots?: DsOtpVerificationSlots
+    slotProps?: DsOtpVerificationSlotProps
+    secondaryChannelId?: DsOtpChannelConfig['channelId']
+    secondaryChannelLabel?: DsOtpChannelConfig['channelLabel']
+    secondaryCurrentResendAttempts?: DsOtpChannelConfig['currentResendAttempts']
+    secondaryMaxResendAttempts?: DsOtpChannelConfig['maxResendAttempts']
+  }
+
   const [status, setStatus] = useState<StatusDetailType>(INITIAL_STATUS)
   const [loading, setLoading] = useState(false)
   const [otp, setOtp] = useState('')
   const [secondaryOtpValue, setSecondaryOtpValue] = useState('')
-
-  const { slots, slotProps, ...wrapperProps } = restProps as {
-    slots?: DsOtpVerificationSlots
-    slotProps?: DsOtpVerificationSlotProps
-  }
 
   const { breakpoints } = useBreakpoints()
 
@@ -65,8 +83,7 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = ({
     : !isFullPageStatus
 
   const hasPrimaryOtp = otp.length === otpLength
-  const hasSecondaryOtp =
-    !secondaryOtp || secondaryOtpValue.length === otpLength
+  const hasSecondaryOtp = !isDual || secondaryOtpValue.length === otpLength
 
   const isConfirmDisabled = !hasPrimaryOtp || !hasSecondaryOtp || loading
 
@@ -89,11 +106,8 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = ({
     try {
       const otps = { [channelId]: otp }
 
-      if (secondaryOtp) {
-        if (!secondaryOtp.channelId)
-          console.warn("secondaryChannelId must be present with variant 'dual'")
-
-        otps[secondaryOtp.channelId ?? 'secondary'] = secondaryOtpValue
+      if (isDual) {
+        otps[secondaryChannelId ?? 'secondary'] = secondaryOtpValue
       }
 
       const result = await onSubmit(otps)
@@ -167,6 +181,16 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = ({
     return actionBtnProps
   }
 
+  useEffect(() => {
+    if (!channelId) {
+      console.warn("'channelId' must be present for OTP verification")
+    }
+
+    if (variant === 'dual' && !secondaryChannelId) {
+      console.warn("'secondaryChannelId' must be present with variant 'dual'")
+    }
+  }, [])
+
   return (
     <DsOtpVerificationWrapper
       open={open}
@@ -175,7 +199,7 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = ({
       onClose={handleClose}
       useBottomSheet={useBottomSheet}
       showInputSection={showInputSection}
-      dialogHeight={secondaryOtp ? '100%' : '478px'}
+      dialogHeight={isDual ? '100%' : '478px'}
       statusDialog={
         <DsStatusDialog
           status={status}
@@ -202,7 +226,11 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = ({
           maxResendAttempts={maxResendAttempts}
           otp={otp}
           setOtp={setOtp}
-          secondaryOtp={secondaryOtp}
+          variant={variant}
+          secondaryChannelId={secondaryChannelId}
+          secondaryChannelLabel={secondaryChannelLabel}
+          secondaryCurrentResendAttempts={secondaryCurrentResendAttempts}
+          secondaryMaxResendAttempts={secondaryMaxResendAttempts}
           secondaryOtpValue={secondaryOtpValue}
           setSecondaryOtpValue={setSecondaryOtpValue}
           otpLength={otpLength}

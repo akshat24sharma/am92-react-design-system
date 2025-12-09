@@ -1,5 +1,3 @@
-// import type { Breakpoint } from '@am92/react-design-system'
-// import { useMediaQuery, useTheme } from '@am92/react-design-system'
 import type { Breakpoint } from '@mui/system'
 import { useMediaQuery } from '@mui/system'
 import { useTheme } from '../styles'
@@ -21,6 +19,5 @@ export function useBreakpoints(): IwithBreakpoint {
 
   return {
     breakpoints
-    // breakpointsValues: theme.breakpoints
   }
 }

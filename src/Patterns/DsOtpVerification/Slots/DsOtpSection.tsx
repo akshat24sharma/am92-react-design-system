@@ -15,7 +15,6 @@ import DsOtpVerificationResend from '../DsOtpVerificationResend'
 import { OtpError } from '../OtpErrorClass'
 import { DEFAULT_STATUS_MAP } from '../StatusMapper'
 
-
 const OtpLabel: React.FC<{ label: string }> = ({ label }) => {
   return (
     <DsStack
@@ -52,7 +51,12 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
   currentResendAttempts,
   maxResendAttempts,
 
-  secondaryOtp,
+  variant,
+  secondaryChannelId,
+  secondaryChannelLabel,
+  secondaryCurrentResendAttempts,
+  secondaryMaxResendAttempts,
+
   secondaryOtpValue,
   setSecondaryOtpValue,
 
@@ -86,7 +90,7 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
     }
   }
 
-  const hasSecondary = secondaryOtp !== undefined
+  const hasSecondary = variant === 'dual'
 
   // Error display helpers
   const isError = status.type === 'message' && status.message.length > 3
@@ -117,11 +121,8 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
       <>
         <DsOtp
           label={<OtpLabel label={label} />}
-          // TODO: check on IOS for keyboard
-          // TODO: lazy load images - check one - important
           value={otpValue}
           length={otpLength}
-          // size={useBottomSheet ? 'small' : 'medium'}
           size={'small'}
           error={isError}
           helperText={helperText}
@@ -171,10 +172,10 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
             />
 
             {renderOtp(
-              secondaryOtp.channelId,
-              secondaryOtp.channelLabel,
-              secondaryOtp.currentResendAttempts,
-              secondaryOtp.maxResendAttempts,
+              secondaryChannelId ?? 'secondary',
+              secondaryChannelLabel ?? '',
+              secondaryCurrentResendAttempts ?? 0,
+              secondaryMaxResendAttempts ?? 0,
               secondaryOtpValue,
               setSecondaryOtpValue
             )}
@@ -222,7 +223,6 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
-            // marginBottom: 'var(--ds-spacing-glacial)',
             ...footerSx
           }}
         >
