@@ -8,6 +8,11 @@ import { DsIconButtonProps } from "../DsIconButton";
 import { DsRemixIconProps } from "../DsRemixIcon";
 
 /**
+ * Default step value for increment/decrement operations
+ */
+export const DEFAULT_STEP_VALUE = 1;
+
+/**
  * Props for action buttons (left/right) within the add item component
  * Extends DsIconButtonProps with optional icon configuration
  */
@@ -88,7 +93,7 @@ export interface DsAddItemProps
  */
 export const DsAddItemDefaultProps: Partial<DsAddItemProps> = {
   label: "Add",
-  step: 1,
+  step: DEFAULT_STEP_VALUE,
   minValue: 0,
   onChange: () => {},
   slots: {
