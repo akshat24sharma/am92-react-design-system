@@ -7,7 +7,7 @@ import { DsDialogContentProps } from '../DsDialogContent'
 import { DsDialogActionsProps } from '../DsDialogActions'
 import { DsButtonProps } from '../DsButton'
 
-export interface DsDialogProps extends DialogProps {
+export interface DsDialogProps extends Omit<DialogProps, 'onClose'> {
   title?: string
   description?: string
   kicker?: string
@@ -23,6 +23,7 @@ export interface DsDialogProps extends DialogProps {
   CloseIconProps?: Omit<DsRemixIconProps, 'ref'>
   ContentProps?: DsDialogContentProps
   ActionsProps?: DsDialogActionsProps
+  onClose?: (event: React.SyntheticEvent, reason: 'backdropClick' | 'escapeKeyDown' | 'closeButtonClick') => void
 }
 
 export const DsDialogDefaultProps: DsDialogProps = {
