@@ -134,12 +134,16 @@ describe('DsMenu Component', () => {
             document.body.removeChild(customAnchor);
         });
 
-        it('should handle MenuListProps', () => {
+        it('should handle slotProps for menu list', () => {
             render(
                 <DsMenu 
                     open 
                     anchorEl={anchorEl}
-                    MenuListProps={{ 'data-testid': 'menu-list' } as any}
+                    slotProps={{
+                            list: {
+                                'data-testid': 'menu-list'
+                            } as any
+                        }}
                 >
                     <DsMenuItem>Menu Item</DsMenuItem>
                 </DsMenu>
@@ -255,7 +259,11 @@ describe('DsMenu Component', () => {
                 <DsMenu 
                     open 
                     anchorEl={anchorEl}
-                    MenuListProps={{ 'aria-label': 'Main navigation menu' } as any}
+                    slotProps={{
+                        list: {
+                            'aria-label': 'Main navigation menu'
+                        } as any
+                    }}
                 >
                     <DsMenuItem>Menu Item</DsMenuItem>
                 </DsMenu>
