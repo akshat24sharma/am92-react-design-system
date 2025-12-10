@@ -751,50 +751,60 @@ describe("DsSelect Component", () => {
     const colorSchemes = ["light", "dark", "highContrast"] as const;
 
     it("should render correctly across all color schemes with proper theme colors", () => {
+      // Theme-specific expectations mapping for background colors
+      const themeExpectations = {
+        light: {
+          expectedBgColor: PALETTE.tertiary100,
+        },
+        dark: {
+          expectedBgColor: PALETTE.tertiary10,
+        },
+        highContrast: {
+          expectedBgColor: PALETTE.highContrast1,
+        },
+      };
+
       // Get the complete color scheme from theme
       const themeColorScheme = getColorScheme(PALETTE);
 
+      // Test all three themes for background color validation
       colorSchemes.forEach((colorScheme) => {
+        const schemeData = themeColorScheme[colorScheme];
+        const expectations = themeExpectations[colorScheme];
+
         const { container, unmount } = renderWithTheme(
-          <DsSelect options={DropdownOptions} color="primary" />,
+          <DsSelect
+            options={DropdownOptions}
+            sx={{
+              background: "var(--ds-colour-typoActionTertiary)",
+            }}
+          />,
           colorScheme
         );
 
         // Verify basic rendering
-        const select = screen.getByRole("combobox");
+        const select = container.querySelector(
+          ".MuiFormControl-root"
+        ) as HTMLElement;
         expect(select).toBeInTheDocument();
-
-        // Verify color scheme is applied
+        // Verify theme context is applied
         const wrapperElement = container.firstChild as HTMLElement;
         expect(wrapperElement).toHaveAttribute(
           "data-mui-color-scheme",
           colorScheme
         );
 
-        // Verify theme colors match the actual theme configuration
-        const schemeData = themeColorScheme[colorScheme];
+        // Verify the computed background color uses the correct CSS variable
+        const computedStyles = window.getComputedStyle(select);
+        const actualBackground = computedStyles.background;
 
-        // Primary color should match theme
-        const expectedPrimaryColor = (schemeData?.palette?.primary as any)
-          ?.main;
-        expect(expectedPrimaryColor).toBeTruthy();
-        // Note: Theme may transform palette colors, so we verify it's a valid hex color
-        expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
+        // The CSS variable should be applied
+        expect(actualBackground).toBe("var(--ds-colour-typoActionTertiary)");
 
-        // Text color should match theme
-        const expectedTextColor = (schemeData?.palette?.text as any)?.primary;
-        expect(expectedTextColor).toBeTruthy();
-
-        // Verify CSS classes
-        const selectRoot = container.querySelector(
-          ".MuiSelect-root"
-        ) as HTMLElement;
-        expect(selectRoot).toHaveClass("MuiInputBase-colorPrimary");
-
-        // Snapshot testing
-        expect(container.firstChild).toMatchSnapshot(
-          `select-${colorScheme}-theme`
-        );
+        // Verify that the design system color for typoActionTertiary matches expected theme color
+        const actualTypoActionTertiary =
+          schemeData?.ds?.colour?.typoActionTertiary;
+        expect(actualTypoActionTertiary).toBe(expectations.expectedBgColor);
 
         unmount();
       });

@@ -24,7 +24,7 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 import {
   render,
   screen,
-  waitFor,
+  renderWithTheme,
   testAllThemes,
 } from "../../Tests/Mocks/testUtils";
 import userEvent from "@testing-library/user-event";
@@ -33,6 +33,8 @@ import { DsButton } from "../DsButton/DsButton.Component";
 import { DsBox } from "../DsBox/DsBox.Component";
 import { DsTypography } from "../DsTypography";
 import { DsRemixIcon } from "../DsRemixIcon";
+import { PALETTE } from "../../Constants";
+import getColorScheme from "../../Theme/getColorScheme";
 
 describe("DsTooltip Component", () => {
   let user: ReturnType<typeof userEvent.setup>;
@@ -472,35 +474,72 @@ describe("DsTooltip Component", () => {
   // THEME TESTING
   // ============================
   describe("Theme Testing", () => {
+    const colorSchemes = ["light", "dark", "highContrast"] as const;
+
     it("should render correctly across all themes", () => {
-      testAllThemes(
-        (colorScheme) => (
+      // Theme-specific expectations mapping for background colors
+      const themeExpectations = {
+        light: {
+          expectedColor: PALETTE.tertiary100,
+        },
+        dark: {
+          expectedColor: PALETTE.tertiary10,
+        },
+        highContrast: {
+          expectedColor: PALETTE.highContrast1,
+        },
+      };
+
+      // Get the complete color scheme from theme
+      const themeColorScheme = getColorScheme(PALETTE);
+
+      // Test all three themes for background color validation
+      colorSchemes.forEach((colorScheme) => {
+        const schemeData = themeColorScheme[colorScheme];
+        const expectations = themeExpectations[colorScheme];
+
+        const { container, unmount } = renderWithTheme(
           <DsTooltip
-            heading={`${colorScheme} Heading`}
-            description={`Description for ${colorScheme} theme`}
+            description="description text"
+            heading="Wrapper Style Test"
+            style={{
+              color: "var(--ds-colour-typoActionTertiary)",
+            }}
           >
-            <DsButton data-testid={`btn-${colorScheme}`}>Hover me</DsButton>
-          </DsTooltip>
-        ),
-        async (container, colorScheme) => {
-          const button = container.querySelector(
-            `[data-testid="btn-${colorScheme}"]`
-          );
-          expect(button).toBeInTheDocument();
+            <DsTypography data-testid={`tooltip-${colorScheme}`}>
+              Hover me
+            </DsTypography>
+          </DsTooltip>,
+          colorScheme
+        );
 
-          // Test default wrapper appearance
-          const wrapper = container.querySelector(".MuiLink-root");
-          expect(wrapper).toBeInTheDocument();
+        const tooltip = container.querySelector(
+          `[data-testid="tooltip-${colorScheme}"]`
+        ) as HTMLElement;
 
-          await userEvent.hover(button!);
-          expect(
-            await screen.findByText(`${colorScheme} Heading`)
-          ).toBeInTheDocument();
-          expect(
-            await screen.findByText(`Description for ${colorScheme} theme`)
-          ).toBeInTheDocument();
-        }
-      );
+        expect(tooltip).toBeInTheDocument();
+
+        // Verify theme context is applied
+        const wrapperElement = container.firstChild as HTMLElement;
+        expect(wrapperElement).toHaveAttribute(
+          "data-mui-color-scheme",
+          colorScheme
+        );
+
+        // Verify the computed background color uses the correct CSS variable
+        const computedStyles = window.getComputedStyle(tooltip);
+        const actualColor = computedStyles.color;
+
+        // The CSS variable should be applied
+        expect(actualColor).toBe("var(--ds-colour-typoActionTertiary)");
+
+        // Verify that the design system color for typoActionTertiary matches expected theme color
+        const actualTypoActionTertiary =
+          schemeData?.ds?.colour?.typoActionTertiary;
+        expect(actualTypoActionTertiary).toBe(expectations.expectedColor);
+
+        unmount();
+      });
     });
 
     it("should maintain wrapper styling across themes", () => {

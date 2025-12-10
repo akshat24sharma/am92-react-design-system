@@ -20,8 +20,15 @@
  */
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
-import { render, screen, testAllThemes } from "../../Tests/Mocks/testUtils";
+import {
+  render,
+  screen,
+  testAllThemes,
+  renderWithTheme,
+} from "../../Tests/Mocks/testUtils";
 import userEvent from "@testing-library/user-event";
+import getColorScheme from "../../Theme/getColorScheme";
+import { PALETTE } from "../../Constants";
 import { DsTag } from "./DsTag.Component";
 import { DsBox } from "../DsBox";
 import { DsRemixIcon } from "../DsRemixIcon";
@@ -395,6 +402,72 @@ describe("DsTag Component", () => {
           );
         }
       );
+    });
+
+    it("should apply correct theme background colors across all themes", () => {
+      const colorSchemes = ["light", "dark", "highContrast"] as const;
+
+      // Theme-specific expectations mapping for background colors
+      const themeExpectations = {
+        light: {
+          expectedBgColor: PALETTE.secondary100,
+        },
+        dark: {
+          expectedBgColor: PALETTE.secondary100,
+        },
+        highContrast: {
+          expectedBgColor: PALETTE.highContrast1,
+        },
+      };
+
+      // Get the complete color scheme from theme
+      const themeColorScheme = getColorScheme(PALETTE);
+
+      // Test all three themes for background color validation
+      colorSchemes.forEach((colorScheme) => {
+        const schemeData = themeColorScheme[colorScheme];
+        const expectations = themeExpectations[colorScheme];
+
+        const { container, unmount } = renderWithTheme(
+          <DsTag
+            label="Theme Background Tag"
+            value="theme-test"
+            selected={false}
+            data-testid={`tag-bg-${colorScheme}`}
+            sx={{
+              color: "var(--ds-colour-typoActionSecondary)",
+            }}
+          />,
+          colorScheme
+        );
+
+        // Verify the tag renders correctly
+        const tagElement = container.querySelector(
+          `[data-testid="tag-bg-${colorScheme}"]`
+        ) as HTMLElement;
+        expect(tagElement).toBeInTheDocument();
+        expect(tagElement).toHaveClass("MuiChip-root");
+
+        // Verify theme context is applied
+        const wrapperElement = container.firstChild as HTMLElement;
+        expect(wrapperElement).toHaveAttribute(
+          "data-mui-color-scheme",
+          colorScheme
+        );
+
+        // Verify the computed background color uses the correct CSS variable
+        const computedStyles = window.getComputedStyle(tagElement);
+        const actualColor = computedStyles.color;
+        // The CSS variable should be applied
+        expect(actualColor).toBe("var(--ds-colour-typoActionSecondary)");
+
+        // Verify that the design system color for typoActionSecondary matches expected theme color
+        const actualTypoActionSecondary =
+          schemeData?.ds?.colour?.typoActionSecondary;
+        expect(actualTypoActionSecondary).toBe(expectations.expectedBgColor);
+
+        unmount();
+      });
     });
   });
 

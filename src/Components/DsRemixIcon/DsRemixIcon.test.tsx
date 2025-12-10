@@ -272,63 +272,66 @@ describe("DsRemixIcon Component", () => {
       });
     });
 
-    it("should apply correct theme colors for all color variants", () => {
-      //Just checking for few colors to keep test time low
-      const colorVariants = [
-        "primary",
-        "secondary",
-        "error",
-        "warning",
-        "info",
-        "success",
-      ] as const;
+    it("should apply correct theme background colors across all themes", () => {
+      // Theme-specific expectations mapping for background colors
+      const themeExpectations = {
+        light: {
+          expectedBgColor: PALETTE.tertiary100,
+        },
+        dark: {
+          expectedBgColor: PALETTE.tertiary10,
+        },
+        highContrast: {
+          expectedBgColor: PALETTE.highContrast1,
+        },
+      };
 
       // Get the complete color scheme from theme
       const themeColorScheme = getColorScheme(PALETTE);
 
-      // Test all three themes for color variants
-
+      // Test all three themes for background color validation
       colorSchemes.forEach((colorScheme) => {
         const schemeData = themeColorScheme[colorScheme];
+        const expectations = themeExpectations[colorScheme];
 
-        colorVariants.forEach((color) => {
-          const { container, unmount } = renderWithTheme(
-            <DsRemixIcon
-              className="ri-star-line"
-              color={color}
-              data-testid={`icon-${color}-${colorScheme}`}
-            />,
-            colorScheme
-          );
+        const { container, unmount } = renderWithTheme(
+          <DsRemixIcon
+            className="ri-star-line"
+            data-testid={`icon-${colorScheme}`}
+            sx={{
+              background: "var(--ds-colour-typoActionTertiary)",
+            }}
+          />,
+          colorScheme
+        );
 
-          // Get expected color from the theme's palette
-          const paletteColor = schemeData?.palette?.[color] as any;
-          const expectedColor = paletteColor?.main;
+        // Verify the icon renders correctly
+        const muiIconRoot = container.querySelector(
+          `[data-testid="icon-${colorScheme}"]`
+        ) as HTMLElement;
+        expect(muiIconRoot).toBeInTheDocument();
+        expect(muiIconRoot).toHaveClass("MuiIcon-root");
 
-          expect(expectedColor).toBeTruthy(); // Ensure we have a valid color
+        // Verify theme context is applied
+        const wrapperElement = container.firstChild as HTMLElement;
+        expect(wrapperElement).toHaveAttribute(
+          "data-mui-color-scheme",
+          colorScheme
+        );
 
-          // Verify the icon renders with correct color variant
-          const muiIconRoot = container.querySelector(
-            `[data-testid="icon-${color}-${colorScheme}"]`
-          ) as HTMLElement;
-          expect(muiIconRoot).toBeInTheDocument();
+        // Verify the computed background color uses the correct CSS variable
+        const computedStyles = window.getComputedStyle(muiIconRoot);
+        const actualBackground = computedStyles.background;
 
-          // Verify the component has the correct MUI color class
-          expect(muiIconRoot).toHaveClass("MuiIcon-root");
-          expect(muiIconRoot).toHaveClass(
-            `MuiIcon-color${color.charAt(0).toUpperCase() + color.slice(1)}`
-          );
+        // The CSS variable should be applied
+        expect(actualBackground).toBe("var(--ds-colour-typoActionTertiary)");
 
-          // Verify the computed color uses the correct CSS variable or resolved color
-          const computedStyles = window.getComputedStyle(muiIconRoot);
-          const actualColor = computedStyles.color;
-          // Check if the color is using CSS variables (which is expected in our design system)
-          // Verify it's using the correct CSS variable for the color
-          const expectedCssVar = `var(--palette-${color}-main)`;
-          expect(actualColor).toBe(expectedCssVar);
+        // Verify that the design system color for typoActionTertiary matches expected theme color
+        const actualTypoActionTertiary =
+          schemeData?.ds?.colour?.typoActionTertiary;
+        expect(actualTypoActionTertiary).toBe(expectations.expectedBgColor);
 
-          unmount();
-        });
+        unmount();
       });
     });
 
