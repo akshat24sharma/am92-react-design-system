@@ -9,6 +9,13 @@
 - [DsLoader](./Components/DsLoader.tests.md) - 38 tests across 9 categories (optimized from 48) with animation testing, theme compatibility, and error handling documentation ✅
 - [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
+- [DsSelect](./Components/DsSelect.md) -  67 tests across 12 categories (Enhanced Theme Testing)
+- [DsRemixIcon](./Components/DsRemixIcon.md) -  25 tests across 7 categories and theme testing
+- [DsList](./Components/DsList.md) -  22 tests across 8 categories and theme testing
+- [DsLink](./Components/DsLink.md) -  22 tests across 9 categories and theme testing
+- [DsTag](./Components/DsTag.md) -  25 tests across 10 categories and theme testing
+- [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing
+- [DsSkeleton](./Components/DsSkeleton.md) -  46 tests across 9 categories and theme testing
 
 ## Running Tests
 ```bash
@@ -51,8 +58,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 7
-- **Total Tests:** 389 across all tested components (342 + 47 for DsIconButton)
+- **Total Components Documented:** 14
+- **Total Tests:** 660 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)

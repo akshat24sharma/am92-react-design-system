@@ -2636,6 +2636,59 @@ describe("Theme Testing", () => {
 });
 ```
 
+### 11. Wrapper Element Accessibility Testing Issues
+```tsx
+// ❌ Avoid - Assuming wrapper elements have accessibility roles
+it("should render with wrapper element", () => {
+  render(
+    <DsTooltip heading="Heading" description="Description">
+      <DsButton>Hover me</DsButton>
+    </DsTooltip>
+  );
+  expect(screen.getByRole("button")).toBeInTheDocument();
+  // This will fail - DsLink wrapper without href doesn't have link role
+  expect(screen.getByRole("link")).toBeInTheDocument(); 
+});
+
+// ✅ Prefer - Test wrapper elements by their actual rendered structure
+it("should render with default wrapper", () => {
+  render(
+    <DsTooltip heading="Heading" description="Description">
+      <DsButton>Hover me</DsButton>
+    </DsTooltip>
+  );
+  expect(screen.getByRole("button")).toBeInTheDocument();
+  
+  // Test wrapper by its relationship and CSS classes
+  const wrapper = screen.getByRole("button").parentElement;
+  expect(wrapper).toHaveClass("MuiLink-root");
+  expect(wrapper?.tagName).toBe("A");
+});
+
+// ✅ Prefer - Test wrapper elements with proper accessibility attributes
+it("should render wrapper with proper accessibility when href is provided", () => {
+  render(
+    <DsTooltip 
+      heading="Heading" 
+      description="Description"
+      slotProps={{ wrapper: { href: "/test" } }}
+    >
+      <DsButton>Hover me</DsButton>
+    </DsTooltip>
+  );
+  
+  // Now it has proper link role due to href attribute
+  expect(screen.getByRole("link")).toBeInTheDocument();
+  expect(screen.getByRole("link")).toHaveAttribute("href", "/test");
+});
+```
+
+### Key Points for Wrapper Element Testing:
+- **Elements without proper accessibility attributes** (like `<a>` without `href`) may not have expected roles
+- **Test wrapper structure** using parent/child relationships and CSS classes
+- **Verify accessibility roles** only when elements have the required attributes
+- **Use appropriate queries** based on actual rendered DOM structure, not assumptions
+
 ## Template
 
 Use this template for new component test files:

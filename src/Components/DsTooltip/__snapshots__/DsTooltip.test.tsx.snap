@@ -1,0 +1,328 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot in real-world scenario > dstooltip-real-world-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-hpgf8j"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-headingBoldLarge MuiTypography-gutterBottom css-1xm8gzg-MuiTypography-root"
+    >
+      User Profile Settings
+    </span>
+    <div
+      class="MuiBox-root css-171onha"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        Enable notifications
+      </span>
+      <a
+        class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+        data-mui-internal-clone-element="true"
+        description="Control how and when you receive notifications from the system"
+        heading="Notification Settings"
+        href="/help/notifications"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-doxyf4-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            ?
+          </span>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with custom wrapper > dstooltip-custom-wrapper 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-ovmi7"
+    data-mui-internal-clone-element="true"
+    description="With DsBox wrapper"
+    heading="Custom Wrapper"
+    underline="always"
+    variant="inherit"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    description="Default Description"
+    heading="Default Heading"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with different placements > dstooltip-placement-bottom 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    heading="bottom tooltip"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with different placements > dstooltip-placement-left 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    heading="left tooltip"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with different placements > dstooltip-placement-right 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    heading="right tooltip"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with different placements > dstooltip-placement-top 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    heading="top tooltip"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with long content > dstooltip-long-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    description="DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+    heading="HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with only description > dstooltip-description-only 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    description="Only Description"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshot with only heading > dstooltip-heading-only 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    heading="Only Heading"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshots across all themes > dstooltip-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    description="Description for dark"
+    heading="dark Heading"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshots across all themes > dstooltip-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    description="Description for highContrast"
+    heading="highContrast Heading"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`DsTooltip Component > Snapshot Tests > should match snapshots across all themes > dstooltip-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-hk5rnf-MuiTypography-root-MuiLink-root"
+    data-mui-internal-clone-element="true"
+    description="Description for light"
+    heading="light Heading"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Hover me
+      </span>
+    </button>
+  </a>
+</div>
+`;
