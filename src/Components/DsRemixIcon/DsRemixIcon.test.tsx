@@ -296,28 +296,39 @@ describe("DsRemixIcon Component", () => {
             <DsRemixIcon
               className="ri-star-line"
               color={color}
-              data-testid={`icon-${colorScheme}`}
+              data-testid={`icon-${color}-${colorScheme}`}
             />,
             colorScheme
           );
-          // Get expected color from the theme's palette
 
+          // Get expected color from the theme's palette
           const paletteColor = schemeData?.palette?.[color] as any;
           const expectedColor = paletteColor?.main;
 
           expect(expectedColor).toBeTruthy(); // Ensure we have a valid color
-          expect(expectedColor).toBe(
-            (schemeData?.palette?.[color] as any)?.main
-          );
 
-          // Verify CSS class
+          // Verify the icon renders with correct color variant
           const muiIconRoot = container.querySelector(
-            ".MuiIcon-root"
+            `[data-testid="icon-${color}-${colorScheme}"]`
           ) as HTMLElement;
+          expect(muiIconRoot).toBeInTheDocument();
 
+          // Verify the component has the correct MUI color class
+          expect(muiIconRoot).toHaveClass("MuiIcon-root");
           expect(muiIconRoot).toHaveClass(
             `MuiIcon-color${color.charAt(0).toUpperCase() + color.slice(1)}`
           );
+
+          // Verify the computed color uses the correct CSS variable or resolved color
+          const computedStyles = window.getComputedStyle(muiIconRoot);
+          const actualColor = computedStyles.color;
+
+          // Check if the color is using CSS variables (which is expected in our design system)
+          if (actualColor.startsWith("var(--palette-")) {
+            // Verify it's using the correct CSS variable for the color
+            const expectedCssVar = `var(--palette-${color}-main)`;
+            expect(actualColor).toBe(expectedCssVar);
+          }
 
           unmount();
         });

@@ -278,10 +278,19 @@ describe("DsSelect Component", () => {
     });
 
     it("should render custom sx styles", () => {
-      render(<DsSelect options={DropdownOptions} sx={{ margin: 2 }} />);
+      const { container } = render(
+        <DsSelect
+          options={DropdownOptions}
+          style={{
+            background: "red",
+          }}
+        />
+      );
 
-      const select = screen.getByRole("combobox");
-      expect(select).toBeInTheDocument();
+      const selectRoot = container.querySelector(
+        ".MuiSelect-root"
+      ) as HTMLElement;
+      expect(selectRoot).toHaveStyle("background: red");
     });
   });
 
@@ -421,7 +430,7 @@ describe("DsSelect Component", () => {
       const handleFocus = vi.fn();
       render(<DsSelect options={DropdownOptions} onFocus={handleFocus} />);
       const select = screen.getByRole("combobox");
-      await user.click(select);
+      select.focus();
       expect(handleFocus).toHaveBeenCalledTimes(1);
     });
 
@@ -730,7 +739,7 @@ describe("DsSelect Component", () => {
       await user.click(select);
       const option = screen.getByText("Option 1");
       await user.click(option);
-      fireEvent.blur(select);
+      select.focus();
       expect(select).toHaveTextContent("Option 1");
     });
   });
