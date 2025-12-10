@@ -1,8 +1,13 @@
 export const CONFIRM_CLOSE = [
   {
-    src: new URL('../AssetFiles/illustration.svg', import.meta.url).href,
+    src: new URL('../AssetFiles/illustration.png', import.meta.url).href,
     alt: 'Cancel Trancation',
-    as: 'image/svg'
+    as: 'image/avif'
+  },
+  {
+    src: new URL('../AssetFiles/illustration.png', import.meta.url).href,
+    alt: 'Cancel Trancation',
+    as: 'image/png'
   }
 ]
 
@@ -16,17 +21,28 @@ export const SUCCESS = [
 
 export const OTP_EXHAUST = [
   {
-    src: new URL('../AssetFiles/otpExhaust.svg', import.meta.url).href,
+    src: new URL('../AssetFiles/otpExhaust.png', import.meta.url).href,
     alt: 'bank logo ',
-    as: 'image/svg'
+    as: 'image/avif'
+  },
+  {
+    src: new URL('../AssetFiles/otpExhaust.png', import.meta.url).href,
+    alt: 'bank logo ',
+    as: 'image/png'
   }
 ]
 
 export const SOMETHING_WENT_WRONG = [
   {
-    src: new URL('../AssetFiles/somethingWentWrong.svg', import.meta.url)
+    src: new URL('../AssetFiles/somethingWentWrong.png', import.meta.url)
       .href,
     alt: 'something went wrong',
-    as: 'image/svg'
+    as: 'image/avif'
+  },
+  {
+    src: new URL('../AssetFiles/somethingWentWrong.png', import.meta.url)
+      .href,
+    alt: 'something went wrong',
+    as: 'image/png'
   }
 ]
