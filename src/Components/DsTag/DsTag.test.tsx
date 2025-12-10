@@ -374,15 +374,24 @@ describe("DsTag Component", () => {
   describe("Theme Testing", () => {
     it("should render correctly across all themes", () => {
       testAllThemes(
-        (theme) => (
-          <DsTag label="Theme Tag" value={undefined} selected={false} />
+        (colorScheme) => (
+          <DsTag
+            label="Theme Tag"
+            value={undefined}
+            selected={false}
+            data-testid={`tag-${colorScheme}`}
+          />
         ),
-        (container, theme) => {
-          const tag = container.querySelector("span");
+
+        (container, colorScheme) => {
+          const tag = container.querySelector(
+            `[data-testid="tag-${colorScheme}"]`
+          );
           expect(tag).toBeInTheDocument();
-          expect(container.firstChild).toHaveAttribute(
-            "data-mui-color-scheme",
-            theme
+
+          // Snapshot testing for each theme
+          expect(container.firstChild).toMatchSnapshot(
+            `ds-tag-${colorScheme}-theme`
           );
         }
       );

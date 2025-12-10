@@ -18,9 +18,14 @@
  * @component DsSkeleton
  */
 
-import { describe, expect, it, vi, beforeEach } from "vitest";
-import { render, screen, testAllThemes } from "../../Tests/Mocks/testUtils";
-import { getTheme } from "../../Theme";
+import { describe, expect, it } from "vitest";
+import {
+  render,
+  screen,
+  testAllThemes,
+  renderWithTheme,
+} from "../../Tests/Mocks/testUtils";
+
 import { DsSkeleton } from "./DsSkeleton.Component";
 import { DsBox, DsTypography, DsPaper, DsCard, DsCardContent } from "../index";
 
@@ -459,21 +464,39 @@ describe("DsSkeleton Component", () => {
       );
     });
 
-    it("should maintain styling across all themes", () => {
-      const themes = ["light", "dark", "highContrast"] as const;
+    it("should apply theme-specific styling across all themes and variants", () => {
+      const colorSchemes = ["light", "dark", "highContrast"] as const;
       const variants = ["text", "circular", "rectangular"] as const;
 
-      themes.forEach((theme) => {
+      colorSchemes.forEach((colorScheme) => {
         variants.forEach((variant) => {
-          const { container, unmount } = render(
-            <DsSkeleton variant={variant} />,
-            { colorScheme: theme }
+          const { container, unmount } = renderWithTheme(
+            <DsSkeleton
+              variant={variant}
+              data-testid={`skeleton-${colorScheme}-${variant}`}
+            />,
+            colorScheme
           );
 
+          // Verify basic rendering and variant class
           const skeleton = container.querySelector(
-            ".MuiSkeleton-root"
+            `[data-testid="skeleton-${colorScheme}-${variant}"]`
           ) as HTMLElement;
+          expect(skeleton).toBeInTheDocument();
           expect(skeleton).toHaveClass(`MuiSkeleton-${variant}`);
+
+          // Verify theme context is applied
+          const wrapperElement = container.firstChild as HTMLElement;
+          expect(wrapperElement).toHaveAttribute(
+            "data-mui-color-scheme",
+            colorScheme
+          );
+
+          // Verify theme-specific CSS variables are applied
+          const computedStyle = window.getComputedStyle(skeleton);
+
+          // Check background color uses design system variables
+          expect(computedStyle.backgroundColor).toMatch(/var\(--[^)]+\)/);
 
           unmount();
         });

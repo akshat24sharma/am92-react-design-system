@@ -913,8 +913,11 @@ describe("DsSelect Component", () => {
           );
           expect(select).toBeInTheDocument();
 
-          const selectContainer = container.querySelector(".MuiSelect-root");
-          expect(selectContainer).toBeInTheDocument();
+          const wrapperElement = container.firstChild as HTMLElement;
+          expect(wrapperElement).toHaveAttribute(
+            "data-mui-color-scheme",
+            theme
+          );
         }
       );
     });

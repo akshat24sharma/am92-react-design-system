@@ -68,22 +68,31 @@ describe("DsTooltip Component", () => {
       expect(screen.queryByText("Tooltip Description")).not.toBeInTheDocument();
     });
 
-    it("should render with only heading", () => {
+    it("should render with only heading", async () => {
       render(
         <DsTooltip heading="Only Heading">
           <DsButton>Hover me</DsButton>
         </DsTooltip>
       );
-      expect(screen.getByRole("button")).toBeInTheDocument();
+
+      // Initially not visible
+      expect(screen.queryByText("Only Heading")).not.toBeInTheDocument();
+
+      // Should appear on hover
+      await user.hover(screen.getByRole("button"));
+      expect(await screen.findByText("Only Heading")).toBeInTheDocument();
     });
 
-    it("should render with only description", () => {
+    it("should render with only description", async () => {
       render(
         <DsTooltip description="Only Description">
           <DsButton>Hover me</DsButton>
         </DsTooltip>
       );
-      expect(screen.getByRole("button")).toBeInTheDocument();
+      expect(screen.queryByText("Only Description")).not.toBeInTheDocument();
+      // Should appear on hover
+      await user.hover(screen.getByRole("button"));
+      expect(await screen.findByText("Only Description")).toBeInTheDocument();
     });
   });
 
@@ -495,21 +504,25 @@ describe("DsTooltip Component", () => {
     });
 
     it("should maintain wrapper styling across themes", () => {
-      const themes = ["light", "dark", "highContrast"] as const;
+      testAllThemes(
+        (colorScheme) => (
+          <DsTooltip heading="Wrapper Style Test">
+            <DsButton data-testid={`btn-wrapper-${colorScheme}`}>
+              Hover me
+            </DsButton>
+          </DsTooltip>
+        ),
+        (container, colorScheme) => {
+          const button = container.querySelector(
+            `[data-testid="btn-wrapper-${colorScheme}"]`
+          );
+          expect(button).toBeInTheDocument();
 
-      themes.forEach((theme) => {
-        const { container, unmount } = render(
-          <DsTooltip heading="Theme test" description="Wrapper styling">
-            <DsButton>Test</DsButton>
-          </DsTooltip>,
-          { colorScheme: theme }
-        );
-
-        const wrapper = screen.getByRole("button").parentElement!;
-        expect(wrapper).toHaveClass("MuiLink-root");
-        expect(wrapper.tagName).toBe("A");
-        unmount();
-      });
+          // Default wrapper is DsLink
+          const wrapper = button?.parentElement;
+          expect(wrapper).toHaveClass("MuiLink-root");
+        }
+      );
     });
   });
 

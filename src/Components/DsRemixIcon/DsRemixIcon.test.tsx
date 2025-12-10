@@ -322,13 +322,10 @@ describe("DsRemixIcon Component", () => {
           // Verify the computed color uses the correct CSS variable or resolved color
           const computedStyles = window.getComputedStyle(muiIconRoot);
           const actualColor = computedStyles.color;
-
           // Check if the color is using CSS variables (which is expected in our design system)
-          if (actualColor.startsWith("var(--palette-")) {
-            // Verify it's using the correct CSS variable for the color
-            const expectedCssVar = `var(--palette-${color}-main)`;
-            expect(actualColor).toBe(expectedCssVar);
-          }
+          // Verify it's using the correct CSS variable for the color
+          const expectedCssVar = `var(--palette-${color}-main)`;
+          expect(actualColor).toBe(expectedCssVar);
 
           unmount();
         });

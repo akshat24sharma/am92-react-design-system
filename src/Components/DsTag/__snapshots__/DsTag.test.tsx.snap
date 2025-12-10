@@ -172,3 +172,66 @@ exports[`DsTag Component > Snapshot Tests > should match snapshot with size vari
   </div>
 </div>
 `;
+
+exports[`DsTag Component > Theme Testing > should render correctly across all themes > ds-tag-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    data-testid="tag-dark"
+    role="button"
+    tabindex="0"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Theme Tag
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTag Component > Theme Testing > should render correctly across all themes > ds-tag-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    data-testid="tag-highContrast"
+    role="button"
+    tabindex="0"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Theme Tag
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTag Component > Theme Testing > should render correctly across all themes > ds-tag-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    data-testid="tag-light"
+    role="button"
+    tabindex="0"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Theme Tag
+    </span>
+  </div>
+</div>
+`;

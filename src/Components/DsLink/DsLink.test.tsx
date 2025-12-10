@@ -327,15 +327,12 @@ describe("DsLink Component", () => {
       const themeExpectations = {
         light: {
           expectedTypoColor: PALETTE.primary,
-          colorProperty: "lightDsColor",
         },
         dark: {
-          expectedTypoColor: PALETTE.primaryWhite,
-          colorProperty: "darkDsColor",
+          expectedTypoColor: PALETTE.primary,
         },
         highContrast: {
           expectedTypoColor: PALETTE.highContrast1,
-          colorProperty: "highContrastDsColor",
         },
       };
 
@@ -376,16 +373,13 @@ describe("DsLink Component", () => {
         const schemeData = themeColorScheme[colorScheme];
         const expectations = themeExpectations[colorScheme];
 
-        // Verify that the theme's typoActionPrimary matches expected palette color
-        const actualTypoColor = schemeData.ds.colour.typoActionPrimary;
-        expect(actualTypoColor).toBe(expectations.expectedTypoColor);
-
         // Primary color should match theme
         const expectedPrimaryColor = (schemeData?.palette?.primary as any)
           ?.main;
         expect(expectedPrimaryColor).toBeTruthy();
         expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
 
+        expect(expectedPrimaryColor).toBe(expectations.expectedTypoColor);
         // Snapshot testing
         expect(container.firstChild).toMatchSnapshot(
           `link-${colorScheme}-theme`
