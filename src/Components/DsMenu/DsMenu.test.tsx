@@ -288,12 +288,13 @@ describe('DsMenu Component', () => {
                 </DsMenu>
             ), () => {
                 // Menu is rendered in a portal, so check document instead of container
-                const menu = document.querySelector('[role="menu"]');
+                const menu = document.querySelector('[role="menu"]') as HTMLElement;
                 expect(menu).toBeInTheDocument();
-                
-                // Check for design system styling (border radius and box shadow)
-                const menuPaper = document.querySelector('[class*="MuiPaper-root"][class*="MuiMenu-paper"]');
-                expect(menuPaper).toBeInTheDocument();
+
+                // Validate computed styles from the rendered menu
+                const computed = window.getComputedStyle(menu);
+                console.log('Computed styles for menu in theme test:', computed.boxShadow)
+                expect(computed.boxShadow).toBe("var(--ds-elevation-4)");
             });
             
             document.body.removeChild(testAnchor);

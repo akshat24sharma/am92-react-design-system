@@ -31,6 +31,8 @@ import { DsTabs } from "../DsTabs";
 import { DsRemixIcon } from "../DsRemixIcon";
 import { DsBox } from "../DsBox";
 import { DsButton } from "../DsButton";
+import getColorScheme from "../../Theme/getColorScheme";
+import { PALETTE } from "../..";
 
 describe("DsTab Component", () => {
 
@@ -609,11 +611,11 @@ describe("DsTab Component", () => {
     // THEME TESTING
     // ============================
     describe("Theme Testing", () => {
-        it("should render correctly across all theme modes", () => {
+        it("should render variant container correctly across all theme modes", () => {
             const themes = ['light', 'dark', 'highContrast'] as const;
             
             themes.forEach((theme) => {
-                const { container, unmount } = render(
+                const { unmount } = render(
                     <DsTabs value={1} ds-variant="container">
                         <DsTab 
                             label="Theme Test Tab"
@@ -625,15 +627,81 @@ describe("DsTab Component", () => {
                     { colorScheme: theme }
                 );
                 
-                const tabs = screen.getAllByRole('tab');
                 const selectedTab = screen.getByRole('tab', { name: 'Selected Tab' });
                 const disabledTab = screen.getByRole('tab', { name: 'Disabled Tab' });
+                const unselectedTab = screen.getByRole('tab', { name: 'Theme Test Tab' });
+
+                const computedUnselectedTab = getComputedStyle(unselectedTab);
+                const computedSelectedTab = getComputedStyle(selectedTab);
+                const computedDisabledTab = getComputedStyle(disabledTab);
                 
-                expect(tabs).toHaveLength(3);
-                expect(selectedTab).toHaveAttribute('aria-selected', 'true');
-                expect(disabledTab).toBeDisabled();
-                expect(container.firstChild).toHaveAttribute('data-mui-color-scheme', theme);
+
+                expect(computedUnselectedTab.backgroundColor).toBe("var(--ds-colour-surfaceSecondary)");
+                expect(computedUnselectedTab.color).toBe("var(--ds-colour-typoSecondary)");
+
+                expect(computedSelectedTab.backgroundColor).toBe("var(--ds-colour-stateSelectedSecondaryHover)");
+                expect(computedSelectedTab.color).toBe("var(--ds-colour-typoActionTertiary)");
+
+                expect(computedDisabledTab.backgroundColor).toBe("var(--ds-colour-surfaceSecondary)");
+                expect(computedDisabledTab.color).toBe("var(--ds-colour-typoDisabled)");
                 
+                unmount();
+            });
+        });
+
+        it("should render variant default correctly across all theme modes", () => {
+            const themes = ['light', 'dark', 'highContrast'] as const;
+            
+            themes.forEach((theme) => {
+                const { unmount } = render(
+                    <DsTabs value={1} >
+                        <DsTab 
+                            label="Theme Test Tab"
+                            icon={<DsRemixIcon className="ri-star-fill" />}
+                        />
+                        <DsTab label="Selected Tab" />
+                        <DsTab label="Disabled Tab" disabled />
+                    </DsTabs>,
+                    { colorScheme: theme }
+                );
+                
+                const selectedTab = screen.getByRole('tab', { name: 'Selected Tab' });
+                const disabledTab = screen.getByRole('tab', { name: 'Disabled Tab' });
+                const unselectedTab = screen.getByRole('tab', { name: 'Theme Test Tab' });
+
+                const computedUnselectedTab = getComputedStyle(unselectedTab);
+                const computedSelectedTab = getComputedStyle(selectedTab);
+                const computedDisabledTab = getComputedStyle(disabledTab);
+                
+
+                console.log(`Theme: ${theme}`, {
+                    unselected: {
+                        backgroundColor: computedUnselectedTab.backgroundColor,
+                        color: computedUnselectedTab.color
+                    },
+                    selected: {
+                        backgroundColor: computedSelectedTab.backgroundColor,
+                        color: computedSelectedTab.color
+                    },
+                    disabled: {
+                        backgroundColor: computedDisabledTab.backgroundColor,
+                        color: computedDisabledTab.color
+                    }
+                });
+
+                expect(computedUnselectedTab.color).toBe("var(--palette-text-secondary)");
+
+                expect(computedSelectedTab.color).toBe("var(--palette-secondary-main)");
+
+                expect(computedDisabledTab.color).toBe("var(--palette-text-disabled)");
+                
+                // Check for MUI tab indicator color
+                const tablist = screen.getByRole("tablist");
+                const indicator = tablist.querySelector('.MuiTabs-indicator');
+                if (indicator) {
+                    const computedIndicator = getComputedStyle(indicator);
+                    expect(computedIndicator.backgroundColor).toBe("var(--palette-secondary-main)");
+                }
                 unmount();
             });
         });
