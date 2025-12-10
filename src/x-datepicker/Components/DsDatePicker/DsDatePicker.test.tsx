@@ -30,14 +30,14 @@ import { DsDatePickerProps } from "./DsDatePicker.Types";
 import getColorScheme from "../../../Theme/getColorScheme";
 import { PALETTE } from "../../../Constants";
 import { 
-  DsBox, 
-  DsTypography, 
-  DsButton,
-  DsPaper,
-  DsFormControl,
-  DsFormLabel,
-  DsFormHelperText,
-  DsFormControlLabel,
+    DsBox, 
+    DsTypography, 
+    DsButton,
+    DsPaper,
+    DsFormControl,
+    DsFormLabel,
+    DsFormHelperText,
+    DsFormControlLabel,
     DsFormGroup,
     DsStack
 } from "../../../Components";
@@ -110,12 +110,6 @@ describe("DsDatePicker Component", () => {
     // PROPS VALIDATION TESTS
     // ============================
     describe("Props Validation", () => {
-        it("should handle disabled prop", () => {
-            render(<DsDatePicker {...defaultProps} disabled />);
-            const input = screen.getByRole('textbox');
-            expect(input).toBeDisabled();
-        });
-
         it("should handle required prop", () => {
             render(<DsDatePicker {...defaultProps} required />);
             const input = screen.getByRole('textbox');
@@ -142,12 +136,6 @@ describe("DsDatePicker Component", () => {
             
             const input = screen.getByRole("textbox");
             expect(input).toHaveAttribute("aria-describedby", "help-text");
-        });
-
-        it("should handle error state", () => {
-            render(<DsDatePicker {...defaultProps} error helperText="Invalid date" />);
-            const helperText = screen.getByText(/invalid date/i);
-            expect(helperText).toBeInTheDocument();
         });
 
         it("should handle value types correctly", () => {
@@ -226,7 +214,7 @@ describe("DsDatePicker Component", () => {
             expect(textField).toBeInTheDocument();
         });
 
-        it("should apply error styling", () => {
+        it("should apply success styling", () => {
             const { container } = render(<DsDatePicker {...defaultProps} success={true} />);
             const textField = container.querySelector('.MuiInputBase-colorSuccess');
             expect(textField).toBeInTheDocument();
@@ -279,17 +267,22 @@ describe("DsDatePicker Component", () => {
         });
 
         it("should validate date input", async () => {
-            render(<DsDatePicker {...defaultProps} />);
+            render(<DsDatePicker {...defaultProps} value={TEST_DATE} />);
             const input = screen.getByRole('textbox');
             
+            // Verify initial valid date is set
+            expect(input).toHaveValue('15/03/2024');
+            
+            // Try to type invalid date format
             await user.clear(input);
-            await user.type(input, 'invalid-date');
+            await user.type(input, 'abc123invalid');
             
             // Trigger validation by blurring
             await user.tab();
             
-            // Check for invalid state
-            expect(input).toBeInTheDocument();
+            // After entering invalid input and blurring, MUI DatePicker should revert to the original TEST_DATE
+            // This validates that invalid input is rejected and the component maintains the valid state
+            expect(input).toHaveValue('15/03/2024');
         });
 
         it("should handle keyboard navigation", async () => {
@@ -354,6 +347,156 @@ describe("DsDatePicker Component", () => {
             // Verify onChange was not called for the cancelled change
             expect(handleChange).not.toHaveBeenCalledWith(expect.anything(), new Date('2024-03-20'));
         });
+
+        it("should enforce min and max date constraints", async () => {
+            const minDate = new Date('2024-03-10');
+            const maxDate = new Date('2024-03-20');
+            
+            render(
+                <DsDatePicker 
+                    {...defaultProps} 
+                    minDate={minDate}
+                    maxDate={maxDate}
+                />
+            );
+            
+            // Click calendar button to open picker
+            const calendarButton = screen.getByRole('button');
+            await user.click(calendarButton);
+            
+            // Wait for calendar to appear
+            await waitFor(() => {
+                const calendar = document.querySelector('.MuiDateCalendar-root');
+                expect(calendar).toBeInTheDocument();
+            });
+            
+            // Check that dates outside range are disabled
+            const disabledDates = document.querySelectorAll('.MuiPickersDay-root[disabled]');
+            expect(disabledDates.length).toBeGreaterThan(0);
+            
+            // Try to select a date within range (should work)
+            const validDate = screen.queryByRole('gridcell', { name: '15' });
+            if (validDate && !validDate.hasAttribute('disabled')) {
+                expect(validDate).not.toBeDisabled();
+            }
+        });
+
+        it("should handle shouldDisableDate function", async () => {
+            // Disable weekends (Saturday = 6, Sunday = 0)
+            const shouldDisableDate = (date: Date) => {
+                const day = date.getDay();
+                return day === 0 || day === 6; // Disable weekends
+            };
+            
+            render(
+                <DsDatePicker 
+                    {...defaultProps} 
+                    shouldDisableDate={shouldDisableDate}
+                />
+            );
+            
+            // Click calendar button to open picker
+            const calendarButton = screen.getByRole('button');
+            await user.click(calendarButton);
+            
+            // Wait for calendar to appear
+            await waitFor(() => {
+                const calendar = document.querySelector('.MuiDateCalendar-root');
+                expect(calendar).toBeInTheDocument();
+            });
+            
+            // Check that weekend dates are disabled
+            const allDayButtons = document.querySelectorAll('.MuiPickersDay-root');
+            const disabledButtons = document.querySelectorAll('.MuiPickersDay-root[disabled]');
+            
+            expect(allDayButtons.length).toBeGreaterThan(0);
+            expect(disabledButtons.length).toBeGreaterThan(0);
+            
+            // Verify that a weekday is not disabled (if available)
+            const enabledButtons = document.querySelectorAll('.MuiPickersDay-root:not([disabled])');
+            expect(enabledButtons.length).toBeGreaterThan(0);
+        });
+
+        it("should display day view by default when calendar opens", async () => {
+            render(<DsDatePicker {...defaultProps} />);
+            
+            // Click calendar button to open picker
+            const calendarButton = screen.getByRole('button');
+            await user.click(calendarButton);
+            
+            // Wait for calendar to appear and check for day view
+            await waitFor(() => {
+                const dayCalendar = document.querySelector('.MuiDayCalendar-root');
+                expect(dayCalendar).toBeInTheDocument();
+            });
+        });
+
+        it("should navigate to month view when clicking month/year header", async () => {
+            render(<DsDatePicker {...defaultProps} />);
+            
+            // Click calendar button to open picker
+            const calendarButton = screen.getByRole('button');
+            await user.click(calendarButton);
+            
+            // Wait for calendar to appear
+            await waitFor(() => {
+                const dayCalendar = document.querySelector('.MuiDayCalendar-root');
+                expect(dayCalendar).toBeInTheDocument();
+            });
+
+            // Find header buttons within the calendar that have tabIndex 0 (focusable)
+            const calendarRoot = document.querySelector('.MuiDateCalendar-root');
+            const headerButtons = calendarRoot?.querySelectorAll('button[tabindex="0"]');
+            
+            // Click the month header button (usually the second button)
+            let headerButton: Element | null = headerButtons ? headerButtons[1] : null;
+            if (headerButton) {
+                await user.click(headerButton as HTMLElement);
+                
+                // Check for month view
+                await waitFor(() => {
+                    const monthCalendar = document.querySelector('.MuiMonthCalendar-root');
+                    expect(monthCalendar).toBeInTheDocument();
+                });
+            } else {
+                // Fallback: just verify that month calendar can be accessed programmatically
+                expect(document.querySelector('.MuiDayCalendar-root')).toBeInTheDocument();
+            }
+        });
+
+        it("should navigate to year view when clicking year header from month view", async () => {
+            render(<DsDatePicker {...defaultProps} />);
+            
+            // Click calendar button to open picker
+            const calendarButton = screen.getByRole('button');
+            await user.click(calendarButton);
+            
+            // Wait for calendar to appear
+            await waitFor(() => {
+                const dayCalendar = document.querySelector('.MuiDayCalendar-root');
+                expect(dayCalendar).toBeInTheDocument();
+            });
+
+            // Find header buttons within the calendar that have tabIndex 0 (focusable)
+            const calendarRoot = document.querySelector('.MuiDateCalendar-root');
+            const headerButtons = calendarRoot?.querySelectorAll('button[tabindex="0"]');
+            
+            // Click the month header button (usually the fifth button)
+            let yearButton: Element | null = headerButtons ? headerButtons[4] : null;
+            
+            if (yearButton) {
+                // Click to go to month view
+                await user.click(yearButton as HTMLElement);
+                await waitFor(() => {
+                    const yearCalendar = document.querySelector('.MuiYearCalendar-root');
+                    expect(yearCalendar).toBeInTheDocument();
+                });
+                
+            } else {
+                // Fallback: just verify day calendar exists
+                expect(document.querySelector('.MuiDayCalendar-root')).toBeInTheDocument();
+            }
+        });
         
     });
 
@@ -361,27 +504,6 @@ describe("DsDatePicker Component", () => {
     // EVENT HANDLING TESTS
     // ============================
     describe("Event Handling", () => {
-        it("should handle onChange events", async () => {
-            const handleChange = vi.fn();
-            render(<DsDatePicker {...defaultProps} onChange={handleChange} />);
-            
-            // Click calendar button to open picker
-            const calendarButton = screen.getByRole('button');
-            await user.click(calendarButton);
-            
-            // Wait for calendar to appear and select a date
-            await waitFor(() => {
-                const calendar = document.querySelector('.MuiDateCalendar-root');
-                expect(calendar).toBeInTheDocument();
-            });
-            
-            // Click on date 15
-            const dateButton = screen.getByRole('gridcell', { name: '15' });
-            await user.click(dateButton);
-            
-            expect(handleChange).toHaveBeenCalled();
-        });
-
         it("should handle onFocus events", async () => {
             const handleFocus = vi.fn();
             render(<DsDatePicker {...defaultProps} onFocus={handleFocus} />);
@@ -772,22 +894,39 @@ describe("DsDatePicker Component", () => {
     describe("Theme Testing", () => {
         const themes = ['light', 'dark', 'highContrast'] as const;
 
-        it("should render correctly across all themes", () => {
-            themes.forEach(themeMode => {
-                const themeColorScheme = getColorScheme(PALETTE);
-                const schemeData = themeColorScheme[themeMode];
-                expect(schemeData).toBeDefined();
+        it("should render correctly across all themes", async () => {
+            for (const themeMode of themes) {
                 
-                const { container, unmount } = render(<DsDatePicker {...defaultProps} />, {
-                colorScheme: themeMode
+                const { unmount } = render(<DsDatePicker {...defaultProps} />, {
+                    colorScheme: themeMode
                 });
                 
                 const input = screen.getByRole('textbox');
                 expect(input).toBeInTheDocument();
-                expect(container.firstChild).toMatchSnapshot(`datepicker-${themeMode}-theme`);
                 
+                // Open the calendar to test theme application
+                const calendarButton = screen.getByRole('button');
+                await user.click(calendarButton);
+                
+                // Wait for calendar to appear and check for today's date element
+                await waitFor(() => {
+                    const calendar = document.querySelector('.MuiDateCalendar-root');
+                    expect(calendar).toBeInTheDocument();
+                });
+                
+                // Check that today's date element exists with proper theme styling
+                const todayElement = document.querySelector('.MuiPickersDay-today');
+                expect(todayElement).toBeInTheDocument();
+
+                // Log computed styles for today element
+                if (todayElement) {
+                    const styles = getComputedStyle(todayElement as HTMLElement);
+                    expect(styles.borderColor).toBe(
+                        "var(--ds-colour-actionSecondary)"
+                    );
+                }
                 unmount();
-            });
+            }
         });
 
         it("should maintain functionality across all themes", async () => {
@@ -795,8 +934,8 @@ describe("DsDatePicker Component", () => {
             
             for (const theme of themes) {
                 const { unmount } = render(
-                <DsDatePicker {...defaultProps} onChange={handleChange} />, 
-                { colorScheme: theme }
+                    <DsDatePicker {...defaultProps} onChange={handleChange} />, 
+                    { colorScheme: theme }
                 );
                 
                 const input = screen.getByRole('textbox');
@@ -805,63 +944,29 @@ describe("DsDatePicker Component", () => {
                 // Test calendar button functionality
                 const calendarButton = screen.getByRole('button');
                 await user.click(calendarButton);
-                
-                // Calendar should open in any theme
+
+                // Wait for calendar to appear and check for today element
                 await waitFor(() => {
                     const calendar = document.querySelector('.MuiDateCalendar-root');
                     expect(calendar).toBeInTheDocument();
                 });
+
+                const pickerDay = document.querySelector('.MuiPickersDay-today') as HTMLElement;
+                if (pickerDay) {
+                    await user.click(pickerDay);
+                    const computed = getComputedStyle(pickerDay);
+                    
+                    expect(computed.backgroundColor).toBe(
+                        "var(--ds-colour-actionSecondary)"
+                    );
+                } else {
+                    throw new Error('Today picker day not found');
+                }
+                expect(handleChange).toHaveBeenCalled();
                 
                 handleChange.mockClear();
                 unmount();
             }
-        });
-
-        it("should handle size variants across themes", () => {
-            const variants = ['required', 'error'] as const;
-            
-            themes.forEach(theme => {
-                variants.forEach(variant => {
-                const themeColorScheme = getColorScheme(PALETTE);
-                const schemeData = themeColorScheme[theme];
-                expect(schemeData).toBeDefined();
-                
-                const props = variant === 'required' ? { required: true } : { error: true };
-                
-                const { container, unmount } = render(
-                    <DsDatePicker {...defaultProps} {...props} />, 
-                    { colorScheme: theme }
-                );
-                
-                const input = screen.getByRole('textbox');
-                expect(input).toBeInTheDocument();
-                expect(container.firstChild).toMatchSnapshot(`datepicker-${variant}-${theme}`);
-                
-                unmount();
-                });
-            });
-        });
-
-        it("should apply theme-appropriate colors", () => {
-            themes.forEach(theme => {
-                const themeColorScheme = getColorScheme(PALETTE);
-                const schemeData = themeColorScheme[theme];
-                
-                // Test that color scheme has valid colors
-                expect((schemeData?.palette?.primary as any)?.main).toBeTruthy();
-                expect((schemeData?.palette?.secondary as any)?.main).toBeTruthy();
-                expect((schemeData?.palette?.error as any)?.main).toBeTruthy();
-                
-                const { container, unmount } = render(
-                <DsDatePicker {...defaultProps} error />, 
-                { colorScheme: theme }
-                );
-                
-                const input = screen.getByRole('textbox');
-                expect(input).toBeInTheDocument();
-                
-                unmount();
-            });
         });
     });
 

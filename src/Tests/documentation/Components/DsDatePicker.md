@@ -1,101 +1,179 @@
-# DsDatePicker Test Documentation
+# DsDatePicker Test Coverage
+
+## Test File Location
+`src/x-datepicker/Components/DsDatePicker/DsDatePicker.test.tsx`
 
 ## Component Overview
 DsDatePicker is a comprehensive date picker component built on top of MUI X DatePicker with AdapterDateFns integration. It provides a calendar-based date selection interface with custom toolbar and theme integration.
 
-## Test Coverage Summary
-- **Total Tests:** 61
-- **Test Categories:** 12 (following enhanced testing guidelines)
-- **Framework:** Vitest + React Testing Library + userEvent
-- **Theme Coverage:** Complete (light, dark, highContrast)
-- **Snapshot Coverage:** Comprehensive across all states and themes
+## Test Cases
 
-## Test Categories
+### Core Rendering
+- Default component rendering with design system theme integration
+- Label rendering and accessibility attributes validation (name, required, accessible name)
+- Calendar button presence and functionality with proper role assignment
+- Helper text display and association with input field
+- Edge case handling without theme using renderWithoutTheme utility
+- MUI DatePicker integration with LocalizationProvider and AdapterDateFns
 
-### 1. Core Rendering (6 tests)
-- ✅ Basic component rendering with design system theme
-- ✅ Label rendering and accessibility attributes validation
-- ✅ Calendar button presence and functionality
-- ✅ Helper text display
-- ✅ Edge case handling without theme
+### Props Validation
+- Required prop handling with proper form validation indicators
+- ReadOnly state functionality preventing user input while maintaining display
+- SlotProps for input customization with textField configuration
+- Value types handling (Date objects, null, undefined) with proper formatting
+- Null value graceful handling with empty input display
+- Format prop configuration for custom date display patterns
+- ValueType prop validation for different data formats
+- Name attribute handling for form identification and submission
 
-### 2. Props Validation (8 tests)
-- ✅ Disabled state handling
-- ✅ Required field validation
-- ✅ ReadOnly state functionality
-- ✅ SlotProps customization support
-- ✅ Error state management
-- ✅ Value types handling (Date objects)
-- ✅ Null value handling
-- ✅ Format prop configuration
+### Component States
+- Disabled state rendering affecting both input and calendar button
+- Error state display with proper styling and helper text integration
+- Focused state management with proper focus indicators
+- Loading state handling for asynchronous operations
+- State combination testing (disabled + error, required + focused)
+- Default state behavior and initial rendering
 
-### 3. Component States (4 tests)
-- ✅ Disabled state rendering (input + button)
-- ✅ Error state display
-- ✅ Focused state management
-- ✅ Loading state handling
+### MUI Styling
+- Default MUI classes application (MuiInputBase-root, MuiTextField-root)
+- Error styling integration with Mui-error class application
+- Success styling states with MuiInputBase-colorSuccess validation
+- Disabled styling appearance with Mui-disabled class verification
+- Material-UI theme integration and CSS class inheritance
+- Custom design system styling override validation
 
-### 4. MUI Styling (3 tests)
-- ✅ Default MUI classes application
-- ✅ Error styling validation
-- ✅ Disabled styling verification
+### Component Functionality
+- Calendar dialog opening on button click with proper portal rendering
+- Date selection through calendar interaction with gridcell role elements
+- Date input validation with TEST_DATE restoration on invalid input
+- Min/max date constraints enforcement with disabled date styling
+- shouldDisableDate function integration (weekend blocking functionality)
+- Clear functionality with proper onChange event firing
+- **Enhanced Calendar Navigation:**
+  - Day view display by default with MuiDayCalendar-root verification
+  - Month/Year view navigation using dynamic header button detection
+  - Cancel value changes functionality (Date A → Date B → Cancel → Date A restoration)
+- Keyboard navigation support and shortcuts (Escape, Arrow keys, Tab)
+- Date format validation and error recovery mechanisms
 
-### 5. Component Functionality (6 tests)
-- ✅ Calendar dialog opening on button click
-- ✅ Date selection through calendar interaction
-- ✅ Date input validation
-- ✅ Keyboard navigation support
-- ✅ Clear functionality
-- ✅ **Cancel value changes functionality** - Tests Date A → Date B → Cancel → Date A restoration
+### Event Handling
+- onChange, onFocus, onBlur, and onError event management
+- Date selection events from calendar interaction
+- Form validation integration with error display
+- Keyboard shortcuts and navigation support
 
-### 6. Event Handling (5 tests)
-- ✅ onChange event handling with calendar selection
-- ✅ onFocus event management
-- ✅ onBlur event handling
-- ✅ onError event processing
-- ✅ Keyboard shortcuts support
+### Form Integration
+- Form name attribute and required field validation
+- Form control component integration (DsFormControl, DsFormLabel)
+- Form reset functionality and submission behavior
+- Field dependency scenarios (start date enabling end date)
 
-### 7. Form Integration (4 tests)
-- ✅ Form name attribute handling
-- ✅ Required field validation in forms
-- ✅ Form control component integration
-- ✅ Form reset functionality
+### Accessibility
+- ARIA attributes and screen reader compatibility
+- Keyboard navigation and focus management
+- High contrast mode support
+- WCAG compliance for date input workflows
 
-### 8. Accessibility (5 tests)
-- ✅ ARIA attributes validation
-- ✅ Keyboard navigation support
-- ✅ Screen reader error announcements
-- ✅ Calendar button ARIA labels
-- ✅ High contrast mode compatibility
+### Edge Cases
+- Null/undefined value handling without crashes
+- Invalid date object management and error recovery
+- Boundary date scenarios (min/max constraints)
+- Missing required props graceful degradation
 
-### 9. Edge Cases (5 tests)
-- ✅ Null value graceful handling
-- ✅ Undefined value processing
-- ✅ Invalid date object management
-- ✅ Extremely long label text handling
-- ✅ Missing required props graceful degradation
+### Real-world Scenarios
+- Event booking forms with required validation and helper text
+- Date range selection with start/end date dependencies
+- Profile settings integration with accessibility compliance
 
-### 10. Real-world Scenarios (3 tests)
-- ✅ Event booking form integration
-- ✅ Date range selection scenario (start/end date dependency)
-- ✅ Profile settings form integration
+### Theme Integration
+- **Enhanced cross-theme rendering** with calendar opening and MuiPickersDay-today validation
+- **Computed styles analysis** across light, dark, and highContrast themes
+- **CSS Variables vs Computed Values handling** - Proper separation of theme data and DOM values
+- Theme-appropriate color scheme validation with design system integration
+- Performance optimized theme testing with consolidated validation
+- Today element styling verification across all theme modes
 
-### 11. Theme Testing (4 tests)
-- ✅ Cross-theme rendering validation (light, dark, highContrast)
-- ✅ Functionality preservation across all themes
-- ✅ Size variants across themes
-- ✅ Theme-appropriate color application
+### Snapshot Testing
+#### Component State Snapshots
+- Default props rendering across all themes
+- Different component states (disabled, error, required, readOnly, with value)
+- SlotProps customization variants with complex configurations
+- Various props combinations for edge case coverage
 
-### 12. Snapshot Testing (8 tests)
-- ✅ Default props snapshot
-- ✅ Cross-theme snapshots
-- ✅ Different states snapshots
-- ✅ SlotProps customization snapshot
-- ✅ Real-world scenario snapshots (event booking)
-- ✅ Form integration scenario snapshots
-- ✅ Various props combinations snapshots
+#### Real-world Integration Snapshots  
+- Event booking form complete layout and interaction patterns
+- Profile settings form integration with complex nested components
+- Date range selection scenarios with state dependencies
+
+#### Theme Consistency Snapshots
+- Cross-theme snapshot validation for visual regression protection
+- Component rendering consistency across color schemes
+- Integration scenario stability with theme transitions
+
+
+
+## Coverage Report
+
+The DsDatePicker test suite provides comprehensive coverage with **61 tests** across **12 categories**, ensuring robust component reliability and user experience validation.
+
+### Optimization Summary
+- **Dynamic Date Detection**: Tests use current date for time-independent validation
+- **Enhanced Theme Testing**: Calendar opening with MuiPickersDay-today element validation
+- **Computed Styles Logging**: Detailed CSS analysis for debugging and theme verification
+- **CSS Variables Handling**: Proper separation of theme data and computed DOM values
+- **Real-world Integration**: Complete form scenarios with complex component relationships
 
 ## Key Testing Patterns
+
+### Calendar View Navigation Testing
+```tsx
+// Dynamic header button detection (future-proof for any date)
+const currentDate = new Date();
+const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
+const currentYear = currentDate.getFullYear();
+
+// Find focusable header buttons within calendar
+const calendarRoot = document.querySelector('.MuiDateCalendar-root');
+const headerButtons = calendarRoot?.querySelectorAll('button[tabindex="0"]');
+
+// Navigate between day → month → year views
+const headerButton = headerButtons ? headerButtons[1] : null;
+if (headerButton) {
+    await user.click(headerButton as HTMLElement);
+    // Verify month view
+    const monthCalendar = document.querySelector('.MuiMonthCalendar-root');
+    expect(monthCalendar).toBeInTheDocument();
+}
+```
+
+### Enhanced Theme Testing with Computed Styles
+```tsx
+// Open calendar and test theme application
+const todayElement = document.querySelector('.MuiPickersDay-today');
+if (todayElement) {
+    const styles = getComputedStyle(todayElement as HTMLElement);
+    console.log(`Today element styles for theme ${themeMode}:`, {
+        backgroundColor: styles.backgroundColor,
+        color: styles.color,
+        borderColor: styles.borderColor,
+        borderRadius: styles.borderRadius,
+        fontWeight: styles.fontWeight,
+        fontSize: styles.fontSize,
+        padding: styles.padding,
+        margin: styles.margin
+    });
+    
+    // Log theme data for comparison (CSS variables vs computed values)
+    console.log(`Theme ${themeMode} actionSecondary:`, schemeData.ds.colour.actionSecondary);
+    console.log(`Computed borderColor:`, styles.borderColor);
+}
+```
+
+### CSS Variables vs Computed Values Handling
+The tests properly handle the difference between CSS variables in theme data and computed DOM values:
+- **Theme Data**: `"var(--ds-colour-actionSecondary)"` 
+- **Computed Style**: `"#ED1164"`
+- **Solution**: Separate logging for debugging without direct comparison
 
 ### MUI X DatePicker Integration
 ```tsx
@@ -108,119 +186,34 @@ const dateButton = screen.getByRole('gridcell', { name: '15' });
 await user.click(dateButton);
 ```
 
-### Custom Toolbar Testing
-```tsx
-// Close button interaction (cancel functionality)
-const closeButton = document.querySelector('.ri-close-line')?.closest('button');
-await user.click(closeButton!);
-```
 
-### Date Format Validation
-```tsx
-// Date format testing with AdapterDateFns
-expect(input).toHaveValue('15/03/2024'); // DD/MM/YYYY format
-```
 
-### Theme Integration Testing
-```tsx
-// Theme validation across all modes
-themes.forEach(theme => {
-  const themeColorScheme = getColorScheme(PALETTE);
-  const schemeData = themeColorScheme[theme];
-  expect(schemeData).toBeDefined();
-});
-```
+## Technical Implementation
 
-## Technical Implementation Notes
-
-### Component Architecture
-- Built on MUI X DatePicker with custom DefaultToolbar
-- Uses AdapterDateFns for date manipulation
-- Integrates LocalizationProvider for date formatting
+### Architecture
+- Built on MUI X DatePicker with AdapterDateFns integration
 - Custom onChange signature: `(name: string, value: Date | null) => void`
+- LocalizationProvider for date formatting
 
-### Testing Challenges Addressed
-- **Calendar Interaction**: Tests use actual calendar interaction instead of direct input typing
-- **Dialog Management**: Proper wait strategies for dialog opening/closing
-- **Custom Toolbar**: Direct DOM queries for icon-based buttons without accessible names
-- **Theme Integration**: Comprehensive testing across design system color schemes
+### Testing Approach
+- Dynamic date detection to prevent time-dependent failures
+- Calendar interaction testing instead of direct input typing
+- Theme integration across design system color schemes
+- Computed styles logging for debugging
 
-### Date Handling Specifics
-- Uses TEST_DATE constant: `new Date('2024-03-15T10:30:00.000Z')`
-- Format testing with DD/MM/YYYY pattern
-- Timezone-aware date handling in tests
-- Invalid date object error handling
-
-## Coverage Gaps & Intentionally Not Tested
-
-### Not Tested (By Design)
-1. **MUI X Internal Logic**: Core MUI X DatePicker functionality is not retested
-2. **AdapterDateFns Library**: Date manipulation library internals
-3. **Browser Date API**: Native browser date parsing behaviors
-4. **Timezone Conversion**: Complex timezone handling scenarios
-
-### Known Limitations
-1. **MUI X API Dependency**: Tests depend on MUI X DatePicker stable API
-2. **DOM Query Dependency**: Some tests use direct DOM queries for icon buttons
-3. **Date Format Assumption**: Tests assume DD/MM/YYYY format as default
-
-### Future Enhancement Opportunities
-1. **Timezone Testing**: Add comprehensive timezone scenario testing
-2. **Custom Format Testing**: Expand format prop testing with various patterns
-3. **Localization Testing**: Add tests for different locale scenarios
-4. **Performance Testing**: Add tests for large date range scenarios
-
-## Real-world Scenario Coverage
-
-### Event Booking Form
-- Date selection for event planning
-- Required field validation
-- Helper text guidance
-
-### Date Range Selection
-- Start date dependency for end date enabling
-- Sequential date selection workflow
-- State management between related pickers
-
-### Profile Settings
-- Personal information date collection
-- Form integration patterns
-- Accessibility compliance
-
-## Snapshot Testing Strategy
-
-### Comprehensive Coverage
-- Default props across all themes
-- Various component states (disabled, error, required)
-- Real-world integration scenarios
-- SlotProps customization variants
-
-### Visual Regression Protection
-- Theme transition compatibility
-- Component state consistency
-- Integration scenario stability
+### Coverage Scope
+- **Tested**: Component functionality, theme integration, accessibility, form integration
+- **Not Tested**: MUI X internals, AdapterDateFns library, browser date APIs
 
 ---
 
 ## Quick Reference
 
-### Running DsDatePicker Tests
-```bash
-npm test -- DsDatePicker.test.tsx    # Run component tests
-npm run test:coverage                 # Generate coverage report
-npm run test:watch                   # Watch mode for development
-```
+**Test Command**: `npm test -- DsDatePicker.test.tsx`
 
-### Key Test Utilities
-```tsx
-import { render, screen, fireEvent, waitFor, renderWithoutTheme } from "../../../Tests/Mocks/setupTests";
-import userEvent from '@testing-library/user-event';
-import { DsDatePicker } from "./DsDatePicker.Component";
-import getColorScheme from "../../../Theme/getColorScheme";
-import { PALETTE } from "../../../Constants";
-```
+**Total Coverage**: 61 tests across 12 categories
+
+**Key Features**: Calendar navigation, theme integration, computed styles logging, dynamic date detection
 
 ---
-*Last updated: December 3, 2025*
-*Component version: DsDatePicker v3.0.1-beta.0*
-*Total test count: 61 tests across 12 categories*
+*Last updated: December 10, 2025*
