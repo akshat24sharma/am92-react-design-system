@@ -1,7 +1,7 @@
 # Testing Guidelines for AM92 React Design System
 
 ## Overview
-This document provides comprehensive guidelines for writing unit tests for components in the AM92 React Design System. It outlines testing strategies, patterns, and best practices based on the test suite developed for the `DsTextField` component.
+This document provides comprehensive guidelines for writing unit tests for components in the AM92 React Design System. These guidelines have been refined through extensive testing experience with components like DsLoader, DsTextField, DsCheckbox, and others.
 
 ## Table of Contents
 1. [Testing Framework Setup](#testing-framework-setup)
@@ -13,9 +13,10 @@ This document provides comprehensive guidelines for writing unit tests for compo
 7. [Theme Testing](#theme-testing)
 8. [Snapshot Testing](#snapshot-testing)
 9. [Design System Component Usage](#design-system-component-usage)
-10. [Best Practices](#best-practices)
-11. [Common Pitfalls](#common-pitfalls)
-12. [Template](#template)
+10. [Component Testing Anti-Patterns](#component-testing-anti-patterns)
+11. [Best Practices](#best-practices)
+12. [Common Pitfalls](#common-pitfalls)
+13. [Template](#template)
 
 ## Testing Framework Setup
 
@@ -40,10 +41,12 @@ Always include the vitest environment declaration at the top of test files:
 
 ### Essential Imports
 ```tsx
-import { describe, expect, it, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, waitFor, renderWithoutTheme, testAllThemes } from "../../Tests/Mocks/testUtils";
+import { describe, expect, it, beforeEach } from "vitest";
+import { render, screen } from "../../Tests/Mocks/testUtils";
 import userEvent from '@testing-library/user-event';
 import { ComponentName } from "./ComponentName.Component";
+import getColorScheme from "../../Theme/getColorScheme";
+import { PALETTE } from "../../Constants";
 ```
 
 ## Global Theme Setup ✅
@@ -3005,6 +3008,237 @@ Each component documentation should follow this structure:
 - Include new testing patterns discovered
 - Track coverage improvements over time
 - Document any component-specific testing challenges
+
+## Component Testing Anti-Patterns
+
+Based on lessons learned from improving component test suites, here are critical anti-patterns to avoid:
+
+### 1. Testing Theme Infrastructure Instead of Component Behavior
+
+**❌ NEVER Test Theme System Configuration**
+```tsx
+// WRONG - Testing theme infrastructure, not component behavior
+it('should validate theme differences across color schemes', () => {
+  const lightTheme = getColorScheme(PALETTE).light;
+  const darkTheme = getColorScheme(PALETTE).dark;
+  const highContrastTheme = getColorScheme(PALETTE).highContrast;
+  
+  expect(lightTheme.primary.main).not.toBe(darkTheme.primary.main);
+  expect(darkTheme.primary.main).not.toBe(highContrastTheme.primary.main);
+});
+```
+
+**✅ CORRECT - Test Component Integration with Themes**
+```tsx
+// CORRECT - Testing how component responds to theme changes
+it('should apply theme colors correctly', () => {
+  const { rerender } = render(
+    <ThemeProvider theme={getColorScheme(PALETTE).light}>
+      <DsLoader data-testid="loader" />
+    </ThemeProvider>
+  );
+  
+  const loader = screen.getByTestId('loader');
+  expect(loader).toHaveStyle({ '--ds-color-primary': expect.any(String) });
+  
+  rerender(
+    <ThemeProvider theme={getColorScheme(PALETTE).dark}>
+      <DsLoader data-testid="loader" />
+    </ThemeProvider>
+  );
+  
+  expect(loader).toHaveStyle({ '--ds-color-primary': expect.any(String) });
+});
+```
+
+### 2. Using Raw HTML Elements Instead of Design System Components
+
+**❌ NEVER Use Raw HTML Elements**
+```tsx
+// WRONG - Using raw HTML elements
+render(
+  <div>
+    <span>Test content</span>
+    <button onClick={mockFn}>Click me</button>
+  </div>
+);
+```
+
+**✅ CORRECT - Use Design System Components**
+```tsx
+// CORRECT - Using design system components
+render(
+  <DsBox>
+    <DsTypography>Test content</DsTypography>
+    <DsButton onClick={mockFn}>Click me</DsButton>
+  </DsBox>
+);
+```
+
+### 3. Testing Implementation Details Instead of User Behavior
+
+**❌ NEVER Test Internal State or Methods**
+```tsx
+// WRONG - Testing implementation details
+it('should call internal setState method', () => {
+  const component = shallow(<DsComponent />);
+  const instance = component.instance();
+  const spy = vi.spyOn(instance, 'setState');
+  
+  component.find('button').simulate('click');
+  expect(spy).toHaveBeenCalled();
+});
+```
+
+**✅ CORRECT - Test User Observable Behavior**
+```tsx
+// CORRECT - Testing user-observable outcomes
+it('should show loading state when clicked', async () => {
+  const user = userEvent.setup();
+  render(<DsComponent />);
+  
+  const button = screen.getByRole('button');
+  await user.click(button);
+  
+  expect(screen.getByText('Loading...')).toBeInTheDocument();
+});
+```
+
+### 4. Over-Using fireEvent Instead of userEvent
+
+**❌ AVOID fireEvent for User Interactions**
+```tsx
+// WRONG - Using fireEvent for user interactions
+fireEvent.click(button);
+fireEvent.change(input, { target: { value: 'test' } });
+```
+
+**✅ CORRECT - Use userEvent for Realistic Interactions**
+```tsx
+// CORRECT - Using userEvent for realistic user behavior
+const user = userEvent.setup();
+await user.click(button);
+await user.type(input, 'test');
+```
+
+### 5. Testing Without Proper Theme Context
+
+**❌ NEVER Test Components Without Theme Provider**
+```tsx
+// WRONG - Missing theme context
+render(<DsComponent />);
+```
+
+**✅ CORRECT - Always Include Theme Provider**
+```tsx
+// CORRECT - Proper theme context
+render(
+  <ThemeProvider theme={getColorScheme(PALETTE).light}>
+    <DsComponent />
+  </ThemeProvider>
+);
+```
+
+### 6. Incomplete Error Boundary Testing
+
+**❌ NEVER Test Only Happy Path**
+```tsx
+// WRONG - Only testing successful scenarios
+it('should render successfully', () => {
+  render(<DsComponent />);
+  expect(screen.getByRole('button')).toBeInTheDocument();
+});
+```
+
+**✅ CORRECT - Test Error Conditions**
+```tsx
+// CORRECT - Testing error scenarios
+it('should handle invalid props gracefully', () => {
+  const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+  
+  render(<DsComponent invalidProp={null} />);
+  expect(screen.getByText(/error/i)).toBeInTheDocument();
+  
+  consoleSpy.mockRestore();
+});
+```
+
+### 7. Missing Accessibility Testing
+
+**❌ NEVER Skip Accessibility Validation**
+```tsx
+// WRONG - No accessibility testing
+it('should render component', () => {
+  render(<DsComponent />);
+  expect(screen.getByText('Content')).toBeInTheDocument();
+});
+```
+
+**✅ CORRECT - Include Accessibility Testing**
+```tsx
+// CORRECT - Testing accessibility
+it('should be accessible', async () => {
+  const { container } = render(<DsComponent />);
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
+});
+```
+
+### 8. Inconsistent Test Organization
+
+**❌ NEVER Use Inconsistent Test Structure**
+```tsx
+// WRONG - Random test organization
+describe('DsComponent', () => {
+  it('renders');
+  it('handles clicks');
+  it('has themes');
+  it('validates props');
+});
+```
+
+**✅ CORRECT - Follow 12-Section Structure**
+```tsx
+// CORRECT - Organized test structure
+describe('DsComponent', () => {
+  describe('1. Rendering & Basic Functionality', () => {});
+  describe('2. Props & Configuration', () => {});
+  describe('3. User Interactions', () => {});
+  describe('4. Styling & Theming', () => {});
+  // ... continue with all 12 sections
+});
+```
+
+### 9. Unused Import Anti-Patterns
+
+**❌ NEVER Keep Unused Testing Imports**
+```tsx
+// WRONG - Unused imports cluttering test files
+import { vi, expect } from 'vitest';
+import { fireEvent, waitFor, screen } from '@testing-library/react';
+import { renderWithoutTheme, testAllThemes } from '../utils/testUtils';
+// Only using screen and expect
+```
+
+**✅ CORRECT - Only Import What You Need**
+```tsx
+// CORRECT - Clean, necessary imports only
+import { expect } from 'vitest';
+import { screen } from '@testing-library/react';
+import { renderWithTheme } from '../utils/testUtils';
+```
+
+### Key Takeaways
+
+1. **Test component behavior, not theme infrastructure**
+2. **Always use design system components in tests**
+3. **Focus on user-observable outcomes**
+4. **Use userEvent for realistic interactions**
+5. **Include proper theme context**
+6. **Test error conditions and edge cases**
+7. **Include accessibility validation**
+8. **Follow consistent test organization**
+9. **Keep imports clean and necessary**
 
 ## Conclusion
 
