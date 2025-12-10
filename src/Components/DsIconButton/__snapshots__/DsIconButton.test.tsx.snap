@@ -1,0 +1,532 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot for default state 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot for disabled state 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    disabled=""
+    tabindex="-1"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with RemixIcon variations > icon-ri-delete-bin-line 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-delete-bin-line css-h7bicg-MuiIcon-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with RemixIcon variations > icon-ri-home-line 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with RemixIcon variations > icon-ri-settings-gear-line 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-settings-gear-line css-h7bicg-MuiIcon-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with RemixIcon variations > icon-ri-star-fill 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-star-fill css-h7bicg-MuiIcon-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with aria-label 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    aria-label="Home navigation"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with combined props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    aria-label="Primary large disabled button"
+    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorIconActionPrimary MuiIconButton-sizeLarge custom-style css-14998m0-MuiButtonBase-root-MuiIconButton-root"
+    disabled=""
+    tabindex="-1"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with complex children 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <div>
+      <span>
+        Complex
+      </span>
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+        data-testid="test-icon"
+      />
+    </div>
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with custom className 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium custom-class css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with custom color variants 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconActionPrimary MuiIconButton-sizeMedium css-100oje5-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with different sizes 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeSmall css-1awcvuf-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with different sizes 2`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeLarge css-1d7za30-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with edge positioning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-edgeStart MuiIconButton-sizeMedium css-oficvi-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconActionPrimary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconActionPrimary MuiIconButton-sizeMedium css-100oje5-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconActionSecondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconActionSecondary MuiIconButton-sizeMedium css-iu4uhp-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconActionTertiary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconActionTertiary MuiIconButton-sizeMedium css-oxdvb9-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconDefault 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconDisabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDisabled MuiIconButton-sizeMedium css-mbxyy3-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconOnSurface 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconOnSurface MuiIconButton-sizeMedium css-uyutno-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconSupportNegative 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconSupportNegative MuiIconButton-sizeMedium css-11b66lw-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconSupportPositive 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconSupportPositive MuiIconButton-sizeMedium css-4cso47-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconSupportWarning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconSupportWarning MuiIconButton-sizeMedium css-litw29-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot with multiple color variants > color-iconTypical 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconTypical MuiIconButton-sizeMedium css-1fc7ing-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Snapshot Testing > should match snapshot without children 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  />
+</div>
+`;
+
+exports[`DsIconButton > Theme Testing > should render correctly across all color schemes with proper theme colors > iconbutton-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconActionPrimary MuiIconButton-sizeMedium css-100oje5-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Theme Testing > should render correctly across all color schemes with proper theme colors > iconbutton-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconActionPrimary MuiIconButton-sizeMedium css-100oje5-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;
+
+exports[`DsIconButton > Theme Testing > should render correctly across all color schemes with proper theme colors > iconbutton-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconActionPrimary MuiIconButton-sizeMedium css-100oje5-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-home-line css-h7bicg-MuiIcon-root"
+      data-testid="test-icon"
+    />
+  </button>
+</div>
+`;

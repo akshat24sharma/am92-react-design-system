@@ -1,0 +1,1123 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshot with controlled value 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        Option 1
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value="1"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshot with custom className 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl custom-class MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshot with custom data attributes 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      data-custom="value"
+      data-testid="custom-test-id"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshot with custom sx styles 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-11qme3k-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshot with multiple options selected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        Option 1, Option 2
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value="1,2"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshot with size variant 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiInputBase-inputSizeSmall css-okor58-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-color-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorError MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-color-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorInfo MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-color-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-color-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorSecondary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-color-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorSuccess MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-color-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorWarning MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-size-medium 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for color and size variants > select-size-small 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiInputBase-inputSizeSmall css-okor58-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-disabled="true"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined Mui-disabled MuiInputBase-input Mui-disabled css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        disabled=""
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined Mui-disabled ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-required 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-required="true"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        required=""
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-with-custom-color 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorSecondary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-with-default-value 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        Option 1
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value="1"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-with-helper-text 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+    <div
+      class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+      helpertext=""
+    >
+      <div
+        class="MuiBox-root css-s14tpm"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+        >
+          Helper text
+          ​
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-with-label 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Test Label
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-with-label-support-text 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      />
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      >
+        Support Text
+      </span>
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-with-placeholder 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        >
+          Select an option
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Snapshot Testing > should match snapshots for various select states > select-with-size-small 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiInputBase-inputSizeSmall css-okor58-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Theme Testing > should render correctly across all color schemes with proper theme colors > select-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Theme Testing > should render correctly across all color schemes with proper theme colors > select-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSelect Component > Theme Testing > should render correctly across all color schemes with proper theme colors > select-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1xsnow0-MuiInputBase-root"
+      options=""
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input css-hfua8p-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
+        role="combobox"
+        tabindex="0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1t58oye-MuiTypography-root"
+        />
+      </div>
+      <input
+        aria-hidden="true"
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiSelect-icon MuiSelect-iconOutlined ri-arrow-down-s-line css-zk9p77-MuiIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+      />
+    </div>
+  </div>
+</div>
+`;
