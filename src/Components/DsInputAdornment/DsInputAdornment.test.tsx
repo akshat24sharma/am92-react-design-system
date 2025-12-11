@@ -21,13 +21,8 @@
  */
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
-import {
-  render,
-  screen,
-  fireEvent,
-  waitFor,
-} from "../../Tests/Mocks/testUtils";
-import { renderWithoutTheme, testAllThemes } from "../../Tests/Mocks/testUtils";
+import { render, screen, fireEvent } from "../../Tests/Mocks/testUtils";
+import { testAllThemes } from "../../Tests/Mocks/testUtils";
 import userEvent from "@testing-library/user-event";
 import { DsInputAdornment } from "./DsInputAdornment.Component";
 import { DsRemixIcon } from "../DsRemixIcon";

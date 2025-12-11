@@ -20,19 +20,13 @@
  */
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
-import {
-  render,
-  screen,
-  fireEvent,
-  waitFor,
-} from "../../Tests/Mocks/testUtils";
-import { renderWithoutTheme, testAllThemes } from "../../Tests/Mocks/testUtils";
+import { render, screen } from "../../Tests/Mocks/testUtils";
+import { testAllThemes } from "../../Tests/Mocks/testUtils";
 import userEvent from "@testing-library/user-event";
 import { DsAvatar } from "./DsAvatar.Component";
 import { DsRemixIcon } from "../DsRemixIcon";
 import { DsBox } from "../DsBox";
 import { DsTypography } from "../DsTypography";
-import { H } from "vitest/dist/chunks/environment.d.cL3nLXbE";
 import { PALETTE } from "../../Constants";
 import getColorScheme from "../../Theme/getColorScheme";
 
