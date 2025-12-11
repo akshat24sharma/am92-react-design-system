@@ -1,0 +1,347 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot in different themes > DsMenuItem-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed Snapshot MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot in different themes > DsMenuItem-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed Snapshot MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot in different themes > DsMenuItem-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed Snapshot MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot with all states > DsMenuItem-dense 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-dense MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-dense MuiMenuItem-gutters css-1xvgjoe-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    dense
+     MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot with all states > DsMenuItem-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    aria-disabled="true"
+    class="MuiButtonBase-root MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-disabled MuiMenuItem-root Mui-disabled MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    disabled
+     MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot with all states > DsMenuItem-divider 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-divider MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-divider css-gl22o4-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    divider
+     MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot with all states > DsMenuItem-selected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    selected
+     MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot with all states > DsMenuItem-selected-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    aria-disabled="true"
+    class="MuiButtonBase-root MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-selected Mui-disabled MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    selected-disabled
+     MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot with complex children > DsMenuItem-complex-children 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        Primary Text
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        Secondary Text
+      </span>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Badge
+    </span>
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Default MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Snapshot Tests > should match snapshot within menu structure > DsMenuItem-in-menu-structure 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <ul
+    class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    role="menu"
+    tabindex="-1"
+  >
+    <li
+      class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+      role="menuitem"
+      tabindex="-1"
+    >
+      First Item
+    </li>
+    <li
+      class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+      role="menuitem"
+      tabindex="0"
+    >
+      Selected Item
+    </li>
+    <li
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-disabled MuiMenuItem-root Mui-disabled MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+      role="menuitem"
+      tabindex="-1"
+    >
+      Disabled Item
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should apply correct design system styling across themes > menuitem-selected-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed Selected Item
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should apply correct design system styling across themes > menuitem-selected-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed Selected Item
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should apply correct design system styling across themes > menuitem-selected-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed Selected Item
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should render correctly across all color schemes with proper theme colors > menuitem-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should render correctly across all color schemes with proper theme colors > menuitem-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should render correctly across all color schemes with proper theme colors > menuitem-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Themed MenuItem
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should use correct design system typography across themes > menuitem-typography-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Typography Test
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should use correct design system typography across themes > menuitem-typography-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Typography Test
+  </li>
+</div>
+`;
+
+exports[`DsMenuItem Component > Theme Testing > should use correct design system typography across themes > menuitem-typography-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <li
+    class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-132odlr-MuiButtonBase-root-MuiMenuItem-root"
+    role="menuitem"
+    tabindex="-1"
+  >
+    Typography Test
+  </li>
+</div>
+`;
