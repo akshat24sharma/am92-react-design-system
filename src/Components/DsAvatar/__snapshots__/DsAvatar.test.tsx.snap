@@ -1,0 +1,216 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshot with complex content > avatar-complex-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-taun8g-MuiAvatar-root"
+    ds-size="L"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        Complex
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        Content
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshot with default props > avatar-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-8ajj9w-MuiAvatar-root"
+    ds-size="M"
+  >
+    Default
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshot with image source > avatar-with-image 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular css-1q189tc-MuiAvatar-root"
+    ds-size="M"
+  >
+    <img
+      alt="Profile picture of a girl"
+      class="MuiAvatar-img css-1su80sj-MuiAvatar-img"
+      src="https://storybook.axis.bank.in/v2/assets/avatar-image-6df7617a.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all sizes > avatar-size-3XL 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-nh6li6-MuiAvatar-root"
+    ds-size="3XL"
+  >
+    3XL
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all sizes > avatar-size-L 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-taun8g-MuiAvatar-root"
+    ds-size="L"
+  >
+    L
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all sizes > avatar-size-M 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-8ajj9w-MuiAvatar-root"
+    ds-size="M"
+  >
+    M
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all sizes > avatar-size-S 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1sc7ms3-MuiAvatar-root"
+    ds-size="S"
+  >
+    S
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all sizes > avatar-size-XL 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-14d2b9u-MuiAvatar-root"
+    ds-size="XL"
+  >
+    XL
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all sizes > avatar-size-XXL 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-nzmnvm-MuiAvatar-root"
+    ds-size="XXL"
+  >
+    XXL
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all themes > avatar-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-8ajj9w-MuiAvatar-root"
+    ds-size="M"
+  >
+    D
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all themes > avatar-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-8ajj9w-MuiAvatar-root"
+    ds-size="M"
+  >
+    H
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots across all themes > avatar-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-8ajj9w-MuiAvatar-root"
+    ds-size="M"
+  >
+    L
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots with different variants > avatar-variant-icon 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-16spsqz-MuiAvatar-root"
+    ds-size="M"
+    ds-variant="icon"
+  >
+    Content
+  </div>
+</div>
+`;
+
+exports[`DsAvatar Component > Snapshot Tests > should match snapshots with different variants > avatar-variant-text 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-lil39h-MuiAvatar-root"
+    ds-size="M"
+    ds-variant="text"
+  >
+    Content
+  </div>
+</div>
+`;
