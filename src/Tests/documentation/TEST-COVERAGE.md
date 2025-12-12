@@ -30,6 +30,7 @@
 - [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage 
 - [DsMenu](./Components/DsMenu.md) - 21 tests across 7 categories with MUI Menu integration, portal rendering, and comprehensive accessibility testing 
 - [DsInputBase](./Components/DsInputBase.tests.md) - 78 tests across 12 categories with comprehensive form functionality, custom variants (otp/search), theme testing, and real-world scenarios ✨
+- [DsTabs](./Components/DsTabs.md) -  57 tests across 11 categories and theme testing
 
 
 ## Running Tests
