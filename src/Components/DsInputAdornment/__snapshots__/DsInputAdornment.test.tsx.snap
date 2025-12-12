@@ -1,0 +1,390 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshot in TextField integration > input-adornment-textfield-integration 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Amount
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          $
+        </span>
+      </div>
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-rx3vxy-MuiInputAdornment-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          USD
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshot with complex content > input-adornment-complex-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <div
+      class="MuiBox-root css-171onha"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-currency-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        USD
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshot with custom styling > input-adornment-custom-styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-3669r5-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Styled
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshot with default props > input-adornment-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Default
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots across all themes > input-adornment-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      D
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots across all themes > input-adornment-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      H
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots across all themes > input-adornment-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      L
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different content types > input-adornment-content-button 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <button
+      aria-label="Action"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-line css-h7bicg-MuiIcon-root"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different content types > input-adornment-content-icon 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different content types > input-adornment-content-text 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Text
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different positions > input-adornment-position-end 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-rx3vxy-MuiInputAdornment-root"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Position
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different positions > input-adornment-position-start 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Position
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different variants > input-adornment-variant-filled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-filled css-umri1x-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Variant
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different variants > input-adornment-variant-outlined 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-outlined css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Variant
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsInputAdornment Component > Snapshot Tests > should match snapshots with different variants > input-adornment-variant-standard 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-standard css-1remsnl-MuiInputAdornment-root"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate"
+    >
+      ​
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Variant
+    </span>
+  </div>
+</div>
+`;
