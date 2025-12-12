@@ -8,6 +8,7 @@
 - [DsIconButton](./Components/DsIconButton.tests.md) - 66 tests across 10 categories with design system integration, theme testing, and snapshot testing ✨
 - [DsLoader](./Components/DsLoader.tests.md) - 38 tests across 9 categories (optimized from 48) with animation testing, theme compatibility, and error handling documentation ✅
 - [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
+- [DsSwitch](./components/DsSwitch.tests.md) - 66 tests across 12 categories with toggle functionality, comprehensive theme testing, and real-world scenarios 🎯 (49 passing, 17 requiring adjustment)
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 - [DsSelect](./Components/DsSelect.md) -  67 tests across 12 categories (Enhanced Theme Testing)
 - [DsRemixIcon](./Components/DsRemixIcon.md) -  25 tests across 7 categories and theme testing

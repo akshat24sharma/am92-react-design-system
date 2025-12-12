@@ -1,0 +1,896 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot in real-world form scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-38zrbw"
+  >
+    <fieldset
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <legend
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
+      >
+        Feature Settings
+      </legend>
+      <label
+        class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+      >
+        <div
+          class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+          ds-variant="switch"
+          name="feature-toggle"
+          role="group"
+        >
+          <button
+            aria-pressed="true"
+            class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+            tabindex="0"
+            type="button"
+            value="true"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+            >
+              Enabled
+            </span>
+          </button>
+          <button
+            aria-pressed="false"
+            class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+            tabindex="0"
+            type="button"
+            value="false"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+            >
+              Disabled
+            </span>
+          </button>
+        </div>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+        >
+          Advanced Features
+        </span>
+      </label>
+      <p
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+      >
+        Enable advanced functionality
+      </p>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot when disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-disabled"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      disabled=""
+      tabindex="-1"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButton-root Mui-selected Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      disabled=""
+      tabindex="-1"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot when selected (negative) 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-negative"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot when selected (positive) 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-selected"
+    role="group"
+  >
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with custom labels 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-custom"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        Enable
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        Disable
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-default"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with different colors > switch-color-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-color-error"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall Mui-error MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-184nm80-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall Mui-error MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-184nm80-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with different colors > switch-color-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-color-info"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-info MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-1jp7re7-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-info MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-1jp7re7-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with different colors > switch-color-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-color-primary"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-primary MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-d0vyah-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-primary MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-d0vyah-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with different colors > switch-color-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-color-secondary"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-secondary MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-z3cf5i-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-secondary MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-z3cf5i-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with different colors > switch-color-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-color-success"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-success MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-9iz37q-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-success MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-9iz37q-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with different colors > switch-color-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-color-warning"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-warning MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-izw3ck-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-warning MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-izw3ck-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with state combinations > switch-states-combination-0-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-state-default"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with state combinations > switch-states-combination-1-selected-positive 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-state-selected-positive"
+    role="group"
+  >
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with state combinations > switch-states-combination-2-selected-negative 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-state-selected-negative"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with state combinations > switch-states-combination-3-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-state-disabled"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      disabled=""
+      tabindex="-1"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButton-root Mui-selected Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      disabled=""
+      tabindex="-1"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with state combinations > switch-states-combination-4-disabled-selected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-state-disabled-selected"
+    role="group"
+  >
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButton-root Mui-selected Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      disabled=""
+      tabindex="-1"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal Mui-disabled MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      disabled=""
+      tabindex="-1"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshot with state combinations > switch-states-combination-5-custom-labels 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-state-custom-labels"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        On
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        Off
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshots across all themes > switch-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-theme-dark"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshots across all themes > switch-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-theme-highContrast"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsSwitch > Snapshot Tests > should match snapshots across all themes > switch-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+    ds-variant="switch"
+    name="snapshot-theme-light"
+    role="group"
+  >
+    <button
+      aria-pressed="false"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="true"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        YES
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+      tabindex="0"
+      type="button"
+      value="false"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+      >
+        NO
+      </span>
+    </button>
+  </div>
+</div>
+`;
