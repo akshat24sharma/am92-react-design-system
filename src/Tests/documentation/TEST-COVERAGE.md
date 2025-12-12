@@ -20,6 +20,7 @@
 - [DsMenuItem](./Components/DsMenuItem.md) -  49 tests across 10 categories and theme testing
 - [DsAvatar](./Components/DsAvatar.md) -  45 tests across 10 categories and theme testing
 - [DsInputAdornment](./Components/DsInputAdornment.md) -  56 tests across 11 categories and theme testing
+- [DsTabs](./Components/DsTabs.md) -  57 tests across 11 categories and theme testing
 
 
 ## Running Tests
@@ -63,8 +64,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 19
-- **Total Tests:** 917 across all tested components
+- **Total Components Documented:** 21
+- **Total Tests:** 1040 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
