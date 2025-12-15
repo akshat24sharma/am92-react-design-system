@@ -293,7 +293,6 @@ describe('DsMenu Component', () => {
 
                 // Validate computed styles from the rendered menu
                 const computed = window.getComputedStyle(menu);
-                console.log('Computed styles for menu in theme test:', computed.boxShadow)
                 expect(computed.boxShadow).toBe("var(--ds-elevation-4)");
             });
             
