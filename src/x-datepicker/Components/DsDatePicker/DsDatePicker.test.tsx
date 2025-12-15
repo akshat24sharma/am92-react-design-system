@@ -179,22 +179,42 @@ describe("DsDatePicker Component", () => {
 
         it("should render in error state", () => {
             render(<DsDatePicker {...defaultProps} error />);
-            const input = screen.getByRole('textbox');
-            expect(input).toBeInTheDocument();
+            const inputBase = document.querySelector('.MuiInputBase-root');
+            expect(inputBase).toHaveClass('Mui-error');
         });
 
         it("should render in focused state", async () => {
-            render(<DsDatePicker {...defaultProps} />);
+            render(<DsDatePicker {...defaultProps} autoFocus/>);
+
             const input = screen.getByRole('textbox');
-            
-            await user.click(input);
+            const inputBase = document.querySelector('.MuiInputBase-root');
+            expect(inputBase).toHaveClass('Mui-focused');
             expect(input).toHaveFocus();
         });
 
-        it("should handle loading state", () => {
-            render(<DsDatePicker {...defaultProps} loading />);
+        it("hould enter the focus state when navigated to using the Tab key", async () => {
+            render(<DsDatePicker {...defaultProps} />);
+            
+            await user.tab();
             const input = screen.getByRole('textbox');
-            expect(input).toBeInTheDocument();
+            const inputBase = document.querySelector('.MuiInputBase-root');
+            
+            expect(input).toHaveFocus();
+            expect(inputBase).toHaveClass('Mui-focused');
+        });
+
+        it("should handle loading state", async () => {
+            render(<DsDatePicker {...defaultProps} loading />);
+
+            // Click calendar button to open picker first
+            const calendarButton = screen.getByRole('button');
+            await user.click(calendarButton);
+            
+            // Wait for calendar to appear, then check for loading state in calendar
+            await waitFor(() => {
+                expect(document.querySelector('.MuiDayCalendar-loadingContainer')).toBeInTheDocument();
+            });
+            expect(document.querySelector('.MuiDayCalendar-loadingContainer')).toBeInTheDocument();
         });
     });
 
