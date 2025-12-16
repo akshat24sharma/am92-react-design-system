@@ -1,5 +1,5 @@
 import { viVN } from '@mui/x-date-pickers/locales'
-import vi from 'date-fns/locale/vi'
+import { vi } from 'date-fns/locale'
 
 export const DsDatePickerLocaleViVN = {
   components: {

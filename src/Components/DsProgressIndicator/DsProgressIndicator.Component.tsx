@@ -46,10 +46,12 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
 
     return (
       <DsBox
-        display="flex"
-        position="relative"
-        height={squareSize}
-        width={squareSize}
+        sx={{
+          display: "flex",
+          position: "relative",
+          height: squareSize,
+          width: squareSize
+        }}
       >
         <DsCircularProgress
           variant="determinate"

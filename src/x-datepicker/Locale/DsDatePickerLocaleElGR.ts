@@ -1,5 +1,5 @@
 import { elGR } from '@mui/x-date-pickers/locales'
-import el from 'date-fns/locale/el'
+import { el } from 'date-fns/locale'
 
 export const DsDatePickerLocaleElGR = {
   components: {

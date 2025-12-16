@@ -38,6 +38,7 @@ export interface DsSelectProps extends Omit<SelectProps, 'ref'> {
   success?: boolean
   options: OptionProp[]
   value?: string | string[]
+  placeholder?: string
 }
 
 export const DsSelectDefaultProps: DsSelectProps = {

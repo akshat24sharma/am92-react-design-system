@@ -1,5 +1,5 @@
 import { huHU } from '@mui/x-date-pickers/locales'
-import hu from 'date-fns/locale/hu'
+import { hu } from 'date-fns/locale'
 
 export const DsDatePickerLocaleHuHU = {
   components: {

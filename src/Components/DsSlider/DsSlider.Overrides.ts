@@ -3,29 +3,29 @@ import { DsSliderDefaultProps, DsSliderProps } from './DsSlider.Types'
 export const DsSliderOverrides = {
   MuiSlider: {
     defaultProps: DsSliderDefaultProps,
-    variants: [
-      {
-        props: { 'ds-mode': 'true' } as Partial<DsSliderProps>,
-        style: {
-          '&:not(.Mui-disabled, :has(.MuiSlider-thumb:hover), :has(.Mui-focusVisible))':
-            {
-              '> .MuiSlider-thumb, > .MuiSlider-mark, > .MuiSlider-track': {
-                backgroundColor: 'var(--ds-colour-iconDefault)'
-              },
-              '> .MuiSlider-markActive': {
-                backgroundColor: 'var(--ds-colour-iconOnSurface)'
-              }
-            }
-        }
-      }
-    ],
     styleOverrides: {
       root: {
         '&.Mui-disabled': {
           '> .MuiSlider-markLabel': {
             color: 'var(--ds-colour-typoDisabled)'
           }
-        }
+        },
+        variants: [
+          {
+            props: { 'ds-mode': 'true' } as Partial<DsSliderProps>,
+            style: {
+              '&:not(.Mui-disabled, :has(.MuiSlider-thumb:hover), :has(.Mui-focusVisible))':
+              {
+                '> .MuiSlider-thumb, > .MuiSlider-mark, > .MuiSlider-track': {
+                  backgroundColor: 'var(--ds-colour-iconDefault)'
+                },
+                '> .MuiSlider-markActive': {
+                  backgroundColor: 'var(--ds-colour-iconOnSurface)'
+                }
+              }
+            }
+          }
+        ]
       },
       track: {
         border: 'none'

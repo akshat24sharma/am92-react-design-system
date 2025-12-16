@@ -1,5 +1,5 @@
 import { daDK } from '@mui/x-date-pickers/locales'
-import da from 'date-fns/locale/da'
+import { da } from 'date-fns/locale'
 
 export const DsDatePickerLocaleDaDK = {
   components: {

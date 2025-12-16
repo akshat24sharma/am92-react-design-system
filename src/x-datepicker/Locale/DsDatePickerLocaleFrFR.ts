@@ -1,5 +1,5 @@
 import { frFR } from '@mui/x-date-pickers/locales'
-import fr from 'date-fns/locale/fr'
+import { fr } from 'date-fns/locale'
 
 export const DsDatePickerLocaleFrFR = {
   components: {

@@ -5,7 +5,7 @@ import { DsRemixIcon } from "../DsRemixIcon"
 
 figma.connect(
   DsButton,
-  "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=3536%3A16589",
+  "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=3536-16589&m=dev",
   {
     props: {
       endIcon: figma.enum("➡️ Trailing icon", {
@@ -31,23 +31,6 @@ figma.connect(
       onClick: () => {}
     },
     //@ts-ignore
-    example: (props) => <DsButton {...props} >{props.label}</DsButton>,
-  },
-)
-
-figma.connect(
-  DsButton,
-  "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=3446-16543&m=dev",
-  {
-    props: {
-      leadingIcon: figma.boolean("⬅️ Leading icon"),
-      trailingIcon: figma.boolean("➡️ Trailing icon"),
-      label: figma.textContent('button-text'),
-      varianlt: 'text',
-      state: figma.enum("🛠️ State",{
-        Disable: 'disabled'
-      })
-    },
     example: (props) => <DsButton {...props} >{props.label}</DsButton>,
   },
 )

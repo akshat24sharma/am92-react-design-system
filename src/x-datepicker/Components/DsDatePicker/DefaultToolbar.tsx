@@ -1,9 +1,7 @@
 import React from 'react'
 
-import { DatePickerToolbarProps } from '@mui/x-date-pickers'
+import { DatePickerToolbarProps, usePickerContext, usePickerTranslations } from '@mui/x-date-pickers'
 import { useUtils } from '@mui/x-date-pickers/internals'
-import { useThemeProps } from '@mui/system'
-import { useLocaleText } from '@mui/x-date-pickers/internals'
 import {
   DsStack,
   DsTypography,
@@ -11,18 +9,14 @@ import {
   DsRemixIcon
 } from '../../../Components'
 
-export const DefaultToolbar = React.forwardRef(function DatePickerToolbar<
-  TDate extends Date
->(
-  inProps: DatePickerToolbarProps<TDate> & { ownerState?: any },
+export const DefaultToolbar = React.forwardRef(function DatePickerToolbar(
+  inProps: DatePickerToolbarProps,
   ref: React.Ref<HTMLDivElement>
 ) {
-  const props = useThemeProps({ props: inProps, name: 'MuiDatePickerToolbar' })
-  const { value, ownerState } = props
-  const { onCancel } = ownerState
+  const { value, cancelValueChanges } = usePickerContext()
 
-  const translations = useLocaleText<Date>()
-  const utils = useUtils<Date>()
+  const translations = usePickerTranslations()
+  const utils = useUtils()
   const dateText =
     (value && `: ${utils.formatByString(value, utils.formats.fullDate)}`) || ''
 
@@ -45,7 +39,7 @@ export const DefaultToolbar = React.forwardRef(function DatePickerToolbar<
         variant="headingBoldExtraSmall"
       >
         {`${translations.datePickerToolbarTitle}${dateText}`}
-        <DsIconButton onClick={onCancel}>
+        <DsIconButton onClick={cancelValueChanges}>
           <DsRemixIcon className="ri-close-line" />
         </DsIconButton>
       </DsTypography>
