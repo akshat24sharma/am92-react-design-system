@@ -47,7 +47,8 @@ export const DsTabsOverrides = {
         minHeight: '36px'
       } as CSSInterpolation,
       indicator: {
-        height: '1px'
+        height: '2px',
+        borderRadius: '2px 2px 0px 0px'
       }
     }
   }

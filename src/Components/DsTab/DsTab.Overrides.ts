@@ -20,6 +20,12 @@ export const DsTabOverrides = {
         '> .MuiTab-iconWrapper': {
           fontSize: 'var(--ds-typo-fontSizeFrostbite)',
           margin: 'var(--ds-spacing-zero)'
+        },
+        '&.Mui-selected': {
+          fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
+          fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
+          lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
+          letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
         }
       } as CSSInterpolation
     }

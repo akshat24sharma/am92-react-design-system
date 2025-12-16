@@ -11,7 +11,8 @@ export const DsStepConnectorOverrides = {
         borderLeftWidth: '2px',
         borderLeftStyle: 'solid',
         borderLeftColor: 'var(--ds-colour-strokeDefault)',
-        minHeight: 'var(--ds-rules-stepperConnectorMinHeight)'
+        minHeight: 'var(--ds-rules-stepperConnectorMinHeight)',
+        marginLeft: '15px'
       } as CSSInterpolation,
       lineHorizontal: {
         borderTopWidth: '2px',

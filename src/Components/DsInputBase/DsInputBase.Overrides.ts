@@ -119,10 +119,9 @@ export const DsInputBaseOverrides = {
           padding: 'var(--ds-spacing-deepFreeze)',
           height: 'auto'
         },
-        // The warning for SSR let it be
-        '> :nth-child(even)': {
+        '> :first-of-type + *': {
           marginLeft: 'var(--ds-spacing-quickFreeze)'
-        }
+        },
       } as CSSInterpolation,
       input: {
         padding: 'var(--ds-spacing-quickFreeze) var(--ds-spacing-zero)',

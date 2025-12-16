@@ -1,7 +1,9 @@
 import { CSSInterpolation } from '@mui/system'
+import { DsHelperTextDefaultProps } from '../DsHelperText'
 
 export const DsFormHelperTextOverrides = {
   MuiFormHelperText: {
+    defaultProps: DsHelperTextDefaultProps,
     styleOverrides: {
       root: {
         textTransform: 'none',

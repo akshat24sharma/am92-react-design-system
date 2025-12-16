@@ -10,12 +10,14 @@ import { DsButtonProps } from '../DsButton'
 export interface DsDialogProps extends DialogProps {
   title?: string
   description?: string
+  kicker?: string
   showClose?: boolean
   primaryButtonText?: DsButtonProps['children']
   primaryButtonProps?: Omit<DsButtonProps, 'ref'>
   secondaryButtonText?: DsButtonProps['children']
   secondaryButtonProps?: Omit<DsButtonProps, 'ref'>
   TitleProps?: DsDialogTitleProps
+  KickerProps?: DsTypographyProps
   DescriptionProps?: DsTypographyProps
   CloseIconButtonProps?: DsIconButtonProps
   CloseIconProps?: Omit<DsRemixIconProps, 'ref'>

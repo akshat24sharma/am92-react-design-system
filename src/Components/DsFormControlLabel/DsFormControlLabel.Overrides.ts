@@ -7,7 +7,13 @@ export const DsFormControlLabelOverrides = {
             pointerEvents: 'all',
             cursor: 'not-allowed'
           }
-        }
+        },
+        '.Mui-checked ~ *' : {
+          fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
+          fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
+          lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
+          letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)'
+      }
       },
       label: {
         padding: 'var(--ds-spacing-deepFreeze)',

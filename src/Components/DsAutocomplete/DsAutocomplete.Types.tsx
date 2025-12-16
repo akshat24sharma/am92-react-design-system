@@ -15,7 +15,7 @@ export const DsAutocompleteDefaultProps: DsAutocompleteProps<
   boolean
 > = {
   popupIcon: <DsRemixIcon className="ri-arrow-down-s-line" />,
-  clearIcon: <DsRemixIcon color="secondary" className="ri-close-line" />,
+  clearIcon: <DsRemixIcon className="ri-close-fill" />,
   multiple: false,
   disableClearable: false,
   freeSolo: false,

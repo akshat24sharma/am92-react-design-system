@@ -1,21 +1,31 @@
-import React, { CSSProperties, FC, useState } from 'react'
+import React, {
+  CSSProperties,
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState
+} from 'react'
 
 import { DsBox } from '../DsBox'
 import { DsStack } from '../DsStack'
 import { DsInputLabel } from '../DsInputLabel'
 import { DsTextField } from '../DsTextField'
 import { DsHelperText } from '../DsHelperText'
-import { DsOtpDefaultProps, DsOtpProps } from './DsOtp.Types'
+import { DsOtpDefaultProps, DsOtpProps, DsOtpRef } from './DsOtp.Types'
 
 const KEY_CODES = {
   BACK_SPACE: 'Backspace'
 }
 
-export const DsOtp: FC<DsOtpProps> = (inProps) => {
-  const props = { ...DsOtpDefaultProps, ...inProps}
+export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
+  const props = { ...DsOtpDefaultProps, ...inProps }
+  const domRef = useRef<HTMLDivElement>(null)
   const optInputRefs = new Map()
-  const { initialOtp = '', length } = props
-  const [otp, setOtp] = useState(initialOtp ? [...initialOtp].slice(0, length) : [])
+  const { initialOtp = '', length, autoFocus } = props
+  const [otp, setOtp] = useState(
+    initialOtp ? [...initialOtp].slice(0, length) : []
+  )
 
   const handleFocus = (event: React.FocusEvent<HTMLInputElement, Element>) => {
     const { onFocus } = props
@@ -57,18 +67,18 @@ export const DsOtp: FC<DsOtpProps> = (inProps) => {
     const shouldNavigate = filteredValue
     const _this = this
     setOtp([...otp])
-      if (shouldNavigate) {
-        _handleNavigation(index, false)
-      }
+    if (shouldNavigate) {
+      _handleNavigation(index, false)
+    }
 
-      if (typeof onChange === 'function') {
-        onChange(event)
-      }
+    if (typeof onChange === 'function') {
+      onChange(event)
+    }
 
-      const otpString = otp.join('')
-      if (otpString.length === length && typeof onComplete === 'function') {
-        onComplete(otpString)
-      }
+    const otpString = otp.join('')
+    if (otpString.length === length && typeof onComplete === 'function') {
+      onComplete(otpString)
+    }
   }
 
   const _handleNavigation = (index: number, isBackPressed?: boolean): void => {
@@ -103,9 +113,18 @@ export const DsOtp: FC<DsOtpProps> = (inProps) => {
     }
   }
 
+  useImperativeHandle(ref, () => ({
+    resetOtpValues,
+    domNode: domRef?.current
+  }))
+
   const resetOtpValues = () => {
     setOtp([])
   }
+
+  useEffect(() => {
+    if (autoFocus) _handleNavigation(-1)
+  }, [autoFocus])
 
   const renderOtpBoxes = () => {
     const {
@@ -134,11 +153,11 @@ export const DsOtp: FC<DsOtpProps> = (inProps) => {
     return lengthArray.map((value, index) => (
       <DsTextField
         key={index}
-        type="tel"
-        inputMode="tel"
+        type='tel'
+        inputMode='tel'
         {...restProps}
         name={`${name}.${index}`}
-        ds-variant="otp"
+        ds-variant='otp'
         inputProps={otpInputProps}
         onPaste={handlePaste}
         onFocus={handleFocus}
@@ -152,43 +171,43 @@ export const DsOtp: FC<DsOtpProps> = (inProps) => {
     ))
   }
 
-    const {
-      id,
-      name,
-      label,
-      labelSupportText,
-      helperText,
-      success,
-      color,
-      error,
-      inputProps,
-      disabled,
-      InputLabelProps,
-      HelperTextProps,
-      BoxProps
-    } = props
+  const {
+    id,
+    name,
+    label,
+    labelSupportText,
+    helperText,
+    success,
+    color,
+    error,
+    inputProps,
+    disabled,
+    InputLabelProps,
+    HelperTextProps,
+    BoxProps
+  } = props
 
-    return (
-      <DsBox {...BoxProps}>
-        <DsInputLabel
-          label={label}
-          labelSupportText={labelSupportText}
-          // error={error}
-          success={success}
-          htmlFor={id || name}
-          disabled={disabled}
-          {...InputLabelProps}
-        />
-        <DsStack direction="row" spacing="var(--ds-spacing-glacial)" style={{}}>
-          {renderOtpBoxes()}
-        </DsStack>
-        <DsHelperText
-          helperText={helperText}
-          color={color}
-          success={success}
-          error={error}
-          {...HelperTextProps}
-        />
-      </DsBox>
-    )
-}
+  return (
+    <DsBox ref={domRef} {...BoxProps}>
+      <DsInputLabel
+        label={label}
+        labelSupportText={labelSupportText}
+        // error={error}
+        success={success}
+        htmlFor={id || name}
+        disabled={disabled}
+        {...InputLabelProps}
+      />
+      <DsStack direction='row' spacing='var(--ds-spacing-glacial)' style={{}}>
+        {renderOtpBoxes()}
+      </DsStack>
+      <DsHelperText
+        helperText={helperText}
+        color={color}
+        success={success}
+        error={error}
+        {...HelperTextProps}
+      />
+    </DsBox>
+  )
+})

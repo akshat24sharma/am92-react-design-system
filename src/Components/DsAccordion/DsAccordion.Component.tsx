@@ -18,7 +18,7 @@ export const DsAccordion: FC<DsAccordionProps> = inProps => {
     summary,
     SummaryProps,
     expandIcon = (
-      <DsRemixIcon className="ri-arrow-drop-down-line" fontSize="bitterCold" />
+      <DsRemixIcon className="ri-arrow-down-s-line" fontSize="bitterCold" />
     ),
     ...AccordionProps
   } = props
