@@ -1,0 +1,403 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsChip Component > Snapshot Testing > matches across theme color schemes > scheme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorInfo MuiChip-chipInfo css-1p31xfv-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Scheme dark
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches across theme color schemes > scheme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorInfo MuiChip-chipInfo css-1p31xfv-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Scheme highContrast
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches across theme color schemes > scheme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorInfo MuiChip-chipInfo css-1p31xfv-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Scheme light
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches clickable state 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiButtonBase-root MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-chipDefault css-1ia0gjq-MuiButtonBase-root-MuiChip-root"
+    role="button"
+    tabindex="0"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Clickable
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches default render 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorDefault MuiChip-chipDefault css-1e1pjt9-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Snapshot Default
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches disabled state 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip Mui-disabled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-chipDefault css-1e1pjt9-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Disabled
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches nudge type with color variants > nudge-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorDefault MuiChip-chipDefault css-1caw116-MuiChip-root"
+    type="nudge"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Nudge default
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches nudge type with color variants > nudge-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorError MuiChip-chipError css-95djyq-MuiChip-root"
+    type="nudge"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Nudge error
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches nudge type with color variants > nudge-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorInfo MuiChip-chipInfo css-1adyyig-MuiChip-root"
+    type="nudge"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Nudge info
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches nudge type with color variants > nudge-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorPrimary MuiChip-chipPrimary css-crrznd-MuiChip-root"
+    type="nudge"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Nudge primary
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches nudge type with color variants > nudge-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-chipSecondary css-lhron4-MuiChip-root"
+    type="nudge"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Nudge secondary
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches nudge type with color variants > nudge-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorSuccess MuiChip-chipSuccess css-h8hc5s-MuiChip-root"
+    type="nudge"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Nudge success
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches nudge type with color variants > nudge-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorWarning MuiChip-chipWarning css-1quegrj-MuiChip-root"
+    type="nudge"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Nudge warning
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches small size 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeSmall MuiChip-colorDefault MuiChip-chipDefault css-1ufi0mg-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelSmall css-qmwq9b-MuiChip-label"
+    >
+      Small
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches status type with color variants > status-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorDefault MuiChip-chipDefault css-1e1pjt9-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Status default
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches status type with color variants > status-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorError MuiChip-chipError css-zx1atn-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Status error
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches status type with color variants > status-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorInfo MuiChip-chipInfo css-1p31xfv-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Status info
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches status type with color variants > status-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorPrimary MuiChip-chipPrimary css-1txdj8q-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Status primary
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches status type with color variants > status-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-chipSecondary css-6tauqv-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Status secondary
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches status type with color variants > status-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorSuccess MuiChip-chipSuccess css-1qmlgqd-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Status success
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches status type with color variants > status-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorWarning MuiChip-chipWarning css-1y5bzg5-MuiChip-root"
+    type="status"
+  >
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      Status warning
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsChip Component > Snapshot Testing > matches with icon 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiChip-root MuiChip-chip MuiChip-sizeMedium MuiChip-colorDefault MuiChip-chipDefault css-1e1pjt9-MuiChip-root"
+    type="status"
+  >
+    <span
+      aria-hidden="true"
+      class="notranslate MuiIcon-root MuiIcon-fontSizeMild MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault ri-star-fill css-h7bicg-MuiIcon-root"
+    />
+    <span
+      class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+    >
+      With Icon
+    </span>
+  </div>
+</div>
+`;

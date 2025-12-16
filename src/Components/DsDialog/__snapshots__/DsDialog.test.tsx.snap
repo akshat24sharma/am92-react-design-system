@@ -1,0 +1,148 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot across all theme modes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot across all theme modes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot across all theme modes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot when closed 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot when open 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with both buttons 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with complex content structure 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with custom props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with default props when open 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with different max widths > maxWidth-lg 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with different max widths > maxWidth-md 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with different max widths > maxWidth-sm 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with different max widths > maxWidth-xl 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with different max widths > maxWidth-xs 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with different scroll behaviors > scroll-body 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with different scroll behaviors > scroll-paper 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with fullScreen dialog 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with kicker text 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with primary button only 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot with title and description 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDialog Component > Snapshot Tests > should match snapshot without close button 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
