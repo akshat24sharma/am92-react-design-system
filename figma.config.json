@@ -1,5 +1,6 @@
 {
   "codeConnect": {
-    "include": ["/**/*.{tsx,jsx}"]
+    "include": ["/**/*.{tsx,jsx}"],
+    "parser": "react"
   }
 }

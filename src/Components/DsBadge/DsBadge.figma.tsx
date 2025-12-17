@@ -8,7 +8,7 @@ figma.connect(
   "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=6861-3122&m=dev",
   {
     props: {
-      badgeContent: figma.enum('📏 Size', {
+      badgeContent: figma.enum('Type', {
         'Default': '',
         'Single digit': figma.textContent('3'),
         'Double digit': figma.textContent('32'),

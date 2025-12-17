@@ -8,9 +8,19 @@ figma.connect(
   "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=38781-35292&m=dev",
   {
     props: {
-      'ds-size': figma.enum('⚙️ Type', {
-       ' Avatar-Icon': 'S'
+      'ds-size': figma.enum('📏 Size', {
+       'S': 'S',
+        'M': 'M',
+        'L': 'L',
+        'XL': 'XL',
+        'XXL': 'XXL',
+        '3XL': '3XL',
       }),
+      'ds-variant': figma.enum('⚙️ Type', {
+        'Avatar-Icon': 'icon',
+        'Avatar-Image': 'icon',
+        'Avatar-Text': 'text',
+      })
 
     },
     example: (props) => <DsAvatar {...props} />,
