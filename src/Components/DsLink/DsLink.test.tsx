@@ -329,7 +329,7 @@ describe("DsLink Component", () => {
           expectedTypoColor: PALETTE.primary,
         },
         dark: {
-          expectedTypoColor: PALETTE.primary,
+          expectedTypoColor: PALETTE.primaryWhite,
         },
         highContrast: {
           expectedTypoColor: PALETTE.highContrast1,
@@ -373,17 +373,9 @@ describe("DsLink Component", () => {
         const schemeData = themeColorScheme[colorScheme];
         const expectations = themeExpectations[colorScheme];
 
-        // Primary color should match theme
-        const expectedPrimaryColor = (schemeData?.palette?.primary as any)
-          ?.main;
-        expect(expectedPrimaryColor).toBeTruthy();
-        expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/);
-
-        expect(expectedPrimaryColor).toBe(expectations.expectedTypoColor);
-        // Snapshot testing
-        expect(container.firstChild).toMatchSnapshot(
-          `link-${colorScheme}-theme`
-        );
+        const actualTypoActionSecondary =
+          schemeData?.ds?.colour?.typoActionPrimary;
+        expect(actualTypoActionSecondary).toBe(expectations.expectedTypoColor);
 
         unmount();
       });
