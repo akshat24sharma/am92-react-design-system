@@ -13,7 +13,7 @@ import { mergeSlotProps } from '../../utils'
 export const DsDialog: React.FC<DsDialogProps> = inProps => {
   const props = { ...DsDialogDefaultProps, ...inProps }
 
-  const handleCloseClick = (reason?: "backdropClick" | "escapeKeyDown" | 'closeButtonClick') => (event: React.SyntheticEvent) => {
+  const handleCloseClick = (reason: "backdropClick" | "escapeKeyDown" | 'closeButtonClick') => (event: React.SyntheticEvent) => {
     const { onClose } = props
     if (typeof onClose === 'function') {
       onClose(event, reason ? reason : 'backdropClick')
