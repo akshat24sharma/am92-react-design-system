@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { DateField } from "@mui/x-date-pickers";
 import { useThemeProps } from "@mui/system";
 
@@ -20,11 +20,9 @@ const StartDateTextField = React.forwardRef<
     onDateChange,
     endDateLabel,
     endDateLabelSupportText,
-    orientation,
     customRef,
     focused,
-    ownerState,
-    setOpen,
+    onFieldClick,
     ...otherProps
   } = fieldProps;
   const { readOnly } = InputProps || {};
@@ -49,16 +47,14 @@ const EndDateTextField = React.forwardRef<
     endDateLabel,
     // Filter out custom props that shouldn't reach DOM
     helperText,
+    onFieldClick,
     startDate,
     endDate,
     onDateChange,
     startDateLabel,
     startDateLabelSupportText,
-    orientation,
     customRef,
     focused,
-    ownerState,
-    setOpen,
     ...otherProps
   } = fieldProps;
   const { readOnly } = InputProps || {};
@@ -79,13 +75,12 @@ const DateRangePickerTextField = React.forwardRef<
   IDateRangePickerTextFieldProps
 >((props, ref) => {
   const {
+    // Filter out custom props that shouldn't reach DOM
     startDate,
-
     endDate,
     onDateChange,
     startDateLabel,
     endDateLabel,
-    orientation = "row",
     customRef,
     format,
     onFieldClick,
@@ -105,12 +100,22 @@ const DateRangePickerTextField = React.forwardRef<
     ...baseTextFieldProps
   } = mergedProps;
 
+  const handleDateChange = useCallback(
+    (field: "start" | "end") => (value: unknown) => {
+      if (value instanceof Date || value === null) {
+        if (field === "start") {
+          onDateChange(value, endDate ?? null);
+        } else {
+          onDateChange(startDate ?? null, value);
+        }
+      }
+    },
+    [startDate, endDate, onDateChange]
+  );
+
   return (
     <DsBox ref={ref}>
-      <DsStack
-        direction={orientation === "landscape" ? "column" : "row"}
-        gap="var(--ds-spacing-bitterCold)"
-      >
+      <DsStack direction="row" gap="var(--ds-spacing-bitterCold)">
         <DateField
           slots={{ textField: StartDateTextField }}
           error={props.error}
@@ -120,12 +125,8 @@ const DateRangePickerTextField = React.forwardRef<
               label: startDateLabel,
               inputRef: customRef,
               placeholder: format?.toLowerCase?.(),
-              onClick: () => onFieldClick?.("start"),
-              onChange: (value: unknown) => {
-                if (value instanceof Date || value === null) {
-                  onDateChange?.(value, endDate ?? null);
-                }
-              },
+              onClick: () => onFieldClick("start"),
+              onChange: handleDateChange("start"),
               ...DsTextFieldSlots,
               ...DsTextFieldSlotProps,
             },
@@ -141,12 +142,8 @@ const DateRangePickerTextField = React.forwardRef<
               value: endDate,
               label: endDateLabel,
               placeholder: format?.toLowerCase?.(),
-              onClick: () => onFieldClick?.("end"),
-              onChange: (value: unknown) => {
-                if (value instanceof Date || value === null) {
-                  onDateChange?.(startDate ?? null, value);
-                }
-              },
+              onClick: () => onFieldClick("end"),
+              onChange: handleDateChange("end"),
               ...DsTextFieldSlots,
               ...DsTextFieldSlotProps,
             },

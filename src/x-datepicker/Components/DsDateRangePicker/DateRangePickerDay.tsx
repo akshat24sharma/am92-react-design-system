@@ -1,8 +1,9 @@
-import { PickersDay } from '@mui/x-date-pickers'
-import { isAfter, isSameDay, isWithinInterval } from 'date-fns'
+import { useMemo } from "react";
+import { PickersDay } from "@mui/x-date-pickers";
+import { isAfter, isSameDay, isWithinInterval } from "date-fns";
 
-import type { IDateRangePickerDayProps } from './DsDateRangePicker.Types'
-import { DsBox } from '../../../Components'
+import type { IDateRangePickerDayProps } from "./DsDateRangePicker.Types";
+import { DsBox } from "../../../Components";
 
 export const DateRangePickerDay = ({
   day,
@@ -12,53 +13,41 @@ export const DateRangePickerDay = ({
   activeField,
   ...other
 }: IDateRangePickerDayProps) => {
-  const isStart = !!startDate && isSameDay(day, startDate)
-  const isEnd = !!endDate && isSameDay(day, endDate)
-  const isSingleDay = isStart && isEnd
+  const isStart = !!startDate && isSameDay(day, startDate);
+  const isEnd = !!endDate && isSameDay(day, endDate);
+  const isSingleDay = isStart && isEnd;
   const isInRange =
     startDate && endDate && !isAfter(startDate, endDate)
       ? isWithinInterval(day, { start: startDate, end: endDate })
-      : false
+      : false;
 
-  const isToday = isSameDay(day, new Date())
+  const background =
+    (isStart || isEnd || isInRange) && !(startDate && !endDate)
+      ? "var(--ds-colour-stateSelectedPrimaryHover)"
+      : "none";
 
-  let background: string | undefined
-
-  if (isSingleDay) {
-    background = 'var(--ds-colour-stateSelectedPrimaryHover)'
-  } else if (isStart) {
-    background =
-      'linear-gradient(to left, var(--ds-colour-stateSelectedPrimaryHover) 50%, transparent 50%)'
-  } else if (isEnd) {
-    background =
-      'linear-gradient(to right, var(--ds-colour-stateSelectedPrimaryHover) 50%, transparent 50%)'
-  } else if (isInRange) {
-    background = 'var(--ds-colour-stateSelectedPrimaryHover)'
-  }
-
-  const resolvedBackground = startDate && !endDate ? 'none' : background
+  const boxStyles = useMemo(
+    () => ({
+      display: "flex",
+      justifyContent: "space-around",
+      alignItems: "center",
+      flex: 1,
+      background: background,
+      ...(isSingleDay && { borderRadius: "50%" }),
+      ...(isStart && !isEnd && { borderRadius: "50% 0 0 50%" }),
+      ...(isEnd && !isStart && { borderRadius: "0 50% 50% 0" }),
+    }),
+    [background, isSingleDay, isStart, isEnd]
+  );
 
   return (
-    <DsBox
-      sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flex: 1,
-        background: resolvedBackground
-      }}
-    >
+    <DsBox sx={boxStyles}>
       <PickersDay
         {...other}
         day={day}
         onClick={() => onDateClick(day, activeField)}
         selected={isStart || isEnd}
-        sx={{
-          ...(isToday && {
-            borderRadius: '50%'
-          })
-        }}
       />
     </DsBox>
-  )
-}
+  );
+};

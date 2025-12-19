@@ -1,35 +1,44 @@
 import type {
+  DateCalendarSlots,
   DateFieldProps,
   DatePickerToolbarProps,
   PickersActionBarProps,
-  PickersDayProps,
+  PropsFromSlot,
 } from "@mui/x-date-pickers";
 import { DsDatePickerProps } from "../DsDatePicker";
 import { DsTextFieldProps } from "../../../Components";
+import { BaseDatePickerSlots } from "@mui/x-date-pickers/DatePicker/shared";
 
-export interface IDateRangePickerActionBarProps extends PickersActionBarProps {
-  startDate?: Date | null;
-  endDate?: Date | null;
-  onClear: () => void;
-}
-export interface IDateRangePickerToolBarProps extends DatePickerToolbarProps {
-  startDate?: Date | null;
-  endDate?: Date | null;
-  activeField: "start" | "end";
-  onFieldChange: () => void;
-}
-export interface IDateRangePickerDayProps extends PickersDayProps {
+// Common base interfaces for shared properties
+export interface IDateRangeBaseProps {
   startDate: Date | null;
   endDate: Date | null;
+}
+
+export interface IDateRangeActiveFieldProps extends IDateRangeBaseProps {
   activeField: "start" | "end";
+}
+
+export interface IDateRangePickerActionBarProps
+  extends PickersActionBarProps,
+    Partial<IDateRangeBaseProps> {
+  onClear?: () => void;
+}
+
+export interface IDateRangePickerToolBarProps
+  extends DatePickerToolbarProps,
+    IDateRangeActiveFieldProps {
+  onFieldChange: () => void;
+}
+export interface IDateRangePickerDayProps
+  extends PropsFromSlot<DateCalendarSlots["day"]>,
+    IDateRangeActiveFieldProps {
   onDateClick: (date: Date | null, field: "start" | "end") => void;
 }
 
-export interface IDateRangePickerHeaderProps<TDate extends Date>
-  extends DatePickerToolbarProps {
-  ownerState?: unknown;
-  startDate: TDate | null;
-  endDate: TDate | null;
+export interface IDateRangePickerHeaderProps
+  extends PropsFromSlot<BaseDatePickerSlots["toolbar"]>,
+    IDateRangeBaseProps {
   activeField: "start" | "end";
   onFieldChange: (field: "start" | "end") => void;
   onCancel?: () => void;
@@ -53,22 +62,18 @@ export interface IDateRangePickerTextFieldProps
       | "slotProps"
       | "slots"
     >,
-    Pick<DsTextFieldProps, "slots" | "slotProps" | "success"> {
-  setOpen?: (open: boolean) => void;
+    Pick<DsTextFieldProps, "slots" | "slotProps" | "success">,
+    Partial<IDateRangeBaseProps> {
   InputProps?: DateFieldProps["InputProps"];
-  ref?: DateFieldProps["ref"];
-  customRef?: DateFieldProps["ref"];
-  focused?: boolean;
-  ownerState?: unknown;
-  startDate?: Date | null;
-  endDate?: Date | null;
+  ref: DateFieldProps["ref"];
+  customRef: DateFieldProps["ref"];
+  focused: boolean;
   startDateLabel?: string;
   endDateLabel?: string;
   startDateLabelSupportText?: string;
   endDateLabelSupportText?: string;
-  orientation?: IDsDateRangePickerProps["orientation"];
-  onDateChange?: (newStart: Date | null, newEnd: Date | null) => void;
-  onFieldClick?: (field: "start" | "end") => void;
+  onDateChange: (newStart: Date | null, newEnd: Date | null) => void;
+  onFieldClick: (field: "start" | "end") => void;
 }
 
 export interface IDsDateRangePickerSlotProps
@@ -76,10 +81,22 @@ export interface IDsDateRangePickerSlotProps
     NonNullable<DsDatePickerProps["slotProps"]>,
     "textField" | "actionBar" | "day" | "toolbar"
   > {
-  textField?: IDateRangePickerTextFieldProps;
-  actionBar?: IDateRangePickerActionBarProps;
-  day?: IDateRangePickerDayProps;
-  toolbar?: IDateRangePickerToolBarProps;
+  textField?: Omit<
+    IDateRangePickerTextFieldProps,
+    | "onDateChange"
+    | "onFieldClick"
+    | "customRef"
+    | "ref"
+    | "focused"
+    | "startDate"
+    | "endDate"
+  >;
+  actionBar?: Omit<IDateRangePickerActionBarProps, "onClear">;
+  day?: Omit<IDateRangePickerDayProps, "onDateClick" | "startDate" | "endDate">;
+  toolbar?: Omit<
+    IDateRangePickerToolBarProps,
+    "onFieldChange" | "activeField" | "startDate" | "endDate"
+  >;
 }
 
 export interface IDsDateRangePickerProps
@@ -102,7 +119,7 @@ export interface IDsDateRangePickerProps
   > {
   value: [Date | null, Date | null];
   onChange: (name: string, value: [Date | null, Date | null]) => void;
-  slotProps?: IDsDateRangePickerSlotProps;
+  slotProps?: Partial<IDsDateRangePickerSlotProps>;
   startDateLabel?: string;
   endDateLabel?: string;
   startDateLabelSupportText?: string;
@@ -110,27 +127,16 @@ export interface IDsDateRangePickerProps
 }
 
 export const DsDateRangePickerDefaultProps: Partial<IDsDateRangePickerProps> = {
-  orientation: "portrait",
+  /**
+   * Note: Component overrides are restricted to maintain design consistency.
+   * Only label-related props in textFields can be customized by consumers.
+   * All other slot overrides are handled internally to ensure proper functionality.
+   */
   format: "dd/MM/yyyy",
   valueType: "date",
   fixedWeekNumber: 6,
   startDateLabel: "Start",
   endDateLabel: "End",
-  slotProps: {
-    popper: {
-      sx: {
-        ".MuiDayCalendar-weekContainer": {
-          justifyContent: "unset",
-        },
-        ".MuiDayCalendar-header": {
-          ".MuiDayCalendar-weekDayLabel": {
-            padding: "var(--ds-spacing-glacial)",
-          },
-        },
-      },
-    },
-  },
-  sx: { width: "unset" },
   LocalizationProviderProps: {
     localeText: {
       datePickerToolbarTitle: "Select a date range",

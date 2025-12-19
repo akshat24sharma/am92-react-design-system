@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useThemeProps } from "@mui/system";
 import {
+  DateCalendarSlotProps,
+  DateCalendarSlots,
   type DateValidationError,
   LocalizationProvider,
 } from "@mui/x-date-pickers";
@@ -13,10 +15,15 @@ import { DateRangePickerDay } from "./DateRangePickerDay";
 import { DateRangePickerHeader } from "./DateRangePickerHeader";
 import DateRangePickerTextField from "./DateRangePickerTextField";
 import type {
+  IDateRangePickerActionBarProps,
   IDateRangePickerTextFieldProps,
   IDsDateRangePickerProps,
 } from "./DsDateRangePicker.Types";
 import { DsDateRangePickerDefaultProps } from "./DsDateRangePicker.Types";
+import {
+  BaseDatePickerSlotProps,
+  BaseDatePickerSlots,
+} from "@mui/x-date-pickers/DatePicker/shared";
 
 export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
   const props = { ...DsDateRangePickerDefaultProps, ...InProps };
@@ -26,12 +33,10 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     onChange,
     format,
     name,
-    orientation,
     startDateLabel,
     endDateLabel,
     startDateLabelSupportText,
     endDateLabelSupportText,
-    LocalizationProviderProps: inLocalizationProviderProps,
     valueType,
     required,
     fullWidth,
@@ -46,7 +51,6 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     ...restProps
   } = props;
 
-  const updatedProps = { ...DsDateRangePickerDefaultProps, ...restProps };
   const [startDate, setStartDate] = useState<Date | null>(value?.[0] || null);
   const [endDate, setEndDate] = useState<Date | null>(value?.[1] || null);
 
@@ -85,32 +89,36 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     }
 
     // 4. Validate both dates and trigger onError
-    const { minDate, maxDate, onError, errorMap } = updatedProps;
+    const { minDate, maxDate, onError, errorMap } = props;
     let hasError = false;
     let errorCode: DateValidationError = null;
     let invalidDate = null;
 
-    // Check if start date is greater than end date
-    if (startDate && endDate && startDate > endDate) {
+    // Validate date range and bounds
+    const validateDate = (date: Date | null) => {
+      if (!date) return null;
+      if (minDate && date < minDate) return { code: "minDate", date };
+      if (maxDate && date > maxDate) return { code: "maxDate", date };
+      return null;
+    };
+
+    // Check range validity and individual date bounds
+    const startValidation = validateDate(startDate);
+    const endValidation = validateDate(endDate);
+    const rangeInvalid = startDate && endDate && startDate > endDate;
+
+    if (rangeInvalid) {
       hasError = true;
       errorCode = "invalidDate";
       invalidDate = startDate;
-    } else if (startDate && minDate && startDate < minDate) {
+    } else if (startValidation) {
       hasError = true;
-      errorCode = "minDate";
-      invalidDate = startDate;
-    } else if (startDate && maxDate && startDate > maxDate) {
+      errorCode = startValidation.code as DateValidationError;
+      invalidDate = startValidation.date;
+    } else if (endValidation) {
       hasError = true;
-      errorCode = "maxDate";
-      invalidDate = startDate;
-    } else if (endDate && minDate && endDate < minDate) {
-      hasError = true;
-      errorCode = "minDate";
-      invalidDate = endDate;
-    } else if (endDate && maxDate && endDate > maxDate) {
-      hasError = true;
-      errorCode = "maxDate";
-      invalidDate = endDate;
+      errorCode = endValidation.code as DateValidationError;
+      invalidDate = endValidation.date;
     }
 
     setValidationError(hasError);
@@ -128,10 +136,10 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     startDate,
     endDate,
     activeField,
-    updatedProps.minDate,
-    updatedProps.maxDate,
-    updatedProps.onError,
-    updatedProps.errorMap,
+    props.minDate,
+    props.maxDate,
+    props.onError,
+    props.errorMap,
     name,
   ]);
 
@@ -154,7 +162,6 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       if (date < startDate) {
         onChange(name, [date, endDate]);
         setStartDate(date);
-        // setEndDate(null);
         setActiveField("end");
       } else {
         onChange(name, [startDate, date]);
@@ -162,6 +169,7 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       }
     }
   };
+
   const handleClear = () => {
     onChange(name, [null, null]);
     setStartDate(null);
@@ -179,17 +187,26 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
   };
 
   const LocalizationProviderProps = useThemeProps({
-    props: inLocalizationProviderProps,
+    props: props.LocalizationProviderProps,
     name: "MuiLocalizationProvider",
   });
 
-  const onFieldClick = (field: "start" | "end") => {
-    if (field === "end" && !startDate) {
-      setActiveField("start");
-    } else {
-      setActiveField(field);
-    }
-  };
+  const onFieldClick = useCallback(
+    (field: "start" | "end") => {
+      if (field === "end" && !startDate) {
+        setActiveField("start");
+      } else {
+        setActiveField(field);
+      }
+    },
+    [startDate]
+  );
+
+  const referenceDate = useMemo(
+    () =>
+      (activeField === "end" ? endDate : startDate) || startDate || new Date(),
+    [activeField, endDate, startDate]
+  );
 
   return (
     <LocalizationProvider
@@ -197,43 +214,33 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       {...LocalizationProviderProps}
     >
       <DsDatePicker
-        {...updatedProps}
+        {...restProps}
         name={name}
-        onChange={() => {}}
-        value={activeField === "start" ? startDate : endDate || startDate}
+        // Set calendar reference date based on active field for better UX
+        referenceDate={referenceDate}
         slots={{
-          actionBar: (actionBarProps) => (
-            <DateRangePickerActionBar
-              startDate={startDate}
-              endDate={endDate}
-              onClear={handleClear}
-              {...actionBarProps}
-            />
-          ),
-          toolbar: (toolbarProps) => (
-            <DateRangePickerHeader
-              startDate={startDate}
-              endDate={endDate}
-              activeField={activeField}
-              onFieldChange={setActiveField}
-              {...toolbarProps}
-              {...props.slotProps?.toolbar}
-            />
-          ),
+          actionBar: DateRangePickerActionBar,
+          toolbar: DateRangePickerHeader as BaseDatePickerSlots["toolbar"],
           textField: DateRangePickerTextField,
-          day: (dayProps) => (
-            <DateRangePickerDay
-              {...dayProps}
-              startDate={startDate}
-              endDate={endDate}
-              activeField={activeField}
-              onDateClick={handleDateClick}
-            />
-          ),
+          day: DateRangePickerDay as DateCalendarSlots["day"],
           ...props.slots,
         }}
         slotProps={{
           ...props.slotProps,
+          actionBar: {
+            startDate: startDate,
+            endDate: endDate,
+            onClear: handleClear,
+            actions: ["clear", "accept"],
+            ...props.slotProps?.actionBar,
+          } as IDateRangePickerActionBarProps,
+          toolbar: {
+            startDate: startDate,
+            endDate: endDate,
+            activeField: activeField,
+            onFieldChange: setActiveField,
+            ...props.slotProps?.toolbar,
+          } as BaseDatePickerSlotProps["toolbar"],
           textField: {
             required,
             fullWidth,
@@ -254,11 +261,16 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
             startDateLabelSupportText,
             endDateLabelSupportText,
             onDateChange: handleTextFieldChange,
-            orientation,
             customRef: startRef,
             ...props.slotProps?.textField,
-          } as IDateRangePickerTextFieldProps,
-          day: undefined,
+          } as Partial<IDateRangePickerTextFieldProps>,
+          day: {
+            startDate,
+            endDate,
+            activeField,
+            onDateClick: handleDateClick,
+            ...props.slotProps?.day,
+          } as DateCalendarSlotProps["day"],
           popper: {
             anchorEl: anchorEL,
             ...props.slotProps?.popper,
