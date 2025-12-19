@@ -1,0 +1,447 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot across all themes > ds-input-base-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="Themed input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot across all themes > ds-input-base-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="Themed input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot across all themes > ds-input-base-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="Themed input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot as multiline > ds-input-base-multiline 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+  >
+    <textarea
+      autocomplete="off"
+      class="MuiInputBase-input MuiInputBase-inputMultiline css-sdbgut-MuiInputBase-input"
+      placeholder="Multiline input"
+      rows="3"
+      style="height: 0px; overflow: hidden;"
+    />
+    <textarea
+      aria-hidden="true"
+      class="MuiInputBase-input MuiInputBase-inputMultiline css-sdbgut-MuiInputBase-input"
+      readonly=""
+      style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+      tabindex="-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot in disabled state > ds-input-base-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input Mui-disabled css-1rw3c3-MuiInputBase-input"
+      disabled=""
+      placeholder="Disabled input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot in error state > ds-input-base-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      aria-invalid="true"
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="Error input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with adornments > ds-input-base-with-adornments 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-adornedStart MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+  >
+    <div
+      class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate"
+      >
+        ​
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        $
+      </span>
+    </div>
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+      type="text"
+      value=""
+    />
+    <div
+      class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-rx3vxy-MuiInputAdornment-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        .00
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with complex real-world example > ds-input-base-real-world-example 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1pdno8a"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-adornedStart css-bg8qvq-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+        />
+      </div>
+      <input
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart css-1rw3c3-MuiInputBase-input"
+        placeholder="Search products..."
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-adornedStart MuiInputBase-adornedEnd css-1xsnow0-MuiInputBase-root"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          $
+        </span>
+      </div>
+      <input
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-1rw3c3-MuiInputBase-input"
+        placeholder="0.00"
+        type="number"
+        value=""
+      />
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-rx3vxy-MuiInputAdornment-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          USD
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-multiline css-19ldi1g-MuiInputBase-root"
+    >
+      <textarea
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputMultiline css-sdbgut-MuiInputBase-input"
+        placeholder="Enter description..."
+        rows="3"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="MuiInputBase-input MuiInputBase-inputMultiline css-sdbgut-MuiInputBase-input"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+        tabindex="-1"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with default props > ds-input-base-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with different color variants > ds-input-base-color-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorError css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="error input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with different color variants > ds-input-base-color-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorInfo css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="info input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with different color variants > ds-input-base-color-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="primary input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with different color variants > ds-input-base-color-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorSecondary css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="secondary input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with different color variants > ds-input-base-color-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorSuccess css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="success input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with different color variants > ds-input-base-color-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorWarning css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="warning input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with otp variant > ds-input-base-otp-medium 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-2n7gox-MuiInputBase-root"
+    ds-variant="otp"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with placeholder > ds-input-base-with-placeholder 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-1xsnow0-MuiInputBase-root"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="Enter text"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`DsInputBase Component > Snapshot Testing > should match snapshot with search variant > ds-input-base-search 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-bg8qvq-MuiInputBase-root"
+    ds-variant="search"
+  >
+    <input
+      autocomplete="off"
+      class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
