@@ -33,11 +33,11 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
   statusDialog,
   commonActionBtnProps,
   header,
-  ...rest
+  ...verificationWrapperRestProps
 }) => {
   if (!open) return null
   const headerHeight = 'var(--ds-rules-appBarMobileMinHeight)'
-  const { PaperProps, ContainerProps, ContentProps, TitleProps } = rest ?? {}
+  const { ContainerProps, ContentProps, TitleProps } = verificationWrapperRestProps ?? {}
 
   return useBottomSheet ? (
     <>
@@ -53,15 +53,15 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
             mt: headerHeight
           }
         }}
-        PaperProps={{
-          ...PaperProps,
-          sx: {
-            ...PaperProps?.sx,
-            maxHeight: '100vh',
-            height: '100vh',
-            position: 'absolute',
-            bottom: 0
-          }
+        slotProps={{
+          paper: {
+            sx: {
+              maxHeight: '100vh',
+              height: '100vh',
+              position: 'absolute',
+              bottom: 0
+            },
+          },
         }}
         ContainerProps={{
           ...ContainerProps,
@@ -80,7 +80,7 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
             margin: 'unset'
           }
         }}
-        {...rest}
+        {...verificationWrapperRestProps}
         {...commonActionBtnProps}
       >
         {showInputSection && header}
@@ -96,17 +96,17 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
       description={showInputSection ? description : ''}
       DescriptionProps={{ sx: { mr: 'var(--ds-spacing-warm)' } }}
       onClose={onClose}
-      PaperProps={{
-        ...PaperProps,
-        sx: {
-          ...PaperProps?.sx,
-          height: dialogHeight
-        }
+      slotProps={{
+        paper:  {
+          sx: {
+            height: dialogHeight
+          },
+        },
       }}
       ContentProps={{
         ...ContentProps
       }}
-      {...rest}
+      {...verificationWrapperRestProps}
       {...commonActionBtnProps}
     >
       {children}

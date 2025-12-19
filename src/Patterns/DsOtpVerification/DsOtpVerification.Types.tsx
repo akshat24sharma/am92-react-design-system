@@ -91,15 +91,13 @@ export interface DsOtpChannelConfig {
   maxResendAttempts: number
 }
 
-export interface DsOtpVerificationSlots
-  extends Pick<DsBottomSheetProps, 'slots'> {
+export interface DsOtpVerificationSlots {
   statusContent?: ElementType<IDsOtpStatusProps>
   otpSection?: ElementType<IDsOtpSectionProps>
   otpHeader?: ElementType<IDsOtpHeaderProps> | null
 }
 
-export interface DsOtpVerificationSlotProps
-  extends Pick<DsBottomSheetProps, 'slotProps'> {
+export interface DsOtpVerificationSlotProps {
   statusContent?: Partial<IDsOtpStatusProps>
   otpSection?: Partial<IDsOtpSectionProps>
   otpHeader?: Partial<IDsOtpHeaderProps>

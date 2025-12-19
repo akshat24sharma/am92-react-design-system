@@ -8,7 +8,7 @@ const DsOtpHeader: React.FC<IDsOtpHeaderProps> = ({ onClose, ...rest }) => {
     <>
       <DsAppBar
         appBarTitle=''
-        color='inherit'
+        color={'default'}
         navigation={
           <DsRemixIcon className='ri-arrow-left-line' onClick={onClose} />
         }
