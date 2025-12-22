@@ -8,6 +8,7 @@ export const DsSegment: FC<DsSegmentProps> = (props) => {
       {...props}
       sx={{
         position: "relative",
+        borderBottom: "none",
         padding:
           "calc(var(--ds-spacing-quickFreeze) + var(--ds-spacing-deepFreeze)) var(--ds-spacing-frostbite)",
         minHeight: "unset",
