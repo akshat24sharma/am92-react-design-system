@@ -99,6 +99,7 @@ export * from "./DsRating";
 export * from "./DsRemixIcon";
 export * from "./DsScopedCssBaseline";
 export * from "./DsSearchbar";
+export * from "./DsSegment";
 export * from "./DsSegmentedControl";
 export * from "./DsSelect";
 export * from "./DsSkeleton";

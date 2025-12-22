@@ -30,26 +30,6 @@ export const DsSegmentedControl: FC<DsSegmentedControlProps> = (props) => {
             gap: "var(--ds-spacing-zero)",
             position: "relative",
             zIndex: 2,
-
-            "& .MuiTab-root": {
-              position: "relative",
-              backgroundColor: "transparent",
-              borderBottom: "none",
-              padding:
-                "calc(var(--ds-spacing-quickFreeze) + var(--ds-spacing-deepFreeze)) var(--ds-spacing-frostbite)",
-              minHeight: "unset",
-              height: "auto",
-              color: "var(--ds-colour-typoPrimary)",
-              "&.Mui-selected:not(.Mui-disabled)": {
-                boxShadow: "var(--ds-elevation-2)",
-                borderRadius:
-                  "calc(var(--ds-radius-quickFreeze) + var(--ds-radius-deepFreeze))",
-              },
-              "&.Mui-disabled": {
-                backgroundColor: "var(--ds-colour-neutral1)",
-                color: "var(--ds-colour-typoDisabled)",
-              },
-            },
           },
         },
         ...props.sx,
