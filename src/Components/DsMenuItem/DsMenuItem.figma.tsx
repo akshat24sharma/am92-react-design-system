@@ -8,9 +8,9 @@ figma.connect(
     {
         props: {
             selected: figma.enum("🛠️ State", {
-                Default: false,
-                Hover: false,
-                Pressed: false,
+                Default: undefined,
+                Hover: undefined,
+                Pressed: undefined,
                 Selected: true,
             }),
             text: figma.textContent('menu_item_text'),

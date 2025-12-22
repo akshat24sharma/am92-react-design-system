@@ -9,7 +9,7 @@ figma.connect(
         props: {
             disabled: figma.enum("⚙️ State",    {
                 Disabled: true,
-                Default: false,
+                Default: undefined,
             }),
             label: figma.boolean("🔠 Show Header",    {
                 true: figma.textContent("label_text"),
@@ -45,7 +45,7 @@ figma.connect(
     {
         props: {
             disabled: figma.enum("⚙️ Variant",    {
-                'Not Uploaded': false,
+                'Not Uploaded': undefined,
                 'Upload Disabled': true,
             }),
         },

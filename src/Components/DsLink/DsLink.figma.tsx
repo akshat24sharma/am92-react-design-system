@@ -12,10 +12,10 @@ figma.connect(
             }),
             disabled: figma.enum("🛠️ State", {
                 Disabled: true,
-                Hover: false,
-                Active: false,
-                Focus: false,
-                Visited: false,
+                Hover: undefined,
+                Active: undefined,
+                Focus: undefined,
+                Visited: undefined,
             }),
             // FIXME: text layer doent have a name in figma, so we use children as a workaround
             children: figma.children('*'),
