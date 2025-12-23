@@ -9,8 +9,7 @@
  * 
  * 1. Core Rendering - Basic rendering with design system styling
  * 2. Design System Styling - Custom spacing styles and sx prop merging
- * 3. Theme Testing - Cross-theme compatibility
- * 4. Snapshot Testing - Visual regression for styling changes
+ * 3. Snapshot Testing - Visual regression for styling changes
  * 
  * @package @am92/react-design-system
  * @component DsRadioGroup
@@ -20,8 +19,6 @@ import { describe, expect, it } from "vitest";
 import { render, renderWithoutTheme } from "../../Tests/Mocks/testUtils";
 import { DsRadioGroup } from "./DsRadioGroup.Component";
 import { DsRadio } from "../DsRadio";
-import getColorScheme from "../../Theme/getColorScheme";
-import { PALETTE } from "../../Constants";
 
 describe("DsRadioGroup Component", () => {
 
@@ -183,73 +180,6 @@ describe("DsRadioGroup Component", () => {
                 expect(firstItemStyle.marginBottom).toBe('10px');
                 expect(secondItemStyle.marginBottom).toBeFalsy();
             }
-        });
-    });
-
-    // ============================
-    // THEME TESTING
-    // ============================
-    describe("Theme Testing", () => {
-        it("should render correctly across all theme modes", () => {
-            const themes = ['light', 'dark', 'highContrast'] as const;
-            
-            themes.forEach((theme) => {
-                const { container, unmount } = render(
-                    <DsRadioGroup>
-                        <DsRadio label="Theme Test" value="test" />
-                    </DsRadioGroup>,
-                    { colorScheme: theme }
-                );
-                
-                const radioGroup = container.querySelector('.MuiRadioGroup-root');
-                expect(radioGroup).toBeInTheDocument();
-                
-                // Verify design system spacing is applied
-                const computedStyle = window.getComputedStyle(radioGroup as Element);
-                expect(computedStyle).toBeDefined();
-                
-                unmount();
-            });
-        });
-
-        it("should maintain functionality across themes", () => {
-            const themes = ['light', 'dark', 'highContrast'] as const;
-            
-            themes.forEach((theme) => {
-                const { container, unmount } = render(
-                <DsRadioGroup defaultValue="opt1">
-                    <DsRadio label={`${theme} Option 1`} value="opt1" />
-                    <DsRadio label={`${theme} Option 2`} value="opt2" />
-                </DsRadioGroup>,
-                { colorScheme: theme }
-                );
-                
-                const selectedRadio = container.querySelector('input[value="opt1"]');
-                expect(selectedRadio).toBeChecked();
-                
-                unmount();
-            });
-        });
-
-        it("should apply design system CSS variables across themes", () => {
-            const themes = ['light', 'dark', 'highContrast'] as const;
-            
-            themes.forEach((theme) => {
-                const schemeData = getColorScheme(PALETTE)[theme];
-                expect(schemeData).toBeDefined();
-                
-                const { container, unmount } = render(
-                <DsRadioGroup>
-                    <DsRadio label="CSS Var Test" value="test" />
-                </DsRadioGroup>,
-                { colorScheme: theme }
-                );
-                
-                const radioGroup = container.querySelector('.MuiRadioGroup-root');
-                expect(radioGroup).toBeInTheDocument();
-                
-                unmount();
-            });
         });
     });
 

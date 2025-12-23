@@ -6,7 +6,7 @@
 ## Component Overview
 DsRadioGroup is a lightweight MUI RadioGroup wrapper with design system spacing integration. It focuses specifically on custom spacing styles via the sx prop while maintaining full MUI RadioGroup functionality.
 
-## Test Cases (17 Tests - Focused on Design System Extensions)
+## Test Cases (14 Tests - Focused on Design System Extensions)
 
 ### Core Rendering (2 tests)
 - MUI RadioGroup rendering with design system styling classes
@@ -19,11 +19,6 @@ DsRadioGroup is a lightweight MUI RadioGroup wrapper with design system spacing 
 - Empty sx prop handling
 - Undefined sx prop handling  
 - sx prop merging order verification (custom sx can override design system)
-
-### Theme Testing (3 tests)
-- Cross-theme rendering compatibility (light, dark, highContrast)
-- Functionality maintenance across all theme modes
-- Design system CSS variables application across themes
 
 ### Snapshot Testing (6 tests)
 - Default props rendering
@@ -48,13 +43,13 @@ DsRadioGroup is a lightweight MUI RadioGroup wrapper with design system spacing 
 
 ## Coverage Report
 
-The DsRadioGroup test suite provides **focused coverage with 17 tests** across **4 categories**, specifically targeting design system extensions rather than comprehensive MUI RadioGroup testing.
+The DsRadioGroup test suite provides **focused coverage with 14 tests** across **3 categories**, specifically targeting design system extensions rather than comprehensive MUI RadioGroup testing.
 
 ### Testing Strategy
 - **Design System Focus**: Tests only the custom spacing and sx prop merging functionality
-- **Helper Functions**: Optimized with reusable helper functions to reduce code duplication by 58%
-- **Efficient Coverage**: Streamlined from 54 comprehensive tests to 17 focused tests
-- **Theme Integration**: Cross-theme compatibility for design system CSS variables
+- **Helper Functions**: Optimized with reusable helper functions to reduce code duplication
+- **Efficient Coverage**: Streamlined to focus on component-specific customizations
+- **Simple Wrapper Approach**: No theme testing needed for components using only CSS variables
 
 ## Technical Implementation
 
@@ -68,10 +63,11 @@ The DsRadioGroup test suite provides **focused coverage with 17 tests** across *
 - **Helper Functions**: 4 reusable helpers eliminate code duplication
 - **DOM Structure Validation**: Ensures CSS selectors have correct elements to target
 - **Computed Style Testing**: Verifies CSS variable application and spacing logic
+- **No Theme Testing**: Simple wrappers using only CSS variables don't need cross-theme testing
 
 ### Coverage Scope
-- **Tested**: Design system spacing, sx prop merging, theme integration, visual regression
-- **Not Tested**: MUI RadioGroup internals (form validation, event handling, accessibility)
+- **Tested**: Design system spacing, sx prop merging, visual regression
+- **Not Tested**: MUI RadioGroup internals (form validation, event handling, accessibility), theme testing (not needed for simple wrappers using CSS variables)
 
 ## Helper Functions (Code Optimization)
 
@@ -102,11 +98,11 @@ The DsRadioGroup test suite provides **focused coverage with 17 tests** across *
 
 **Test Command**: `npm test -- DsRadioGroup.test.tsx`
 
-**Total Coverage**: 17 focused tests across 4 categories
+**Total Coverage**: 14 focused tests across 3 categories
 
-**Key Features**: Design system spacing, sx prop merging, theme integration, visual regression testing
+**Key Features**: Design system spacing, sx prop merging, visual regression testing
 
 **Component Type**: Simple MUI wrapper with only spacing customization
 
 ---
-*Last updated: December 15, 2025*
+*Last updated: December 22, 2025*

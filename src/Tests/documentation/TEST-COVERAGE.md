@@ -5,6 +5,7 @@
 - [DsBottomSheet](./Components/DsBottomSheet.md) - 61 tests with modal behavior and theme testing
 - [DsButton](./Components/DsButton.md) - 12 tests with form submission and icon handling
 - [DsCheckbox](./Components/DsCheckbox.md) - 75 tests across 12 categories (Enhanced Theme Testing)
+- [DsHeader](./Components/DsHeader.tests.md) - 22 tests across 8 categories (optimized from 46) with layout composition, logo rendering, and snapshot testing ✅
 - [DsIconButton](./Components/DsIconButton.tests.md) - 66 tests across 10 categories with design system integration, theme testing, and snapshot testing ✨
 - [DsLoader](./Components/DsLoader.tests.md) - 38 tests across 9 categories (optimized from 48) with animation testing, theme compatibility, and error handling documentation ✅
 - [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
