@@ -1,0 +1,275 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsFab > Snapshot Testing > should match snapshot for complex content > fab-complex-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-extended MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-extended MuiFab-sizeMedium MuiFab-secondary css-nf956c-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    <span>
+      Icon
+    </span>
+    <span>
+      Label
+    </span>
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshot for default state > fab-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  />
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshot for disabled state > fab-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary Mui-disabled MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    disabled=""
+    tabindex="-1"
+    type="button"
+  >
+    Disabled
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshot for link variant > fab-link 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <a
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    href="/test"
+    tabindex="0"
+  >
+    Link FAB
+  </a>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all color variants > fab-color-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium Mui-error MuiFab-root MuiFab-circular MuiFab-sizeMedium Mui-error css-1gqqk5b-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all color variants > fab-color-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-info MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-info css-f2txfo-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all color variants > fab-color-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-primary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-primary css-13e7x5i-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all color variants > fab-color-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all color variants > fab-color-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-success MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-success css-8ywcit-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all color variants > fab-color-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-warning MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-warning css-1bkel8g-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all size variants > fab-size-large 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1gjzf8e-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all size variants > fab-size-medium 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all size variants > fab-size-small 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeSmall MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeSmall MuiFab-secondary css-nfqbyf-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all themes > fab-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Theme Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all themes > fab-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Theme Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for all themes > fab-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Theme Test
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for variant types > fab-variant-circular 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeMedium MuiFab-secondary css-3n64g9-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    +
+  </button>
+</div>
+`;
+
+exports[`DsFab > Snapshot Testing > should match snapshots for variant types > fab-variant-extended 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-extended MuiFab-sizeMedium MuiFab-secondary MuiFab-root MuiFab-extended MuiFab-sizeMedium MuiFab-secondary css-nf956c-MuiButtonBase-root-MuiFab-root"
+    tabindex="0"
+    type="button"
+  >
+    Extended FAB
+  </button>
+</div>
+`;
