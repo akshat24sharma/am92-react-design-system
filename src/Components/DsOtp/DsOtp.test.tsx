@@ -393,6 +393,13 @@ describe("DsOtp Component", () => {
 
       const completedValue = handleComplete.mock.calls[0][0];
       expect(completedValue).toBe("123456");
+      // Verify all inputs are filled
+      expect(inputs[0]).toHaveValue("1");
+      expect(inputs[1]).toHaveValue("2");
+      expect(inputs[2]).toHaveValue("3");
+      expect(inputs[3]).toHaveValue("4");
+      expect(inputs[4]).toHaveValue("5");
+      expect(inputs[5]).toHaveValue("6");
     });
 
     it("should select text on focus", async () => {
