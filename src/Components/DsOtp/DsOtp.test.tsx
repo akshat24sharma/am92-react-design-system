@@ -376,7 +376,8 @@ describe("DsOtp Component", () => {
 
     it("should handle onPaste events", async () => {
       const handlePaste = vi.fn();
-      render(<DsOtp onComplete={() => {}} onPaste={handlePaste} />);
+      const handleComplete = vi.fn();
+      render(<DsOtp onComplete={handleComplete} onPaste={handlePaste} />);
 
       const inputs = screen.getAllByRole("textbox") as HTMLInputElement[];
 
@@ -387,7 +388,19 @@ describe("DsOtp Component", () => {
       fireEvent.paste(inputs[0], {
         clipboardData,
       });
+
       expect(handlePaste).toHaveBeenCalled();
+
+      // Check that onComplete is called with the pasted value
+      expect(handleComplete).toHaveBeenCalledWith("123456");
+
+      // Verify all inputs are filled
+      expect(inputs[0]).toHaveValue("1");
+      expect(inputs[1]).toHaveValue("2");
+      expect(inputs[2]).toHaveValue("3");
+      expect(inputs[3]).toHaveValue("4");
+      expect(inputs[4]).toHaveValue("5");
+      expect(inputs[5]).toHaveValue("6");
     });
 
     it("should select text on focus", async () => {
