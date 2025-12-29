@@ -1014,6 +1014,7 @@ describe("DsTabs Component", () => {
     it("should render correctly across all color schemes with proper theme hex colors", () => {
       // Get the complete color scheme from theme
       const themeColorScheme = getColorScheme(PALETTE);
+
       const colorSchemes = ["light", "dark", "highContrast"] as const;
       // Theme-specific expectations mapping for background colors
       const themeExpectations = {
@@ -1237,6 +1238,7 @@ describe("DsTabs Component", () => {
           </DsTabs>
         </DsBox>
       );
+
       expect(container.firstChild).toMatchSnapshot(
         "tabs-real-world-navigation"
       );
