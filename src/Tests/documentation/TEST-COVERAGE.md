@@ -29,7 +29,8 @@
 - [DsAvatar](./Components/DsAvatar.md) -  45 tests across 10 categories and theme testing
 - [DsInputAdornment](./Components/DsInputAdornment.md) -  56 tests across 11 categories and theme testing
 - [DsInputBase](./Components/DsInputBase.tests.md) - 78 tests across 12 categories with comprehensive form functionality, custom variants (otp/search), theme testing, and real-world scenarios ✨
-
+- [DsTabs](./Components/DsTabs.md) - 57 tests across 11 categories and theme testing
+- [DsOtp](./Components/DsOtp.md) - 64 tests across 13 categories and theme testing
 
 ## Running Tests
 ```bash
@@ -72,8 +73,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 19
-- **Total Tests:** 917 across all tested components
+- **Total Components Documented:** 31
+- **Total Tests:** 1486 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
