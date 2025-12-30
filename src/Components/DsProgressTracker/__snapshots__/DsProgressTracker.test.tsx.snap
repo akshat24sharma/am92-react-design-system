@@ -1,0 +1,1727 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-default-dark-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-ne2aa3-MuiStack-root"
+      ds-variant="default"
+    >
+      <div
+        class="MuiBox-root css-1xgbb7v"
+      >
+        <span
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-d2jm69-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </span>
+        <span
+          aria-valuenow="67"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-yluj1i-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg); position: absolute;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 41.469px;"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1ru6n8-MuiTypography-root"
+        >
+          2/3
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-pdvbtm-MuiStack-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-headingBoldExtraSmall css-4zv5ld-MuiTypography-root"
+        >
+          Contact Details
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+        >
+          Next Step :  Review & Submit
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-default-highContrast-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-ne2aa3-MuiStack-root"
+      ds-variant="default"
+    >
+      <div
+        class="MuiBox-root css-1xgbb7v"
+      >
+        <span
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-d2jm69-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </span>
+        <span
+          aria-valuenow="67"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-yluj1i-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg); position: absolute;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 41.469px;"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1ru6n8-MuiTypography-root"
+        >
+          2/3
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-pdvbtm-MuiStack-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-headingBoldExtraSmall css-4zv5ld-MuiTypography-root"
+        >
+          Contact Details
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+        >
+          Next Step :  Review & Submit
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-default-light-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-ne2aa3-MuiStack-root"
+      ds-variant="default"
+    >
+      <div
+        class="MuiBox-root css-1xgbb7v"
+      >
+        <span
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-d2jm69-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </span>
+        <span
+          aria-valuenow="67"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-yluj1i-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg); position: absolute;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 41.469px;"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1ru6n8-MuiTypography-root"
+        >
+          2/3
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-pdvbtm-MuiStack-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-headingBoldExtraSmall css-4zv5ld-MuiTypography-root"
+        >
+          Contact Details
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+        >
+          Next Step :  Review & Submit
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-header-dark-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-1m6e2bg-MuiStack-root"
+      ds-variant="header"
+    >
+      <div
+        class="MuiBox-root css-1xgbb7v"
+      >
+        <span
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-d2jm69-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </span>
+        <span
+          aria-valuenow="67"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-yluj1i-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg); position: absolute;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 41.469px;"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1ru6n8-MuiTypography-root"
+        >
+          2/3
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-pdvbtm-MuiStack-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-headingBoldExtraSmall css-4zv5ld-MuiTypography-root"
+        >
+          Contact Details
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+        >
+          Next Step :  Review & Submit
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-header-highContrast-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-1m6e2bg-MuiStack-root"
+      ds-variant="header"
+    >
+      <div
+        class="MuiBox-root css-1xgbb7v"
+      >
+        <span
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-d2jm69-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </span>
+        <span
+          aria-valuenow="67"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-yluj1i-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg); position: absolute;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 41.469px;"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1ru6n8-MuiTypography-root"
+        >
+          2/3
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-pdvbtm-MuiStack-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-headingBoldExtraSmall css-4zv5ld-MuiTypography-root"
+        >
+          Contact Details
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+        >
+          Next Step :  Review & Submit
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-header-light-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-1m6e2bg-MuiStack-root"
+      ds-variant="header"
+    >
+      <div
+        class="MuiBox-root css-1xgbb7v"
+      >
+        <span
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-d2jm69-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </span>
+        <span
+          aria-valuenow="67"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-yluj1i-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg); position: absolute;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 41.469px;"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1ru6n8-MuiTypography-root"
+        >
+          2/3
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-pdvbtm-MuiStack-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-headingBoldExtraSmall css-4zv5ld-MuiTypography-root"
+        >
+          Contact Details
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+        >
+          Next Step :  Review & Submit
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-steps-dark-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-steps-highContrast-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot across all themes and variants > ds-progress-tracker-steps-light-snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot for default variant > ds-progress-tracker-default-variant 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-ne2aa3-MuiStack-root"
+      ds-variant="default"
+    >
+      <div
+        class="MuiBox-root css-1xgbb7v"
+      >
+        <span
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-d2jm69-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </span>
+        <span
+          aria-valuenow="67"
+          class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorSecondary css-yluj1i-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 48px; height: 48px; transform: rotate(-90deg); position: absolute;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-eorpq6-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+              style="stroke-dasharray: 125.664; stroke-dashoffset: 41.469px;"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1ru6n8-MuiTypography-root"
+        >
+          2/3
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-pdvbtm-MuiStack-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-headingBoldExtraSmall css-4zv5ld-MuiTypography-root"
+        >
+          Contact Details
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+        >
+          Next Step :  Review & Submit
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot for header variant > ds-progress-tracker-header-variant 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiStack-root css-1xakhmc-MuiStack-root"
+      ds-variant="header"
+    >
+      <div
+        class="MuiStack-root css-16mhr44-MuiStack-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-r0qzit-MuiTypography-root"
+        >
+          STEP 2 OF 3
+        </span>
+        <div
+          class="MuiStack-root css-uhho45-MuiStack-root"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-pxczjr-MuiTypography-root"
+          >
+            Next Step :  Review & Submit
+          </div>
+        </div>
+      </div>
+      <span
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="67"
+        class="MuiLinearProgress-root MuiLinearProgress-colorSecondary MuiLinearProgress-determinate css-1vv3pt3-MuiLinearProgress-root"
+        role="progressbar"
+      >
+        <span
+          class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Determinate css-4yiwsg-MuiLinearProgress-bar1"
+          style="transform: translateX(-33%);"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot for steps variant > ds-progress-tracker-steps-variant 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Personal Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-colorIconActionSecondary MuiIcon-fontSizeMild ri-play-circle-fill css-1mbrasw-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Contact Details
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Review & Submit
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot with complex step states > ds-progress-tracker-complex-states 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-horizontal MuiStepper-alternativeLabel css-1tf5t3p-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-horizontal MuiStep-alternativeLabel Mui-completed css-1eqxcs7-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-horizontal MuiStepLabel-alternativeLabel css-1bt92h3-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed MuiStepLabel-alternativeLabel css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer MuiStepLabel-alternativeLabel css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed MuiStepLabel-alternativeLabel css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Account Setup
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStep-root MuiStep-horizontal MuiStep-alternativeLabel css-1eqxcs7-MuiStep-root"
+            >
+              <div
+                class="MuiStepConnector-root MuiStepConnector-horizontal MuiStepConnector-alternativeLabel Mui-active css-1lftawt-MuiStepConnector-root"
+              >
+                <span
+                  class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1dsle7b-MuiStepConnector-line"
+                />
+              </div>
+              <span
+                class="MuiStepLabel-root MuiStepLabel-horizontal Mui-error MuiStepLabel-alternativeLabel css-1bt92h3-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active Mui-error MuiStepLabel-alternativeLabel css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-circle-fill css-4ch289-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer MuiStepLabel-alternativeLabel css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active Mui-error MuiStepLabel-alternativeLabel css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Payment Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStep-root MuiStep-horizontal MuiStep-alternativeLabel css-1eqxcs7-MuiStep-root"
+            >
+              <div
+                class="MuiStepConnector-root MuiStepConnector-horizontal MuiStepConnector-alternativeLabel Mui-disabled css-1lftawt-MuiStepConnector-root"
+              >
+                <span
+                  class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1dsle7b-MuiStepConnector-line"
+                />
+              </div>
+              <span
+                class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled MuiStepLabel-alternativeLabel css-1bt92h3-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled MuiStepLabel-alternativeLabel css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  3
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer MuiStepLabel-alternativeLabel css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled MuiStepLabel-alternativeLabel css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Verification
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsProgressTracker Component > Snapshot Testing > should match snapshot with error and warning states > ds-progress-tracker-complex-states 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiStepper-root MuiStepper-vertical css-4n8ot2-MuiStepper-root"
+          >
+            <div
+              class="MuiStep-root MuiStep-vertical Mui-completed css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-completed css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-15iyrae-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-completed css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Account Setup
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-active css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-error css-1cbv6bv-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-active Mui-error css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-circle-fill css-4ch289-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-active Mui-error css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Payment Info
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div
+              class="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled css-8p1w39-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineVertical css-16sfn3q-MuiStepConnector-line"
+              />
+            </div>
+            <div
+              class="MuiStep-root MuiStep-vertical css-enonti-MuiStep-root"
+            >
+              <span
+                class="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled css-h33wfa-MuiStepLabel-root"
+              >
+                <span
+                  class="MuiStepLabel-iconContainer Mui-disabled css-qssdsa-MuiStepLabel-iconContainer"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-error-warning-fill css-1zuvpk-MuiIcon-root"
+                  />
+                </span>
+                <span
+                  class="MuiStepLabel-labelContainer css-9wfvhe-MuiStepLabel-labelContainer"
+                >
+                  <span
+                    class="MuiStepLabel-label Mui-disabled css-1j6iyn9-MuiStepLabel-label"
+                  >
+                    Verification
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
