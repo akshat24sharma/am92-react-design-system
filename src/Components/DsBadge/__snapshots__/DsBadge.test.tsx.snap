@@ -6,7 +6,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot across all
   data-mui-color-scheme="dark"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -32,7 +32,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot across all
   data-mui-color-scheme="highContrast"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -58,7 +58,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot across all
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -84,7 +84,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with all c
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -111,7 +111,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with all c
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -138,7 +138,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with all c
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -165,7 +165,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with all c
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -192,7 +192,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with compl
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <div
       class="MuiBox-root css-hpgf8j"
@@ -220,7 +220,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with defau
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -246,7 +246,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with diffe
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -273,7 +273,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with diffe
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -300,7 +300,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with diffe
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -327,7 +327,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with diffe
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -354,7 +354,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with diffe
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -379,7 +379,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with diffe
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -406,7 +406,7 @@ exports[`DsBadge Component > Snapshot Testing > should match snapshot with max v
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -432,7 +432,7 @@ exports[`DsBadge Component > Theme Testing > should render correctly across all 
   data-mui-color-scheme="dark"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -458,7 +458,7 @@ exports[`DsBadge Component > Theme Testing > should render correctly across all 
   data-mui-color-scheme="highContrast"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
@@ -484,7 +484,7 @@ exports[`DsBadge Component > Theme Testing > should render correctly across all 
   data-mui-color-scheme="light"
 >
   <span
-    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+    class="MuiBadge-root css-1jw5xnk-MuiBadge-root"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
