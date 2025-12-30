@@ -16,8 +16,7 @@ figma.connect(
         Disable: true,
       }),
     },
-    //@ts-ignore
-    example: (props) => <DsRadio {...props} />,
+    example: (props) => <DsRadio label={undefined} {...props} />,
   }
 );
 
@@ -37,8 +36,7 @@ figma.connect(
     example: ({ label, ...radioProps }) => {
       return (
         <DsFormControlLabel
-          //@ts-ignore
-          control={<DsRadio {...radioProps} />}
+          control={<DsRadio label={label} {...radioProps} />}
           label={label}
         />
       );
@@ -51,8 +49,8 @@ figma.connect(
   "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=3027-14452&m=dev",
   {
     props: {
-      children: figma.children("*"),
       listHeading: figma.textContent("radio-list-heading"),
+      children: figma.children("*"),
     },
     example: ({ listHeading, children }) => {
       return (

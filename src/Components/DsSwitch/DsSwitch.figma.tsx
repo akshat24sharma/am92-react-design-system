@@ -13,7 +13,13 @@ figma.connect(
         Disable: true,
       }),
     },
-    //@ts-ignore
-    example: (props) => <DsSwitch {...props} />,
+    example: (props) => (
+      <DsSwitch
+        name={"yes-no-switch"}
+        value={props.checked}
+        onChange={() => {}}
+        {...props}
+      />
+    ),
   }
 );
