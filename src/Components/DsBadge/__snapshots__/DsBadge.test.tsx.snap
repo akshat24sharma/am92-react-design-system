@@ -1,0 +1,505 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot across all themes > badge-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Themed Badge
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      3
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot across all themes > badge-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Themed Badge
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      3
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot across all themes > badge-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Themed Badge
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      3
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with all color variants > badge-color-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        default
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular css-1gkwdjz-MuiBadge-badge"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with all color variants > badge-color-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        error
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorError css-1puy9qp-MuiBadge-badge"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with all color variants > badge-color-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        primary
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary css-zsa8m4-MuiBadge-badge"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with all color variants > badge-color-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        secondary
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with complex content > badge-complex-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <div
+      class="MuiBox-root css-hpgf8j"
+    >
+      <span
+        aria-hidden="true"
+        class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMild ri-notification-line css-h7bicg-MuiIcon-root"
+      />
+    </div>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      <span
+        aria-hidden="true"
+        class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMild ri-star-fill css-h7bicg-MuiIcon-root"
+      />
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with default props > badge-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Default Badge
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      4
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with different positions > badge-position-bottom-left 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        3
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomLeft MuiBadge-anchorOriginBottomLeftRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-e7ie9k-MuiBadge-badge"
+    >
+      4
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with different positions > badge-position-bottom-right 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        2
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-t41o18-MuiBadge-badge"
+    >
+      3
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with different positions > badge-position-top-left 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        1
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopLeft MuiBadge-anchorOriginTopLeftRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-vam7wx-MuiBadge-badge"
+    >
+      2
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with different positions > badge-position-top-right 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        0
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      1
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with different variants > badge-variant-dot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        dot
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-dot MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-1j479nm-MuiBadge-badge"
+    />
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with different variants > badge-variant-standard 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Button 
+        standard
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      5
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Snapshot Testing > should match snapshot with max value overflow > badge-max-overflow 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Overflow Badge
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      99+
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Theme Testing > should render correctly across all color schemes > badge-basic-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Themed Button
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      5
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Theme Testing > should render correctly across all color schemes > badge-basic-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Themed Button
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      5
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsBadge Component > Theme Testing > should render correctly across all color schemes > badge-basic-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiBadge-root css-63ezxx-MuiBadge-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span>
+        Themed Button
+      </span>
+    </button>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorSecondary css-yzzew7-MuiBadge-badge"
+    >
+      5
+    </span>
+  </span>
+</div>
+`;
