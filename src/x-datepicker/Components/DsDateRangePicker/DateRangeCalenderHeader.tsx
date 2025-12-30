@@ -11,8 +11,14 @@ import {
   DsTypography,
 } from "../../../Components";
 
+/**
+ * Custom calendar header component for date range picker
+ * Provides month and year navigation with view switching capabilities
+ * Replaces the default MUI calendar header with DS-styled components
+ */
 export const DateRangeCalenderHeader = React.forwardRef(
   function PickersCalendarHeader(inProps: PickersCalendarHeaderProps) {
+    // Use MUI date picker utilities for date formatting and manipulation
     const utils = useUtils();
 
     const props = useThemeProps({
@@ -22,16 +28,25 @@ export const DateRangeCalenderHeader = React.forwardRef(
 
     const { currentMonth, view } = props;
 
+    /**
+     * Handles month/year navigation by adding specified number of months
+     * @param numberOfMonths - Number of months to add/subtract (1, -1, 12, -12)
+     */
     const handleMonthChange = (numberOfMonths: 1 | -1 | 12 | -12) => () => {
       const { currentMonth, onMonthChange } = props;
       onMonthChange(utils.addMonths(currentMonth, numberOfMonths));
     };
 
+    /**
+     * Handles view switching between month and year views
+     * @param view - Target view to switch to
+     */
     const handleViewShow = (view: DateView) => () => {
       const { onViewChange } = props;
       onViewChange && onViewChange(view);
     };
 
+    // Disable navigation controls based on current view
     const isYearNavigationDisabled = view === "month";
     const isMonthNavigationDisabled = view === "year";
 

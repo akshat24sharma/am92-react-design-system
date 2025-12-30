@@ -9,7 +9,10 @@ import { DsDatePickerProps } from "../DsDatePicker";
 import { DsTextFieldProps } from "../../../Components";
 import { BaseDatePickerSlots } from "@mui/x-date-pickers/DatePicker/shared";
 
-// Common base interfaces for shared properties
+/**
+ * Base interface defining the core date range properties
+ * Used as a foundation for other interfaces to ensure consistency
+ */
 export interface IDateRangeBaseProps {
   startDate: Date | null;
   endDate: Date | null;
@@ -19,28 +22,48 @@ export interface IDateRangeActiveFieldProps extends IDateRangeBaseProps {
   activeField: "start" | "end";
 }
 
+/**
+ * Props interface for the DateRangePickerActionBar component
+ * Extends MUI's PickersActionBarProps with date range specific functionality
+ */
 export interface IDateRangePickerActionBarProps
   extends PickersActionBarProps,
     Partial<IDateRangeBaseProps> {
   onClear?: () => void;
 }
 
+/**
+ * Props interface for the DateRangePickerHeader/Toolbar component
+ * Extends MUI's DatePickerToolbarProps with field switching capability
+ */
 export interface IDateRangePickerToolBarProps
   extends DatePickerToolbarProps,
     IDateRangeActiveFieldProps {
+  /** Callback to change the active field (start/end) */
   onFieldChange: () => void;
 }
+/**
+ * Props interface for the DateRangePickerDay component
+ * Handles individual calendar day rendering with range selection logic
+ */
 export interface IDateRangePickerDayProps
   extends PropsFromSlot<DateCalendarSlots["day"]>,
     IDateRangeActiveFieldProps {
   onDateClick: (date: Date | null, field: "start" | "end") => void;
 }
 
+/**
+ * Props interface for the DateRangePickerHeader component
+ * Manages the header UI with field switching and close functionality
+ */
 export interface IDateRangePickerHeaderProps
   extends PropsFromSlot<BaseDatePickerSlots["toolbar"]>,
     IDateRangeBaseProps {
+  /** Currently active field for UI highlighting */
   activeField: "start" | "end";
+  /** Callback to switch between start and end fields */
   onFieldChange: (field: "start" | "end") => void;
+  /** Optional callback to cancel/close the picker */
   onCancel?: () => void;
 }
 
@@ -81,6 +104,10 @@ export interface IDsDateRangePickerSlotProps
     NonNullable<DsDatePickerProps["slotProps"]>,
     "textField" | "actionBar" | "day" | "toolbar"
   > {
+  /**
+   * Props for the text field component (excludes internally managed props)
+   * Consumers can customize styling and labels, but not core functionality
+   */
   textField?: Omit<
     IDateRangePickerTextFieldProps,
     | "onDateChange"
@@ -91,12 +118,35 @@ export interface IDsDateRangePickerSlotProps
     | "startDate"
     | "endDate"
   >;
+  /**
+   * Props for the action bar component (excludes clear handler)
+   * Clear functionality is managed internally for proper state updates
+   */
   actionBar?: Omit<IDateRangePickerActionBarProps, "onClear">;
-  day?: Omit<IDateRangePickerDayProps, "onDateClick" | "startDate" | "endDate">;
+  /**
+   * Props for individual calendar day components (excludes core functionality)
+   * Date selection and range logic are managed internally
+   */
+  day?: Omit<
+    IDateRangePickerDayProps,
+    "onDateClick" | "startDate" | "endDate" | "activeField"
+  >;
   toolbar?: Omit<
     IDateRangePickerToolBarProps,
     "onFieldChange" | "activeField" | "startDate" | "endDate"
   >;
+}
+
+/**
+ * Props interface for the DateFieldButton component
+ * Used in the header for switching between start and end date fields
+ */
+export interface IDateFieldButtonProps {
+  label: string;
+  date: Date | null;
+  isActive: boolean;
+  isDisabled?: boolean;
+  onClick: () => void;
 }
 
 export interface IDsDateRangePickerProps
@@ -117,6 +167,7 @@ export interface IDsDateRangePickerProps
     | "view"
     | "closeOnSelect"
   > {
+  /** Date range value as [startDate, endDate] */
   value: [Date | null, Date | null];
   onChange: (name: string, value: [Date | null, Date | null]) => void;
   slotProps?: Partial<IDsDateRangePickerSlotProps>;

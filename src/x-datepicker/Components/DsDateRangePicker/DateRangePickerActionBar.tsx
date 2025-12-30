@@ -7,6 +7,11 @@ import {
 import type { IDateRangePickerActionBarProps } from "./DsDateRangePicker.Types";
 import { DsButton, DsButtonGroup } from "../../../Components";
 
+/**
+ * Action bar component for date range picker
+ * Displays clear and confirm buttons at the bottom of the picker
+ * Only shows in day view and when actions are configured
+ */
 export function DateRangePickerActionBar(
   props: IDateRangePickerActionBarProps
 ) {
@@ -14,14 +19,18 @@ export function DateRangePickerActionBar(
   const { view } = usePickerContext();
   const { startDate, endDate, onClear, actions } = props;
 
+  // Only show actions in day view, not in month/year view
   const currentActions = view === "day" ? actions : [];
 
+  // Hide action bar if no actions are configured
   if (currentActions == null || currentActions?.length === 0) {
     return null;
   }
 
+  // Get localized button labels from MUI translations
   const translations = usePickerTranslations();
 
+  // Determine which buttons to show based on configured actions
   const isClearVisible = currentActions.includes("clear");
   const isConfirmVisible = currentActions.includes("accept");
 
@@ -48,7 +57,7 @@ export function DateRangePickerActionBar(
           size="medium"
           color="secondary"
           onClick={onClear}
-          disabled={!startDate}
+          disabled={!startDate} // Only enable when start date is selected
         >
           {translations.clearButtonLabel}
         </DsButton>
@@ -63,7 +72,7 @@ export function DateRangePickerActionBar(
           size="medium"
           color="secondary"
           onClick={acceptValueChanges}
-          disabled={!startDate || !endDate}
+          disabled={!startDate || !endDate} // Only enable when both dates are selected
         >
           {translations.okButtonLabel}
         </DsButton>
