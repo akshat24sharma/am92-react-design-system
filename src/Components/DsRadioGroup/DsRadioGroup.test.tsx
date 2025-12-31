@@ -70,6 +70,13 @@ describe("DsRadioGroup Component", () => {
             const radioGroup = container.querySelector('.MuiRadioGroup-root');
             expect(radioGroup).toBeInTheDocument();
             expect(radioGroup).toHaveClass("MuiRadioGroup-root");
+            
+            // Verify radio items are also rendered
+            const radioItems = container.querySelectorAll('.MuiFormControlLabel-root');
+            expect(radioItems).toHaveLength(2);
+            radioItems.forEach(item => {
+                expect(item).toBeInTheDocument();
+            });
         });
 
         it("should render without theme (edge case)", () => {

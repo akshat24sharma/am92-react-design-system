@@ -17,7 +17,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with cu
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r18:"
+          name=":rm:"
           type="radio"
           value="styled1"
         />
@@ -43,7 +43,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with cu
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
           disabled=""
-          name=":r18:"
+          name=":rm:"
           type="radio"
           value="styled2"
         />
@@ -79,7 +79,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with de
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r12:"
+          name=":rg:"
           type="radio"
           value="opt1"
         />
@@ -102,7 +102,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with de
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r12:"
+          name=":rg:"
           type="radio"
           value="opt2"
         />
@@ -197,7 +197,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with ro
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r16:"
+          name=":rk:"
           type="radio"
           value="s"
         />
@@ -220,7 +220,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with ro
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r16:"
+          name=":rk:"
           type="radio"
           value="m"
         />
@@ -243,7 +243,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with ro
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r16:"
+          name=":rk:"
           type="radio"
           value="l"
         />
@@ -279,7 +279,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with se
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r14:"
+          name=":ri:"
           type="radio"
           value="opt1"
         />
@@ -303,7 +303,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with se
         <input
           checked=""
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r14:"
+          name=":ri:"
           type="radio"
           value="opt2"
         />
@@ -326,7 +326,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with se
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r14:"
+          name=":ri:"
           type="radio"
           value="opt3"
         />
@@ -363,7 +363,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across
         <input
           checked=""
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r1c:"
+          name=":rq:"
           type="radio"
           value="theme-test"
         />
@@ -386,7 +386,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r1c:"
+          name=":rq:"
           type="radio"
           value="another"
         />
@@ -423,7 +423,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across
         <input
           checked=""
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r1e:"
+          name=":rs:"
           type="radio"
           value="theme-test"
         />
@@ -446,7 +446,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r1e:"
+          name=":rs:"
           type="radio"
           value="another"
         />
@@ -483,7 +483,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across
         <input
           checked=""
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r1a:"
+          name=":ro:"
           type="radio"
           value="theme-test"
         />
@@ -506,7 +506,7 @@ exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across
       >
         <input
           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
-          name=":r1a:"
+          name=":ro:"
           type="radio"
           value="another"
         />

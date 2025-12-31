@@ -22,7 +22,7 @@
 - [DsFab](./Components/DsFab.md) - 47 tests across 12 categories with comprehensive theme testing, event handling, and snapshot coverage
 - [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage
 - [DsMenu](./Components/DsMenu.md) - 21 tests across 7 categories with MUI Menu integration, portal rendering, and comprehensive accessibility testing
-- [DsSlider](./Components/DsSlider.md) - 16 tests across 5 categories with focused testing for direct MUI export component
+- [DsSlider](./Components/DsSlider.md) - 17 tests across 6 categories with focused testing for direct MUI export component
 - [DsSelect](./Components/DsSelect.md) -  67 tests across 12 categories (Enhanced Theme Testing)
 - [DsRemixIcon](./Components/DsRemixIcon.md) -  25 tests across 7 categories and theme testing
 - [DsList](./Components/DsList.md) -  22 tests across 8 categories and theme testing

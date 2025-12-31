@@ -208,5 +208,21 @@ describe('DsSlider', () => {
       const { container } = render(<DsSlider aria-label="Default snapshot" />)
       expect(container.firstChild).toMatchSnapshot('dsslider-default')
     })
+
+    it('should match snapshot with hover state', async () => {
+      const { container } = render(<DsSlider aria-label="Hover snapshot" />)
+      const slider = screen.getByRole('slider')
+      
+      await user.hover(slider)
+      expect(container.firstChild).toMatchSnapshot('dsslider-hover')
+    })
+
+    it('should match snapshot with focus state', async () => {
+      const { container } = render(<DsSlider aria-label="Focus snapshot" />)
+      const slider = screen.getByRole('slider')
+      
+      slider.focus()
+      expect(container.firstChild).toMatchSnapshot('dsslider-focus')
+    })
   })
 })

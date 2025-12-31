@@ -40,6 +40,86 @@ exports[`DsSlider > Component Integration > should match snapshot with default c
 </div>
 `;
 
+exports[`DsSlider > Component Integration > should match snapshot with focus state > dsslider-focus 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSlider-root MuiSlider-colorSecondary MuiSlider-sizeMedium css-wn2kq1-MuiSlider-root"
+    ds-mode="true"
+  >
+    <span
+      class="MuiSlider-rail css-18tnt1k-MuiSlider-rail"
+    />
+    <span
+      class="MuiSlider-track css-u91b89-MuiSlider-track"
+      style="left: 0%; width: 0%;"
+    />
+    <span
+      class="MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorSecondary MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorSecondary css-oug17z-MuiSlider-thumb"
+      data-index="0"
+      style="left: 0%;"
+    >
+      <input
+        aria-label="Focus snapshot"
+        aria-orientation="horizontal"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="0"
+        data-index="0"
+        max="100"
+        min="0"
+        step="1"
+        style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+        type="range"
+        value="0"
+      />
+    </span>
+  </span>
+</div>
+`;
+
+exports[`DsSlider > Component Integration > should match snapshot with hover state > dsslider-hover 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <span
+    class="MuiSlider-root MuiSlider-colorSecondary MuiSlider-sizeMedium css-wn2kq1-MuiSlider-root"
+    ds-mode="true"
+  >
+    <span
+      class="MuiSlider-rail css-18tnt1k-MuiSlider-rail"
+    />
+    <span
+      class="MuiSlider-track css-u91b89-MuiSlider-track"
+      style="left: 0%; width: 0%;"
+    />
+    <span
+      class="MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorSecondary MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorSecondary css-oug17z-MuiSlider-thumb"
+      data-index="0"
+      style="left: 0%;"
+    >
+      <input
+        aria-label="Hover snapshot"
+        aria-orientation="horizontal"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="0"
+        data-index="0"
+        max="100"
+        min="0"
+        step="1"
+        style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+        type="range"
+        value="0"
+      />
+    </span>
+  </span>
+</div>
+`;
+
 exports[`DsSlider > Snapshot Testing > should match snapshot for default state > slider-default 1`] = `
 <div
   class="MuiBox-root css-0"
