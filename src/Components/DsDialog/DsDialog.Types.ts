@@ -7,6 +7,8 @@ import { DsDialogContentProps } from '../DsDialogContent'
 import { DsDialogActionsProps } from '../DsDialogActions'
 import { DsButtonProps } from '../DsButton'
 
+export type DsDialogCloseReason = 'backdropClick' | 'escapeKeyDown' | 'closeButtonClick'
+
 export interface DsDialogProps extends Omit<DialogProps, 'onClose'> {
   title?: string
   description?: string
@@ -23,7 +25,7 @@ export interface DsDialogProps extends Omit<DialogProps, 'onClose'> {
   CloseIconProps?: Omit<DsRemixIconProps, 'ref'>
   ContentProps?: DsDialogContentProps
   ActionsProps?: DsDialogActionsProps
-  onClose?: (event: React.SyntheticEvent, reason: 'backdropClick' | 'escapeKeyDown' | 'closeButtonClick') => void
+  onClose?: (event: React.SyntheticEvent, reason: DsDialogCloseReason) => void
 }
 
 export const DsDialogDefaultProps: DsDialogProps = {
