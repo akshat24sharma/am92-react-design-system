@@ -14,13 +14,62 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot acr
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
+        for=":r39:"
+        id=":r39:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Theme dark
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="false"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          id=":r39:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot across themes > autocomplete-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
         for=":r3b:"
         id=":r3b:-label"
       >
         <span
           class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
         >
-          Theme dark
+          Theme highContrast
         </span>
         <span
           class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
@@ -49,55 +98,6 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot acr
 </div>
 `;
 
-exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot across themes > autocomplete-highContrast-theme 1`] = `
-<div
-  class="MuiBox-root css-0"
-  data-mui-color-scheme="highContrast"
->
-  <div
-    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
-  >
-    <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-    >
-      <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
-        data-shrink="true"
-        for=":r3d:"
-        id=":r3d:-label"
-      >
-        <span
-          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
-        >
-          Theme highContrast
-        </span>
-        <span
-          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
-        />
-      </label>
-      <div
-        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
-        inputprops="[object Object]"
-      >
-        <input
-          aria-autocomplete="list"
-          aria-expanded="false"
-          aria-invalid="false"
-          autocapitalize="none"
-          autocomplete="off"
-          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
-          id=":r3d:"
-          role="combobox"
-          spellcheck="false"
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot across themes > autocomplete-light-theme 1`] = `
 <div
   class="MuiBox-root css-0"
@@ -112,8 +112,8 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot acr
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r39:"
-        id=":r39:-label"
+        for=":r37:"
+        id=":r37:-label"
       >
         <span
           class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
@@ -135,7 +135,7 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot acr
           autocapitalize="none"
           autocomplete="off"
           class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
-          id=":r39:"
+          id=":r37:"
           role="combobox"
           spellcheck="false"
           type="text"
@@ -173,8 +173,8 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot for
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for=":r3f:"
-            id=":r3f:-label"
+            for=":r3d:"
+            id=":r3d:-label"
           >
             <span
               class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
@@ -196,7 +196,7 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot for
               autocapitalize="none"
               autocomplete="off"
               class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
-              id=":r3f:"
+              id=":r3d:"
               role="combobox"
               spellcheck="false"
               type="text"
@@ -229,8 +229,8 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot for
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for=":r3g:"
-            id=":r3g:-label"
+            for=":r3e:"
+            id=":r3e:-label"
           >
             <span
               class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
@@ -252,7 +252,7 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot for
               autocapitalize="none"
               autocomplete="off"
               class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
-              id=":r3g:"
+              id=":r3e:"
               role="combobox"
               spellcheck="false"
               type="text"
@@ -295,8 +295,8 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r31:"
-        id=":r31:-label"
+        for=":r2v:"
+        id=":r2v:-label"
       >
         <span
           class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
@@ -318,7 +318,7 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
           autocapitalize="none"
           autocomplete="off"
           class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
-          id=":r31:"
+          id=":r2v:"
           role="combobox"
           spellcheck="false"
           type="text"
@@ -344,8 +344,8 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r33:"
-        id=":r33:-label"
+        for=":r31:"
+        id=":r31:-label"
       >
         <span
           class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
@@ -368,7 +368,7 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
           autocomplete="off"
           class="MuiInputBase-input Mui-disabled MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
           disabled=""
-          id=":r33:"
+          id=":r31:"
           role="combobox"
           spellcheck="false"
           type="text"
@@ -394,8 +394,8 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r37:"
-        id=":r37:-label"
+        for=":r35:"
+        id=":r35:-label"
       >
         <span
           class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
@@ -417,7 +417,7 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
           autocapitalize="none"
           autocomplete="off"
           class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
-          id=":r37:"
+          id=":r35:"
           role="combobox"
           spellcheck="false"
           type="text"
@@ -462,8 +462,8 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r35:"
-        id=":r35:-label"
+        for=":r33:"
+        id=":r33:-label"
       >
         <span
           class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
@@ -485,7 +485,7 @@ exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots fo
           autocapitalize="none"
           autocomplete="off"
           class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
-          id=":r35:"
+          id=":r33:"
           role="combobox"
           spellcheck="false"
           type="text"
