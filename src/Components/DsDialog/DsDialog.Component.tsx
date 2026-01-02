@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { DsDialogDefaultProps, DsDialogProps } from './DsDialog.Types'
+import { DsDialogDefaultProps, DsDialogProps, DsDialogCloseReason } from './DsDialog.Types'
 import { DsDialogTitle } from '../DsDialogTitle'
 import { Dialog } from '@mui/material'
 import { DsIconButton } from '../DsIconButton'
@@ -13,7 +13,7 @@ import { mergeSlotProps } from '../../utils'
 export const DsDialog: React.FC<DsDialogProps> = inProps => {
   const props = { ...DsDialogDefaultProps, ...inProps }
 
-  const handleCloseClick = (reason: "backdropClick" | "escapeKeyDown" | 'closeButtonClick') => (event: React.SyntheticEvent) => {
+  const handleCloseClick = (reason: DsDialogCloseReason) => (event: React.SyntheticEvent) => {
     const { onClose } = props
     if (typeof onClose === 'function') {
       onClose(event, reason ? reason : 'backdropClick')
