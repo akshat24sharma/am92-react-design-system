@@ -225,7 +225,6 @@ describe('DsButtonGroup', () => {
       )
       const buttonGroup = screen.getByTestId('button-group-sx-test')
       const buttonGroupStyles = window.getComputedStyle(buttonGroup)
-      console.log('buttonGroup', buttonGroupStyles.padding)
 
       expect(primaryButton).toHaveClass('MuiButton-fullWidth')
       expect(secondaryButton).toHaveClass('MuiButton-fullWidth')
