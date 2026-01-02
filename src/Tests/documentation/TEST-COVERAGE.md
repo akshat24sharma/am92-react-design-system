@@ -11,6 +11,7 @@
 - [DsDatePicker](./Components/DsDatePicker.md) - 61 tests across 12 categories with MUI X DatePicker integration, calendar interaction, and cancel functionality
 - [DsDialog](./Components/DsDialog.md) - 68 tests across 11 categories with comprehensive theme and snapshot testing
 - [DsDivider](./Components/DsDivider.md) - 29 tests across 10 categories with theme compatibility and snapshot coverage
+- [DsDrawer](./components/DsDrawer.tests.md) - 54 tests across 12 categories with Material-UI integration, design system overrides, theme testing, and real-world drawer scenarios ✨
 - [DsIconButton](./Components/DsIconButton.tests.md) - 66 tests across 10 categories with design system integration, theme testing, and snapshot testing ✨
 - [DsInputAdornment](./Components/DsInputAdornment.md) -  56 tests across 11 categories and theme testing
 - [DsInputBase](./Components/DsInputBase.tests.md) - 78 tests across 12 categories with comprehensive form functionality, custom variants (otp/search), theme testing, and real-world scenarios ✨
@@ -76,8 +77,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 32
-- **Total Tests:** 1545 across all tested components (+ 59 DsBadge tests)
+- **Total Components Documented:** 33
+- **Total Tests:** 1599 across all tested components (+ 54 DsDrawer tests)
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
