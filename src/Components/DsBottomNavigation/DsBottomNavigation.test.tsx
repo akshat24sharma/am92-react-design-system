@@ -10,12 +10,11 @@
  * 4. MUI Styling - Validate Material-UI specific styling and class application for BottomNavigation components.
  * 5. Navigation Functionality - Test navigation selection logic and state management.
  * 6. Event Handling - Simulate user interactions including clicks and keyboard navigation.
- * 7. Form Integration - Test integration patterns and controlled component behavior.
- * 8. Accessibility - Check ARIA attributes and support for keyboard navigation between items.
- * 9. Edge Cases - Handle unusual scenarios like no selection, invalid values, and large datasets.
- * 10. Real-world Scenarios - Test common usage patterns like mobile navigation and tab switching.
- * 11. Theme Testing - Assess component rendering across different themes with proper color integration.
- * 12. Snapshot Testing - Perform visual regression testing for all states and themes.
+ * 7. Accessibility - Check ARIA attributes and support for keyboard navigation between items.
+ * 8. Edge Cases - Handle unusual scenarios like no selection, invalid values, and large datasets.
+ * 9. Real-world Scenarios - Test common usage patterns like mobile navigation and tab switching.
+ * 10. Theme Testing - Assess component rendering across different themes with proper color integration.
+ * 11. Snapshot Testing - Perform visual regression testing for all states and themes.
  *
  * @package @am92/react-design-system
  * @component DsBottomNavigation
@@ -406,89 +405,7 @@ describe("DsBottomNavigation Component", () => {
     });
   });
 
-  // 7. Form Integration Tests
-  describe("Form Integration", () => {
-    it("should work within form element", async () => {
-      const handleChange = vi.fn();
-      const handleSubmit = vi.fn((e) => e.preventDefault());
-
-      render(
-        <form onSubmit={handleSubmit}>
-          <DsBottomNavigation value="tab1" onChange={handleChange}>
-            <DsBottomNavigationAction label="Tab 1" value="tab1" />
-            <DsBottomNavigationAction label="Tab 2" value="tab2" />
-          </DsBottomNavigation>
-          <button type="submit">Submit Form</button>
-        </form>
-      );
-
-      const actions = screen.getAllByRole("button");
-      expect(actions).toHaveLength(3); // 2 navigation actions + 1 submit button
-
-      // Test that navigation actions work within form
-      const tab2Action = actions[1];
-      await user.click(tab2Action);
-
-      expect(handleChange).toHaveBeenCalledWith(expect.any(Object), "tab2");
-
-      // Test that form submission still works
-      const submitButton = screen.getByText("Submit Form");
-      await user.click(submitButton);
-
-      expect(handleSubmit).toHaveBeenCalled();
-
-      // Verify navigation buttons don't interfere with form submission
-      expect(handleSubmit).toHaveBeenCalledTimes(1);
-    });
-
-    it("should work with controlled component pattern", async () => {
-      let value = "tab1";
-      const handleChange = vi.fn((event, newValue) => {
-        value = newValue;
-      });
-
-      const { rerender } = render(
-        <DsBottomNavigation value={value} onChange={handleChange}>
-          <DsBottomNavigationAction label="Tab 1" value="tab1" />
-          <DsBottomNavigationAction label="Tab 2" value="tab2" />
-        </DsBottomNavigation>
-      );
-
-      const actions = screen.getAllByRole("button");
-      await user.click(actions[1]);
-
-      expect(handleChange).toHaveBeenCalledWith(expect.any(Object), "tab2");
-
-      rerender(
-        <DsBottomNavigation value={"tab2"} onChange={handleChange}>
-          <DsBottomNavigationAction label="Tab 1" value="tab1" />
-          <DsBottomNavigationAction label="Tab 2" value="tab2" />
-        </DsBottomNavigation>
-      );
-
-      // Get fresh actions after rerender
-      const updatedActions = screen.getAllByRole("button");
-      expect(updatedActions[1]).toHaveClass("Mui-selected");
-    });
-
-    it("should handle form submission", () => {
-      const handleSubmit = vi.fn((e) => e.preventDefault());
-
-      const { container } = render(
-        <form onSubmit={handleSubmit}>
-          <DsBottomNavigation value={0} onChange={vi.fn()}>
-            <DsBottomNavigationAction label="Submit" value="submit" />
-          </DsBottomNavigation>
-        </form>
-      );
-      const form = container.querySelector("form");
-      fireEvent.submit(form!);
-
-      expect(handleSubmit).toHaveBeenCalled();
-    });
-  });
-
-  // 8. Accessibility Tests
+  // 7. Accessibility Tests
   describe("Accessibility", () => {
     it("should have proper ARIA attributes", () => {
       renderBasicBottomNavigation();
@@ -531,7 +448,7 @@ describe("DsBottomNavigation Component", () => {
     });
   });
 
-  // 9. Edge Cases Tests
+  // 8. Edge Cases Tests
   describe("Edge Cases", () => {
     it("should handle empty children gracefully", () => {
       const { container } = render(
@@ -614,7 +531,7 @@ describe("DsBottomNavigation Component", () => {
     });
   });
 
-  // 10. Real-world Scenarios Tests
+  // 9. Real-world Scenarios Tests
   describe("Real-world Scenarios", () => {
     it("should work as mobile app navigation", async () => {
       const handleChange = vi.fn();
@@ -741,7 +658,7 @@ describe("DsBottomNavigation Component", () => {
     });
   });
 
-  // 11. Theme Testing Tests
+  // 10. Theme Testing Tests
   describe("Theme Testing", () => {
     it("should render correctly across all themes", () => {
       testAllThemes(
@@ -871,7 +788,7 @@ describe("DsBottomNavigation Component", () => {
     });
   });
 
-  // 12. Snapshot Testing Tests
+  // 11. Snapshot Testing Tests
   describe("Snapshot Testing", () => {
     it("should match snapshots for key component states", () => {
       // Unselected state

@@ -36,7 +36,7 @@
 - [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing
 - [DsAutocomplete](./Components/DsAutocomplete.md) - 31 tests across 13 categories and theme testing
 - [DsTagGroup](./Components/DsTagGroup.md) - 42 tests across 12 categories and theme testing
-- [DsBottomNavigation](./Components/DsBottomNavigation.md) - 46 tests across 12 categories and theme testing
+- [DsBottomNavigation](./Components/DsBottomNavigation.md) - 43 tests across 12 categories and theme testing
 
 ## Running Tests
 ```bash
@@ -79,8 +79,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 36
-- **Total Tests:** 1705 across all tested components
+- **Total Components Documented:** 37
+- **Total Tests:** 1759 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
