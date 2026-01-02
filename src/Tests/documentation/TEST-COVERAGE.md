@@ -78,8 +78,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 34
-- **Total Tests:** 1605 across all tested components
+- **Total Components Documented:** 36
+- **Total Tests:** 1705 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)

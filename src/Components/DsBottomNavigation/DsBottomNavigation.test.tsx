@@ -474,16 +474,15 @@ describe("DsBottomNavigation Component", () => {
     it("should handle form submission", () => {
       const handleSubmit = vi.fn((e) => e.preventDefault());
 
-      render(
+      const { container } = render(
         <form onSubmit={handleSubmit}>
           <DsBottomNavigation value={0} onChange={vi.fn()}>
             <DsBottomNavigationAction label="Submit" value="submit" />
           </DsBottomNavigation>
         </form>
       );
-
-      const form = document.querySelector("form") as HTMLFormElement;
-      fireEvent.submit(form);
+      const form = container.querySelector("form");
+      fireEvent.submit(form!);
 
       expect(handleSubmit).toHaveBeenCalled();
     });
@@ -535,13 +534,12 @@ describe("DsBottomNavigation Component", () => {
   // 9. Edge Cases Tests
   describe("Edge Cases", () => {
     it("should handle empty children gracefully", () => {
-      render(
+      const { container } = render(
         <DsBottomNavigation value={0} onChange={vi.fn()}>
           {/* No children */}
         </DsBottomNavigation>
       );
-
-      const navigation = document.querySelector(".MuiBottomNavigation-root");
+      const navigation = container.querySelector(".MuiBottomNavigation-root");
       expect(navigation).toBeInTheDocument();
     });
 

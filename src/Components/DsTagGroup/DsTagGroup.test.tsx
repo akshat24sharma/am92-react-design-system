@@ -461,8 +461,7 @@ describe("DsTagGroup Component", () => {
     it("should handle form submission with selected values", () => {
       const handleSubmit = vi.fn((e) => e.preventDefault());
       const handleChange = vi.fn();
-
-      render(
+      const { container } = render(
         <form onSubmit={handleSubmit}>
           <DsTagGroup
             name="submit-test"
@@ -479,9 +478,8 @@ describe("DsTagGroup Component", () => {
           </DsTagGroup>
         </form>
       );
-
-      const form = document.querySelector("form") as HTMLFormElement;
-      fireEvent.submit(form);
+      const form = container.querySelector("form");
+      fireEvent.submit(form!);
 
       expect(handleSubmit).toHaveBeenCalled();
     });
