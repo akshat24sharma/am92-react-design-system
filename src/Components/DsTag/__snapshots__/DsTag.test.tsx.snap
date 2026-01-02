@@ -6,7 +6,7 @@ exports[`DsTag Component > Real-world Scenarios > should match snapshots for bas
   data-mui-color-scheme="light"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
     role="button"
     tabindex="0"
     type="status"
@@ -26,7 +26,7 @@ exports[`DsTag Component > Real-world Scenarios > should match snapshots for bas
   data-mui-color-scheme="light"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-122cngo-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
     role="button"
     tabindex="0"
     type="status"
@@ -47,7 +47,7 @@ exports[`DsTag Component > Real-world Scenarios > should match snapshots for bas
 >
   <div
     aria-disabled="true"
-    class="MuiButtonBase-root Mui-disabled MuiChip-root MuiChip-tag Mui-disabled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root Mui-disabled MuiChip-root MuiChip-tag Mui-disabled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
     role="button"
     tabindex="-1"
     type="status"
@@ -70,7 +70,7 @@ exports[`DsTag Component > Real-world Scenarios > should render a list of tags 1
     class="MuiBox-root css-0"
   >
     <div
-      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
       role="button"
       tabindex="0"
       type="status"
@@ -82,7 +82,7 @@ exports[`DsTag Component > Real-world Scenarios > should render a list of tags 1
       </span>
     </div>
     <div
-      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
       role="button"
       tabindex="0"
       type="status"
@@ -94,7 +94,7 @@ exports[`DsTag Component > Real-world Scenarios > should render a list of tags 1
       </span>
     </div>
     <div
-      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
       role="button"
       tabindex="0"
       type="status"
@@ -115,7 +115,7 @@ exports[`DsTag Component > Snapshot Tests > should match snapshot with default p
   data-mui-color-scheme="light"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
     role="button"
     tabindex="0"
     type="status"
@@ -135,7 +135,7 @@ exports[`DsTag Component > Snapshot Tests > should match snapshot with delete ic
   data-mui-color-scheme="light"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-tagDefault css-w21g5e-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-tagDefault css-952l3o-MuiButtonBase-root-MuiChip-root"
     role="button"
     tabindex="0"
     type="status"
@@ -159,7 +159,7 @@ exports[`DsTag Component > Snapshot Tests > should match snapshot with size vari
   data-mui-color-scheme="light"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-7vu0v7-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1rkzusn-MuiButtonBase-root-MuiChip-root"
     role="button"
     tabindex="0"
     type="status"
@@ -179,7 +179,7 @@ exports[`DsTag Component > Theme Testing > should render correctly across all th
   data-mui-color-scheme="dark"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
     data-testid="tag-dark"
     role="button"
     tabindex="0"
@@ -200,7 +200,7 @@ exports[`DsTag Component > Theme Testing > should render correctly across all th
   data-mui-color-scheme="highContrast"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
     data-testid="tag-highContrast"
     role="button"
     tabindex="0"
@@ -221,7 +221,7 @@ exports[`DsTag Component > Theme Testing > should render correctly across all th
   data-mui-color-scheme="light"
 >
   <div
-    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-1oz7fs1-MuiButtonBase-root-MuiChip-root"
+    class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
     data-testid="tag-light"
     role="button"
     tabindex="0"

@@ -1,0 +1,498 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot across themes > autocomplete-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r39:"
+        id=":r39:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Theme dark
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="false"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          id=":r39:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot across themes > autocomplete-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r3b:"
+        id=":r3b:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Theme highContrast
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="false"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          id=":r3b:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot across themes > autocomplete-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r37:"
+        id=":r37:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Theme light
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="false"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          id=":r37:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshot for complex real-world scenario > autocomplete-complex-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-tdxhcn-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyBoldLarge MuiTypography-gutterBottom css-yv8wvu-MuiTypography-root"
+    >
+      Advanced Autocomplete
+    </span>
+    <div
+      class="MuiStack-root css-jfdv4h-MuiStack-root"
+    >
+      <div
+        class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1qld461-MuiAutocomplete-root"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r3d:"
+            id=":r3d:-label"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+            >
+              Multi-select with objects
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+            />
+          </label>
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+            inputprops="[object Object]"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-invalid="false"
+              autocapitalize="none"
+              autocomplete="off"
+              class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+              id=":r3d:"
+              role="combobox"
+              spellcheck="false"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+            helpertext=""
+          >
+            <div
+              class="MuiBox-root css-s14tpm"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+              >
+                Select multiple options
+                ​
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiAutocomplete-root css-19liwaa-MuiAutocomplete-root"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r3e:"
+            id=":r3e:-label"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+            >
+              Free solo autocomplete
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+            />
+          </label>
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+            inputprops="[object Object]"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-invalid="false"
+              autocapitalize="none"
+              autocomplete="off"
+              class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+              id=":r3e:"
+              role="combobox"
+              spellcheck="false"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+            helpertext=""
+          >
+            <div
+              class="MuiBox-root css-s14tpm"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+              >
+                You can type custom values
+                ​
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots for key component states > autocomplete-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r2v:"
+        id=":r2v:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Snapshot default
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="false"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          id=":r2v:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots for key component states > autocomplete-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r31:"
+        id=":r31:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Snapshot disabled
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="false"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input Mui-disabled MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          disabled=""
+          id=":r31:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots for key component states > autocomplete-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-19liwaa-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r35:"
+        id=":r35:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Error State
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="true"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          id=":r35:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+      >
+        <div
+          class="MuiBox-root css-s14tpm"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeCool ri-error-warning-fill css-cb75nt-MuiIcon-root"
+          />
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+          >
+            Error message
+            ​
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsAutocomplete Component > Snapshot Testing > should match snapshots for key component states > autocomplete-multiple 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1qld461-MuiAutocomplete-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r33:"
+        id=":r33:-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Snapshot multiple
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        inputprops="[object Object]"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-invalid="false"
+          autocapitalize="none"
+          autocomplete="off"
+          class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+          id=":r33:"
+          role="combobox"
+          spellcheck="false"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

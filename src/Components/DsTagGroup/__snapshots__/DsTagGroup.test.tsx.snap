@@ -1,0 +1,667 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshot across themes > tag-group-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag1"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 1
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag2"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 2
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag3"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 3
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshot across themes > tag-group-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag1"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 1
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag2"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 2
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag3"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 3
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshot across themes > tag-group-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag1"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 1
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag2"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 2
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag3"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 3
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshot for complex real-world scenario > tag-group-complex-real-world 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1kopw9g"
+  >
+    <div
+      class="MuiStack-root css-1aersus-MuiStack-root"
+    >
+      <div
+        class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-deletable MuiChip-deletableColorSecondary MuiChip-tagSecondary css-isvhk7-MuiButtonBase-root-MuiChip-root"
+        role="button"
+        tabindex="0"
+        type="status"
+        value="react"
+      >
+        <span
+          class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+        >
+          React
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-circle-fill MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorSecondary MuiChip-deleteIconTagColorSecondary css-h7bicg-MuiIcon-root"
+        />
+      </div>
+      <div
+        class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+        role="button"
+        tabindex="0"
+        type="status"
+        value="vue"
+      >
+        <span
+          class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+        >
+          Vue
+        </span>
+      </div>
+      <div
+        class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+        role="button"
+        tabindex="0"
+        type="status"
+        value="angular"
+      >
+        <span
+          class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+        >
+          Angular
+        </span>
+      </div>
+      <div
+        class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-deletable MuiChip-deletableColorSecondary MuiChip-tagSecondary css-isvhk7-MuiButtonBase-root-MuiChip-root"
+        role="button"
+        tabindex="0"
+        type="status"
+        value="typescript"
+      >
+        <span
+          class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+        >
+          TypeScript
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-circle-fill MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorSecondary MuiChip-deleteIconTagColorSecondary css-h7bicg-MuiIcon-root"
+        />
+      </div>
+      <div
+        class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+        role="button"
+        tabindex="0"
+        type="status"
+        value="javascript"
+      >
+        <span
+          class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+        >
+          JavaScript
+        </span>
+      </div>
+      <div
+        class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-deletable MuiChip-deletableColorSecondary MuiChip-tagSecondary css-isvhk7-MuiButtonBase-root-MuiChip-root"
+        role="button"
+        tabindex="0"
+        type="status"
+        value="testing"
+      >
+        <span
+          class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+        >
+          Testing
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-circle-fill MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorSecondary MuiChip-deleteIconTagColorSecondary css-h7bicg-MuiIcon-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshots for key component states > tag-group-multi-empty 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag1"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 1
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag2"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 2
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag3"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 3
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshots for key component states > tag-group-multi-selected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-deletable MuiChip-deletableColorSecondary MuiChip-tagSecondary css-isvhk7-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag1"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 1
+      </span>
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-circle-fill MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorSecondary MuiChip-deleteIconTagColorSecondary css-h7bicg-MuiIcon-root"
+      />
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag2"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 2
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-deletable MuiChip-deletableColorSecondary MuiChip-tagSecondary css-isvhk7-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="tag3"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Tag 3
+      </span>
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-circle-fill MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorSecondary MuiChip-deleteIconTagColorSecondary css-h7bicg-MuiIcon-root"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshots for key component states > tag-group-single-selected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="option1"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Option 1
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="option2"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Option 2
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="option3"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Option 3
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Snapshot Testing > should match snapshots for key component states > tag-group-unselected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="option1"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Option 1
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="option2"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Option 2
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="option3"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Option 3
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Theme Testing > should render correctly across all themes > ds-tag-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+    data-testid="tag-dark"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="low"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Low Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="medium"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Medium Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="high"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        High Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="urgent"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Urgent
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Theme Testing > should render correctly across all themes > ds-tag-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+    data-testid="tag-highContrast"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="low"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Low Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="medium"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Medium Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="high"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        High Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="urgent"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Urgent
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTagGroup Component > Theme Testing > should render correctly across all themes > ds-tag-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-1aersus-MuiStack-root"
+    data-testid="tag-light"
+  >
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="low"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Low Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorSecondary MuiChip-clickable MuiChip-clickableColorSecondary MuiChip-tagSecondary css-1a695w1-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="medium"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Medium Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="high"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        High Priority
+      </span>
+    </div>
+    <div
+      class="MuiButtonBase-root MuiChip-root MuiChip-tag MuiChip-sizeMedium MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-tagDefault css-8nihf8-MuiButtonBase-root-MuiChip-root"
+      role="button"
+      tabindex="0"
+      type="status"
+      value="urgent"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
+      >
+        Urgent
+      </span>
+    </div>
+  </div>
+</div>
+`;
