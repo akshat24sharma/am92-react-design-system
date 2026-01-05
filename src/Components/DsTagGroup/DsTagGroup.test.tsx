@@ -309,6 +309,7 @@ describe("DsTagGroup Component", () => {
       });
 
       const stack = container.querySelector(".MuiStack-root");
+      expect(stack).toBeInTheDocument();
       // Check for CSS custom property usage
       const computedStyle = window.getComputedStyle(stack as Element);
       expect(computedStyle.gap).toBe("var(--ds-spacing-bitterCold)");

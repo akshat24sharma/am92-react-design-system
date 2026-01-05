@@ -210,8 +210,8 @@ describe("DsBottomNavigation Component", () => {
       );
 
       const navigation = container.querySelector(".MuiBottomNavigation-root");
-      const computedStyles = getComputedStyle(navigation as Element);
       expect(navigation).toBeInTheDocument();
+      const computedStyles = getComputedStyle(navigation as Element);
 
       expect(computedStyles.minHeight).toBe("100px");
     });
