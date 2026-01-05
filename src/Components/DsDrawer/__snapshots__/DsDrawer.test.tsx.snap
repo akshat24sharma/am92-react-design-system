@@ -1,0 +1,351 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsDrawer > Snapshot Testing > should match snapshot for closed drawer > drawer-closed 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshot for complex navigation drawer > drawer-navigation-complex 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-1ctgg13-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-6attkh-MuiPaper-root-MuiDrawer-paper"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiBox-root css-g3g9k1"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldMedium MuiTypography-gutterBottom css-1jg8pqp-MuiTypography-root"
+        >
+          Navigation Menu
+        </span>
+        <ul
+          class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+        >
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1m47lv-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeSmall css-157orgk-MuiButton-startIcon"
+              >
+                <span
+                  class="MuiBox-root css-0"
+                >
+                  🏠
+                </span>
+              </span>
+              <span>
+                Home
+              </span>
+            </button>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1m47lv-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeSmall css-157orgk-MuiButton-startIcon"
+              >
+                <span
+                  class="MuiBox-root css-0"
+                >
+                  👤
+                </span>
+              </span>
+              <span>
+                Profile
+              </span>
+            </button>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1m47lv-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeSmall css-157orgk-MuiButton-startIcon"
+              >
+                <span
+                  class="MuiBox-root css-0"
+                >
+                  ⚙️
+                </span>
+              </span>
+              <span>
+                Settings
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshot for default drawer > drawer-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshot for mobile settings drawer > drawer-mobile-settings 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots across all themes > drawer-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots across all themes > drawer-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots across all themes > drawer-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots for all anchor positions > drawer-anchor-bottom 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots for all anchor positions > drawer-anchor-left 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots for all anchor positions > drawer-anchor-right 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots for all anchor positions > drawer-anchor-top 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots for all variants > drawer-variant-permanent 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-1ctgg13-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-6attkh-MuiPaper-root-MuiDrawer-paper"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiBox-root css-hpgf8j"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          permanent
+           Drawer
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots for all variants > drawer-variant-persistent 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-1ctgg13-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-6attkh-MuiPaper-root-MuiDrawer-paper"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiBox-root css-hpgf8j"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          persistent
+           Drawer
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDrawer > Snapshot Testing > should match snapshots for all variants > drawer-variant-temporary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Theme Testing > should handle theme-specific colors correctly > drawer-colors-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+/>
+`;
+
+exports[`DsDrawer > Theme Testing > should handle theme-specific colors correctly > drawer-colors-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+/>
+`;
+
+exports[`DsDrawer > Theme Testing > should handle theme-specific colors correctly > drawer-colors-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
+
+exports[`DsDrawer > Theme Testing > should maintain design system overrides across themes > drawer-overrides-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-1ctgg13-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-6attkh-MuiPaper-root-MuiDrawer-paper"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiBox-root css-hpgf8j"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1bayumt-MuiTypography-root"
+        >
+          Design System Drawer - 
+          dark
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDrawer > Theme Testing > should maintain design system overrides across themes > drawer-overrides-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-1ctgg13-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-6attkh-MuiPaper-root-MuiDrawer-paper"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiBox-root css-hpgf8j"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1bayumt-MuiTypography-root"
+        >
+          Design System Drawer - 
+          highContrast
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDrawer > Theme Testing > should maintain design system overrides across themes > drawer-overrides-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-1ctgg13-MuiDrawer-docked"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-6attkh-MuiPaper-root-MuiDrawer-paper"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiBox-root css-hpgf8j"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-1bayumt-MuiTypography-root"
+        >
+          Design System Drawer - 
+          light
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsDrawer > Theme Testing > should render correctly across all themes > drawer-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+/>
+`;
+
+exports[`DsDrawer > Theme Testing > should render correctly across all themes > drawer-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+/>
+`;
+
+exports[`DsDrawer > Theme Testing > should render correctly across all themes > drawer-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+/>
+`;
