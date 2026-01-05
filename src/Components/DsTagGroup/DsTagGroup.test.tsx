@@ -402,6 +402,60 @@ describe("DsTagGroup Component", () => {
       expect(handleChange).toHaveBeenCalledWith("test-tag-group", "option2");
     });
 
+    it("should handle onClick events for selected tags", async () => {
+      const handleChange = vi.fn();
+      renderSingleModeTagGroup({ value: "option1", onChange: handleChange });
+
+      // Verify initial selected state
+      const selectedTag = screen.getByText("Option 1").closest(".MuiChip-root");
+      expect(selectedTag).toHaveClass("MuiChip-colorSecondary");
+
+      // Click on selected tag to deselect it
+      const tag = screen.getByText("Option 1");
+      await user.click(tag);
+
+      expect(handleChange).toHaveBeenCalledTimes(1);
+      expect(handleChange).toHaveBeenCalledWith("test-tag-group", "");
+    });
+
+    it("should visually select tag when clicked in single mode", async () => {
+      const handleChange = vi.fn();
+      const { rerender } = renderSingleModeTagGroup({ onChange: handleChange });
+
+      // Verify initial state - all tags unselected
+      let option1Tag = screen.getByText("Option 1").closest(".MuiChip-root");
+      let option2Tag = screen.getByText("Option 2").closest(".MuiChip-root");
+      expect(option1Tag).not.toHaveClass("MuiChip-colorSecondary");
+      expect(option2Tag).not.toHaveClass("MuiChip-colorSecondary");
+
+      // Click on Option 1
+      const tag1 = screen.getByText("Option 1");
+      await user.click(tag1);
+
+      // Verify callback was triggered
+      expect(handleChange).toHaveBeenCalledWith("test-tag-group", "option1");
+
+      // Simulate parent component updating with new selected value
+      rerender(
+        <DsTagGroup
+          name="test-tag-group"
+          value="option1"
+          multi={false}
+          onChange={handleChange}
+        >
+          <DsTag value="option1" label="Option 1" selected={false} />
+          <DsTag value="option2" label="Option 2" selected={false} />
+          <DsTag value="option3" label="Option 3" selected={false} />
+        </DsTagGroup>
+      );
+
+      // Verify Option 1 is now visually selected
+      option1Tag = screen.getByText("Option 1").closest(".MuiChip-root");
+      option2Tag = screen.getByText("Option 2").closest(".MuiChip-root");
+      expect(option1Tag).toHaveClass("MuiChip-colorSecondary");
+      expect(option2Tag).not.toHaveClass("MuiChip-colorSecondary");
+    });
+
     it("should handle onDelete events for selected tags in multi mode", async () => {
       const handleChange = vi.fn();
       renderMultiModeTagGroup({
@@ -433,6 +487,55 @@ describe("DsTagGroup Component", () => {
 
       expect(handleChange).toHaveBeenCalledTimes(2);
       expect(handleChange).toHaveBeenNthCalledWith(1, "test-multi-tag-group", [
+        "tag1",
+      ]);
+    });
+
+    it("should handle onClick events for unselected tags in multi mode", async () => {
+      const handleChange = vi.fn();
+      renderMultiModeTagGroup({ value: ["tag1"], onChange: handleChange });
+
+      // Verify initial state - tag1 selected, tag2 unselected
+      const tag1Element = screen.getByText("Tag 1").closest(".MuiChip-root");
+      const tag2Element = screen.getByText("Tag 2").closest(".MuiChip-root");
+      expect(tag1Element).toHaveClass("MuiChip-colorSecondary");
+      expect(tag2Element).not.toHaveClass("MuiChip-colorSecondary");
+
+      // Click on unselected tag to add to selection
+      const unselectedTag = screen.getByText("Tag 2");
+      await user.click(unselectedTag);
+
+      expect(handleChange).toHaveBeenCalledTimes(1);
+      expect(handleChange).toHaveBeenCalledWith("test-multi-tag-group", [
+        "tag1",
+        "tag2",
+      ]);
+    });
+
+    it("should handle onClick events for selected tags in multi mode", async () => {
+      const handleChange = vi.fn();
+      renderMultiModeTagGroup({
+        value: ["tag1", "tag2"],
+        onChange: handleChange,
+      });
+
+      // Verify initial state - both tags selected
+      const tag1Element = screen.getByText("Tag 1").closest(".MuiChip-root");
+      const tag2Element = screen.getByText("Tag 2").closest(".MuiChip-root");
+      const tag3Element = screen.getByText("Tag 3").closest(".MuiChip-root");
+      expect(tag1Element).toHaveClass("MuiChip-colorSecondary");
+      expect(tag2Element).toHaveClass("MuiChip-colorSecondary");
+      expect(tag3Element).not.toHaveClass("MuiChip-colorSecondary");
+
+      // Click on selected tag's delete icon to remove from selection
+      const selectedTag = screen.getByText("Tag 2").closest(".MuiChip-root");
+      const deleteIcon = selectedTag?.querySelector(".ri-close-circle-fill");
+      expect(deleteIcon).toBeInTheDocument();
+
+      await user.click(deleteIcon as Element);
+
+      expect(handleChange).toHaveBeenCalledTimes(1);
+      expect(handleChange).toHaveBeenCalledWith("test-multi-tag-group", [
         "tag1",
       ]);
     });

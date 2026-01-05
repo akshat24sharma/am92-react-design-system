@@ -35,7 +35,7 @@
 - [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage 
 - [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing
 - [DsAutocomplete](./Components/DsAutocomplete.md) - 31 tests across 13 categories and theme testing
-- [DsTagGroup](./Components/DsTagGroup.md) - 42 tests across 12 categories and theme testing
+- [DsTagGroup](./Components/DsTagGroup.md) - 46 tests across 12 categories and theme testing
 - [DsBottomNavigation](./Components/DsBottomNavigation.md) - 43 tests across 12 categories and theme testing
 
 ## Running Tests
@@ -80,7 +80,7 @@ The coverage infrastructure generates multiple report formats:
 
 ## Test Statistics
 - **Total Components Documented:** 37
-- **Total Tests:** 1759 across all tested components
+- **Total Tests:** 1763 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
