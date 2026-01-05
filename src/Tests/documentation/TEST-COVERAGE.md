@@ -31,6 +31,7 @@
 - [DsTable](./Components/DsTable.md) - 25 tests across 10 categories with theme testing and comprehensive snapshot coverage
 - [DsTabs](./Components/DsTabs.md) - 57 tests across 11 categories and theme testing
 - [DsTag](./Components/DsTag.md) -  26 tests across 10 categories and theme testing
+- [DsTextArea](./Components/DsTextArea.md) - 47 tests across 9 categories with character counting, multiline text input, theme testing, and real-world scenarios ✨
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 - [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage 
 - [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing

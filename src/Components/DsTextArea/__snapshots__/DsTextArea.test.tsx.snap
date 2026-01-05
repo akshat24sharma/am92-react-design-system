@@ -1,0 +1,492 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot in error state > dstextarea-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="true"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="100"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+      >
+        <div
+          class="MuiBox-root css-s14tpm"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeCool ri-error-warning-fill css-cb75nt-MuiIcon-root"
+          />
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+          >
+            This field is required
+            ​
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1tkrmk3-MuiTypography-root"
+    >
+      0/100
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot in focused state > dstextarea-focused 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Focused TextArea
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="100"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+      >
+        <div
+          class="MuiBox-root css-s14tpm"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+          >
+            This is focused
+            ​
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1tkrmk3-MuiTypography-root"
+    >
+      0/100
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot in success state > dstextarea-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorSuccess MuiInputBase-formControl MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="100"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+        color="success"
+        helpertext=""
+      >
+        <div
+          class="MuiBox-root css-1w6zxsn"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeCool ri-checkbox-circle-fill css-cb75nt-MuiIcon-root"
+          />
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+          >
+            Input is valid
+            ​
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1tkrmk3-MuiTypography-root"
+    >
+      0/100
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot when disabled > dstextarea-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input Mui-disabled MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          disabled=""
+          maxlength="100"
+          style="height: 0px; overflow: hidden;"
+        >
+          Disabled content
+        </textarea>
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input Mui-disabled MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1y6kvhg-MuiTypography-root"
+    >
+      16/100
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot with default props > dstextarea-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="100"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1y6kvhg-MuiTypography-root"
+    >
+      0/100
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot with fullWidth > dstextarea-fullwidth 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-19ldi1g-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="100"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1y6kvhg-MuiTypography-root"
+    >
+      0/100
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot with hidden character count > dstextarea-hidden-counter 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="100"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot with label and helper text > dstextarea-with-labels 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Description
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-1fa1yvm-MuiInputBase-root"
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="200"
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+      >
+        <div
+          class="MuiBox-root css-s14tpm"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+          >
+            Enter detailed description
+            ​
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1tkrmk3-MuiTypography-root"
+    >
+      0/200
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsTextArea Component > Snapshot Testing > should match snapshot with real-world configuration > dstextarea-review-form 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Product Review
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-19ldi1g-MuiInputBase-root"
+        required=""
+        style="padding-bottom: var(--ds-spacing-mild);"
+      >
+        <textarea
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          maxlength="500"
+          placeholder="Share your experience with this product..."
+          required=""
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiInputBase-inputMultiline css-11h5218-MuiInputBase-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+      </div>
+      <div
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+      >
+        <div
+          class="MuiBox-root css-s14tpm"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+          >
+            Help other customers by sharing your honest review
+            ​
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-supportRegularFootnote css-1tkrmk3-MuiTypography-root"
+    >
+      0/500
+    </span>
+  </div>
+</div>
+`;
