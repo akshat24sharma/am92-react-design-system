@@ -457,7 +457,7 @@ describe("DsTagGroup Component", () => {
       expect(option2Tag).not.toHaveClass("MuiChip-colorSecondary");
     });
 
-    it("should handle onDelete events for selected tags in multi mode", async () => {
+    it("should handle onChange events for selected tags in multi mode", async () => {
       const handleChange = vi.fn();
       renderMultiModeTagGroup({
         value: ["tag1", "tag3"],
@@ -465,10 +465,8 @@ describe("DsTagGroup Component", () => {
       });
 
       const tag3 = screen.getByText("Tag 3").closest(".MuiChip-root");
-      const deleteIcon = tag3?.querySelector(".ri-close-circle-fill");
-      expect(deleteIcon).toBeInTheDocument();
 
-      await user.click(deleteIcon as Element);
+      await user.click(tag3 as Element);
 
       expect(handleChange).toHaveBeenCalledTimes(1);
       expect(handleChange).toHaveBeenCalledWith("test-multi-tag-group", [
@@ -492,24 +490,31 @@ describe("DsTagGroup Component", () => {
       ]);
     });
 
-    it("should handle onClick events for unselected tags in multi mode", async () => {
+    it("should handle onClick events for unselected tags in multi mode (2 to 3)", async () => {
       const handleChange = vi.fn();
-      renderMultiModeTagGroup({ value: ["tag1"], onChange: handleChange });
+      renderMultiModeTagGroup({
+        value: ["tag1", "tag2"], // Start with 2 selected
+        onChange: handleChange,
+      });
 
-      // Verify initial state - tag1 selected, tag2 unselected
+      // Verify initial state - tag1 and tag2 selected, tag3 unselected
       const tag1Element = screen.getByText("Tag 1").closest(".MuiChip-root");
       const tag2Element = screen.getByText("Tag 2").closest(".MuiChip-root");
-      expect(tag1Element).toHaveClass("MuiChip-colorSecondary");
-      expect(tag2Element).not.toHaveClass("MuiChip-colorSecondary");
+      const tag3Element = screen.getByText("Tag 3").closest(".MuiChip-root");
 
-      // Click on unselected tag to add to selection
-      const unselectedTag = screen.getByText("Tag 2");
+      expect(tag1Element).toHaveClass("MuiChip-colorSecondary");
+      expect(tag2Element).toHaveClass("MuiChip-colorSecondary");
+      expect(tag3Element).not.toHaveClass("MuiChip-colorSecondary");
+
+      // Click on unselected tag to add to selection (making total 3)
+      const unselectedTag = screen.getByText("Tag 3");
       await user.click(unselectedTag);
 
       expect(handleChange).toHaveBeenCalledTimes(1);
       expect(handleChange).toHaveBeenCalledWith("test-multi-tag-group", [
         "tag1",
         "tag2",
+        "tag3",
       ]);
     });
 
