@@ -18,13 +18,14 @@
 - [DsLink](./Components/DsLink.md) -  22 tests across 9 categories and theme testing
 - [DsList](./Components/DsList.md) -  22 tests across 8 categories and theme testing
 - [DsLoader](./Components/DsLoader.tests.md) - 38 tests across 9 categories (optimized from 48) with animation testing, theme compatibility, and error handling documentation ✅
-- [DsMenu](./Components/DsMenu.md) - 21 tests across 7 categories with MUI Menu integration, portal rendering, and comprehensive accessibility testing 
+- [DsMenu](./Components/DsMenu.md) - 21 tests across 7 categories with MUI Menu integration, portal rendering, and comprehensive accessibility testing
 - [DsMenuItem](./Components/DsMenuItem.md) -  49 tests across 10 categories and theme testing
 - [DsOtp](./Components/DsOtp.md) - 64 tests across 13 categories and theme testing
 - [DsProgressTracker](./Components/DsProgressTracker.tests.md) - 36 tests across 12 categories with stepper functionality, progress tracking, theme testing, and comprehensive variant coverage ✨
 - [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
 - [DsRemixIcon](./Components/DsRemixIcon.md) -  25 tests across 7 categories and theme testing
 - [DsSelect](./Components/DsSelect.md) -  67 tests across 12 categories (Enhanced Theme Testing)
+- [DsSearchbar](./Components/DsSearchbar.md) - 33 tests across 11 categories with custom onChange handler, search functionality, autocomplete behavior, and comprehensive theme testing ✨
 - [DsSkeleton](./Components/DsSkeleton.md) -  46 tests across 9 categories and theme testing
 - [DsSwitch](./components/DsSwitch.tests.md) - 66 tests across 12 categories with toggle functionality, comprehensive theme testing, and real-world scenarios 🎯 (49 passing, 17 requiring adjustment)
 - [DsTab](./Components/DsTab.md) - 25 tests across 10 categories with container variant support, theme testing, and comprehensive interaction coverage
@@ -33,7 +34,7 @@
 - [DsTag](./Components/DsTag.md) -  26 tests across 10 categories and theme testing
 - [DsTextArea](./Components/DsTextArea.md) - 47 tests across 9 categories with character counting, multiline text input, theme testing, and real-world scenarios ✨
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
-- [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage 
+- [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage
 - [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing
 
 
@@ -54,7 +55,7 @@ All tests now **automatically include your design system theme** by default:
 import { render, screen } from '../../Tests/Mocks/testUtils';
 render(<DsCheckbox />); // Uses secondary color (design system default)
 
-// ✅ Test different themes  
+// ✅ Test different themes
 render(<DsCheckbox />, { colorScheme: 'dark' });
 
 // ✅ Edge case - no theme
@@ -78,8 +79,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 33
-- **Total Tests:** 1599 across all tested components (+ 54 DsDrawer tests)
+- **Total Components Documented:** 34
+- **Total Tests:** 1632 across all tested components (+ 33 DsSearchbar tests)
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)

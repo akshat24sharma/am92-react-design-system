@@ -1,0 +1,503 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot across all themes > searchbar-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="theme-search-dark"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        id=":r3s:"
+        placeholder="Theme test search"
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot across all themes > searchbar-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="theme-search-highContrast"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        id=":r3v:"
+        placeholder="Theme test search"
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot across all themes > searchbar-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="theme-search-light"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        id=":r3p:"
+        placeholder="Theme test search"
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot in disabled state > searchbar-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="snapshot-search"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input Mui-disabled MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        disabled=""
+        id=":r3j:"
+        placeholder="Search here"
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          disabled=""
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot with complex options > searchbar-complex-options 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="snapshot-search"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        id=":r3m:"
+        placeholder="Search here"
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot with controlled value > searchbar-with-value 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="snapshot-search"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        id=":r3f:"
+        placeholder="Search here"
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value="iPhone 14"
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Clear"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-4hwns3-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
+          tabindex="-1"
+          title="Clear"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-close-fill css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot with custom placeholder > searchbar-custom-placeholder 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="snapshot-search"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        id=":r3c:"
+        placeholder="Search for anything..."
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsSearchbar Component > Snapshot Testing > should match snapshot with default props > searchbar-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiAutocomplete-root MuiAutocomplete-fullWidth MuiAutocomplete-hasPopupIcon css-1jj6zvd-MuiAutocomplete-root"
+    name="snapshot-search"
+  >
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-id2hq9-MuiInputBase-root"
+      ds-variant="search"
+    >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart css-1remsnl-MuiInputAdornment-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate"
+        >
+          ​
+        </span>
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorIconDisabled MuiIcon-fontSizeCool ri-search-line css-gat29x-MuiIcon-root"
+        />
+      </div>
+      <input
+        aria-autocomplete="list"
+        aria-expanded="false"
+        autocapitalize="none"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1rw3c3-MuiInputBase-input"
+        id=":r39:"
+        placeholder="Search here"
+        role="combobox"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+      <div
+        class="MuiAutocomplete-endAdornment css-1se11go-MuiAutocomplete-endAdornment"
+      >
+        <button
+          aria-label="Open"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-mmnn7n-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+          tabindex="-1"
+          title="Open"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-down-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
