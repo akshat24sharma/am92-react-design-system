@@ -1,0 +1,344 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsCarousel > Snapshot Tests > should match snapshot across different themes > carousel-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBox-root css-l4hjsx"
+  >
+    <div
+      class="swiper swiper-initialized swiper-horizontal"
+      style="padding-bottom: 44px;"
+    >
+      <div
+        class="swiper-wrapper"
+        style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Theme Slide 1
+          </div>
+        </div>
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Theme Slide 2
+          </div>
+        </div>
+      </div>
+      <div
+        class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+      />
+      <div
+        class="MuiBox-root css-u14qbz"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-prev-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-left-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-next-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-right-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsCarousel > Snapshot Tests > should match snapshot across different themes > carousel-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-l4hjsx"
+  >
+    <div
+      class="swiper swiper-initialized swiper-horizontal"
+      style="padding-bottom: 44px;"
+    >
+      <div
+        class="swiper-wrapper"
+        style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Theme Slide 1
+          </div>
+        </div>
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Theme Slide 2
+          </div>
+        </div>
+      </div>
+      <div
+        class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+      />
+      <div
+        class="MuiBox-root css-u14qbz"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-prev-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-left-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-next-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-right-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsCarousel > Snapshot Tests > should match snapshot with all features enabled > carousel-all-features 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1d5z0wa"
+  >
+    <div
+      class="swiper swiper-initialized swiper-horizontal"
+      style="padding-bottom: 44px;"
+    >
+      <div
+        class="swiper-wrapper"
+        style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Full Feature Slide 1
+          </div>
+        </div>
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Full Feature Slide 2
+          </div>
+        </div>
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Full Feature Slide 3
+          </div>
+        </div>
+      </div>
+      <div
+        class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+      />
+      <div
+        class="MuiBox-root css-u14qbz"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-prev-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-left-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-next-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-right-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsCarousel > Snapshot Tests > should match snapshot with custom styling > carousel-custom-styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-13htjlo"
+  >
+    <div
+      class="swiper swiper-initialized swiper-horizontal"
+      style="background-color: rgb(245, 245, 245); min-height: 300px;"
+    >
+      <div
+        class="swiper-wrapper"
+        style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Styled Slide 1
+          </div>
+        </div>
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Styled Slide 2
+          </div>
+        </div>
+      </div>
+      <div
+        class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+      />
+      <div
+        class="MuiBox-root css-u14qbz"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-prev-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-left-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-next-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-right-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsCarousel > Snapshot Tests > should match snapshot with default configuration > carousel-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-3dpiq8"
+  >
+    <div
+      class="swiper swiper-initialized swiper-horizontal"
+    >
+      <div
+        class="swiper-wrapper"
+        style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+      >
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Default Slide 1
+          </div>
+        </div>
+        <div
+          class="swiper-slide"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            Default Slide 2
+          </div>
+        </div>
+      </div>
+      <div
+        class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+      />
+      <div
+        class="MuiBox-root css-u14qbz"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-prev-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-left-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium swiper-button-next-custom css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-arrow-right-s-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
