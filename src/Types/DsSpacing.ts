@@ -2,7 +2,7 @@ export type DsSpacingKeys =
   | 'zero'
   | 'deepFreeze'
   | 'quickFreeze'
-  | 'icy'
+  | 'gelid'
   | 'glacial'
   | 'frostbite'
   | 'bitterCold'

@@ -2,7 +2,7 @@ export type DsRadiusKeys =
   | 'zero'
   | 'deepFreeze'
   | 'quickFreeze'
-  | 'icy'
+  | 'gelid'
   | 'glacial'
   | 'frostbite'
   | 'bitterCold'
