@@ -34,7 +34,9 @@
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 - [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage 
 - [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing
-
+- [DsAutocomplete](./Components/DsAutocomplete.md) - 31 tests across 13 categories and theme testing
+- [DsTagGroup](./Components/DsTagGroup.md) - 46 tests across 12 categories and theme testing
+- [DsBottomNavigation](./Components/DsBottomNavigation.md) - 43 tests across 12 categories and theme testing
 
 ## Running Tests
 ```bash
@@ -77,8 +79,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 33
-- **Total Tests:** 1599 across all tested components (+ 54 DsDrawer tests)
+- **Total Components Documented:** 37
+- **Total Tests:** 1763 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)

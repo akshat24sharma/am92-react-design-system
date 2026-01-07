@@ -1,0 +1,653 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshot across themes > bottom-navigation-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshot across themes > bottom-navigation-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshot across themes > bottom-navigation-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshot for complex real-world scenario > bottom-navigation-complex-real-world 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-499ntl"
+  >
+    <div
+      class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+    >
+      <button
+        class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+        />
+        <span
+          class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+        >
+          Home
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+        />
+        <span
+          class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+        >
+          Explore
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+        />
+        <span
+          class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+        >
+          Favorites
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+        />
+        <span
+          class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+        >
+          Messages
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+        />
+        <span
+          class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+        >
+          Profile
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshots for key component states > bottom-navigation-selected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-user-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshots for key component states > bottom-navigation-unselected 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-user-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshots for key component states > bottom-navigation-with-labels 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-user-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Snapshot Testing > should match snapshots for key component states > bottom-navigation-without-icons 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Theme Testing > should render correctly across all themes > ds-bottom-navigation-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+    data-testid="bottom-navigation-dark"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-user-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Theme Testing > should render correctly across all themes > ds-bottom-navigation-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+    data-testid="bottom-navigation-highContrast"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-user-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DsBottomNavigation Component > Theme Testing > should render correctly across all themes > ds-bottom-navigation-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBottomNavigation-root css-1ch7hf6-MuiBottomNavigation-root"
+    data-testid="bottom-navigation-light"
+  >
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-checkbox-circle-fill css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Home
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label Mui-selected css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Search
+      </span>
+    </button>
+    <button
+      class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bgpuol-MuiButtonBase-root-MuiBottomNavigationAction-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-user-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiBottomNavigationAction-label css-1nat9tn-MuiBottomNavigationAction-label"
+      >
+        Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
