@@ -1,0 +1,602 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot across all themes > breadcrumbs-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Products
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Current
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot across all themes > breadcrumbs-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Products
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Current
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot across all themes > breadcrumbs-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Products
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Current
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot with collapsed state > breadcrumbs-collapsed 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li>
+        <button
+          aria-label="Show path"
+          class="MuiButtonBase-root css-17qqvbl-MuiButtonBase-root-MuiBreadcrumbCollapsed-root"
+          tabindex="0"
+          type="button"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          >
+            ...
+          </a>
+        </button>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Product
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Details
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Current
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot with custom separator > breadcrumbs-custom-separator 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        &gt;
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Products
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        &gt;
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Current
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot with default props > breadcrumbs-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Products
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Current
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot with long content > breadcrumbs-long-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Very Long Category Name That Might Wrap
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Another Long Subcategory Name
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Extremely Long Product Name That Extends Beyond Normal Length
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot with mixed content types > breadcrumbs-mixed-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <nav
+    class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+  >
+    <ol
+      class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+    >
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-1ebax9u-MuiTypography-root-MuiLink-root"
+          href="#"
+        >
+          Link
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-1uk3z64-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Button
+          </span>
+        </button>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-mw6omk-MuiTypography-root"
+        >
+          Typography
+        </span>
+      </li>
+      <li
+        aria-hidden="true"
+        class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+      >
+        /
+      </li>
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span>
+          Plain Text
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`DsBreadcrumbs > Snapshot Testing > should match snapshot with real-world e-commerce scenario > breadcrumbs-ecommerce-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-hpgf8j"
+  >
+    <nav
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiBreadcrumbs-root css-1kdoy6s-MuiTypography-root-MuiBreadcrumbs-root"
+    >
+      <ol
+        class="MuiBreadcrumbs-ol css-l6prs1-MuiBreadcrumbs-ol"
+      >
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+            href="#"
+          >
+            Shop
+          </a>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+            href="#"
+          >
+            Electronics
+          </a>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+            href="#"
+          >
+            Computers
+          </a>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiLink-root MuiLink-underlineHover css-gohwx0-MuiTypography-root-MuiLink-root"
+            href="#"
+          >
+            Laptops
+          </a>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator css-jhr02i-MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularMedium css-381fl8-MuiTypography-root"
+          >
+            Gaming Laptops
+          </span>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+`;

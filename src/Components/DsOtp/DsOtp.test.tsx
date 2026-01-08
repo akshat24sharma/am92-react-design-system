@@ -923,6 +923,8 @@ describe("DsOtp Component", () => {
           if (inputBase) {
             const computedStyles = getComputedStyle(inputBase);
             const background = computedStyles.background;
+            expect(background).toBe("var(--ds-colour-surfacePrimary)");
+
             // In test environment, CSS custom properties may not resolve, so check for the actual theme color
             const actualcolor = schemeData?.ds?.colour?.surfacePrimary;
             const expectedColor = expectations.expectedColor;
