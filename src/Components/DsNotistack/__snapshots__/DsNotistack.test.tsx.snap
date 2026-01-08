@@ -1,0 +1,92 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsNotistack Component > Snapshot Testing > should match snapshot across all themes > notistack-provider-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    data-testid="themed-content"
+  >
+    Themed Content
+  </div>
+</div>
+`;
+
+exports[`DsNotistack Component > Snapshot Testing > should match snapshot across all themes > notistack-provider-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    data-testid="themed-content"
+  >
+    Themed Content
+  </div>
+</div>
+`;
+
+exports[`DsNotistack Component > Snapshot Testing > should match snapshot across all themes > notistack-provider-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    data-testid="themed-content"
+  >
+    Themed Content
+  </div>
+</div>
+`;
+
+exports[`DsNotistack Component > Snapshot Testing > should match snapshot with custom anchor origin > notistack-provider-custom-anchor 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    data-testid="test-content"
+  >
+    Test Content
+  </div>
+</div>
+`;
+
+exports[`DsNotistack Component > Snapshot Testing > should match snapshot with custom autoHideDuration > notistack-provider-custom-duration 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    data-testid="test-content"
+  >
+    Test Content
+  </div>
+</div>
+`;
+
+exports[`DsNotistack Component > Snapshot Testing > should match snapshot with default provider configuration > notistack-provider-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    data-testid="test-content"
+  >
+    Test Content
+  </div>
+</div>
+`;
+
+exports[`DsNotistack Component > Snapshot Testing > should match snapshot with maxSnack configuration > notistack-provider-max-snack 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    data-testid="test-content"
+  >
+    Test Content
+  </div>
+</div>
+`;

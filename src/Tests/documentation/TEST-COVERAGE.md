@@ -20,6 +20,7 @@
 - [DsLoader](./Components/DsLoader.tests.md) - 38 tests across 9 categories (optimized from 48) with animation testing, theme compatibility, and error handling documentation ✅
 - [DsMenu](./Components/DsMenu.md) - 21 tests across 7 categories with MUI Menu integration, portal rendering, and comprehensive accessibility testing
 - [DsMenuItem](./Components/DsMenuItem.md) -  49 tests across 10 categories and theme testing
+- [DsNotistack](./Components/DsNotistack.tests.md) - 29 tests across 10 categories with notification provider functionality, notistack integration, MUI Alert close button testing, hook-based notification management with enqueueNotistack, and comprehensive theme testing ✨
 - [DsOtp](./Components/DsOtp.md) - 64 tests across 13 categories and theme testing
 - [DsProgressTracker](./Components/DsProgressTracker.tests.md) - 36 tests across 12 categories with stepper functionality, progress tracking, theme testing, and comprehensive variant coverage ✨
 - [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
@@ -79,8 +80,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 34
-- **Total Tests:** 1632 across all tested components (+ 33 DsSearchbar tests)
+- **Total Components Documented:** 35
+- **Total Tests:** 1708 across all tested components (+ 33 DsSearchbar + 43 DsNotistack tests)
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)
