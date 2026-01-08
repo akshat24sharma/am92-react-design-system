@@ -42,6 +42,7 @@ export const DsFabOverrides = {
         ...STATE_STYLES.ACTION_SECONDARY_STATE_SECONDARY
       } as CSSInterpolation,
       default: {
+        color: 'var(--ds-colour-typoPrimary)',
         backgroundColor: 'var(--ds-colour-surfacePrimary)',
         borderWidth: '1px',
         borderStyle: 'solid',
