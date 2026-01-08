@@ -770,149 +770,170 @@ it("should support tab navigation", async () => {
 ## Theme Testing
 
 ### Overview
-Theme testing in the AM92 React Design System focuses on ensuring components render correctly and behave consistently across all supported theme modes: **light**, **dark**, and **highContrast**. This is not about testing the theme system itself, but about testing component behavior within different theme contexts to ensure visual consistency and proper styling application.
+Theme testing in the AM92 React Design System focuses on ensuring components render correctly and behave consistently across all supported theme modes: **light**, **dark**, and **highContrast**. This validates that the design system's theme integration works correctly and components maintain visual consistency across different user preferences.
 
 ### Why Theme Testing Matters
 - ✅ **Visual consistency** - Components should look appropriate in all theme modes
 - ✅ **Color contrast compliance** - Ensure accessibility across themes, especially high contrast
-- ✅ **Style inheritance** - Verify components inherit theme colors correctly
+- ✅ **Design system integration** - Verify components use design system colors correctly
 - ✅ **Brand consistency** - Maintain design system integrity across theme modes
 - ✅ **Regression prevention** - Catch theme-specific styling issues early
 - ✅ **User experience** - Ensure seamless theme switching experience
 
 ### Critical Theme Testing Rules
 
-#### 🚨 NEVER Use Hardcoded Colors
-**CRITICAL**: Never use hardcoded RGBA, hex, or named colors in theme tests. Always use the actual theme configuration.
+#### 🚨 NEVER Use Hardcoded Colors in Tests
+**CRITICAL**: Never use hardcoded hex values, RGBA, or named colors in theme tests. Always use PALETTE constants to make tests resilient to palette changes.
 
 ```tsx
-// ❌ CRITICAL MISTAKE - Hardcoded colors will break across themes
+// ❌ CRITICAL MISTAKE - Hardcoded colors make tests brittle
 it("should have correct colors", () => {
-  const { container } = renderWithTheme(<DsCheckbox checked />, 'light');
-  const element = screen.getByRole("checkbox");
+  const { container } = render(<DsBreadcrumbs />, { colorScheme: 'light' });
+  const expectedColors = {
+    typoPrimary: '#282828',        // WRONG - hardcoded hex
+    actionSecondary: '#ED1164'     // WRONG - hardcoded hex
+  };
   
-  // NEVER DO THIS - hardcoded colors don't account for theme transformations
-  expect(element).toHaveStyle('color: #97144D'); // Primary color hardcoded
-  expect(element).toHaveStyle('background-color: rgba(151, 20, 77, 0.12)'); // RGBA hardcoded
+  // This will break if palette values change!
+  expect(expectedColors.typoPrimary).toBe('#282828');
 });
 
-// ✅ CORRECT - Use actual theme configuration
-import { getColorScheme } from '../../Theme';
+// ✅ CORRECT - Use PALETTE constants for resilient tests
+import { getColorScheme } from '../../Theme/getColorScheme';
 import { PALETTE } from '../../Constants';
 
 it("should use correct theme colors", () => {
   const themeColorScheme = getColorScheme(PALETTE);
-  const schemeData = themeColorScheme.light;
-  
-  const { container } = renderWithTheme(<DsCheckbox checked />, 'light');
-  
-  // Use actual theme colors from the color scheme
-  const expectedPrimaryColor = (schemeData?.palette?.primary as any)?.main;
-  expect(expectedPrimaryColor).toBeTruthy();
-  expect(expectedPrimaryColor).toMatch(/^#[0-9A-Fa-f]{6}$/); // Validate it's a valid color
-  
-  // Test CSS class application instead of style values
-  const element = screen.getByRole("checkbox");
-  expect(element).toHaveClass('MuiCheckbox-colorPrimary');
-});
-```
-
-#### 🚨 ALWAYS Use getColorScheme Function
-**CRITICAL**: Always use the actual `getColorScheme` function from your theme system instead of manual if/else color mapping.
-
-```tsx
-// ❌ WRONG - Manual color mapping duplicates theme logic
-const getManualColors = (colorScheme: string, color: string) => {
-  if (colorScheme === 'light') {
-    if (color === 'primary') return '#97144D';
-    if (color === 'secondary') return '#ED1164';
-    // ... manual mapping
-  } else if (colorScheme === 'dark') {
-    if (color === 'primary') return '#97144D';
-    if (color === 'secondary') return '#ED1164';
-    // ... manual mapping
-  }
-  // This approach is error-prone and doesn't reflect actual theme behavior
-};
-
-// ✅ CORRECT - Use actual theme function
-import { getColorScheme } from '../../Theme';
-import { PALETTE } from '../../Constants';
-
-it("should use correct colors across all themes", () => {
-  const themeColorScheme = getColorScheme(PALETTE);
-  const colors = ['primary', 'secondary', 'error', 'warning', 'info', 'success'] as const;
   const colorSchemes = ['light', 'dark', 'highContrast'] as const;
   
   colorSchemes.forEach(colorScheme => {
-    colors.forEach(color => {
-      const schemeData = themeColorScheme[colorScheme];
-      const { container } = renderWithTheme(
-        <DsCheckbox color={color} checked />, 
-        colorScheme
-      );
-      
-      // Use direct theme access
-      const expectedColor = (schemeData?.palette?.[color] as any)?.main;
-      expect(expectedColor).toBeTruthy();
-      
-      // Test CSS class instead of color value
-      const element = screen.getByRole("checkbox");
-      expect(element).toHaveClass(`MuiCheckbox-color${color.charAt(0).toUpperCase() + color.slice(1)}`);
-    });
+    const schemeData = themeColorScheme[colorScheme];
+    const expectedColors = {
+      typoPrimary: schemeData?.ds?.colour?.typoPrimary,
+      actionSecondary: schemeData?.ds?.colour?.actionSecondary
+    };
+    
+    // Validate theme-specific values using actual PALETTE constants
+    switch (colorScheme) {
+      case 'light':
+        expect(expectedColors.typoPrimary).toBe(PALETTE.primaryBlackLight);
+        expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+        break;
+      case 'dark':
+        expect(expectedColors.typoPrimary).toBe(PALETTE.secondaryGrey10);
+        expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+        break;
+      case 'highContrast':
+        expect(expectedColors.typoPrimary).toBe(PALETTE.primaryWhite);
+        expect(expectedColors.actionSecondary).toBe(PALETTE.highContrast1);
+        break;
+    }
   });
 });
 ```
 
-#### 🚨 AVOID Loose Validation Patterns  
-**CRITICAL**: Never use broad OR conditions that could pass invalid colors. Always validate specific expected colors.
+#### 🚨 Focus on CSS Variables, Not RGB Conversion
+**IMPORTANT**: Modern design systems use CSS variables for theming. Test CSS variable application instead of converting hex to RGB.
 
 ```tsx
-// ❌ WRONG - Loose validation that could pass wrong colors
-const isValidColor = color === color1 || color === color2 || color === color3 || color === color4;
-expect(isValidColor).toBe(true); // Too permissive - could pass unexpected colors
+// ❌ UNNECESSARILY COMPLEX - Converting hex to RGB for comparison
+it("should apply theme colors", () => {
+  const { container } = render(<DsBreadcrumbs />, { colorScheme: 'light' });
+  
+  const link = screen.getByTestId('breadcrumb-link');
+  const computedStyle = window.getComputedStyle(link);
+  const actualColor = computedStyle.color;
+  
+  // Don't do this - complex hex to RGB conversion
+  const hexToRgb = (hex: string) => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? `rgb(${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)})` : null;
+  };
+  
+  const expectedRgb = hexToRgb('#282828');
+  expect(actualColor).toBe(expectedRgb); // Fragile and complex!
+});
 
-// ❌ WRONG - Generic pattern matching 
-const isValidColor = color.includes('--palette-') || color.includes('var(');
-expect(isValidColor).toBe(true); // Could match any CSS variable
-
-// ✅ CORRECT - Specific design system validation
-const isValidThemeColor = color === 'var(--ds-colour-actionSecondary)' ||  // Future design system color
-                         color === 'var(--palette-action-active)' ||      // Current MUI color
-                         color === 'var(--palette-text-primary)' ||       // Another MUI text color
-                         color === expectedTextColor;                     // Fallback to theme text color
-expect(isValidThemeColor).toBe(true); // Only passes for documented, expected colors
+// ✅ BETTER - Test CSS variable application directly
+it("should apply design system CSS variables", () => {
+  const { container } = render(<DsBreadcrumbs />, { colorScheme: 'light' });
+  
+  const link = screen.getByTestId('breadcrumb-link');
+  const computedStyle = window.getComputedStyle(link);
+  const actualColor = computedStyle.color;
+  
+  // Test CSS variable application (what actually happens in the browser)
+  if (actualColor.includes('var(')) {
+    expect(actualColor).toContain('--ds-colour');
+  }
+  
+  // Test component structure and classes
+  expect(link).toHaveClass('MuiLink-root');
+});
 ```
 
-#### 🚨 MANDATORY Provider Setup
-**CRITICAL**: Always use `ThemeProvider` instead of deprecated `CssVarsProvider` for theme testing.
+#### 🚨 Test Expected vs Actual, Not Implementation Details
+**FOCUS**: Test that expected theme colors match the theme configuration, not specific CSS property values.
 
 ```tsx
-// ❌ WRONG - Using deprecated CssVarsProvider
-import { CssVarsProvider } from '@mui/material/styles';
+// ❌ TESTING IMPLEMENTATION DETAILS - Testing specific CSS properties
+it("should have exact CSS color properties", () => {
+  const { container } = render(<DsBreadcrumbs />, { colorScheme: 'light' });
+  
+  const link = screen.getByTestId('link');
+  const computedStyle = window.getComputedStyle(link);
+  
+  // This tests browser rendering details, not theme integration
+  expect(computedStyle.color).toBe('rgb(40, 40, 40)');
+  expect(computedStyle.backgroundColor).toBe('rgba(0, 0, 0, 0)');
+});
 
-function badRenderWithTheme(component: React.ReactElement, colorScheme: string) {
-  return render(
-    <CssVarsProvider theme={theme}> {/* CssVarsProvider is deprecated */}
-      <div data-mui-color-scheme={colorScheme}>
-        {component}
-      </div>
-    </CssVarsProvider>
-  );
-}
+// ✅ TESTING BEHAVIOR - Test theme integration and expected values
+it("should use correct theme colors from palette", () => {
+  const themeColorScheme = getColorScheme(PALETTE);
+  const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+  
+  colorSchemes.forEach(colorScheme => {
+    const schemeData = themeColorScheme[colorScheme];
+    const expectedColors = {
+      typoPrimary: schemeData?.ds?.colour?.typoPrimary,
+      actionSecondary: schemeData?.ds?.colour?.actionSecondary
+    };
 
-// ✅ CORRECT - Using modern ThemeProvider
-import { ThemeProvider } from '@mui/material/styles';
-
-function renderWithTheme(component: React.ReactElement, colorScheme: string = 'light') {
-  return render(
-    <ThemeProvider theme={theme}>
-      <div data-mui-color-scheme={colorScheme}>
-        {component}
-      </div>
-    </ThemeProvider>
-  );
-}
+    const { container, unmount } = render(
+      <DsBreadcrumbs>
+        <DsLink href="#">Home</DsLink>
+        <DsTypography>Current</DsTypography>
+      </DsBreadcrumbs>,
+      { colorScheme }
+    );
+    
+    // Test 1: Validate expected colors are valid hex format
+    expect(expectedColors.typoPrimary).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    expect(expectedColors.actionSecondary).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    
+    // Test 2: Validate theme-specific palette values
+    switch (colorScheme) {
+      case 'light':
+        expect(expectedColors.typoPrimary).toBe(PALETTE.primaryBlackLight);
+        expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+        break;
+      case 'dark':
+        expect(expectedColors.typoPrimary).toBe(PALETTE.secondaryGrey10);
+        expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+        break;
+      case 'highContrast':
+        expect(expectedColors.typoPrimary).toBe(PALETTE.primaryWhite);
+        expect(expectedColors.actionSecondary).toBe(PALETTE.highContrast1);
+        break;
+    }
+    
+    // Test 3: Validate component structure
+    expect(container.firstChild).toHaveAttribute('data-mui-color-scheme', colorScheme);
+    
+    unmount();
+  });
+});
 ```
 
 #### 🚨 Complete Theme Coverage
@@ -923,7 +944,7 @@ function renderWithTheme(component: React.ReactElement, colorScheme: string = 'l
 describe("Theme Testing", () => {
   it("should work in light and dark themes", () => {
     ['light', 'dark'].forEach(theme => { // Missing highContrast!
-      const { container } = renderWithTheme(<ComponentName />, theme);
+      const { container } = render(<ComponentName />, { colorScheme: theme });
       expect(container.firstChild).toMatchSnapshot(`component-${theme}`);
     });
   });
@@ -935,8 +956,154 @@ describe("Theme Testing", () => {
   
   it("should work across all theme modes", () => {
     colorSchemes.forEach(theme => {
-      const { container } = renderWithTheme(<ComponentName />, theme);
+      const { container } = render(<ComponentName />, { colorScheme: theme });
       expect(container.firstChild).toMatchSnapshot(`component-${theme}`);
+    });
+  });
+});
+```
+
+### Theme Testing Checklist: What to Test vs What NOT to Test
+
+#### ✅ **WHAT TO TEST - Theme Integration & Behavior**
+
+1. **Theme Configuration Validation**
+   ```tsx
+   // ✅ Test that theme colors are properly configured
+   const themeColorScheme = getColorScheme(PALETTE);
+   const expectedColors = {
+     typoPrimary: themeColorScheme.light?.ds?.colour?.typoPrimary
+   };
+   expect(expectedColors.typoPrimary).toBe(PALETTE.primaryBlackLight);
+   ```
+
+2. **Component Structure Across Themes**
+   ```tsx
+   // ✅ Test that components render correctly in all themes
+   colorSchemes.forEach(theme => {
+     const { container } = render(<DsBreadcrumbs />, { colorScheme: theme });
+     expect(screen.getByRole("navigation")).toBeInTheDocument();
+     expect(container.firstChild).toHaveAttribute('data-mui-color-scheme', theme);
+   });
+   ```
+
+3. **CSS Variable Application**
+   ```tsx
+   // ✅ Test that design system CSS variables are applied
+   const computedStyle = window.getComputedStyle(element);
+   if (computedStyle.color.includes('var(')) {
+     expect(computedStyle.color).toContain('--ds-colour');
+   }
+   ```
+
+4. **Theme Consistency**
+   ```tsx
+   // ✅ Test that different themes have different color values
+   const lightColors = themeColorScheme.light?.ds?.colour;
+   const darkColors = themeColorScheme.dark?.ds?.colour;
+   expect(lightColors?.typoPrimary).not.toBe(darkColors?.typoPrimary);
+   ```
+
+5. **Component Functionality Across Themes**
+   ```tsx
+   // ✅ Test that components work the same in all themes
+   colorSchemes.forEach(theme => {
+     const { unmount } = render(<DsButton onClick={handleClick} />, { colorScheme: theme });
+     const button = screen.getByRole("button");
+     fireEvent.click(button);
+     expect(handleClick).toHaveBeenCalled();
+     unmount();
+   });
+   ```
+
+#### ❌ **WHAT NOT TO TEST - Implementation Details**
+
+1. **DON'T Test Hardcoded Color Values**
+   ```tsx
+   // ❌ NEVER hardcode colors - makes tests brittle
+   expect(element).toHaveStyle('color: #282828');
+   expect(computedStyle.color).toBe('rgb(40, 40, 40)');
+   ```
+
+2. **DON'T Test Complex RGB/HSL Conversions**
+   ```tsx
+   // ❌ AVOID unnecessary complexity
+   const hexToRgb = (hex) => { /* complex conversion */ };
+   const expectedRgb = hexToRgb(expectedColor);
+   expect(actualColor).toBe(expectedRgb);
+   ```
+
+3. **DON'T Test Browser-Specific CSS Rendering**
+   ```tsx
+   // ❌ DON'T test browser CSS computation details
+   expect(computedStyle.fontSize).toBe('16px');
+   expect(computedStyle.lineHeight).toBe('1.5');
+   ```
+
+4. **DON'T Test Theme System Implementation**
+   ```tsx
+   // ❌ DON'T test how the theme system works internally
+   expect(theme.palette.mode).toBe('light');
+   expect(theme.vars).toBeDefined();
+   ```
+
+5. **DON'T Test MUI Internal CSS Classes**
+   ```tsx
+   // ❌ DON'T test MUI's internal CSS class generation
+   expect(element.className).toContain('MuiButton-root-jss123');
+   ```
+
+#### 💡 **RECOMMENDED Testing Pattern**
+
+```tsx
+describe("Theme Testing & MUI Integration", () => {
+  it("should apply correct theme colors by validating palette integration", () => {
+    const themeColorScheme = getColorScheme(PALETTE);
+    const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+    
+    colorSchemes.forEach(colorScheme => {
+      const schemeData = themeColorScheme[colorScheme];
+      const expectedColors = {
+        typoPrimary: schemeData?.ds?.colour?.typoPrimary,
+        actionSecondary: schemeData?.ds?.colour?.actionSecondary
+      };
+
+      const { container, unmount } = render(
+        <DsBreadcrumbs>
+          <DsLink href="#" data-testid={`link-${colorScheme}`}>Home</DsLink>
+          <DsTypography data-testid={`text-${colorScheme}`}>Current</DsTypography>
+        </DsBreadcrumbs>,
+        { colorScheme }
+      );
+      
+      // ✅ Test 1: Validate expected colors use PALETTE constants
+      switch (colorScheme) {
+        case 'light':
+          expect(expectedColors.typoPrimary).toBe(PALETTE.primaryBlackLight);
+          expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+          break;
+        case 'dark':
+          expect(expectedColors.typoPrimary).toBe(PALETTE.secondaryGrey10);
+          expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+          break;
+        case 'highContrast':
+          expect(expectedColors.typoPrimary).toBe(PALETTE.primaryWhite);
+          expect(expectedColors.actionSecondary).toBe(PALETTE.highContrast1);
+          break;
+      }
+      
+      // ✅ Test 2: Validate CSS variable integration
+      const link = screen.getByTestId(`link-${colorScheme}`);
+      const computedStyle = window.getComputedStyle(link);
+      if (computedStyle.color.includes('var(')) {
+        expect(computedStyle.color).toContain('--ds-colour');
+      }
+      
+      // ✅ Test 3: Validate component structure
+      expect(container.firstChild).toHaveAttribute('data-mui-color-scheme', colorScheme);
+      expect(link).toHaveClass('MuiLink-root');
+      
+      unmount();
     });
   });
 });
@@ -944,113 +1111,125 @@ describe("Theme Testing", () => {
 
 ### Theme Testing Implementation
 
-#### 1. Theme Testing Utilities Setup
-Import the theme testing utilities at the top of your test files:
+#### 1. Basic Theme Testing Setup
+Import the required dependencies at the top of your test files:
 
 ```tsx
-// 🎯 ESSENTIAL: Color testing imports
-import { renderWithTheme, testAllThemes } from "../../Tests/Mocks/themeTestUtils";
+// 🎯 ESSENTIAL: Theme testing imports
+import { render, screen } from "../../Tests/Mocks/testUtils";
 import getColorScheme from "../../Theme/getColorScheme";
 import { PALETTE } from "../../Constants";
 
-describe("Theme Testing", () => {
-  it("should render correctly in light theme", () => {
-    const { container } = renderWithTheme(<ComponentName />, 'light');
+describe("Theme Testing & MUI Integration", () => {
+  it("should render correctly across all color schemes", () => {
+    const colorSchemes = ['light', 'dark', 'highContrast'] as const;
     
-    const element = screen.getByRole("button");
-    expect(element).toBeInTheDocument();
-    expect(container.firstChild).toMatchSnapshot('component-light-theme');
-  });
-
-  it("should render correctly in dark theme", () => {
-    const { container } = renderWithTheme(<ComponentName />, 'dark');
-    
-    const element = screen.getByRole("button");
-    expect(element).toBeInTheDocument();
-    expect(container.firstChild).toMatchSnapshot('component-dark-theme');
-  });
-
-  it("should render correctly in high contrast theme", () => {
-    const { container } = renderWithTheme(<ComponentName />, 'highContrast');
-    
-    const element = screen.getByRole("button");
-    expect(element).toBeInTheDocument();
-    expect(container.firstChild).toMatchSnapshot('component-high-contrast-theme');
-  });
-});
-```
-
-**Note**: The theme utilities use `ThemeProvider` with your actual design system theme and wrap components in `DsBox` with `data-mui-color-scheme` attributes for proper theme context.
-
-#### 2. Proper Theme Color Testing Pattern
-
-The ONLY correct way to test theme colors:
-
-```tsx
-describe("Theme Testing", () => {
-  // Import once at the top of the test
-  const themeColorScheme = getColorScheme(PALETTE);
-  const colors = ['primary', 'secondary', 'error', 'warning', 'info', 'success'] as const;
-  const colorSchemes = ['light', 'dark', 'highContrast'] as const;
-  
-  it("should use correct design system colors across all themes", () => {
-    colorSchemes.forEach(theme => {
-      colors.forEach(color => {
-        const schemeData = themeColorScheme[theme];
-        
-        const { container } = renderWithTheme(
-          <DsCheckbox color={color} checked />, 
-          theme
-        );
-        
-        // Get expected color from the theme's palette - NEVER hardcode!
-        const expectedColor = (schemeData?.palette?.[color] as any)?.main;
-        
-        expect(expectedColor).toBeTruthy(); // Ensure we have a valid color
-        expect(expectedColor).toMatch(/^#[0-9A-Fa-f]{6}$/); // Validate hex format
-        
-        // Test CSS class application instead of style values
-        const element = screen.getByRole("checkbox");
-        expect(element).toHaveClass(`MuiCheckbox-color${color.charAt(0).toUpperCase() + color.slice(1)}`);
-        
-        // Verify theme mode is correctly applied
-        const wrapperElement = container.firstChild as HTMLElement;
-        expect(wrapperElement).toHaveAttribute('data-mui-color-scheme', theme);
-      });
+    colorSchemes.forEach(colorScheme => {
+      const { container, unmount } = render(
+        <DsBreadcrumbs>
+          <DsLink href="#">Home</DsLink>
+          <DsTypography>Current</DsTypography>
+        </DsBreadcrumbs>,
+        { colorScheme }
+      );
+      
+      // Verify color scheme is applied
+      const wrapperElement = container.firstChild as HTMLElement;
+      expect(wrapperElement).toHaveAttribute('data-mui-color-scheme', colorScheme);
+      
+      // Verify component structure
+      expect(screen.getByRole("navigation")).toBeInTheDocument();
+      expect(screen.getByText("Home")).toBeInTheDocument();
+      expect(screen.getByText("Current")).toBeInTheDocument();
+      
+      unmount();
     });
   });
-
-  it("should verify theme differences", () => {
-    const themeColorScheme = getColorScheme(PALETTE);
-    
-    // Verify light vs dark theme differences using actual theme configuration
-    const lightSchemeData = themeColorScheme.light;
-    const darkSchemeData = themeColorScheme.dark;
-    const highContrastData = themeColorScheme.highContrast;
-    
-    // Verify we have different schemes
-    expect(lightSchemeData).toBeTruthy();
-    expect(darkSchemeData).toBeTruthy();
-    expect(highContrastData).toBeTruthy();
-    
-    // Text colors should be different between light and dark
-    const lightTextColor = (lightSchemeData?.palette?.text as any)?.primary;
-    const darkTextColor = (darkSchemeData?.palette?.text as any)?.primary;
-    
-    expect(lightTextColor).toBeTruthy();
-    expect(darkTextColor).toBeTruthy();
-    expect(lightTextColor).not.toBe(darkTextColor);
-    
-    // Primary color should be consistent across themes (in most design systems)
-    const lightPrimaryColor = (lightSchemeData?.palette?.primary as any)?.main;
-    const darkPrimaryColor = (darkSchemeData?.palette?.primary as any)?.main;
-    
-    expect(lightPrimaryColor).toBeTruthy();
-    expect(darkPrimaryColor).toBeTruthy();
-    // Note: Whether these are the same depends on your design system
-  });
 });
 ```
+
+#### 2. Theme Color Validation Pattern
+The correct way to test theme colors using PALETTE constants:
+
+```tsx
+describe("Theme Testing & MUI Integration", () => {
+  it("should use correct theme colors from PALETTE constants", () => {
+    const themeColorScheme = getColorScheme(PALETTE);
+    const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+    
+    colorSchemes.forEach(colorScheme => {
+      const schemeData = themeColorScheme[colorScheme];
+      const expectedColors = {
+        typoPrimary: schemeData?.ds?.colour?.typoPrimary,
+        actionSecondary: schemeData?.ds?.colour?.actionSecondary
+      };
+
+      const { container, unmount } = render(
+        <DsBreadcrumbs>
+          <DsLink href="#" data-testid={`link-${colorScheme}`}>Home</DsLink>
+          <DsTypography data-testid={`text-${colorScheme}`}>Current</DsTypography>
+        </DsBreadcrumbs>,
+        { colorScheme }
+      );
+      
+      // Test 1: Validate expected colors use PALETTE constants
+      expect(expectedColors.typoPrimary).toMatch(/^#[0-9A-Fa-f]{6}$/);
+      expect(expectedColors.actionSecondary).toMatch(/^#[0-9A-Fa-f]{6}$/);
+      
+      // Test 2: Validate theme-specific PALETTE values (resilient to palette changes)
+      switch (colorScheme) {
+        case 'light':
+          expect(expectedColors.typoPrimary).toBe(PALETTE.primaryBlackLight);
+          expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+          break;
+        case 'dark':
+          expect(expectedColors.typoPrimary).toBe(PALETTE.secondaryGrey10);
+          expect(expectedColors.actionSecondary).toBe(PALETTE.secondary100);
+          break;
+        case 'highContrast':
+          expect(expectedColors.typoPrimary).toBe(PALETTE.primaryWhite);
+          expect(expectedColors.actionSecondary).toBe(PALETTE.highContrast1);
+          break;
+      }
+      
+      // Test 3: Validate CSS variable integration (optional)
+      const link = screen.getByTestId(`link-${colorScheme}`);
+      const computedStyle = window.getComputedStyle(link);
+      if (computedStyle.color.includes('var(')) {
+        expect(computedStyle.color).toContain('--ds-colour');
+      }
+      
+      // Test 4: Validate component structure
+      expect(container.firstChild).toHaveAttribute('data-mui-color-scheme', colorScheme);
+      expect(link).toHaveClass('MuiLink-root');
+      
+      unmount();
+    });
+  });
+  
+  it("should maintain color consistency across theme switches", () => {
+    const themeColorScheme = getColorScheme(PALETTE);
+    const colorSchemes = ['light', 'dark', 'highContrast'] as const;
+    
+    colorSchemes.forEach(colorScheme => {
+      const colors = themeColorScheme[colorScheme]?.ds?.colour;
+      
+      // Ensure each theme has the required colors and they are valid hex
+      expect(colors?.typoPrimary).toBeTruthy();
+      expect(colors?.typoPrimary).toMatch(/^#[0-9A-Fa-f]{6}$/);
+      expect(colors?.actionSecondary).toBeTruthy();
+      expect(colors?.actionSecondary).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    });
+    
+    // Test that themes have different color values (not all the same)
+    const lightColors = themeColorScheme.light?.ds?.colour;
+    const darkColors = themeColorScheme.dark?.ds?.colour;
+    const hcColors = themeColorScheme.highContrast?.ds?.colour;
+    
+    expect(lightColors?.typoPrimary).not.toBe(darkColors?.typoPrimary);
+    expect(darkColors?.typoPrimary).not.toBe(hcColors?.typoPrimary);
+  });
+});
 
 #### 3. Theme Testing Consolidation Pattern
 
