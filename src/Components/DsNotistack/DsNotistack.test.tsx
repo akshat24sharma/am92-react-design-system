@@ -650,7 +650,7 @@ describe('DsNotistack Component', () => {
       })
     })
 
-    it('should handle closeNotistack with invalid key', () => {
+    it('should handle closeNotistack with invalid key', async () => {
       render(
         <DsNotistackProvider>
           <DsButton
@@ -665,7 +665,7 @@ describe('DsNotistack Component', () => {
       const button = screen.getByTestId('invalid-close')
 
       // Should not crash when trying to close non-existent notification
-      expect(() => user.click(button)).not.toThrow()
+      await user.click(button)
     })
   })
 

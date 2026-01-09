@@ -133,10 +133,8 @@ describe('DsSearchbar Component', () => {
       const input = screen.getByRole('combobox')
       await user.click(input)
 
-      await waitFor(async () => {
-        const option = screen.getByText('iPhone 14')
-        await user.click(option)
-      })
+      const option = screen.getByText('iPhone 14')
+      await user.click(option)
 
       expect(handleChange).toHaveBeenCalledWith('user-search', 'iPhone 14')
     })
@@ -270,10 +268,8 @@ describe('DsSearchbar Component', () => {
       const input = screen.getByRole('combobox')
       await user.click(input)
 
-      await waitFor(() => {
-        const option = screen.getByText('iPhone 14')
-        user.click(option)
-      })
+      const option = screen.getByText('iPhone 14')
+      user.click(option)
 
       await waitFor(() => {
         expect(handleChange).toHaveBeenCalledWith('product-search', 'iPhone 14')
