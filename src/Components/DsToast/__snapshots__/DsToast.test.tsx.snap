@@ -1,0 +1,505 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot across all themes > toast-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      Theme snapshot for 
+      dark
+    </div>
+    <div
+      class="MuiAlert-action css-10gobbg-MuiAlert-action"
+    >
+      <button
+        aria-label="Close"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-70lrtq-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        title="Close"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeSmall ri-close-line css-20vhad-MuiIcon-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot across all themes > toast-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      Theme snapshot for 
+      highContrast
+    </div>
+    <div
+      class="MuiAlert-action css-10gobbg-MuiAlert-action"
+    >
+      <button
+        aria-label="Close"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-70lrtq-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        title="Close"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeSmall ri-close-line css-20vhad-MuiIcon-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot across all themes > toast-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      Theme snapshot for 
+      light
+    </div>
+    <div
+      class="MuiAlert-action css-10gobbg-MuiAlert-action"
+    >
+      <button
+        aria-label="Close"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-70lrtq-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        title="Close"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeSmall ri-close-line css-20vhad-MuiIcon-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot for real-world notification scenario > toast-real-world-scenario 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-or8uz9-MuiPaper-root-MuiAlert-root"
+      role="alert"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+      />
+      <div
+        class="MuiAlert-message css-18t233k-MuiAlert-message"
+      >
+        File uploaded successfully
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-or8uz9-MuiPaper-root-MuiAlert-root"
+      role="alert"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+      />
+      <div
+        class="MuiAlert-message css-18t233k-MuiAlert-message"
+      >
+        Storage space is running low
+      </div>
+      <div
+        class="MuiAlert-action css-10gobbg-MuiAlert-action"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            View Details
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+      role="alert"
+      style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+    >
+      <div
+        class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+      />
+      <div
+        class="MuiAlert-message css-18t233k-MuiAlert-message"
+      >
+        Network connection failed
+      </div>
+      <div
+        class="MuiAlert-action css-10gobbg-MuiAlert-action"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Retry
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with action > toast-with-action 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      Toast with action snapshot
+    </div>
+    <div
+      class="MuiAlert-action css-10gobbg-MuiAlert-action"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-onvnwk-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <span>
+          Action
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with all severity variants > toast-severity-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      error
+       toast message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with all severity variants > toast-severity-info 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      info
+       toast message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with all severity variants > toast-severity-success 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      success
+       toast message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with all severity variants > toast-severity-warning 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      warning
+       toast message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with close button > toast-closeable 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      Closeable toast snapshot
+    </div>
+    <div
+      class="MuiAlert-action css-10gobbg-MuiAlert-action"
+    >
+      <button
+        aria-label="Close"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-70lrtq-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        title="Close"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeSmall ri-close-line css-20vhad-MuiIcon-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with complex content > toast-complex-content 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-icon css-g3hvmq-MuiAlert-icon"
+    />
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-subheadingSemiboldDefault MuiTypography-gutterBottom css-dvrfor-MuiTypography-root"
+        >
+          Operation Successful
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+        >
+          Your data has been saved successfully. You can now continue with the next step.
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with custom slots > toast-custom-slot 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      Custom slot snapshot
+    </div>
+    <div
+      class="MuiAlert-action css-10gobbg-MuiAlert-action"
+    >
+      <button
+        aria-label="Close"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-70lrtq-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        title="Close"
+        type="button"
+      >
+        <span>
+          ×
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with default props > toast-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      Default toast snapshot
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with different variants > toast-variant-filled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-filledDefault MuiAlert-filled css-15iat2h-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      filled
+       variant toast
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with different variants > toast-variant-outlined 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-outlinedDefault MuiAlert-outlined css-m93mu2-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      outlined
+       variant toast
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsToast Component > Snapshot Testing > should match snapshot with different variants > toast-variant-standard 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorDefault MuiAlert-standardDefault MuiAlert-standard css-1h3s1bq-MuiPaper-root-MuiAlert-root"
+    role="alert"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiAlert-message css-18t233k-MuiAlert-message"
+    >
+      standard
+       variant toast
+    </div>
+  </div>
+</div>
+`;
