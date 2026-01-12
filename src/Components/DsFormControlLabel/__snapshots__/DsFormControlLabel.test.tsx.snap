@@ -1,0 +1,1108 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot across all themes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      dark theme
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot across all themes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      highContrast theme
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot across all themes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      light theme
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot across design system themes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Theme Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot across design system themes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Theme Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot across design system themes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Theme Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot in design system form context 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
+    >
+      Form Label
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          data-indeterminate="false"
+          type="checkbox"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Form Control Label
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot in real-world scenario - form integration 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-tdxhcn-MuiPaper-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <fieldset
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <legend
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
+      >
+        User Preferences
+      </legend>
+      <div
+        class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+              data-indeterminate="false"
+              name="notifications"
+              type="checkbox"
+              value="email"
+            />
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+            />
+          </span>
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+          >
+            Email notifications
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled="true"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            tabindex="-1"
+          >
+            <input
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+              data-indeterminate="false"
+              disabled=""
+              name="notifications"
+              type="checkbox"
+              value="sms"
+            />
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+            />
+          </span>
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label Mui-disabled css-p4afvq-MuiTypography-root"
+          >
+            SMS notifications
+          </span>
+        </label>
+      </div>
+      <p
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+        helpertext=""
+      >
+        Choose your notification preferences
+      </p>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot when checked 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-checked MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-fill css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Checked Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot when disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      tabindex="-1"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label Mui-disabled css-p4afvq-MuiTypography-root"
+    >
+      Disabled Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with all state combinations > state-combination-0 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-checked MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-fill css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      State Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with all state combinations > state-combination-1 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      State Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with all state combinations > state-combination-2 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-checked Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      tabindex="-1"
+    >
+      <input
+        checked=""
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-fill css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label Mui-disabled css-p4afvq-MuiTypography-root"
+    >
+      State Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with all state combinations > state-combination-3 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      tabindex="-1"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label Mui-disabled css-p4afvq-MuiTypography-root"
+    >
+      State Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with default props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Default Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with default styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Default Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with different control types > control-type-checkbox 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      checkbox control
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with different control types > control-type-radio 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          type="radio"
+          value=""
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      />
+    </label>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      radio control
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with different control types > control-type-switch 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <div
+      class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1gr7bus-MuiToggleButtonGroup-root"
+      ds-variant="switch"
+      name=""
+      role="group"
+    >
+      <button
+        aria-pressed="false"
+        class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+        tabindex="0"
+        type="button"
+        value="true"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+        >
+          YES
+        </span>
+      </button>
+      <button
+        aria-pressed="true"
+        class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-lthc2l-MuiButtonBase-root-MuiToggleButton-root"
+        tabindex="0"
+        type="button"
+        value="false"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-supportBoldTextButton css-fcmozo-MuiTypography-root"
+        >
+          NO
+        </span>
+      </button>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      switch control
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with different label placements > label-placement-bottom 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementBottom css-2el9ly-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      bottom placement
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with different label placements > label-placement-end 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      end placement
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with different label placements > label-placement-start 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementStart css-1divhpn-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      start placement
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with different label placements > label-placement-top 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementTop css-1lu0jwk-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      top placement
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with disabled state overrides 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      tabindex="-1"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label Mui-disabled css-p4afvq-MuiTypography-root"
+    >
+      Disabled Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with labelPlacement styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementStart css-1divhpn-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Start Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsFormControlLabel > Snapshot Tests > should match snapshot with slotProps customization 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      data-custom="custom-value"
+    >
+      Custom Slots
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Snapshot Tests > should match snapshot across design system themes > theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Theme Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Snapshot Tests > should match snapshot across design system themes > theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Theme Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Snapshot Tests > should match snapshot across design system themes > theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Theme Test
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Snapshot Tests > should match snapshot in design system form context 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
+    >
+      Form Label
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          data-indeterminate="false"
+          type="checkbox"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Form Control Label
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests > should match snapshot with default styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Default Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Snapshot Tests > should match snapshot with disabled state overrides 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+  >
+    <span
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall Mui-disabled MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      tabindex="-1"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        disabled=""
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label Mui-disabled css-p4afvq-MuiTypography-root"
+    >
+      Disabled Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Snapshot Tests > should match snapshot with labelPlacement styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementStart css-1divhpn-MuiFormControlLabel-root"
+  >
+    <span
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-sizeSmall css-f3nshg-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+    >
+      <input
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+        data-indeterminate="false"
+        type="checkbox"
+      />
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeInherit ri-checkbox-blank-line css-12fu13m-MuiIcon-root"
+      />
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+    >
+      Start Label
+    </span>
+  </label>
+</div>
+`;

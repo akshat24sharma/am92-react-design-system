@@ -6,11 +6,36 @@
 - [DsBadge](./Components/DsBadge.tests.md) - 59 tests across 12 categories with badge content handling, theme testing, and comprehensive snapshot coverage ✨
 - [DsBottomSheet](./Components/DsBottomSheet.md) - 61 tests with modal behavior and theme testing
 - [DsButton](./Components/DsButton.md) - 12 tests with form submission and icon handling
+- [DsButtonGroup](./Components/DsButtonGroup.tests.md) - 32 tests across 9 categories with child prop passing, form integration, and comprehensive theme testing ✨
 - [DsCheckbox](./Components/DsCheckbox.md) - 75 tests across 12 categories (Enhanced Theme Testing)
+- [DsHeader](./Components/DsHeader.tests.md) - 22 tests across 8 categories (optimized from 46) with layout composition, logo rendering, and snapshot testing ✅
+- [DsIconButton](./Components/DsIconButton.tests.md) - 66 tests across 10 categories with design system integration, theme testing, and snapshot testing ✨
+- [DsLoader](./Components/DsLoader.tests.md) - 38 tests across 9 categories (optimized from 48) with animation testing, theme compatibility, and error handling documentation ✅
+- [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
+- [DsRadioGroup](./Components/DsRadioGroup.md) - 16 focused tests covering design system styling extensions, sx prop merging, and theme integration
+- [DsSwitch](./components/DsSwitch.tests.md) - 66 tests across 12 categories with toggle functionality, comprehensive theme testing, and real-world scenarios 🎯 (49 passing, 17 requiring adjustment)
+- [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 - [DsChip](./Components/DsChip.md) - 22 tests across 10 categories with theme testing and comprehensive snapshot coverage
 - [DsDatePicker](./Components/DsDatePicker.md) - 61 tests across 12 categories with MUI X DatePicker integration, calendar interaction, and cancel functionality
 - [DsDialog](./Components/DsDialog.md) - 68 tests across 11 categories with comprehensive theme and snapshot testing
 - [DsDivider](./Components/DsDivider.md) - 29 tests across 10 categories with theme compatibility and snapshot coverage
+- [DsTable](./Components/DsTable.md) - 25 tests across 10 categories with theme testing and comprehensive snapshot coverage
+- [DsTab](./Components/DsTab.md) - 25 tests across 10 categories with container variant support, theme testing, and comprehensive interaction coverage
+- [DsDatePicker](./Components/DsDatePicker.md) - 61 tests across 12 categories with MUI X DatePicker integration, calendar interaction, and cancel functionality
+- [DsFab](./Components/DsFab.md) - 47 tests across 12 categories with comprehensive theme testing, event handling, and snapshot coverage
+- [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage
+- [DsMenu](./Components/DsMenu.md) - 21 tests across 7 categories with MUI Menu integration, portal rendering, and comprehensive accessibility testing
+- [DsSlider](./Components/DsSlider.md) - 17 tests across 6 categories with focused testing for direct MUI export component
+- [DsSelect](./Components/DsSelect.md) -  67 tests across 12 categories (Enhanced Theme Testing)
+- [DsRemixIcon](./Components/DsRemixIcon.md) -  25 tests across 7 categories and theme testing
+- [DsList](./Components/DsList.md) -  22 tests across 8 categories and theme testing
+- [DsLink](./Components/DsLink.md) -  22 tests across 9 categories and theme testing
+- [DsTag](./Components/DsTag.md) -  26 tests across 10 categories and theme testing
+- [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing
+- [DsSkeleton](./Components/DsSkeleton.md) -  46 tests across 9 categories and theme testing
+- [DsFormControlLabel](./Components/DsFormControlLabel.tests.md) - 11 focused tests with MUI FormControlLabel integration and design system style overrides
+- [DsMenuItem](./Components/DsMenuItem.md) -  49 tests across 10 categories and theme testing
+- [DsAvatar](./Components/DsAvatar.md) -  45 tests across 10 categories and theme testing
 - [DsDrawer](./components/DsDrawer.tests.md) - 54 tests across 12 categories with Material-UI integration, design system overrides, theme testing, and real-world drawer scenarios ✨
 - [DsIconButton](./Components/DsIconButton.tests.md) - 66 tests across 10 categories with design system integration, theme testing, and snapshot testing ✨
 - [DsInputAdornment](./Components/DsInputAdornment.md) -  56 tests across 11 categories and theme testing
@@ -55,7 +80,7 @@ All tests now **automatically include your design system theme** by default:
 import { render, screen } from '../../Tests/Mocks/testUtils';
 render(<DsCheckbox />); // Uses secondary color (design system default)
 
-// ✅ Test different themes  
+// ✅ Test different themes
 render(<DsCheckbox />, { colorScheme: 'dark' });
 
 // ✅ Edge case - no theme

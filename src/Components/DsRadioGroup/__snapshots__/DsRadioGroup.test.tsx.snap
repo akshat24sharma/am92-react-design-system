@@ -1,0 +1,526 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with custom styling > custom-styled-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormGroup-root MuiRadioGroup-root css-1ou1s3u-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rm:"
+          type="radio"
+          value="styled1"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Styled Option 1
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        aria-disabled="true"
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary Mui-disabled PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary Mui-disabled MuiRadio-root MuiRadio-colorSecondary css-a9kjq3-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+        tabindex="-1"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          disabled=""
+          name=":rm:"
+          type="radio"
+          value="styled2"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label Mui-disabled css-p4afvq-MuiTypography-root"
+      >
+        Styled Option 2
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with default props > default-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormGroup-root MuiRadioGroup-root css-1hhgrml-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rg:"
+          type="radio"
+          value="opt1"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Default Option 1
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rg:"
+          type="radio"
+          value="opt2"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Default Option 2
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with name prop > name-prop-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormGroup-root MuiRadioGroup-root css-1hhgrml-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name="choice-group"
+          type="radio"
+          value="a"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Choice A
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name="choice-group"
+          type="radio"
+          value="b"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Choice B
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with row layout > row-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row MuiRadioGroup-root MuiRadioGroup-row css-a8v0cn-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rk:"
+          type="radio"
+          value="s"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Small
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rk:"
+          type="radio"
+          value="m"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Medium
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rk:"
+          type="radio"
+          value="l"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Large
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshot with selected value > selected-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormGroup-root MuiRadioGroup-root css-1hhgrml-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":ri:"
+          type="radio"
+          value="opt1"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Option 1
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary Mui-checked MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          checked=""
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":ri:"
+          type="radio"
+          value="opt2"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-radio-button-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Selected Option
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":ri:"
+          type="radio"
+          value="opt3"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Option 3
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across theme modes > theme-dark-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiFormGroup-root MuiRadioGroup-root css-1hhgrml-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary Mui-checked MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          checked=""
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rq:"
+          type="radio"
+          value="theme-test"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-radio-button-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Theme Test Option
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rq:"
+          type="radio"
+          value="another"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Another Option
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across theme modes > theme-highContrast-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiFormGroup-root MuiRadioGroup-root css-1hhgrml-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary Mui-checked MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          checked=""
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rs:"
+          type="radio"
+          value="theme-test"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-radio-button-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Theme Test Option
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":rs:"
+          type="radio"
+          value="another"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Another Option
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`DsRadioGroup Component > Snapshot Tests > should match snapshots across theme modes > theme-light-radio-group 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormGroup-root MuiRadioGroup-root css-1hhgrml-MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary Mui-checked MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          checked=""
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":ro:"
+          type="radio"
+          value="theme-test"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-radio-button-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Theme Test Option
+      </span>
+    </label>
+    <label
+      class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1dw706d-MuiFormControlLabel-root"
+    >
+      <span
+        class="MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorSecondary MuiRadio-root MuiRadio-colorSecondary css-csrrtk-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+      >
+        <input
+          class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+          name=":ro:"
+          type="radio"
+          value="another"
+        />
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMedium ri-checkbox-blank-circle-line css-4s0voj-MuiIcon-root"
+        />
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium MuiFormControlLabel-label css-p4afvq-MuiTypography-root"
+      >
+        Another Option
+      </span>
+    </label>
+  </div>
+</div>
+`;

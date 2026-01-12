@@ -672,27 +672,9 @@ describe("DsTab Component", () => {
                 const computedUnselectedTab = getComputedStyle(unselectedTab);
                 const computedSelectedTab = getComputedStyle(selectedTab);
                 const computedDisabledTab = getComputedStyle(disabledTab);
-                
-
-                console.log(`Theme: ${theme}`, {
-                    unselected: {
-                        backgroundColor: computedUnselectedTab.backgroundColor,
-                        color: computedUnselectedTab.color
-                    },
-                    selected: {
-                        backgroundColor: computedSelectedTab.backgroundColor,
-                        color: computedSelectedTab.color
-                    },
-                    disabled: {
-                        backgroundColor: computedDisabledTab.backgroundColor,
-                        color: computedDisabledTab.color
-                    }
-                });
 
                 expect(computedUnselectedTab.color).toBe("var(--palette-text-secondary)");
-
                 expect(computedSelectedTab.color).toBe("var(--palette-secondary-main)");
-
                 expect(computedDisabledTab.color).toBe("var(--palette-text-disabled)");
                 
                 // Check for MUI tab indicator color

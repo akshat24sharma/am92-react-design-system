@@ -1,0 +1,291 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsHeader > Snapshot Testing > should match snapshot for real-world navigation scenario > header-real-world-navigation 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1xp2brj"
+  >
+    <div
+      class="MuiBox-root css-iiakvq"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1kbo5i1"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+        style="width: 100%; height: 100%;"
+      />
+      <picture
+        style="opacity: 0; visibility: hidden;"
+      >
+        <img
+          alt="logo"
+          src="https://storybook.axis.bank.in/v2/assets/subzeroHeader-c9596480.svg"
+          style="display: block; max-width: 100%; height: 100%;"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsHeader > Snapshot Testing > should match snapshot with all props > header-full-configuration 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1xp2brj"
+  >
+    <div
+      class="MuiBox-root css-iiakvq"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-1uk3z64-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Menu
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1kbo5i1"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+        style="width: 100%; height: 100%;"
+      />
+      <picture
+        style="opacity: 0; visibility: hidden;"
+      >
+        <img
+          alt="logo"
+          src="https://storybook.axis.bank.in/v2/assets/subzeroHeader-c9596480.svg"
+          style="display: block; max-width: 100%; height: 100%;"
+        />
+      </picture>
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Brand
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsHeader > Snapshot Testing > should match snapshot with children only > header-children-only 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1xp2brj"
+  >
+    <div
+      class="MuiBox-root css-iiakvq"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsHeader > Snapshot Testing > should match snapshot with complex children > header-complex-children 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1xp2brj"
+  >
+    <div
+      class="MuiBox-root css-iiakvq"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-doxyf4-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-notification-line css-h7bicg-MuiIcon-root"
+            />
+            <span
+              class="MuiTypography-root MuiTypography-supportRegularFootnote css-1g8ncc2-MuiTypography-root"
+            >
+              Notifications
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1kbo5i1"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+        style="width: 100%; height: 100%;"
+      />
+      <picture
+        style="opacity: 0; visibility: hidden;"
+      >
+        <img
+          alt="logo"
+          src="https://storybook.axis.bank.in/v2/assets/subzeroHeader-c9596480.svg"
+          style="display: block; max-width: 100%; height: 100%;"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsHeader > Snapshot Testing > should match snapshot with custom styling > header-custom-styling 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-21y5oy"
+  >
+    <div
+      class="MuiBox-root css-16d01oh"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-settings-line css-h7bicg-MuiIcon-root"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1kbo5i1"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+        style="width: 100%; height: 100%;"
+      />
+      <picture
+        style="opacity: 0; visibility: hidden;"
+      >
+        <img
+          alt="logo"
+          src="https://storybook.axis.bank.in/v2/assets/subzeroHeader-c9596480.svg"
+          style="display: block; max-width: 100%; height: 100%;"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsHeader > Snapshot Testing > should match snapshot with default props > header-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1xp2brj"
+  >
+    <div
+      class="MuiBox-root css-iiakvq"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsHeader > Snapshot Testing > should match snapshot with logo element only > header-logo-element 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1xp2brj"
+  >
+    <div
+      class="MuiBox-root css-iiakvq"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      />
+    </div>
+    <span
+      class="MuiTypography-root MuiTypography-headingBoldMedium css-xiy5ny-MuiTypography-root"
+    >
+      Custom Logo
+    </span>
+  </div>
+</div>
+`;
+
+exports[`DsHeader > Snapshot Testing > should match snapshot with logoUrl only > header-logo-url 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1xp2brj"
+  >
+    <div
+      class="MuiBox-root css-iiakvq"
+    >
+      <div
+        class="MuiStack-root css-nen11g-MuiStack-root"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1kbo5i1"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-4yn2vi-MuiSkeleton-root"
+        style="width: 100%; height: 100%;"
+      />
+      <picture
+        style="opacity: 0; visibility: hidden;"
+      >
+        <img
+          alt="logo"
+          src="https://storybook.axis.bank.in/v2/assets/subzeroHeader-c9596480.svg"
+          style="display: block; max-width: 100%; height: 100%;"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+`;
