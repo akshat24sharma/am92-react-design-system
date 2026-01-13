@@ -37,6 +37,10 @@
 - [DsAutocomplete](./Components/DsAutocomplete.md) - 31 tests across 13 categories and theme testing
 - [DsTagGroup](./Components/DsTagGroup.md) - 46 tests across 12 categories and theme testing
 - [DsBottomNavigation](./Components/DsBottomNavigation.md) - 43 tests across 12 categories and theme testing
+- [DsAppBar](./Components/DsAppBar.md) - 51 tests across 11 categories and theme testing
+- [DsTextFieldPassword](./Components/DsTextFieldPassword.md) - 43 tests across 12 categories and theme testing
+- [DsInputLabel](./Components/DsInputLabel.md) - 47 tests across 12 categories and theme testing
+- [DsFileUploader](./Components/DsFileUploader.md) - 41 tests across 12 categories and theme testing
 
 ## Running Tests
 ```bash
@@ -79,8 +83,8 @@ The coverage infrastructure generates multiple report formats:
 4. Red lines = uncovered, green lines = covered
 
 ## Test Statistics
-- **Total Components Documented:** 37
-- **Total Tests:** 1763 across all tested components
+- **Total Components Documented:** 43
+- **Total Tests:** 2026 across all tested components
 - **Testing Framework:** Vitest with jsdom environment
 - **Testing Library:** React Testing Library + userEvent
 - **Theme Testing Coverage:** Complete (light, dark, highContrast)

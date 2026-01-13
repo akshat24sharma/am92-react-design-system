@@ -1,0 +1,309 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshot with React element content > input-label-custom-element 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      <div
+        class="MuiBox-root css-1n2bkcw"
+      >
+        Custom Styled Label
+      </div>
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      With custom label element
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key component states > input-label-complex 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Complex Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      With support text
+    </span>
+    <span
+      aria-hidden="true"
+      class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-13jgzxd-MuiFormLabel-asterisk"
+    >
+       
+      *
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key component states > input-label-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Default Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    />
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key component states > input-label-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Error Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    />
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key component states > input-label-required 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Required Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    />
+    <span
+      aria-hidden="true"
+      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+    >
+       
+      *
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key component states > input-label-with-support 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Label with Support
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      Support text
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key states > label-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Error Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    />
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key states > label-only 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Label Only
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    />
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key states > label-with-support 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Main Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      Support Text
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Snapshot Testing > should match snapshots for key states > support-only 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    />
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      Support Only
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Theme Testing > should render correctly across all themes > ds-input-label-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+    data-testid="input-label-dark"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Theme Test Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      Support text
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Theme Testing > should render correctly across all themes > ds-input-label-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+    data-testid="input-label-highContrast"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Theme Test Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      Support text
+    </span>
+  </label>
+</div>
+`;
+
+exports[`DsInputLabel > Theme Testing > should render correctly across all themes > ds-input-label-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <label
+    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-4nner0-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink="true"
+    data-testid="input-label-light"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+    >
+      Theme Test Label
+    </span>
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+    >
+      Support text
+    </span>
+  </label>
+</div>
+`;

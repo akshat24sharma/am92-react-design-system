@@ -1,0 +1,825 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshot across themes > appbar-theme-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1xmqkgx-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Theme Snapshot
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshot across themes > appbar-theme-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1xmqkgx-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Theme Snapshot
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshot across themes > appbar-theme-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1xmqkgx-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Theme Snapshot
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshot for complex real-world scenario > appbar-complex-real-world 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-i9gxme"
+  >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-1wh1z1a-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: var(--shadows-1); --Paper-overlay: var(--overlays-1);"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+      >
+        <div
+          class="MuiBox-root css-g5m0mm"
+        >
+          <button
+            aria-label="Open drawer"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiBox-root css-ye6ry7"
+        >
+          <div
+            class="MuiBox-root css-0"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-headingBoldMedium css-1fv4im-MuiTypography-root"
+            >
+              Project Dashboard
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-bodyRegularSmall css-1905mbj-MuiTypography-root"
+            >
+              Last updated: 2 minutes ago
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiStack-root css-srkxyt-MuiStack-root"
+        >
+          <button
+            aria-label="Refresh data"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-refresh-line css-h7bicg-MuiIcon-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-95hww5-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span>
+              Export
+            </span>
+          </button>
+          <button
+            aria-label="Settings"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-settings-line css-h7bicg-MuiIcon-root"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different colors > appbar-color-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionFixed mui-fixed css-1v56ad6-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          default AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different colors > appbar-color-primary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1xmqkgx-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          primary AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different colors > appbar-color-secondary 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorSecondary MuiAppBar-positionFixed mui-fixed css-10yp3a9-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          secondary AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different colors > appbar-color-transparent 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionFixed mui-fixed css-3lvhl4-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          transparent AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different positions > appbar-position-absolute 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionAbsolute css-3ttkpl-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          absolute AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different positions > appbar-position-fixed 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionFixed mui-fixed css-1v56ad6-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          fixed AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different positions > appbar-position-static 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionStatic css-19d48fi-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          static AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for different positions > appbar-position-sticky 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionSticky css-1bgp9ah-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          sticky AppBar
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for key component states > appbar-basic 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionFixed mui-fixed css-1v56ad6-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      />
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for key component states > appbar-full 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionFixed mui-fixed css-1v56ad6-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Full App
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-notification-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-account-circle-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for key component states > appbar-with-actions 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionFixed mui-fixed css-1v56ad6-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Test App
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-settings-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for key component states > appbar-with-navigation 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionFixed mui-fixed css-1v56ad6-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Test App
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Snapshot Testing > should match snapshots for key component states > appbar-with-title 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionFixed mui-fixed css-1v56ad6-MuiPaper-root-MuiAppBar-root"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Snapshot Title
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Theme Testing > should render correctly across all themes > ds-appbar-dark-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1xmqkgx-MuiPaper-root-MuiAppBar-root"
+    data-testid="appbar-dark"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Theme Test
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Theme Testing > should render correctly across all themes > ds-appbar-highContrast-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1xmqkgx-MuiPaper-root-MuiAppBar-root"
+    data-testid="appbar-highContrast"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Theme Test
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`DsAppBar Component > Theme Testing > should render correctly across all themes > ds-appbar-light-theme 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1xmqkgx-MuiPaper-root-MuiAppBar-root"
+    data-testid="appbar-light"
+    style="--Paper-shadow: var(--shadows-0); --Paper-overlay: var(--overlays-0);"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-nzn5va-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-g5m0mm"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-menu-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiBox-root css-ye6ry7"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-headingBoldSmall css-as23s1-MuiTypography-root"
+        >
+          Theme Test
+        </span>
+      </div>
+      <div
+        class="MuiStack-root css-srkxyt-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-10jnnsl-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-search-line css-h7bicg-MuiIcon-root"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;

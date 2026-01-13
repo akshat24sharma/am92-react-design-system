@@ -1,0 +1,523 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsFileUploader > Snapshot Testing > should match snapshot across all variants > file-uploader-variant-compressed 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-bowgex-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-aovr2t"
+    >
+      <div
+        class="MuiStack-root dropzone-content-wrapper css-1vylbw1-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeFrostbite ri-upload-line css-en1wf9-MuiIcon-root"
+        />
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation css-1q396yj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Upload document
+          </span>
+        </button>
+      </div>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary css-4sba9-MuiInputBase-root-MuiInput-root"
+        slot="input"
+      >
+        <input
+          accept="*"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInput-input css-1bc2gyl-MuiInputBase-input-MuiInput-input"
+          multiple=""
+          style="height: 100%; width: 100%; cursor: pointer;"
+          title="Upload document"
+          type="file"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-6skvfs-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-alignCenter css-1cc0e3j-MuiTypography-root"
+        style="--Typography-textAlign: center;"
+      >
+        Click to browse or drop here to upload
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsFileUploader > Snapshot Testing > should match snapshot across all variants > file-uploader-variant-full 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-bowgex-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-1u68ybg"
+    >
+      <div
+        class="MuiStack-root dropzone-content-wrapper css-17qasp5-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeMild ri-upload-cloud-2-line css-8wzq8t-MuiIcon-root"
+        />
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation css-1q396yj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Upload document
+          </span>
+        </button>
+        <div
+          class="MuiStack-root css-3oqdqr-MuiStack-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-alignCenter css-v3ozll-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Click to browse or drop here to upload
+          </span>
+        </div>
+      </div>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary css-4sba9-MuiInputBase-root-MuiInput-root"
+        slot="input"
+      >
+        <input
+          accept="*"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInput-input css-1bc2gyl-MuiInputBase-input-MuiInput-input"
+          multiple=""
+          style="height: 100%; width: 100%; cursor: pointer;"
+          title="Upload document"
+          type="file"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsFileUploader > Snapshot Testing > should match snapshot in single file mode > file-uploader-single-file 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-bowgex-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-aovr2t"
+    >
+      <div
+        class="MuiStack-root dropzone-content-wrapper css-1vylbw1-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeFrostbite ri-upload-line css-en1wf9-MuiIcon-root"
+        />
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation css-1q396yj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Upload document
+          </span>
+        </button>
+      </div>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary css-4sba9-MuiInputBase-root-MuiInput-root"
+        slot="input"
+      >
+        <input
+          accept="*"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInput-input css-1bc2gyl-MuiInputBase-input-MuiInput-input"
+          style="height: 100%; width: 100%; cursor: pointer;"
+          title="Upload document"
+          type="file"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-6skvfs-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-alignCenter css-1cc0e3j-MuiTypography-root"
+        style="--Typography-textAlign: center;"
+      >
+        Click to browse or drop here to upload
+      </span>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+      data-testid="selected-segment"
+    >
+      <div
+        class="MuiStack-root css-11l9ryy-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-file-list-2-line css-tga0f0-MuiIcon-root"
+        />
+        <div
+          class="MuiBox-root css-1t8ffdp"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-bodyBoldSmall MuiTypography-noWrap css-1tfa6gu-MuiTypography-root"
+          >
+            single-file.pdf
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-noWrap css-b1s89j-MuiTypography-root"
+          >
+            1.95 KB
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsFileUploader > Snapshot Testing > should match snapshot with all props > file-uploader-full-props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-bowgex-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-1u68ybg"
+    >
+      <div
+        class="MuiStack-root dropzone-content-wrapper css-17qasp5-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeMild ri-upload-cloud-2-line css-8wzq8t-MuiIcon-root"
+        />
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation css-1q396yj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Upload document
+          </span>
+        </button>
+        <div
+          class="MuiStack-root css-3oqdqr-MuiStack-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-alignCenter css-v3ozll-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Click to browse or drop here to upload
+          </span>
+        </div>
+      </div>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary css-4sba9-MuiInputBase-root-MuiInput-root"
+        slot="input"
+      >
+        <input
+          accept="text/*"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInput-input css-1bc2gyl-MuiInputBase-input-MuiInput-input"
+          multiple=""
+          style="height: 100%; width: 100%; cursor: pointer;"
+          title="Upload document"
+          type="file"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-vx5ck8-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1wrf12s-MuiTypography-root"
+      >
+        Selected Documents
+      </span>
+      <div
+        class="MuiStack-root css-1d8s0bg-MuiStack-root"
+      >
+        <div
+          class="MuiStack-root css-11l9ryy-MuiStack-root"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-file-list-2-line css-tga0f0-MuiIcon-root"
+          />
+          <div
+            class="MuiBox-root css-1t8ffdp"
+          >
+            <div
+              class="MuiTypography-root MuiTypography-bodyBoldSmall MuiTypography-noWrap css-1tfa6gu-MuiTypography-root"
+            >
+              snapshot.txt
+            </div>
+            <div
+              class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-noWrap css-b1s89j-MuiTypography-root"
+            >
+              1000 Bytes
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-d5qz22-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-delete-bin-line css-lcbkw8-MuiIcon-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-vx5ck8-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-subheadingSemiboldDefault css-1wrf12s-MuiTypography-root"
+      >
+        Uploaded documents
+      </span>
+      <div
+        class="MuiStack-root css-1d8s0bg-MuiStack-root"
+      >
+        <div
+          class="MuiStack-root css-11l9ryy-MuiStack-root"
+        >
+          <span
+            aria-hidden="true"
+            class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-file-list-2-line css-tga0f0-MuiIcon-root"
+          />
+          <div
+            class="MuiBox-root css-1t8ffdp"
+          >
+            <div
+              class="MuiTypography-root MuiTypography-bodyBoldSmall MuiTypography-noWrap css-1tfa6gu-MuiTypography-root"
+            >
+              snapshot.txt
+            </div>
+            <div
+              class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-noWrap css-b1s89j-MuiTypography-root"
+            >
+              1000 Bytes
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorIconDefault MuiIconButton-sizeMedium css-d5qz22-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate MuiIcon-root MuiIcon-fontSizeBitterCold ri-delete-bin-line css-lcbkw8-MuiIcon-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsFileUploader > Snapshot Testing > should match snapshot with custom slotProps > file-uploader-custom-slot-props 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-bowgex-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-1u68ybg"
+    >
+      <div
+        class="MuiStack-root dropzone-content-wrapper css-1k7on5q-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeMild ri-upload-cloud-2-line css-8wzq8t-MuiIcon-root"
+        />
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation css-1q396yj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Drop your files here
+          </span>
+        </button>
+        <div
+          class="MuiStack-root css-3oqdqr-MuiStack-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-alignCenter css-v3ozll-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Supports PDF, DOC, and image files
+          </span>
+        </div>
+      </div>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary css-4sba9-MuiInputBase-root-MuiInput-root"
+        slot="input"
+      >
+        <input
+          accept="*"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInput-input css-1bc2gyl-MuiInputBase-input-MuiInput-input"
+          multiple=""
+          style="height: 100%; width: 100%; cursor: pointer;"
+          title="Drop your files here"
+          type="file"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsFileUploader > Snapshot Testing > should match snapshot with default props > file-uploader-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-bowgex-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-1u68ybg"
+    >
+      <div
+        class="MuiStack-root dropzone-content-wrapper css-17qasp5-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeMild ri-upload-cloud-2-line css-8wzq8t-MuiIcon-root"
+        />
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation css-1q396yj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Upload document
+          </span>
+        </button>
+        <div
+          class="MuiStack-root css-3oqdqr-MuiStack-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-alignCenter css-v3ozll-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Click to browse or drop here to upload
+          </span>
+        </div>
+      </div>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary css-4sba9-MuiInputBase-root-MuiInput-root"
+        slot="input"
+      >
+        <input
+          accept="*"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInput-input css-1bc2gyl-MuiInputBase-input-MuiInput-input"
+          multiple=""
+          style="height: 100%; width: 100%; cursor: pointer;"
+          title="Upload document"
+          type="file"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsFileUploader > Snapshot Testing > should match snapshot with error states > file-uploader-with-restrictions 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiStack-root css-bowgex-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-1u68ybg"
+    >
+      <div
+        class="MuiStack-root dropzone-content-wrapper css-17qasp5-MuiStack-root"
+      >
+        <span
+          aria-hidden="true"
+          class="notranslate MuiIcon-root MuiIcon-colorSecondary MuiIcon-fontSizeMild ri-upload-cloud-2-line css-8wzq8t-MuiIcon-root"
+        />
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorSecondary MuiButton-disableElevation css-1q396yj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span>
+            Upload document
+          </span>
+        </button>
+        <div
+          class="MuiStack-root css-3oqdqr-MuiStack-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall MuiTypography-alignCenter css-v3ozll-MuiTypography-root"
+            style="--Typography-textAlign: center;"
+          >
+            Click to browse or drop here to upload
+          </span>
+        </div>
+      </div>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary css-4sba9-MuiInputBase-root-MuiInput-root"
+        slot="input"
+      >
+        <input
+          accept="image/*"
+          autocomplete="off"
+          class="MuiInputBase-input MuiInput-input css-1bc2gyl-MuiInputBase-input-MuiInput-input"
+          multiple=""
+          style="height: 100%; width: 100%; cursor: pointer;"
+          title="Upload document"
+          type="file"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
