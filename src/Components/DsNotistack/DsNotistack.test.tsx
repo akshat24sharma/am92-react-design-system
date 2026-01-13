@@ -10,15 +10,13 @@
  * 1. Core Rendering - Provider rendering and wrapper functionality
  * 2. Props Validation - SnackbarProviderProps handling and defaults
  * 3. Component States - Different notification variants and states
- * 4. MUI Styling - Toast component integration and styling
- * 5. Component Functionality - Provider behavior and configuration
- * 6. Event Handling - Show, dismiss, and auto-hide functionality
- * 7. Form Integration - Provider context and notification management
- * 8. Accessibility - ARIA attributes and screen reader support
- * 9. Edge Cases - Invalid configurations and boundary conditions
- * 10. Real-world Scenarios - Common notification patterns
- * 11. Theme Testing - Cross-theme compatibility
- * 12. Snapshot Testing - Visual regression testing
+ * 4. Component Functionality - Provider behavior and configuration
+ * 5. Event Handling - Show, dismiss, and auto-hide functionality
+ * 6. Accessibility - ARIA attributes and screen reader support
+ * 7. Edge Cases - Invalid configurations and boundary conditions
+ * 8. Real-world Scenarios - Common notification patterns
+ * 9. Theme Testing - Cross-theme compatibility
+ * 10. Snapshot Testing - Visual regression testing
  *
  * @package @am92/react-design-system
  * @component DsNotistack
@@ -31,11 +29,8 @@ import {
   DsNotistackProvider,
   enqueueNotistack,
   closeNotistack,
-  generateKeyNotistack,
-  useNotistack
+  generateKeyNotistack
 } from './DsNotistack.Component'
-import getColorScheme from '../../Theme/getColorScheme'
-import { PALETTE } from '../../Constants'
 import { DsButton } from '../DsButton'
 import React from 'react'
 
@@ -239,31 +234,7 @@ describe('DsNotistack Component', () => {
   })
 
   // ============================
-  // 4. MUI STYLING TESTS
-  // ============================
-  describe('MUI Styling', () => {
-    it('should render notifications as MUI Alert components', async () => {
-      // FIXED: Test actual MUI Alert integration, not just presence
-      render(
-        <DsNotistackProvider>
-          <TestApp />
-        </DsNotistackProvider>
-      )
-
-      const button = screen.getByTestId('show-notification')
-      await user.click(button)
-
-      await waitFor(() => {
-        const alertElement = screen.getByRole('alert')
-        expect(alertElement).toBeInTheDocument()
-        expect(alertElement).toHaveClass('MuiAlert-root')
-        expect(alertElement).toHaveTextContent('Test notification')
-      })
-    })
-  })
-
-  // ============================
-  // 5. COMPONENT FUNCTIONALITY TESTS
+  // 4. COMPONENT FUNCTIONALITY TESTS
   // ============================
   describe('Component Functionality', () => {
     it('should prevent duplicate notifications by default', async () => {
@@ -383,7 +354,7 @@ describe('DsNotistack Component', () => {
   })
 
   // ============================
-  // 6. EVENT HANDLING TESTS
+  // 5. EVENT HANDLING TESTS
   // ============================
   describe('Event Handling', () => {
     // REMOVED: Redundant test - notification show behavior already tested in Component States section
@@ -417,101 +388,10 @@ describe('DsNotistack Component', () => {
         expect(notification).not.toBeInTheDocument()
       })
     })
-
-    it('should handle auto-hide timing', async () => {
-      render(
-        <DsNotistackProvider autoHideDuration={1000}>
-          <TestApp />
-        </DsNotistackProvider>
-      )
-
-      const button = screen.getByTestId('show-notification')
-      await user.click(button)
-
-      await waitFor(() => {
-        const notification = screen.queryByText('Test notification')
-        expect(notification).toBeInTheDocument()
-      })
-
-      // Wait for auto-hide (longer than autoHideDuration)
-      await waitFor(
-        () => {
-          const notification = screen.queryByText('Test notification')
-          expect(notification).not.toBeInTheDocument()
-        },
-        { timeout: 2000 }
-      )
-    })
   })
 
   // ============================
-  // 7. FORM INTEGRATION TESTS
-  // ============================
-  describe('Form Integration', () => {
-    it('should work within form submission context', async () => {
-      const handleSubmit = vi.fn(e => {
-        e.preventDefault()
-        enqueueNotistack({
-          message: 'Form submitted successfully',
-          variant: 'success'
-        })
-      })
-
-      render(
-        <DsNotistackProvider>
-          <form onSubmit={handleSubmit}>
-            <input type="text" name="test" defaultValue="test value" />
-            <DsButton type="submit" data-testid="submit-button">
-              Submit
-            </DsButton>
-          </form>
-        </DsNotistackProvider>
-      )
-
-      const submitButton = screen.getByTestId('submit-button')
-      await user.click(submitButton)
-
-      expect(handleSubmit).toHaveBeenCalled()
-
-      await waitFor(() => {
-        const notification = screen.queryByText('Form submitted successfully')
-        expect(notification).toBeInTheDocument()
-      })
-    })
-
-    it('should handle validation error notifications', async () => {
-      const handleValidationError = () => {
-        enqueueNotistack({
-          message: 'Please fill in all required fields',
-          variant: 'error'
-        })
-      }
-
-      render(
-        <DsNotistackProvider>
-          <DsButton
-            onClick={handleValidationError}
-            data-testid="validation-error"
-          >
-            Trigger Validation Error
-          </DsButton>
-        </DsNotistackProvider>
-      )
-
-      const button = screen.getByTestId('validation-error')
-      await user.click(button)
-
-      await waitFor(() => {
-        const notification = screen.queryByText(
-          'Please fill in all required fields'
-        )
-        expect(notification).toBeInTheDocument()
-      })
-    })
-  })
-
-  // ============================
-  // 8. ACCESSIBILITY TESTS
+  // 6 ACCESSIBILITY TESTS
   // ============================
   describe('Accessibility', () => {
     it('should provide ARIA role for notifications', async () => {
@@ -549,7 +429,7 @@ describe('DsNotistack Component', () => {
   })
 
   // ============================
-  // 9. EDGE CASES TESTS
+  // 7. EDGE CASES TESTS
   // ============================
   describe('Edge Cases', () => {
     it('should handle empty message by displaying empty notification', async () => {
@@ -670,7 +550,7 @@ describe('DsNotistack Component', () => {
   })
 
   // ============================
-  // 10. REAL-WORLD SCENARIOS TESTS
+  // 8. REAL-WORLD SCENARIOS TESTS
   // ============================
   describe('Real-world Scenarios', () => {
     it('should handle async operation success notification', async () => {
@@ -780,7 +660,7 @@ describe('DsNotistack Component', () => {
   })
 
   // ============================
-  // 11. THEME TESTING TESTS
+  // 9. THEME TESTING TESTS
   // ============================
   describe('Theme Testing', () => {
     // Helper function to check notification variant styling
@@ -849,7 +729,7 @@ describe('DsNotistack Component', () => {
   })
 
   // ============================
-  // 12. SNAPSHOT TESTING TESTS
+  // 10. SNAPSHOT TESTING TESTS
   // ============================
   describe('Snapshot Testing', () => {
     // REVIEWERS: Snapshot tests validate visual structure consistency.

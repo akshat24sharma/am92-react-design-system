@@ -13,7 +13,7 @@ The DsTextArea component is a multiline text input component that extends DsText
 ## Test Coverage Summary
 
 ### 📊 Test Statistics
-- **Total Tests**: 47
+- **Total Tests**: 48
 - **Test Categories**: 9
 - **Coverage**: 100% of component functionality
 - **Status**: ✅ All tests passing
@@ -27,7 +27,7 @@ The DsTextArea component is a multiline text input component that extends DsText
    - Label rendering capabilities
    - Hide character counter functionality
 
-2. **Props Validation (9 tests)**
+2. **Props Validation (10 tests)**
    - Required maxLength prop handling
    - Custom ID and name attributes
    - FullWidth responsive behavior
@@ -35,6 +35,7 @@ The DsTextArea component is a multiline text input component that extends DsText
    - Required field validation
    - Placeholder text handling
    - Initial count display
+   - Readonly state handling
 
 3. **Event Handling (6 tests)**
    - onChange callback execution
@@ -58,10 +59,10 @@ The DsTextArea component is a multiline text input component that extends DsText
    - Error state accessibility
    - Keyboard navigation
 
-6. **Edge Cases (6 tests)**
+6. **Edge Cases (5 tests)**
    - Extremely large maxLength values
    - Minimum maxLength (1 character)
-   - Undefined and null value handling (combined test)
+   - Undefined and null value handling
    - Rapid text changes
    - Special characters handling
 
@@ -72,7 +73,7 @@ The DsTextArea component is a multiline text input component that extends DsText
 8. **Theme Testing (1 test)**
    - Multi-theme color scheme validation across light, dark, and highContrast themes
 
-9. **Snapshot Testing (8 tests)**
+9. **Snapshot Testing (9 tests)**
    - Default configuration snapshots
    - Various prop combinations (label/helper, hidden counter, error, success, disabled, fullWidth)
    - Real-world configuration snapshot

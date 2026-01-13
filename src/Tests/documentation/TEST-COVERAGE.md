@@ -20,7 +20,7 @@
 - [DsLoader](./Components/DsLoader.tests.md) - 38 tests across 9 categories (optimized from 48) with animation testing, theme compatibility, and error handling documentation ✅
 - [DsMenu](./Components/DsMenu.md) - 21 tests across 7 categories with MUI Menu integration, portal rendering, and comprehensive accessibility testing
 - [DsMenuItem](./Components/DsMenuItem.md) -  49 tests across 10 categories and theme testing
-- [DsNotistack](./Components/DsNotistack.tests.md) - 29 tests across 10 categories with notification provider functionality, notistack integration, MUI Alert close button testing, hook-based notification management with enqueueNotistack, and comprehensive theme testing ✨
+- [DsNotistack](./Components/DsNotistack.md) - 29 tests across 10 categories with notification provider functionality, notistack integration, MUI Alert close button testing, hook-based notification management with enqueueNotistack, comprehensive theme testing, and snapshot coverage ✨
 - [DsOtp](./Components/DsOtp.md) - 64 tests across 13 categories and theme testing
 - [DsProgressTracker](./Components/DsProgressTracker.tests.md) - 36 tests across 12 categories with stepper functionality, progress tracking, theme testing, and comprehensive variant coverage ✨
 - [DsRadio](./Components/DsRadio.md) - 64 tests across 11 categories with radio group integration, optimized theme testing, and snapshot testing
@@ -33,7 +33,7 @@
 - [DsTable](./Components/DsTable.md) - 25 tests across 10 categories with theme testing and comprehensive snapshot coverage
 - [DsTabs](./Components/DsTabs.md) - 57 tests across 11 categories and theme testing
 - [DsTag](./Components/DsTag.md) -  26 tests across 10 categories and theme testing
-- [DsTextArea](./Components/DsTextArea.md) - 47 tests across 9 categories with character counting, multiline text input, theme testing, and real-world scenarios ✨
+- [DsTextArea](./Components/DsTextArea.md) - 48 tests across 9 categories with character counting, multiline text input, theme testing, and real-world scenarios ✨
 - [DsTextField](./Components/DsTextField.md) - 78 tests across 15 categories with ref handling
 - [DsToggle](./Components/DsToggle.md) - 52 tests across 12 categories with comprehensive theme testing and snapshot coverage
 - [DsTooltip](./Components/DsTooltip.md) -  36 tests across 10 categories and theme testing

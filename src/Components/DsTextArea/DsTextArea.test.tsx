@@ -142,6 +142,20 @@ describe('DsTextArea Component', () => {
       const counter = screen.getByText('0/100')
       expect(counter).toBeInTheDocument()
     })
+
+    it('should handle readonly state', () => {
+      render(
+        <DsTextArea
+          maxLength={100}
+          inputProps={{ readOnly: true }}
+          value="Read-only content"
+          onChange={() => {}}
+        />
+      )
+      const textarea = screen.getByRole('textbox')
+      expect(textarea).toHaveAttribute('readonly')
+      expect(textarea).toHaveValue('Read-only content')
+    })
   })
 
   //============================================================================

@@ -9,7 +9,7 @@ The `DsNotistack` test suite validates the notification provider component that 
 The test suite has been reviewed and streamlined to focus on essential behavior validation:
 
 ### Current Structure:
-- **Total Tests**: 33 tests across 10 categories
+- **Total Tests**: 29 tests across 10 categories
 - **Test Approach**: Behavior-focused testing with actual user interactions
 - **Hook Integration**: Uses `enqueueNotistack` function for consistent notification creation
 - **MUI Integration**: Tests actual MUI Alert close button functionality
@@ -45,56 +45,47 @@ Tests fundamental provider rendering and context provision:
 
 ### 2. Props Validation (2 tests)
 Validates provider prop handling and configuration:
-- Custom autoHideDuration acceptance
-- Default hideIconVariant prop application
+- Custom autoHideDuration acceptance and application
+- maxSnack limit configuration with default value of 3
 
 ### 3. Component States (1 test)
 Tests notification variant management:
-- Default variant rendering and behavior
+- Multiple notifications handling simultaneously
 
-### 4. MUI Styling (1 test)
-Validates integration with Material-UI styling system:
-- MUI Alert component integration
-
-### 5. Component Functionality (3 tests)
+### 4. Component Functionality (3 tests)
 Tests core notification provider functionality:
 - Duplicate prevention mechanism
 - Message-timestamp key format validation
 - Programmatic notification dismissal using MUI Alert action button
 
-### 6. Event Handling (2 tests)
+### 5. Event Handling (1 test)
 Validates user interaction and event management:
 - Close button functionality through MUI Alert action
-- Auto-hide timing verification
 
-### 7. Form Integration (2 tests)
-Tests notification integration within form contexts:
-- Form submission success notifications
-- Validation error notification handling
-
-### 8. Accessibility (2 tests)
+### 6. Accessibility (2 tests)
 Ensures proper accessibility support:
 - ARIA role provision for notifications
 - Screen reader announcement verification
 
-### 9. Edge Cases (4 tests)
+### 7. Edge Cases (5 tests)
 Handles boundary conditions and error scenarios:
 - Empty message notification display
 - Undefined message handling
 - Invalid variant graceful degradation
 - Rapid successive notification management
+- Invalid key handling with closeNotistack
 
-### 10. Real-world Scenarios (2 tests)
+### 8. Real-world Scenarios (2 tests)
 Tests common usage patterns and workflows:
-- Async operation result notifications
-- File upload progress notification patterns
+- Async operation success notifications
+- Notification queue management
 
-### 11. Theme Testing (6 tests)
+### 9. Theme Testing (5 tests)
 Validates cross-theme functionality:
-- Theme attribute application across color schemes (light, dark, highContrast)
-- Theme color palette validation
+- Default, success, error, warning, and info variant notifications across all themes
+- Theme configuration validation using PALETTE constants
 
-### 12. Snapshot Testing (5 tests)
+### 10. Snapshot Testing (5 tests)
 Provides visual regression testing:
 - Default provider configuration snapshots
 - Custom anchor origin configuration
