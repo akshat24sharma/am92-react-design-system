@@ -71,13 +71,11 @@ describe("DsFileUploader", () => {
   describe("Core Rendering", () => {
     it("should render with required props", () => {
       const handleChange = vi.fn();
-
-      render(
+      const { container } = render(
         <DsFileUploader name="test-file-uploader" onChange={handleChange} />
       );
-
       // Check for file input element
-      const fileInput = document.querySelector('input[type="file"]');
+      const fileInput = container.querySelector('input[type="file"]');
       expect(fileInput).toBeInTheDocument();
       expect(fileInput).toHaveAttribute("type", "file");
     });
@@ -306,12 +304,10 @@ describe("DsFileUploader", () => {
     it("should call onChange when files are selected", async () => {
       const handleChange = vi.fn();
       const mockFile = createMockFile("test.txt", 1000, "text/plain");
-
-      render(
+      const { container } = render(
         <DsFileUploader name="functional-uploader" onChange={handleChange} />
       );
-
-      const fileInput = document.querySelector(
+      const fileInput = container.querySelector(
         'input[type="file"]'
       ) as HTMLInputElement;
 
