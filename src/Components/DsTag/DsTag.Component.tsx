@@ -32,6 +32,8 @@ export const DsTag: FC<DsTagProps> = inProps => {
       sx={{
         paddingTop: 'var(--ds-spacing-quickFreeze)',
         paddingBottom: 'var(--ds-spacing-quickFreeze)',
+        paddingLeft: 'var(--ds-spacing-frostbite)',
+        paddingRight: 'var(--ds-spacing-frostbite)',
         fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
         fontSize: 'var(--ds-typo-bodyRegularMedium-fontSize)',
         lineHeight: 'var(--ds-typo-bodyRegularMedium-lineHeight)',
@@ -60,19 +62,19 @@ export const DsTag: FC<DsTagProps> = inProps => {
           color: 'var(--ds-colour-typoPrimary)',
           paddingTop: 'var(--ds-spacing-deepFreeze)',
           paddingBottom: 'var(--ds-spacing-deepFreeze)',
-          paddingLeft: 'var(--ds-spacing-frostbite)',
-          paddingRight: 'var(--ds-spacing-frostbite)'
+          paddingLeft: 'var(--ds-spacing-zero)',
+          paddingRight: 'var(--ds-spacing-zero)'
         },
         '> .MuiChip-icon': {
           color: 'var(--ds-colour-typoPrimary)',
           fontSize: 'var(--ds-typo-fontSizeBitterCold)',
-          marginLeft: 'var(--ds-spacing-glacial)',
-          marginRight: 'calc(var(--ds-spacing-glacial) * -1)',
+          marginLeft: 'var(--ds-spacing-zero)',
+          marginRight: 'var(--ds-spacing-glacial)',
         },
         '> .MuiChip-deleteIcon': {
           fontSize: 'var(--ds-typo-fontSizeBitterCold)',
-          marginRight: 'var(--ds-spacing-glacial)',
-          marginLeft: 'calc(var(--ds-spacing-glacial) * -1)',
+          marginRight: 'var(--ds-spacing-zero)',
+          marginLeft: 'var(--ds-spacing-glacial)',
           color: 'var(--ds-colour-typoPrimary)',
         },
         '&.MuiChip-colorSecondary .MuiChip-label, &.MuiChip-colorSecondary .MuiChip-deleteIcon': {
@@ -84,14 +86,6 @@ export const DsTag: FC<DsTagProps> = inProps => {
         '&.Mui-disabled .MuiChip-label': {
           color: 'var(--ds-colour-typoDisabled)',
           fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
-        },
-        '&:has(.MuiChip-label .MuiBadge-root)': {
-            '& .MuiChip-label': {
-              paddingRight: 'var(--ds-spacing-glacial)',
-            },
-            '& .MuiChip-deleteIcon': {
-              marginLeft: 'calc(var(--ds-spacing-quickFreeze) * -1)',
-            },
         },
           ...sx
       }}
