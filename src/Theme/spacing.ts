@@ -6,6 +6,7 @@ const dsSpacingCssVars: DsSpacing = {
   zero: 0,
   deepFreeze: 2,
   quickFreeze: 4,
+  gelid: 6,
   glacial: 8,
   frostbite: 12,
   bitterCold: 16,

@@ -4,6 +4,7 @@ const dsRadius: DsRadius = {
   zero: '0px',
   deepFreeze: '2px',
   quickFreeze: '4px',
+  gelid: '6px',
   glacial: '8px',
   frostbite: '12px',
   bitterCold: '16px',
