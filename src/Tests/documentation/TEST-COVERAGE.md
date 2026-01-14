@@ -37,6 +37,7 @@
 - [DsMenuItem](./Components/DsMenuItem.md) -  49 tests across 10 categories and theme testing
 - [DsAvatar](./Components/DsAvatar.md) -  45 tests across 10 categories and theme testing
 - [DsDrawer](./components/DsDrawer.tests.md) - 54 tests across 12 categories with Material-UI integration, design system overrides, theme testing, and real-world drawer scenarios ✨
+- [DsFormHelperText](./Components/DsFormHelperText.tests.md) - 61 tests across 12 categories with form integration, content handling, theme testing, accessibility support, and comprehensive snapshot coverage ✨
 - [DsIconButton](./Components/DsIconButton.tests.md) - 66 tests across 10 categories with design system integration, theme testing, and snapshot testing ✨
 - [DsInputAdornment](./Components/DsInputAdornment.md) -  56 tests across 11 categories and theme testing
 - [DsInputBase](./Components/DsInputBase.tests.md) - 78 tests across 12 categories with comprehensive form functionality, custom variants (otp/search), theme testing, and real-world scenarios ✨

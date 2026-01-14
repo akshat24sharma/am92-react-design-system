@@ -1,0 +1,584 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots across all themes > form-helper-text-dark 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="dark"
+>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <p
+      class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Normal helper text
+    </p>
+    <p
+      class="MuiFormHelperText-root Mui-error css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Error helper text
+    </p>
+    <p
+      class="MuiFormHelperText-root Mui-disabled css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Disabled helper text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots across all themes > form-helper-text-highContrast 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="highContrast"
+>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <p
+      class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Normal helper text
+    </p>
+    <p
+      class="MuiFormHelperText-root Mui-error css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Error helper text
+    </p>
+    <p
+      class="MuiFormHelperText-root Mui-disabled css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Disabled helper text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots across all themes > form-helper-text-light 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <p
+      class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Normal helper text
+    </p>
+    <p
+      class="MuiFormHelperText-root Mui-error css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Error helper text
+    </p>
+    <p
+      class="MuiFormHelperText-root Mui-disabled css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Disabled helper text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for basic states > form-helper-text-default 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    Helper text in 
+    default
+     state
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for basic states > form-helper-text-disabled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root Mui-disabled css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    Helper text in 
+    disabled
+     state
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for basic states > form-helper-text-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root Mui-error css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    Helper text in 
+    error
+     state
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for basic states > form-helper-text-filled 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root MuiFormHelperText-filled css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    Helper text in 
+    filled
+     state
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for basic states > form-helper-text-focused 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root Mui-focused css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    Helper text in 
+    focused
+     state
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for basic states > form-helper-text-required 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root Mui-required css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    Helper text in 
+    required
+     state
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for different content types > form-helper-text-content-complex 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    <div
+      class="MuiBox-root css-171onha"
+    >
+      <span
+        aria-hidden="true"
+        class="notranslate MuiIcon-root MuiIcon-fontSizeMild ri-information-line css-h7bicg-MuiIcon-root"
+      />
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+      >
+        Complex content
+      </span>
+    </div>
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for different content types > form-helper-text-content-fragment 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Fragment part 1
+    </span>
+     - 
+    <span
+      class="MuiTypography-root MuiTypography-bodyRegularMedium css-p4afvq-MuiTypography-root"
+    >
+      Fragment part 2
+    </span>
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for different content types > form-helper-text-content-null 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  />
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for different content types > form-helper-text-content-string 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <p
+    class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+    helpertext=""
+  >
+    Simple string content
+  </p>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for real-world scenarios > form-helper-text-scenario-grid-layout 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiBox-root css-1pomz8e"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+          >
+            First Name
+          </span>
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+          />
+        </label>
+        <div
+          class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        >
+          <input
+            aria-invalid="false"
+            autocomplete="off"
+            class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <p
+        class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+        helpertext=""
+      >
+        Legal first name
+      </p>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+          >
+            Last Name
+          </span>
+          <span
+            class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+          />
+        </label>
+        <div
+          class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        >
+          <input
+            aria-invalid="false"
+            autocomplete="off"
+            class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <p
+        class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+        helpertext=""
+      >
+        Legal last name
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots for real-world scenarios > form-helper-text-scenario-registration-form 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <form
+    class="MuiBox-root css-16r9pk3"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for="email"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Email
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-13jgzxd-MuiFormLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        required=""
+      >
+        <input
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+          id="email"
+          name="email"
+          required=""
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <p
+      class="MuiFormHelperText-root css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      We'll never share your email
+    </p>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-uynini-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for="password"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+        >
+          Password
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+        />
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-13jgzxd-MuiFormLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-ynhig6-MuiInputBase-root"
+        required=""
+      >
+        <input
+          aria-invalid="true"
+          autocomplete="off"
+          class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+          id="password"
+          name="password"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error css-8vdua7-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Password must be at least 8 characters
+    </p>
+  </form>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots in form contexts > form-helper-text-context-form-control 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-1kmy6r1-MuiFormLabel-root"
+    >
+      Name
+    </label>
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1xsnow0-MuiInputBase-root"
+      >
+        <input
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+          id="name"
+          name="name"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+      helpertext=""
+    >
+      This field is required
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots in form contexts > form-helper-text-context-form-control-error 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <div
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1xsnow0-MuiInputBase-root"
+      >
+        <input
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+          id="test"
+          name="test"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+      helpertext=""
+    >
+      Error from parent control
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DsFormHelperText Component > Snapshot Testing > should match snapshots in form contexts > form-helper-text-context-textfield 1`] = `
+<div
+  class="MuiBox-root css-0"
+  data-mui-color-scheme="light"
+>
+  <div
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1kfdajl-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="true"
+      for="email"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularMedium css-hhsa5x-MuiTypography-root"
+      >
+        Email
+      </span>
+      <span
+        class="MuiTypography-root MuiTypography-bodyRegularSmall css-1gw6gyp-MuiTypography-root"
+      />
+    </label>
+    <div
+      class="MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1xsnow0-MuiInputBase-root"
+    >
+      <input
+        aria-invalid="false"
+        autocomplete="off"
+        class="MuiInputBase-input css-1rw3c3-MuiInputBase-input"
+        id="email"
+        name="email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1pd97o3-MuiFormHelperText-root"
+      helpertext=""
+    >
+      <div
+        class="MuiBox-root css-s14tpm"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-bodyRegularSmall css-10vdoor-MuiTypography-root"
+        >
+          Enter your email address
+          ​
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
