@@ -13,7 +13,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
     nextStepLabelPrefix,
     dense,
     onClick,
-    StepperProps,
+    // StepperProps,
     stepLabelVisible,
     lastStepLabelText,
     ...wrapperProps
@@ -47,11 +47,11 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
     <>
       {dense ? (
         <DsStack
+        {...wrapperProps}
           sx={{
             backgroundColor: 'var(--ds-colour-surfaceSecondary)',
             ...wrapperProps?.sx
           }}
-          {...wrapperProps}
         >
           <DsStack
             direction='row'
@@ -91,6 +91,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
         </DsStack>
       ) : (
         <DsStack
+        {...wrapperProps}
           sx={{
             p: 'var(--ds-spacing-bitterCold)',
             alignItems: 'center',
@@ -102,7 +103,6 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
           spacing='var(--ds-spacing-bitterCold)'
           direction='row'
           onClick={onClick}
-          {...wrapperProps}
         >
           <DsProgressIndicator
             activeStep={activeStep + 1}
