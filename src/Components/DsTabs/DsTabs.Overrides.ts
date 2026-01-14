@@ -41,8 +41,8 @@ export const DsTabsOverrides = {
                     color: "var(--ds-colour-typoActionTertiary)",
                   },
                   "&.Mui-disabled": {
-                    backgroundColor: "none",
-                    borderColor: "none",
+                    backgroundColor: "transparent",
+                    borderColor: "transparent",
                     color: "var(--ds-colour-typoDisabled)",
                   },
                 },
