@@ -62,8 +62,7 @@ export const DsTabsOverrides = {
                 "& .MuiTabs-indicator": {
                   height: "calc(100% - var(--ds-spacing-glacial))",
                   top: "var(--ds-spacing-quickFreeze)",
-                  borderRadius:
-                    "calc(var(--ds-radius-quickFreeze) + var(--ds-radius-deepFreeze))",
+                  borderRadius: "var(--ds-radius-gelid)",
                   backgroundColor: "var(--ds-colour-surfaceBackground)",
                   zIndex: 1,
                 },
@@ -77,13 +76,12 @@ export const DsTabsOverrides = {
                   position: "relative",
                   borderBottom: "none",
                   padding:
-                    "calc(var(--ds-spacing-quickFreeze) + var(--ds-spacing-deepFreeze)) var(--ds-spacing-frostbite)",
+                    "var(--ds-spacing-gelid) var(--ds-spacing-frostbite)",
                   minHeight: "unset",
                   color: "var(--ds-colour-typoPrimary)",
                   "&.Mui-selected:not(.Mui-disabled)": {
                     boxShadow: "var(--ds-elevation-2)",
-                    borderRadius:
-                      "calc(var(--ds-radius-quickFreeze) + var(--ds-radius-deepFreeze))",
+                    borderRadius: "var(--ds-radius-gelid)",
                   },
                   "&.Mui-disabled": {
                     backgroundColor: "var(--ds-colour-neutral1)",
