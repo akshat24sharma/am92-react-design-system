@@ -27,7 +27,7 @@ export interface DsDialogProps extends Omit<DialogProps, 'onClose'> {
   CloseIconProps?: Omit<DsRemixIconProps, 'ref'>
   ContentProps?: DsDialogContentProps
   ActionsProps?: DsDialogActionsProps
-  IllustrationProps?: DsBoxProps
+  IllustrationProps?: DsDialogContentProps
   onClose?: (event: React.SyntheticEvent, reason: DsDialogCloseReason) => void
 }
 
