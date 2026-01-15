@@ -8,6 +8,7 @@ import { DsTypography } from '../DsTypography'
 import { DsDialogContent } from '../DsDialogContent'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsButton } from '../DsButton'
+import { DsBox } from '../DsBox'
 import { mergeSlotProps } from '../../utils'
 
 export const DsDialog: React.FC<DsDialogProps> = inProps => {
@@ -24,6 +25,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
     title,
     description,
     kicker,
+    illustration,
     showClose,
     primaryButtonText,
     primaryButtonProps,
@@ -37,6 +39,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
     KickerProps,
     ContentProps,
     ActionsProps,
+    IllustrationProps,
     children,
     slotProps,
     ...DialogProps
@@ -86,6 +89,21 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
         }),
       }}
     >
+      {illustration && (
+        <DsBox
+          {...IllustrationProps}
+          sx={{
+            px: {
+              xs: "var(--ds-spacing-bitterCold)",
+              md: "var(--ds-spacing-warm)",
+            },
+            mb: "var(--ds-spacing-mild)",
+            ...IllustrationProps?.sx,
+          }}
+        >
+          {illustration}
+        </DsBox>
+      )}
       {kicker && (
         <DsTypography
           variant='subheadingSemiboldDefault'
