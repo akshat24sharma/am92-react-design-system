@@ -90,7 +90,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
       }}
     >
       {illustration && (
-        <DsBox
+        <DsDialogContent
           {...IllustrationProps}
           sx={{
             px: {
@@ -102,7 +102,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
           }}
         >
           {illustration}
-        </DsBox>
+        </DsDialogContent>
       )}
       {kicker && (
         <DsTypography
