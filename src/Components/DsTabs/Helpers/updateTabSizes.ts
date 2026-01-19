@@ -24,23 +24,16 @@ export const updateTabSizes = (
   const tabElements = tabsElement.querySelectorAll(".MuiTab-root");
   const containerRect = tabsElement.getBoundingClientRect();
 
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
   tabElements.forEach((tab: Element, index: number) => {
     const tabRect = tab.getBoundingClientRect();
-
     // Use canvas to measure actual text width (more accurate)
     const textContent = tab.textContent || "";
     const computedStyle = window.getComputedStyle(tab);
-
-    const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
     if (context) {
-      context.font = `
-        ${computedStyle.fontWeight}
-        ${computedStyle.fontSize}
-        ${computedStyle.fontFamily}
-      `;
+      context.font = `${computedStyle.fontWeight} ${computedStyle.fontSize} ${computedStyle.fontFamily}`;
       const textWidth = context.measureText(textContent).width;
-
       newSizes.set(`tab-${index}`, {
         textWidth: textWidth,
         left: tabRect.left - containerRect.left,
