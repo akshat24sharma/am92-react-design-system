@@ -1,7 +1,5 @@
-import type { CSSObject } from "@mui/system";
-
-import type { DsTabsProps } from "./DsTabs.Types";
-import { DsTabsDefaultProps } from "./DsTabs.Types";
+import { CSSObject } from "@mui/system";
+import { DsTabsDefaultProps, DsTabsProps } from "./DsTabs.Types";
 
 export const DsTabsOverrides = {
   MuiTabs: {
@@ -26,9 +24,9 @@ export const DsTabsOverrides = {
                     "var(--ds-typo-supportRegularMetadata-lineHeight)",
                   letterSpacing:
                     "var(--ds-typo-supportRegularMetadata-letterSpacing)",
-                  borderRadius: "var(--ds-radius-quickFreeze)",
-                  paddingTop: "var(--ds-spacing-frostbite)",
-                  paddingBottom: "var(--ds-spacing-frostbite)",
+                  borderRadius: "var(--ds-radius-glacial)",
+                  paddingTop: "var(--ds-spacing-glacial)",
+                  paddingBottom: "var(--ds-spacing-glacial)",
                   borderWidth: "1px",
                   borderStyle: "solid",
                   backgroundColor: "var(--ds-colour-surfaceSecondary)",
@@ -37,12 +35,12 @@ export const DsTabsOverrides = {
                   "&.Mui-selected": {
                     backgroundColor:
                       "var(--ds-colour-stateSelectedSecondaryHover)",
-                    borderColor: "var(--ds-colour-strokeSecondarySelected)",
+                    borderColor: "var(--ds-colour-iconTypical)",
                     color: "var(--ds-colour-typoActionTertiary)",
                   },
                   "&.Mui-disabled": {
-                    backgroundColor: "transparent",
-                    borderColor: "transparent",
+                    backgroundColor: "none",
+                    borderColor: "none",
                     color: "var(--ds-colour-typoDisabled)",
                   },
                 },
@@ -87,6 +85,43 @@ export const DsTabsOverrides = {
                     backgroundColor: "var(--ds-colour-neutral1)",
                     color: "var(--ds-colour-typoDisabled)",
                     fontWeight: "var(--ds-typo-bodyRegularMedium-fontWeight)",
+                  },
+                },
+              },
+            } as CSSObject,
+          },
+          {
+            props: { textFit: true } as Partial<DsTabsProps>,
+            style: {
+              "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
+                "> .MuiTab-root": {
+                  paddingLeft: "var(--ds-spacing-bitterCold) !important",
+                  paddingRight: "var(--ds-spacing-bitterCold) !important",
+                  minWidth: "0 !important",
+                  "&.MuiButtonBase-root": {
+                    minWidth: "0 !important",
+                    paddingLeft: "var(--ds-spacing-bitterCold) !important",
+                    paddingRight: "var(--ds-spacing-bitterCold) !important",
+                  },
+                },
+              },
+            } as CSSObject,
+          },
+          {
+            props: { "ds-size": "small" } as Partial<DsTabsProps>,
+            style: {
+              "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
+                "> .MuiTab-root": {
+                  fontWeight: "var(--ds-typo-bodyRegularSmall-fontWeight)",
+                  fontSize: "var(--ds-typo-bodyRegularSmall-fontSize)",
+                  lineHeight: "var(--ds-typo-bodyRegularSmall-lineHeight)",
+                  letterSpacing:
+                    "var(--ds-typo-bodyRegularSmall-letterSpacing)",
+                  "&.Mui-selected": {
+                    fontWeight: "var(--ds-typo-bodyBoldSmall-fontWeight)",
+                    fontSize: "var(--ds-typo-bodyBoldSmall-fontSize)",
+                    lineHeight: "var(--ds-typo-bodyBoldSmall-lineHeight)",
+                    letterSpacing: "var(--ds-typo-bodyBoldSmall-letterSpacing)",
                   },
                 },
               },
