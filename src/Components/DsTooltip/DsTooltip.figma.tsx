@@ -33,9 +33,9 @@ figma.connect(
             description: figma.textContent('body_text'),
         },
         //@ts-ignore
-        example: ( ...props) => {
+        example: (props) => {
             return (
-                <DsTooltip {...props} ><></></DsTooltip>
+                <DsTooltip {...props} ><>info</></DsTooltip>
             )
         },
     },
