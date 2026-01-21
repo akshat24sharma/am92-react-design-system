@@ -6,7 +6,6 @@ figma.connect(
     "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=55817-6293&m=dev",
     {
         props: {
-            // FIXME: illustration and working area, both have same frame name in figma
             color: figma.enum("Kicker", {
                 Primary: 'primary',
                 Close: 'default',
@@ -25,6 +24,9 @@ figma.connect(
                 true: true,
                 false: false,
             }),
+            'primaryButtonText': 'Button',
+            'secondaryButtonText': 'Close',
+            'primaryButtonProps': { onClick: () => {} }
         },
         //@ts-ignore
         example: ( props) => {
