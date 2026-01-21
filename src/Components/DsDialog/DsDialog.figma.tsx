@@ -6,11 +6,6 @@ figma.connect(
     "https://www.figma.com/design/9o1qfErgy23YgsDzoaXpw7/Subzero-V.2.0-Design-System?node-id=55817-6293&m=dev",
     {
         props: {
-            color: figma.enum("Kicker", {
-                Primary: 'primary',
-                Close: 'default',
-                Default: 'secondary'
-            }),
             title: figma.textContent('title-text'),
             description: figma.boolean("Sub-Heading", {
                 true: figma.textContent('subtitle-text'),
