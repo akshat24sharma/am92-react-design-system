@@ -7,7 +7,8 @@ export const DsIconOverrides = {
       root: {
         height: 'auto',
         width: 'auto',
-        lineHeight: '1'
+        lineHeight: '1',
+        fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
       },
       colorIconSupportNegative: {
         color: 'var(--ds-colour-iconNegative)'
