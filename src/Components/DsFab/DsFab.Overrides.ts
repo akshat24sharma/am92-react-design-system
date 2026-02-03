@@ -18,6 +18,9 @@ export const DsFabOverrides = {
           fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
           lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
           letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)'
+        },
+        '.MuiIcon-root' : {
+          fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
         }
       } as CSSInterpolation,
       sizeLarge: {

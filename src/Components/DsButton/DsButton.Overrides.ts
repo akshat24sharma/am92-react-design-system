@@ -13,6 +13,9 @@ export const DsButtonOverrides = {
           cursor: 'not-allowed',
           pointerEvents: 'all'
         },
+        '.MuiButton-icon': {
+          fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
+        },
         variants: [
           {
             props: { variant: 'flushed' } as Partial<DsButtonProps>,
