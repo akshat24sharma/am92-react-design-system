@@ -13,7 +13,7 @@ export const DsButtonOverrides = {
           cursor: 'not-allowed',
           pointerEvents: 'all'
         },
-        '.MuiButton-icon': {
+        '.MuiIcon-root': {
           fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
         },
         variants: [
