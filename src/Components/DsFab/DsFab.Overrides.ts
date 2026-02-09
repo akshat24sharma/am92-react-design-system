@@ -22,19 +22,19 @@ export const DsFabOverrides = {
       } as CSSInterpolation,
       sizeLarge: {
         padding: 'var(--ds-spacing-cool)',
-        '> .MuiSvgIcon-root': {
+        '> .MuiIcon-root': {
           fontSize: 'var(--ds-typo-fontSizePleasant)'
         }
       } as CSSInterpolation,
       sizeMedium: {
         padding: 'var(--ds-spacing-bitterCold)',
-        '> .MuiSvgIcon-root': {
+        '> .MuiIcon-root': {
           fontSize: 'var(--ds-typo-fontSizeMild)'
         }
       } as CSSInterpolation,
       sizeSmall: {
         padding: 'var(--ds-spacing-frostbite)',
-        '> .MuiSvgIcon-root': {
+        '> .MuiIcon-root': {
           fontSize: 'var(--ds-typo-fontSizeCool)'
         }
       } as CSSInterpolation,
