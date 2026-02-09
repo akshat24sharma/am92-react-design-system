@@ -32,7 +32,7 @@ export const DsToastOverrides = {
         '.MuiIconButton-root': {
           fontSize: 'var(--ds-typo-fontSizeMild)'
         },
-        '.MuiSvgIcon-root': {
+        '.MuiIcon-root': {
           fontSize: 'inherit'
         }
       },
