@@ -131,7 +131,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       }),
       ...restProps.sx,
     }),
-    [isEmptyCount, disabled, restProps.sx]
+    [isEmptyCount, disabled, loading, restProps.sx]
   );
 
   const boxSx = useMemo(
