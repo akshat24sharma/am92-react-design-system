@@ -124,14 +124,11 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       borderRadius: "var(--ds-radius-cool)",
       boxShadow: "var(--ds-elevation-8)",
       background: "var(--ds-colour-surfacePrimary)",
-      "&:hover": {
-        background: "var(--ds-colour-surfacePrimary) !important",
-      },
-      ...STATE_STYLES.SURFACE_SECONDARY_STATE_PRIMARY,
-      pointerEvents: !isEmptyCount && disabled ? "none" : "auto",
-      "&.Mui-disabled": {
-        background: "var(--ds-colour-stateDisabledSurface) !important",
-      },
+      ...STATE_STYLES.SURFACE_PRIMARY_STATE_PRIMARY,
+      pointerEvents: disabled || loading ? "none" : "auto",
+      ...(disabled && {
+        background: "var(--ds-colour-stateDisabledSurface)",
+      }),
       ...restProps.sx,
     }),
     [isEmptyCount, disabled, restProps.sx]
@@ -140,9 +137,12 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   const boxSx = useMemo(
     () => ({
       ...fabSx,
-      display: "flex",
+      display: "inline-flex",
       justifyContent: "center",
-      alignItems: "center",
+      alignItems: "center",    
+      "&:hover": {
+        background: "var(--ds-colour-surfacePrimary) !important",
+      },
       ...restProps.sx,
     }),
     [fabSx, restProps.sx]
@@ -164,7 +164,11 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       color="default"
       {...restProps}
       onClick={isEmptyCount ? handleAdd : undefined}
-      sx={fabSx}
+      sx={{
+        ...fabSx,
+        display: "inline-flex",
+        verticalAlign: "top",
+      }}
       disableRipple={!isEmptyCount || disabled}
     >
       {counterTextElement}
