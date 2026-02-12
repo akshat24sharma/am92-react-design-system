@@ -11,7 +11,6 @@ import { DsFileUploaderImagePreview } from './DsFileUploaderPreview/DsFileUpload
 import { getFileValidator } from './validator'
 import { fileToFileUploader } from './converter'
 import { DsRemixIcon } from '../DsRemixIcon'
-import { __unsafe_useEmotionCache } from '@emotion/react';
 
 export const mergeProps = <T extends Record<string, any>>(
   inProps: Partial<T>,
@@ -137,8 +136,3 @@ export const getValidProcessedFile = async <
 
   return { valid, invalid }
 }
-
-export const getEmotionNonce = (): string | undefined => {
-  const cache = __unsafe_useEmotionCache();
-  return cache?.nonce;
-};
