@@ -1,7 +1,7 @@
-import { getEmotionNonce } from '../DsFileUploader/helpers';
+import { useEmotionNonce } from "../../Hooks/nonce";
 
 export function ThreeDotLoader() {
-  const nonce = getEmotionNonce();
+  const nonce = useEmotionNonce();
 
   return (
     <svg
