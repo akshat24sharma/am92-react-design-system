@@ -1,4 +1,7 @@
+import { getEmotionNonce } from '../DsFileUploader/helpers';
+
 export function SingleDotLoader() {
+  const nonce = getEmotionNonce();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +18,7 @@ export function SingleDotLoader() {
         <clipPath id="__loader_element_11">
           <rect width="1000" height="1000" x="0" y="0"></rect>
         </clipPath>
-        <style>
+        <style nonce={nonce}>
           {`@keyframes ball {
   0%{
     transform: matrix(2.428800106048584,0,0,2.428800106048584,491.30035400390625,444.7691650390625)
