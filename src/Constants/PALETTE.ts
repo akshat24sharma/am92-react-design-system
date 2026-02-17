@@ -23,7 +23,7 @@ export const PALETTE: DsPalette = {
   secondaryGrey20: '#F1F1F1',
   secondaryGrey10: '#F9F9F9',
 
-  tertiary100: '#12877F',
+  tertiary100: '#0C746C',
   tertiary80: '#49A49E',
   tertiary60: '#81C1BD',
   tertiary40: '#B8DDDB',
