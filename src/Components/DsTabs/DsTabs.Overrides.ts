@@ -15,32 +15,30 @@ export const DsTabsOverrides = {
                 height: "0px",
               },
               "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
-                gap: "var(--ds-spacing-glacial)",
+                gap: "var(--ds-spacing-frostbite)",
                 "> .MuiTab-root": {
                   fontWeight:
-                    "var(--ds-typo-supportRegularMetadata-fontWeight)",
-                  fontSize: "var(--ds-typo-supportRegularMetadata-fontSize)",
+                    "var(--ds-typo-bodyRegularMedium-fontWeight)",
+                  fontSize: "var(--ds-typo-bodyRegularMedium-fontSize)",
                   lineHeight:
-                    "var(--ds-typo-supportRegularMetadata-lineHeight)",
+                    "var(--ds-typo-bodyRegularMedium-lineHeight)",
                   letterSpacing:
-                    "var(--ds-typo-supportRegularMetadata-letterSpacing)",
+                    "var(--ds-typo-bodyRegularMedium-letterSpacing)",
                   borderRadius: "var(--ds-radius-glacial)",
-                  paddingTop: "var(--ds-spacing-glacial)",
-                  paddingBottom: "var(--ds-spacing-glacial)",
-                  borderWidth: "1px",
-                  borderStyle: "solid",
+                  padding:"var(--ds-spacing-glacial) var(--ds-spacing-frostbite)",
+                  border:"1px solid var(--ds-colour-strokeDefault)",
                   backgroundColor: "var(--ds-colour-surfaceSecondary)",
-                  borderColor: "var(--ds-colour-strokeDefault)",
                   color: "var(--ds-colour-typoSecondary)",
                   "&.Mui-selected": {
                     backgroundColor:
-                      "var(--ds-colour-stateSelectedSecondaryHover)",
+                      "var(--ds-colour-neutral2)",
                     borderColor: "var(--ds-colour-iconTypical)",
                     color: "var(--ds-colour-typoActionTertiary)",
+                    fontWeight: "var(--ds-typo-bodyBoldMedium-fontWeight)",
                   },
                   "&.Mui-disabled": {
-                    backgroundColor: "none",
-                    borderColor: "none",
+                    backgroundColor: "var(--ds-colour-stateDisabledSurface)",
+                    borderColor: "var(--ds-colour-strokeDisabled)",
                     color: "var(--ds-colour-typoDisabled)",
                   },
                 },
@@ -95,14 +93,7 @@ export const DsTabsOverrides = {
             style: {
               "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
                 "> .MuiTab-root": {
-                  paddingLeft: "var(--ds-spacing-bitterCold) !important",
-                  paddingRight: "var(--ds-spacing-bitterCold) !important",
-                  minWidth: "0 !important",
-                  "&.MuiButtonBase-root": {
-                    minWidth: "0 !important",
-                    paddingLeft: "var(--ds-spacing-bitterCold) !important",
-                    paddingRight: "var(--ds-spacing-bitterCold) !important",
-                  },
+                  minWidth: "unset",
                 },
               },
             } as CSSObject,
@@ -110,18 +101,19 @@ export const DsTabsOverrides = {
           {
             props: { "ds-size": "small" } as Partial<DsTabsProps>,
             style: {
+              minHeight: "auto",
               "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
                 "> .MuiTab-root": {
+                  minHeight: "unset",
+                  borderRadius: "var(--ds-radius-gelid)",
                   fontWeight: "var(--ds-typo-bodyRegularSmall-fontWeight)",
                   fontSize: "var(--ds-typo-bodyRegularSmall-fontSize)",
                   lineHeight: "var(--ds-typo-bodyRegularSmall-lineHeight)",
+                  padding:"var(--ds-spacing-gelid) var(--ds-spacing-glacial)",
                   letterSpacing:
                     "var(--ds-typo-bodyRegularSmall-letterSpacing)",
                   "&.Mui-selected": {
                     fontWeight: "var(--ds-typo-bodyBoldSmall-fontWeight)",
-                    fontSize: "var(--ds-typo-bodyBoldSmall-fontSize)",
-                    lineHeight: "var(--ds-typo-bodyBoldSmall-lineHeight)",
-                    letterSpacing: "var(--ds-typo-bodyBoldSmall-letterSpacing)",
                   },
                 },
               },
