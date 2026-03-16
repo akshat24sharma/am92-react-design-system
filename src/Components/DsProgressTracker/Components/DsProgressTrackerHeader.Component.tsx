@@ -13,6 +13,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
     nextStepLabelPrefix,
     dense,
     onClick,
+    StepperProps,
     stepLabelVisible,
     lastStepLabelText,
     ...wrapperProps
