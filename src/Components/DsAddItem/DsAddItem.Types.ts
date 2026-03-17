@@ -2,7 +2,7 @@ import type { ComponentType } from "react";
 
 import { DsAddItemIconButton } from "./Slots/DsAddItemActionIcon.Slot";
 import { DsAddItemCounterText } from "./Slots/DsAddItemCounterText.Slot";
-import { DsButtonBaseProps } from "../DsButtonBase";
+import { DsFabProps } from "../DsFab";
 import { DsTypographyProps } from "../DsTypography";
 import { DsIconButtonProps } from "../DsIconButton";
 import { DsRemixIconProps } from "../DsRemixIcon";
@@ -60,7 +60,7 @@ export interface DsAddItemSlotProps {
  */
 // export interface DsAddItemProps extends Omit<DsFabProps, 'onChange'> {
 export interface DsAddItemProps
-  extends Omit<DsButtonBaseProps, "onChange" | "value"> {
+  extends Omit<DsFabProps, "onChange" | "value"> {
   /** The current count value */
   value?: number;
   /** The maximum allowed value */
