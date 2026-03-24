@@ -22,6 +22,7 @@ export interface DsPopupProps extends Pick<DsDialogProps, 'onClose'> {
   title?: string
   description?: string
   showClose?: boolean
+  illustration?: DsDialogProps['illustration']
   primaryButtonText?: DsButtonProps['children']
   primaryButtonProps?: Omit<DsButtonProps, 'ref'>
   secondaryButtonText?: DsButtonProps['children']
