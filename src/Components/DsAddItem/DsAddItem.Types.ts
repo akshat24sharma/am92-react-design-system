@@ -58,7 +58,6 @@ export interface DsAddItemSlotProps {
  * Main props interface for the DsAddItem component
  * Extends DsFabProps while omitting the onChange prop to define custom signature
  */
-// export interface DsAddItemProps extends Omit<DsFabProps, 'onChange'> {
 export interface DsAddItemProps
   extends Omit<DsFabProps, "onChange" | "value"> {
   /** The current count value */
