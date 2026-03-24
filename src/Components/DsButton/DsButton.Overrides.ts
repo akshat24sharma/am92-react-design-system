@@ -71,8 +71,8 @@ export const DsButtonOverrides = {
         lineHeight: 'var(--ds-typo-bodyBoldLarge-lineHeight)',
         letterSpacing: 'var(--ds-typo-bodyBoldLarge-letterSpacing)',
         '.MuiButton-loadingIndicator': {
-          width: '42px',
-          height: '24px',
+          width: 'calc(var(--ds-spacing-tropical) + var(--ds-spacing-deepFreeze))',
+          height: 'var(--ds-spacing-mild)',
           right: 'auto',
         },
       } as CSSObject,
@@ -83,8 +83,8 @@ export const DsButtonOverrides = {
         lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
         letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
         '.MuiButton-loadingIndicator': {
-          width: '34px',
-          height: '20px',
+          width: 'calc(var(--ds-spacing-warm) + var(--ds-spacing-deepFreeze))',
+          height: 'var(--ds-spacing-cool)',
           right: 'auto',
         },
       } as CSSObject,
@@ -95,8 +95,8 @@ export const DsButtonOverrides = {
         lineHeight: 'var(--ds-typo-bodyBoldSmall-lineHeight)',
         letterSpacing: 'var(--ds-typo-bodyBoldSmall-letterSpacing)',
         '.MuiButton-loadingIndicator': {
-          width: '32px',
-          height: '18px',
+          width: 'var(--ds-spacing-warm)',
+          height: 'calc(var(--ds-spacing-bitterCold) + var(--ds-spacing-deepFreeze))',
           right: 'auto',
         },
       } as CSSObject,
