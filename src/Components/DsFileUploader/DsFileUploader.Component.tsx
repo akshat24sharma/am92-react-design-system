@@ -14,7 +14,6 @@ import type {
 import { DsFileUploaderDefaultProps } from './DsFileUploader.Types'
 import FileUploaderFiles from './FileUploaderFiles'
 import { getDefaultValue, getValidProcessedFile, mergeProps } from './helpers'
-import { DsFileUploaderDropZone } from './Slots/DsFileUploaderDropZone'
 import { DsStack } from '../DsStack'
 import { DsInputLabel } from '../DsInputLabel'
 
