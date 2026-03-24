@@ -56,6 +56,8 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
     children,
     onClose,
     slotProps,
+    illustration,
+    IllustrationProps,
     ...DrawerProps
   } = props
 
@@ -129,6 +131,19 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
           ...ContainerProps?.sx
         }}
       >
+        {illustration && (
+          <DsDialogContent
+            {...IllustrationProps}
+            sx={{
+              px: 'var(--ds-spacing-bitterCold)',
+              marginBottom: 'var(--ds-spacing-mild)',
+              ...IllustrationProps?.sx
+            }}
+          >
+            {illustration}
+          </DsDialogContent>
+        )}
+
         {kicker && (
           <DsTypography
             variant='subheadingSemiboldDefault'
