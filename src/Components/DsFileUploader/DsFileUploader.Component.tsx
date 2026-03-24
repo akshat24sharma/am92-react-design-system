@@ -228,10 +228,10 @@ export const DsFileUploader = <
           InputProps={{
             accept: allowedFiles || accept,
             multiple: multiple,
+            ...slotProps?.DropZone?.InputProps,
             onChange: handleFileSelect,
             onDrop: handleDropFile,
             onDragOver: handleDragOverHandler,
-            ...slotProps?.DropZone?.InputProps
           }}
         />
       )}
