@@ -1,4 +1,4 @@
-import type { ElementType } from 'react'
+import type { ElementType, InputHTMLAttributes } from 'react'
 import { DsInputLabelProps } from '../DsInputLabel'
 import { DsRemixIconProps } from '../DsRemixIcon'
 import { DsStackProps } from '../DsStack'
@@ -224,7 +224,10 @@ export interface IDsFileUploaderDropZoneProps extends DsStackProps {
   /**
    * To override props passed to input element
    */
-  InputProps?: DsInputProps['inputProps']
+  InputProps?: Omit<
+    NonNullable<DsInputProps['inputProps']>,
+    'onChange' | 'onDrop' | 'onDragOver'
+  >
   /**
    * This prop can be used to toggle the disabled state of the file uploaded.
    */
