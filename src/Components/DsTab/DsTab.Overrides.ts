@@ -14,9 +14,6 @@ export const DsTabOverrides = {
         gap: 'var(--ds-spacing-glacial)',
         minHeight: '36px',
         textTransform: 'none',
-        borderBottomWidth: '1px',
-        borderBottomStyle: 'solid',
-        borderBottomColor: 'var(--ds-colour-stateDisabledSurface)',
         '> .MuiTab-iconWrapper': {
           fontSize: 'var(--ds-typo-fontSizeFrostbite)',
           margin: 'var(--ds-spacing-zero)'
@@ -31,3 +28,4 @@ export const DsTabOverrides = {
     }
   }
 }
+
