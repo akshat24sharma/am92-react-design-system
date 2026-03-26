@@ -2,10 +2,13 @@ import type { ComponentType } from "react";
 
 import { DsAddItemIconButton } from "./Slots/DsAddItemActionIcon.Slot";
 import { DsAddItemCounterText } from "./Slots/DsAddItemCounterText.Slot";
-import { DsFabProps } from "../DsFab";
 import { DsTypographyProps } from "../DsTypography";
 import { DsIconButtonProps } from "../DsIconButton";
 import { DsRemixIconProps } from "../DsRemixIcon";
+import { CSSObject } from "@mui/system";
+import { OverridableStringUnion } from "@mui/types";
+import { IconButtonPropsColorOverrides } from "@mui/material";
+import { DsStackProps } from "../DsStack";
 
 /**
  * Default step value for increment/decrement operations
@@ -25,9 +28,9 @@ export interface DsAddItemActionButtonProps extends DsIconButtonProps {
  * Props for the counter text display showing current count
  */
 export interface DsAddItemCounterTextProps extends DsTypographyProps {
-  label: string;
-  value: number;
-  disabled: boolean;
+  label?: string;
+  value?: number;
+  disabled?: boolean;
 }
 
 /**
@@ -58,8 +61,7 @@ export interface DsAddItemSlotProps {
  * Main props interface for the DsAddItem component
  * Extends DsFabProps while omitting the onChange prop to define custom signature
  */
-export interface DsAddItemProps
-  extends Omit<DsFabProps, "onChange" | "value"> {
+export interface DsAddItemProps {
   /** The current count value */
   value?: number;
   /** The maximum allowed value */
@@ -74,7 +76,7 @@ export interface DsAddItemProps
   onChange: (
     name: string,
     value: number,
-    reason: "increment" | "decrement"
+    reason: "increment" | "decrement",
   ) => void;
   /** Custom components to use for slots */
   slots?: DsAddItemSlots;
@@ -82,8 +84,31 @@ export interface DsAddItemProps
   slotProps?: DsAddItemSlotProps;
   /** Name of the counter field */
   name: string;
-  /** Whether the counter is in loading state */
-  loading?: boolean;
+  /** Whether the counter is in disabled state */
+  disabled?: boolean;
+  /** Custom styles to apply to the component using MUI's sx prop system */
+  sx?: CSSObject;
+  /**
+   * Props to pass to the root Stack wrapper component.
+   * Allows full control over the Stack component properties.
+   */
+  wrapperProps?: DsStackProps;
+  /**
+   * Color variant for the icon buttons and empty state text.
+   * Supports standard MUI color variants (primary, secondary, etc.) and can be extended via theme augmentation.
+   * Defaults to 'secondary'.
+   */
+  color?: OverridableStringUnion<
+    | "inherit"
+    | "default"
+    | "primary"
+    | "secondary"
+    | "error"
+    | "info"
+    | "success"
+    | "warning",
+    IconButtonPropsColorOverrides
+  >;
 }
 
 /**
@@ -94,6 +119,7 @@ export const DsAddItemDefaultProps: Partial<DsAddItemProps> = {
   label: "Add",
   step: DEFAULT_STEP_VALUE,
   minValue: 0,
+  color: "secondary",
   onChange: () => {},
   slots: {
     LeftIconButton: DsAddItemIconButton,
@@ -102,13 +128,11 @@ export const DsAddItemDefaultProps: Partial<DsAddItemProps> = {
   },
   slotProps: {
     LeftIconButton: {
-      color: "secondary",
       IconProps: {
         className: "ri-subtract-line",
       },
     },
     RightIconButton: {
-      color: "secondary",
       IconProps: {
         className: "ri-add-line",
       },

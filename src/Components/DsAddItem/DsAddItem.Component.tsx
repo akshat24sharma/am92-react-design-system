@@ -16,6 +16,22 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   const mergedSlotProps = {
     ...DsAddItemDefaultProps.slotProps,
     ...(inProps.slotProps || {}),
+    LeftIconButton: {
+      ...DsAddItemDefaultProps.slotProps?.LeftIconButton,
+      ...inProps.slotProps?.LeftIconButton,
+      IconProps: {
+        ...DsAddItemDefaultProps.slotProps?.LeftIconButton?.IconProps,
+        ...inProps.slotProps?.LeftIconButton?.IconProps,
+      },
+    },
+    RightIconButton: {
+      ...DsAddItemDefaultProps.slotProps?.RightIconButton,
+      ...inProps.slotProps?.RightIconButton,
+      IconProps: {
+        ...DsAddItemDefaultProps.slotProps?.RightIconButton?.IconProps,
+        ...inProps.slotProps?.RightIconButton?.IconProps,
+      },
+    },
   };
 
   const props = {
@@ -36,7 +52,8 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     disabled,
     onChange,
     name,
-    loading,
+    color,
+    wrapperProps,
     ...restProps
   } = props;
 
@@ -46,7 +63,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
 
   // Internal state for count value, initialized based on control mode
   const [countValue, setCountValue] = useState<number>(
-    isControlled ? value : 0
+    isControlled ? value : 0,
   );
 
   // Component is in "empty" state when count is 0 (shows single Add button)
@@ -59,9 +76,9 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   }, [value]);
 
   const isAddDisabled =
-    disabled || loading || (maxValue !== undefined && countValue >= maxValue);
+    disabled || (maxValue !== undefined && countValue >= maxValue);
 
-  const isSubtractDisabled = disabled || loading;
+  const isSubtractDisabled = disabled;
 
   const handleAdd = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -108,8 +125,8 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       borderRadius: "var(--ds-radius-cool)",
       boxShadow: "var(--ds-elevation-8)",
       background: "var(--ds-colour-surfacePrimary)",
-      pointerEvents: disabled || loading ? "none" : "auto",
-      ...((disabled || loading) && {
+      pointerEvents: disabled ? "none" : "auto",
+      ...(disabled && {
         background: "var(--ds-colour-stateDisabledSurface)",
       }),
       display: "inline-flex",
@@ -117,69 +134,78 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       alignItems: "center",
       verticalAlign: "middle",
     }),
-    [disabled, loading],
+    [disabled],
   );
 
   const counterTextElement = CounterText && (
     <CounterText
       value={countValue}
       label={label ?? ""}
-      disabled={(disabled || loading) ?? false}
+      disabled={disabled ?? false}
+      color={color}
       {...slotProps?.CounterText}
     />
   );
 
-  return isEmptyCount ? (
-    <DsFab
-      disabled={disabled || loading}
-      color="default"
-      size="small"
-      onClick={isEmptyCount ? handleAdd : undefined}
-      disableRipple={!isEmptyCount || disabled}
-      {...restProps}
-      sx={{
-        ...STATE_STYLES.SURFACE_PRIMARY_STATE_PRIMARY,
-        border: "none",
-        padding: "var(--ds-spacing-frostbite) var(--ds-spacing-glacial)",
-        minWidth: "90px",
-        minHeight: "36px",
-        "&.Mui-disabled": {
-          background: "var(--ds-colour-stateDisabledSurface)",
-          boxShadow: "var(--ds-elevation-8)",
-        },
-        "& .MuiTypography-root": {
-          fontSize: "var(--ds-typo-supportBoldTextButton-fontSize)",
-          lineHeight: "var(--ds-typo-supportBoldTextButton-lineHeight)",
-        },
-        ...restProps.sx,
-      }}
-    >
-      {counterTextElement}
-    </DsFab>
-  ) : (
+  return (
     <DsStack
-      direction="row"
-      onClick={isEmptyCount ? handleAdd : undefined}
-      sx={{ ...stackSx, ...restProps.sx } as CSSObject}
+      {...wrapperProps}
+      sx={{ display: "inline-flex", verticalAlign: "middle", ...wrapperProps?.sx } as CSSObject}
     >
-      {!isEmptyCount && LeftIconButton && (
-        <LeftIconButton
-          disabled={isSubtractDisabled}
-          onClick={handleSubtract}
-          aria-label="Decrease value"
-          {...slotProps?.LeftIconButton}
-        />
-      )}
-
-      {counterTextElement}
-
-      {!isEmptyCount && RightIconButton && (
-        <RightIconButton
+      {isEmptyCount ? (
+        <DsFab
+          disabled={disabled}
+          color="default"
+          size="small"
           onClick={handleAdd}
-          disabled={isAddDisabled}
-          aria-label="Increase value"
-          {...slotProps?.RightIconButton}
-        />
+          disableRipple={disabled}
+          {...restProps}
+          sx={{
+            ...STATE_STYLES.SURFACE_PRIMARY_STATE_PRIMARY,
+            border: "none",
+            padding: "var(--ds-spacing-frostbite) var(--ds-spacing-glacial)",
+            minWidth: "90px",
+            minHeight: "36px",
+            "&.Mui-disabled": {
+              background: "var(--ds-colour-stateDisabledSurface)",
+              boxShadow: "var(--ds-elevation-8)",
+            },
+            "& .MuiTypography-root": {
+              fontSize: "var(--ds-typo-supportBoldTextButton-fontSize)",
+              lineHeight: "var(--ds-typo-supportBoldTextButton-lineHeight)",
+            },
+            ...restProps.sx,
+          }}
+        >
+          {counterTextElement}
+        </DsFab>
+      ) : (
+        <DsStack
+          direction="row"
+          sx={{ ...stackSx, ...restProps.sx } as CSSObject}
+        >
+          {LeftIconButton && (
+            <LeftIconButton
+              disabled={isSubtractDisabled}
+              onClick={handleSubtract}
+              aria-label="Decrease value"
+              color={color}
+              {...slotProps?.LeftIconButton}
+            />
+          )}
+
+          {counterTextElement}
+
+          {RightIconButton && (
+            <RightIconButton
+              onClick={handleAdd}
+              disabled={isAddDisabled}
+              aria-label="Increase value"
+              color={color}
+              {...slotProps?.RightIconButton}
+            />
+          )}
+        </DsStack>
       )}
     </DsStack>
   );

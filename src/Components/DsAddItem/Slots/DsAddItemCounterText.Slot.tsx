@@ -7,6 +7,7 @@ export const DsAddItemCounterText: React.FC<DsAddItemCounterTextProps> = ({
   label,
   value,
   disabled,
+  color,
   ...textProps
 }) => {
   const isEmptyCount = value === 0;
@@ -18,8 +19,8 @@ export const DsAddItemCounterText: React.FC<DsAddItemCounterTextProps> = ({
         disabled
           ? "var(--ds-colour-typoDisabled)"
           : isEmptyCount
-          ? "var(--ds-colour-typoActionSecondary)"
-          : "var(--ds-colour-typoPrimary)"
+            ? color
+            : "var(--ds-colour-typoPrimary)"
       }
       sx={{
         mx: isEmptyCount
