@@ -1,4 +1,4 @@
-import type { ElementType, InputHTMLAttributes } from 'react'
+import type { ElementType } from 'react'
 import { DsInputLabelProps } from '../DsInputLabel'
 import { DsRemixIconProps } from '../DsRemixIcon'
 import { DsStackProps } from '../DsStack'
