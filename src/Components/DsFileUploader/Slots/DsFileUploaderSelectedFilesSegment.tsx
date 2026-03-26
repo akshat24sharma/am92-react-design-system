@@ -25,14 +25,16 @@ export const DsFileUploaderSelectedFilesSegment = (
   const { label, children } = props
 
   return (
-    <DsStack spacing='var(--ds-spacing-frostbite)'>
-      <DsTypography
-        py='var(--ds-spacing-glacial)'
-        variant='subheadingSemiboldDefault'
-        color='var(--ds-colour-typoSecondary)'
-      >
-        {label}
-      </DsTypography>
+    <DsStack spacing="var(--ds-spacing-frostbite)">
+      {label && (
+        <DsTypography
+          py='var(--ds-spacing-glacial)'
+          variant='subheadingSemiboldDefault'
+          color='var(--ds-colour-typoSecondary)'
+        >
+          {label}
+        </DsTypography>
+      )}
       <DsStack
         spacing='var(--ds-spacing-frostbite)'
         sx={{ maxHeight: '440px', overflowY: 'auto' }}
