@@ -89,24 +89,6 @@ export const DsTabsOverrides = {
             } as CSSObject,
           },
           {
-            props: (props: DsTabsProps) =>
-              props["ds-textfit"] === "fixed" &&
-              props["ds-variant"] !== "container" &&
-              props["ds-variant"] !== "segmented" &&
-              props.orientation !== "vertical",
-            style: {
-              "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
-                "> .MuiTab-root": {
-                  minWidth: "unset",
-                  paddingRight: "0 !important",
-                  paddingLeft: "0 !important",
-                  marginRight: "var(--ds-spacing-bitterCold) !important",
-                  marginLeft: "var(--ds-spacing-bitterCold) !important",
-                },
-              },
-            } as CSSObject,
-          },
-          {
             props: { orientation: "vertical" } as Partial<DsTabsProps>,
             style: {
               borderBottom: "none",
@@ -133,6 +115,23 @@ export const DsTabsOverrides = {
                   "&.Mui-selected": {
                     fontWeight: "var(--ds-typo-bodyBoldSmall-fontWeight)",
                   },
+                },
+              },
+            } as CSSObject,
+          },
+          {
+            props: (props: DsTabsProps) =>
+              props["ds-textfit"] === "fixed" &&
+              !props["ds-variant"] &&
+              props.orientation === "horizontal",
+            style: {
+              "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
+                "> .MuiTab-root": {
+                  minWidth: "unset",
+                  paddingRight: "0",
+                  paddingLeft: "0",
+                  marginRight: "var(--ds-spacing-bitterCold)",
+                  marginLeft: "var(--ds-spacing-bitterCold)",
                 },
               },
             } as CSSObject,
