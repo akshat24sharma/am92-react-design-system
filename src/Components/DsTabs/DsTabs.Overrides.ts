@@ -96,7 +96,6 @@ export const DsTabsOverrides = {
               props.orientation !== "vertical",
             style: {
               "> .MuiTabs-scroller > .MuiTabs-flexContainer": {
-                borderBottom: "none",
                 "> .MuiTab-root": {
                   minWidth: "unset",
                   paddingRight: "0 !important",
