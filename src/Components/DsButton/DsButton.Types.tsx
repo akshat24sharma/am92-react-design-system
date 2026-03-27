@@ -1,5 +1,4 @@
 import { ButtonProps } from '@mui/material'
-import { DsBox } from '../DsBox'
 import { ThreeDotLoader } from '../DsLoader/ThreeDotLoader'
 
 export interface DsButtonProps extends ButtonProps {}
@@ -10,7 +9,6 @@ export const DsButtonDefaultProps: DsButtonProps = {
   color: 'primary',
   disableElevation: true,
   loadingIndicator: <ThreeDotLoader />
-  
 }
 
 declare module '@mui/material/Button' {
