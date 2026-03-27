@@ -37,6 +37,17 @@ export const DsButtonOverrides = {
           }
         ],
       } as CSSObject,
+
+      loading: {
+        '& > span:not(.MuiButton-loadingWrapper)': {
+          visibility: 'hidden'
+        },
+      } as CSSObject,
+      
+      loadingIndicator: {
+        color: 'var(--ds-colour-typoOnSurface)'
+      } as CSSObject,
+
       contained: {
         "&.MuiButton-contained.MuiButton-colorPrimary": {
           color: 'var(--ds-colour-typoOnSurface)',
@@ -68,9 +79,7 @@ export const DsButtonOverrides = {
         lineHeight: 'var(--ds-typo-bodyBoldLarge-lineHeight)',
         letterSpacing: 'var(--ds-typo-bodyBoldLarge-letterSpacing)',
         '.MuiButton-loadingIndicator': {
-          width: 'calc(var(--ds-spacing-tropical) + var(--ds-spacing-deepFreeze))',
-          height: 'var(--ds-spacing-mild)',
-          right: 'auto',
+          width: 'var(--ds-rules-buttonLargeLoaderWidth)'
         },
       } as CSSObject,
       sizeMedium: {
@@ -80,9 +89,7 @@ export const DsButtonOverrides = {
         lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
         letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
         '.MuiButton-loadingIndicator': {
-          width: 'calc(var(--ds-spacing-warm) + var(--ds-spacing-deepFreeze))',
-          height: 'var(--ds-spacing-cool)',
-          right: 'auto',
+          width: 'var(--ds-rules-buttonMediumLoaderWidth)'
         },
       } as CSSObject,
       sizeSmall: {
@@ -92,9 +99,7 @@ export const DsButtonOverrides = {
         lineHeight: 'var(--ds-typo-bodyBoldSmall-lineHeight)',
         letterSpacing: 'var(--ds-typo-bodyBoldSmall-letterSpacing)',
         '.MuiButton-loadingIndicator': {
-          width: 'var(--ds-spacing-warm)',
-          height: 'calc(var(--ds-spacing-bitterCold) + var(--ds-spacing-deepFreeze))',
-          right: 'auto',
+          width: 'var(--ds-rules-buttonSmallLoaderWidth)',
         },
       } as CSSObject,
       icon: {

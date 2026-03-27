@@ -6,7 +6,7 @@ export const DsButton: FC<DsButtonProps> = (props) => {
     const { children, ...buttonProps } = props
     return (
       <Button {...buttonProps}>
-        {!buttonProps.loading && <span>{children}</span>}
+        <span>{children}</span>
       </Button>
     )
 }
