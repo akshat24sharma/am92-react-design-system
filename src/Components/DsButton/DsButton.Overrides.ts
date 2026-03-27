@@ -48,7 +48,7 @@ export const DsButtonOverrides = {
       } as CSSObject,
       
       loadingIndicator: {
-        color: 'var(--ds-colour-typoOnSurface)'
+        color: 'inherit'
       } as CSSObject,
 
       contained: {
