@@ -86,8 +86,8 @@ export interface DsAddItemProps {
   name: string;
   /** Whether the counter is in disabled state */
   disabled?: boolean;
-  /** Custom styles to apply to the component using MUI's sx prop system */
-  sx?: CSSObject;
+  /** Custom styles to apply to the component */
+  sx?: DsStackProps["sx"];
   /**
    * Props to pass to the root Stack wrapper component.
    * Allows full control over the Stack component properties.
@@ -95,8 +95,7 @@ export interface DsAddItemProps {
   wrapperProps?: DsStackProps;
   /**
    * Color variant for the icon buttons and empty state text.
-   * Supports standard MUI color variants (primary, secondary, etc.) and can be extended via theme augmentation.
-   * Defaults to 'secondary'.
+   * @default 'secondary'
    */
   color?: OverridableStringUnion<
     | "inherit"
