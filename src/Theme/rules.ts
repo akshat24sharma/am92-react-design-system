@@ -28,6 +28,10 @@ const dsRules: DsRules = {
   dataGridSSize: '26px',
   dataGridMSize: '32px',
   dataGridLSize: '40px',
+  
+  buttonSmallLoaderWidth: '32px',
+  buttonMediumLoaderWidth: '34px',
+  buttonLargeLoaderWidth: '42px'
 }
 
 export default dsRules

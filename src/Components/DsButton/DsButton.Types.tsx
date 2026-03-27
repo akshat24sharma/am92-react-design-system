@@ -9,16 +9,8 @@ export const DsButtonDefaultProps: DsButtonProps = {
   size: 'small',
   color: 'primary',
   disableElevation: true,
-  loadingPosition: 'end',
-  loadingIndicator: (
-      <DsBox
-        sx={{
-          width: '100%'
-        }}
-      >
-        <ThreeDotLoader />
-      </DsBox>
-  )
+  loadingIndicator: <ThreeDotLoader />
+  
 }
 
 declare module '@mui/material/Button' {
