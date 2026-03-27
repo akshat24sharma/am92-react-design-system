@@ -1,6 +1,6 @@
 import { ButtonProps } from '@mui/material'
 import { DsBox } from '../DsBox'
-import { ThreeDotLoader } from '../DsLoader'
+import { ThreeDotLoader } from '../DsLoader/ThreeDotLoader'
 
 export interface DsButtonProps extends ButtonProps {}
 
