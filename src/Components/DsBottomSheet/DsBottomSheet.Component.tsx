@@ -106,7 +106,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
             flexGrow: 0,
             alignSelf: 'center',
             backgroundColor: 'var(--ds-colour-iconDefault)',
-            color: 'var(--ds-colour-iconDisabled)',
+            color: 'var(--ds-colour-iconOnSurfaceDynamic)',
             borderRadius: '50%',
             p: 'var(--ds-spacing-glacial)',
             mb: 'var(--ds-spacing-bitterCold)',
