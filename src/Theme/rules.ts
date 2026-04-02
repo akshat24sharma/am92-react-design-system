@@ -23,7 +23,11 @@ const dsRules: DsRules = {
   avatarXXLSize: '64px',
   avatar3XLSize: '80px',
 
-  formHelperTextMinHeight: '28px'
+  formHelperTextMinHeight: '28px',
+
+  dataGridSSize: '26px',
+  dataGridMSize: '32px',
+  dataGridLSize: '40px',
 }
 
 export default dsRules

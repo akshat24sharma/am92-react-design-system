@@ -147,6 +147,7 @@ import {
 } from '../Components'
 
 import XDatePickerComponentOverrides from '../x-datepicker/componentOverrides'
+import XDataGridComponentOverrides from '../x-datagrid/componentOverrides'
 
 const componentOverrides = {
   ...DsAccordionOverrides,
@@ -295,7 +296,9 @@ const componentOverrides = {
   ...DsTypographyOverrides,
   ...DsZoomOverrides,
 
-  ...XDatePickerComponentOverrides
+  ...XDatePickerComponentOverrides,
+  ...XDataGridComponentOverrides,
+
 }
 
 export default componentOverrides

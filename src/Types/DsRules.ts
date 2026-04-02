@@ -16,5 +16,8 @@ export type DsRulesKeys =
   | 'avatarXXLSize'
   | 'avatar3XLSize'
   | 'formHelperTextMinHeight'
+  | 'dataGridSSize'
+  | 'dataGridMSize'
+  | 'dataGridLSize'
 
 export type DsRules = { [key in DsRulesKeys]: string }
