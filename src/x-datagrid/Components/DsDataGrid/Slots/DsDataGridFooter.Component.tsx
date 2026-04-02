@@ -2,14 +2,19 @@ import React, { type FC, useMemo } from "react";
 
 import type { CSSObject, SelectChangeEvent } from "@mui/material";
 
-import { DsBox, DsPagination, DsSelect, DsStack, DsTypography } from "../../../../Components";
+import {
+  DsBox,
+  DsPagination,
+  DsSelect,
+  DsStack,
+  DsTypography,
+} from "../../../../Components";
 
 import { IDsDataGridFooterProps } from "../DsDataGrid.Types";
 
 const SELECT_STYLES = {
   "& .MuiInputBase-root": {
-    padding:
-      "var(--ds-spacing-gelid) var(--ds-spacing-glacial)",
+    padding: "var(--ds-spacing-gelid) var(--ds-spacing-glacial)",
     borderRadius: "var(--ds-radius-glacial)",
   },
   "& .MuiSelect-select": {
@@ -35,12 +40,12 @@ export const DsDataGridFooter: FC<IDsDataGridFooterProps> = (inProps) => {
     ...footerContainerProps
   } = inProps;
 
-  const totalRowCount = rowCount ?? 10;
+  const totalRowCount = rowCount ?? 0;
   const currentPage = page ?? 0;
   const itemsPerPage = pageSize ?? 10;
 
   const pageCount = Math.ceil(totalRowCount / itemsPerPage);
-  const startIndex = currentPage * itemsPerPage + 1;
+  const startIndex = totalRowCount === 0 ? 0 : currentPage * itemsPerPage + 1;
   const endIndex = Math.min((currentPage + 1) * itemsPerPage, totalRowCount);
 
   const displayedRowsText = useMemo(() => {

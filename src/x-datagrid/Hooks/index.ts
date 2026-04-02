@@ -84,8 +84,8 @@ export const useDsDataGridPagination = (props: IDsDataGridProps) => {
   );
 
   // Total row count — prefer explicit rowCount, fallback to rows array length.
-  const rowCount = props.rowCount || props.rows?.length || 0;
-
+  const rowCount = props.rowCount ?? props.rows?.length ?? 0;
+  
   return {
     /** Resolved pagination model (controlled or internal). */
     paginationModel,
