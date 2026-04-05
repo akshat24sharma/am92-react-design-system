@@ -22,7 +22,8 @@ figma.connect(
         true: () => {},
         false: undefined
       }),
-      value: figma.textContent('text')
+      value: figma.textContent('text'),
+      label: figma.textContent('text'),
     },
     example: (props) => <DsTag {...props} />,
   }
