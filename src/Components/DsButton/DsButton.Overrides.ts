@@ -40,6 +40,17 @@ export const DsButtonOverrides = {
           }
         ],
       } as CSSObject,
+
+      loading: {
+        '& > span:not(.MuiButton-loadingWrapper)': {
+          visibility: 'hidden'
+        },
+      } as CSSObject,
+      
+      loadingIndicator: {
+        color: 'inherit'
+      } as CSSObject,
+
       contained: {
         "&.MuiButton-contained.MuiButton-colorPrimary": {
           color: 'var(--ds-colour-typoOnSurface)',
@@ -69,21 +80,30 @@ export const DsButtonOverrides = {
         fontWeight: 'var(--ds-typo-bodyBoldLarge-fontWeight)',
         fontSize: 'var(--ds-typo-bodyBoldLarge-fontSize)',
         lineHeight: 'var(--ds-typo-bodyBoldLarge-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyBoldLarge-letterSpacing)'
+        letterSpacing: 'var(--ds-typo-bodyBoldLarge-letterSpacing)',
+        '.MuiButton-loadingIndicator': {
+          width: 'var(--ds-rules-buttonLargeLoaderWidth)'
+        },
       } as CSSObject,
       sizeMedium: {
         padding: 'var(--ds-spacing-frostbite) var(--ds-spacing-bitterCold)',
         fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
         fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
         lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)'
+        letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
+        '.MuiButton-loadingIndicator': {
+          width: 'var(--ds-rules-buttonMediumLoaderWidth)'
+        },
       } as CSSObject,
       sizeSmall: {
         padding: 'var(--ds-spacing-glacial) var(--ds-spacing-bitterCold)',
         fontWeight: 'var(--ds-typo-bodyBoldSmall-fontWeight)',
         fontSize: 'var(--ds-typo-bodyBoldSmall-fontSize)',
         lineHeight: 'var(--ds-typo-bodyBoldSmall-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyBoldSmall-letterSpacing)'
+        letterSpacing: 'var(--ds-typo-bodyBoldSmall-letterSpacing)',
+        '.MuiButton-loadingIndicator': {
+          width: 'var(--ds-rules-buttonSmallLoaderWidth)',
+        },
       } as CSSObject,
       icon: {
         '&.MuiButton-sizeLarge': {
