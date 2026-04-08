@@ -15,6 +15,7 @@ export const DsAddItemIconButton: React.FC<DsAddItemActionButtonProps> = ({
       <DsRemixIcon
         sx={{
           fontSize: "20px",
+          color: disabled ? 'var(--ds-colour-iconDisabled)' : 'inherit',
           ...IconProps?.sx,
         }}
         {...IconProps}

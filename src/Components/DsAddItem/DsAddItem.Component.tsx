@@ -1,12 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
-import {
-  DsAddItemDefaultProps,
-  type DsAddItemProps,
-  DEFAULT_STEP_VALUE,
-} from "./DsAddItem.Types";
+import React, { useEffect, useMemo, useState } from "react";
+
+import { DsAddItemDefaultProps, type DsAddItemProps } from "./DsAddItem.Types";
+import { calculateNewValue, isBelowMinValue } from "./DsAddItem.helpers";
 import STATE_STYLES from "../../Theme/STATE_STYLES";
-import { DsButtonBase } from "../DsButtonBase";
-import { DsBox } from "../DsBox";
+import { DsStack } from "../DsStack";
+import { DsFab } from "../DsFab";
+import { CSSObject } from "@mui/system";
 
 export const DsAddItem = (inProps: DsAddItemProps) => {
   const mergedSlots = {
@@ -17,6 +16,22 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   const mergedSlotProps = {
     ...DsAddItemDefaultProps.slotProps,
     ...(inProps.slotProps || {}),
+    LeftIconButton: {
+      ...DsAddItemDefaultProps.slotProps?.LeftIconButton,
+      ...inProps.slotProps?.LeftIconButton,
+      IconProps: {
+        ...DsAddItemDefaultProps.slotProps?.LeftIconButton?.IconProps,
+        ...inProps.slotProps?.LeftIconButton?.IconProps,
+      },
+    },
+    RightIconButton: {
+      ...DsAddItemDefaultProps.slotProps?.RightIconButton,
+      ...inProps.slotProps?.RightIconButton,
+      IconProps: {
+        ...DsAddItemDefaultProps.slotProps?.RightIconButton?.IconProps,
+        ...inProps.slotProps?.RightIconButton?.IconProps,
+      },
+    },
   };
 
   const props = {
@@ -37,7 +52,8 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     disabled,
     onChange,
     name,
-    loading,
+    color,
+    wrapperProps,
     ...restProps
   } = props;
 
@@ -47,7 +63,7 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
 
   // Internal state for count value, initialized based on control mode
   const [countValue, setCountValue] = useState<number>(
-    isControlled ? value : 0
+    isControlled ? value : 0,
   );
 
   // Component is in "empty" state when count is 0 (shows single Add button)
@@ -60,31 +76,18 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
   }, [value]);
 
   const isAddDisabled =
-    disabled || loading || (maxValue !== undefined && countValue >= maxValue);
+    disabled || (maxValue !== undefined && countValue >= maxValue);
 
-  const isSubtractDisabled = disabled || loading;
-
-  // Helper function to check if value is below minValue threshold
-  const isBelowMinValue = (value: number): boolean => {
-    return minValue !== undefined && value < minValue;
-  };
-
-  // Helper function to calculate new value based on operation
-  const calculateNewValue = (operation: "add" | "subtract"): number => {
-    const stepValue = step ?? DEFAULT_STEP_VALUE;
-    return operation === "add"
-      ? countValue + stepValue
-      : countValue - stepValue;
-  };
+  const isSubtractDisabled = disabled;
 
   const handleAdd = (e: React.MouseEvent) => {
     e.stopPropagation();
 
     if (!isAddDisabled) {
-      let newValue = calculateNewValue("add");
+      let newValue = calculateNewValue(countValue, step, "add");
 
       // Jump to minValue if increment would result in a value below minimum threshold
-      if (isBelowMinValue(newValue)) {
+      if (isBelowMinValue(newValue, minValue)) {
         newValue = minValue!;
       }
 
@@ -100,10 +103,10 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     e.stopPropagation();
 
     if (!isSubtractDisabled) {
-      let newValue = calculateNewValue("subtract");
+      let newValue = calculateNewValue(countValue, step, "subtract");
 
       // Reset to 0 if would go negative or below minValue (back to "add" state)
-      if (newValue < 0 || isBelowMinValue(newValue)) {
+      if (newValue < 0 || isBelowMinValue(newValue, minValue)) {
         newValue = 0;
       }
 
@@ -114,38 +117,24 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
     }
   };
 
-  const fabSx = useMemo(
+  const stackSx = useMemo(
     () => ({
-      px: "var(--ds-spacing-glacial)",
-      pt: isEmptyCount ? "var(--ds-spacing-quickFreeze)" : 0,
-      pb: isEmptyCount ? "var(--ds-spacing-quickFreeze)" : 0,
       minWidth: "90px",
-      minHeight: "var(--ds-spacing-tepid)",
+      minHeight: "36px",
+      padding: "var(--ds-spacing-glacial)",
       borderRadius: "var(--ds-radius-cool)",
       boxShadow: "var(--ds-elevation-8)",
       background: "var(--ds-colour-surfacePrimary)",
-      "&:hover": {
-        background: "var(--ds-colour-surfacePrimary) !important",
-      },
-      ...STATE_STYLES.SURFACE_SECONDARY_STATE_PRIMARY,
-      pointerEvents: !isEmptyCount && disabled ? "none" : "auto",
-      "&.Mui-disabled": {
-        background: "var(--ds-colour-stateDisabledSurface) !important",
-      },
-      ...restProps.sx,
-    }),
-    [isEmptyCount, disabled, restProps.sx]
-  );
-
-  const boxSx = useMemo(
-    () => ({
-      ...fabSx,
-      display: "flex",
+      pointerEvents: disabled ? "none" : "auto",
+      ...(disabled && {
+        background: "var(--ds-colour-stateDisabledSurface)",
+      }),
+      display: "inline-flex",
       justifyContent: "center",
       alignItems: "center",
-      ...restProps.sx,
+      verticalAlign: "middle",
     }),
-    [fabSx, restProps.sx]
+    [disabled],
   );
 
   const counterTextElement = CounterText && (
@@ -153,51 +142,71 @@ export const DsAddItem = (inProps: DsAddItemProps) => {
       value={countValue}
       label={label ?? ""}
       disabled={disabled ?? false}
+      color={color}
       {...slotProps?.CounterText}
     />
   );
 
-  return isEmptyCount ? (
-    <DsButtonBase
-      aria-label={label}
-      aria-disabled={disabled}
-      color="default"
-      {...restProps}
-      onClick={isEmptyCount ? handleAdd : undefined}
-      sx={fabSx}
-      disableRipple={!isEmptyCount || disabled}
+  return (
+    <DsStack
+      {...wrapperProps}
+      sx={{ display: "inline-flex", verticalAlign: "middle", ...wrapperProps?.sx } as CSSObject}
     >
-      {counterTextElement}
-    </DsButtonBase>
-  ) : (
-    <DsBox
-      component={"div"}
-      aria-label={label}
-      aria-disabled={disabled}
-      color="default"
-      {...restProps}
-      onClick={isEmptyCount ? handleAdd : undefined}
-      sx={boxSx}
-    >
-      {!isEmptyCount && LeftIconButton && (
-        <LeftIconButton
-          disabled={isSubtractDisabled}
-          onClick={handleSubtract}
-          aria-label="Decrease value"
-          {...slotProps?.LeftIconButton}
-        />
-      )}
-
-      {counterTextElement}
-
-      {!isEmptyCount && RightIconButton && (
-        <RightIconButton
+      {isEmptyCount ? (
+        <DsFab
+          disabled={disabled}
+          color="default"
+          size="small"
           onClick={handleAdd}
-          disabled={isAddDisabled}
-          aria-label="Increase value"
-          {...slotProps?.RightIconButton}
-        />
+          disableRipple={disabled}
+          {...restProps}
+          sx={{
+            ...STATE_STYLES.SURFACE_PRIMARY_STATE_PRIMARY,
+            border: "none",
+            padding: "var(--ds-spacing-frostbite) var(--ds-spacing-glacial)",
+            minWidth: "90px",
+            minHeight: "36px",
+            "&.Mui-disabled": {
+              background: "var(--ds-colour-stateDisabledSurface)",
+              boxShadow: "var(--ds-elevation-8)",
+            },
+            "& .MuiTypography-root": {
+              fontSize: "var(--ds-typo-supportBoldTextButton-fontSize)",
+              lineHeight: "var(--ds-typo-supportBoldTextButton-lineHeight)",
+            },
+            ...restProps.sx,
+          }}
+        >
+          {counterTextElement}
+        </DsFab>
+      ) : (
+        <DsStack
+          direction="row"
+          sx={{ ...stackSx, ...restProps.sx } as CSSObject}
+        >
+          {LeftIconButton && (
+            <LeftIconButton
+              disabled={isSubtractDisabled}
+              onClick={handleSubtract}
+              aria-label="Decrease value"
+              color={color}
+              {...slotProps?.LeftIconButton}
+            />
+          )}
+
+          {counterTextElement}
+
+          {RightIconButton && (
+            <RightIconButton
+              onClick={handleAdd}
+              disabled={isAddDisabled}
+              aria-label="Increase value"
+              color={color}
+              {...slotProps?.RightIconButton}
+            />
+          )}
+        </DsStack>
       )}
-    </DsBox>
+    </DsStack>
   );
 };
