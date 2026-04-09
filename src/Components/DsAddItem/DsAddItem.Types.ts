@@ -1,19 +1,16 @@
-import type { ComponentType } from "react";
+import type { ComponentType } from 'react'
 
-import { DsAddItemIconButton } from "./Slots/DsAddItemActionIcon.Slot";
-import { DsAddItemCounterText } from "./Slots/DsAddItemCounterText.Slot";
-import { DsTypographyProps } from "../DsTypography";
-import { DsIconButtonProps } from "../DsIconButton";
-import { DsRemixIconProps } from "../DsRemixIcon";
-import { CSSObject } from "@mui/system";
-import { OverridableStringUnion } from "@mui/types";
-import { IconButtonPropsColorOverrides } from "@mui/material";
-import { DsStackProps } from "../DsStack";
+import { DsAddItemIconButton } from './Slots/DsAddItemActionIcon.Slot'
+import { DsAddItemCounterText } from './Slots/DsAddItemCounterText.Slot'
+import { DsTypographyProps } from '../DsTypography'
+import { DsIconButtonProps } from '../DsIconButton'
+import { DsRemixIconProps } from '../DsRemixIcon'
+import { DsStackProps } from '../DsStack'
 
 /**
  * Default step value for increment/decrement operations
  */
-export const DEFAULT_STEP_VALUE = 1;
+export const DEFAULT_STEP_VALUE = 1
 
 /**
  * Props for action buttons (left/right) within the add item component
@@ -21,16 +18,16 @@ export const DEFAULT_STEP_VALUE = 1;
  */
 export interface DsAddItemActionButtonProps extends DsIconButtonProps {
   /** Props for the icon within the action button */
-  IconProps?: Omit<DsRemixIconProps, "ref">;
+  IconProps?: Omit<DsRemixIconProps, 'ref'>
 }
 
 /**
  * Props for the counter text display showing current count
  */
 export interface DsAddItemCounterTextProps extends DsTypographyProps {
-  label?: string;
-  value?: number;
-  disabled?: boolean;
+  label?: string
+  value?: number
+  disabled?: boolean
 }
 
 /**
@@ -38,11 +35,11 @@ export interface DsAddItemCounterTextProps extends DsTypographyProps {
  */
 export interface DsAddItemSlots {
   /** Component for the left (subtract) icon button */
-  LeftIconButton?: ComponentType<DsAddItemActionButtonProps>;
+  LeftIconButton?: ComponentType<DsAddItemActionButtonProps>
   /** Component for the right (add) icon button */
-  RightIconButton?: ComponentType<DsAddItemActionButtonProps>;
+  RightIconButton?: ComponentType<DsAddItemActionButtonProps>
   /** Component for the counter text display */
-  CounterText?: ComponentType<DsAddItemCounterTextProps>;
+  CounterText?: ComponentType<DsAddItemCounterTextProps>
 }
 
 /**
@@ -50,11 +47,11 @@ export interface DsAddItemSlots {
  */
 export interface DsAddItemSlotProps {
   /** Props for the left (subtract) icon button */
-  LeftIconButton?: DsAddItemActionButtonProps;
+  LeftIconButton?: DsAddItemActionButtonProps
   /** Props for the right (add) icon button */
-  RightIconButton?: DsAddItemActionButtonProps;
+  RightIconButton?: DsAddItemActionButtonProps
   /** Props for the counter text display */
-  CounterText?: DsAddItemCounterTextProps;
+  CounterText?: DsAddItemCounterTextProps
 }
 
 /**
@@ -63,51 +60,41 @@ export interface DsAddItemSlotProps {
  */
 export interface DsAddItemProps {
   /** The current count value */
-  value?: number;
+  value?: number
   /** The maximum allowed value */
-  maxValue?: number;
+  maxValue?: number
   /** The minimum allowed value */
-  minValue?: number;
+  minValue?: number
   /** The step size for increment/decrement */
-  step?: number;
+  step?: number
   /** The label to show when count is 0 */
-  label?: string;
+  label?: string
   /** Handler called when count changes */
   onChange: (
     name: string,
     value: number,
-    reason: "increment" | "decrement",
-  ) => void;
+    reason: 'increment' | 'decrement'
+  ) => void
   /** Custom components to use for slots */
-  slots?: DsAddItemSlots;
+  slots?: DsAddItemSlots
   /** Props to pass to slot components */
-  slotProps?: DsAddItemSlotProps;
+  slotProps?: DsAddItemSlotProps
   /** Name of the counter field */
-  name: string;
+  name: string
   /** Whether the counter is in disabled state */
-  disabled?: boolean;
+  disabled?: boolean
   /** Custom styles to apply to the component */
-  sx?: DsStackProps["sx"];
+  sx?: DsStackProps['sx']
   /**
    * Props to pass to the root Stack wrapper component.
    * Allows full control over the Stack component properties.
    */
-  wrapperProps?: DsStackProps;
+  wrapperProps?: DsStackProps
   /**
    * Color variant for the icon buttons and empty state text.
    * @default 'secondary'
    */
-  color?: OverridableStringUnion<
-    | "inherit"
-    | "default"
-    | "primary"
-    | "secondary"
-    | "error"
-    | "info"
-    | "success"
-    | "warning",
-    IconButtonPropsColorOverrides
-  >;
+  color?: DsIconButtonProps['color']
 }
 
 /**
@@ -115,26 +102,26 @@ export interface DsAddItemProps {
  * Provides sensible defaults for count, label, and slot styling
  */
 export const DsAddItemDefaultProps: Partial<DsAddItemProps> = {
-  label: "Add",
+  label: 'Add',
   step: DEFAULT_STEP_VALUE,
   minValue: 0,
-  color: "secondary",
+  color: 'secondary',
   onChange: () => {},
   slots: {
     LeftIconButton: DsAddItemIconButton,
     RightIconButton: DsAddItemIconButton,
-    CounterText: DsAddItemCounterText,
+    CounterText: DsAddItemCounterText
   },
   slotProps: {
     LeftIconButton: {
       IconProps: {
-        className: "ri-subtract-line",
-      },
+        className: 'ri-subtract-line'
+      }
     },
     RightIconButton: {
       IconProps: {
-        className: "ri-add-line",
-      },
-    },
-  },
-};
+        className: 'ri-add-line'
+      }
+    }
+  }
+}
