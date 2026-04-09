@@ -1,5 +1,5 @@
 import type React from "react";
-import type { DataGridProps, GridPaginationModel } from "@mui/x-data-grid";
+import type { DataGridProps } from "@mui/x-data-grid";
 import DsDataGridFooter from "./Slots/DsDataGridFooter.Component";
 import { SelectChangeEvent, TableFooterProps, SxProps } from "@mui/material";
 import { DsPaginationProps } from "../../../Components";
@@ -37,11 +37,7 @@ export interface IDsDataGridProps extends Omit<DataGridProps, "slotProps"> {
  * Props for the custom DataGrid footer component.
  * Extends MUI TableFooter props with pagination controls.
  */
-export interface IDsDataGridFooterProps
-  extends
-    TableFooterProps,
-    Partial<GridPaginationModel>,
-    Pick<DataGridProps, "rowCount"> {
+export interface IDsDataGridFooterProps extends TableFooterProps {
   /**
    * Callback fired when the page is changed.
    */
@@ -83,6 +79,21 @@ export interface IDsDataGridFooterProps
    * Sx prop for styling.
    */
   sx?: SxProps<any>;
+
+  /**
+   * Set the number of rows in one page.
+   */
+  pageSize?: number;
+  /**
+   * The zero-based index of the current page.
+   * @default 0
+   */
+  page?: number;
+
+  /**
+   * The total number of rows in the dataset.
+   */
+  rowCount?: DataGridProps["rowCount"];
 }
 
 /**

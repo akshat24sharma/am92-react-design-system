@@ -3,7 +3,6 @@ import React, { type FC, useMemo } from "react";
 import type { CSSObject, SelectChangeEvent } from "@mui/material";
 
 import {
-  DsBox,
   DsPagination,
   DsSelect,
   DsStack,
@@ -71,12 +70,11 @@ export const DsDataGridFooter: FC<IDsDataGridFooterProps> = (inProps) => {
   };
 
   return (
-    <DsBox
+    <DsStack
       {...footerContainerProps}
       sx={{
         backgroundColor: "var(--ds-colour-surfaceBackground)",
         borderBottom: "1px solid var(--ds-colour-strokeDefault)",
-        display: "flex",
         flexDirection: "column",
         padding: "var(--ds-spacing-cool)",
         width: "100%",
@@ -137,7 +135,7 @@ export const DsDataGridFooter: FC<IDsDataGridFooterProps> = (inProps) => {
           />
         </DsStack>
       </DsStack>
-    </DsBox>
+    </DsStack>
   );
 };
 
