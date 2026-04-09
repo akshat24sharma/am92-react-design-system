@@ -19,5 +19,8 @@ export type DsRulesKeys =
   | 'buttonLargeLoaderWidth'
   | 'buttonMediumLoaderWidth'
   | 'buttonSmallLoaderWidth'
+  | "dataGridSSize"
+  | "dataGridMSize"
+  | "dataGridLSize"
 
 export type DsRules = { [key in DsRulesKeys]: string }
