@@ -3,32 +3,22 @@ export const DsDataGridOverrides = {
     styleOverrides: {
       root: {
         width: "100%",
-        "& .MuiDataGrid-cell": {
-          maxHeight: "none",
-          alignItems: "center",
-          minHeight: "52px",
-          display: "flex",
-          padding: "0 var(--ds-spacing-cool)",
+        borderRadius: "var(--ds-radius-frostbite)",
+        border: "1px solid var(--ds-colour-strokeDefault)",
+        "& .MuiDataGrid-filler": {
+          display: "none !important",
         },
-        '& .MuiDataGrid-cell[data-field="actions"]': {
-          overflow: "visible",
+        "& .MuiDataGrid-cellEmpty": {
+          display: "none !important",
         },
-        '& .MuiDataGrid-columnHeader[data-field="actions"], & .MuiDataGrid-columnHeader[data-field="__check__"]':
-          {
-            borderRight: "none",
-          },
       },
       columnHeaders: {
-        height: "48px",
+        height: "var(--ds-rules-dataGridColumnHeaderHeight)",
+        borderBottom: "1px solid var(--ds-colour-strokeDefault)",
       },
       columnHeader: {
         backgroundColor: "var(--ds-colour-neutral1)",
         padding: "0 var(--ds-spacing-cool)",
-        "--DataGrid-t-color-border-base": "none",
-        borderRight: "1px solid var(--ds-colour-strokeDefault)",
-        "&--last": {
-          borderRight: "none",
-        },
         "&:focus, &:focus-within": {
           outline: "none",
         },
@@ -61,18 +51,38 @@ export const DsDataGridOverrides = {
         borderBottom: "1px solid var(--ds-colour-strokeDefault)",
         alignItems: "flex-start",
         maxHeight: "none",
+        width: "auto",
       },
       cell: {
+        maxHeight: "none",
+        alignItems: "center",
+        minHeight: "var(--ds-rules-dataGridRowMinHeight)",
+        display: "flex",
+        padding: "0 var(--ds-spacing-cool)",
         "&:focus, &:focus-within": {
           outline: "none",
         },
+        '&[data-field="actions"]': {
+          overflow: "visible",
+        },
+      },
+      "cell--withRightBorder": {
+        borderRightColor: "var(--ds-colour-strokeDefault)",
+      },
+      "cell--withLeftBorder": {
+        borderLeftColor: "var(--ds-colour-strokeDefault)",
+      },
+      "columnHeader--withRightBorder": {
+        borderRightColor: "var(--ds-colour-strokeDefault)",
+      },
+      "columnHeader--withLeftBorder": {
+        borderLeftColor: "var(--ds-colour-strokeDefault)",
       },
     },
   },
   MuiPaginationItem: {
     styleOverrides: {
       root: {
-        border: "1px solid var(--ds-colour-strokeDefault)",
         margin: "0 var(--ds-spacing-quickFreeze)",
         backgroundColor: "var(--ds-colour-surfacePrimary)",
       },
@@ -84,15 +94,7 @@ export const DsDataGridOverrides = {
       },
       ellipsis: {
         border: "none",
-      },
-      sizeSmall: {
-        lineHeight: "var(--ds-rules-dataGridSSize)",
-      },
-      sizeMedium: {
-        lineHeight: "var(--ds-rules-dataGridMSize)",
-      },
-      sizeLarge: {
-        lineHeight: "var(--ds-rules-dataGridLSize)",
+        backgroundColor: "transparent",
       },
       previousNext: {
         border: "none",

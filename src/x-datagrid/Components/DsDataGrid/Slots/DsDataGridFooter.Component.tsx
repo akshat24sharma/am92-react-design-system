@@ -74,7 +74,6 @@ export const DsDataGridFooter: FC<IDsDataGridFooterProps> = (inProps) => {
       {...footerContainerProps}
       sx={{
         backgroundColor: "var(--ds-colour-surfaceBackground)",
-        borderBottom: "1px solid var(--ds-colour-strokeDefault)",
         flexDirection: "column",
         padding: "var(--ds-spacing-cool)",
         width: "100%",

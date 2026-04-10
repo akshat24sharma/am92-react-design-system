@@ -114,6 +114,7 @@ export const DsDataGridFooterDefaultProps: Partial<IDsDataGridFooterProps> = {
 export const DsDataGridDefaultProps: Partial<IDsDataGridProps> = {
   // Enable dynamic row heights for flexible content
   getRowHeight: () => "auto",
+  showColumnVerticalBorder: true,
   slots: {
     footer: DsDataGridFooter,
   },

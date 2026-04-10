@@ -29,9 +29,9 @@ const dsRules: DsRules = {
   buttonMediumLoaderWidth: '34px',
   buttonLargeLoaderWidth: '42px',
 
-  dataGridSSize: "26px",
-  dataGridMSize: "32px",
-  dataGridLSize: "40px"
+  dataGridRowMinHeight: '56px',
+  dataGridColumnHeaderHeight: '48px',
+
 }
 
 export default dsRules
