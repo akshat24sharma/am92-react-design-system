@@ -1,26 +1,14 @@
 import type { FC } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 
-import type {
-  IDsDataGridProps,
-  IDsDataGridSlotProps,
-} from "./DsDataGrid.Types";
+import type { IDsDataGridProps } from "./DsDataGrid.Types";
 import { DsDataGridDefaultProps } from "./DsDataGrid.Types";
-import { useDsDataGridPagination } from "../../Hooks";
-
 
 export const DsDataGrid: FC<IDsDataGridProps> = ({
   slots,
   slotProps,
   ...props
 }) => {
-  const {
-    paginationModel,
-    handlePaginationModelChange,
-    handlePageChange,
-    handlePageSizeChange,
-    rowCount,
-  } = useDsDataGridPagination(props);
 
   return (
     <DataGrid
@@ -30,23 +18,18 @@ export const DsDataGrid: FC<IDsDataGridProps> = ({
         ...DsDataGridDefaultProps.slots,
         ...slots,
       }}
-      slotProps={
-        {
-          ...DsDataGridDefaultProps.slotProps,
-          ...slotProps,
-          footer: {
-            rowCount,
-            page: paginationModel.page,
-            pageSize: paginationModel.pageSize,
-            onPageChange: handlePageChange,
-            onPageSizeChange: handlePageSizeChange,
-            ...DsDataGridDefaultProps.slotProps?.footer,
-            ...slotProps?.footer,
+      slotProps={{
+        ...DsDataGridDefaultProps.slotProps,
+        ...slotProps,
+        basePagination: {
+          ...DsDataGridDefaultProps.slotProps?.basePagination,
+          ...slotProps?.basePagination,
+          material: {
+            ...DsDataGridDefaultProps.slotProps?.basePagination?.material,
+            ...slotProps?.basePagination?.material,
           },
-        } as IDsDataGridSlotProps
-      }
-      paginationModel={paginationModel}
-      onPaginationModelChange={handlePaginationModelChange}
+        },
+      }}
       sx={{
         ...props.sx,
       }}
