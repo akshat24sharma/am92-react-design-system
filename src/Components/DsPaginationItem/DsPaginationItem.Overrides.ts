@@ -4,6 +4,10 @@ export const DsPaginationItemOverrides = {
       root: {
         margin: "0 var(--ds-spacing-quickFreeze)",
         backgroundColor: "var(--ds-colour-surfacePrimary)",
+        border: "1px solid var(--ds-colour-strokeDefault)",
+        "&.Mui-selected": {
+          border: "none",
+        },
       },
       icon: {
         color: "var(--ds-colour-iconDefault)",
