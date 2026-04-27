@@ -1,8 +1,8 @@
 import { DsRules } from '../Types/DsRules'
 
 const dsRules: DsRules = {
-  headerMobileHeight: '64px',
-  headerDesktopHeight: '84px',
+  headerMobileHeight: '44px',
+  headerDesktopHeight: '64px',
 
   appBarMobileMinHeight: '56px',
 
