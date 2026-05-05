@@ -34,7 +34,7 @@ export const DsDatePickerOverrides = {
   MuiDateCalendar: {
     styleOverrides: {
       root: {
-        width: '328px',
+        width: 'var(--ds-rules-datePickerWidth)',
         maxHeight: '416px',
         height: '100%',
         paddingTop: 'var(--ds-spacing-glacial)'
