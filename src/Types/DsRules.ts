@@ -19,5 +19,6 @@ export type DsRulesKeys =
   | 'buttonLargeLoaderWidth'
   | 'buttonMediumLoaderWidth'
   | 'buttonSmallLoaderWidth'
+  | 'datePickerWidth'
 
 export type DsRules = { [key in DsRulesKeys]: string }

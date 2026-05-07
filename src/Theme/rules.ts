@@ -27,7 +27,9 @@ const dsRules: DsRules = {
 
   buttonSmallLoaderWidth: '32px',
   buttonMediumLoaderWidth: '34px',
-  buttonLargeLoaderWidth: '42px'
+  buttonLargeLoaderWidth: '42px',
+
+  datePickerWidth: '328px',
 }
 
 export default dsRules
