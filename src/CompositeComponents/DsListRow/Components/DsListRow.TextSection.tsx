@@ -76,7 +76,7 @@ export const DsListRowTextSection = ({
         >
           {tertiaryIcon && (
             <DsRemixIcon
-              className={`ri-${tertiaryIcon}`}
+              className={tertiaryIcon ? `ri-${tertiaryIcon}` : undefined}
               sx={{
                 fontSize: '16px',
                 color: 'var(--ds-colour-iconDefault)'

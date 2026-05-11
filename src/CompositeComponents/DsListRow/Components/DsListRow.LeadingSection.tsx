@@ -39,7 +39,7 @@ export const DsListRowLeadingSection = ({
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '2px',
+          gap: 'var(--ds-spacing-deepFreeze)',
           p: 'var(--ds-spacing-quickFreeze)',
           ...spanSx
         }}
@@ -79,7 +79,7 @@ export const DsListRowLeadingSection = ({
       >
         <DsRemixIcon
           {...leadingIconProps}
-          className={`ri-${leadingIcon}`}
+          className={leadingIcon ? `ri-${leadingIcon}` : undefined}
           fontSize='cool'
           sx={{
             color: 'var(--ds-colour-iconDefault)',
@@ -93,7 +93,7 @@ export const DsListRowLeadingSection = ({
   return (
     <DsImage
       {...leadingImageProps}
-      alt='list-row-leading'
+      alt={leadingImageProps?.alt ?? 'list-row-leading'}
       srcSet={leadingImageSrc}
       WrapperProps={{
         ...leadingImageProps?.WrapperProps,

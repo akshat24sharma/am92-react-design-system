@@ -61,7 +61,7 @@ export const DsListRowTrailingSection = ({
         >
           <DsRemixIcon
             {...trailingIconProps}
-            className={`ri-${trailingIcon}`}
+            className={trailingIcon ? `ri-${trailingIcon}` : undefined}            
             sx={{ ...(trailingIconProps?.sx ?? {}) }}
           />
         </DsIconButton>
@@ -71,7 +71,7 @@ export const DsListRowTrailingSection = ({
     return (
       <DsRemixIcon
         {...trailingIconProps}
-        className={`ri-${trailingIcon}`}
+        className={trailingIcon ? `ri-${trailingIcon}` : undefined}        
         sx={{
           fontSize: '20px',
           color: 'var(--ds-colour-iconDefault)',
