@@ -1,21 +1,20 @@
-
-import { DsIconButton, DsRadio, DsRemixIcon } from '../../../Components'
-import type { DsListRowProps } from '../DsListRow.Types'
+import { DsIconButton, DsRadio, DsRemixIcon } from "../../../Components";
+import type { DsListRowProps } from "../DsListRow.Types";
 
 type DsListRowTrailingSectionProps = Pick<
   DsListRowProps,
-  | 'value'
-  | 'radioProps'
-  | 'trailingIcon'
-  | 'trailingIconProps'
-  | 'trailingIconButtonProps'
-  | 'trailingNode'
+  | "value"
+  | "radioProps"
+  | "trailingIcon"
+  | "trailingIconProps"
+  | "trailingIconButtonProps"
+  | "trailingNode"
 > & {
-  isSelectionType: boolean
-  isInfoType: boolean
-  resolvedShowChevron: boolean
-  onTrailingIconClick?: DsListRowProps['onTrailingIconClick']
-}
+  isSelectionType: boolean;
+  isInfoType: boolean;
+  resolvedShowChevron: boolean;
+  onTrailingIconClick?: DsListRowProps["onTrailingIconClick"];
+};
 
 export const DsListRowTrailingSection = ({
   isSelectionType,
@@ -27,11 +26,11 @@ export const DsListRowTrailingSection = ({
   trailingIconProps,
   trailingIconButtonProps,
   onTrailingIconClick,
-  trailingNode
+  trailingNode,
 }: DsListRowTrailingSectionProps) => {
   // Custom node takes precedence
   if (trailingNode) {
-    return <>{trailingNode}</>
+    return <>{trailingNode}</>;
   }
 
   // Default behavior: selection, info icon, or chevron
@@ -41,9 +40,9 @@ export const DsListRowTrailingSection = ({
         {...radioProps}
         label={undefined}
         value={value}
-        sx={{ mr: 'unset', ...(radioProps?.sx ?? {}) }}
+        sx={{ mr: "unset", ...(radioProps?.sx ?? {}) }}
       />
-    )
+    );
   }
 
   if (isInfoType) {
@@ -51,49 +50,49 @@ export const DsListRowTrailingSection = ({
       return (
         <DsIconButton
           {...trailingIconButtonProps}
-          size='small'
+          size="small"
           onClick={onTrailingIconClick}
           sx={{
-            color: 'var(--ds-colour-iconDefault)',
+            color: "var(--ds-colour-iconDefault)",
             p: 0,
-            ...(trailingIconButtonProps?.sx ?? {})
+            ...(trailingIconButtonProps?.sx ?? {}),
           }}
         >
           <DsRemixIcon
             {...trailingIconProps}
-            className={trailingIcon ? `ri-${trailingIcon}` : undefined}            
+            className={trailingIcon ? `ri-${trailingIcon}` : undefined}
             sx={{ ...(trailingIconProps?.sx ?? {}) }}
           />
         </DsIconButton>
-      )
+      );
     }
 
     return (
       <DsRemixIcon
         {...trailingIconProps}
-        className={trailingIcon ? `ri-${trailingIcon}` : undefined}        
+        className={trailingIcon ? `ri-${trailingIcon}` : undefined}
         sx={{
-          fontSize: '20px',
-          color: 'var(--ds-colour-iconDefault)',
+          fontSize: "20px",
+          color: "var(--ds-colour-iconDefault)",
           flexShrink: 0,
-          ...(trailingIconProps?.sx ?? {})
+          ...(trailingIconProps?.sx ?? {}),
         }}
       />
-    )
+    );
   }
 
   if (!resolvedShowChevron) {
-    return null
+    return null;
   }
 
   return (
     <DsRemixIcon
-      className='ri-arrow-right-s-line'
+      className="ri-arrow-right-s-line"
       sx={{
-        fontSize: '20px',
-        color: 'var(--ds-colour-iconDefault)',
-        flexShrink: 0
+        fontSize: "20px",
+        color: "var(--ds-colour-iconDefault)",
+        flexShrink: 0,
       }}
     />
-  )
-}
+  );
+};

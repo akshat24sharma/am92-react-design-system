@@ -1,1 +1,1 @@
-export * from "./DsListRow"
+export * from "./DsListRow";

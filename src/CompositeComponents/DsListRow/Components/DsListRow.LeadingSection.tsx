@@ -1,19 +1,17 @@
-
-
-import { DsBox, DsImage, DsRemixIcon, DsTypography } from '../../../Components'
-import type { DsListRowProps } from '../DsListRow.Types'
+import { DsBox, DsImage, DsRemixIcon, DsTypography } from "../../../Components";
+import type { DsListRowProps } from "../DsListRow.Types";
 
 type DsListRowLeadingSectionProps = Pick<
   DsListRowProps,
-  | 'leadingVariant'
-  | 'leadingImageSrc'
-  | 'leadingImageProps'
-  | 'leadingDateDay'
-  | 'leadingDateMonth'
-  | 'leadingIcon'
-  | 'leadingIconProps'
-  | 'ctaLabel'
->
+  | "leadingVariant"
+  | "leadingImageSrc"
+  | "leadingImageProps"
+  | "leadingDateDay"
+  | "leadingDateMonth"
+  | "leadingIcon"
+  | "leadingIconProps"
+  | "ctaLabel"
+>;
 
 export const DsListRowLeadingSection = ({
   leadingVariant,
@@ -23,92 +21,92 @@ export const DsListRowLeadingSection = ({
   leadingDateMonth,
   leadingIcon,
   leadingIconProps,
-  ctaLabel
+  ctaLabel,
 }: DsListRowLeadingSectionProps) => {
-  const spanSx = ctaLabel ? { gridRow: 'span 2' } : undefined
+  const spanSx = ctaLabel ? { gridRow: "span 2" } : undefined;
 
-  if (leadingVariant === 'date') {
+  if (leadingVariant === "date") {
     return (
       <DsBox
         sx={{
-          width: '36px',
-          height: '36px',
-          borderRadius: 'var(--ds-radius-quickFreeze)',
-          backgroundColor: 'var(--ds-colour-surfaceSecondary)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: 'var(--ds-spacing-deepFreeze)',
-          p: 'var(--ds-spacing-quickFreeze)',
-          ...spanSx
+          width: "36px",
+          height: "36px",
+          borderRadius: "var(--ds-radius-quickFreeze)",
+          backgroundColor: "var(--ds-colour-surfaceSecondary)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "var(--ds-spacing-deepFreeze)",
+          p: "var(--ds-spacing-quickFreeze)",
+          ...spanSx,
         }}
       >
         <DsTypography
-          sx={{ color: 'var(--ds-colour-typoSecondary)' }}
-          variant='supportRegularInfo'
+          sx={{ color: "var(--ds-colour-typoSecondary)" }}
+          variant="supportRegularInfo"
         >
           {leadingDateDay}
         </DsTypography>
         <DsTypography
-          variant='supportRegularInfo'
+          variant="supportRegularInfo"
           sx={{
-            color: 'var(--ds-colour-typoSecondary)'
+            color: "var(--ds-colour-typoSecondary)",
           }}
         >
           {leadingDateMonth}
         </DsTypography>
       </DsBox>
-    )
+    );
   }
 
-  if (leadingVariant === 'icon') {
+  if (leadingVariant === "icon") {
     return (
       <DsBox
         sx={{
-          width: '36px',
-          height: '36px',
-          borderRadius: 'var(--ds-radius-quickFreeze)',
-          backgroundColor: 'var(--ds-colour-surfaceBackground)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          p: 'var(--ds-spacing-quickFreeze)',
-          ...spanSx
+          width: "36px",
+          height: "36px",
+          borderRadius: "var(--ds-radius-quickFreeze)",
+          backgroundColor: "var(--ds-colour-surfaceBackground)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          p: "var(--ds-spacing-quickFreeze)",
+          ...spanSx,
         }}
       >
         <DsRemixIcon
           {...leadingIconProps}
           className={leadingIcon ? `ri-${leadingIcon}` : undefined}
-          fontSize='cool'
+          fontSize="cool"
           sx={{
-            color: 'var(--ds-colour-iconDefault)',
-            ...(leadingIconProps?.sx ?? {})
+            color: "var(--ds-colour-iconDefault)",
+            ...(leadingIconProps?.sx ?? {}),
           }}
         />
       </DsBox>
-    )
+    );
   }
 
   return (
     <DsImage
       {...leadingImageProps}
-      alt={leadingImageProps?.alt ?? 'list-row-leading'}
+      alt={leadingImageProps?.alt ?? "list-row-leading"}
       srcSet={leadingImageSrc}
       WrapperProps={{
         ...leadingImageProps?.WrapperProps,
         sx: {
-          width: '36px',
-          height: '36px',
-          borderRadius: 'var(--ds-radius-quickFreeze)',
-          border: '1px solid var(--ds-colour-strokeDefault)',
-          backgroundColor: 'var(--ds-colour-surfaceBackground)',
-          objectFit: 'cover',
-          overflow: 'hidden',
+          width: "36px",
+          height: "36px",
+          borderRadius: "var(--ds-radius-quickFreeze)",
+          border: "1px solid var(--ds-colour-strokeDefault)",
+          backgroundColor: "var(--ds-colour-surfaceBackground)",
+          objectFit: "cover",
+          overflow: "hidden",
           ...spanSx,
-          ...(leadingImageProps?.WrapperProps?.sx ?? {})
-        }
+          ...(leadingImageProps?.WrapperProps?.sx ?? {}),
+        },
       }}
     />
-  )
-}
+  );
+};
