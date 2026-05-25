@@ -23,7 +23,9 @@ const dsRules: DsRules = {
   avatarXXLSize: '64px',
   avatar3XLSize: '80px',
 
-  formHelperTextMinHeight: '28px'
+  formHelperTextMinHeight: '28px',
+
+  datePickerWidth: '328px'
 }
 
 export default dsRules

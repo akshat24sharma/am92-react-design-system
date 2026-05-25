@@ -138,6 +138,13 @@ export const DsDatePicker: React.FC<DsDatePickerProps<Date>> = inProps => {
         }}
         slotProps={{
           ...props.slotProps,
+          mobilePaper: {
+            ...props.slotProps?.mobilePaper,
+            sx: {
+              width: 'var(--ds-rules-datePickerWidth)',
+              ...props.slotProps?.mobilePaper?.sx,
+            },
+          },
           day: {
             // commented to show current day border highlight
             // disableHighlightToday: true,
