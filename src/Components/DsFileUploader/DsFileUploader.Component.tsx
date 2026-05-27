@@ -14,7 +14,6 @@ import type {
 import { DsFileUploaderDefaultProps } from './DsFileUploader.Types'
 import FileUploaderFiles from './FileUploaderFiles'
 import { getDefaultValue, getValidProcessedFile, mergeProps } from './helpers'
-import { DsFileUploaderDropZone } from './Slots/DsFileUploaderDropZone'
 import { DsStack } from '../DsStack'
 import { DsInputLabel } from '../DsInputLabel'
 
@@ -207,7 +206,7 @@ export const DsFileUploader = <
     ? Array.isArray(uploadedValue) && uploadedValue.length > 0
     : uploadedValue
 
-  const { SelectedItemSegment, UploadedItemSegment } = slots
+  const { SelectedItemSegment, UploadedItemSegment, DropZone } = slots
 
   return (
     <DsStack
@@ -222,18 +221,20 @@ export const DsFileUploader = <
         sx={{ mb: 'var(--ds-spacing-zero)', ...InputLabelProps?.sx }}
         {...InputLabelProps}
       />
-      <DsFileUploaderDropZone
-        variant={variant}
-        {...slotProps?.DropZone}
-        InputProps={{
-          accept: allowedFiles || accept,
-          multiple: multiple,
-          onChange: handleFileSelect,
-          onDrop: handleDropFile,
-          onDragOver: handleDragOverHandler,
-          ...slotProps?.DropZone?.InputProps
-        }}
-      />
+      {DropZone && (
+        <DropZone
+          variant={variant}
+          {...slotProps?.DropZone}
+          InputProps={{
+            accept: allowedFiles || accept,
+            multiple: multiple,
+            ...slotProps?.DropZone?.InputProps,
+            onChange: handleFileSelect,
+            onDrop: handleDropFile,
+            onDragOver: handleDragOverHandler,
+          }}
+        />
+      )}
       {isSelectedSegmentVisible && SelectedItemSegment && (
         <SelectedItemSegment
           onPreview={handlePreviewFileAction}
@@ -263,5 +264,5 @@ export const DsFileUploader = <
         </UploadedItemSegment>
       )}
     </DsStack>
-  )
+  );
 }

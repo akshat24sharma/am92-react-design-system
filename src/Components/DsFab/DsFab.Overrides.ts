@@ -18,23 +18,26 @@ export const DsFabOverrides = {
           fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
           lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
           letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)'
+        },
+        '.MuiIcon-root' : {
+          fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
         }
       } as CSSInterpolation,
       sizeLarge: {
         padding: 'var(--ds-spacing-cool)',
-        '> .MuiSvgIcon-root': {
+        '> .MuiIcon-root': {
           fontSize: 'var(--ds-typo-fontSizePleasant)'
         }
       } as CSSInterpolation,
       sizeMedium: {
         padding: 'var(--ds-spacing-bitterCold)',
-        '> .MuiSvgIcon-root': {
+        '> .MuiIcon-root': {
           fontSize: 'var(--ds-typo-fontSizeMild)'
         }
       } as CSSInterpolation,
       sizeSmall: {
         padding: 'var(--ds-spacing-frostbite)',
-        '> .MuiSvgIcon-root': {
+        '> .MuiIcon-root': {
           fontSize: 'var(--ds-typo-fontSizeCool)'
         }
       } as CSSInterpolation,
@@ -42,6 +45,7 @@ export const DsFabOverrides = {
         ...STATE_STYLES.ACTION_SECONDARY_STATE_SECONDARY
       } as CSSInterpolation,
       default: {
+        color: 'var(--ds-colour-typoPrimary)',
         backgroundColor: 'var(--ds-colour-surfacePrimary)',
         borderWidth: '1px',
         borderStyle: 'solid',

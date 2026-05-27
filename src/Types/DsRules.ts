@@ -16,5 +16,9 @@ export type DsRulesKeys =
   | 'avatarXXLSize'
   | 'avatar3XLSize'
   | 'formHelperTextMinHeight'
+  | 'buttonLargeLoaderWidth'
+  | 'buttonMediumLoaderWidth'
+  | 'buttonSmallLoaderWidth'
+  | 'datePickerWidth'
 
 export type DsRules = { [key in DsRulesKeys]: string }

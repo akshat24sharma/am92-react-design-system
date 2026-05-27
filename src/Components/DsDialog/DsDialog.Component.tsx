@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { DsDialogDefaultProps, DsDialogProps } from './DsDialog.Types'
+import { DsDialogDefaultProps, DsDialogProps, DsDialogCloseReason } from './DsDialog.Types'
 import { DsDialogTitle } from '../DsDialogTitle'
 import { Dialog } from '@mui/material'
 import { DsIconButton } from '../DsIconButton'
@@ -8,15 +8,16 @@ import { DsTypography } from '../DsTypography'
 import { DsDialogContent } from '../DsDialogContent'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsButton } from '../DsButton'
+import { DsBox } from '../DsBox'
 import { mergeSlotProps } from '../../utils'
 
 export const DsDialog: React.FC<DsDialogProps> = inProps => {
   const props = { ...DsDialogDefaultProps, ...inProps }
 
-  const handleCloseClick = (event: React.SyntheticEvent) => {
+  const handleCloseClick = (reason: DsDialogCloseReason) => (event: React.SyntheticEvent) => {
     const { onClose } = props
     if (typeof onClose === 'function') {
-      onClose(event, 'backdropClick')
+      onClose(event, reason ? reason : 'backdropClick')
     }
   }
 
@@ -24,6 +25,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
     title,
     description,
     kicker,
+    illustration,
     showClose,
     primaryButtonText,
     primaryButtonProps,
@@ -37,6 +39,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
     KickerProps,
     ContentProps,
     ActionsProps,
+    IllustrationProps,
     children,
     slotProps,
     ...DialogProps
@@ -86,6 +89,21 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
         }),
       }}
     >
+      {illustration && (
+        <DsDialogContent
+          {...IllustrationProps}
+          sx={{
+            px: {
+              xs: "var(--ds-spacing-bitterCold)",
+              md: "var(--ds-spacing-warm)",
+            },
+            mb: "var(--ds-spacing-mild)",
+            ...IllustrationProps?.sx,
+          }}
+        >
+          {illustration}
+        </DsDialogContent>
+      )}
       {kicker && (
         <DsTypography
           variant='subheadingSemiboldDefault'
@@ -138,7 +156,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
       )}
       {showClose && (
         <DsIconButton
-          onClick={handleCloseClick}
+          onClick={handleCloseClick('closeButtonClick')}
           {...CloseIconButtonProps}
           sx={{
             position: 'absolute',
