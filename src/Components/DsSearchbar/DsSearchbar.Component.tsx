@@ -25,7 +25,7 @@ export class DsSearchbar extends Component<
       <DsInputAdornment {...startAdornmentProps} position="start">
         <DsRemixIcon
           className="ri-search-line"
-          color="iconDisabled"
+          color="iconDefault"
           fontSize="cool"
         />
       </DsInputAdornment>
