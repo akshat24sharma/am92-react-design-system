@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react'
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import {
   DatePicker,
   DateValidationError,
   DateView,
-  LocalizationProvider
+  LocalizationProvider,
+  PickersTextFieldProps,
 } from '@mui/x-date-pickers'
 import { DefaultActionBar } from './DefaultActionBar'
 import { DefaultToolbar } from './DefaultToolbar'
@@ -28,8 +29,9 @@ import { useThemeProps } from '@mui/system'
 import DatePickerTextField, {
   IDatePickerTextFieldProps
 } from './DatePickerTextField'
+import { mergeSlotProps } from '../../../utils'
 
-export const DsDatePicker: React.FC<DsDatePickerProps<Date>> = inProps => {
+export const DsDatePicker: React.FC<DsDatePickerProps> = inProps => {
   const props = useThemeProps({
     props: inProps,
     name: 'MuiDatePicker'
@@ -138,6 +140,13 @@ export const DsDatePicker: React.FC<DsDatePickerProps<Date>> = inProps => {
         }}
         slotProps={{
           ...props.slotProps,
+          mobilePaper: {
+            ...props.slotProps?.mobilePaper,
+            sx: {
+              width: 'var(--ds-rules-datePickerWidth)',
+              ...props.slotProps?.mobilePaper?.sx,
+            },
+          },
           day: {
             // commented to show current day border highlight
             // disableHighlightToday: true,
@@ -168,21 +177,16 @@ export const DsDatePicker: React.FC<DsDatePickerProps<Date>> = inProps => {
                 </DsIconButton>
               </DsInputAdornment>
             )
-          } as IDatePickerTextFieldProps,
-          actionBar: ownerState => ({
-            actions: ownerState.view === 'day' ? ['clear', 'accept'] : [],
-            ...props.slotProps?.actionBar
-          }),
-          popper: {
+          } as IDatePickerTextFieldProps & PickersTextFieldProps,
+          popper: mergeSlotProps(props.slotProps?.popper, {
             anchorEl: ref.current,
             // style to unset fixed width
             sx: {
               '.MuiMonthCalendar-root': {
                 width: '100%'
               }
-            },
-            ...props.slotProps?.popper
-          }
+            }
+          })
         }}
         readOnly={readOnly}
         disabled={disabled}
@@ -198,9 +202,8 @@ export const DsDatePicker: React.FC<DsDatePickerProps<Date>> = inProps => {
         value={getDateFromValue(value, valueType, format)}
         defaultValue={getDateFromValue(defaultValue, valueType, format)}
         inputRef={ref}
+        enableAccessibleFieldDOMStructure={false}
       />
     </LocalizationProvider>
   )
 }
-
-DsDatePicker.defaultProps = DsDatePickerDefaultProps

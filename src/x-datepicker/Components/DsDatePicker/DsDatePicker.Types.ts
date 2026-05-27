@@ -9,9 +9,9 @@ import { Locale } from 'date-fns'
 export type TErrorMapKeys = Exclude<DateValidationError, null>
 export type TValue = string | Date | undefined | null
 export type TValueType = 'date' | 'formattedValue' | 'ISO' | undefined
-export interface DsDatePickerProps<TDate extends Date>
+export interface DsDatePickerProps
   extends Omit<
-      DatePickerProps<TDate>,
+      DatePickerProps,
       | 'open'
       | 'onOpen'
       | 'onClose'
@@ -49,10 +49,10 @@ export interface DsDatePickerProps<TDate extends Date>
   defaultValue?: TValue
   valueType?: TValueType
   errorMap?: Partial<Record<TErrorMapKeys, string>>
-  LocalizationProviderProps?: LocalizationProviderProps<Date, Locale>
+  LocalizationProviderProps?: LocalizationProviderProps<Locale>
 }
 
-export const DsDatePickerDefaultProps: DsDatePickerProps<Date> = {
+export const DsDatePickerDefaultProps: DsDatePickerProps = {
   orientation: 'portrait',
   closeOnSelect: false,
   format: 'dd/MM/yyyy',

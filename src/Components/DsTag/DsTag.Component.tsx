@@ -22,8 +22,8 @@ export const DsTag: FC<DsTagProps> = inProps => {
     }
   }
 
-  const { selected, onClick, onDelete, ...chipProps } = props
-  const color = (selected && 'secondary') || 'default'
+  const { selected, onClick, onDelete, sx, ...chipProps } = props
+  const color = (selected && 'secondary') || 'default' 
 
   return (
     <Chip
@@ -32,6 +32,8 @@ export const DsTag: FC<DsTagProps> = inProps => {
       sx={{
         paddingTop: 'var(--ds-spacing-quickFreeze)',
         paddingBottom: 'var(--ds-spacing-quickFreeze)',
+        paddingLeft: 'var(--ds-spacing-frostbite)',
+        paddingRight: 'var(--ds-spacing-frostbite)',
         fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
         fontSize: 'var(--ds-typo-bodyRegularMedium-fontSize)',
         lineHeight: 'var(--ds-typo-bodyRegularMedium-lineHeight)',
@@ -51,23 +53,41 @@ export const DsTag: FC<DsTagProps> = inProps => {
           },
           ...STATE_STYLES.ACTION_SECONDARY_STATE_SECONDARY
         },
+        '&.Mui-disabled': {
+          opacity: 1,
+          border: '1px solid var(--ds-colour-strokeDisabled)',
+          backgroundColor: 'var(--ds-colour-stateDisabledSurface)',
+        },
         '> .MuiChip-label': {
+          color: 'var(--ds-colour-typoPrimary)',
           paddingTop: 'var(--ds-spacing-deepFreeze)',
           paddingBottom: 'var(--ds-spacing-deepFreeze)',
-          paddingLeft: 'var(--ds-spacing-frostbite)',
-          paddingRight: 'var(--ds-spacing-frostbite)'
+          paddingLeft: 'var(--ds-spacing-zero)',
+          paddingRight: 'var(--ds-spacing-zero)'
         },
         '> .MuiChip-icon': {
-          color: 'var(--ds-colour-iconDefault)',
+          color: 'var(--ds-colour-typoPrimary)',
           fontSize: 'var(--ds-typo-fontSizeBitterCold)',
-          marginLeft: 'var(--ds-spacing-frostbite)',
-          marginRight: 'calc(var(--ds-spacing-quickFreeze) * -1)'
+          marginLeft: 'var(--ds-spacing-zero)',
+          marginRight: 'var(--ds-spacing-glacial)',
         },
         '> .MuiChip-deleteIcon': {
           fontSize: 'var(--ds-typo-fontSizeBitterCold)',
-          marginRight: 'var(--ds-spacing-frostbite)',
-          marginLeft: 'calc(var(--ds-spacing-quickFreeze) * -1)'
-        }
+          marginRight: 'var(--ds-spacing-zero)',
+          marginLeft: 'var(--ds-spacing-glacial)',
+          color: 'var(--ds-colour-typoPrimary)',
+        },
+        '&.MuiChip-colorSecondary .MuiChip-label, &.MuiChip-colorSecondary .MuiChip-deleteIcon': {
+          color: 'var(--ds-colour-typoOnSurface)'
+        },
+        '&.Mui-disabled .MuiChip-icon, &.Mui-disabled .MuiChip-deleteIcon': {
+          color: 'var(--ds-colour-iconDisabled)'
+        },
+        '&.Mui-disabled .MuiChip-label': {
+          color: 'var(--ds-colour-typoDisabled)',
+          fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
+        },
+          ...sx
       }}
       {...chipProps}
       variant="tag"

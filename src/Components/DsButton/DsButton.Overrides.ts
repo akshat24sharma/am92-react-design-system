@@ -1,33 +1,10 @@
 import { DsButtonDefaultProps, DsButtonProps } from './DsButton.Types'
 import STATE_STYLES from '../../Theme/STATE_STYLES'
-import { CSSInterpolation } from '@mui/system'
+import { CSSObject } from '@mui/system'
 
 export const DsButtonOverrides = {
   MuiButton: {
     defaultProps: DsButtonDefaultProps,
-    variants: [
-      {
-        props: { variant: 'flushed' } as Partial<DsButtonProps>,
-        style: {
-          borderRadius: 'var(--ds-radius-zero)'
-        } as CSSInterpolation
-      },
-      {
-        props: {
-          variant: 'flushed',
-          color: 'primary'
-        } as Partial<DsButtonProps>,
-        style: {
-          color: 'var(--ds-colour-typoOnSurface)',
-          backgroundColor: 'var(--ds-colour-actionPrimary)',
-          '&:disabled': {
-            color: 'var(--ds-colour-typoOnSurface)',
-            backgroundColor: 'var(--ds-colour-stateUnselectedDefault)'
-          },
-          ...STATE_STYLES.ACTION_PRIMARY_STATE_PRIMARY
-        } as CSSInterpolation
-      }
-    ],
     styleOverrides: {
       root: {
         borderRadius: 'var(--ds-radius-glacial)',
@@ -35,10 +12,47 @@ export const DsButtonOverrides = {
         '&.Mui-disabled': {
           cursor: 'not-allowed',
           pointerEvents: 'all'
-        }
-      } as CSSInterpolation,
+        },
+        '.MuiIcon-root': {
+          fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
+        },
+        variants: [
+          {
+            props: { variant: 'flushed' } as Partial<DsButtonProps>,
+            style: {
+              borderRadius: 'var(--ds-radius-zero)'
+            } as CSSObject
+          },
+          {
+            props: {
+              variant: 'flushed',
+              color: 'primary'
+            } as Partial<DsButtonProps>,
+            style: {
+              color: 'var(--ds-colour-typoOnSurface)',
+              backgroundColor: 'var(--ds-colour-actionPrimary)',
+              '&:disabled': {
+                color: 'var(--ds-colour-typoOnSurface)',
+                backgroundColor: 'var(--ds-colour-stateUnselectedDefault)'
+              },
+              ...STATE_STYLES.ACTION_PRIMARY_STATE_PRIMARY
+            } as CSSObject
+          }
+        ],
+      } as CSSObject,
+
+      loading: {
+        '& > span:not(.MuiButton-loadingWrapper)': {
+          visibility: 'hidden'
+        },
+      } as CSSObject,
+      
+      loadingIndicator: {
+        color: 'inherit'
+      } as CSSObject,
+
       contained: {
-        '&.MuiButton-containedPrimary': {
+        "&.MuiButton-contained.MuiButton-colorPrimary": {
           color: 'var(--ds-colour-typoOnSurface)',
           backgroundColor: 'var(--ds-colour-actionPrimary)',
           '&:disabled': {
@@ -46,8 +60,8 @@ export const DsButtonOverrides = {
             backgroundColor: 'var(--ds-colour-stateUnselectedDefault)'
           },
           ...STATE_STYLES.ACTION_PRIMARY_STATE_PRIMARY
-        } as CSSInterpolation,
-        '&.MuiButton-containedSecondary': {
+        } as CSSObject,
+        "&.MuiButton-contained.MuiButton-colorSecondary": {
           backgroundColor: 'var(--ds-colour-surfaceSecondary)',
           borderWidth: '1px',
           borderStyle: 'solid',
@@ -58,41 +72,50 @@ export const DsButtonOverrides = {
             color: 'var(--ds-colour-typoOnSurface)'
           },
           ...STATE_STYLES.SURFACE_SECONDARY_STATE_PRIMARY
-        } as CSSInterpolation
-      } as CSSInterpolation,
+        } as CSSObject
+      } as CSSObject,
 
       sizeLarge: {
         padding: 'var(--ds-spacing-bitterCold)',
         fontWeight: 'var(--ds-typo-bodyBoldLarge-fontWeight)',
         fontSize: 'var(--ds-typo-bodyBoldLarge-fontSize)',
         lineHeight: 'var(--ds-typo-bodyBoldLarge-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyBoldLarge-letterSpacing)'
-      } as CSSInterpolation,
+        letterSpacing: 'var(--ds-typo-bodyBoldLarge-letterSpacing)',
+        '.MuiButton-loadingIndicator': {
+          width: 'var(--ds-rules-buttonLargeLoaderWidth)'
+        },
+      } as CSSObject,
       sizeMedium: {
         padding: 'var(--ds-spacing-frostbite) var(--ds-spacing-bitterCold)',
         fontWeight: 'var(--ds-typo-bodyBoldMedium-fontWeight)',
         fontSize: 'var(--ds-typo-bodyBoldMedium-fontSize)',
         lineHeight: 'var(--ds-typo-bodyBoldMedium-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)'
-      } as CSSInterpolation,
+        letterSpacing: 'var(--ds-typo-bodyBoldMedium-letterSpacing)',
+        '.MuiButton-loadingIndicator': {
+          width: 'var(--ds-rules-buttonMediumLoaderWidth)'
+        },
+      } as CSSObject,
       sizeSmall: {
         padding: 'var(--ds-spacing-glacial) var(--ds-spacing-bitterCold)',
         fontWeight: 'var(--ds-typo-bodyBoldSmall-fontWeight)',
         fontSize: 'var(--ds-typo-bodyBoldSmall-fontSize)',
         lineHeight: 'var(--ds-typo-bodyBoldSmall-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyBoldSmall-letterSpacing)'
-      } as CSSInterpolation,
+        letterSpacing: 'var(--ds-typo-bodyBoldSmall-letterSpacing)',
+        '.MuiButton-loadingIndicator': {
+          width: 'var(--ds-rules-buttonSmallLoaderWidth)',
+        },
+      } as CSSObject,
       icon: {
         '&.MuiButton-sizeLarge': {
           fontSize: 'var(--ds-typo-fontSizeMild)'
-        } as CSSInterpolation,
+        } as CSSObject,
         '&.MuiButton-sizeMedium': {
           fontSize: 'var(--ds-typo-fontSizeCool)'
-        } as CSSInterpolation,
+        } as CSSObject,
         '&.MuiButton-sizeSmall': {
           fontSize: 'var(--ds-typo-fontSizeBitterCold)'
-        } as CSSInterpolation
-      } as CSSInterpolation,
+        } as CSSObject
+      } as CSSObject,
       startIcon: {
         marginRight: 'var(--ds-spacing-glacial)'
       },
@@ -105,16 +128,16 @@ export const DsButtonOverrides = {
         borderRadius: 'var(--ds-radius-zero)',
         '&:hover': {
           backgroundColor: 'transparent'
-        } as CSSInterpolation,
+        } as CSSObject,
         '> .MuiTouchRipple-root': {
           display: 'none'
-        } as CSSInterpolation,
+        } as CSSObject,
         '&:disabled': {
           color: 'var(--ds-colour-typoDisabled)'
-        } as CSSInterpolation,
+        } as CSSObject,
         '> .MuiIcon-root': {
           fontSize: 'var(--ds-typo-fontSizeFrostbite)'
-        } as CSSInterpolation,
+        } as CSSObject,
 
         '&.MuiButton-sizeLarge': {
           // To override the padding from size attributes
@@ -123,7 +146,7 @@ export const DsButtonOverrides = {
           fontSize: 'var(--ds-typo-supportBoldTextButton-fontSize)',
           lineHeight: 'var(--ds-typo-supportBoldTextButton-lineHeight)',
           letterSpacing: 'var(--ds-typo-supportBoldTextButton-letterSpacing)'
-        } as CSSInterpolation,
+        } as CSSObject,
         '&.MuiButton-sizeMedium': {
           // To override the padding from size attributes
           padding: 'var(--ds-spacing-glacial) var(--ds-spacing-quickFreeze)',
@@ -131,7 +154,7 @@ export const DsButtonOverrides = {
           fontSize: 'var(--ds-typo-supportBoldTextButton-fontSize)',
           lineHeight: 'var(--ds-typo-supportBoldTextButton-lineHeight)',
           letterSpacing: 'var(--ds-typo-supportBoldTextButton-letterSpacing)'
-        } as CSSInterpolation,
+        } as CSSObject,
         '&.MuiButton-sizeSmall': {
           // To override the padding from size attributes
           padding: 'var(--ds-spacing-glacial) var(--ds-spacing-quickFreeze)',
@@ -139,8 +162,8 @@ export const DsButtonOverrides = {
           fontSize: 'var(--ds-typo-supportBoldTextButton-fontSize)',
           lineHeight: 'var(--ds-typo-supportBoldTextButton-lineHeight)',
           letterSpacing: 'var(--ds-typo-supportBoldTextButton-letterSpacing)'
-        } as CSSInterpolation
-      } as CSSInterpolation
+        } as CSSObject
+      } as CSSObject
     }
   }
 }

@@ -30,9 +30,11 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
     return (
       <DsTypography
         component='div'
-        textAlign='right'
-        color='var(--ds-colour-typoTertiary)'
         variant='subheadingSemiboldDefault'
+        sx={{
+          textAlign: 'right',
+          color: 'var(--ds-colour-typoTertiary)'
+        }}
       >
         {isNextStepLastStep
           ? lastStepLabelText
@@ -45,19 +47,21 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
     <>
       {dense ? (
         <DsStack
+        {...wrapperProps}
           sx={{
             backgroundColor: 'var(--ds-colour-surfaceSecondary)',
             ...wrapperProps?.sx
           }}
-          {...wrapperProps}
         >
           <DsStack
             direction='row'
-            justifyContent='space-between'
-            px='var(--ds-spacing-bitterCold)'
-            pt='var(--ds-spacing-frostbite)'
-            pb='calc(var(--ds-spacing-frostbite) - var(--ds-spacing-deepFreeze))'
             onClick={onClick}
+            sx={{
+              justifyContent: 'space-between',
+              px: 'var(--ds-spacing-bitterCold)',
+              pt: 'var(--ds-spacing-frostbite)',
+              pb: 'calc(var(--ds-spacing-frostbite) - var(--ds-spacing-deepFreeze))'
+            }}
           >
             <DsTypography variant='subheadingSemiboldDefault'>
               {`STEP ${activeStep + 1} OF ${steps.length}`}
@@ -87,6 +91,7 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
         </DsStack>
       ) : (
         <DsStack
+        {...wrapperProps}
           sx={{
             p: 'var(--ds-spacing-bitterCold)',
             alignItems: 'center',
@@ -98,18 +103,24 @@ export const DsProgressTrackerHeader = (props: DsProgressTrackerProps) => {
           spacing='var(--ds-spacing-bitterCold)'
           direction='row'
           onClick={onClick}
-          {...wrapperProps}
         >
           <DsProgressIndicator
             activeStep={activeStep + 1}
             steps={steps.length}
           />
-          <DsStack flexGrow={1} spacing='var(--ds-spacing-quickFreeze)'>
+            <DsStack
+              spacing='var(--ds-spacing-quickFreeze)'
+              sx={{
+                flexGrow: 1
+              }}
+            >
             <DsTypography
               component='div'
-              textAlign='right'
-              color='var(--ds-colour-actionSecondary)'
               variant='headingBoldExtraSmall'
+              sx={{
+                textAlign: 'right',
+                color: 'var(--ds-colour-actionSecondary)'
+              }}
             >
               {currentStep.stepName}
             </DsTypography>

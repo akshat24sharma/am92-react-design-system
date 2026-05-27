@@ -1,5 +1,5 @@
 import { trTR } from '@mui/x-date-pickers/locales'
-import tr from 'date-fns/locale/tr'
+import { tr } from 'date-fns/locale'
 
 export const DsDatePickerLocaleTrTR = {
   components: {

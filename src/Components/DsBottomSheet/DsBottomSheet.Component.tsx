@@ -13,6 +13,7 @@ import { DsDialogContent } from '../DsDialogContent'
 import { DsButton } from '../DsButton'
 import { DsDialogActions } from '../DsDialogActions'
 import { DsPaper } from '../DsPaper'
+import { mergeSlotProps } from '../../utils'
 
 export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
   const props = { ...DsBottomSheetDefaultProps, ...inProps }
@@ -53,8 +54,10 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
     ContentProps,
     ActionsProps,
     children,
-
     onClose,
+    slotProps,
+    illustration,
+    IllustrationProps,
     ...DrawerProps
   } = props
 
@@ -74,19 +77,24 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
     accessibilityProps['aria-describedby'] = kicker
   }
 
+  const paperProps = {
+    ...PaperProps,
+    ...slotProps?.paper
+  };
+
   return (
     <DsDrawer
       {...accessibilityProps}
       {...DrawerProps}
       anchor='bottom'
-      PaperProps={{
-        ...PaperProps,
-        sx: {
-          background: 'transparent',
-          maxHeight: 'var(--ds-rules-bottomSheetWorkingAreaHeight)',
-          // top: 'var(--ds-spacing-bitterCold)',
-          ...PaperProps?.sx
-        }
+      slotProps={{
+        ...slotProps,
+        paper: mergeSlotProps(paperProps, {
+          sx: {
+            background: 'transparent',
+            maxHeight: 'var(--ds-rules-bottomSheetWorkingAreaHeight)',
+          },
+        }),
       }}
       onClose={handleDrawerClose}
     >
@@ -98,7 +106,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
             flexGrow: 0,
             alignSelf: 'center',
             backgroundColor: 'var(--ds-colour-iconDefault)',
-            color: 'var(--ds-colour-iconDisabled)',
+            color: 'var(--ds-colour-iconOnSurfaceDynamic)',
             borderRadius: '50%',
             p: 'var(--ds-spacing-glacial)',
             mb: 'var(--ds-spacing-bitterCold)',
@@ -123,12 +131,25 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
           ...ContainerProps?.sx
         }}
       >
+        {illustration && (
+          <DsDialogContent
+            {...IllustrationProps}
+            sx={{
+              px: 'var(--ds-spacing-bitterCold)',
+              marginBottom: 'var(--ds-spacing-mild)',
+              ...IllustrationProps?.sx
+            }}
+          >
+            {illustration}
+          </DsDialogContent>
+        )}
+
         {kicker && (
           <DsTypography
             variant='subheadingSemiboldDefault'
-            color='text.tertiary'
             {...KickerProps}
             sx={{
+              color: 'text.tertiary',
               px: 'var(--ds-spacing-bitterCold)',
               mb: 'var(--ds-spacing-quickFreeze)',
               textTransform: 'uppercase',

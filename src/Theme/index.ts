@@ -2,7 +2,7 @@ import type {} from '@mui/material/themeCssVarsAugmentation'
 import {
   CssVarsTheme,
   CssVarsThemeOptions,
-  experimental_extendTheme as extendTheme,
+  extendTheme,
   PaletteColorOptions,
   responsiveFontSizes,
   SupportedColorScheme,
@@ -42,6 +42,7 @@ export function getTheme(
 
   const cssVarsThemeOptions: CssVarsThemeOptions = {
     cssVarPrefix: '',
+    colorSchemeSelector: 'data',
     components: componentOverrides,
     colorSchemes,
     shape: { borderRadius: 2 },
@@ -85,5 +86,12 @@ declare module '@mui/material/styles' {
 
   interface CssVarsThemeOptions {
     shadows: DsShadows
+  }
+}
+
+// If inverse is being used anywhere else, add it in theme palettee
+declare module '@mui/material/Badge' {
+  interface BadgePropsColorOverrides {
+    inverse: true
   }
 }

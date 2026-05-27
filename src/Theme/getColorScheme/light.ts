@@ -83,8 +83,8 @@ export default function getLightModeColorScheme(colorPalette: DsPalette) {
     surfaceTertiary: secondaryGrey100,
 
     typoPrimary: primaryBlackLight,
-    typoSecondary: secondaryGrey80,
-    typoTertiary: secondaryGrey60,
+    typoSecondary: secondaryGrey90,
+    typoTertiary: secondaryGrey80,
     typoActionPrimary: primary,
     typoActionSecondary: secondary100,
     typoActionTertiary: tertiary100,

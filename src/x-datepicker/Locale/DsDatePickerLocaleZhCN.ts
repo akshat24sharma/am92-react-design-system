@@ -1,5 +1,5 @@
 import { zhCN as ZhCN } from '@mui/x-date-pickers/locales'
-import zhCN from 'date-fns/locale/zh-CN'
+import { zhCN } from 'date-fns/locale'
 
 export const DsDatePickerLocaleZhCN = {
   components: {

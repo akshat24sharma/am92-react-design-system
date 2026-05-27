@@ -38,7 +38,6 @@ export class DsSearchbar extends Component<
       <DsAutocomplete
         fullWidth
         autoHighlight
-        PaperComponent={PaperComponent}
         popupIcon={false}
         clearIcon={<DsRemixIcon className="ri-close-line" />}
         {...restProps}
@@ -54,6 +53,10 @@ export class DsSearchbar extends Component<
               startAdornment={this.renderStartAdornment()}
             />
           )
+        }}
+        slots={{
+          paper: PaperComponent,
+          ...restProps.slots
         }}
       />
     )

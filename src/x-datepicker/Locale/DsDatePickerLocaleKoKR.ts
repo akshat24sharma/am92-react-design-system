@@ -1,5 +1,5 @@
 import { koKR } from '@mui/x-date-pickers/locales'
-import ko from 'date-fns/locale/ko'
+import { ko } from 'date-fns/locale'
 
 export const DsDatePickerLocaleKoKR = {
   components: {

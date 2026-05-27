@@ -1,5 +1,5 @@
 import { zhHK as ZhHK } from '@mui/x-date-pickers/locales'
-import zhHK from 'date-fns/locale/zh-HK'
+import { zhHK } from 'date-fns/locale'
 
 export const DsDatePickerLocaleZhHK = {
   components: {
