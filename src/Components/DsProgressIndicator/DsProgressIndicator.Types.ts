@@ -1,3 +1,5 @@
+import { DsCircularProgressProps, DsRemixIconProps } from "../.."
+
 export interface DsProgressIndicatorProps {
   'ds-variant'?: 'percentage' | 'fraction'
   steps: number
@@ -5,6 +7,9 @@ export interface DsProgressIndicatorProps {
 
   isError?: boolean
   isSuccess?: boolean
+  successIconProps?: DsRemixIconProps
+  errorIconProps?: DsRemixIconProps
+  color?: DsCircularProgressProps['color']
 }
 
 export const DsProgressIndicatorDefaultProps: DsProgressIndicatorProps = {

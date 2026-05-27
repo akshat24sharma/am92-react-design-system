@@ -12,13 +12,14 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
   const props = { ...DsProgressIndicatorDefaultProps, ...inProps }
 
   const getFillText = () => {
-    const { activeStep, steps, isSuccess, isError } = props
+    const { activeStep, steps, isSuccess, isError, successIconProps, errorIconProps, color } = props
 
     if (isSuccess) {
       return (
         <DsRemixIcon
-          sx={{ color: 'var(--ds-colour-iconPositive)' }}
-          className="ri-check-line"
+          color={color ?? 'success'}
+          className={successIconProps?.className || 'ri-check-line'}
+          {...successIconProps}
         />
       )
     }
@@ -26,8 +27,9 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
     if (isError) {
       return (
         <DsRemixIcon
-          sx={{ color: 'var(--ds-colour-iconNegative)' }}
-          className="ri-error-warning-line"
+          color={color ?? 'error'}
+          className={errorIconProps?.className || 'ri-close-fill'}
+          {...errorIconProps}
         />
       )
     }
@@ -42,7 +44,13 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
     const { activeStep, steps, isSuccess, isError } = props
     const squareSize = props['ds-variant'] === 'fraction' ? '48px' : '32px'
     const fillPercentage = Math.round((activeStep / steps) * 100)
-    const fillColor = isSuccess ? 'success' : isError ? 'error' : 'secondary'
+    const fillColor = props.color
+      ? props.color
+      : isSuccess
+        ? "success"
+        : isError
+          ? "error"
+          : "secondary"
 
     return (
       <DsBox
@@ -70,17 +78,25 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
             position: 'absolute'
           }}
         />
-        <DsTypography
-          variant="subheadingSemiboldDefault"
+        <DsBox
           sx={{
             position: 'absolute',
             left: '50%',
             top: '50%',
-            transform: 'translate(-50%,-50%)'
+            transform: 'translate(-50%,-50%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
-          {getFillText()}
-        </DsTypography>
+          {isSuccess || isError ? (
+            getFillText()
+          ) : (
+            <DsTypography variant="subheadingSemiboldDefault">
+              {getFillText()}
+            </DsTypography>
+          )}
+        </DsBox>
       </DsBox>
-    )
+    );
 }
