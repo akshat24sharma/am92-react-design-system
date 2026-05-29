@@ -77,7 +77,7 @@ export const DsListRowLeadingSection = ({
       >
         <DsRemixIcon
           {...leadingIconProps}
-          className={leadingIcon ? `ri-${leadingIcon}` : undefined}
+          className={leadingIcon || undefined}
           fontSize="cool"
           sx={{
             color: "var(--ds-colour-iconDefault)",

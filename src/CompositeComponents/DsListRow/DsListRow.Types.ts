@@ -43,7 +43,7 @@ export interface DsListRowProps extends Omit<DsListItemProps, "onClick"> {
   /** Month value for date leading variant. */
   leadingDateMonth?: React.ReactNode;
 
-  /** Icon class (without ri- prefix) for icon leading variant. */
+  /** Icon class for icon leading variant. */
   leadingIcon?: string;
 
   /** Additional props for icon leading variant. */
@@ -61,13 +61,13 @@ export interface DsListRowProps extends Omit<DsListItemProps, "onClick"> {
   /** Controls right chevron visibility. */
   showChevron?: boolean;
 
-  /** Optional tertiary leading icon class (without ri- prefix). */
+  /** Optional tertiary leading icon class */
   tertiaryIcon?: string;
 
   /** Selection value passed to the internal radio for RadioGroup usage. */
   value?: string;
 
-  /** Info row trailing icon class (without ri- prefix). */
+  /** Info row trailing icon class */
   trailingIcon?: string;
 
   /** Click handler for info row trailing icon. */
