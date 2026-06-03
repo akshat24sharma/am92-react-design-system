@@ -1,10 +1,15 @@
 import { useMemo } from "react";
 import { PickersDay } from "@mui/x-date-pickers";
-import { isAfter, isSameDay, isWithinInterval } from "date-fns";
+import { isSameDay, isWithinInterval } from "date-fns";
 
 import type { IDateRangePickerDayProps } from "./DsDateRangePicker.Types";
 import { DsBox } from "../../../Components";
 
+/**
+ * Custom day component for date range picker calendar
+ * Handles visual styling for start/end dates, range selection, and date validation
+ * Wraps MUI's PickersDay with custom range styling and disabled state logic
+ */
 export const DateRangePickerDay = ({
   day,
   startDate,
@@ -13,31 +18,40 @@ export const DateRangePickerDay = ({
   activeField,
   ...other
 }: IDateRangePickerDayProps) => {
+  // Check if this day is the selected start date
   const isStart = !!startDate && isSameDay(day, startDate);
+  // Check if this day is the selected end date
   const isEnd = !!endDate && isSameDay(day, endDate);
-  const isSingleDay = isStart && isEnd;
+
+  // Check if this day falls within the selected date range
   const isInRange =
-    startDate && endDate && !isAfter(startDate, endDate)
-      ? isWithinInterval(day, { start: startDate, end: endDate })
-      : false;
+    startDate &&
+    endDate &&
+    isWithinInterval(day, { start: startDate, end: endDate });
 
-  const background =
-    (isStart || isEnd || isInRange) && !(startDate && !endDate)
-      ? "var(--ds-colour-stateSelectedPrimaryHover)"
-      : "none";
-
+  /**
+   * Dynamic styling for the date range visual indicators
+   * Applies background color for range and rounded borders for start/end dates
+   */
   const boxStyles = useMemo(
     () => ({
       display: "flex",
       justifyContent: "space-around",
       alignItems: "center",
       flex: 1,
-      background: background,
-      ...(isSingleDay && { borderRadius: "50%" }),
-      ...(isStart && !isEnd && { borderRadius: "50% 0 0 50%" }),
-      ...(isEnd && !isStart && { borderRadius: "0 50% 50% 0" }),
+      background: isInRange
+        ? "var(--ds-colour-stateSelectedPrimaryHover)"
+        : "none",
+      ...(isStart && {
+        borderTopLeftRadius: "50%",
+        borderBottomLeftRadius: "50%",
+      }),
+      ...(isEnd && {
+        borderTopRightRadius: "50%",
+        borderBottomRightRadius: "50%",
+      }),
     }),
-    [background, isSingleDay, isStart, isEnd]
+    [isInRange, isStart, isEnd]
   );
 
   return (

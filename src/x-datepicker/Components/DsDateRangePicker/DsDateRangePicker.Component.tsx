@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useThemeProps } from "@mui/system";
 import {
-  DateCalendarSlotProps,
-  DateCalendarSlots,
-  type DateValidationError,
+  type DateCalendarSlotProps,
+  type DateCalendarSlots,
   LocalizationProvider,
 } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
@@ -14,6 +13,12 @@ import { DateRangePickerActionBar } from "./DateRangePickerActionBar";
 import { DateRangePickerDay } from "./DateRangePickerDay";
 import { DateRangePickerHeader } from "./DateRangePickerHeader";
 import DateRangePickerTextField from "./DateRangePickerTextField";
+import {
+  areDatesEqual,
+  getCalendarReferenceDate,
+  handleDateRangeClick,
+  validateDateRange,
+} from "./helpers";
 import type {
   IDateRangePickerActionBarProps,
   IDateRangePickerTextFieldProps,
@@ -25,6 +30,23 @@ import {
   BaseDatePickerSlots,
 } from "@mui/x-date-pickers/DatePicker/shared";
 
+/**
+ * Main DsDateRangePicker component that provides a complete date range selection interface
+ * Orchestrates multiple sub-components including text fields, calendar, action bar, and header
+ *
+ * Key Features:
+ * - Dual date selection (start and end dates)
+ * - Integrated validation with minDate/maxDate constraints
+ * - Auto field switching for better UX
+ * - Custom slot-based architecture for extensibility
+ * - Proper ref forwarding and focus management
+ *
+ * Architecture:
+ * - Uses MUI X DatePicker as the base with custom slots
+ * - Manages internal state synchronized with external value prop
+ * - Provides validation through helper functions
+ * - Integrates with AM92 design system components
+ */
 export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
   const props = { ...DsDateRangePickerDefaultProps, ...InProps };
 
@@ -48,82 +70,67 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     FormControlProps,
     success,
     error,
+    minDate,
+    maxDate,
+    onError,
+    errorMap,
     ...restProps
   } = props;
 
-  const [startDate, setStartDate] = useState<Date | null>(value?.[0] || null);
-  const [endDate, setEndDate] = useState<Date | null>(value?.[1] || null);
+  // Internal state management for date range selection
+  const [startDate, setStartDate] = useState<Date | null>(value?.[0] ?? null);
+  const [endDate, setEndDate] = useState<Date | null>(value?.[1] ?? null);
 
+  // Track which field is currently active for calendar interaction
   const [activeField, setActiveField] = useState<"start" | "end">("start");
-  const [anchorEL, setAnchorEl] = useState<HTMLElement | null>(null);
+
+  // Popover anchor element for calendar positioning
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+
+  // Internal validation state separate from external error prop
   const [validationError, setValidationError] = useState<boolean>(false);
+
+  // Ref for focus management and popover anchoring
   const startRef = useRef<HTMLInputElement>(null);
 
-  // Combined effect for validation, value sync, anchor setup, and field switching
+  // Synchronize internal state with external value prop changes and handle UX improvements
   useEffect(() => {
-    // 1. Sync internal state with external value prop changes
-    const externalStart = value?.[0];
-    const externalEnd = value?.[1];
+    const externalStart = value?.[0] ?? null;
+    const externalEnd = value?.[1] ?? null;
 
-    const startChanged =
-      externalStart?.getTime() !== startDate?.getTime() ||
-      (externalStart === null && startDate !== null) ||
-      (externalStart !== null && startDate === null);
+    // Update internal state when external value changes (controlled component behavior)
+    if (!areDatesEqual(externalStart, startDate)) {
+      setStartDate(externalStart);
+    }
+    if (!areDatesEqual(externalEnd, endDate)) {
+      setEndDate(externalEnd);
+    }
 
-    const endChanged =
-      externalEnd?.getTime() !== endDate?.getTime() ||
-      (externalEnd === null && endDate !== null) ||
-      (externalEnd !== null && endDate === null);
-
-    if (startChanged) setStartDate(externalStart ?? null);
-    if (endChanged) setEndDate(externalEnd ?? null);
-
-    // 2. Set anchor element when activeField or ref changes
-    if (startRef?.current) {
+    // Initialize anchor element for popover positioning on first render
+    if (startRef.current && !anchorEl) {
       setAnchorEl(startRef.current);
     }
 
-    // 3. Auto-switch to end field when start date is selected but no end date
-    if (startDate && !endDate) {
+    // UX Enhancement: Auto-switch to end field when start date is selected
+    // This provides a smoother user experience for range selection
+    if (startDate && !endDate && activeField === "start") {
       setActiveField("end");
     }
+  }, [value, startDate, endDate, activeField, anchorEl]);
 
-    // 4. Validate both dates and trigger onError
-    const { minDate, maxDate, onError, errorMap } = props;
-    let hasError = false;
-    let errorCode: DateValidationError = null;
-    let invalidDate = null;
+  // Memoized validation logic for performance optimization
+  // Recalculates only when dates or constraints change
+  const validationResult = useMemo(() => {
+    return validateDateRange(startDate, endDate, minDate, maxDate);
+  }, [startDate, endDate, minDate, maxDate]);
 
-    // Validate date range and bounds
-    const validateDate = (date: Date | null) => {
-      if (!date) return null;
-      if (minDate && date < minDate) return { code: "minDate", date };
-      if (maxDate && date > maxDate) return { code: "maxDate", date };
-      return null;
-    };
-
-    // Check range validity and individual date bounds
-    const startValidation = validateDate(startDate);
-    const endValidation = validateDate(endDate);
-    const rangeInvalid = startDate && endDate && startDate > endDate;
-
-    if (rangeInvalid) {
-      hasError = true;
-      errorCode = "invalidDate";
-      invalidDate = startDate;
-    } else if (startValidation) {
-      hasError = true;
-      errorCode = startValidation.code as DateValidationError;
-      invalidDate = startValidation.date;
-    } else if (endValidation) {
-      hasError = true;
-      errorCode = endValidation.code as DateValidationError;
-      invalidDate = endValidation.date;
-    }
-
+  // Handle validation results and trigger error callbacks when validation fails
+  useEffect(() => {
+    const { hasError, errorCode, invalidDate } = validationResult;
     setValidationError(hasError);
 
-    if (hasError && typeof onError === "function") {
+    // Notify parent component of validation errors with detailed error information
+    if (hasError && onError) {
       const errorMessage = getErrorFromErrorMap(
         errorMap,
         errorCode,
@@ -131,68 +138,51 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       );
       onError(name, errorMessage, errorCode, invalidDate);
     }
-  }, [
-    value,
-    startDate,
-    endDate,
-    activeField,
-    props.minDate,
-    props.maxDate,
-    props.onError,
-    props.errorMap,
-    name,
-  ]);
+  }, [validationResult, onError, errorMap, name]);
 
-  const handleDateClick = (date: Date | null, field: "start" | "end") => {
-    if (!date) return;
+  // Handle calendar date clicks with proper range logic and field switching
+  const handleDateClick = useCallback(
+    (date: Date | null, field: "start" | "end") => {
+      const result = handleDateRangeClick(date, field, startDate, endDate);
+      if (!result) return;
 
-    if (field === "start") {
-      const newEndDate = endDate && date > endDate ? null : endDate;
-      onChange(name, [date, newEndDate]);
-      setStartDate(date);
-      setEndDate(newEndDate);
-      setActiveField("end");
-    }
+      const { dateRange, activeField: newActiveField } = result;
+      // Update both internal state and notify parent of changes
+      onChange(name, dateRange);
+      setStartDate(dateRange[0]);
+      setEndDate(dateRange[1]);
+      setActiveField(newActiveField);
+    },
+    [startDate, endDate, onChange, name]
+  );
 
-    if (field === "end") {
-      if (!startDate) {
-        return;
-      }
-
-      if (date < startDate) {
-        onChange(name, [date, endDate]);
-        setStartDate(date);
-        setActiveField("end");
-      } else {
-        onChange(name, [startDate, date]);
-        setEndDate(date);
-      }
-    }
-  };
-
-  const handleClear = () => {
+  // Clear both dates and reset to initial state
+  const handleClear = useCallback(() => {
     onChange(name, [null, null]);
     setStartDate(null);
     setEndDate(null);
     setActiveField("start");
-  };
+  }, [onChange, name]);
 
-  const handleTextFieldChange = (
-    startDate: Date | null,
-    endDate: Date | null
-  ) => {
-    setStartDate(startDate);
-    setEndDate(endDate);
-    onChange(name, [startDate, endDate]);
-  };
+  // Handle text field changes (manual input)
+  const handleTextFieldChange = useCallback(
+    (newStartDate: Date | null, newEndDate: Date | null) => {
+      setStartDate(newStartDate);
+      setEndDate(newEndDate);
+      onChange(name, [newStartDate, newEndDate]);
+    },
+    [onChange, name]
+  );
 
   const LocalizationProviderProps = useThemeProps({
     props: props.LocalizationProviderProps,
     name: "MuiLocalizationProvider",
   });
 
+  // Handle field clicks with validation - prevent end field selection without start date
   const onFieldClick = useCallback(
     (field: "start" | "end") => {
+      // UX Logic: If user clicks end field without selecting start date, redirect to start
       if (field === "end" && !startDate) {
         setActiveField("start");
       } else {
@@ -202,10 +192,94 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     [startDate]
   );
 
+  // Calculate optimal reference date for calendar navigation based on active field and selected dates
+  // This ensures the calendar shows the most relevant month for the current context
   const referenceDate = useMemo(
-    () =>
-      (activeField === "end" ? endDate : startDate) || startDate || new Date(),
-    [activeField, endDate, startDate]
+    () => getCalendarReferenceDate(activeField, startDate, endDate),
+    [activeField, startDate, endDate]
+  );
+
+  // Memoized slot props configuration to prevent unnecessary re-renders
+  // Each slot receives specific props needed for its functionality
+  const slotProps = useMemo(
+    () => ({
+      ...props.slotProps,
+      actionBar: {
+        startDate,
+        endDate,
+        onClear: handleClear,
+        actions: ["clear", "accept"],
+        ...props.slotProps?.actionBar,
+      } as IDateRangePickerActionBarProps,
+      toolbar: {
+        startDate,
+        endDate,
+        activeField,
+        onFieldChange: setActiveField,
+        ...props.slotProps?.toolbar,
+      } as BaseDatePickerSlotProps["toolbar"],
+      textField: {
+        required,
+        fullWidth,
+        onBlur,
+        onFocus,
+        InputLabelProps,
+        helperText,
+        HelperTextProps,
+        FormControlProps,
+        success,
+        format,
+        onFieldClick,
+        error: error || validationError, // Combine external and internal validation errors
+        startDate,
+        endDate,
+        startDateLabel,
+        endDateLabel,
+        startDateLabelSupportText,
+        endDateLabelSupportText,
+        onDateChange: handleTextFieldChange,
+        customRef: startRef, // For focus management and popover anchoring
+        ...props.slotProps?.textField,
+      } as Partial<IDateRangePickerTextFieldProps>,
+      day: {
+        startDate,
+        endDate,
+        activeField,
+        onDateClick: handleDateClick,
+        ...props.slotProps?.day,
+      } as DateCalendarSlotProps["day"],
+      popper: {
+        anchorEl, // Element to anchor the calendar popover to
+        ...props.slotProps?.popper,
+      },
+    }),
+    [
+      props.slotProps,
+      startDate,
+      endDate,
+      activeField,
+      handleClear,
+      handleTextFieldChange,
+      handleDateClick,
+      required,
+      fullWidth,
+      onBlur,
+      onFocus,
+      InputLabelProps,
+      helperText,
+      HelperTextProps,
+      FormControlProps,
+      success,
+      format,
+      onFieldClick,
+      error,
+      validationError,
+      startDateLabel,
+      endDateLabel,
+      startDateLabelSupportText,
+      endDateLabelSupportText,
+      anchorEl,
+    ]
   );
 
   return (
@@ -216,8 +290,9 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       <DsDatePicker
         {...restProps}
         name={name}
-        // Set calendar reference date based on active field for better UX
         referenceDate={referenceDate}
+        minDate={minDate}
+        maxDate={maxDate}
         slots={{
           actionBar: DateRangePickerActionBar,
           toolbar: DateRangePickerHeader as BaseDatePickerSlots["toolbar"],
@@ -225,57 +300,7 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
           day: DateRangePickerDay as DateCalendarSlots["day"],
           ...props.slots,
         }}
-        slotProps={{
-          ...props.slotProps,
-          actionBar: {
-            startDate: startDate,
-            endDate: endDate,
-            onClear: handleClear,
-            actions: ["clear", "accept"],
-            ...props.slotProps?.actionBar,
-          } as IDateRangePickerActionBarProps,
-          toolbar: {
-            startDate: startDate,
-            endDate: endDate,
-            activeField: activeField,
-            onFieldChange: setActiveField,
-            ...props.slotProps?.toolbar,
-          } as BaseDatePickerSlotProps["toolbar"],
-          textField: {
-            required,
-            fullWidth,
-            onBlur,
-            onFocus,
-            InputLabelProps,
-            helperText,
-            HelperTextProps,
-            FormControlProps,
-            success,
-            format,
-            onFieldClick,
-            error: error || validationError, // Use custom validation or external error
-            startDate,
-            endDate,
-            startDateLabel,
-            endDateLabel,
-            startDateLabelSupportText,
-            endDateLabelSupportText,
-            onDateChange: handleTextFieldChange,
-            customRef: startRef,
-            ...props.slotProps?.textField,
-          } as Partial<IDateRangePickerTextFieldProps>,
-          day: {
-            startDate,
-            endDate,
-            activeField,
-            onDateClick: handleDateClick,
-            ...props.slotProps?.day,
-          } as DateCalendarSlotProps["day"],
-          popper: {
-            anchorEl: anchorEL,
-            ...props.slotProps?.popper,
-          },
-        }}
+        slotProps={slotProps}
         inputRef={startRef}
         format={format}
       />

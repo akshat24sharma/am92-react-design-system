@@ -1,21 +1,25 @@
-import React, { useMemo } from "react";
+import React from "react";
 
 import { useThemeProps } from "@mui/system";
 import {
   usePickerActionsContext,
   usePickerTranslations,
 } from "@mui/x-date-pickers";
-import { useUtils } from "@mui/x-date-pickers/internals";
 
 import type { IDateRangePickerHeaderProps } from "./DsDateRangePicker.Types";
+import { DateFieldButton } from "./DateFieldButton";
 import {
-  DsButtonBase,
   DsIconButton,
   DsRemixIcon,
   DsStack,
   DsTypography,
 } from "../../../Components";
 
+/**
+ * Header/toolbar component for date range picker
+ * Displays the picker title with close button and start/end date field buttons
+ * Allows users to switch between start and end date selection
+ */
 export const DateRangePickerHeader = React.forwardRef(
   function DatePickerToolbar(
     inProps: IDateRangePickerHeaderProps,
@@ -30,65 +34,6 @@ export const DateRangePickerHeader = React.forwardRef(
     const { cancelValueChanges } = usePickerActionsContext();
 
     const translations = usePickerTranslations();
-    const utils = useUtils();
-
-    const createDateFieldButton = (
-      field: "start" | "end",
-      label: string,
-      date: Date | null,
-      isDisabled?: boolean
-    ) => (
-      <DsButtonBase
-        key={field}
-        onClick={() => !isDisabled && onFieldChange(field)}
-        disabled={isDisabled}
-        sx={{
-          flex: 1,
-          justifyContent: "flex-start",
-          py: "var(--ds-spacing-bitterCold)",
-          pl: "var(--ds-spacing-bitterCold)",
-          borderBottom:
-            activeField === field
-              ? "1px solid var(--ds-colour-actionSecondary)"
-              : undefined,
-          backgroundColor: isDisabled
-            ? "var(--ds-colour-stateDisabledSurface)"
-            : activeField === field
-            ? "var(--ds-colour-surfacePrimary) !important"
-            : "var(--ds-colour-surfaceSecondary) !important",
-          borderRadius: 0,
-          "&.MuiButton-containedPrimary:disabled": {
-            backgroundColor: "var(--ds-colour-stateDisabledSurface)",
-          },
-        }}
-      >
-        <DsTypography
-          color="var(--ds-colour-typoPrimary)"
-          variant="bodyBoldSmall"
-          sx={{
-            marginRight: "var(--ds-spacing-glacial)",
-          }}
-        >
-          {label}
-        </DsTypography>
-        <DsTypography
-          variant="bodyBoldSmall"
-          color="var(--ds-colour-typoPrimary)"
-        >
-          {date
-            ? utils.formatByString(date, utils.formats.fullDate)
-            : "Pick a Date"}
-        </DsTypography>
-      </DsButtonBase>
-    );
-
-    const dateFieldButtons = useMemo(
-      () => [
-        createDateFieldButton("start", "Start", startDate),
-        createDateFieldButton("end", "End", endDate, !startDate),
-      ],
-      [startDate, endDate, activeField, onFieldChange, utils]
-    );
 
     return (
       <DsStack
@@ -127,7 +72,20 @@ export const DateRangePickerHeader = React.forwardRef(
             borderTop: "1px solid var(--ds-colour-strokeDefault)",
           }}
         >
-          {dateFieldButtons}
+          <DateFieldButton
+            label="Start"
+            date={startDate}
+            isActive={activeField === "start"}
+            onClick={() => onFieldChange("start")}
+          />
+
+          <DateFieldButton
+            label="End"
+            date={endDate}
+            isActive={activeField === "end"}
+            isDisabled={!startDate} // Can't select end date without start date
+            onClick={() => startDate && onFieldChange("end")}
+          />
         </DsStack>
       </DsStack>
     );
