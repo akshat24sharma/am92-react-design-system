@@ -35,10 +35,18 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
     }
 
     if (props['ds-variant'] === 'fraction') {
-      return `${activeStep}/${steps}`
+      return (
+        <DsTypography variant='subheadingSemiboldDefault'>
+          {`${activeStep}/${steps}`}
+        </DsTypography>
+      )
     }
 
-    return `${Math.round((activeStep / steps) * 100)}%`
+    return (
+      <DsTypography variant='subheadingSemiboldDefault'>
+        {`${Math.round((activeStep / steps) * 100)}%`}
+      </DsTypography>
+    )
   }
 
     const { activeStep, steps, isSuccess, isError } = props
@@ -89,13 +97,7 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
             justifyContent: 'center',
           }}
         >
-          {isSuccess || isError ? (
-            getFillText()
-          ) : (
-            <DsTypography variant="subheadingSemiboldDefault">
-              {getFillText()}
-            </DsTypography>
-          )}
+          {getFillText()}
         </DsBox>
       </DsBox>
     );

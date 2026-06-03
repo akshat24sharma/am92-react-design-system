@@ -1,4 +1,5 @@
-import { DsCircularProgressProps, DsRemixIconProps } from "../.."
+import { DsCircularProgressProps } from "../DsCircularProgress"
+import { DsRemixIconProps } from "../DsRemixIcon"
 
 export interface DsProgressIndicatorProps {
   'ds-variant'?: 'percentage' | 'fraction'
