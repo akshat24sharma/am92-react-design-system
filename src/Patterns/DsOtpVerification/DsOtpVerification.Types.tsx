@@ -107,10 +107,10 @@ export interface DsOtpVerificationSlotProps {
  * Shared props across both variants
  */
 interface BaseOtpVerificationProps
-  extends Omit<DsDialogProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes'>,
+  extends Omit<DsDialogProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes' | 'role'>,
     Omit<
       DsBottomSheetProps,
-      'slots' | 'onSubmit' | 'slotProps' | 'classes' | 'variant'
+      'slots' | 'onSubmit' | 'slotProps' | 'classes' | 'variant' | 'role'
     > {
   open: boolean
   title: string

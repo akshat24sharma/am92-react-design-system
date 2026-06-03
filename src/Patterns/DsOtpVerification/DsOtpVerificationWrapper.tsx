@@ -6,13 +6,14 @@ import type {
 import { DsBottomSheet, DsDialog } from '../../Components'
 
 interface DsOtpVerificationWrapperProps
-  extends Omit<DsDialogProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes'>,
-    Omit<DsBottomSheetProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes'> {
+  extends Omit<DsDialogProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes' | 'role'>,
+    Omit<DsBottomSheetProps, 'slots' | 'onSubmit' | 'slotProps' | 'classes' | 'role'> {
   open: boolean
   title: string
   description: string
   onClose: () => void
   useBottomSheet?: boolean
+  isUncontainerised: boolean
   showInputSection: boolean
   children: React.ReactNode
   dialogHeight: string
@@ -27,6 +28,7 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
   description,
   onClose,
   useBottomSheet = false,
+  isUncontainerised,
   showInputSection,
   children,
   dialogHeight,
@@ -56,9 +58,9 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
         slotProps={{
           paper: {
             sx: {
-              maxHeight: '100vh',
-              height: '100vh',
-              position: 'absolute',
+              maxHeight: 'unset',
+              height: isUncontainerised ? '100dvh':'100%',
+              position: isUncontainerised ? 'fixed' : 'absolute',
               bottom: 0
             },
           },
@@ -99,12 +101,18 @@ const DsOtpVerificationWrapper: React.FC<DsOtpVerificationWrapperProps> = ({
       slotProps={{
         paper:  {
           sx: {
-            height: dialogHeight
+            minHeight: dialogHeight
           },
         },
       }}
       ContentProps={{
-        ...ContentProps
+        ...ContentProps,
+        sx:{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: 1,
+          ...ContentProps?.sx
+        }
       }}
       {...verificationWrapperRestProps}
       {...commonActionBtnProps}

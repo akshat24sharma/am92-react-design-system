@@ -141,7 +141,7 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
   return (
     <DsStack
       sx={{
-        height: '100%',
+        flex: 1,
         alignItems: 'flex-start',
         justifyContent: 'space-between'
       }}
@@ -151,6 +151,7 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
           alignItems: 'flex-start',
           gap: 'var(--ds-spacing-bitterCold)',
           width: '100%',
+          flex: 1,
           ...mobilePaddingSx
         }}
       >
@@ -168,7 +169,7 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
             <DsDivider
               ds-size='M'
               variant='fullWidth'
-              sx={{ width: '100%', my: 'var(--ds-spacing-bitterCold)' }}
+              sx={{ width: '100%', my: 'var(--ds-spacing-glacial)' }}
             />
 
             {renderOtp(
@@ -203,7 +204,7 @@ const DsOtpSection: React.FC<IDsOtpSectionProps> = ({
             </DsStack>
           }
           sx={{
-            marginBottom: 'var(--ds-spacing-warm)'
+            marginBottom: 'var(--ds-spacing-bitterCold)'
           }}
         />
       </DsStack>

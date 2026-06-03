@@ -72,8 +72,10 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = props => {
 
   const { breakpoints } = useBreakpoints()
 
+  const isMobile = breakpoints.sm || breakpoints.xs || false
+
   const useBottomSheet =
-    breakpoints.sm || breakpoints.xs || showBottomSheet || false
+    isMobile || showBottomSheet || false
 
   const isFullPageStatus = status.type === 'fullPage'
 
@@ -198,8 +200,9 @@ export const DsOtpVerification: React.FC<DsOtpVerificationProps> = props => {
       description={description}
       onClose={handleClose}
       useBottomSheet={useBottomSheet}
+      isUncontainerised={isMobile}
       showInputSection={showInputSection}
-      dialogHeight={isDual ? '100%' : '478px'}
+      dialogHeight={isDual ? 'calc(100% - 64px)' : '478px'}
       statusDialog={
         <DsStatusDialog
           status={status}
