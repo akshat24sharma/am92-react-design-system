@@ -60,7 +60,7 @@ export const DsListRowTrailingSection = ({
         >
           <DsRemixIcon
             {...trailingIconProps}
-            className={trailingIcon ? `ri-${trailingIcon}` : undefined}
+            className={trailingIcon || undefined}
             sx={{ ...(trailingIconProps?.sx ?? {}) }}
           />
         </DsIconButton>
@@ -70,9 +70,9 @@ export const DsListRowTrailingSection = ({
     return (
       <DsRemixIcon
         {...trailingIconProps}
-        className={trailingIcon ? `ri-${trailingIcon}` : undefined}
+        className={trailingIcon || undefined}
         sx={{
-          fontSize: "20px",
+          fontSize: "var(--ds-typo-fontSizeCool)",
           color: "var(--ds-colour-iconDefault)",
           flexShrink: 0,
           ...(trailingIconProps?.sx ?? {}),
@@ -89,7 +89,7 @@ export const DsListRowTrailingSection = ({
     <DsRemixIcon
       className="ri-arrow-right-s-line"
       sx={{
-        fontSize: "20px",
+        fontSize: "var(--ds-typo-fontSizeCool)",
         color: "var(--ds-colour-iconDefault)",
         flexShrink: 0,
       }}

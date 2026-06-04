@@ -77,7 +77,7 @@ export const DsListRowLeadingSection = ({
       >
         <DsRemixIcon
           {...leadingIconProps}
-          className={leadingIcon ? `ri-${leadingIcon}` : undefined}
+          className={leadingIcon || undefined}
           fontSize="cool"
           sx={{
             color: "var(--ds-colour-iconDefault)",
@@ -103,6 +103,9 @@ export const DsListRowLeadingSection = ({
           backgroundColor: "var(--ds-colour-surfaceBackground)",
           objectFit: "cover",
           overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           ...spanSx,
           ...(leadingImageProps?.WrapperProps?.sx ?? {}),
         },
