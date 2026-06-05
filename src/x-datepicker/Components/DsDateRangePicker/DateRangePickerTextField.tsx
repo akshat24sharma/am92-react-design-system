@@ -135,6 +135,7 @@ const DateRangePickerTextField = React.forwardRef<
 
         <DateField
           slots={{ textField: EndDateTextField }}
+          error={props.error}
           slotProps={{
             textField: {
               value: endDate,

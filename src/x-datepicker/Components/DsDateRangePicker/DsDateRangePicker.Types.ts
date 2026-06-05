@@ -40,7 +40,7 @@ export interface IDateRangePickerToolBarProps
   extends DatePickerToolbarProps,
     IDateRangeActiveFieldProps {
   /** Callback to change the active field (start/end) */
-  onFieldChange: () => void;
+  onFieldChange: (field: "start" | "end") => void;
 }
 /**
  * Props interface for the DateRangePickerDay component

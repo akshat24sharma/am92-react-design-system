@@ -34,7 +34,7 @@ export const DateFieldButton: React.FC<IDateFieldButtonProps> = ({
           : isActive
           ? "var(--ds-colour-surfacePrimary) !important"
           : "var(--ds-colour-surfaceSecondary) !important",
-        borderRadius: 0,
+        borderRadius: 'var(--ds-radius-zero)',
         "&.MuiButton-containedPrimary:disabled": {
           backgroundColor: "var(--ds-colour-stateDisabledSurface)",
         },

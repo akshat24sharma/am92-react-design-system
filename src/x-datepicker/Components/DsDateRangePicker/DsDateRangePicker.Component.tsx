@@ -1,11 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useThemeProps } from "@mui/system";
 import {
   type DateCalendarSlotProps,
   type DateCalendarSlots,
-  LocalizationProvider,
 } from "@mui/x-date-pickers";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
 import { DsDatePicker } from "../DsDatePicker";
 import { getErrorFromErrorMap } from "../DsDatePicker/utils";
@@ -174,10 +171,6 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     [onChange, name]
   );
 
-  const LocalizationProviderProps = useThemeProps({
-    props: props.LocalizationProviderProps,
-    name: "MuiLocalizationProvider",
-  });
 
   // Handle field clicks with validation - prevent end field selection without start date
   const onFieldClick = useCallback(
@@ -283,10 +276,6 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
   );
 
   return (
-    <LocalizationProvider
-      dateAdapter={AdapterDateFns}
-      {...LocalizationProviderProps}
-    >
       <DsDatePicker
         {...restProps}
         name={name}
@@ -304,6 +293,5 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
         inputRef={startRef}
         format={format}
       />
-    </LocalizationProvider>
   );
 };
