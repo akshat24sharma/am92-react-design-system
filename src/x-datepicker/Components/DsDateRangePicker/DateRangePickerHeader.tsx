@@ -21,13 +21,13 @@ import {
  * Allows users to switch between start and end date selection
  */
 export const DateRangePickerHeader = React.forwardRef(
-  function DatePickerToolbar(
+  function DateRangePickerHeader(
     inProps: IDateRangePickerHeaderProps,
     ref: React.Ref<HTMLDivElement>,
   ) {
     const props = useThemeProps({
       props: inProps,
-      name: "MuiDatePickerToolbar",
+      name: "DsDateRangePickerHeader",
     });
 
     const { startDate, endDate, activeField, onFieldChange } = props;
