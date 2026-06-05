@@ -136,7 +136,7 @@ export const DsListRow = (InProps: DsListRowProps) => {
       sx={{
         flexDirection: "column",
         alignItems: "stretch",
-        backgroundColor: "var(--ds-colour-surfacePrimary)",
+        backgroundColor: "var(--ds-colour-surfaceBackground)",
         ...sx,
       }}
       {...restProps}
