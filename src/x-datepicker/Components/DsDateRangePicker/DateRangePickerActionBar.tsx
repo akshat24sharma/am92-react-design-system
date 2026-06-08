@@ -22,13 +22,13 @@ export function DateRangePickerActionBar(
   // Only show actions in day view, not in month/year view
   const currentActions = view === "day" ? actions : [];
 
+  // Get localized button labels from MUI translations
+  const translations = usePickerTranslations();
+
   // Hide action bar if no actions are configured
   if (currentActions == null || currentActions?.length === 0) {
     return null;
   }
-
-  // Get localized button labels from MUI translations
-  const translations = usePickerTranslations();
 
   // Determine which buttons to show based on configured actions
   const isClearVisible = currentActions.includes("clear");

@@ -113,7 +113,7 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     if (startDate && !endDate && activeField === "start") {
       setActiveField("end");
     }
-  }, [value, startDate, endDate, activeField, anchorEl]);
+  }, [value, startDate, endDate, anchorEl]);
 
   // Memoized validation logic for performance optimization
   // Recalculates only when dates or constraints change
@@ -197,18 +197,18 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     () => ({
       ...props.slotProps,
       actionBar: {
-        startDate,
-        endDate,
         onClear: handleClear,
         actions: ["clear", "accept"],
         ...props.slotProps?.actionBar,
-      } as IDateRangePickerActionBarProps,
-      toolbar: {
         startDate,
         endDate,
+      } as IDateRangePickerActionBarProps,
+      toolbar: {
         activeField,
         onFieldChange: setActiveField,
         ...props.slotProps?.toolbar,
+        startDate,
+        endDate,
       } as BaseDatePickerSlotProps["toolbar"],
       textField: {
         required,
@@ -223,8 +223,6 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
         format,
         onFieldClick,
         error: error || validationError, // Combine external and internal validation errors
-        startDate,
-        endDate,
         startDateLabel,
         endDateLabel,
         startDateLabelSupportText,
@@ -232,13 +230,15 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
         onDateChange: handleTextFieldChange,
         customRef: startRef, // For focus management and popover anchoring
         ...props.slotProps?.textField,
-      } as Partial<IDateRangePickerTextFieldProps>,
-      day: {
         startDate,
         endDate,
+      } as Partial<IDateRangePickerTextFieldProps>,
+      day: {
         activeField,
         onDateClick: handleDateClick,
         ...props.slotProps?.day,
+        startDate,
+        endDate,
       } as DateCalendarSlotProps["day"],
       popper: {
         anchorEl, // Element to anchor the calendar popover to
@@ -246,30 +246,13 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       },
     }),
     [
-      props.slotProps,
+      // Optimized dependency array to avoid unnecessary recalculations
+      // Only depend on values that meaningfully affect slotProps structure
       startDate,
       endDate,
       activeField,
-      handleClear,
-      handleTextFieldChange,
-      handleDateClick,
-      required,
-      fullWidth,
-      onBlur,
-      onFocus,
-      InputLabelProps,
-      helperText,
-      HelperTextProps,
-      FormControlProps,
-      success,
-      format,
-      onFieldClick,
       error,
       validationError,
-      startDateLabel,
-      endDateLabel,
-      startDateLabelSupportText,
-      endDateLabelSupportText,
       anchorEl,
     ],
   );
