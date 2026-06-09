@@ -7,7 +7,6 @@ import {
 import { DsDatePicker } from "../DsDatePicker";
 import { getErrorFromErrorMap } from "../DsDatePicker/utils";
 import { DateRangePickerActionBar } from "./DateRangePickerActionBar";
-import { DateRangePickerDay } from "./DateRangePickerDay";
 import { DateRangePickerHeader } from "./DateRangePickerHeader";
 import DateRangePickerTextField from "./DateRangePickerTextField";
 import {
@@ -26,6 +25,7 @@ import {
   BaseDatePickerSlotProps,
   BaseDatePickerSlots,
 } from "@mui/x-date-pickers/DatePicker/shared";
+import { DateRangePickerDay } from "./DateRangePickerDay";
 
 /**
  * Main DsDateRangePicker component that provides a complete date range selection interface
@@ -44,6 +44,9 @@ import {
  * - Provides validation through helper functions
  * - Integrates with AM92 design system components
  */
+
+const DEFAULT_ACTIONS = ["clear", "accept"] as const;
+
 export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
   const props = { ...DsDateRangePickerDefaultProps, ...InProps };
 
@@ -95,25 +98,31 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
     const externalStart = value?.[0] ?? null;
     const externalEnd = value?.[1] ?? null;
 
+    let newStartDate = startDate;
+    let newEndDate = endDate;
+
     // Update internal state when external value changes (controlled component behavior)
     if (!areDatesEqual(externalStart, startDate)) {
+      newStartDate = externalStart;
       setStartDate(externalStart);
     }
     if (!areDatesEqual(externalEnd, endDate)) {
+      newEndDate = externalEnd;
       setEndDate(externalEnd);
-    }
-
-    // Initialize anchor element for popover positioning on first render
-    if (startRef.current && !anchorEl) {
-      setAnchorEl(startRef.current);
     }
 
     // UX Enhancement: Auto-switch to end field when start date is selected
     // This provides a smoother user experience for range selection
-    if (startDate && !endDate && activeField === "start") {
+    if (newStartDate && !newEndDate && activeField === "start")
       setActiveField("end");
+  }, [value, startDate, endDate]);
+
+  useEffect(() => {
+    // Initialize anchor element for popover positioning on first render
+    if (startRef.current && !anchorEl) {
+      setAnchorEl(startRef.current);
     }
-  }, [value, startDate, endDate, anchorEl]);
+  }, []);
 
   // Memoized validation logic for performance optimization
   // Recalculates only when dates or constraints change
@@ -198,7 +207,7 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       ...props.slotProps,
       actionBar: {
         onClear: handleClear,
-        actions: ["clear", "accept"],
+        actions: DEFAULT_ACTIONS,
         ...props.slotProps?.actionBar,
         startDate,
         endDate,
@@ -254,6 +263,11 @@ export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
       error,
       validationError,
       anchorEl,
+      handleClear,
+      handleDateClick,
+      handleTextFieldChange,
+      onFieldClick,
+      props.slotProps,
     ],
   );
 

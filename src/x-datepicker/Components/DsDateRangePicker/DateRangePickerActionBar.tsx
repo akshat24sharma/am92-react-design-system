@@ -12,6 +12,8 @@ import { DsButton, DsButtonGroup } from "../../../Components";
  * Displays clear and confirm buttons at the bottom of the picker
  * Only shows in day view and when actions are configured
  */
+
+const EMPTY_ACTIONS: never[] = [];
 export function DateRangePickerActionBar(
   props: IDateRangePickerActionBarProps,
 ) {
@@ -20,7 +22,7 @@ export function DateRangePickerActionBar(
   const { startDate, endDate, onClear, actions } = props;
 
   // Only show actions in day view, not in month/year view
-  const currentActions = view === "day" ? actions : [];
+  const currentActions = view === "day" ? actions : EMPTY_ACTIONS;
 
   // Get localized button labels from MUI translations
   const translations = usePickerTranslations();

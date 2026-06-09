@@ -95,23 +95,22 @@ const DateRangePickerTextField = React.forwardRef<
     ...baseTextFieldProps
   } = mergedProps;
 
-  /**
-   * Handles date changes for both start and end fields
-   * Maintains the other date value when one field changes
-   * @param field - Which field is changing ("start" or "end")
-   * @returns Change handler function for the specified field
-   */
-  const handleDateChange = useCallback(
-    (field: "start" | "end") => (value: unknown) => {
+  const handleStartDateChange = useCallback(
+    (value: unknown) => {
       if (value instanceof Date || value === null) {
-        if (field === "start") {
-          onDateChange(value, endDate ?? null);
-        } else {
-          onDateChange(startDate ?? null, value);
-        }
+        onDateChange(value, endDate ?? null);
       }
     },
-    [startDate, endDate, onDateChange],
+    [endDate, onDateChange],
+  );
+
+  const handleEndDateChange = useCallback(
+    (value: unknown) => {
+      if (value instanceof Date || value === null) {
+        onDateChange(startDate ?? null, value);
+      }
+    },
+    [startDate, onDateChange],
   );
 
   return (
@@ -126,7 +125,7 @@ const DateRangePickerTextField = React.forwardRef<
               inputRef: customRef, // Reference for focus management
               placeholder: format?.toLowerCase?.(),
               onClick: () => onFieldClick("start"),
-              onChange: handleDateChange("start"),
+              onChange: handleStartDateChange,
               ...DsTextFieldSlotProps,
             },
           }}
@@ -141,7 +140,7 @@ const DateRangePickerTextField = React.forwardRef<
               value: endDate,
               placeholder: format?.toLowerCase?.(),
               onClick: () => onFieldClick("end"),
-              onChange: handleDateChange("end"),
+              onChange: handleEndDateChange,
               ...DsTextFieldSlotProps,
             },
           }}

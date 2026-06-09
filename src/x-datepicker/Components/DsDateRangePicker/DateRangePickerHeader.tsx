@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { useThemeProps } from "@mui/system";
 import {
@@ -34,6 +34,14 @@ export const DateRangePickerHeader = React.forwardRef(
     const { cancelValueChanges } = usePickerActionsContext();
 
     const translations = usePickerTranslations();
+
+    const handleStartFieldClick = useCallback(() => {
+      onFieldChange("start");
+    }, [onFieldChange]);
+
+    const handleEndFieldClick = useCallback(() => {
+      if (startDate) onFieldChange("end");
+    }, [startDate, onFieldChange]);
 
     return (
       <DsStack
@@ -76,7 +84,7 @@ export const DateRangePickerHeader = React.forwardRef(
             label="Start"
             date={startDate}
             isActive={activeField === "start"}
-            onClick={() => onFieldChange("start")}
+            onClick={handleStartFieldClick}
           />
 
           <DateFieldButton
@@ -84,7 +92,7 @@ export const DateRangePickerHeader = React.forwardRef(
             date={endDate}
             isActive={activeField === "end"}
             isDisabled={!startDate} // Can't select end date without start date
-            onClick={() => startDate && onFieldChange("end")}
+            onClick={handleEndFieldClick}
           />
         </DsStack>
       </DsStack>
