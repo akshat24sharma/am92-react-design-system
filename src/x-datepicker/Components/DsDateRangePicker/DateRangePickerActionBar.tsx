@@ -14,8 +14,9 @@ import { DsButton, DsButtonGroup } from "../../../Components";
  */
 
 const EMPTY_ACTIONS: never[] = [];
-export function DateRangePickerActionBar(
-  props: IDateRangePickerActionBarProps,
+
+function DateRangePickerActionBar(
+  props: IDateRangePickerActionBarProps
 ) {
   const { acceptValueChanges } = usePickerActionsContext();
   const { view } = usePickerContext();
@@ -82,3 +83,5 @@ export function DateRangePickerActionBar(
     </DsButtonGroup>
   );
 }
+DateRangePickerActionBar.displayName = "DateRangePickerActionBar";
+export default DateRangePickerActionBar;

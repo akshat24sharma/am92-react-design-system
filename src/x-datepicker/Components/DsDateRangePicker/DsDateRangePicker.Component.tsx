@@ -6,8 +6,8 @@ import {
 
 import { DsDatePicker } from "../DsDatePicker";
 import { getErrorFromErrorMap } from "../DsDatePicker/utils";
-import { DateRangePickerActionBar } from "./DateRangePickerActionBar";
-import { DateRangePickerHeader } from "./DateRangePickerHeader";
+import DateRangePickerActionBar from "./DateRangePickerActionBar";
+import DateRangePickerHeader from "./DateRangePickerHeader";
 import DateRangePickerTextField from "./DateRangePickerTextField";
 import {
   areDatesEqual,

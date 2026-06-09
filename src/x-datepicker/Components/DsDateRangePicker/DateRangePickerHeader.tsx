@@ -7,21 +7,21 @@ import {
 } from "@mui/x-date-pickers";
 
 import type { IDateRangePickerHeaderProps } from "./DsDateRangePicker.Types";
-import { DateFieldButton } from "./DateFieldButton";
 import {
   DsIconButton,
   DsRemixIcon,
   DsStack,
   DsTypography,
 } from "../../../Components";
+import DateFieldButton from "./DateFieldButton";
 
 /**
  * Header/toolbar component for date range picker
  * Displays the picker title with close button and start/end date field buttons
  * Allows users to switch between start and end date selection
  */
-export const DateRangePickerHeader = React.forwardRef(
-  function DateRangePickerHeader(
+const DateRangePickerHeader = React.forwardRef(
+  function DatePickerToolbar(
     inProps: IDateRangePickerHeaderProps,
     ref: React.Ref<HTMLDivElement>,
   ) {
@@ -99,3 +99,5 @@ export const DateRangePickerHeader = React.forwardRef(
     );
   },
 );
+DateRangePickerHeader.displayName = "DateRangePickerHeader";
+export default DateRangePickerHeader;

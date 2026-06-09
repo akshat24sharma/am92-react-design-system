@@ -8,7 +8,7 @@ import { IDateFieldButtonProps } from "./DsDateRangePicker.Types";
  * Displays date field with label, formatted date value, and interactive states
  * Used for both "Start" and "End" date buttons in the date range picker
  */
-export const DateFieldButton: React.FC<IDateFieldButtonProps> = ({
+const DateFieldButton: React.FC<IDateFieldButtonProps> = ({
   label,
   date,
   isActive,
@@ -61,3 +61,5 @@ export const DateFieldButton: React.FC<IDateFieldButtonProps> = ({
     </DsButtonBase>
   );
 };
+DateFieldButton.displayName = "DateFieldButton";
+export default DateFieldButton;
