@@ -96,3 +96,5 @@ export const DsListRowTextSection = ({
     </DsBox>
   );
 };
+
+DsListRowTextSection.displayName = "DsListRowTextSection";

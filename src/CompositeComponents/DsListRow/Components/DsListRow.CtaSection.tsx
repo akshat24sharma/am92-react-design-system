@@ -26,3 +26,5 @@ export const DsListRowCtaSection = ({
     </DsButton>
   );
 };
+
+DsListRowCtaSection.displayName = "DsListRowCtaSection";

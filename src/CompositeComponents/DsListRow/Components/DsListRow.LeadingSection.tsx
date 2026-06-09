@@ -113,3 +113,5 @@ export const DsListRowLeadingSection = ({
     />
   );
 };
+
+DsListRowLeadingSection.displayName = "DsListRowLeadingSection";

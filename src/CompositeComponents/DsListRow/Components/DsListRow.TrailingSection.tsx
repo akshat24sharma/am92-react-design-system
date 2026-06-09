@@ -96,3 +96,5 @@ export const DsListRowTrailingSection = ({
     />
   );
 };
+
+DsListRowTrailingSection.displayName = "DsListRowTrailingSection";

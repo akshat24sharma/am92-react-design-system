@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { DsBox, DsListItem, DsListItemButton } from "../../Components";
 import { DsListRowCtaSection } from "./Components/DsListRow.CtaSection";
 import { DsListRowLeadingSection } from "./Components/DsListRow.LeadingSection";
@@ -52,21 +53,28 @@ export const DsListRow = (InProps: DsListRowProps) => {
   const { isSelectionType, isInfoType, resolvedShowChevron, isInteractable } =
     getDsListRowFlags({ type, showChevron, interactable });
 
-  const handleCtaClick: NonNullable<DsListRowProps["onCtaClick"]> = (event) => {
-    stopPropagationAndCall(event, onCtaClick);
-  };
+  const handleCtaClick = useCallback<NonNullable<DsListRowProps["onCtaClick"]>>(
+    (event) => {
+      stopPropagationAndCall(event, onCtaClick);
+    },
+    [onCtaClick],
+  );
 
-  const handleTrailingIconClick: NonNullable<
-    DsListRowProps["onTrailingIconClick"]
-  > = (event) => {
-    stopPropagationAndCall(event, onTrailingIconClick);
-  };
+  const handleTrailingIconClick = useCallback<
+    NonNullable<DsListRowProps["onTrailingIconClick"]>
+  >(
+    (event) => {
+      stopPropagationAndCall(event, onTrailingIconClick);
+    },
+    [onTrailingIconClick],
+  );
 
   // 2-column grid: leading (auto) | content (1fr).
   // Content column holds a flex row (text+trailing) and optionally CTA below.
   // Leading spans both rows when CTA is present.
   const gridTemplateColumns = showLeading ? "auto 1fr" : "1fr";
 
+  // TODO: Identify optimization opportunities.
   const gridSx = {
     display: "grid",
     gridTemplateColumns,
