@@ -21,7 +21,7 @@ import DateFieldButton from "./DateFieldButton";
  * Allows users to switch between start and end date selection
  */
 const DateRangePickerHeader = React.forwardRef(
-  function DatePickerToolbar(
+  function DateRangePickerHeader(
     inProps: IDateRangePickerHeaderProps,
     ref: React.Ref<HTMLDivElement>,
   ) {
