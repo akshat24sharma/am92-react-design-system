@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
-import { PickersDay } from "@mui/x-date-pickers";
 import { isSameDay, isWithinInterval } from "date-fns";
 
 import type { IDateRangePickerDayProps } from "./DsDateRangePicker.Types";
-import { DsBox } from "../../../Components";
+import { DsBox } from "../../../Components/DsBox";
+import { DsPickersDay } from "../../Components/DsPickersDay";
 
 /**
  * Custom day component for date range picker calendar
@@ -57,7 +57,7 @@ import { DsBox } from "../../../Components";
 
     return (
       <DsBox sx={boxStyles}>
-        <PickersDay
+        <DsPickersDay
           {...other}
           day={day}
           onClick={() => onDateClick(day, activeField)}
