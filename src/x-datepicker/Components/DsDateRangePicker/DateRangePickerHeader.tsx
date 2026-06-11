@@ -20,11 +20,7 @@ import DateFieldButton from "./DateFieldButton";
  * Displays the picker title with close button and start/end date field buttons
  * Allows users to switch between start and end date selection
  */
-const DateRangePickerHeader = React.forwardRef(
-  function DateRangePickerHeader(
-    inProps: IDateRangePickerHeaderProps,
-    ref: React.Ref<HTMLDivElement>,
-  ) {
+const DateRangePickerHeader = React.forwardRef<HTMLDivElement, IDateRangePickerHeaderProps>((inProps, ref) => {
     const props = useThemeProps({
       props: inProps,
       name: "DsDateRangePickerHeader",
