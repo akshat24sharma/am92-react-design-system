@@ -143,7 +143,13 @@ export default function getDarkModeColorScheme(colorPalette: DsPalette) {
 
     overlay: hexToRgbA(primaryBlack, 0.5),
     overlayLoader: hexToRgbA(primaryBlack, 0.3),
-    dotLoader: primaryWhite
+    dotLoader: primaryWhite,
+
+    chipStrokeSupportDefault: hexToRgbA(snackBlueNeutralDark, 0.25),
+    chipStrokeSupportInfo: hexToRgbA(secondaryGrey10, 0.25),
+    chipStrokeSupportPositive: hexToRgbA(successGreenDark, 0.25),
+    chipStrokeSupportWarning: hexToRgbA(warningOrangeDark, 0.25),
+    chipStrokeSupportNegative: hexToRgbA(errorRedDark, 0.25)
   }
 
   const darkPalette = getPalette(colorPalette, darkDsColor)
