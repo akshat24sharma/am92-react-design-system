@@ -16,9 +16,9 @@ import {
   validateDateRange,
 } from "./helpers";
 import type {
+  DsDateRangePickerProps,
   IDateRangePickerActionBarProps,
   IDateRangePickerTextFieldProps,
-  IDsDateRangePickerProps,
 } from "./DsDateRangePicker.Types";
 import { DsDateRangePickerDefaultProps } from "./DsDateRangePicker.Types";
 import {
@@ -47,7 +47,7 @@ import { DateRangePickerDay } from "./DateRangePickerDay";
 
 const DEFAULT_ACTIONS = ["clear", "accept"] as const;
 
-export const DsDateRangePicker = (InProps: IDsDateRangePickerProps) => {
+export const DsDateRangePicker = (InProps: DsDateRangePickerProps) => {
   const props = { ...DsDateRangePickerDefaultProps, ...InProps };
 
   const {
