@@ -16,7 +16,7 @@ const checkedIcon = (
 const uncheckedIcon = (
   <DsRemixIcon className="ri-checkbox-blank-circle-line" fontSize="cool" />
 );
-const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
+export const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
   const props = useMemo(
     () => ({
       ...DsBankAccountSelectionDefaultProps,
@@ -188,4 +188,3 @@ const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
   );
 };
 
-export default DsBankAccountSelection;
