@@ -5,7 +5,7 @@ import { DsStackProps } from "../../Components/DsStack";
 import { DsPopupProps } from "../../Components/DsPopup";
 
 import DsBankAccountSelectionFooter from "./Slots/DsBankAccountSelectionFooter.Slot";
-import { DsBankAccountSelectionHeader } from "./Slots/DsBankAccountSelectionHeader.Slot";
+import  DsBankAccountSelectionHeader  from "./Slots/DsBankAccountSelectionHeader.Slot";
 
 export type DsBankAccountSelectionHeaderSlotProps = {
   headerText?: string;

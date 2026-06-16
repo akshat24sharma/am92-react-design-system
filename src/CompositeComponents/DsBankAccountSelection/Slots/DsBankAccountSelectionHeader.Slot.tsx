@@ -3,7 +3,7 @@ import { DsStack } from "../../../Components/DsStack";
 import { DsTypography } from "../../../Components/DsTypography";
 import type { DsBankAccountSelectionHeaderSlotProps } from "../DsBankAccountSelection.Types";
 
-export const DsBankAccountSelectionHeader: FC<
+const DsBankAccountSelectionHeader: FC<
   DsBankAccountSelectionHeaderSlotProps
 > = ({ headerText }) => {
   return (
@@ -26,3 +26,6 @@ export const DsBankAccountSelectionHeader: FC<
     </DsStack>
   );
 };
+
+DsBankAccountSelectionHeader.displayName = "DsBankAccountSelectionHeader";
+export default DsBankAccountSelectionHeader;

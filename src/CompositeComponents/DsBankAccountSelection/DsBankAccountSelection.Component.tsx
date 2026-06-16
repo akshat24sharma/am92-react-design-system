@@ -1,4 +1,4 @@
-import { type FC, useEffect, useState } from "react";
+import { type FC, useCallback, useEffect, useMemo, useState } from "react";
 import { DsBox } from "../../Components/DsBox";
 import { DsStack } from "../../Components/DsStack";
 import { DsListRow } from "../DsListRow";
@@ -7,30 +7,41 @@ import { DsRemixIcon } from "../../Components/DsRemixIcon";
 
 import type { DsBankAccountSelectionProps } from "./DsBankAccountSelection.Types";
 import { DsBankAccountSelectionDefaultProps } from "./DsBankAccountSelection.Types";
+import { CSSObject } from "@mui/system";
 
+const checkedIcon = (
+  <DsRemixIcon className="ri-checkbox-circle-fill" fontSize="cool" />
+);
+
+const uncheckedIcon = (
+  <DsRemixIcon className="ri-checkbox-blank-circle-line" fontSize="cool" />
+);
 const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
-  const props = {
-    ...DsBankAccountSelectionDefaultProps,
-    ...inProps,
-    popupProps: {
-      ...DsBankAccountSelectionDefaultProps.popupProps,
-      ...inProps.popupProps,
-    },
-    slots: {
-      ...DsBankAccountSelectionDefaultProps.slots,
-      ...inProps.slots,
-    },
-    slotProps: {
-      Header: {
-        ...DsBankAccountSelectionDefaultProps.slotProps?.Header,
-        ...inProps.slotProps?.Header,
+  const props = useMemo(
+    () => ({
+      ...DsBankAccountSelectionDefaultProps,
+      ...inProps,
+      popupProps: {
+        ...DsBankAccountSelectionDefaultProps.popupProps,
+        ...inProps.popupProps,
       },
-      Footer: {
-        ...DsBankAccountSelectionDefaultProps.slotProps?.Footer,
-        ...inProps.slotProps?.Footer,
+      slots: {
+        ...DsBankAccountSelectionDefaultProps.slots,
+        ...inProps.slots,
       },
-    },
-  };
+      slotProps: {
+        Header: {
+          ...DsBankAccountSelectionDefaultProps.slotProps?.Header,
+          ...inProps.slotProps?.Header,
+        },
+        Footer: {
+          ...DsBankAccountSelectionDefaultProps.slotProps?.Footer,
+          ...inProps.slotProps?.Footer,
+        },
+      },
+    }),
+    [inProps],
+  );
 
   const {
     accounts,
@@ -57,22 +68,36 @@ const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
     setLocalSelectedAccount(selectedAccount);
   }, [selectedAccount]);
 
-  const handleOpen = () => {
+  // Reset popup state to the currently selected account whenever the popup is opened
+  const handleOpen = useCallback(() => {
     setLocalSelectedAccount(selectedAccount);
     setDialogOpen(true);
     onOpen?.();
-  };
+  }, [selectedAccount, onOpen]);
 
-  const handleClose = () => {
+  // Discard unconfirmed changes and restore the last committed selection.
+  const handleClose = useCallback(() => {
     setLocalSelectedAccount(selectedAccount);
     setDialogOpen(false);
     onClose?.();
-  };
+  }, [selectedAccount, onClose]);
 
-  const handleConfirm = () => {
-    if (localSelectedAccount) onAccountChange(localSelectedAccount);
+  // Commit the temporary selection and close the popup.
+  const handleConfirm = useCallback(() => {
+    if (localSelectedAccount) {
+      onAccountChange(localSelectedAccount);
+    }
     setDialogOpen(false);
-  };
+  }, [localSelectedAccount, onAccountChange]);
+
+  const handlePrimaryClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      handleConfirm();
+      // chain consumer onClick
+      popupProps?.primaryButtonProps?.onClick?.(e);
+    },
+    [handleConfirm, popupProps?.primaryButtonProps],
+  );
 
   return (
     <>
@@ -91,10 +116,11 @@ const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
             type="info"
             onTrailingIconClick={handleOpen}
             {...selectedAccount}
+            //customize the rendered row without modifying the account object
             {...selectedAccountProps}
             rowSx={[
-              selectedAccount.rowSx as object,
-              selectedAccountProps?.rowSx as object,
+              selectedAccount.rowSx as CSSObject,
+              selectedAccountProps?.rowSx as CSSObject,
             ]}
           />
         )}
@@ -111,10 +137,7 @@ const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
         {...popupProps}
         primaryButtonProps={{
           ...popupProps?.primaryButtonProps,
-          onClick: (e) => {
-            handleConfirm();
-            popupProps?.primaryButtonProps?.onClick?.(e); // chain consumer onClick
-          },
+          onClick: handlePrimaryClick,
         }}
         DsDialogProps={{
           ...popupProps?.DsDialogProps,
@@ -147,21 +170,16 @@ const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
                 checked: localSelectedAccount === account,
                 label: "",
                 RadioProps: {
-                  checkedIcon: (
-                    <DsRemixIcon
-                      className="ri-checkbox-circle-fill"
-                      fontSize="cool"
-                    />
-                  ),
-                  icon: (
-                    <DsRemixIcon
-                      className="ri-checkbox-blank-circle-line"
-                      fontSize="cool"
-                    />
-                  ),
+                  checkedIcon: checkedIcon,
+                  icon: uncheckedIcon,
                 },
               }}
-              onClick={() => setLocalSelectedAccount(account)}
+              onClick={() => {
+                // Avoid unnecessary state updates when the row is already selected.
+                if (localSelectedAccount !== account) {
+                  setLocalSelectedAccount(account);
+                }
+              }}
             />
           </DsBox>
         ))}

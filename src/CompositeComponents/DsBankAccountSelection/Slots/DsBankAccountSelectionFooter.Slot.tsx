@@ -43,4 +43,6 @@ const DsBankAccountSelectionFooter: FC<
   );
 };
 
+DsBankAccountSelectionFooter.displayName = "DsBankAccountSelectionFooter";
+
 export default DsBankAccountSelectionFooter;
