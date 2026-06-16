@@ -4,14 +4,14 @@ import { DsListRowProps } from "../DsListRow";
 import { DsStackProps } from "../../Components/DsStack";
 import { DsPopupProps } from "../../Components/DsPopup";
 
-import DsBankAccountSelectorFooter from "./Slots/DsBankAccountSelectorFooter.Slot";
-import { DsBankAccountSelectorHeader } from "./Slots/DsBankAccountSelectorHeader.Slot";
+import DsBankAccountSelectionFooter from "./Slots/DsBankAccountSelectionFooter.Slot";
+import { DsBankAccountSelectionHeader } from "./Slots/DsBankAccountSelectionHeader.Slot";
 
-export type DsBankAccountSelectorHeaderSlotProps = {
+export type DsBankAccountSelectionHeaderSlotProps = {
   headerText?: string;
 };
 
-export type DsBankAccountSelectorFooterSlotProps = {
+export type DsBankAccountSelectionFooterSlotProps = {
   primaryButtonText?: string;
   secondaryButtonText?: string;
   /** Primary action Button customization (ref omitted) */
@@ -22,21 +22,21 @@ export type DsBankAccountSelectorFooterSlotProps = {
   FooterWrapperProps?: DsStackProps;
 };
 
-export type DsBankAccountSelectorSlots = {
+export type DsBankAccountSelectionSlots = {
   /** Component rendered as the header above the selected account row */
-  Header?: ComponentType<DsBankAccountSelectorHeaderSlotProps>;
+  Header?: ComponentType<DsBankAccountSelectionHeaderSlotProps>;
   /** Component rendered as the proceed / CTA button */
-  Footer?: ComponentType<Partial<DsBankAccountSelectorFooterSlotProps>>;
+  Footer?: ComponentType<Partial<DsBankAccountSelectionFooterSlotProps>>;
 };
 
-export type DsBankAccountSelectorSlotProps = {
+export type DsBankAccountSelectionSlotProps = {
   /** Props forwarded to the Header slot */
-  Header?: DsBankAccountSelectorHeaderSlotProps;
+  Header?: DsBankAccountSelectionHeaderSlotProps;
   /** Props forwarded to the Footer slot */
-  Footer?: Partial<DsBankAccountSelectorFooterSlotProps>;
+  Footer?: Partial<DsBankAccountSelectionFooterSlotProps>;
 };
 
-export type DsBankAccountSelectorProps = {
+export type DsBankAccountSelectionProps = {
   /** Array of bank accounts to display */
   accounts: DsListRowProps[];
   /** The currently selected bank account */
@@ -55,18 +55,18 @@ export type DsBankAccountSelectorProps = {
   /** Callback fired when the account picker dialog closes without confirming */
   onClose?: () => void;
   /** Slot component overrides */
-  slots?: DsBankAccountSelectorSlots;
+  slots?: DsBankAccountSelectionSlots;
   /** Props forwarded to slot components */
-  slotProps?: DsBankAccountSelectorSlotProps;
+  slotProps?: DsBankAccountSelectionSlotProps;
   /** Optional props to pass to the underlying DsPopup component */
   popupProps?: Omit<DsPopupProps, "open">;
 };
 
-export const DsBankAccountSelectorDefaultProps: Partial<DsBankAccountSelectorProps> =
+export const DsBankAccountSelectionDefaultProps: Partial<DsBankAccountSelectionProps> =
   {
     slots: {
-      Header: DsBankAccountSelectorHeader,
-      Footer: DsBankAccountSelectorFooter,
+      Header: DsBankAccountSelectionHeader,
+      Footer: DsBankAccountSelectionFooter,
     },
     slotProps: {
       Header: {

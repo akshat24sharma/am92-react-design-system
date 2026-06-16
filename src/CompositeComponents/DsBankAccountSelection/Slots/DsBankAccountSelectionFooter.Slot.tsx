@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import { DsStack } from "../../../Components/DsStack";
 import { DsButton } from "../../../Components/DsButton";
-import type { DsBankAccountSelectorFooterSlotProps } from "../DsBankAccountSelector.Types";
+import type { DsBankAccountSelectionFooterSlotProps } from "../DsBankAccountSelection.Types";
 
-const DsBankAccountSelectorFooter: FC<
-  Partial<DsBankAccountSelectorFooterSlotProps>
+const DsBankAccountSelectionFooter: FC<
+  Partial<DsBankAccountSelectionFooterSlotProps>
 > = (props) => {
   return (
     <DsStack
@@ -43,4 +43,4 @@ const DsBankAccountSelectorFooter: FC<
   );
 };
 
-export default DsBankAccountSelectorFooter;
+export default DsBankAccountSelectionFooter;

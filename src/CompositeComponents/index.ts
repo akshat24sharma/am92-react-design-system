@@ -1,2 +1,2 @@
 export * from "./DsListRow";
-export * from "./DsBankAccountSelector";
+export * from "./DsBankAccountSelection";

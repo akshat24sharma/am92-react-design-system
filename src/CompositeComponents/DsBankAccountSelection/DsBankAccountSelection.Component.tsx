@@ -5,28 +5,28 @@ import { DsListRow } from "../DsListRow";
 import { DsPopup } from "../../Components/DsPopup";
 import { DsRemixIcon } from "../../Components/DsRemixIcon";
 
-import type { DsBankAccountSelectorProps } from "./DsBankAccountSelector.Types";
-import { DsBankAccountSelectorDefaultProps } from "./DsBankAccountSelector.Types";
+import type { DsBankAccountSelectionProps } from "./DsBankAccountSelection.Types";
+import { DsBankAccountSelectionDefaultProps } from "./DsBankAccountSelection.Types";
 
-const DsBankAccountSelector: FC<DsBankAccountSelectorProps> = (inProps) => {
+const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps) => {
   const props = {
-    ...DsBankAccountSelectorDefaultProps,
+    ...DsBankAccountSelectionDefaultProps,
     ...inProps,
     popupProps: {
-      ...DsBankAccountSelectorDefaultProps.popupProps,
+      ...DsBankAccountSelectionDefaultProps.popupProps,
       ...inProps.popupProps,
     },
     slots: {
-      ...DsBankAccountSelectorDefaultProps.slots,
+      ...DsBankAccountSelectionDefaultProps.slots,
       ...inProps.slots,
     },
     slotProps: {
       Header: {
-        ...DsBankAccountSelectorDefaultProps.slotProps?.Header,
+        ...DsBankAccountSelectionDefaultProps.slotProps?.Header,
         ...inProps.slotProps?.Header,
       },
       Footer: {
-        ...DsBankAccountSelectorDefaultProps.slotProps?.Footer,
+        ...DsBankAccountSelectionDefaultProps.slotProps?.Footer,
         ...inProps.slotProps?.Footer,
       },
     },
@@ -87,15 +87,15 @@ const DsBankAccountSelector: FC<DsBankAccountSelectorProps> = (inProps) => {
         {selectedAccount && (
           <DsListRow
             interactable
-            rowSx={[
-              selectedAccount.rowSx as object,
-              selectedAccountProps?.rowSx as object,
-            ]}
             trailingIcon="ri-arrow-down-s-line"
             type="info"
             onTrailingIconClick={handleOpen}
             {...selectedAccount}
             {...selectedAccountProps}
+            rowSx={[
+              selectedAccount.rowSx as object,
+              selectedAccountProps?.rowSx as object,
+            ]}
           />
         )}
       </DsStack>
@@ -117,20 +117,22 @@ const DsBankAccountSelector: FC<DsBankAccountSelectorProps> = (inProps) => {
           },
         }}
         DsDialogProps={{
+          ...popupProps?.DsDialogProps,
           sx: {
             "& .MuiListItemButton-root": {
               paddingY: "var(--ds-spacing-mild)",
             },
+            ...popupProps?.DsDialogProps?.sx,
           },
-          ...popupProps?.DsDialogProps,
         }}
         DsBottomSheetProps={{
+          ...popupProps?.DsBottomSheetProps,
           sx: {
             "& .MuiListItemButton-root": {
               paddingX: 0,
             },
+            ...popupProps?.DsBottomSheetProps?.sx,
           },
-          ...popupProps?.DsBottomSheetProps,
         }}
       >
         {accounts.map((account, index) => (
@@ -168,4 +170,4 @@ const DsBankAccountSelector: FC<DsBankAccountSelectorProps> = (inProps) => {
   );
 };
 
-export default DsBankAccountSelector;
+export default DsBankAccountSelection;

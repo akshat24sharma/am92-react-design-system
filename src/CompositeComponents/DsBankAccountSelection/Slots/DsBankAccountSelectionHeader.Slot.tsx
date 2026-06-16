@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import { DsStack } from "../../../Components/DsStack";
 import { DsTypography } from "../../../Components/DsTypography";
-import type { DsBankAccountSelectorHeaderSlotProps } from "../DsBankAccountSelector.Types";
+import type { DsBankAccountSelectionHeaderSlotProps } from "../DsBankAccountSelection.Types";
 
-export const DsBankAccountSelectorHeader: FC<
-  DsBankAccountSelectorHeaderSlotProps
+export const DsBankAccountSelectionHeader: FC<
+  DsBankAccountSelectionHeaderSlotProps
 > = ({ headerText }) => {
   return (
     <DsStack
