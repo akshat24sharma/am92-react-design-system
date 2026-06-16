@@ -44,9 +44,6 @@ export const DsTooltipOverrides = {
       tooltip: {
         boxShadow: 'var(--ds-elevation-0)',
         backgroundColor: 'var(--ds-colour-surfaceTertiary)',
-        borderWidth: '0.5px',
-        borderStyle: 'solid',
-        borderColor: 'var(--ds-colour-strokeDefault)',
         color: 'var(--ds-colour-typoOnSurfaceDynamic)',
         padding: 'var(--ds-spacing-frostbite)',
         borderRadius: 'var(--ds-radius-glacial)'
