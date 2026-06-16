@@ -149,7 +149,8 @@ import {
 import XDatePickerComponentOverrides from '../x-datepicker/componentOverrides'
 
 import {
-  DsListRowOverrides
+  DsListRowOverrides,
+  DsBankAccountSelectorOverrides
 } from "../CompositeComponents"
 
 const componentOverrides = {
@@ -164,6 +165,7 @@ const componentOverrides = {
   ...DsAvatarGroupOverrides,
   ...DsBackdropOverrides,
   ...DsBadgeOverrides,
+  ...DsBankAccountSelectorOverrides,
   ...DsBottomNavigationOverrides,
   ...DsBottomNavigationActionOverrides,
   ...DsBottomSheetOverrides,
