@@ -8,13 +8,13 @@ export { GRID_CHECKBOX_SELECTION_COL_DEF } from "@mui/x-data-grid";
 /**
  * Custom DataGrid component props.
  */
-export type IDsDataGridProps = DataGridProps;
+export type DsDataGridProps = DataGridProps;
 
 /**
  * Default props for DsDataGrid component.
  * Uses the built-in basePagination slot to inject DsPagination as ActionsComponent.
  */
-export const DsDataGridDefaultProps: Partial<IDsDataGridProps> = {
+export const DsDataGridDefaultProps: Partial<DsDataGridProps> = {
   // Enable dynamic row heights for flexible content
   getRowHeight: () => "auto",
   showColumnVerticalBorder: true,

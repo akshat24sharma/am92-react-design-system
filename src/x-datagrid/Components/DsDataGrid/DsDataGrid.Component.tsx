@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 
-import type { IDsDataGridProps } from "./DsDataGrid.Types";
+import type { DsDataGridProps } from "./DsDataGrid.Types";
 import { DsDataGridDefaultProps } from "./DsDataGrid.Types";
 
-export const DsDataGrid: FC<IDsDataGridProps> = ({
+export const DsDataGrid: FC<DsDataGridProps> = ({
   slots,
   slotProps,
   ...props
