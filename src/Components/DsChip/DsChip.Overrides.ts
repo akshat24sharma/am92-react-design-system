@@ -151,7 +151,7 @@ export const DsChipOverrides = {
             style: {
               borderWidth: '1px',
               borderStyle: 'solid',
-              borderColor: 'var(--ds-colour-chipStrokeSupportDefault)'
+              borderColor: 'var(--ds-colour-supportStrokeDefault)'
             }
           },
           {
@@ -164,7 +164,7 @@ export const DsChipOverrides = {
             style: {
               borderWidth: '1px',
               borderStyle: 'solid',
-              borderColor: 'var(--ds-colour-chipStrokeSupportInfo)'
+              borderColor: 'var(--ds-colour-supportStrokeInfo)'
             }
           },
           {
@@ -177,7 +177,7 @@ export const DsChipOverrides = {
             style: {
               borderWidth: '1px',
               borderStyle: 'solid',
-              borderColor: 'var(--ds-colour-chipStrokeSupportPositive)'
+              borderColor: 'var(--ds-colour-supportStrokePositive)'
             }
           },
           {
@@ -190,7 +190,7 @@ export const DsChipOverrides = {
             style: {
               borderWidth: '1px',
               borderStyle: 'solid',
-              borderColor: 'var(--ds-colour-chipStrokeSupportWarning)'
+              borderColor: 'var(--ds-colour-supportStrokeWarning)'
             }
           },
           {
@@ -203,7 +203,7 @@ export const DsChipOverrides = {
             style: {
               borderWidth: '1px',
               borderStyle: 'solid',
-              borderColor: 'var(--ds-colour-chipStrokeSupportNegative)'
+              borderColor: 'var(--ds-colour-supportStrokeNegative)'
             }
           }
         ]

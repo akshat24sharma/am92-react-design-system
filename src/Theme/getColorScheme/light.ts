@@ -146,11 +146,11 @@ export default function getLightModeColorScheme(colorPalette: DsPalette) {
     overlayLoader: hexToRgbA(primaryWhite, 0.3),
     dotLoader: secondary100,
 
-    chipStrokeSupportDefault: hexToRgbA(typical, 0.25),
-    chipStrokeSupportInfo: hexToRgbA(secondaryGrey100, 0.25),
-    chipStrokeSupportPositive: hexToRgbA(successGreen, 0.25),
-    chipStrokeSupportWarning: hexToRgbA(warningOrange, 0.25),
-    chipStrokeSupportNegative: hexToRgbA(errorRed, 0.25)
+    supportStrokeDefault: hexToRgbA(typical, 0.25),
+    supportStrokeInfo: hexToRgbA(secondaryGrey100, 0.25),
+    supportStrokePositive: hexToRgbA(successGreen, 0.25),
+    supportStrokeWarning: hexToRgbA(warningOrange, 0.25),
+    supportStrokeNegative: hexToRgbA(errorRed, 0.25)
   }
 
   const lightPalette = getPalette(colorPalette, lightDsColor)

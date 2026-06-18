@@ -60,11 +60,11 @@ export type DsColorTokens =
   | 'overlay'
   | 'overlayLoader'
   | 'dotLoader'
-  | 'chipStrokeSupportDefault'
-  | 'chipStrokeSupportInfo'
-  | 'chipStrokeSupportPositive'
-  | 'chipStrokeSupportWarning'
-  | 'chipStrokeSupportNegative'
+  | 'supportStrokeDefault'
+  | 'supportStrokeInfo'
+  | 'supportStrokePositive'
+  | 'supportStrokeWarning'
+  | 'supportStrokeNegative'
 
 export type DsColorClassTokens =
   | 'colorActionPrimary'
@@ -128,11 +128,11 @@ export type DsColorClassTokens =
   | 'colorOverlay'
   | 'colorOverlayLoader'
   | 'colorDotLoader'
-  | 'colorChipStrokeSupportDefault'
-  | 'colorChipStrokeSupportInfo'
-  | 'colorChipStrokeSupportPositive'
-  | 'colorChipStrokeSupportWarning'
-  | 'colorChipStrokeSupportNegative'
+  | 'colorsupportStrokeDefault'
+  | 'colorsupportStrokeInfo'
+  | 'colorsupportStrokePositive'
+  | 'colorsupportStrokeWarning'
+  | 'colorsupportStrokeNegative'
 
 interface DsColorGenerics<T> extends Partial<Record<DsColorTokens, T>> {}
 interface DsColorClassGenerics<T> extends Partial<
