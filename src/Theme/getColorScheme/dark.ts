@@ -81,7 +81,7 @@ export default function getDarkModeColorScheme(colorPalette: DsPalette) {
     surfaceSecondary: secondaryGrey100,
     surfaceTertiary: secondaryGrey10,
 
-    typoPrimary: secondaryGrey10,
+    typoPrimary: primaryWhite,
     typoSecondary: secondaryGrey30,
     typoTertiary: secondaryGrey50,
     typoActionPrimary: primaryWhite,
@@ -110,6 +110,8 @@ export default function getDarkModeColorScheme(colorPalette: DsPalette) {
     iconDefault: primaryWhite,
     iconTypical: snackBlueNeutralDark,
     iconOnSurfaceDynamic: primaryBlackLight,
+    iconSecondary: secondaryGrey30,
+    iconTertiary: secondaryGrey50,
 
     strokeDefault: secondaryGrey80,
     strokeSelected: secondary60,

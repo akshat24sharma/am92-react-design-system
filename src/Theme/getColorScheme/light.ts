@@ -108,9 +108,11 @@ export default function getLightModeColorScheme(colorPalette: DsPalette) {
     iconActionTertiary: tertiary100,
     iconOnSurface: primaryWhite,
     iconDisabled: secondaryGrey50,
-    iconDefault: secondaryGrey100,
+    iconDefault: primaryBlackLight,
     iconTypical: typical,
     iconOnSurfaceDynamic: primaryWhite,
+    iconSecondary: secondaryGrey90,
+    iconTertiary: secondaryGrey80,
 
     strokeDefault: secondaryGrey30,
     strokeSelected: secondary80,

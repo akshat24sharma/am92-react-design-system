@@ -117,6 +117,8 @@ export default function getHighContrastModeColorScheme(
     iconDefault: primaryWhite,
     iconTypical: highContrast2,
     iconOnSurfaceDynamic: primaryBlackLight,
+    iconSecondary: primaryWhite,
+    iconTertiary: secondaryGrey30,
 
     strokeDefault: secondaryGrey10,
     strokeSelected: highContrast1,
@@ -157,4 +159,3 @@ export default function getHighContrastModeColorScheme(
 
   return { highContrastDsColor, highContrastPalette }
 }
-
