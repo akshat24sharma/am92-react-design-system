@@ -1,5 +1,5 @@
 import { DsButtonDefaultProps, DsButtonProps } from './DsButton.Types'
-import STATE_STYLES from '../../Theme/STATE_STYLES'
+import STATE_STYLES from '../../Constants/STATE_STYLES'
 import { CSSObject } from '@mui/system'
 
 export const DsButtonOverrides = {

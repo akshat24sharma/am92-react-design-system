@@ -1,4 +1,4 @@
-import STATE_STYLES from '../../Theme/STATE_STYLES'
+import STATE_STYLES from '../../Constants/STATE_STYLES'
 import { DsFabDefaultProps, DsFabProps } from './DsFab.Types'
 import { CSSInterpolation } from '@mui/system'
 

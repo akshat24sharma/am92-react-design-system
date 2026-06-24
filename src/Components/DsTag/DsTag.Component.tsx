@@ -2,7 +2,7 @@ import { FC } from 'react'
 import Chip from '@mui/material/Chip'
 import { DsTagProps } from './DsTag.Types'
 import { DsRemixIcon } from '../DsRemixIcon'
-import STATE_STYLES from '../../Theme/STATE_STYLES'
+import STATE_STYLES from '../../Constants/STATE_STYLES'
 import { useThemeProps } from '@mui/system'
 
 export const DsTag: FC<DsTagProps> = inProps => {
