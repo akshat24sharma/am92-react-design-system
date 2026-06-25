@@ -10,7 +10,7 @@ export const DsDialogTitleOverrides = {
         letterSpacing: 'var(--ds-typo-headingBoldMedium-letterSpacing)',
         color: 'var(--ds-colour-typoPrimary)',
         padding: 'var(--ds-spacing-zero)',
-        marginBottom: 'var(--ds-spacing-quickFreeze)'
+        marginBottom: 'var(--ds-spacing-glacial)'
       } as CSSInterpolation
     }
   }

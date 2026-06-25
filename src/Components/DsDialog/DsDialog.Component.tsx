@@ -88,7 +88,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
               xs: 'var(--ds-spacing-bitterCold)',
               md: 'var(--ds-spacing-warm)'
             },
-            mb: 'var(--ds-spacing-quickFreeze)',
+            mb: 'var(--ds-spacing-glacial)',
             textTransform: 'uppercase',
             ...KickerProps?.sx
           }}
@@ -179,7 +179,7 @@ export const DsDialog: React.FC<DsDialogProps> = inProps => {
               ? undefined
               : {
                   xs: 'var(--ds-spacing-bitterCold)',
-                  md: 'var(--ds-spacing-warm)'
+                  md: 'var(--ds-spacing-mild)'
                 },
             mt: 'var(--ds-spacing-glacial)',
             ...ActionsProps?.sx
