@@ -151,7 +151,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
             sx={{
               color: 'text.tertiary',
               px: 'var(--ds-spacing-bitterCold)',
-              mb: 'var(--ds-spacing-quickFreeze)',
+              mb: 'var(--ds-spacing-glacial)',
               textTransform: 'uppercase',
               ...KickerProps?.sx
             }}
@@ -180,7 +180,7 @@ export const DsBottomSheet: FC<DsBottomSheetProps> = (inProps) => {
             {...DescriptionProps}
             sx={{
               px: 'var(--ds-spacing-bitterCold)',
-              mt: 'var(--ds-spacing-quickFreeze)',
+              mt: 'var(--ds-spacing-glacial)',
               ...DescriptionProps?.sx
             }}
           >
