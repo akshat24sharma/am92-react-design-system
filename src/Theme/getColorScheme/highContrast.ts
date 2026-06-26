@@ -152,11 +152,11 @@ export default function getHighContrastModeColorScheme(
     overlayLoader: hexToRgbA(primaryBlack, 0.3),
     dotLoader: primaryWhite,
 
-    supportStrokeDefault: hexToRgbA(highContrast2, 0.25),
-    supportStrokeInfo: hexToRgbA(primaryWhite, 0.25),
-    supportStrokePositive: hexToRgbA(highContrast2, 0.25),
-    supportStrokeWarning: hexToRgbA(highContrast2, 0.25),
-    supportStrokeNegative: hexToRgbA(highContrast2, 0.25)
+    strokeTypical: hexToRgbA(highContrast2, 0.25),
+    strokeInfo: hexToRgbA(primaryWhite, 0.25),
+    strokePositive: hexToRgbA(highContrast2, 0.25),
+    strokeWarning: hexToRgbA(highContrast2, 0.25),
+    strokeNegative: hexToRgbA(highContrast2, 0.25)
   }
 
   const highContrastPalette = getPalette(colorPalette, highContrastDsColor)
