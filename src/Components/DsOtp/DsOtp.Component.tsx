@@ -53,32 +53,58 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
     }
   }
 
+  // Notify the parent component when the OTP value changes and call the onComplete callback if the OTP is complete.
+  const notifyOtpChange = (
+    newOtp: string[],
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ClipboardEvent<HTMLInputElement>,
+    callback?: (event: any) => void
+  ) => {
+    const { onComplete, length = 0 } = props
+
+    if (typeof callback === 'function') {
+      callback(event)
+    }
+
+    const otpString = newOtp.join('')
+    if (otpString.length === length && typeof onComplete === 'function') {
+      onComplete(otpString)
+    }
+  }
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { onChange, onComplete, length } = props
+    const { onChange, length = 0 } = props
     const { target } = event
     const { name, value = '' } = target
     const indexString = name.split('.').pop() || ''
     const index = parseInt(indexString, 10)
 
+    const sanitizedValue = value.replace(/\D/g, '')
+    if (sanitizedValue.length > 1) {
+      const newOtp = sanitizedValue.split('').slice(0, length)
+
+      setOtp(newOtp)
+
+      if (newOtp.length === length) {
+        event.currentTarget.blur()
+      }
+
+      notifyOtpChange(newOtp, event)
+
+      return
+    }
     // Check if valid value
-    const filteredValue = value.replace(/\D/g, '').charAt(0) || ''
+    const filteredValue = sanitizedValue.charAt(0) || ''
     otp[index] = filteredValue
 
     const shouldNavigate = filteredValue
-    const _this = this
     setOtp([...otp])
     if (shouldNavigate) {
       _handleNavigation(index, false)
     }
 
-    if (typeof onChange === 'function') {
-      onChange(event)
-    }
-
-    const otpString = otp.join('')
-    if (otpString.length === length && typeof onComplete === 'function') {
-      onComplete(otpString)
-    }
+    notifyOtpChange(otp, event, onChange)
   }
 
   const _handleNavigation = (index: number, isBackPressed?: boolean): void => {
@@ -91,7 +117,7 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
 
   const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
     event.preventDefault()
-    const { onPaste, onComplete, length } = props
+    const { onPaste, length } = props
     const { clipboardData, currentTarget } = event
 
     const pastedData = clipboardData.getData('text')
@@ -103,14 +129,7 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
     const focusIndex = otp.length - 1
     _handleNavigation(focusIndex)
 
-    if (typeof onPaste === 'function') {
-      onPaste(event)
-    }
-
-    const otpString = otp.join('')
-    if (otpString.length === length && typeof onComplete === 'function') {
-      onComplete(otpString)
-    }
+    notifyOtpChange(otp, event, onPaste)
   }
 
   useImperativeHandle(ref, () => ({
@@ -150,7 +169,7 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
       } as CSSProperties
     }
 
-    return lengthArray.map((value, index) => (
+    return lengthArray.map((_value, index) => (
       <DsTextField
         key={index}
         type='tel'
@@ -211,3 +230,5 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
     </DsBox>
   )
 })
+
+DsOtp.displayName = 'DsOtp'
