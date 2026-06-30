@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import {
-  DsProgressStepperDefaultProps,
+import type {
   DsProgressStepperProps,
   DsProgressStepperStepProps
 } from '../DsProgressStepper.Types'
-import { StepIconProps } from '@mui/material'
+import { DsProgressStepperDefaultProps } from '../DsProgressStepper.Types'
+import { StepButton, type StepIconProps } from '@mui/material'
 import { DsRemixIcon } from '../../DsRemixIcon'
 import { DsStep, DsStepProps } from '../../DsStep'
 import { DsStepLabel, DsStepLabelProps } from '../../DsStepLabel'
@@ -60,6 +60,7 @@ export const DsProgressStepper: FC<DsProgressStepperProps> = inProps => {
 
   const renderStep = (step: DsProgressStepperStepProps, index: number) => {
     const { stepName, error, icon, optional, completed, disabled } = step
+    const { onStepClick } = props // ← pull from props
 
     const stepProps: DsStepProps = { completed, disabled }
     const stepLabelProps: DsStepLabelProps = { error, icon, optional }
@@ -71,17 +72,31 @@ export const DsProgressStepper: FC<DsProgressStepperProps> = inProps => {
         }
       }
     }
+
+    const label = (
+      <DsStepLabel
+        {...stepLabelProps}
+        slots={{
+          stepIcon: renderStepIcon,
+          ...stepLabelProps.slots
+        }}
+      >
+        {stepName}
+      </DsStepLabel>
+    )
+
     return (
       <DsStep key={index} {...stepProps}>
-        <DsStepLabel
-          {...stepLabelProps}
-          slots={{
-            stepIcon: renderStepIcon,
-            ...stepLabelProps.slots
-          }}
-        >
-          {stepName}
-        </DsStepLabel>
+        {onStepClick ? (
+          <StepButton
+            sx={{ width: 'unset', boxSizing:"border-box" }}
+            onClick={() => onStepClick(index, step)}
+          >
+            {label}
+          </StepButton>
+        ) : (
+          label
+        )}
       </DsStep>
     )
   }
