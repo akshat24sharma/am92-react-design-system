@@ -90,7 +90,7 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
         event.currentTarget.blur()
       }
 
-      notifyOtpChange(newOtp, event)
+      notifyOtpChange(newOtp, event, onChange)
 
       return
     }
@@ -217,7 +217,7 @@ export const DsOtp = forwardRef<DsOtpRef, DsOtpProps>((inProps, ref) => {
         disabled={disabled}
         {...InputLabelProps}
       />
-      <DsStack direction='row' spacing='var(--ds-spacing-glacial)' style={{}}>
+      <DsStack direction='row' spacing='var(--ds-spacing-glacial)'>
         {renderOtpBoxes()}
       </DsStack>
       <DsHelperText
