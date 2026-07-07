@@ -18,7 +18,6 @@ const DsBankAccountSelectionHeader: FC<
         sx={{
           flex: "1 0 0",
           color: "var(--ds-colour-typoPrimary)",
-          textTransform: "uppercase",
         }}
       >
         {headerText}

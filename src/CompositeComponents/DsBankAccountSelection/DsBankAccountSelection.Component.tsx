@@ -152,7 +152,7 @@ export const DsBankAccountSelection: FC<DsBankAccountSelectionProps> = (inProps)
           ...popupProps?.DsBottomSheetProps,
           sx: {
             "& .MuiListItemButton-root": {
-              paddingX: 0,
+              paddingX: 'var(--ds-spacing-zero)',
             },
             ...popupProps?.DsBottomSheetProps?.sx,
           },

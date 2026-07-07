@@ -23,8 +23,8 @@ const DsBankAccountSelectionFooter: FC<
           color="secondary"
           size="large"
           fullWidth
-          sx={{ flex: 1 }}
           {...props.secondaryButtonProps}
+          sx={{ flex: 1, ...props.secondaryButtonProps?.sx }}
         >
           {props.secondaryButtonText || props.secondaryButtonProps?.children}
         </DsButton>
@@ -33,8 +33,8 @@ const DsBankAccountSelectionFooter: FC<
         <DsButton
           size="large"
           fullWidth
-          sx={{ flex: 1 }}
           {...props.primaryButtonProps}
+          sx={{ flex: 1, ...props.primaryButtonProps?.sx }}
         >
           {props.primaryButtonText || props.primaryButtonProps?.children}
         </DsButton>
