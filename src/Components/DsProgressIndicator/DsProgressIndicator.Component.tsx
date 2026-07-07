@@ -12,14 +12,14 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
   const props = { ...DsProgressIndicatorDefaultProps, ...inProps }
 
   const getFillText = () => {
-    const { activeStep, steps, isSuccess, isError, successIconProps, errorIconProps, color } = props
+    const { activeStep, steps, isSuccess, isError, successIconProps, errorIconProps } = props
 
     if (isSuccess) {
       return (
         <DsRemixIcon
-          color={color ?? 'success'}
-          className={successIconProps?.className || 'ri-check-line'}
+          className={'ri-check-line'}
           {...successIconProps}
+          sx={{ color: 'var(--ds-colour-iconPositive)',...successIconProps?.sx }}
         />
       )
     }
@@ -27,9 +27,9 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
     if (isError) {
       return (
         <DsRemixIcon
-          color={color ?? 'error'}
-          className={errorIconProps?.className || 'ri-close-fill'}
+          className={'ri-close-fill'}
           {...errorIconProps}
+          sx={{ color: 'var(--ds-colour-iconNegative)',...errorIconProps?.sx }}
         />
       )
     }
@@ -52,13 +52,7 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
     const { activeStep, steps, isSuccess, isError } = props
     const squareSize = props['ds-variant'] === 'fraction' ? '48px' : '32px'
     const fillPercentage = Math.round((activeStep / steps) * 100)
-    const fillColor = props.color
-      ? props.color
-      : isSuccess
-        ? "success"
-        : isError
-          ? "error"
-          : "secondary"
+    const fillColor = isSuccess ? "success" : isError ? "error" : props?.color ?? "secondary"
 
     return (
       <DsBox
