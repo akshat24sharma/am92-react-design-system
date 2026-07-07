@@ -8,7 +8,7 @@ export { GRID_CHECKBOX_SELECTION_COL_DEF } from "@mui/x-data-grid";
 /**
  * Custom DataGrid component props.
  */
-export type DsDataGridProps = DataGridProps;
+export interface DsDataGridProps extends DataGridProps {}
 
 /**
  * Default props for DsDataGrid component.
