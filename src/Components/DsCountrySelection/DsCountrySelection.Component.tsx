@@ -113,7 +113,7 @@ export const DsCountrySelection: FC<DsCountrySelectionProps> = (InProps) => {
           required={required}
         />
       )}
-      <DsStack gap={2} direction="row" alignItems="center">
+      <DsStack gap="var(--ds-spacing-glacial)" direction="row" alignItems="center">
         <DsSearchableSelect
           error={error}
           success={success}

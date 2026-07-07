@@ -39,7 +39,7 @@ const filterCountries = (
 };
 
 const defaultNoOptionsText: ReactNode = (
-  <DsStack gap={2} direction="row" alignItems="center">
+  <DsStack gap="var(--ds-spacing-glacial)" direction="row" alignItems="center">
     <DsRemixIcon className="ri-information-line" color="iconDisabled" />
     <DsTypography variant="bodyRegularMedium" color="textTertiary">
       No results found

@@ -9,11 +9,7 @@ export interface ICountryType {
   label: string;
   phone: string;
 }
-export interface IPopperComponentProps {
-  anchorEl?: Element | null;
-  disablePortal?: boolean;
-  open: boolean;
-}
+
 
 export interface IDsSearchableSelectProps extends Omit<
   DsSelectProps,
