@@ -2,6 +2,7 @@ import React from 'react'
 import Tooltip from '@mui/material/Tooltip'
 import { DsTooltipDefaultProps, DsTooltipProps } from './DsTooltip.Types'
 import { DsTypography } from '../DsTypography'
+import { useBreakPoints } from '../../Hooks'
 
 export const CustomTooltip = <
   TWrapper extends React.ElementType = React.ElementType
@@ -10,6 +11,8 @@ export const CustomTooltip = <
 ) => {
   const props = { ...DsTooltipDefaultProps, ...InProps }
 
+  const { breakpoints } = useBreakPoints()
+  const isMobile = breakpoints.xs || breakpoints.sm
   const renderTitle = () => {
     const { heading, description } = props
 
@@ -18,14 +21,17 @@ export const CustomTooltip = <
         {heading && (
           <DsTypography
             component='div'
-            variant='bodyBoldMedium'
+            variant={isMobile ? 'bodyBoldSmall' : 'bodyBoldMedium'}
             sx={{ mb: 'var(--ds-spacing-glacial)' }}
           >
             {heading}
           </DsTypography>
         )}
         {description && (
-          <DsTypography component='div' variant='bodyRegularMedium'>
+          <DsTypography
+            component='div'
+            variant={isMobile ? 'bodyRegularSmall' : 'bodyRegularMedium'}
+          >
             {description}
           </DsTypography>
         )}
