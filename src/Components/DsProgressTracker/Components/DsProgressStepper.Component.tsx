@@ -4,16 +4,17 @@ import type {
   DsProgressStepperStepProps
 } from '../DsProgressStepper.Types'
 import { DsProgressStepperDefaultProps } from '../DsProgressStepper.Types'
-import { StepButton, type StepIconProps } from '@mui/material'
 import { DsRemixIcon } from '../../DsRemixIcon'
 import { DsStep, DsStepProps } from '../../DsStep'
 import { DsStepLabel, DsStepLabelProps } from '../../DsStepLabel'
 import { DsStepper } from '../../DsStepper'
+import { DsStepButton } from '../../DsStepButton'
+import type { DsStepIconProps } from '../../DsStepIcon'
 
 export const DsProgressStepper: FC<DsProgressStepperProps> = inProps => {
   const props = { ...DsProgressStepperDefaultProps, ...inProps }
 
-  const renderStepIcon = (stepProps: StepIconProps) => {
+  const renderStepIcon = (stepProps: DsStepIconProps) => {
     const { active, error, completed, icon } = stepProps
 
     const isWarning = typeof icon === 'string' && icon === 'warning'
@@ -88,12 +89,12 @@ export const DsProgressStepper: FC<DsProgressStepperProps> = inProps => {
     return (
       <DsStep key={index} {...stepProps}>
         {onStepClick ? (
-          <StepButton
+          <DsStepButton
             sx={{ width: 'unset', boxSizing:"border-box" }}
             onClick={() => onStepClick(index, step)}
           >
             {label}
-          </StepButton>
+          </DsStepButton>
         ) : (
           label
         )}
