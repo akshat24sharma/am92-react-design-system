@@ -1,0 +1,1 @@
+export { PickersDay as DsPickersDay } from '@mui/x-date-pickers/PickersDay';

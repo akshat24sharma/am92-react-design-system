@@ -145,7 +145,7 @@ export interface IDateFieldButtonProps {
   onClick: () => void;
 }
 
-export interface IDsDateRangePickerProps extends Omit<
+export interface DsDateRangePickerProps extends Omit<
   DsDatePickerProps,
   | "onChange"
   | "value"
@@ -172,7 +172,7 @@ export interface IDsDateRangePickerProps extends Omit<
   endDateLabelSupportText?: string;
 }
 
-export const DsDateRangePickerDefaultProps: Partial<IDsDateRangePickerProps> = {
+export const DsDateRangePickerDefaultProps: Partial<DsDateRangePickerProps> = {
   /**
    * Note: Component overrides are restricted to maintain design consistency.
    * Only label-related props in textFields can be customized by consumers.
