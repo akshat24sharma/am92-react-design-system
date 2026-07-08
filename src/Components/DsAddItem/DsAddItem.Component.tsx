@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 
 import { DsAddItemDefaultProps, type DsAddItemProps } from "./DsAddItem.Types";
 import { calculateNewValue, isBelowMinValue } from "./DsAddItem.helpers";
-import STATE_STYLES from "../../Constants/STATE_STYLES";
+import STATE_STYLES from "../../Theme/STATE_STYLES";
 import { DsStack } from "../DsStack";
 import { DsFab } from "../DsFab";
 import { CSSObject } from "@mui/system";
