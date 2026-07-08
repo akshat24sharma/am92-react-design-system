@@ -81,30 +81,36 @@ const renderSearchInput = (params: AutocompleteRenderInputParams) => {
   );
 };
 
-// Default display for the selected country: flag + dial code.
-const defaultRenderValue = (country: ICountryType): React.ReactNode => (
+// Default display for the selected country: flag (optional) + dial code.
+const defaultRenderValue = (
+  country: ICountryType,
+  countryFlag: boolean,
+): React.ReactNode => (
   <DsStack
     direction="row"
     gap="var(--ds-spacing-quickFreeze)"
     alignItems="center"
   >
-    <DsRemixIcon
-      className={`fi fi-${country.code}`}
-      sx={{
-        width: "26px",
-        borderRadius: "var(--ds-radius-quickFreeze)",
-        aspectRatio: 4 / 3,
-      }}
-    />
+    {countryFlag && (
+      <DsRemixIcon
+        className={`fi fi-${country.code}`}
+        sx={{
+          width: "26px",
+          borderRadius: "var(--ds-radius-quickFreeze)",
+          aspectRatio: 4 / 3,
+        }}
+      />
+    )}
     <DsTypography variant="bodyRegularMedium">+{country.phone}</DsTypography>
   </DsStack>
 );
 
-// Default row for each country in the dropdown list: flag + dial code + label.
+// Default row for each country in the dropdown list: flag (optional) + dial code + label.
 const defaultRenderOption = (
   props: React.HTMLAttributes<HTMLLIElement> & { key: React.Key },
   option: ICountryType,
   selected: boolean,
+  countryFlag: boolean,
 ): React.ReactNode => {
   const { key, ...optionProps } = props;
 
@@ -119,25 +125,20 @@ const defaultRenderOption = (
         border: "none !important",
       }}
     >
-      <DsRemixIcon
-        className={`fi fi-${option.code}`}
-        sx={{
-          width: "26px",
-          borderRadius: "var(--ds-radius-quickFreeze)",
-          aspectRatio: 4 / 3,
-          mr: "calc(var(--ds-spacing-glacial) + var(--ds-spacing-deepFreeze))",
-        }}
-      />
-
-      <DsTypography
-        variant={selected ? "bodyBoldMedium" : "bodyRegularMedium"}
-        sx={{ mr: "var(--ds-spacing-quickFreeze)" }}
-      >
-        +({option.phone})
-      </DsTypography>
+      {countryFlag && (
+        <DsRemixIcon
+          className={`fi fi-${option.code}`}
+          sx={{
+            width: "26px",
+            borderRadius: "var(--ds-radius-quickFreeze)",
+            aspectRatio: 4 / 3,
+            mr: "calc(var(--ds-spacing-glacial) + var(--ds-spacing-deepFreeze))",
+          }}
+        />
+      )}
 
       <DsTypography variant={selected ? "bodyBoldMedium" : "bodyRegularMedium"}>
-        {option.label}
+        {option.label} (+{option.phone})
       </DsTypography>
     </DsMenuItem>
   );
@@ -151,6 +152,7 @@ const DsSearchableSelect: FC<IDsSearchableSelectProps> = ({
   selectedCountry,
   renderValue: renderValueProp = defaultRenderValue,
   renderOption: renderOptionProp = defaultRenderOption,
+  countryFlag,
   countries,
   autocompleteProps,
   ...selectProps
@@ -219,8 +221,14 @@ const DsSearchableSelect: FC<IDsSearchableSelectProps> = ({
     (
       props: React.HTMLAttributes<HTMLLIElement> & { key: React.Key },
       option: ICountryType,
-    ) => renderOptionProp(props, option, selectedCountry.code === option.code),
-    [renderOptionProp, selectedCountry],
+    ) =>
+      renderOptionProp(
+        props,
+        option,
+        selectedCountry.code === option.code,
+        countryFlag,
+      ),
+    [renderOptionProp, selectedCountry, countryFlag],
   );
 
   return (
@@ -234,7 +242,7 @@ const DsSearchableSelect: FC<IDsSearchableSelectProps> = ({
       error={error}
       success={success}
       disabled={disabled}
-      renderValue={() => renderValueProp(selectedCountry)}
+      renderValue={() => renderValueProp(selectedCountry, countryFlag)}
       IconComponent={(props) => (
         <DsRemixIcon
           {...props}
@@ -258,6 +266,7 @@ const DsSearchableSelect: FC<IDsSearchableSelectProps> = ({
           vertical: "top",
           horizontal: "left",
         },
+        ...selectProps.MenuProps,
       }}
     >
       <DsAutocomplete
@@ -272,6 +281,7 @@ const DsSearchableSelect: FC<IDsSearchableSelectProps> = ({
         slotProps={{
           ...autocompleteProps?.slotProps,
           popper: {
+            ...autocompleteProps?.slotProps?.popper,
             sx: {
               width: "100% !important",
               minWidth: "288px",
@@ -279,8 +289,10 @@ const DsSearchableSelect: FC<IDsSearchableSelectProps> = ({
               ".MuiPaper-root": {
                 boxShadow: "none",
               },
+              ".MuiAutocomplete-listbox": {
+                paddingTop: "var(--ds-spacing-quickFreeze)",
+              },
             },
-            ...autocompleteProps?.slotProps?.popper,
           },
         }}
         filterOptions={filterCountries}

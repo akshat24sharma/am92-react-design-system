@@ -27,6 +27,7 @@ export interface IDsSearchableSelectProps extends Omit<
   autocompleteProps?: Partial<
     DsAutocompleteProps<ICountryType, false, false, false>
   >;
+  countryFlag: boolean;
 }
 
 export interface IDsCountrySelectionValue {
@@ -42,7 +43,7 @@ export interface DsCountrySelectionProps extends Omit<DsTextFieldProps, "onChang
   selectProps?: Partial<
     Omit<
       IDsSearchableSelectProps,
-      "countries" | "selectedCountry" | "onCountryChange"
+      "countries" | "selectedCountry" | "onCountryChange" | "countryFlag" | "autocompleteProps"
     >
   >;
   textFieldProps?: Partial<DsTextFieldProps>;
@@ -50,6 +51,7 @@ export interface DsCountrySelectionProps extends Omit<DsTextFieldProps, "onChang
     DsAutocompleteProps<ICountryType, false, false, false>
   >;
   countryFilter?: (countries: readonly ICountryType[]) => ICountryType[];
+  countryFlag?: boolean
 }
 
 export const DsCountrySelectionDefaultProps: Partial<DsCountrySelectionProps> =
@@ -57,4 +59,5 @@ export const DsCountrySelectionDefaultProps: Partial<DsCountrySelectionProps> =
     placeholder: "Enter phone number",
     name: "",
     fullWidth: true,
+    countryFlag: false
   };

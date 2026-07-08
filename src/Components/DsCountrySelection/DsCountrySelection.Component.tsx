@@ -36,6 +36,7 @@ export const DsCountrySelection: FC<DsCountrySelectionProps> = (InProps) => {
     autocompleteProps,
     name,
     countryFilter,
+    countryFlag = false,
     selectedCountry: initialSelectedCountry,
   } = props;
 
@@ -122,6 +123,7 @@ export const DsCountrySelection: FC<DsCountrySelectionProps> = (InProps) => {
           autocompleteProps={autocompleteProps}
           selectedCountry={countryValue}
           onCountryChange={handleCountryChange}
+          countryFlag={countryFlag}
           {...selectProps}
         />
         <DsTextField
