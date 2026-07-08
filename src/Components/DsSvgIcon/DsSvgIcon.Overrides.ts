@@ -34,6 +34,12 @@ export const DsSvgIconOverrides = {
       colorIconTypical: {
         color: 'var(--ds-colour-iconTypical)'
       },
+      colorIconSecondary: {
+        color: 'var(--ds-colour-iconSecondary)'
+      },
+      colorIconTertiary: {
+        color: 'var(--ds-colour-iconTertiary)'
+      },
       fontSizeScorched: {
         fontSize: 'var(--ds-typo-fontSizeScorched)'
       },
