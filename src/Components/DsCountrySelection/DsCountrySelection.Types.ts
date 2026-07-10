@@ -10,6 +10,9 @@ export interface ICountryType {
   phone: string;
 }
 
+export type CountryAutocompleteProps = Partial<
+  DsAutocompleteProps<ICountryType, false, false, false>
+>;
 
 export interface IDsSearchableSelectProps extends Omit<
   DsSelectProps,
@@ -24,9 +27,7 @@ export interface IDsSearchableSelectProps extends Omit<
     selected: boolean,
   ) => React.ReactNode;
   countries: readonly ICountryType[];
-  autocompleteProps?: Partial<
-    DsAutocompleteProps<ICountryType, false, false, false>
-  >;
+  autocompleteProps?: CountryAutocompleteProps;
   countryFlag: boolean;
 }
 
@@ -35,7 +36,10 @@ export interface IDsCountrySelectionValue {
   phoneNumber: string;
 }
 
-export interface DsCountrySelectionProps extends Omit<DsTextFieldProps, "onChange"> {
+export interface DsCountrySelectionProps extends Omit<
+  DsTextFieldProps,
+  "onChange"
+> {
   name: string;
   onChange?: (name: string, value: IDsCountrySelectionValue) => void;
   selectedCountry?: ICountryType;
@@ -43,15 +47,19 @@ export interface DsCountrySelectionProps extends Omit<DsTextFieldProps, "onChang
   selectProps?: Partial<
     Omit<
       IDsSearchableSelectProps,
-      "countries" | "selectedCountry" | "onCountryChange" | "countryFlag" | "autocompleteProps"
+      | "countries"
+      | "selectedCountry"
+      | "onCountryChange"
+      | "countryFlag"
+      | "autocompleteProps"
     >
   >;
   textFieldProps?: Partial<DsTextFieldProps>;
-  autocompleteProps?: Partial<
-    DsAutocompleteProps<ICountryType, false, false, false>
-  >;
-  countryFilter?: (countries: readonly ICountryType[]) => ICountryType[];
-  countryFlag?: boolean
+  autocompleteProps?: CountryAutocompleteProps;
+  countryFilter?: (
+    countries: readonly ICountryType[],
+  ) => readonly ICountryType[];
+  countryFlag?: boolean;
 }
 
 export const DsCountrySelectionDefaultProps: Partial<DsCountrySelectionProps> =
@@ -59,5 +67,5 @@ export const DsCountrySelectionDefaultProps: Partial<DsCountrySelectionProps> =
     placeholder: "Enter phone number",
     name: "",
     fullWidth: true,
-    countryFlag: false
+    countryFlag: false,
   };
