@@ -14,7 +14,15 @@ export const CustomTooltip = <
   const { breakpoints } = useBreakPoints()
   const isMobile = breakpoints.xs || breakpoints.sm
   const renderTitle = () => {
-    const { heading, description } = props
+    const { heading, description, title } = props
+
+    if (title !== undefined) {
+      return title
+    }
+
+    if (!heading && !description) {
+      return null
+    }
 
     return (
       <>
@@ -39,14 +47,18 @@ export const CustomTooltip = <
     )
   }
 
-  const { slots, slotProps, children, ...tooltipProps } =
-    props
+  const { slots, slotProps, children, title, ...tooltipProps } = props
 
   const WrapperComponent = slots?.wrapper || React.Fragment
   const wrapperProps = slotProps?.wrapper || {}
 
   return (
-    <Tooltip slots={slots} slotProps={slotProps} title={renderTitle()} {...tooltipProps}>
+    <Tooltip
+      slots={slots}
+      slotProps={slotProps}
+      title={renderTitle()}
+      {...tooltipProps}
+    >
       <WrapperComponent {...wrapperProps}>{children || null}</WrapperComponent>
     </Tooltip>
   )

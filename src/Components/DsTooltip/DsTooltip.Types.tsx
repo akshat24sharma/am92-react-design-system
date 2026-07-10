@@ -22,6 +22,11 @@ export type DsTooltipProps<
   /** This prop can be used to provide a description to the tooltip */
   description?: string
   /**
+   * Custom content to render inside the tooltip.
+   * When provided, takes precedence over `heading` and `description`.
+   */
+  title?: TooltipProps['title']
+  /**
    * The components used for each slot inside.
    *
    * This prop is an alias for the `components` prop, which will be deprecated in the future.
