@@ -10,7 +10,8 @@
   "files": [
     "dist/**/*.js",
     "dist/**/*.d.ts",
-    "dist/**/*.json"
+    "dist/**/*.json",
+    "scripts/postinstall-usage-scan.js"
   ],
   "dependencies": {
     "@emotion/react": "~11.14.0",

@@ -23,9 +23,9 @@ import path from 'path'
  */
 
 class DesignSystemAnalyzer {
-  constructor(projectRoot = process.cwd()) {
+  constructor(projectRoot = process.cwd(), consumerRoot = process.cwd()) {
     this.projectRoot = projectRoot
-    this.originalWorkingDirectory = process.cwd()
+    this.originalWorkingDirectory = consumerRoot
     // Map for Subzero (DS) component usage
     this.componentUsage = new Map()
     // Map for non‑Subzero component usage (components whose JSX tag does not start with "Ds")
@@ -1264,8 +1264,13 @@ if (isManualRun) {
   // Postinstall — resolve consumer root and never fail install
   try {
     const consumerRoot = resolveConsumerRoot()
-    console.log(`🎯 Target path: ${consumerRoot}`)
-    const analyzer = new DesignSystemAnalyzer(consumerRoot)
+    const srcPath = path.join(consumerRoot, 'src')
+    const scanPath =
+      fs.existsSync(srcPath) && fs.statSync(srcPath).isDirectory()
+        ? srcPath
+        : consumerRoot
+    console.log(`🎯 Target path: ${scanPath}`)
+    const analyzer = new DesignSystemAnalyzer(scanPath, consumerRoot)
     analyzer.analyze().catch(err => {
       console.warn(
         `⚠️  @am92/react-design-system postinstall scan skipped: ${err.message}`
