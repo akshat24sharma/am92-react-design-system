@@ -275,12 +275,29 @@ class DesignSystemAnalyzer {
   countNonSubzeroComponents(content) {
     const map = new Map()
 
-    // Known non-JSX uppercase patterns to exclude
+    // Known non-JSX patterns to exclude
     const isNonJsxName = name => {
       if (name.startsWith('Ds')) return true
       if (name.startsWith('HTML')) return true // HTMLDivElement, HTMLLIElement, etc.
       if (name.startsWith('SVG')) return true // SVGElement, SVGPathElement, etc.
       if (name.startsWith('CSS')) return true // CSSProperties, etc.
+
+      const primitiveTypeNames = new Set([
+        'string',
+        'number',
+        'boolean',
+        'unknown',
+        'any',
+        'never',
+        'void',
+        'null',
+        'undefined',
+        'object',
+        'symbol',
+        'bigint'
+      ])
+
+      if (primitiveTypeNames.has(name)) return true
 
       const nonJsxSuffixes = [
         'Props',
@@ -309,11 +326,14 @@ class DesignSystemAnalyzer {
       return nonJsxSuffixes.some(suffix => name.endsWith(suffix))
     }
 
-    const jsxPattern = /<([A-Z][A-Za-z0-9_]*)(\s[^>]*\/?>|\/?>(?!\w|<|,|;))/g
+    // Require a non-identifier boundary before '<' to avoid TS generics
+    // like `useState<string>()` or `Promise<AddressData>` being treated as JSX.
+    const jsxPattern =
+      /(^|[^A-Za-z0-9_$])<([A-Za-z][A-Za-z0-9_-]*)(\s[^>]*\/?>|\/?>(?!\w|<|,|;))/g
 
     let match
     while ((match = jsxPattern.exec(content)) !== null) {
-      const name = match[1]
+      const name = match[2]
       if (isNonJsxName(name)) continue
       const prev = map.get(name) || 0
       map.set(name, prev + 1)
