@@ -25,10 +25,6 @@ export interface DsProgressStepperProps
    *  If this prop is supplied the stepper renders clickable buttons.
    */
   onStepClick?: (stepIndex: number, step: DsProgressStepperStepProps) => void
-
-  /** Force the stepper to render as clickable even if `onStepClick` is not
-   *  provided (useful for a "read‑only" clickable UI). */
-  clickable?: boolean
 }
 
 export const DsProgressStepperDefaultProps: DsProgressStepperProps = {

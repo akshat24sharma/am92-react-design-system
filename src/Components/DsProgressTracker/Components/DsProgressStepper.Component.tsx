@@ -90,7 +90,6 @@ export const DsProgressStepper: FC<DsProgressStepperProps> = inProps => {
       <DsStep key={index} {...stepProps}>
         {onStepClick ? (
           <DsStepButton
-            sx={{ width: 'unset', boxSizing:"border-box" }}
             onClick={() => onStepClick(index, step)}
           >
             {label}
