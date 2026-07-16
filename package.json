@@ -47,6 +47,7 @@
     "test": "echo 'Error: no test specified'",
     "preversion": "npm-run-all build test",
     "version": "echo 'Versioning'",
+    "postinstall": "node scripts/postinstall-usage-scan.js",
     "postversion": "git push && git push --tags",
     "release:prerelease": "npm version prerelease --preid=beta && npm publish --tag beta",
     "release:patch": "npm version patch && npm publish",
