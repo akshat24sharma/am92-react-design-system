@@ -2,6 +2,7 @@ import { ChipProps } from '@mui/material'
 
 export interface DsChipProps extends Omit<ChipProps, 'onDelete'> {
   type?: 'status' | 'nudge'
+  outlined?: boolean
 }
 
 export const DsChipDefaultProps: DsChipProps = {

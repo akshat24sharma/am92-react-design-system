@@ -21,5 +21,6 @@ export type DsRulesKeys =
   | 'buttonSmallLoaderWidth'
   | 'dataGridRowMinHeight'
   | 'dataGridColumnHeaderHeight'
+  | 'datePickerWidth'
 
 export type DsRules = { [key in DsRulesKeys]: string }

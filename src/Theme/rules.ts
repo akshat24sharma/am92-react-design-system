@@ -1,8 +1,8 @@
 import { DsRules } from '../Types/DsRules'
 
 const dsRules: DsRules = {
-  headerMobileHeight: '64px',
-  headerDesktopHeight: '84px',
+  headerMobileHeight: '44px',
+  headerDesktopHeight: '64px',
 
   appBarMobileMinHeight: '56px',
 
@@ -32,6 +32,7 @@ const dsRules: DsRules = {
   dataGridRowMinHeight: '56px',
   dataGridColumnHeaderHeight: '48px',
 
+  datePickerWidth: '328px',
 }
 
 export default dsRules

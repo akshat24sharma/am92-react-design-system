@@ -34,7 +34,7 @@ export const DsDatePickerOverrides = {
   MuiDateCalendar: {
     styleOverrides: {
       root: {
-        width: '328px',
+        width: 'var(--ds-rules-datePickerWidth)',
         maxHeight: '416px',
         height: '100%',
         paddingTop: 'var(--ds-spacing-glacial)'
@@ -75,39 +75,6 @@ export const DsDatePickerOverrides = {
       }
     }
   },
-  MuiPickersDay: {
-    styleOverrides: {
-      root: {
-        width: '36px',
-        height: '36px',
-        margin: 'var(--ds-spacing-zero)',
-        fontWeight: 'var(--ds-typo-bodyRegularMedium-fontWeight)',
-        fontSize: 'var(--ds-typo-bodyRegularMedium-fontSize)',
-        lineHeight: 'var(--ds-typo-bodyRegularMedium-lineHeight)',
-        letterSpacing: 'var(--ds-typo-bodyRegularMedium-letterSpacing)',
-        '&.Mui-selected': {
-          backgroundColor: 'var(--ds-colour-actionSecondary)',
-          color: 'var(--ds-colour-typoOnSurface)',
-          '&:hover': {
-            backgroundColor: 'var(--ds-colour-actionSecondary)',
-            color: 'var(--ds-colour-typoOnSurface)'
-          },
-          '&:focus': {
-            backgroundColor: 'var(--ds-colour-actionSecondary)',
-            color: 'var(--ds-colour-typoOnSurface)'
-          }
-        }
-      },
-      today: {
-        ':not(.Mui-selected)': {
-          background: 'transparent',
-          borderWidth: '1px',
-          borderStyle: 'solid',
-          borderColor: 'var(--ds-colour-actionSecondary)'
-        }
-      }
-    }
-  },
   MuiMonthCalendar: {
     styleOverrides: {
       root: {
@@ -118,6 +85,7 @@ export const DsDatePickerOverrides = {
         paddingRight: 'var(--ds-spacing-bitterCold)'
       },
       button: {
+        margin: 'var(--ds-spacing-glacial) var(--ds-spacing-zero)',
         fontWeight: 'var(--ds-typo-bodyRegularLarge-fontWeight)',
         fontSize: 'var(--ds-typo-bodyRegularLarge-fontSize)',
         lineHeight: 'var(--ds-typo-bodyRegularLarge-lineHeight)',

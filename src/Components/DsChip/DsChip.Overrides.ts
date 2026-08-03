@@ -33,7 +33,8 @@ export const DsChipOverrides = {
               fontWeight: 'var(--ds-typo-supportRegularMetadata-fontWeight)',
               fontSize: 'var(--ds-typo-supportRegularMetadata-fontSize)',
               lineHeight: 'var(--ds-typo-supportRegularMetadata-lineHeight)',
-              letterSpacing: 'var(--ds-typo-supportRegularMetadata-letterSpacing)',
+              letterSpacing:
+                'var(--ds-typo-supportRegularMetadata-letterSpacing)',
               textTransform: 'uppercase',
               paddingTop: 'var(--ds-spacing-quickFreeze)',
               paddingBottom: 'var(--ds-spacing-quickFreeze)',
@@ -139,6 +140,71 @@ export const DsChipOverrides = {
               backgroundColor: 'var(--ds-colour-neutral1)',
               color: 'var(--ds-colour-typoPrimary)'
             } as CSSObject
+          },
+          {
+            props: {
+              variant: 'chip',
+              type: 'nudge',
+              color: 'default',
+              outlined: true
+            } as Partial<DsChipProps>,
+            style: {
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              borderColor: 'var(--ds-colour-strokeTypical)'
+            }
+          },
+          {
+            props: {
+              variant: 'chip',
+              type: 'nudge',
+              color: 'info',
+              outlined: true
+            } as Partial<DsChipProps>,
+            style: {
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              borderColor: 'var(--ds-colour-strokeInfo)'
+            }
+          },
+          {
+            props: {
+              variant: 'chip',
+              type: 'nudge',
+              color: 'success',
+              outlined: true
+            } as Partial<DsChipProps>,
+            style: {
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              borderColor: 'var(--ds-colour-strokePositive)'
+            }
+          },
+          {
+            props: {
+              variant: 'chip',
+              type: 'nudge',
+              color: 'warning',
+              outlined: true
+            } as Partial<DsChipProps>,
+            style: {
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              borderColor: 'var(--ds-colour-strokeWarning)'
+            }
+          },
+          {
+            props: {
+              variant: 'chip',
+              type: 'nudge',
+              color: 'error',
+              outlined: true
+            } as Partial<DsChipProps>,
+            style: {
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              borderColor: 'var(--ds-colour-strokeNegative)'
+            }
           }
         ]
       }
