@@ -7,13 +7,15 @@ export interface IwithBreakpoint {
   breakpoints: BreakpointsMap
 }
 
-export function useBreakpoints(): IwithBreakpoint {
+export function useBreakPoints(): IwithBreakpoint {
   const theme = useTheme()
   const { keys } = theme.breakpoints
 
   const breakpoints: BreakpointsMap = {}
 
+  // This is a known anti pattern, but used so that implementor can override at thier own end.
   keys.forEach((key: Breakpoint) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     breakpoints[key] = useMediaQuery(theme.breakpoints.only(key))
   })
 

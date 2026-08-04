@@ -1,4 +1,5 @@
 export * from './Components'
+export * from './CompositeComponents'
 export * from './Constants'
 export * from './Hocs'
 export * from './Theme'

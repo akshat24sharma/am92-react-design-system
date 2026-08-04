@@ -12,13 +12,14 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
   const props = { ...DsProgressIndicatorDefaultProps, ...inProps }
 
   const getFillText = () => {
-    const { activeStep, steps, isSuccess, isError } = props
+    const { activeStep, steps, isSuccess, isError, successIconProps, errorIconProps } = props
 
     if (isSuccess) {
       return (
         <DsRemixIcon
-          sx={{ color: 'var(--ds-colour-iconPositive)' }}
-          className="ri-check-line"
+          className={'ri-check-line'}
+          {...successIconProps}
+          sx={{ color: 'var(--ds-colour-iconPositive)',...successIconProps?.sx }}
         />
       )
     }
@@ -26,23 +27,32 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
     if (isError) {
       return (
         <DsRemixIcon
-          sx={{ color: 'var(--ds-colour-iconNegative)' }}
-          className="ri-error-warning-line"
+          className={'ri-close-fill'}
+          {...errorIconProps}
+          sx={{ color: 'var(--ds-colour-iconNegative)',...errorIconProps?.sx }}
         />
       )
     }
 
     if (props['ds-variant'] === 'fraction') {
-      return `${activeStep}/${steps}`
+      return (
+        <DsTypography variant='subheadingSemiboldDefault'>
+          {`${activeStep}/${steps}`}
+        </DsTypography>
+      )
     }
 
-    return `${Math.round((activeStep / steps) * 100)}%`
+    return (
+      <DsTypography variant='subheadingSemiboldDefault'>
+        {`${Math.round((activeStep / steps) * 100)}%`}
+      </DsTypography>
+    )
   }
 
     const { activeStep, steps, isSuccess, isError } = props
     const squareSize = props['ds-variant'] === 'fraction' ? '48px' : '32px'
     const fillPercentage = Math.round((activeStep / steps) * 100)
-    const fillColor = isSuccess ? 'success' : isError ? 'error' : 'secondary'
+    const fillColor = isSuccess ? "success" : isError ? "error" : props?.color ?? "secondary"
 
     return (
       <DsBox
@@ -70,17 +80,19 @@ export const DsProgressIndicator: FC<DsProgressIndicatorProps> = (inProps) => {
             position: 'absolute'
           }}
         />
-        <DsTypography
-          variant="subheadingSemiboldDefault"
+        <DsBox
           sx={{
             position: 'absolute',
             left: '50%',
             top: '50%',
-            transform: 'translate(-50%,-50%)'
+            transform: 'translate(-50%,-50%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           {getFillText()}
-        </DsTypography>
+        </DsBox>
       </DsBox>
-    )
+    );
 }

@@ -1,6 +1,6 @@
 {
   "name": "@am92/react-design-system",
-  "version": "3.0.1-beta.4",
+  "version": "3.0.2-beta.1",
   "description": "ReactJS Design System using Material UI",
   "sideEffects": false,
   "types": "dist/index.d.ts",

@@ -144,7 +144,13 @@ export default function getLightModeColorScheme(colorPalette: DsPalette) {
 
     overlay: hexToRgbA(primaryBlack, 0.5),
     overlayLoader: hexToRgbA(primaryWhite, 0.3),
-    dotLoader: secondary100
+    dotLoader: secondary100,
+
+    strokeTypical: hexToRgbA(typical, 0.25),
+    strokeInfo: hexToRgbA(secondaryGrey100, 0.25),
+    strokePositive: hexToRgbA(successGreen, 0.25),
+    strokeWarning: hexToRgbA(warningOrange, 0.25),
+    strokeNegative: hexToRgbA(errorRed, 0.25)
   }
 
   const lightPalette = getPalette(colorPalette, lightDsColor)
